@@ -3,4 +3,4 @@ Allow: /
 Disallow: /automation/
 Disallow: /.github/
 
-Sitemap: https://www.academicwizard.online/sitemap.xml
+Sitemap: https://suurrya7.github.io/Academic-Wizard/sitemap.xml

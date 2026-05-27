@@ -1,16 +1,57 @@
-# React + Vite
+# Academic Wizard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Academic Wizard is a Vite + React site for academic guidance, editing, research support, and assignment planning. It is configured for GitHub Pages at:
 
-Currently, two official plugins are available:
+https://suurrya7.github.io/Academic-Wizard/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Local Development
 
-## React Compiler
+```bash
+npm ci
+npm run dev
+```
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Build
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The build script runs Vite and then prepares the GitHub Pages artifact by copying generated blog assets, `data/posts.json`, `sitemap.xml`, `robots.txt`, creating `404.html`, and adding `.nojekyll`.
+
+## Blog Automation
+
+The daily GitHub Actions workflow generates 4 blog posts with Gemini, refreshes SEO files, commits generated content, builds the site, and deploys to GitHub Pages.
+
+Required GitHub repository secret:
+
+```text
+GEMINI_API_KEY
+```
+
+Optional repository secret or variable:
+
+```text
+GEMINI_MODEL
+```
+
+Local dry run without calling Gemini:
+
+```bash
+python3 automation/generate_post.py --dry-run --count 4
+```
+
+Refresh sitemap and robots locally:
+
+```bash
+python3 automation/generate_seo.py
+```
+
+## Custom Domain Later
+
+When moving from GitHub Pages repo hosting to a custom domain, update:
+
+- `SITE_URL` in `.github/workflows/deploy.yml`
+- `BASE_PATH` in `.github/workflows/deploy.yml`
+- `BASE_PATH` or default base in `vite.config.js`
+- GitHub Pages custom domain settings

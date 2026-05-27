@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, MeshDistortMaterial, Cone, Box, Torus, Decal, useTexture } from '@react-three/drei';
+import { Float, MeshDistortMaterial, Cone, Box, Torus } from '@react-three/drei';
 import * as THREE from 'three';
 
 function FloatingObject({ position, color, type = 'box' }) {

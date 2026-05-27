@@ -10,10 +10,15 @@ function Particles() {
     const count = 1500;
     const positions = useMemo(() => {
         const pos = new Float32Array(count * stride);
+        let seed = 42;
+        const seededRandom = () => {
+            seed = (seed * 1664525 + 1013904223) % 4294967296;
+            return seed / 4294967296;
+        };
         for (let i = 0; i < count; i++) {
-            pos[i * stride] = (Math.random() - 0.5) * 10;
-            pos[i * stride + 1] = (Math.random() - 0.5) * 10;
-            pos[i * stride + 2] = (Math.random() - 0.5) * 10;
+            pos[i * stride] = (seededRandom() - 0.5) * 10;
+            pos[i * stride + 1] = (seededRandom() - 0.5) * 10;
+            pos[i * stride + 2] = (seededRandom() - 0.5) * 10;
         }
         return pos;
     }, [count]);

@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Academic-Wizard/',
+  base: process.env.BASE_PATH || '/Academic-Wizard/',
   plugins: [react()],
 })

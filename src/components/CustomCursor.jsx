@@ -52,7 +52,7 @@ const CustomCursor = () => {
             window.removeEventListener('mousemove', moveMouse);
             window.removeEventListener('mouseover', handleHover);
         };
-    }, []);
+    }, [mouseX, mouseY]);
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', zIndex: 9999 }}>

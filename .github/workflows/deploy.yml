@@ -1,12 +1,14 @@
-name: Deploy React site to GitHub Pages
+name: Generate Blog and Deploy to GitHub Pages
 
 on:
+  schedule:
+    - cron: '0 2 * * *'
   push:
     branches: ["main"]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,35 +17,79 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SITE_URL: https://suurrya7.github.io/Academic-Wizard
+      BASE_PATH: /Academic-Wizard/
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || vars.GEMINI_MODEL }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r automation/requirements.txt
+
+      - name: Generate daily blog posts
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python automation/generate_post.py --count 4
+
+      - name: Refresh SEO files
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python automation/generate_seo.py
+
+      - name: Commit generated content
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git add blog/posts data/posts.json public/sitemap.xml public/robots.txt
+          if git diff --cached --quiet; then
+            echo "No generated content changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "Auto-generate daily blog posts and SEO assets"
+            git push
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
+
       - name: Install dependencies
-        run: npm install
-      - name: Build React App
+        run: npm ci
+
+      - name: Build React app and prepare Pages artifact
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}

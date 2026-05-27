@@ -1,0 +1,18 @@
+import os
+
+
+SITE_NAME = "Academic Wizard"
+SITE_URL = os.getenv("SITE_URL", "https://suurrya7.github.io/Academic-Wizard").rstrip("/")
+BASE_PATH = os.getenv("BASE_PATH", "/Academic-Wizard/").strip()
+
+if not BASE_PATH.startswith("/"):
+    BASE_PATH = f"/{BASE_PATH}"
+if not BASE_PATH.endswith("/"):
+    BASE_PATH = f"{BASE_PATH}/"
+
+
+def absolute_url(path: str = "") -> str:
+    clean_path = path.lstrip("/")
+    if not clean_path:
+        return f"{SITE_URL}/"
+    return f"{SITE_URL}/{clean_path}"

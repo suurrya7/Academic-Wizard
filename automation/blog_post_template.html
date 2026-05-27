@@ -9,19 +9,19 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.academicwizard.online/blog/posts/{{SLUG}}.html">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
     <meta property="og:title" content="{{TITLE}}">
     <meta property="og:description" content="{{DESCRIPTION}}">
-    <meta property="og:image" content="https://www.academicwizard.online/marketing/hero-bg.png">
+    <meta property="og:image" content="{{SITE_URL}}favicon.svg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.academicwizard.online/blog/posts/{{SLUG}}.html">
+    <meta property="twitter:url" content="{{CANONICAL_URL}}">
     <meta property="twitter:title" content="{{TITLE}}">
     <meta property="twitter:description" content="{{DESCRIPTION}}">
-    <meta property="twitter:image" content="https://www.academicwizard.online/marketing/hero-bg.png">
+    <meta property="twitter:image" content="{{SITE_URL}}favicon.svg">
     
-    <link rel="canonical" href="https://www.academicwizard.online/blog/posts/{{SLUG}}.html">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,12 +42,12 @@
     
     <!-- Navigation -->
     <nav class="blog-nav">
-        <a href="../../index.html" class="nav-logo">Academic Wizard</a>
+        <a href="{{SITE_URL}}" class="nav-logo">Academic Wizard</a>
         <div class="nav-menu">
-            <a href="../../index.html">Home</a>
-            <a href="../../services.html">Services</a>
-            <a href="../index.html">Blog</a>
-            <a href="../../contact.html">Contact</a>
+            <a href="{{SITE_URL}}">Home</a>
+            <a href="{{SERVICES_URL}}">Services</a>
+            <a href="{{BLOG_URL}}">Blog</a>
+            <a href="{{CONTACT_URL}}">Contact</a>
             <a href="https://wa.me/919509893638" class="nav-cta" target="_blank" rel="noopener">Get Assignment Help</a>
         </div>
         <div class="nav-toggle">
@@ -58,9 +58,9 @@
     <!-- Post Hero -->
     <header class="post-hero">
         <div class="post-breadcrumb">
-            <a href="../../index.html">Home</a>
+            <a href="{{SITE_URL}}">Home</a>
             <span class="separator">/</span>
-            <a href="../index.html">Blog</a>
+            <a href="{{BLOG_URL}}">Blog</a>
             <span class="separator">/</span>
             <span>Article</span>
         </div>
@@ -87,10 +87,10 @@
         <div class="post-share">
             <span class="share-title">Share this article:</span>
             <div class="share-links">
-                <a href="https://twitter.com/intent/tweet?url=https://www.academicwizard.online/blog/posts/{{SLUG}}.html&text={{TITLE}}" target="_blank" rel="noopener" class="share-btn twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.academicwizard.online/blog/posts/{{SLUG}}.html" target="_blank" rel="noopener" class="share-btn facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.academicwizard.online/blog/posts/{{SLUG}}.html&title={{TITLE}}" target="_blank" rel="noopener" class="share-btn linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://api.whatsapp.com/send?text={{TITLE}} https://www.academicwizard.online/blog/posts/{{SLUG}}.html" target="_blank" rel="noopener" class="share-btn whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://twitter.com/intent/tweet?url={{CANONICAL_URL}}&text={{TITLE}}" target="_blank" rel="noopener" class="share-btn twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{CANONICAL_URL}}" target="_blank" rel="noopener" class="share-btn facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{CANONICAL_URL}}&title={{TITLE}}" target="_blank" rel="noopener" class="share-btn linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://api.whatsapp.com/send?text={{TITLE}} {{CANONICAL_URL}}" target="_blank" rel="noopener" class="share-btn whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -103,7 +103,7 @@
                     <a href="https://wa.me/919509893638" target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                     </a>
-                    <a href="../../contact.html" class="btn-secondary">
+                    <a href="{{CONTACT_URL}}" class="btn-secondary">
                         <i class="far fa-envelope"></i> Email Us
                     </a>
                 </div>

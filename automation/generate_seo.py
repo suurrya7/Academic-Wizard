@@ -17,13 +17,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from bs4 import BeautifulSoup
 
+from site_config import SITE_NAME, absolute_url
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-DOMAIN = "https://www.academicwizard.online"
-SITE_NAME = "Academic Wizard"
 AUTHOR_NAME = "Academic Wizard"
-DEFAULT_IMAGE = f"{DOMAIN}/favicon.svg"
+DEFAULT_IMAGE = absolute_url("favicon.svg")
 
 # Resolve project root — works both locally and in CI
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -38,12 +38,12 @@ POSTS_JSON_PATH = DATA_DIR / "posts.json"
 
 # Static pages with their SEO attributes
 STATIC_PAGES = [
-    {"path": "/", "changefreq": "weekly", "priority": "1.0"},
-    {"path": "/services", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "/about", "changefreq": "monthly", "priority": "0.8"},
-    {"path": "/faq", "changefreq": "monthly", "priority": "0.7"},
-    {"path": "/contact", "changefreq": "monthly", "priority": "0.8"},
-    {"path": "/blog/", "changefreq": "daily", "priority": "0.9"},
+    {"path": "", "changefreq": "weekly", "priority": "1.0"},
+    {"path": "services", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "about", "changefreq": "monthly", "priority": "0.8"},
+    {"path": "faq", "changefreq": "monthly", "priority": "0.7"},
+    {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
+    {"path": "blog/", "changefreq": "daily", "priority": "0.9"},
 ]
 
 # ---------------------------------------------------------------------------
@@ -160,7 +160,7 @@ def inject_seo_tags(filepath: Path) -> bool:
 
     # Build the canonical URL
     post_filename = filepath.name
-    canonical_url = f"{DOMAIN}/blog/posts/{post_filename}"
+    canonical_url = absolute_url(f"blog/posts/{post_filename}")
 
     # --- Inject meta tags ---
     _ensure_meta(soup, head, name="description", content=description)
@@ -272,7 +272,7 @@ def generate_sitemap() -> None:
 
     # Static pages
     for page in STATIC_PAGES:
-        loc = f"{DOMAIN}{page['path']}"
+        loc = absolute_url(page["path"])
         urls.append(
             f"  <url>\n"
             f"    <loc>{loc}</loc>\n"
@@ -285,7 +285,7 @@ def generate_sitemap() -> None:
     # Blog posts
     if BLOG_POSTS_DIR.exists():
         for html_file in sorted(BLOG_POSTS_DIR.glob("*.html")):
-            loc = f"{DOMAIN}/blog/posts/{html_file.name}"
+            loc = absolute_url(f"blog/posts/{html_file.name}")
             lastmod = _get_file_mod_date(html_file)
             urls.append(
                 f"  <url>\n"
@@ -325,7 +325,7 @@ def generate_robots_txt() -> None:
         "Disallow: /automation/\n"
         "Disallow: /.github/\n"
         "\n"
-        f"Sitemap: {DOMAIN}/sitemap.xml\n"
+        f"Sitemap: {absolute_url('sitemap.xml')}\n"
     )
 
     try:
@@ -368,7 +368,7 @@ def update_posts_json() -> None:
 
     new_count = 0
     for html_file in sorted(BLOG_POSTS_DIR.glob("*.html")):
-        relative_url = f"posts/{html_file.name}"
+        relative_url = f"blog/posts/{html_file.name}"
         if relative_url in known_urls:
             continue
 
@@ -385,9 +385,13 @@ def update_posts_json() -> None:
 
         existing_posts.append({
             "title": title,
+            "slug": html_file.stem,
             "url": relative_url,
             "date": mod_date,
             "excerpt": excerpt[:200],
+            "keywords": _extract_keywords(title, excerpt).split(", "),
+            "category": "assignment-help",
+            "readingTime": max(4, round(len(soup.get_text(' ').split()) / 220)),
         })
         new_count += 1
 

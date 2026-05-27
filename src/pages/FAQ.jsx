@@ -30,7 +30,7 @@ const faqs = [
     }
 ];
 
-const FAQItem = ({ faq, index }) => {
+const FAQItem = ({ faq }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -70,8 +70,8 @@ const FAQ = () => {
 
             <section className="py-20 container">
                 <div className="max-w-4xl mx-auto">
-                    {faqs.map((faq, index) => (
-                        <FAQItem key={index} faq={faq} index={index} />
+                    {faqs.map((faq) => (
+                        <FAQItem key={faq.question} faq={faq} />
                     ))}
                 </div>
             </section>
