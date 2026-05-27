@@ -144,7 +144,7 @@ def generate_json_ld(meta):
         "name": "Academic Wizard",
         "logo": {{
           "@type": "ImageObject",
-          "url": "https://www.academicwizard.online/hero-bg.png"
+          "url": "https://www.academicwizard.online/marketing/hero-bg.png"
         }}
       }},
       "datePublished": "{meta['date']}",
