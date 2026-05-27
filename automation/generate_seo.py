@@ -44,6 +44,8 @@ STATIC_PAGES = [
     {"path": "faq", "changefreq": "monthly", "priority": "0.7"},
     {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
     {"path": "blog/", "changefreq": "daily", "priority": "0.9"},
+    {"path": "privacy-policy", "changefreq": "yearly", "priority": "0.3"},
+    {"path": "terms-of-service", "changefreq": "yearly", "priority": "0.3"},
 ]
 
 # ---------------------------------------------------------------------------
