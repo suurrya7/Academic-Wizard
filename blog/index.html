@@ -1,54 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academic Wizard Blog</title>
-  <meta name="description" content="Academic Wizard blog featuring high‑quality articles on assignment help, essay writing, research tips, and more." />
-  <link rel="stylesheet" href="./assets/blog.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Wizard Blog | Expert Assignment Help & Tips</title>
+    <meta name="description" content="Discover expert tips, guides, and resources for assignment writing, research papers, and academic success from Academic Wizard.">
+    <meta name="keywords" content="academic blog, assignment help tips, essay writing guide, research paper tips, thesis help, academic writing resources">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.academicwizard.online/blog/">
+    <meta property="og:title" content="Academic Wizard Blog | Expert Assignment Help & Tips">
+    <meta property="og:description" content="Discover expert tips, guides, and resources for assignment writing, research papers, and academic success from Academic Wizard.">
+    
+    <link rel="canonical" href="https://www.academicwizard.online/blog/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/blog.css">
+
+    <!-- JSON-LD (Blog Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "url": "https://www.academicwizard.online/blog/",
+      "name": "Academic Wizard Blog",
+      "description": "Discover expert tips, guides, and resources for assignment writing, research papers, and academic success.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Academic Wizard",
+        "url": "https://www.academicwizard.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.academicwizard.online/marketing/hero-bg.png"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
-  <header class="blog-header">
-    <h1>Academic Wizard Blog</h1>
-    <p>Insights, tips, and resources for academic success.</p>
-    <nav>
-      <a href="../index.html">Home</a> |
-      <a href="../contact.html">Contact</a>
+    <div class="blog-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="blog-nav">
+        <a href="../index.html" class="nav-logo">Academic Wizard</a>
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../services.html">Services</a>
+            <a href="index.html" class="active" style="color: var(--primary);">Blog</a>
+            <a href="../contact.html">Contact</a>
+            <a href="https://wa.me/919509893638" class="nav-cta" target="_blank" rel="noopener">Get Assignment Help</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span><span></span><span></span>
+        </div>
     </nav>
-  </header>
 
-  <main class="blog-container">
-    <section id="posts" class="posts-list">
-      <!-- Posts will be rendered here -->
+    <!-- Blog Hero -->
+    <header class="blog-hero">
+        <h1>Welcome to the <span class="gradient-text">Academic Blog</span></h1>
+        <p>Insights, guides, and expert advice to help you excel in your studies and achieve top grades.</p>
+        
+        <!-- Search -->
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search articles, topics, or keywords...">
+        </div>
+    </header>
+
+    <!-- Category Filters -->
+    <div class="filter-container" id="categoryFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="essay">Essay Writing</button>
+        <button class="filter-btn" data-filter="research">Research Papers</button>
+        <button class="filter-btn" data-filter="dissertation">Dissertation</button>
+        <button class="filter-btn" data-filter="tips">Study Tips</button>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <main>
+        <div class="posts-grid" id="postsGrid">
+            <!-- Posts injected via JS -->
+            <div class="no-posts" id="loadingState">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading the latest insights...</p>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <!-- Pagination injected via JS -->
+        </div>
+    </main>
+
+    <!-- Global CTA -->
+    <section class="post-cta" style="margin: 0 8% 4rem; border-radius: var(--radius-lg);">
+        <div class="cta-content">
+            <h2>Ready to Boost Your Grades?</h2>
+            <p>Don't let tight deadlines and complex assignments stress you out. Connect with our academic experts instantly.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919509893638" target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <script>
-    // Simple fetch‑and‑render for posts.json
-    fetch('../data/posts.json')
-      .then(r => r.json())
-      .then(posts => {
-        const container = document.getElementById('posts');
-        if (!posts.length) {
-          container.innerHTML = '<p>No posts yet. Stay tuned!</p>';
-          return;
-        }
-        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-        posts.forEach(p => {
-          const article = document.createElement('article');
-          article.className = 'post-item';
-          article.innerHTML = `
-            <h2><a href="${p.url}">${p.title}</a></h2>
-            <p class="post-meta">${new Date(p.date).toLocaleDateString()}</p>
-            <p class="post-excerpt">${p.excerpt}</p>
-          `;
-          container.appendChild(article);
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <div class="footer-content">
+            <div class="footer-logo">Academic Wizard</div>
+            <p>Your trusted partner for academic excellence.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Academic Wizard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Nav Scroll & Mobile Menu
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.blog-nav');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
         });
-      })
-      .catch(err => {
-        console.error('Failed to load posts', err);
-        document.getElementById('posts').innerHTML = '<p>Error loading posts.</p>';
-      });
-  </script>
+        
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Blog Logic
+        let allPosts = [];
+        let filteredPosts = [];
+        let currentPage = 1;
+        const postsPerPage = 9;
+
+        const grid = document.getElementById('postsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const pagination = document.getElementById('pagination');
+
+        // Fetch Data
+        fetch('../data/posts.json')
+            .then(res => res.json())
+            .then(data => {
+                allPosts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+                filteredPosts = [...allPosts];
+                renderPosts();
+            })
+            .catch(err => {
+                grid.innerHTML = `
+                    <div class="no-posts">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>No posts available yet. Check back soon!</p>
+                    </div>`;
+            });
+
+        // Render Posts
+        function renderPosts() {
+            if (filteredPosts.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-posts">
+                        <i class="fas fa-search"></i>
+                        <p>No articles found matching your criteria.</p>
+                    </div>`;
+                pagination.innerHTML = '';
+                return;
+            }
+
+            const start = (currentPage - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            const currentPosts = filteredPosts.slice(start, end);
+
+            grid.innerHTML = currentPosts.map(post => {
+                const date = new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'short', day: 'numeric'
+                });
+                const tagsHtml = (post.keywords ? post.keywords.split(',').slice(0, 3) : ['Academic', 'Tips'])
+                    .map(t => `<span class="post-tag">${t.trim()}</span>`).join('');
+                    
+                // Default reading time if not present
+                const readingTime = post.readingTime || Math.ceil(Math.random() * 5 + 3);
+
+                return `
+                    <article class="post-card">
+                        <div class="post-card-body">
+                            <div class="post-card-meta">
+                                <div class="post-card-date">
+                                    <i class="far fa-calendar"></i> ${date}
+                                </div>
+                                <div class="post-card-reading-time">
+                                    <i class="far fa-clock"></i> ${readingTime} min
+                                </div>
+                            </div>
+                            <h2><a href="../${post.url}">${post.title}</a></h2>
+                            <div class="post-card-tags">
+                                ${tagsHtml}
+                            </div>
+                            <p class="post-card-excerpt">${post.excerpt}</p>
+                            <a href="../${post.url}" class="post-card-link">
+                                Read Article <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            renderPagination();
+        }
+
+        // Render Pagination
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let html = `<button ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})"><i class="fas fa-chevron-left"></i></button>`;
+            
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    html += `<button class="${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    html += `<span class="pagination-info">...</span>`;
+                }
+            }
+            
+            html += `<button ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})"><i class="fas fa-chevron-right"></i></button>`;
+            pagination.innerHTML = html;
+        }
+
+        window.changePage = (page) => {
+            currentPage = page;
+            renderPosts();
+            window.scrollTo({ top: document.querySelector('.filter-container').offsetTop - 100, behavior: 'smooth' });
+        };
+
+        // Search
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            currentPage = 1;
+            filteredPosts = allPosts.filter(p => 
+                p.title.toLowerCase().includes(term) || 
+                p.excerpt.toLowerCase().includes(term) ||
+                (p.keywords && p.keywords.toLowerCase().includes(term))
+            );
+            renderPosts();
+        });
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                const filter = e.target.getAttribute('data-filter');
+                currentPage = 1;
+                
+                if (filter === 'all') {
+                    filteredPosts = [...allPosts];
+                } else {
+                    filteredPosts = allPosts.filter(p => {
+                        const searchStr = (p.title + ' ' + (p.keywords || '')).toLowerCase();
+                        return searchStr.includes(filter);
+                    });
+                }
+                
+                // Keep search query if exists
+                if (searchInput.value) {
+                    const term = searchInput.value.toLowerCase();
+                    filteredPosts = filteredPosts.filter(p => 
+                        p.title.toLowerCase().includes(term) || 
+                        p.excerpt.toLowerCase().includes(term) ||
+                        (p.keywords && p.keywords.toLowerCase().includes(term))
+                    );
+                }
+                
+                renderPosts();
+            });
+        });
+    </script>
 </body>
 </html>
