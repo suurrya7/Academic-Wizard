@@ -69,8 +69,8 @@ def generate_article_content(topic):
     
     genai.configure(api_key=GEMINI_API_KEY)
     
-    # Use gemini-pro (or gemini-1.5-pro)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    gemini_model_name = os.getenv('GEMINI_MODEL', 'gemini-1.5-flash')
+    model = genai.GenerativeModel(gemini_model_name)
     
     prompt = f"""
     You are an expert academic writer and SEO specialist writing for 'Academic Wizard', a premium assignment help service.

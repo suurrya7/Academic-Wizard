@@ -12,6 +12,7 @@ permissions:
 
 env:
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
 
 jobs:
   generate-blog-post:
@@ -45,6 +46,7 @@ jobs:
         run: python automation/generate_post.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
 
       - name: Update SEO meta tags and sitemap
         run: python automation/generate_seo.py
