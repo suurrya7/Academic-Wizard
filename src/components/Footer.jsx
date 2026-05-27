@@ -1,0 +1,86 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram, Linkedin, GraduationCap, ShieldCheck, Award, ThumbsUp } from 'lucide-react';
+
+const Footer = () => {
+    return (
+        <footer className="bg-bg-secondary pt-20 pb-10 border-t border-glass-border" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+            <div className="container px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div className="flex flex-col gap-6">
+                    <Link to="/" className="flex items-center gap-3">
+                        <GraduationCap className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={32} />
+                        <span className="text-xl font-bold tracking-[2px] font-heading">
+                            ACADEMIC WIZARD
+                        </span>
+                    </Link>
+                    <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                        Supporting university students worldwide with professional academic guidance and research assistance. Trusted for quality and confidentiality.
+                    </p>
+                    <div className="flex gap-4">
+                        <a href="#" className="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-all text-white">
+                            <Facebook size={18} />
+                        </a>
+                        <a href="#" className="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-all text-white">
+                            <Twitter size={18} />
+                        </a>
+                        <a href="#" className="w-10 h-10 rounded-full border border-glass-border flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-all text-white">
+                            <Instagram size={18} />
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h4>
+                    <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
+                        <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
+                        <li><Link to="/about" className="hover:text-accent-gold transition-colors">About Us</Link></li>
+                        <li><Link to="/faq" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
+                        <li><Link to="/contact" className="hover:text-accent-gold transition-colors">Contact</Link></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h4>
+                    <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Thesis Guidance</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Trust & Quality</h4>
+                    <div className="flex flex-col gap-6">
+                        <div className="flex items-center gap-3">
+                            <ShieldCheck className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
+                            <span className="text-xs uppercase tracking-widest font-heading text-white">100% Confidential</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Award className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
+                            <span className="text-xs uppercase tracking-widest font-heading text-white">Expert Writers</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <ThumbsUp className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
+                            <span className="text-xs uppercase tracking-widest font-heading text-white">Quality Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container px-6 pt-10 border-t border-glass-border flex flex-col md:flex-row justify-between items-center gap-6">
+                <p className="text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
+                    &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
+                </p>
+                <div className="flex gap-8 text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
+                    <a href="#" className="hover:text-accent-gold transition-colors">Privacy Policy</a>
+                    <a href="#" className="hover:text-accent-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

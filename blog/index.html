@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Wizard Blog</title>
+  <meta name="description" content="Academic Wizard blog featuring high‑quality articles on assignment help, essay writing, research tips, and more." />
+  <link rel="stylesheet" href="./assets/blog.css" />
+</head>
+<body>
+  <header class="blog-header">
+    <h1>Academic Wizard Blog</h1>
+    <p>Insights, tips, and resources for academic success.</p>
+    <nav>
+      <a href="../index.html">Home</a> |
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="blog-container">
+    <section id="posts" class="posts-list">
+      <!-- Posts will be rendered here -->
+    </section>
+  </main>
+
+  <script>
+    // Simple fetch‑and‑render for posts.json
+    fetch('../data/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const container = document.getElementById('posts');
+        if (!posts.length) {
+          container.innerHTML = '<p>No posts yet. Stay tuned!</p>';
+          return;
+        }
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        posts.forEach(p => {
+          const article = document.createElement('article');
+          article.className = 'post-item';
+          article.innerHTML = `
+            <h2><a href="${p.url}">${p.title}</a></h2>
+            <p class="post-meta">${new Date(p.date).toLocaleDateString()}</p>
+            <p class="post-excerpt">${p.excerpt}</p>
+          `;
+          container.appendChild(article);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load posts', err);
+        document.getElementById('posts').innerHTML = '<p>Error loading posts.</p>';
+      });
+  </script>
+</body>
+</html>
