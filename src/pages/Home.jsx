@@ -9,7 +9,7 @@ import Button from '../components/Button';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-    const whatsappUrl = "https://wa.me/919358394284?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
+    const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
 
     return (
         <div className="page-home overflow-hidden">

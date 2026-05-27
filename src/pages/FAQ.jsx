@@ -80,7 +80,7 @@ const FAQ = () => {
                 <div className="glass-card p-12 inline-block border-accent-gold/20" style={{ borderColor: 'rgba(212, 175, 55, 0.2)' }}>
                     <h3 className="text-2xl font-bold font-heading mb-6 text-white">Still have questions?</h3>
                     <p className="text-text-secondary mb-8" style={{ color: 'var(--text-secondary)' }}>Our experts are available on WhatsApp to help you with any inquiries.</p>
-                    <a href="https://wa.me/919358394284?text=Hello%20Academic%20Wizard,%20I%20have%20a%20question" target="_blank" rel="noreferrer" className="text-accent-gold font-heading tracking-widest uppercase border-b border-accent-gold pb-2 hover:text-white hover:border-white transition-all" style={{ color: 'var(--accent-gold)', borderColor: 'var(--accent-gold)' }}>
+                    <a href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20have%20a%20question" target="_blank" rel="noreferrer" className="text-accent-gold font-heading tracking-widest uppercase border-b border-accent-gold pb-2 hover:text-white hover:border-white transition-all" style={{ color: 'var(--accent-gold)', borderColor: 'var(--accent-gold)' }}>
                         Chat on WhatsApp
                     </a>
                 </div>

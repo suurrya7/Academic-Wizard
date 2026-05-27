@@ -5,7 +5,7 @@ import Academic3DScene from './Academic3D';
 import Button from './Button';
 
 const Hero = () => {
-    const whatsappUrl = "https://wa.me/919358394284?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
+    const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
 
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
