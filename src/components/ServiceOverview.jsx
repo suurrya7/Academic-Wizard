@@ -16,9 +16,9 @@ import {
 import Button from './Button';
 
 const services = [
-    { icon: Briefcase, title: 'Assignment Assistance', desc: 'Expert help with complex university assignments across all subjects.' },
-    { icon: FileText, title: 'Essay Writing Support', desc: 'Premium guidance for developing high-quality academic essays.' },
-    { icon: Library, title: 'Dissertation Assistance', desc: 'Comprehensive support for dissertation research and structuring.' },
+    { icon: Briefcase, title: 'Assignment Help', desc: 'Expert assignment writing solution for complex university assignments across all subjects.' },
+    { icon: FileText, title: 'Essay Help', desc: 'Premium guidance for developing high-quality academic essays.' },
+    { icon: Library, title: 'Dissertation Help', desc: 'Comprehensive support for dissertation research and structuring.' },
     { icon: BookOpen, title: 'Thesis Guidance', desc: 'Specialized help for Master and PhD level thesis development.' },
     { icon: Search, title: 'Research Paper Support', desc: 'Advanced research methodology and data analysis assistance.' },
     { icon: Microscope, title: 'Case Study Assistance', desc: 'Detailed analysis and formatting for academic case studies.' },

@@ -17,21 +17,21 @@ import {
 const serviceList = [
     {
         icon: Briefcase,
-        title: 'Assignment Assistance',
-        desc: 'Academic Wizard provides professional assignment assistance for university students who need help with research, structure, and academic formatting. Our experts cover all academic levels and subjects.',
-        keywords: ['assignment help', 'assignment help UK']
+        title: 'Assignment Help',
+        desc: 'Academic Wizard provides professional assignment writing solutions for university students who need help with research, structure, and academic formatting. Our experts cover all academic levels and subjects.',
+        keywords: ['assignment help', 'assignment writing solution', 'assignment help UK']
     },
     {
         icon: FileText,
-        title: 'Essay Writing Support',
+        title: 'Essay Help',
         desc: 'Our experts assist students in developing high quality essays with proper research, academic arguments, and referencing. We focus on critical thinking and academic excellence.',
-        keywords: ['essay writing help', 'essay help Australia']
+        keywords: ['essay help', 'essay writing help', 'essay help Australia']
     },
     {
         icon: Library,
-        title: 'Dissertation Assistance',
+        title: 'Dissertation Help',
         desc: 'We provide dissertation guidance including research structure, literature review assistance, and editing support. Tailored help for undergraduate and postgraduate dissertations.',
-        keywords: ['dissertation assistance', 'dissertation help UK']
+        keywords: ['dissertation help', 'dissertation assistance', 'dissertation help UK']
     },
     {
         icon: BookOpen,
