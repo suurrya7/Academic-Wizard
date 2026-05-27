@@ -17,6 +17,9 @@ async function copyIfExists(from, to) {
 }
 
 await mkdir(dist, { recursive: true });
+if (existsSync(path.join(dist, 'app.html'))) {
+  await copyFile(path.join(dist, 'app.html'), path.join(dist, 'index.html'));
+}
 await copyIfExists(path.join(root, 'blog', 'assets'), path.join(dist, 'blog', 'assets'));
 await copyIfExists(path.join(root, 'blog', 'posts'), path.join(dist, 'blog', 'posts'));
 await copyIfExists(path.join(root, 'data'), path.join(dist, 'data'));

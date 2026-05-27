@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /automation/
+Disallow: /.github/
+
+Sitemap: https://suurrya7.github.io/Academic-Wizard/sitemap.xml
