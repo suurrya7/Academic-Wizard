@@ -104,15 +104,15 @@ def _extract_keywords(title: str, description: str) -> str:
     return ", ".join(keywords)
 
 
-def _ensure_meta(soup: BeautifulSoup, head, name: str = None, property: str = None, content: str = ""):
+def _ensure_meta(soup: BeautifulSoup, head, meta_name: str = None, property_name: str = None, content: str = ""):
     """Insert a <meta> tag if it doesn't already exist."""
     attrs = {}
-    if name:
-        attrs["name"] = name
-        existing = head.find("meta", attrs={"name": name})
-    elif property:
-        attrs["property"] = property
-        existing = head.find("meta", attrs={"property": property})
+    if meta_name:
+        attrs["name"] = meta_name
+        existing = head.find("meta", attrs={"name": meta_name})
+    elif property_name:
+        attrs["property"] = property_name
+        existing = head.find("meta", attrs={"property": property_name})
     else:
         return
 
@@ -165,20 +165,20 @@ def inject_seo_tags(filepath: Path) -> bool:
     canonical_url = absolute_url(f"blog/posts/{post_filename}")
 
     # --- Inject meta tags ---
-    _ensure_meta(soup, head, name="description", content=description)
-    _ensure_meta(soup, head, name="keywords", content=keywords)
+    _ensure_meta(soup, head, meta_name="description", content=description)
+    _ensure_meta(soup, head, meta_name="keywords", content=keywords)
 
     # Open Graph tags
-    _ensure_meta(soup, head, property="og:title", content=title)
-    _ensure_meta(soup, head, property="og:description", content=description)
-    _ensure_meta(soup, head, property="og:url", content=canonical_url)
-    _ensure_meta(soup, head, property="og:type", content="article")
-    _ensure_meta(soup, head, property="og:image", content=DEFAULT_IMAGE)
+    _ensure_meta(soup, head, property_name="og:title", content=title)
+    _ensure_meta(soup, head, property_name="og:description", content=description)
+    _ensure_meta(soup, head, property_name="og:url", content=canonical_url)
+    _ensure_meta(soup, head, property_name="og:type", content="article")
+    _ensure_meta(soup, head, property_name="og:image", content=DEFAULT_IMAGE)
 
     # Twitter Card tags
-    _ensure_meta(soup, head, name="twitter:card", content="summary_large_image")
-    _ensure_meta(soup, head, name="twitter:title", content=title)
-    _ensure_meta(soup, head, name="twitter:description", content=description)
+    _ensure_meta(soup, head, meta_name="twitter:card", content="summary_large_image")
+    _ensure_meta(soup, head, meta_name="twitter:title", content=title)
+    _ensure_meta(soup, head, meta_name="twitter:description", content=description)
 
     # Canonical URL
     if not head.find("link", attrs={"rel": "canonical"}):
