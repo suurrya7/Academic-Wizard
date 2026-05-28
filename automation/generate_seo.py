@@ -105,6 +105,10 @@ def _extract_keywords(title: str, description: str) -> str:
     return ", ".join(keywords)
 
 
+def _clean_title(title: str) -> str:
+    return title.replace(" | Academic Wizard Blog", "").strip()
+
+
 def _ensure_meta(soup: BeautifulSoup, head, meta_name: str = None, property_name: str = None, content: str = ""):
     """Insert a <meta> tag if it doesn't already exist."""
     attrs = {}
@@ -144,7 +148,7 @@ def _meta_from_file(filepath: Path, soup: BeautifulSoup, posts_by_url: dict[str,
     post = posts_by_url.get(relative_url, {})
     title_tag = soup.find("title")
     raw_title = title_tag.get_text(strip=True) if title_tag else filepath.stem.replace("-", " ").title()
-    title = post.get("title") or raw_title.replace(" | Academic Wizard Blog", "")
+    title = post.get("title") or _clean_title(raw_title)
     description = post.get("excerpt") or _extract_first_paragraph(soup) or f"{title} — expert tips and guidance from {SITE_NAME}."
     keywords = post.get("keywords") or _extract_keywords(title, description).split(", ")
     if isinstance(keywords, str):
@@ -215,7 +219,7 @@ def inject_seo_tags(filepath: Path) -> bool:
 
     # --- Extract title & description ---
     title_tag = soup.find("title")
-    title = title_tag.get_text(strip=True) if title_tag else filepath.stem.replace("-", " ").title()
+    title = _clean_title(title_tag.get_text(strip=True)) if title_tag else filepath.stem.replace("-", " ").title()
     description = _extract_first_paragraph(soup)
     if not description:
         description = f"{title} — expert tips and guidance from {SITE_NAME}."

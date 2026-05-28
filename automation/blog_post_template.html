@@ -42,13 +42,18 @@
     
     <!-- Navigation -->
     <nav class="blog-nav">
-        <a href="{{SITE_URL}}" class="nav-logo">Academic Wizard</a>
+        <a href="{{SITE_URL}}" class="nav-logo">
+            <span class="nav-logo-mark"><i class="fas fa-graduation-cap"></i></span>
+            <span>Academic <strong>Wizard</strong></span>
+        </a>
         <div class="nav-menu">
             <a href="{{SITE_URL}}">Home</a>
             <a href="{{SERVICES_URL}}">Services</a>
+            <a href="{{ABOUT_URL}}">About Us</a>
+            <a href="{{FAQ_URL}}">FAQs</a>
             <a href="{{BLOG_URL}}">Blog</a>
             <a href="{{CONTACT_URL}}">Contact</a>
-            <a href="https://wa.me/919509893638" class="nav-cta" target="_blank" rel="noopener">Get Assignment Help</a>
+            <a href="{{CONTACT_URL}}" class="nav-cta">Order Now</a>
         </div>
         <div class="nav-toggle">
             <span></span><span></span><span></span>
@@ -79,19 +84,52 @@
 
     <!-- Main Content -->
     <main class="post-content-wrapper">
-        <article class="post-content">
-            {{CONTENT}}
-        </article>
-        
-        <!-- Social Share -->
-        <div class="post-share">
-            <span class="share-title">Share this article:</span>
-            <div class="share-links">
-                <a href="https://twitter.com/intent/tweet?url={{CANONICAL_URL}}&text={{TITLE}}" target="_blank" rel="noopener" class="share-btn twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{CANONICAL_URL}}" target="_blank" rel="noopener" class="share-btn facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{CANONICAL_URL}}&title={{TITLE}}" target="_blank" rel="noopener" class="share-btn linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://api.whatsapp.com/send?text={{TITLE}} {{CANONICAL_URL}}" target="_blank" rel="noopener" class="share-btn whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <div class="post-layout">
+            <div class="post-main">
+                <article class="post-content">
+                    {{CONTENT}}
+                </article>
+                
+                <!-- Social Share -->
+                <div class="post-share">
+                    <span class="share-title">Share this article:</span>
+                    <div class="share-links">
+                        <a href="https://twitter.com/intent/tweet?url={{CANONICAL_URL}}&text={{TITLE}}" target="_blank" rel="noopener" class="share-btn twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{CANONICAL_URL}}&title={{TITLE}}" target="_blank" rel="noopener" class="share-btn linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://api.whatsapp.com/send?text={{TITLE}} {{CANONICAL_URL}}" target="_blank" rel="noopener" class="share-btn whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
+
+            <aside class="post-sidebar">
+                <form class="contact-panel" id="blogContactForm">
+                    <p class="panel-kicker">Need Help?</p>
+                    <h2>Talk to an Academic Expert</h2>
+                    <label>
+                        Name
+                        <input name="name" type="text" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input name="email" type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>
+                        Subject
+                        <input name="subject" type="text" placeholder="Assignment, essay, dissertation...">
+                    </label>
+                    <label>
+                        Deadline
+                        <input name="deadline" type="text" placeholder="e.g. 3 days">
+                    </label>
+                    <label>
+                        Requirements
+                        <textarea name="message" rows="5" placeholder="Tell us what you need help with" required></textarea>
+                    </label>
+                    <button class="btn-primary contact-submit" type="submit">
+                        <i class="fab fa-whatsapp"></i> Send on WhatsApp
+                    </button>
+                </form>
+            </aside>
         </div>
 
         <!-- CTA Section -->
@@ -113,12 +151,47 @@
 
     <!-- Footer -->
     <footer class="blog-footer">
-        <div class="footer-content">
-            <div class="footer-logo">Academic Wizard</div>
-            <p>Your trusted partner for academic guidance, editing, and research support.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="{{SITE_URL}}" class="footer-logo">
+                    <span class="footer-logo-mark"><i class="fas fa-graduation-cap"></i></span>
+                    <span>Academic Wizard</span>
+                </a>
+                <p>Supporting university students worldwide with professional academic guidance and research assistance. Trusted for quality and confidentiality.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="{{SITE_URL}}">Home</a>
+                <a href="{{SERVICES_URL}}">Services</a>
+                <a href="{{ABOUT_URL}}">About Us</a>
+                <a href="{{FAQ_URL}}">FAQs</a>
+                <a href="{{BLOG_URL}}">Blog</a>
+                <a href="{{CONTACT_URL}}">Contact</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="{{SERVICES_URL}}">Assignment Assistance</a>
+                <a href="{{SERVICES_URL}}">Essay Writing Support</a>
+                <a href="{{SERVICES_URL}}">Dissertation Help</a>
+                <a href="{{SERVICES_URL}}">Thesis Guidance</a>
+                <a href="{{SERVICES_URL}}">Editing & Proofreading</a>
+            </div>
+
+            <div class="footer-column trust-list">
+                <h4>Trust & Quality</h4>
+                <span><i class="fas fa-shield-alt"></i> 100% Confidential</span>
+                <span><i class="fas fa-award"></i> Expert Writers</span>
+                <span><i class="fas fa-thumbs-up"></i> Quality Support</span>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="year"></span> Academic Wizard. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="{{PRIVACY_URL}}">Privacy Policy</a>
+                <a href="{{TERMS_URL}}">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
@@ -142,6 +215,21 @@
         
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+        });
+
+        document.getElementById('blogContactForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.currentTarget);
+            const message = [
+                'Hello Academic Wizard, I need academic assistance.',
+                `Name: ${formData.get('name') || ''}`,
+                `Email: ${formData.get('email') || ''}`,
+                `Subject: ${formData.get('subject') || ''}`,
+                `Deadline: ${formData.get('deadline') || ''}`,
+                `Requirements: ${formData.get('message') || ''}`,
+                `Page: {{CANONICAL_URL}}`
+            ].join('\\n');
+            window.open(`https://wa.me/919509893638?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
         });
     </script>
 </body>

@@ -285,7 +285,11 @@ def render_post(meta: dict, content: str) -> str:
         "{{SITE_URL}}": absolute_url(""),
         "{{BLOG_URL}}": absolute_url("blog/"),
         "{{SERVICES_URL}}": absolute_url("services"),
+        "{{ABOUT_URL}}": absolute_url("about"),
+        "{{FAQ_URL}}": absolute_url("faq"),
         "{{CONTACT_URL}}": absolute_url("contact"),
+        "{{PRIVACY_URL}}": absolute_url("privacy-policy"),
+        "{{TERMS_URL}}": absolute_url("terms-of-service"),
     }
     rendered = template
     for token, value in replacements.items():
