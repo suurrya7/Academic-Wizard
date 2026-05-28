@@ -25,6 +25,7 @@ await copyIfExists(path.join(root, 'blog', 'posts'), path.join(dist, 'blog', 'po
 await copyIfExists(path.join(root, 'data'), path.join(dist, 'data'));
 await copyIfExists(path.join(root, 'public', 'sitemap.xml'), path.join(dist, 'sitemap.xml'));
 await copyIfExists(path.join(root, 'public', 'robots.txt'), path.join(dist, 'robots.txt'));
+await copyIfExists(path.join(root, 'CNAME'), path.join(dist, 'CNAME'));
 
 if (existsSync(path.join(dist, 'index.html'))) {
   await copyFile(path.join(dist, 'index.html'), path.join(dist, '404.html'));
