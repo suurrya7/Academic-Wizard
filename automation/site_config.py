@@ -2,8 +2,8 @@ import os
 
 
 SITE_NAME = "Academic Wizard"
-SITE_URL = os.getenv("SITE_URL", "https://suurrya7.github.io/Academic-Wizard").rstrip("/")
-BASE_PATH = os.getenv("BASE_PATH", "/Academic-Wizard/").strip()
+SITE_URL = os.getenv("SITE_URL", "https://academicwizard.online").rstrip("/")
+BASE_PATH = os.getenv("BASE_PATH", "/").strip()
 
 if not BASE_PATH.startswith("/"):
     BASE_PATH = f"/{BASE_PATH}"

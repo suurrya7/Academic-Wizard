@@ -1,8 +1,8 @@
 # Academic Wizard
 
-Academic Wizard is a Vite + React site for academic guidance, editing, research support, and assignment planning. It is configured for GitHub Pages at:
+Academic Wizard is a Vite + React site for academic guidance, editing, research support, and assignment planning. It is configured for GitHub Pages with a custom domain at:
 
-https://suurrya7.github.io/Academic-Wizard/
+https://academicwizard.online/
 
 ## Local Development
 
@@ -47,9 +47,9 @@ Refresh sitemap and robots locally:
 python3 automation/generate_seo.py
 ```
 
-## Custom Domain Later
+## Custom Domain
 
-When moving from GitHub Pages repo hosting to a custom domain, update:
+The site is configured to deploy at the domain root. If the domain changes later, update:
 
 - `SITE_URL` in `.github/workflows/deploy.yml`
 - `BASE_PATH` in `.github/workflows/deploy.yml`

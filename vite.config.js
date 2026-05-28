@@ -7,7 +7,7 @@ const projectRoot = fileURLToPath(new URL('.', import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.BASE_PATH || '/Academic-Wizard/',
+  base: process.env.BASE_PATH || '/',
   plugins: [react()],
   build: {
     rollupOptions: {
