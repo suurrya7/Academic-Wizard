@@ -120,7 +120,8 @@ def _ensure_meta(soup: BeautifulSoup, head, meta_name: str = None, property_name
         existing["content"] = content  # update content in case it changed
         return
 
-    tag = soup.new_tag("meta", **attrs, content=content)
+    tag = soup.new_tag("meta", attrs=attrs)
+    tag["content"] = content
     head.append(tag)
     head.append("\n")
 
