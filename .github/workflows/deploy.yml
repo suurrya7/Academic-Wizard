@@ -1,4 +1,4 @@
-cname: Generate Blog and Deploy to GitHub Pages
+name: Generate Blog and Deploy to GitHub Pages
 
 on:
   schedule:
@@ -24,7 +24,7 @@ jobs:
       SITE_URL: https://academicwizard.online
       BASE_PATH: /
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || vars.GEMINI_MODEL }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
 
     steps:
       - name: Checkout
