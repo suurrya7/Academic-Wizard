@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "title": "How to Structure a Literature Review: A Step-by-Step Academic Guide",
+    "slug": "how-to-structure-a-literature-review-a-step-by-step-academic-guide",
+    "excerpt": "Struggling with your literature review? Learn the essential steps to organize your sources and structure your analysis for a cohesive academic paper.",
+    "keywords": [
+      "how to structure a literature review for research",
+      "literature review outline template",
+      "thematic vs chronological literature review",
+      "academic synthesis techniques",
+      "organizing scholarly sources"
+    ],
+    "primaryKeyword": "how to structure a literature review for research",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-05-28T00:05:08.930849+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/how-to-structure-a-literature-review-a-step-by-step-academic-guide.html"
+  },
+  {
+    "title": "Refining Your Dissertation: Ethical Proofreading and Editing Tips",
+    "slug": "refining-your-dissertation-ethical-proofreading-and-editing-tips",
+    "excerpt": "Learn how to ethically edit and proofread your dissertation. Discover professional techniques to refine your flow, grammar, and academic tone effectively.",
+    "keywords": [
+      "dissertation editing and proofreading tips",
+      "improving academic flow",
+      "correcting thesis grammar",
+      "dissertation formatting checklist",
+      "polishing academic writing"
+    ],
+    "primaryKeyword": "dissertation editing and proofreading tips",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-05-28T00:05:29.183727+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/refining-your-dissertation-ethical-proofreading-and-editing-tips.html"
+  },
+  {
+    "title": "Mastering Research Papers: Effective Data Management Strategies",
+    "slug": "mastering-research-papers-effective-data-management-strategies",
+    "excerpt": "Maximize your research efficiency with these expert data management tips. Learn how to organize your evidence and citations for a successful final paper.",
+    "keywords": [
+      "data management strategies for research papers",
+      "organizing research materials",
+      "academic citation management",
+      "research paper planning guide",
+      "annotated bibliography best practices"
+    ],
+    "primaryKeyword": "data management strategies for research papers",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-05-28T00:05:36.624932+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-research-papers-effective-data-management-strategies.html"
+  },
+  {
+    "title": "Effective Assignment Planning: A Guide to Managing University Deadlines",
+    "slug": "effective-assignment-planning-a-guide-to-managing-university-deadlines",
+    "excerpt": "Feeling overwhelmed by deadlines? Follow our practical guide to planning your assignments and mastering time management for university success.",
+    "keywords": [
+      "how to manage university assignment deadlines",
+      "academic time management techniques",
+      "study schedule planning",
+      "breaking down assignment tasks",
+      "student productivity tips"
+    ],
+    "primaryKeyword": "how to manage university assignment deadlines",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-05-28T00:05:44.607227+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/effective-assignment-planning-a-guide-to-managing-university-deadlines.html"
+  }
+]
