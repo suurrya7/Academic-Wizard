@@ -24,7 +24,7 @@ from generate_post import render_post
 # Configuration
 # ---------------------------------------------------------------------------
 AUTHOR_NAME = "Academic Wizard"
-DEFAULT_IMAGE = absolute_url("favicon.svg")
+DEFAULT_IMAGE = absolute_url("academic-wizard-favicon.png")
 
 # Resolve project root — works both locally and in CI
 SCRIPT_DIR = Path(__file__).resolve().parent

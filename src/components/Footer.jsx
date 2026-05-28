@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GraduationCap, ShieldCheck, Award, ThumbsUp } from 'lucide-react';
+import { ShieldCheck, Award, ThumbsUp } from 'lucide-react';
+import academicWizardLogo from '../assets/academic-wizard-logo.png';
 
 const Footer = () => {
     return (
         <footer className="bg-bg-secondary pt-20 pb-10 border-t border-glass-border" style={{ backgroundColor: 'var(--bg-secondary)' }}>
             <div className="container px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                 <div className="flex flex-col gap-6">
-                    <Link to="/" className="flex items-center gap-3">
-                        <GraduationCap className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={32} />
-                        <span className="text-xl font-bold tracking-[2px] font-heading">
-                            ACADEMIC WIZARD
-                        </span>
+                    <Link to="/" className="block w-[190px]" aria-label="Academic Wizard home">
+                        <img
+                            src={academicWizardLogo}
+                            alt="Academic Wizard"
+                            className="h-auto w-full object-contain"
+                        />
                     </Link>
                     <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         Supporting university students worldwide with professional academic guidance and research assistance. Trusted for quality and confidentiality.

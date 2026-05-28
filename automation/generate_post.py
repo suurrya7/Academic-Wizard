@@ -259,7 +259,7 @@ def generate_json_ld(meta: dict) -> str:
         "publisher": {
             "@type": "Organization",
             "name": SITE_NAME,
-            "logo": {"@type": "ImageObject", "url": absolute_url("favicon.svg")},
+            "logo": {"@type": "ImageObject", "url": absolute_url("academic-wizard-favicon.png")},
         },
         "datePublished": meta["date"],
         "dateModified": meta["date"],

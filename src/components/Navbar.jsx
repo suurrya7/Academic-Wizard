@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Button from './Button';
+import academicWizardFavicon from '../assets/academic-wizard-favicon.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,18 +30,18 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'py-4 bg-black/80 backdrop-blur-xl border-b border-white/10' : 'py-8'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="flex items-center gap-3 group">
+                <Link to="/" className="flex items-center group" aria-label="Academic Wizard home">
                     <motion.div
-                        whileHover={{ rotate: 360 }}
+                        whileHover={{ scale: 1.04 }}
                         transition={{ duration: 0.8 }}
-                        className="w-12 h-12 bg-accent-gold rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.4)]"
-                        style={{ backgroundColor: 'var(--accent-gold)' }}
+                        className="h-14 w-14 sm:h-16 sm:w-16 flex items-center justify-center"
                     >
-                        <GraduationCap color="black" size={28} />
+                        <img
+                            src={academicWizardFavicon}
+                            alt="Academic Wizard"
+                            className="h-full w-full object-contain"
+                        />
                     </motion.div>
-                    <span className="text-xl font-bold tracking-[3px] font-heading group-hover:text-accent-gold transition-colors">
-                        ACADEMIC <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>WIZARD</span>
-                    </span>
                 </Link>
 
                 {/* Desktop Links */}
