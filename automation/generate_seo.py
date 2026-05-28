@@ -18,6 +18,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 from site_config import SITE_NAME, absolute_url
+from generate_post import render_post
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -124,6 +125,65 @@ def _ensure_meta(soup: BeautifulSoup, head, meta_name: str = None, property_name
     tag["content"] = content
     head.append(tag)
     head.append("\n")
+
+
+def _load_posts_by_url() -> dict[str, dict]:
+    if not POSTS_JSON_PATH.exists():
+        return {}
+    try:
+        posts = json.loads(POSTS_JSON_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    if not isinstance(posts, list):
+        return {}
+    return {post.get("url", ""): post for post in posts if isinstance(post, dict)}
+
+
+def _meta_from_file(filepath: Path, soup: BeautifulSoup, posts_by_url: dict[str, dict]) -> dict:
+    relative_url = f"blog/posts/{filepath.name}"
+    post = posts_by_url.get(relative_url, {})
+    title_tag = soup.find("title")
+    raw_title = title_tag.get_text(strip=True) if title_tag else filepath.stem.replace("-", " ").title()
+    title = post.get("title") or raw_title.replace(" | Academic Wizard Blog", "")
+    description = post.get("excerpt") or _extract_first_paragraph(soup) or f"{title} — expert tips and guidance from {SITE_NAME}."
+    keywords = post.get("keywords") or _extract_keywords(title, description).split(", ")
+    if isinstance(keywords, str):
+        keywords = [keyword.strip() for keyword in keywords.split(",") if keyword.strip()]
+
+    return {
+        "title": title,
+        "slug": post.get("slug") or filepath.stem,
+        "excerpt": description[:170],
+        "keywords": keywords,
+        "primaryKeyword": post.get("primaryKeyword", ""),
+        "category": post.get("category", "assignment-help"),
+        "categoryLabel": post.get("categoryLabel", "Assignment Help"),
+        "date": post.get("date") or datetime.fromtimestamp(filepath.stat().st_mtime, tz=timezone.utc).isoformat(),
+        "readingTime": post.get("readingTime") or max(4, round(len(soup.get_text(' ').split()) / 220)),
+        "url": relative_url,
+    }
+
+
+def refresh_post_template(filepath: Path, posts_by_url: dict[str, dict]) -> bool:
+    try:
+        raw_html = filepath.read_text(encoding="utf-8")
+    except OSError as exc:
+        logger.error("Failed to read %s: %s", filepath, exc)
+        return False
+
+    soup = BeautifulSoup(raw_html, "lxml")
+    article = soup.find("article", class_="post-content")
+    if not article:
+        return False
+
+    meta = _meta_from_file(filepath, soup, posts_by_url)
+    rendered = render_post(meta, article.decode_contents().strip())
+    if rendered.strip() == raw_html.strip():
+        return False
+
+    filepath.write_text(rendered, encoding="utf-8")
+    logger.info("✅ Refreshed post template for %s", filepath.name)
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -254,8 +314,11 @@ def process_all_posts() -> list[Path]:
         return []
 
     logger.info("Found %d HTML file(s) in blog/posts/", len(html_files))
+    posts_by_url = _load_posts_by_url()
     modified = []
     for html_file in html_files:
+        if refresh_post_template(html_file, posts_by_url):
+            modified.append(html_file)
         if inject_seo_tags(html_file):
             modified.append(html_file)
 
