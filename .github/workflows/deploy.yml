@@ -1,4 +1,4 @@
-name: Generate Blog and Deploy to GitHub Pages
+cname: Generate Blog and Deploy to GitHub Pages
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      SITE_URL: https://suurrya7.github.io/Academic-Wizard
+      SITE_URL: https://academicwizard.online
       BASE_PATH: /Academic-Wizard/
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || vars.GEMINI_MODEL }}
