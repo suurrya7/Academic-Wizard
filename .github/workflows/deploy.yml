@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 30
     env:
       SITE_URL: https://academicwizard.online
-      BASE_PATH: /Academic-Wizard/
+      BASE_PATH: /
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || vars.GEMINI_MODEL }}
 
