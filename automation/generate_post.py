@@ -19,7 +19,7 @@ POSTS_JSON = DATA_DIR / "posts.json"
 TEMPLATE_FILE = SCRIPT_DIR / "blog_post_template.html"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-2.5-flash"
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",
@@ -68,10 +68,9 @@ def save_posts(posts: list[dict]) -> None:
 def configure_model():
     if not GEMINI_API_KEY:
         raise RuntimeError("GEMINI_API_KEY is required unless --dry-run is used.")
-    import google.generativeai as genai
+    from google import genai
 
-    genai.configure(api_key=GEMINI_API_KEY)
-    return genai.GenerativeModel(GEMINI_MODEL)
+    return genai.Client(api_key=GEMINI_API_KEY)
 
 
 def parse_json_response(text: str):
@@ -117,7 +116,7 @@ Rules:
 - Do not frame content as contract cheating or submitting purchased work.
 - Prefer topics useful to UK, USA, Australia, Ireland, Canada, and India students.
 """
-    response = model.generate_content(prompt)
+    response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
     briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
@@ -185,7 +184,7 @@ Output rules:
 - Mention {SITE_NAME} naturally once near the end as 24/7 academic guidance, editing, and research support.
 - Keep the content ethical: do not encourage plagiarism, contract cheating, or submitting work the student did not author.
 """
-    response = model.generate_content(prompt)
+    response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
     content = response.text.strip()
     if content.startswith("```html"):
         content = content[7:]
