@@ -76,14 +76,26 @@ def configure_model():
 
 
 def parse_json_response(text: str):
+    """Extract a JSON object from Gemini's response.
+    Handles cases where the model wraps the JSON in markdown fences or adds extra text.
+    """
     cleaned = text.strip()
+    # Remove markdown code fences if present
     if cleaned.startswith("```json"):
         cleaned = cleaned[7:]
     elif cleaned.startswith("```"):
         cleaned = cleaned[3:]
     if cleaned.endswith("```"):
         cleaned = cleaned[:-3]
-    return json.loads(cleaned.strip())
+    # Find the first '{' and the matching closing '}'
+    start = cleaned.find('{')
+    end = cleaned.rfind('}')
+    if start != -1 and end != -1 and end > start:
+        json_str = cleaned[start:end+1]
+    else:
+        json_str = cleaned  # fallback to the whole cleaned string
+    return json.loads(json_str)
+
 
 
 def generate_keyword_briefs(model, existing_posts: list[dict], count: int) -> list[dict]:
@@ -336,8 +348,23 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
             created.append(meta)
             continue
 
-        # Output raw HTML fragment + JSON-LD (No full HTML wrapper)
-        final_html = content + "\n\n" + generate_json_ld(meta, faqs)
+        # Output raw HTML fragment + optional contact form + JSON-LD (No full HTML wrapper)
+        CONTACT_FORM_HTML = """
+        <section class="contact-form" id="contact-form">
+          <h2>Need More Help?</h2>
+          <form action="/contact" method="POST">
+            <input type="hidden" name="source" value="blog" />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" class="btn-primary">Send Request</button>
+          </form>
+        </section>
+        """
+        final_html = content + "\n\n" + CONTACT_FORM_HTML + "\n\n" + generate_json_ld(meta, faqs)
         
         post_path = POSTS_DIR / f"{meta['slug']}.html"
         post_path.write_text(final_html, encoding="utf-8")
