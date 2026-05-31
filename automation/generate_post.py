@@ -350,8 +350,9 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
 
         # Output raw HTML fragment + optional contact form + JSON-LD (No full HTML wrapper)
         CONTACT_FORM_HTML = """
-        <section class="contact-form" id="contact-form">
+        <section class="blog-contact-form" id="blog-contact-form">
           <h2>Need More Help?</h2>
+          <p>Get in touch with our team for personalised academic support.</p>
           <form action="/contact" method="POST">
             <input type="hidden" name="source" value="blog" />
             <label for="name">Name</label>
