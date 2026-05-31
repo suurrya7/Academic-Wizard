@@ -120,7 +120,11 @@ Rules:
 - Do not promise guaranteed grades.
 - Do not frame content as contract cheating or submitting purchased work.
 """
-    response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
+    response = model.models.generate_content(
+        model=GEMINI_MODEL, 
+        contents=prompt,
+        config={"response_mime_type": "application/json"}
+    )
     briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
@@ -207,7 +211,11 @@ Output rules:
 - Mention {SITE_NAME} naturally once near the end.
 - Keep the content ethical: no contract cheating.
 """
-    response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
+    response = model.models.generate_content(
+        model=GEMINI_MODEL, 
+        contents=prompt,
+        config={"response_mime_type": "application/json"}
+    )
     data = parse_json_response(response.text)
     html_content = data.get("htmlContent", "").strip()
     faqs = data.get("faqs", [])
