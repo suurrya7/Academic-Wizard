@@ -56,7 +56,7 @@ jobs:
       - name: Commit generated content
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
-          git add public/blog/posts public/data/posts.json public/sitemap.xml public/robots.txt
+          git add public/blog/posts public/data/posts.json public/sitemap.xml public/robots.txt public/llms.txt public/llms-full.txt
           if git diff --cached --quiet; then
             echo "No generated content changes to commit."
           else
