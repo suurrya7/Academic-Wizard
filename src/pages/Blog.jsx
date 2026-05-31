@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Search, CalendarDays, Clock, ArrowUpRight, Tags } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { assetPath, staticPostUrl } from '../config/site';
 
@@ -191,9 +192,9 @@ const Blog = () => {
                                         </div>
 
                                         <h2 className="text-xl leading-snug text-white mb-4">
-                                            <a href={staticPostUrl(post)} className="hover:text-accent-gold transition-colors">
+                                            <Link to={`/blog/${post.slug}`} className="hover:text-accent-gold transition-colors">
                                                 {post.title}
-                                            </a>
+                                            </Link>
                                         </h2>
 
                                         <p className="text-text-secondary leading-relaxed mb-6 flex-1" style={{ color: 'var(--text-secondary)' }}>
@@ -209,13 +210,13 @@ const Blog = () => {
                                             ))}
                                         </div>
 
-                                        <a
-                                            href={staticPostUrl(post)}
+                                        <Link
+                                            to={`/blog/${post.slug}`}
                                             className="inline-flex items-center gap-2 text-accent-gold text-xs uppercase tracking-[2px] font-heading"
                                             style={{ color: 'var(--accent-gold)' }}
                                         >
                                             Read Article <ArrowUpRight size={16} />
-                                        </a>
+                                        </Link>
                                     </article>
                                 );
                             })}

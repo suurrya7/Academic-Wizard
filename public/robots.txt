@@ -2,5 +2,15 @@ User-agent: *
 Allow: /
 Disallow: /automation/
 Disallow: /.github/
+Allow: /blog/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
 
 Sitemap: https://academicwizard.online/sitemap.xml

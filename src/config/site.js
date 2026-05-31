@@ -6,6 +6,6 @@ export function assetPath(path) {
 }
 
 export function staticPostUrl(post) {
-    if (!post?.url) return SITE_BASE_PATH;
-    return assetPath(post.url);
+    if (!post?.slug) return SITE_BASE_PATH;
+    return assetPath(`blog/${post.slug}`);
 }

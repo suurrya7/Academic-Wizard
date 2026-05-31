@@ -13,10 +13,9 @@ from site_config import SITE_NAME, absolute_url
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
-DATA_DIR = PROJECT_ROOT / "data"
+POSTS_DIR = PROJECT_ROOT / "public" / "blog" / "posts"
+DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
-TEMPLATE_FILE = SCRIPT_DIR / "blog_post_template.html"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-2.5-flash"
@@ -44,6 +43,9 @@ NICHE_KEYWORDS = [
     "university study guidance",
 ]
 
+TARGET_COUNTRIES = [
+    "UK", "USA", "Australia", "Canada", "India", "Singapore", "Ireland", "Germany"
+]
 
 def slugify(value: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
@@ -93,6 +95,8 @@ def generate_keyword_briefs(model, existing_posts: list[dict], count: int) -> li
 You are planning daily SEO content for {SITE_NAME}, an ethical academic support service.
 Create {count} fresh long-tail blog keyword briefs for {today}.
 
+Crucially, you must assign a TARGET COUNTRY to each brief by rotating through these options: {", ".join(TARGET_COUNTRIES)}. Focus the keyword intent specifically on that region's academic market (e.g. "university assignment help UK", "essay editing Australia").
+
 Core niches to rotate:
 {", ".join(NICHE_KEYWORDS)}
 
@@ -104,17 +108,17 @@ Avoid these existing slugs:
 
 Return only valid JSON as an array of objects. Each object must have:
 - title: practical blog title, 50-75 characters
-- primaryKeyword: long-tail keyword
+- primaryKeyword: long-tail keyword containing the target country context if appropriate
 - secondaryKeywords: array of 4 related keywords
 - category: one of {list(CATEGORIES.keys())}
-- searchIntent: one sentence describing the reader need
+- searchIntent: one sentence describing the reader need in the target country
 - excerpt: 130-155 character meta description
+- targetCountry: the country this brief targets (from the list provided)
 
 Rules:
 - Focus on ethical guidance, editing, research support, planning, and study help.
 - Do not promise guaranteed grades.
 - Do not frame content as contract cheating or submitting purchased work.
-- Prefer topics useful to UK, USA, Australia, Ireland, Canada, and India students.
 """
     response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
     briefs = parse_json_response(response.text)
@@ -127,36 +131,40 @@ def dry_run_briefs(existing_posts: list[dict], count: int) -> list[dict]:
     today = dt.datetime.now(dt.timezone.utc).strftime("%Y %B")
     candidates = [
         {
-            "title": f"How to Plan Assignment Writing Support in {today}",
-            "primaryKeyword": "assignment writing support for university students",
-            "secondaryKeywords": ["assignment help", "academic planning", "university writing", "study support"],
+            "title": f"How to Plan Assignment Writing Support in the UK",
+            "primaryKeyword": "assignment writing support for university students uk",
+            "secondaryKeywords": ["assignment help uk", "academic planning", "university writing london", "study support"],
             "category": "assignment-help",
-            "searchIntent": "Students need a practical way to plan assignment support ethically.",
-            "excerpt": "Learn how to plan ethical assignment writing support with clear research, structure, editing, and deadline steps.",
+            "searchIntent": "UK students need a practical way to plan assignment support ethically.",
+            "excerpt": "Learn how to plan ethical assignment writing support in the UK with clear research, structure, editing, and deadline steps.",
+            "targetCountry": "UK"
         },
         {
-            "title": "Literature Review Writing Guide for Better Research",
-            "primaryKeyword": "literature review writing help",
-            "secondaryKeywords": ["literature review", "research gaps", "source synthesis", "academic research"],
+            "title": "Literature Review Writing Guide for Australian Students",
+            "primaryKeyword": "literature review writing help australia",
+            "secondaryKeywords": ["literature review", "research gaps sydney", "source synthesis", "academic research au"],
             "category": "literature-review",
-            "searchIntent": "Students need help turning sources into a structured literature review.",
-            "excerpt": "Use this literature review writing guide to organize sources, compare evidence, and build a stronger research argument.",
+            "searchIntent": "Australian students need help turning sources into a structured literature review.",
+            "excerpt": "Use this literature review writing guide to organize sources, compare evidence, and build a stronger research argument in Australia.",
+            "targetCountry": "Australia"
         },
         {
-            "title": "Essay Writing Help: From Question Analysis to Editing",
-            "primaryKeyword": "essay writing help for students",
-            "secondaryKeywords": ["essay planning", "academic writing", "essay editing", "thesis statement"],
+            "title": "US College Essay Writing Help: From Question Analysis to Editing",
+            "primaryKeyword": "essay writing help for college students us",
+            "secondaryKeywords": ["essay planning", "academic writing", "essay editing usa", "thesis statement"],
             "category": "essay-writing",
-            "searchIntent": "Students want a full essay process from prompt analysis to final edit.",
-            "excerpt": "Improve essay writing with a clear workflow for question analysis, outlining, paragraphs, citations, and final editing.",
+            "searchIntent": "US students want a full essay process from prompt analysis to final edit.",
+            "excerpt": "Improve essay writing with a clear workflow for question analysis, outlining, paragraphs, citations, and final editing for US colleges.",
+            "targetCountry": "USA"
         },
         {
-            "title": "Research Paper Support for Clearer Academic Arguments",
-            "primaryKeyword": "research paper support",
-            "secondaryKeywords": ["research paper help", "academic argument", "citation support", "research structure"],
+            "title": "Research Paper Support in India: Clearer Academic Arguments",
+            "primaryKeyword": "research paper support india",
+            "secondaryKeywords": ["research paper help", "academic argument", "citation support", "research structure in"],
             "category": "research",
-            "searchIntent": "Students need support making a research paper more focused and evidence based.",
-            "excerpt": "Build clearer research papers with practical support for topic focus, evidence, argument flow, citations, and revision.",
+            "searchIntent": "Indian students need support making a research paper more focused and evidence based.",
+            "excerpt": "Build clearer research papers with practical support for topic focus, evidence, argument flow, citations, and revision in India.",
+            "targetCountry": "India"
         },
     ]
     used = {post.get("slug") for post in existing_posts}
@@ -169,43 +177,58 @@ def dry_run_briefs(existing_posts: list[dict], count: int) -> list[dict]:
     return result
 
 
-def generate_article_content(model, brief: dict) -> str:
+def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> tuple[str, list]:
+    # Select a few random existing posts to interlink
+    interlink_candidates = [{"title": p["title"], "slug": p["slug"]} for p in existing_posts[:15]]
+    
     prompt = f"""
 You are an expert academic writing coach and SEO editor for {SITE_NAME}.
 Write a helpful, ethical, SEO-optimized blog article for this brief:
 {json.dumps(brief, ensure_ascii=False)}
 
+Target Country/Region: {brief.get("targetCountry", "Global")}
+Adapt spelling and terminology appropriately for this region.
+
+Internal Linking Strategy:
+You must organically include HTML anchor links (<a href="/blog/their-slug">Their Title</a>) to at least 2 of these existing articles:
+{json.dumps(interlink_candidates, ensure_ascii=False)}
+
+Generative Engine Optimization (GEO) & AEO Requirements:
+- Use specific "What is..." and "How to..." H2 headings.
+- Keep paragraphs short (under 60 words).
+- Use high-density bullet points and numbered lists where appropriate to increase citation likelihood by AI.
+- Include a dedicated "Frequently Asked Questions (FAQs)" section at the bottom with 3-5 relevant questions and concise answers.
+
 Output rules:
-- Return only inner HTML for an <article>; no markdown, no <html>, no <head>, no <body>.
-- Start with an introductory paragraph, not a title.
-- Use <h2>, <h3>, <p>, <ul>, <li>, and <strong>.
-- Length: 1100-1500 words.
-- Include practical steps students can apply themselves.
-- Mention {SITE_NAME} naturally once near the end as 24/7 academic guidance, editing, and research support.
-- Keep the content ethical: do not encourage plagiarism, contract cheating, or submitting work the student did not author.
+- Return ONLY a JSON object with two fields: 
+  1. "htmlContent": the raw HTML string of the article (use <h2>, <h3>, <p>, <ul>, <li>, <strong>, <a>). Do not include <html>, <head>, or <body> tags. Do not wrap in markdown code blocks inside the JSON string.
+  2. "faqs": an array of objects, each with "question" and "answer" (for schema generation).
+- Length of htmlContent: 1100-1500 words.
+- Mention {SITE_NAME} naturally once near the end.
+- Keep the content ethical: no contract cheating.
 """
     response = model.models.generate_content(model=GEMINI_MODEL, contents=prompt)
-    content = response.text.strip()
-    if content.startswith("```html"):
-        content = content[7:]
-    elif content.startswith("```"):
-        content = content[3:]
-    if content.endswith("```"):
-        content = content[:-3]
-    return content.strip()
+    data = parse_json_response(response.text)
+    html_content = data.get("htmlContent", "").strip()
+    faqs = data.get("faqs", [])
+    return html_content, faqs
 
 
-def dry_run_content(brief: dict) -> str:
+def dry_run_content(brief: dict) -> tuple[str, list]:
     keyword = html.escape(brief["primaryKeyword"])
     return f"""
-<p>This draft preview shows how a full article would target <strong>{keyword}</strong> while keeping the advice practical, ethical, and student-focused.</p>
-<h2>Understand the task before writing</h2>
+<p>This draft preview shows how a full article would target <strong>{keyword}</strong> in {brief.get('targetCountry', 'Global')}.</p>
+<h2>How to understand the task before writing</h2>
 <p>Students should begin by reading the brief carefully, identifying the assessment criteria, and breaking the work into research, planning, writing, editing, and referencing stages.</p>
-<h2>Build an evidence-led structure</h2>
+<h2>What is an evidence-led structure?</h2>
 <ul><li>Clarify the question.</li><li>Group sources by theme.</li><li>Plan paragraphs around evidence and analysis.</li><li>Leave time for proofreading.</li></ul>
-<h2>Use support ethically</h2>
-<p>Academic support works best when it improves confidence, research quality, clarity, and editing while preserving the student's own learning and authorship.</p>
-""".strip()
+<p>Learn more about <a href="/blog/ensuring-originality-ethical-self-editing-for-academic-papers">ethical self-editing</a>.</p>
+<h2>Frequently Asked Questions (FAQs)</h2>
+<div class="faqs">
+  <h3>What is ethical academic support?</h3>
+  <p>Ethical academic support helps you improve your own writing, research, and editing skills without writing the paper for you.</p>
+</div>
+""".strip(), [{"question": "What is ethical academic support?", "answer": "Ethical academic support helps you improve your own writing, research, and editing skills without writing the paper for you."}]
 
 
 def build_meta(brief: dict) -> dict:
@@ -230,6 +253,7 @@ def build_meta(brief: dict) -> dict:
         "date": now.isoformat(),
         "readingTime": 7,
         "url": f"blog/posts/{slug}.html",
+        "targetCountry": brief.get("targetCountry", "Global"),
     }
 
 
@@ -248,52 +272,43 @@ def uniquify_meta(meta: dict, existing_posts: list[dict], created_slugs: set[str
     return meta
 
 
-def generate_json_ld(meta: dict) -> str:
-    payload = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": meta["title"],
-        "description": meta["excerpt"],
-        "author": {"@type": "Organization", "name": SITE_NAME},
-        "publisher": {
-            "@type": "Organization",
-            "name": SITE_NAME,
-            "logo": {"@type": "ImageObject", "url": absolute_url("academic-wizard-favicon.png")},
-        },
-        "datePublished": meta["date"],
-        "dateModified": meta["date"],
-        "mainEntityOfPage": {"@type": "WebPage", "@id": absolute_url(meta["url"])},
-    }
+def generate_json_ld(meta: dict, faqs: list) -> str:
+    payload = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": meta["title"],
+            "description": meta["excerpt"],
+            "author": {"@type": "Organization", "name": SITE_NAME},
+            "publisher": {
+                "@type": "Organization",
+                "name": SITE_NAME,
+                "logo": {"@type": "ImageObject", "url": absolute_url("academic-wizard-favicon.png")},
+            },
+            "datePublished": meta["date"],
+            "dateModified": meta["date"],
+            "mainEntityOfPage": {"@type": "WebPage", "@id": absolute_url(meta["url"])},
+        }
+    ]
+    
+    if faqs:
+        faq_schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": faq["question"],
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq["answer"]
+                    }
+                } for faq in faqs
+            ]
+        }
+        payload.append(faq_schema)
+        
     return '<script type="application/ld+json">\n' + json.dumps(payload, indent=2) + "\n</script>"
-
-
-def render_post(meta: dict, content: str) -> str:
-    template = TEMPLATE_FILE.read_text(encoding="utf-8")
-    display_date = dt.datetime.fromisoformat(meta["date"]).strftime("%B %d, %Y")
-    keywords = ", ".join(meta.get("keywords", []))
-    replacements = {
-        "{{TITLE}}": meta["title"],
-        "{{DESCRIPTION}}": meta["excerpt"],
-        "{{KEYWORDS}}": keywords,
-        "{{SLUG}}": meta["slug"],
-        "{{DATE}}": display_date,
-        "{{READING_TIME}}": str(meta["readingTime"]),
-        "{{JSON_LD}}": generate_json_ld(meta),
-        "{{CONTENT}}": content,
-        "{{CANONICAL_URL}}": absolute_url(meta["url"]),
-        "{{SITE_URL}}": absolute_url(""),
-        "{{BLOG_URL}}": absolute_url("blog/"),
-        "{{SERVICES_URL}}": absolute_url("services"),
-        "{{ABOUT_URL}}": absolute_url("about"),
-        "{{FAQ_URL}}": absolute_url("faq"),
-        "{{CONTACT_URL}}": absolute_url("contact"),
-        "{{PRIVACY_URL}}": absolute_url("privacy-policy"),
-        "{{TERMS_URL}}": absolute_url("terms-of-service"),
-    }
-    rendered = template
-    for token, value in replacements.items():
-        rendered = rendered.replace(token, value)
-    return rendered
 
 
 def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
@@ -307,14 +322,17 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
 
     for brief in briefs:
         meta = uniquify_meta(build_meta(brief), existing_posts, created_slugs)
-        content = dry_run_content(brief) if dry_run else generate_article_content(model, brief)
+        content, faqs = dry_run_content(brief) if dry_run else generate_article_content(model, brief, existing_posts)
         if dry_run:
             print(f"[dry-run] would create {meta['url']} for keyword: {meta.get('primaryKeyword')}")
             created.append(meta)
             continue
 
+        # Output raw HTML fragment + JSON-LD (No full HTML wrapper)
+        final_html = content + "\n\n" + generate_json_ld(meta, faqs)
+        
         post_path = POSTS_DIR / f"{meta['slug']}.html"
-        post_path.write_text(render_post(meta, content), encoding="utf-8")
+        post_path.write_text(final_html, encoding="utf-8")
         created.append(meta)
         print(f"Created {post_path.relative_to(PROJECT_ROOT)}")
 
