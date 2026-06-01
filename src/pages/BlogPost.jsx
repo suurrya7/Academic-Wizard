@@ -10,8 +10,8 @@ const BlogPost = () => {
     const [status, setStatus] = useState('loading'); // loading, ready, error, notfound
 
     useEffect(() => {
-        // Fetch post metadata from posts.json
-        fetch(assetPath('data/posts.json'))
+        // Fetch post metadata from posts.json (prevent caching)
+        fetch(assetPath('data/posts.json'), { cache: 'no-store' })
             .then(res => res.json())
             .then(data => {
                 const post = data.find(p => p.slug === slug);
@@ -24,8 +24,8 @@ const BlogPost = () => {
                 // Set page title and meta
                 document.title = `${post.title} | Academic Wizard Blog`;
                 
-                // Fetch the actual HTML fragment
-                return fetch(assetPath(`blog/posts/${slug}.html`))
+                // Fetch the actual HTML fragment (prevent caching)
+                return fetch(assetPath(`blog/posts/${slug}.html`), { cache: 'no-store' })
                     .then(res => {
                         if (!res.ok) throw new Error('Failed to fetch post HTML');
                         return res.text();
