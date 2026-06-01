@@ -216,22 +216,45 @@ Generative Engine Optimization (GEO) & AEO Requirements:
 - Include a dedicated "Frequently Asked Questions (FAQs)" section at the bottom with 3-5 relevant questions and concise answers.
 
 Output rules:
-- Return ONLY a JSON object with two fields: 
-  1. "htmlContent": the raw HTML string of the article (use <h2>, <h3>, <p>, <ul>, <li>, <strong>, <a>). Do not include <html>, <head>, or <body> tags. Do not wrap in markdown code blocks inside the JSON string.
-  2. "faqs": an array of objects, each with "question" and "answer" (for schema generation).
-- Length of htmlContent: 1100-1500 words.
-- Mention {SITE_NAME} naturally once near the end.
-- Keep the content ethical: no contract cheating.
+You must output exactly two sections, separated by a specific marker `===FAQS_JSON===`.
+Do not output a JSON object.
+
+1. First, output the raw HTML string of the article (use <h2>, <h3>, <p>, <ul>, <li>, <strong>, <a>). Do not include <html>, <head>, or <body> tags. Do not wrap in markdown code blocks.
+Length of HTML: 1100-1500 words. Mention {SITE_NAME} naturally once near the end.
+
+2. Then, output the exact string `===FAQS_JSON===` on its own line.
+
+3. Finally, output a JSON array of objects for the FAQs, each with "question" and "answer" fields.
+
+Keep the content ethical: no contract cheating.
 """
     response = model.models.generate_content(
         model=GEMINI_MODEL, 
-        contents=prompt,
-        config={"response_mime_type": "application/json"}
+        contents=prompt
     )
-    data = parse_json_response(response.text)
-    html_content = data.get("htmlContent", "").strip()
-    faqs = data.get("faqs", [])
-    return html_content, faqs
+    
+    text = response.text.strip()
+    if "===FAQS_JSON===" in text:
+        html_part, faqs_part = text.split("===FAQS_JSON===", 1)
+        html_content = html_part.strip()
+        # Remove markdown fences from HTML if present
+        if html_content.startswith("```html"):
+            html_content = html_content[7:]
+        if html_content.endswith("```"):
+            html_content = html_content[:-3]
+            
+        try:
+            faqs = parse_json_response(faqs_part)
+            if not isinstance(faqs, list):
+                faqs = []
+        except Exception:
+            faqs = []
+    else:
+        # Fallback if model ignored instructions
+        html_content = text
+        faqs = []
+        
+    return html_content.strip(), faqs
 
 
 def dry_run_content(brief: dict) -> tuple[str, list]:
@@ -349,7 +372,26 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
             continue
 
         # Output raw HTML fragment + JSON-LD (No full HTML wrapper)
-        final_html = content + "\n\n" + generate_json_ld(meta, faqs)
+        
+        # Build Related Blogs Section (4 random posts from existing)
+        import random
+        related_blogs = ""
+        if existing_posts:
+            sample_size = min(4, len(existing_posts))
+            related_samples = random.sample(existing_posts, sample_size)
+            related_blogs += '\n<section class="related-blogs" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">\n'
+            related_blogs += '  <h2 style="margin-bottom: 1.5rem;">Related Articles</h2>\n'
+            related_blogs += '  <div class="related-blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">\n'
+            for rel in related_samples:
+                rel_url = f"/blog/{rel['slug']}"
+                related_blogs += f'    <div class="related-blog-card" style="padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">\n'
+                related_blogs += f'      <h3 style="font-size: 1.1rem; margin-top: 0;"><a href="{rel_url}" style="text-decoration: none; color: #1f2937;">{rel["title"]}</a></h3>\n'
+                related_blogs += f'      <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0;">{rel.get("excerpt", "")[:100]}...</p>\n'
+                related_blogs += f'    </div>\n'
+            related_blogs += '  </div>\n'
+            related_blogs += '</section>\n'
+            
+        final_html = content + "\n\n" + related_blogs + "\n\n" + generate_json_ld(meta, faqs)
         
         post_path = POSTS_DIR / f"{meta['slug']}.html"
         post_path.write_text(final_html, encoding="utf-8")
