@@ -14,18 +14,6 @@ const CountryServicePage = () => {
     const [openFaq, setOpenFaq] = useState(0);
     const [posts, setPosts] = useState([]);
 
-    if (!service) {
-        return <Navigate to="/services" replace />;
-    }
-
-    const country = service.countries.find(c => c.slug === countrySlug);
-    
-    if (!country) {
-        return <Navigate to={`/services/${serviceSlug}`} replace />;
-    }
-
-    const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
-
     useEffect(() => {
         // Fetch posts for the related blogs section
         fetch(assetPath('data/posts.json'), { cache: 'no-store' })
@@ -38,6 +26,18 @@ const CountryServicePage = () => {
             })
             .catch(console.error);
     }, [service]);
+
+    if (!service) {
+        return <Navigate to="/services" replace />;
+    }
+
+    const country = service.countries.find(c => c.slug === countrySlug);
+    
+    if (!country) {
+        return <Navigate to={`/services/${serviceSlug}`} replace />;
+    }
+
+    const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
 
     const Icon = service.icon;
 

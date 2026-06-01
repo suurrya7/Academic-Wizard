@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import wandImage from '../assets/custom-wand.png';
 
 const CustomCursor = () => {
     const [hovered, setHovered] = useState(false);
@@ -80,7 +81,7 @@ const CustomCursor = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
                 <div className="relative drop-shadow-[0_0_12px_rgba(212,175,55,0.8)]">
-                    <img src="/custom-wand.png" alt="Wand" className="w-12 h-12 object-contain pointer-events-none" />
+                    <img src={wandImage} alt="Wand" className="w-12 h-12 object-contain pointer-events-none" />
                     {/* Sparkles that appear on hover */}
                     <motion.div 
                         initial={{ opacity: 0, scale: 0 }}
