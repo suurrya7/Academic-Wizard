@@ -47,7 +47,7 @@ export default defineConfig({
         ...blogRoutes
       ],
       renderer: new puppeteer({
-        renderAfterTime: 2000,
+        renderAfterTime: 5000,
         headless: true
       })
     })
