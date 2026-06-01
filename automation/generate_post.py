@@ -76,9 +76,7 @@ def configure_model():
 
 
 def parse_json_response(text: str):
-    """Extract a JSON object from Gemini's response.
-    Handles cases where the model wraps the JSON in markdown fences or adds extra text.
-    """
+    """Extract a JSON object or array from Gemini's response."""
     cleaned = text.strip()
     # Remove markdown code fences if present
     if cleaned.startswith("```json"):
@@ -87,9 +85,17 @@ def parse_json_response(text: str):
         cleaned = cleaned[3:]
     if cleaned.endswith("```"):
         cleaned = cleaned[:-3]
-    # Find the first '{' and the matching closing '}'
-    start = cleaned.find('{')
-    end = cleaned.rfind('}')
+        
+    cleaned = cleaned.strip()
+    first_char = cleaned[0] if cleaned else ''
+    
+    if first_char == '[':
+        start = cleaned.find('[')
+        end = cleaned.rfind(']')
+    else:
+        start = cleaned.find('{')
+        end = cleaned.rfind('}')
+        
     if start != -1 and end != -1 and end > start:
         json_str = cleaned[start:end+1]
     else:
@@ -379,15 +385,15 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
         if existing_posts:
             sample_size = min(3, len(existing_posts))
             related_samples = random.sample(existing_posts, sample_size)
-            related_blogs += '\n<section class="related-blogs" style="margin-top: 4rem; padding: 2rem; background: #f9fafb; border-radius: 12px; border: 1px solid #e5e7eb;">\n'
-            related_blogs += '  <h2 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem; color: #111827;">Related Articles</h2>\n'
+            related_blogs += '\n<section class="related-blogs" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">\n'
+            related_blogs += '  <h2 class="premium-gradient-text" style="margin-top: 0; margin-bottom: 2rem; font-size: 1.5rem; font-family: \'Orbitron\', sans-serif; letter-spacing: 0.1em; text-transform: uppercase;">Related Articles</h2>\n'
             related_blogs += '  <div class="related-blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">\n'
             for rel in related_samples:
                 rel_url = f"/blog/{rel['slug']}"
-                related_blogs += f'    <div class="related-blog-card" style="background: #ffffff; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); transition: transform 0.2s, box-shadow 0.2s;">\n'
-                related_blogs += f'      <h3 style="font-size: 1.15rem; margin-top: 0; line-height: 1.4;"><a href="{rel_url}" style="text-decoration: none; color: #1f2937; font-weight: 600;">{rel["title"]}</a></h3>\n'
-                related_blogs += f'      <p style="font-size: 0.95rem; color: #4b5563; margin-bottom: 0; line-height: 1.5;">{rel.get("excerpt", "")[:100]}...</p>\n'
-                related_blogs += f'    </div>\n'
+                related_blogs += f'    <a href="{rel_url}" class="glass-card" style="padding: 1.5rem; display: block; text-decoration: none; border-radius: 16px;">\n'
+                related_blogs += f'      <h3 style="font-size: 1.15rem; margin-top: 0; line-height: 1.4; color: #FFFFFF; font-weight: 600;">{rel["title"]}</h3>\n'
+                related_blogs += f'      <p style="font-size: 0.95rem; color: #A0A0A0; margin-bottom: 0; line-height: 1.5;">{rel.get("excerpt", "")[:100]}...</p>\n'
+                related_blogs += f'    </a>\n'
             related_blogs += '  </div>\n'
             related_blogs += '</section>\n'
             
