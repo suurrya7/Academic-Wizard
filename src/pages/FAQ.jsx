@@ -28,6 +28,22 @@ const faqs = [
     {
         question: "How can I contact support?",
         answer: "Our primary support channel is WhatsApp (+91 95098 93638), available 24/7. You can also reach out via our contact page for email-based inquiries."
+    },
+    {
+        question: "Can you handle complex dissertations and theses?",
+        answer: "Absolutely. We have a dedicated team of PhD-level researchers who specialize in long-form academic work, including complex methodologies, literature reviews, and primary data analysis."
+    },
+    {
+        question: "What referencing styles do you support?",
+        answer: "Our academic experts are proficient in all major referencing styles including APA (7th Edition), MLA, Harvard, Chicago, OSCOLA, and IEEE. Just let us know what your university requires."
+    },
+    {
+        question: "Is it possible to request revisions?",
+        answer: "Yes. We want you to be completely satisfied with the guidance and support you receive. We offer free revisions within a specified timeframe to ensure the final output meets your initial requirements."
+    },
+    {
+        question: "How do you ensure the quality of your work?",
+        answer: "Every piece of work goes through a rigorous quality assurance process. It is reviewed by a second academic expert for structural integrity, critical analysis, and adherence to your grading rubric before being delivered."
     }
 ];
 

@@ -62,14 +62,14 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="container px-6 pt-10 border-t border-glass-border flex flex-col md:flex-row justify-between items-center gap-6">
-                <p className="text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
-                    &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
-                </p>
+            <div className="container px-6 pt-10 border-t border-glass-border flex flex-col items-center justify-center gap-4">
                 <div className="flex gap-8 text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
                     <Link to="/privacy-policy" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
                     <Link to="/terms-of-service" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
                 </div>
+                <p className="text-text-secondary text-xs text-center" style={{ color: 'var(--text-secondary)' }}>
+                    &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
+                </p>
             </div>
         </footer>
     );

@@ -104,6 +104,15 @@ const Contact = () => {
                             </div>
                             <div className="flex gap-6 items-center">
                                 <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                                    <Mail size={28} />
+                                </div>
+                                <div>
+                                    <h4 className="font-heading text-xs uppercase tracking-widest text-white">Email</h4>
+                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>admin@academicwizard.online</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6 items-center">
+                                <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
                                     <Clock size={28} />
                                 </div>
                                 <div>

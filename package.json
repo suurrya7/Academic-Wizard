@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build && node scripts/prepare-pages.mjs",
+    "build": "python3 automation/generate_seo.py && vite build && node scripts/prepare-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
