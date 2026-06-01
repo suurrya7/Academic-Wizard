@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
@@ -7,6 +8,15 @@ import { servicesData } from '../data/services';
 const Services = () => {
     return (
         <div className="page-services">
+            <Helmet>
+                <title>Our Academic Services | Academic Wizard</title>
+                <meta name="description" content="Explore Academic Wizard's comprehensive range of services, including assignment help, essay writing, and dissertation support." />
+                <link rel="canonical" href="https://academicwizard.online/services" />
+                <meta property="og:title" content="Our Academic Services | Academic Wizard" />
+                <meta property="og:description" content="Explore Academic Wizard's comprehensive range of academic services." />
+                <meta property="og:url" content="https://academicwizard.online/services" />
+            </Helmet>
+
             <PageHeader
                 title="Our Services"
                 subtitle="Professional academic assistance and research support tailored to your university requirements."

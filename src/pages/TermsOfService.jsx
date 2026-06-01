@@ -1,9 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 
 const TermsOfService = () => {
     return (
         <div className="page-terms">
+            <Helmet>
+                <title>Terms of Service | Academic Wizard</title>
+                <meta name="description" content="Read the Academic Wizard Terms of Service for academic guidance, editing, and research support." />
+                <link rel="canonical" href="https://academicwizard.online/terms-of-service" />
+            </Helmet>
+
             <PageHeader
                 title="Terms of Service"
                 subtitle="The service terms for Academic Wizard academic guidance, editing, and research support."

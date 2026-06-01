@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
 import { MessageCircle, Mail, Globe, Clock, CheckCircle } from 'lucide-react';
@@ -46,8 +47,38 @@ const Contact = () => {
         }, 5000);
     };
 
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Academic Wizard",
+        "url": "https://academicwizard.online/contact",
+        "description": "Get in touch with an academic expert today for a custom quote and professional assistance.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Academic Wizard",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-95098-93638",
+                "contactType": "customer support",
+                "availableLanguage": ["English"]
+            }
+        }
+    };
+
     return (
         <div className="page-contact">
+            <Helmet>
+                <title>Contact Us | Academic Wizard</title>
+                <meta name="description" content="Get in touch with Academic Wizard. Contact us on WhatsApp for an instant custom quote on assignment help, essay writing, and dissertation support." />
+                <link rel="canonical" href="https://academicwizard.online/contact" />
+                <meta property="og:title" content="Contact Us | Academic Wizard" />
+                <meta property="og:description" content="Get in touch with Academic Wizard. Contact us on WhatsApp for an instant custom quote." />
+                <meta property="og:url" content="https://academicwizard.online/contact" />
+                <script type="application/ld+json">
+                    {JSON.stringify(contactSchema)}
+                </script>
+            </Helmet>
+
             <PageHeader
                 title="Contact Us"
                 subtitle="Get in touch with an academic expert today for a custom quote and professional assistance."

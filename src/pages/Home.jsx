@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import TrustStats from '../components/TrustStats';
 import ServiceOverview from '../components/ServiceOverview';
@@ -11,8 +12,34 @@ import { motion } from 'framer-motion';
 const Home = () => {
     const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
 
+    const orgSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Academic Wizard",
+        "url": "https://academicwizard.online",
+        "logo": "https://academicwizard.online/academic-wizard-favicon.png",
+        "description": "Expert academic assistance for essays, assignments, dissertations, theses, research papers, and academic editing.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-95098-93638",
+            "contactType": "customer support"
+        }
+    };
+
     return (
         <div className="page-home overflow-hidden">
+            <Helmet>
+                <title>Academic Wizard | Expert Academic Assistance & Research Support</title>
+                <meta name="description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students in the UK, USA, Australia, and worldwide." />
+                <link rel="canonical" href="https://academicwizard.online/" />
+                <meta property="og:title" content="Academic Wizard | Expert Academic Assistance" />
+                <meta property="og:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students." />
+                <meta property="og:url" content="https://academicwizard.online/" />
+                <script type="application/ld+json">
+                    {JSON.stringify(orgSchema)}
+                </script>
+            </Helmet>
+
             <Hero />
             <TrustStats />
 

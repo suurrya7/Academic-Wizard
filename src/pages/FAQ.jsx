@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,7 +27,7 @@ const faqs = [
     },
     {
         question: "How can I contact support?",
-        answer: "Our primary support channel is WhatsApp (+91 93583 94284), available 24/7. You can also reach out via our contact page for email-based inquiries."
+        answer: "Our primary support channel is WhatsApp (+91 95098 93638), available 24/7. You can also reach out via our contact page for email-based inquiries."
     }
 ];
 
@@ -61,8 +62,33 @@ const FAQItem = ({ faq }) => {
 };
 
 const FAQ = () => {
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
     return (
         <div className="page-faq">
+            <Helmet>
+                <title>Frequently Asked Questions | Academic Wizard</title>
+                <meta name="description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
+                <link rel="canonical" href="https://academicwizard.online/faq" />
+                <meta property="og:title" content="Frequently Asked Questions | Academic Wizard" />
+                <meta property="og:description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
+                <meta property="og:url" content="https://academicwizard.online/faq" />
+                <script type="application/ld+json">
+                    {JSON.stringify(faqSchema)}
+                </script>
+            </Helmet>
+
             <PageHeader
                 title="Frequently Asked Questions"
                 subtitle="Find quick answers to common questions about our academic assistance and research support services."

@@ -1,13 +1,39 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import { Target, Users, Globe, Shield } from 'lucide-react';
 
 const About = () => {
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Academic Wizard",
+        "url": "https://academicwizard.online/about",
+        "description": "Learn about Academic Wizard, our mission, vision, and the core values that drive our expert academic assistance services.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Academic Wizard",
+            "logo": "https://academicwizard.online/academic-wizard-favicon.png"
+        }
+    };
+
     return (
         <div className="page-about">
+            <Helmet>
+                <title>About Us | Academic Wizard</title>
+                <meta name="description" content="Learn about Academic Wizard. We are a team of dedicated academic professionals helping students worldwide achieve excellence in their university studies." />
+                <link rel="canonical" href="https://academicwizard.online/about" />
+                <meta property="og:title" content="About Us | Academic Wizard" />
+                <meta property="og:description" content="Learn about Academic Wizard and our mission to help university students achieve academic excellence." />
+                <meta property="og:url" content="https://academicwizard.online/about" />
+                <script type="application/ld+json">
+                    {JSON.stringify(aboutSchema)}
+                </script>
+            </Helmet>
+
             <PageHeader
-                title="About Academic Wizard"
-                subtitle="Dedicated to supporting university students worldwide with expert research assistance and professional academic guidance."
+                title="About Us"
+                subtitle="Dedicated to empowering students worldwide with professional academic guidance and unparalleled research support."
             />
 
             <section className="py-20 container">

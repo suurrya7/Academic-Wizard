@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Search, CalendarDays, Clock, ArrowUpRight, Tags } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
@@ -92,6 +93,15 @@ const Blog = () => {
 
     return (
         <div className="page-blog">
+            <Helmet>
+                <title>Academic Blog & Research Guides | Academic Wizard</title>
+                <meta name="description" content="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy." />
+                <link rel="canonical" href="https://academicwizard.online/blog" />
+                <meta property="og:title" content="Academic Blog & Research Guides | Academic Wizard" />
+                <meta property="og:description" content="Daily guides on academic writing, research, and study strategies." />
+                <meta property="og:url" content="https://academicwizard.online/blog" />
+            </Helmet>
+
             <PageHeader
                 title="Academic Blog"
                 subtitle="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy."

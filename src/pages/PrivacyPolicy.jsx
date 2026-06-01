@@ -1,9 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 
 const PrivacyPolicy = () => {
     return (
         <div className="page-privacy">
+            <Helmet>
+                <title>Privacy Policy | Academic Wizard</title>
+                <meta name="description" content="Read the Academic Wizard Privacy Policy to learn how we handle and protect student information." />
+                <link rel="canonical" href="https://academicwizard.online/privacy-policy" />
+            </Helmet>
+
             <PageHeader
                 title="Privacy Policy"
                 subtitle="How Academic Wizard handles student information, project details, and communication data."
