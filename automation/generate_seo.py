@@ -30,6 +30,13 @@ POSTS_JSON_PATH = DATA_DIR / "posts.json"
 STATIC_PAGES = [
     {"path": "", "changefreq": "weekly", "priority": "1.0"},
     {"path": "services", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/assignment-help", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/essay-help", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/dissertation-help", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/literature-review", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/research-paper-help", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/editing-proofreading", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "services/study-guidance", "changefreq": "weekly", "priority": "0.9"},
     {"path": "about", "changefreq": "monthly", "priority": "0.8"},
     {"path": "faq", "changefreq": "monthly", "priority": "0.7"},
     {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
@@ -41,32 +48,39 @@ STATIC_PAGES = [
 TARGET_COUNTRIES = ["United Kingdom", "United States", "India", "Ireland", "Australia", "Singapore", "Canada", "Germany"]
 
 SERVICE_DETAILS = {
-    "Assignment Assistance": {
-        "description": "Expert guidance on structuring, planning, and outlining university assignments across all disciplines.",
-        "keywords": ["assignment help", "university assignment support", "academic assignment planning"],
+    "Assignment Help": {
+        "slug": "assignment-help",
+        "description": "Professional assignment writing solutions for university students. Expert help with research, structure, and academic formatting across all subjects.",
+        "keywords": ["assignment help", "university assignment support", "assignment help UK", "assignment help USA", "assignment help Australia"],
     },
-    "Essay Writing Support": {
-        "description": "Coaching on thesis development, argumentation, evidence integration, and essay structure for undergraduate and postgraduate students.",
-        "keywords": ["essay writing help", "thesis statement guidance", "academic essay support"],
+    "Essay Help": {
+        "slug": "essay-help",
+        "description": "Expert essay help for university students. Improve your thesis development, argumentation, and evidence integration.",
+        "keywords": ["essay writing help", "essay help", "essay writing service", "essay help Australia"],
     },
-    "Dissertation & Thesis Help": {
-        "description": "End-to-end support including topic selection, research methodology design, literature reviews, data analysis guidance, and formatting.",
-        "keywords": ["dissertation help", "thesis writing support", "research methodology guidance"],
+    "Dissertation Help": {
+        "slug": "dissertation-help",
+        "description": "End-to-end dissertation help including topic selection, methodology design, literature reviews, and formatting.",
+        "keywords": ["dissertation help", "thesis writing support", "dissertation help UK", "dissertation help Ireland"],
     },
-    "Literature Review Writing": {
-        "description": "Guidance on systematic source identification, thematic synthesis, gap analysis, and critical evaluation for literature reviews.",
+    "Literature Review": {
+        "slug": "literature-review",
+        "description": "In-depth synthesis of academic literature. We help identify gaps in current research and build a strong theoretical foundation.",
         "keywords": ["literature review help", "systematic review support", "academic source synthesis"],
     },
-    "Research Paper Support": {
-        "description": "Assistance with research design, data collection planning, statistical analysis guidance, and academic paper structuring.",
-        "keywords": ["research paper help", "academic research support", "data analysis guidance"],
+    "Research Paper Assistance": {
+        "slug": "research-paper-help",
+        "description": "Professional help with academic research papers. Assistance with research design, data collection, and report writing.",
+        "keywords": ["research paper help", "academic research support", "research paper assistance"],
     },
     "Editing & Proofreading": {
-        "description": "Professional-grade editing for grammar, clarity, academic tone, citation formatting (APA, MLA, Chicago, Harvard), and logical flow.",
-        "keywords": ["academic editing", "proofreading service", "citation formatting help"],
+        "slug": "editing-proofreading",
+        "description": "Professional-grade editing for grammar, clarity, academic tone, and citation formatting (APA, MLA, Harvard).",
+        "keywords": ["academic editing", "proofreading service", "academic proofreading UK"],
     },
-    "Study Guidance & Academic Coaching": {
-        "description": "Personalised study planning, time management strategies, exam preparation techniques, and academic skill development.",
+    "Study Guidance & Coaching": {
+        "slug": "study-guidance",
+        "description": "Personalised study planning, time management strategies, and academic skill development for university students.",
         "keywords": ["academic coaching", "study guidance", "university study tips"],
     },
 }

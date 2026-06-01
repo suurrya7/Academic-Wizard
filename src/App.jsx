@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import ServicePage from './pages/ServicePage';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
@@ -17,26 +19,29 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
-      <CustomCursor />
-      <ParticleBackground />
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-        </Routes>
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </Router>
+    <HelmetProvider>
+      <Router basename={import.meta.env.BASE_URL}>
+        <CustomCursor />
+        <ParticleBackground />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServicePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+          </Routes>
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </Router>
+    </HelmetProvider>
   );
 }
 

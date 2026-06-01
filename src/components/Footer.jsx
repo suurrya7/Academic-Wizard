@@ -35,11 +35,11 @@ const Footer = () => {
                 <div>
                     <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h4>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Thesis Guidance</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
+                        <li><Link to="/services/assignment-help" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
+                        <li><Link to="/services/essay-help" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
+                        <li><Link to="/services/dissertation-help" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
+                        <li><Link to="/services/literature-review" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
+                        <li><Link to="/services/editing-proofreading" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
                     </ul>
                 </div>
 

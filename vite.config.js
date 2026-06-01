@@ -18,6 +18,16 @@ try {
   console.warn('Could not read posts.json for prerendering:', e)
 }
 
+const serviceRoutes = [
+  '/services/assignment-help',
+  '/services/essay-help',
+  '/services/dissertation-help',
+  '/services/literature-review',
+  '/services/research-paper-help',
+  '/services/editing-proofreading',
+  '/services/study-guidance',
+];
+
 // https://vite.dev/config/
 export default defineConfig({
   base: process.env.BASE_PATH || '/',
@@ -33,6 +43,7 @@ export default defineConfig({
         '/blog',
         '/privacy-policy',
         '/terms-of-service',
+        ...serviceRoutes,
         ...blogRoutes
       ],
       renderer: new puppeteer({
