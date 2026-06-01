@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
-import wandImage from '../assets/custom-wand.png';
+import { Sparkles, Wand2 } from 'lucide-react';
 
 const CustomCursor = () => {
     const [hovered, setHovered] = useState(false);
@@ -72,21 +71,22 @@ const CustomCursor = () => {
                     x: mouseX, 
                     y: mouseY,
                     position: 'absolute',
-                    translateX: '-2px', // Align wand tip closely to actual cursor coordinate
-                    translateY: '-2px',
+                    translateX: '-14%', // Align wand tip closely to actual cursor coordinate
+                    translateY: '-14%',
+                    rotate: -90, // Permanently tilted left like a normal cursor
                 }}
                 animate={{
                     scale: hovered ? 1.2 : 1,
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-                <div className="relative drop-shadow-[0_0_12px_rgba(212,175,55,0.8)]">
-                    <img src={wandImage} alt="Wand" className="w-12 h-12 object-contain pointer-events-none" />
+                <div className="relative text-accent-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]">
+                    <Wand2 size={24} strokeWidth={2.5} />
                     {/* Sparkles that appear on hover */}
                     <motion.div 
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0 }}
-                        className="absolute -top-3 -right-3 text-accent-gold"
+                        className="absolute -top-3 -right-3"
                     >
                         <Sparkles size={16} strokeWidth={2.5} className="animate-pulse" />
                     </motion.div>
