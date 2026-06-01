@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wand Cursor Designs</title>
+    <style>
+        body { 
+            margin: 0; padding: 0; background: #0a0a0a; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; height: 100vh; overflow: hidden; cursor: default;
+        }
+        .zone { 
+            flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            border-right: 1px solid #333; position: relative; transition: background 0.3s; padding: 2rem; text-align: center;
+        }
+        .zone:last-child { border-right: none; }
+        .zone:hover { background: #1a1a1a; }
+        
+        h2 { margin-bottom: 10px; font-size: 1.5rem; }
+        p { color: #888; font-size: 0.9rem; line-height: 1.5; }
+
+        #custom-cursor {
+            position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+            display: none;
+        }
+        
+        #cursor-visual {
+            position: absolute;
+            transition: transform 0.05s linear;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="zone" id="zone1">
+        <h2 style="color: #ffd700;">1. The Fairy Star Wand</h2>
+        <p>A magical wand with a classic 5-point star at the tip.</p>
+    </div>
+    
+    <div class="zone" id="zone2">
+        <h2 style="color: #8b5a2b;">2. The Classic Wizard Staff</h2>
+        <p>A wooden, tapered wizard's wand (like Harry Potter).</p>
+    </div>
+    
+    <div class="zone" id="zone3">
+        <h2 style="color: #00ffff;">3. The Crystal Staff</h2>
+        <p>A mystical wand topped with a sharp glowing crystal.</p>
+    </div>
+    
+    <div class="zone" id="zone4">
+        <h2 style="color: #ff00ff;">4. The Orb Scepter</h2>
+        <p>A royal magical scepter topped with a floating energy orb.</p>
+    </div>
+
+    <div id="custom-cursor">
+        <div id="cursor-visual"></div>
+    </div>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        const visual = document.getElementById('cursor-visual');
+        
+        // 1. Fairy Star Wand
+        const starWand = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#ffd700" stroke="#b8860b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Stick -->
+            <line x1="22" y1="22" x2="8" y2="8" stroke="#d4af37" stroke-width="3" />
+            <!-- Star -->
+            <polygon points="5 1 6.5 4 10 4.5 7.5 7 8 10.5 5 9 2 10.5 2.5 7 0 4.5 3.5 4" fill="#ffd700" stroke="#fff" stroke-width="1"/>
+        </svg>`;
+
+        // 2. Wizard Wooden Wand
+        const woodWand = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 22L4 4" stroke="#8b5a2b" stroke-width="4" stroke-linecap="round"/>
+            <path d="M18 18L5 5" stroke="#a0522d" stroke-width="2" stroke-linecap="round"/>
+            <!-- Handle -->
+            <path d="M22 22L16 16" stroke="#5c4033" stroke-width="6" stroke-linecap="round"/>
+            <!-- Magical tip spark -->
+            <circle cx="3" cy="3" r="1.5" fill="#fff" filter="blur(1px)"/>
+        </svg>`;
+
+        // 3. Crystal Wand
+        const crystalWand = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <!-- Stick -->
+            <line x1="22" y1="22" x2="9" y2="9" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+            <!-- Crystal -->
+            <polygon points="1 1 5 3 9 9 3 5" fill="#00ffff" stroke="#fff" stroke-width="1"/>
+            <polygon points="1 1 3 5 5 3" fill="#e0ffff" />
+        </svg>`;
+
+        // 4. Orb Scepter
+        const orbScepter = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <!-- Stick -->
+            <line x1="22" y1="22" x2="7" y2="7" stroke="#d4af37" stroke-width="4" stroke-linecap="round" />
+            <!-- Base of orb -->
+            <path d="M5 9 L9 5" stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
+            <!-- Floating Orb -->
+            <circle cx="4" cy="4" r="3.5" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
+            <circle cx="3" cy="3" r="1" fill="#fff"/> <!-- shine -->
+        </svg>`;
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+
+        const zones = [
+            { 
+                id: 'zone1', setup: () => {
+                    visual.innerHTML = starWand;
+                    visual.style.transform = 'translate(-4px, -4px)';
+                    visual.style.filter = 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.8))';
+                }
+            },
+            { 
+                id: 'zone2', setup: () => {
+                    visual.innerHTML = woodWand;
+                    visual.style.transform = 'translate(-2px, -2px)';
+                    visual.style.filter = 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6))';
+                }
+            },
+            { 
+                id: 'zone3', setup: () => {
+                    visual.innerHTML = crystalWand;
+                    visual.style.transform = 'translate(-2px, -2px)';
+                    visual.style.filter = 'drop-shadow(0 0 12px rgba(0, 255, 255, 0.8))';
+                }
+            },
+            { 
+                id: 'zone4', setup: () => {
+                    visual.innerHTML = orbScepter;
+                    visual.style.transform = 'translate(-4px, -4px)';
+                    visual.style.filter = 'drop-shadow(0 0 15px rgba(255, 0, 255, 0.7))';
+                }
+            }
+        ];
+
+        zones.forEach(z => {
+            const el = document.getElementById(z.id);
+            el.addEventListener('mouseenter', () => {
+                cursor.style.display = 'block';
+                z.setup();
+                document.body.style.cursor = 'none'; 
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.display = 'none';
+                document.body.style.cursor = 'default'; 
+            });
+        });
+    </script>
+</body>
+</html>
