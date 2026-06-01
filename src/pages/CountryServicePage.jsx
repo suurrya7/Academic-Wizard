@@ -8,13 +8,23 @@ import TrustStats from '../components/TrustStats';
 import { CheckCircle, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
 import { assetPath } from '../config/site';
 
-const ServicePage = () => {
-    const { slug } = useParams();
-    const service = servicesData.find(s => s.slug === slug);
+const CountryServicePage = () => {
+    const { serviceSlug, countrySlug } = useParams();
+    const service = servicesData.find(s => s.slug === serviceSlug);
     const [openFaq, setOpenFaq] = useState(0);
     const [posts, setPosts] = useState([]);
 
-    const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20am%20interested%20in%20your%20" + (service?.title ? encodeURIComponent(service.title) : 'services');
+    if (!service) {
+        return <Navigate to="/services" replace />;
+    }
+
+    const country = service.countries.find(c => c.slug === countrySlug);
+    
+    if (!country) {
+        return <Navigate to={`/services/${serviceSlug}`} replace />;
+    }
+
+    const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
 
     useEffect(() => {
         // Fetch posts for the related blogs section
@@ -29,27 +39,26 @@ const ServicePage = () => {
             .catch(console.error);
     }, [service]);
 
-    if (!service) {
-        return <Navigate to="/services" replace />;
-    }
-
     const Icon = service.icon;
+
+    const pageTitle = `${service.title} in ${country.name} | Academic Wizard`;
+    const pageDescription = `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
 
     // Generate JSON-LD Schema
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": service.title,
-        "description": service.metaDescription,
+        "name": `${service.title} in ${country.name}`,
+        "description": pageDescription,
         "provider": {
             "@type": "Organization",
             "name": "Academic Wizard",
             "url": "https://academicwizard.online"
         },
-        "areaServed": service.countries.map(c => ({
+        "areaServed": {
             "@type": "Country",
-            "name": c.name
-        }))
+            "name": country.name
+        }
     };
 
     const faqSchema = {
@@ -71,19 +80,20 @@ const ServicePage = () => {
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
             { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://academicwizard.online/services" },
-            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` }
+            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` },
+            { "@type": "ListItem", "position": 4, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}` }
         ]
     };
 
     return (
-        <div className="page-service-details">
+        <div className="page-country-service-details">
             <Helmet>
-                <title>{service.metaTitle}</title>
-                <meta name="description" content={service.metaDescription} />
-                <link rel="canonical" href={`https://academicwizard.online/services/${service.slug}`} />
-                <meta property="og:title" content={service.metaTitle} />
-                <meta property="og:description" content={service.metaDescription} />
-                <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}`} />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
+                <link rel="canonical" href={`https://academicwizard.online/services/${service.slug}/${country.slug}`} />
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:description" content={pageDescription} />
+                <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}/${country.slug}`} />
                 
                 <script type="application/ld+json">
                     {JSON.stringify(serviceSchema)}
@@ -97,23 +107,33 @@ const ServicePage = () => {
             </Helmet>
 
             <PageHeader
-                title={service.title}
-                subtitle={service.heroSubtitle}
+                title={`${service.title} in ${country.name} ${country.flag}`}
+                subtitle={country.desc}
             />
 
             <TrustStats />
 
-            {/* Overview Section */}
+            {/* Localized Overview Section */}
             <section className="py-20 bg-bg-secondary">
                 <div className="container px-6 max-w-4xl mx-auto text-center">
                     <div className="glass-card inline-flex p-6 rounded-full mb-8">
                         <Icon size={48} className="text-accent-gold" />
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading text-white">
-                        What Is {service.title}?
+                        Local Academic Excellence in {country.name}
                     </h2>
-                    <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed">
+                    <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed mb-10">
                         <p>{service.overview}</p>
+                    </div>
+                    <div className="glass-card p-8 border-accent-gold/20 inline-block text-left">
+                        <h3 className="text-xl font-bold text-white mb-4">Targeted Keywords for Your Region</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {country.keywords.map((kw, i) => (
+                                <span key={i} className="text-xs uppercase tracking-widest text-accent-gold/90 bg-white/5 px-3 py-2 rounded border border-white/10">
+                                    {kw}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -159,46 +179,8 @@ const ServicePage = () => {
                 </div>
             </section>
 
-            {/* Country Targeting (GEO) */}
-            <section className="py-20 border-t border-glass-border overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-accent-gold/5 blur-3xl -z-10 rounded-full" />
-                <div className="container px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold font-heading text-white mb-4">Global Expertise, Local Standards</h2>
-                        <p className="text-text-secondary max-w-2xl mx-auto">We understand the specific academic requirements and grading criteria of universities worldwide.</p>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {service.countries.map((country, idx) => (
-                            <Link 
-                                key={idx} 
-                                to={`/services/${service.slug}/${country.slug}`} 
-                                className="glass-card p-6 block hover:border-accent-gold/50 transition-colors group"
-                            >
-                                <div className="flex items-center gap-3 mb-4">
-                                    <span className="text-2xl group-hover:scale-110 transition-transform">{country.flag}</span>
-                                    <h3 className="text-lg font-bold text-white font-heading group-hover:text-accent-gold transition-colors">{service.title} in {country.name}</h3>
-                                </div>
-                                <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-                                    {country.desc}
-                                </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {country.keywords.slice(0, 1).map((kw, i) => (
-                                        <span key={i} className="text-[10px] uppercase tracking-widest text-accent-gold/70 bg-white/5 px-2 py-1 rounded">
-                                            {kw}
-                                        </span>
-                                    ))}
-                                </div>
-                                <div className="mt-4 text-accent-gold text-xs font-heading uppercase tracking-widest font-bold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    View Details →
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Pricing Section */}
-            <section className="py-20 bg-bg-secondary border-t border-glass-border">
+            <section className="py-20 border-t border-glass-border">
                 <div className="container px-6 max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold font-heading text-white mb-8">Transparent Pricing</h2>
                     <div className="glass-card p-10 border-accent-gold/20">
@@ -206,14 +188,14 @@ const ServicePage = () => {
                             {service.pricing}
                         </p>
                         <Button onClick={() => window.open(whatsappUrl, '_blank')}>
-                            Get a Personalized Quote
+                            Get a Personalized Quote for {country.name}
                         </Button>
                     </div>
                 </div>
             </section>
 
             {/* FAQs */}
-            <section className="py-20 border-t border-glass-border">
+            <section className="py-20 bg-bg-secondary border-t border-glass-border">
                 <div className="container px-6 max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold font-heading text-white mb-4">Frequently Asked Questions</h2>
@@ -242,7 +224,7 @@ const ServicePage = () => {
 
             {/* Related Blogs */}
             {posts.length > 0 && (
-                <section className="py-20 bg-bg-secondary border-t border-glass-border">
+                <section className="py-20 border-t border-glass-border">
                     <div className="container px-6">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold font-heading text-white mb-4">Related Academic Guides</h2>
@@ -281,7 +263,7 @@ const ServicePage = () => {
             <section className="py-24 relative overflow-hidden border-t border-glass-border">
                 <div className="absolute inset-0 bg-accent-gold/5" />
                 <div className="container px-6 relative z-10 text-center max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-6">Ready to excel academically?</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-6">Ready to excel academically in {country.name}?</h2>
                     <p className="text-xl text-text-secondary mb-10">
                         Join thousands of students who have improved their grades with our {service.title.toLowerCase()} service.
                     </p>
@@ -296,4 +278,4 @@ const ServicePage = () => {
     );
 };
 
-export default ServicePage;
+export default CountryServicePage;

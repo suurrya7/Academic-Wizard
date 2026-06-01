@@ -37,14 +37,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["assignment help UK", "UK university assignment support"], desc: "Tailored to UK university marking criteria, focusing on critical analysis and independent research to help you achieve higher degree classifications." },
-            { name: "United States", flag: "🇺🇸", keywords: ["assignment help USA", "US college assignment assistance"], desc: "Designed to meet the rigorous standards of US colleges and universities, helping you maintain a strong GPA with well-structured, persuasive assignments." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["assignment help Australia", "Australian uni assignment support"], desc: "Aligned with Australian university standards (HD/D/C grading), emphasizing evidence-based arguments and clear academic expression." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["assignment help Canada", "Canadian university assignments"], desc: "Supporting Canadian students with comprehensive research and writing assistance, focusing on academic integrity and clear communication." },
-            { name: "India", flag: "🇮🇳", keywords: ["assignment help India", "Indian university assignments"], desc: "Expert guidance for Indian university students, helping you navigate complex topics and present your ideas with clarity and academic rigor." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["assignment help Ireland", "Irish university assignments"], desc: "Specialized support for Irish academic institutions, ensuring your assignments reflect deep understanding and critical evaluation." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["assignment help Singapore", "Singapore university assignments"], desc: "Meeting the high academic expectations of Singaporean universities with meticulously researched and impeccably written assignments." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["assignment help Germany", "German university assignments"], desc: "Assisting students in Germany with structuring and articulating complex academic concepts in clear, formal English." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["assignment help UK", "UK university assignment support"], desc: "Tailored to UK university marking criteria, focusing on critical analysis and independent research to help you achieve higher degree classifications." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["assignment help USA", "US college assignment assistance"], desc: "Designed to meet the rigorous standards of US colleges and universities, helping you maintain a strong GPA with well-structured, persuasive assignments." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["assignment help Australia", "Australian uni assignment support"], desc: "Aligned with Australian university standards (HD/D/C grading), emphasizing evidence-based arguments and clear academic expression." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["assignment help Canada", "Canadian university assignments"], desc: "Supporting Canadian students with comprehensive research and writing assistance, focusing on academic integrity and clear communication." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["assignment help India", "Indian university assignments"], desc: "Expert guidance for Indian university students, helping you navigate complex topics and present your ideas with clarity and academic rigor." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["assignment help Ireland", "Irish university assignments"], desc: "Specialized support for Irish academic institutions, ensuring your assignments reflect deep understanding and critical evaluation." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["assignment help Singapore", "Singapore university assignments"], desc: "Meeting the high academic expectations of Singaporean universities with meticulously researched and impeccably written assignments." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["assignment help Germany", "German university assignments"], desc: "Assisting students in Germany with structuring and articulating complex academic concepts in clear, formal English." }
         ],
         faqs: [
             { question: "What is Assignment Help?", answer: "Assignment help is a service that provides expert guidance, research assistance, and editing to help students complete their university assignments successfully." },
@@ -75,14 +75,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["essay help UK", "UK essay writing support"], desc: "Guidance on crafting essays that meet UK standards for critical thinking and independent argumentation." },
-            { name: "United States", flag: "🇺🇸", keywords: ["essay help USA", "US college essay assistance"], desc: "Support for US students in developing persuasive, well-evidenced essays that contribute to a strong academic record." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["essay help Australia", "Australian university essay support"], desc: "Help with structuring essays to achieve High Distinction (HD) grades by demonstrating deep understanding and critical analysis." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["essay help Canada", "Canadian academic essay writing"], desc: "Assistance in writing clear, concise, and well-researched essays for Canadian academic institutions." },
-            { name: "India", flag: "🇮🇳", keywords: ["essay help India", "Indian university essay support"], desc: "Expert help in articulating complex ideas and maintaining formal academic language in your essays." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["essay help Ireland", "Irish university essay writing"], desc: "Support in developing robust arguments and engaging with academic literature for Irish university essays." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["essay help Singapore", "Singapore university essays"], desc: "Guidance on meeting the rigorous analytical and writing standards expected in Singaporean universities." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["essay help Germany", "English essay writing Germany"], desc: "Assistance for students in Germany to write polished, academic essays in English with perfect grammar and style." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["essay help UK", "UK essay writing support"], desc: "Guidance on crafting essays that meet UK standards for critical thinking and independent argumentation." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["essay help USA", "US college essay assistance"], desc: "Support for US students in developing persuasive, well-evidenced essays that contribute to a strong academic record." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["essay help Australia", "Australian university essay support"], desc: "Help with structuring essays to achieve High Distinction (HD) grades by demonstrating deep understanding and critical analysis." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["essay help Canada", "Canadian academic essay writing"], desc: "Assistance in writing clear, concise, and well-researched essays for Canadian academic institutions." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["essay help India", "Indian university essay support"], desc: "Expert help in articulating complex ideas and maintaining formal academic language in your essays." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["essay help Ireland", "Irish university essay writing"], desc: "Support in developing robust arguments and engaging with academic literature for Irish university essays." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["essay help Singapore", "Singapore university essays"], desc: "Guidance on meeting the rigorous analytical and writing standards expected in Singaporean universities." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["essay help Germany", "English essay writing Germany"], desc: "Assistance for students in Germany to write polished, academic essays in English with perfect grammar and style." }
         ],
         faqs: [
             { question: "What does your essay help include?", answer: "Our essay help includes thesis development, structural planning, research guidance, argument refinement, and thorough proofreading." },
@@ -113,14 +113,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["dissertation help UK", "UK thesis support"], desc: "Expert support aligned with UK university expectations for original research and substantial contribution to knowledge." },
-            { name: "United States", flag: "🇺🇸", keywords: ["dissertation help USA", "US PhD thesis assistance"], desc: "Comprehensive guidance for US doctoral candidates navigating the complex dissertation process from proposal to defense." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["dissertation help Australia", "Australian thesis writing support"], desc: "Tailored help for Australian students focusing on rigorous methodology and clear presentation of research findings." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["dissertation help Canada", "Canadian masters thesis support"], desc: "Support for Canadian students in conducting ethical research and writing compelling academic dissertations." },
-            { name: "India", flag: "🇮🇳", keywords: ["dissertation help India", "Indian PhD research support"], desc: "Guidance on structuring and presenting extensive research projects for Indian academic institutions." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["dissertation help Ireland", "Irish university dissertation guidance"], desc: "Expert assistance with literature reviews and data analysis for Irish university dissertations." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["dissertation help Singapore", "Singapore thesis research help"], desc: "Support in meeting the high standards for methodological rigor and academic writing in Singapore." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["dissertation help Germany", "English thesis editing Germany"], desc: "Assistance for researchers in Germany writing their dissertations in English, ensuring flawless academic language." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["dissertation help UK", "UK thesis support"], desc: "Expert support aligned with UK university expectations for original research and substantial contribution to knowledge." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["dissertation help USA", "US PhD thesis assistance"], desc: "Comprehensive guidance for US doctoral candidates navigating the complex dissertation process from proposal to defense." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["dissertation help Australia", "Australian thesis writing support"], desc: "Tailored help for Australian students focusing on rigorous methodology and clear presentation of research findings." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["dissertation help Canada", "Canadian masters thesis support"], desc: "Support for Canadian students in conducting ethical research and writing compelling academic dissertations." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["dissertation help India", "Indian PhD research support"], desc: "Guidance on structuring and presenting extensive research projects for Indian academic institutions." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["dissertation help Ireland", "Irish university dissertation guidance"], desc: "Expert assistance with literature reviews and data analysis for Irish university dissertations." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["dissertation help Singapore", "Singapore thesis research help"], desc: "Support in meeting the high standards for methodological rigor and academic writing in Singapore." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["dissertation help Germany", "English thesis editing Germany"], desc: "Assistance for researchers in Germany writing their dissertations in English, ensuring flawless academic language." }
         ],
         faqs: [
             { question: "Can you help with just one chapter of my dissertation?", answer: "Yes, we offer flexible support. Whether you need help with just the literature review, methodology, or data analysis chapter, we can assist." },
@@ -151,14 +151,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["literature review help UK", "systematic review UK"], desc: "Guidance on demonstrating comprehensive critical engagement with literature as required by UK universities." },
-            { name: "United States", flag: "🇺🇸", keywords: ["literature review help USA", "academic review US"], desc: "Support for US students in synthesizing vast amounts of research into cohesive, thematic narratives." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["literature review help Australia", "Aussie lit review support"], desc: "Help with critically analyzing sources and establishing a strong rationale for your research in Australia." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["literature review help Canada", "Canadian research synthesis"], desc: "Assistance in identifying key debates and finding the gap for your Canadian research projects." },
-            { name: "India", flag: "🇮🇳", keywords: ["literature review help India", "Indian academic review"], desc: "Expert support in organizing and referencing extensive literature for Indian academic theses." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["literature review help Ireland", "Irish university literature review"], desc: "Guidance on structuring a logical and comprehensive review of literature for Irish institutions." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["literature review help Singapore", "Singapore academic synthesis"], desc: "Support in meeting strict requirements for exhaustive literature searches and critical analysis in Singapore." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["literature review help Germany", "English lit review Germany"], desc: "Help for researchers in Germany to articulate complex theoretical frameworks clearly in English." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["literature review help UK", "systematic review UK"], desc: "Guidance on demonstrating comprehensive critical engagement with literature as required by UK universities." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["literature review help USA", "academic review US"], desc: "Support for US students in synthesizing vast amounts of research into cohesive, thematic narratives." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["literature review help Australia", "Aussie lit review support"], desc: "Help with critically analyzing sources and establishing a strong rationale for your research in Australia." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["literature review help Canada", "Canadian research synthesis"], desc: "Assistance in identifying key debates and finding the gap for your Canadian research projects." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["literature review help India", "Indian academic review"], desc: "Expert support in organizing and referencing extensive literature for Indian academic theses." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["literature review help Ireland", "Irish university literature review"], desc: "Guidance on structuring a logical and comprehensive review of literature for Irish institutions." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["literature review help Singapore", "Singapore academic synthesis"], desc: "Support in meeting strict requirements for exhaustive literature searches and critical analysis in Singapore." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["literature review help Germany", "English lit review Germany"], desc: "Help for researchers in Germany to articulate complex theoretical frameworks clearly in English." }
         ],
         faqs: [
             { question: "What is a literature review?", answer: "A literature review is a comprehensive survey and critical analysis of previously published research on a specific topic." },
@@ -189,14 +189,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["research paper help UK", "UK academic research support"], desc: "Support for UK students in conducting independent research and presenting findings with academic rigor." },
-            { name: "United States", flag: "🇺🇸", keywords: ["research paper help USA", "US college research paper"], desc: "Guidance for US students on navigating extensive research requirements and adhering to strict citation styles." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["research paper help Australia", "Australian research assistance"], desc: "Help with designing robust methodologies and communicating complex data effectively for Australian universities." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["research paper help Canada", "Canadian academic papers"], desc: "Assistance in writing clear, well-structured research papers that meet Canadian academic standards." },
-            { name: "India", flag: "🇮🇳", keywords: ["research paper help India", "Indian research publication support"], desc: "Expert support for Indian researchers aiming to publish in international peer-reviewed journals." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["research paper help Ireland", "Irish university research papers"], desc: "Guidance on critical analysis and evidence-based argumentation for Irish academic research." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["research paper help Singapore", "Singapore research writing"], desc: "Support in meeting the high expectations for methodological precision in Singaporean research institutions." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["research paper help Germany", "English research paper editing"], desc: "Assistance for researchers in Germany to polish their English-language research papers for global impact." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["research paper help UK", "UK academic research support"], desc: "Support for UK students in conducting independent research and presenting findings with academic rigor." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["research paper help USA", "US college research paper"], desc: "Guidance for US students on navigating extensive research requirements and adhering to strict citation styles." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["research paper help Australia", "Australian research assistance"], desc: "Help with designing robust methodologies and communicating complex data effectively for Australian universities." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["research paper help Canada", "Canadian academic papers"], desc: "Assistance in writing clear, well-structured research papers that meet Canadian academic standards." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["research paper help India", "Indian research publication support"], desc: "Expert support for Indian researchers aiming to publish in international peer-reviewed journals." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["research paper help Ireland", "Irish university research papers"], desc: "Guidance on critical analysis and evidence-based argumentation for Irish academic research." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["research paper help Singapore", "Singapore research writing"], desc: "Support in meeting the high expectations for methodological precision in Singaporean research institutions." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["research paper help Germany", "English research paper editing"], desc: "Assistance for researchers in Germany to polish their English-language research papers for global impact." }
         ],
         faqs: [
             { question: "What is research paper assistance?", answer: "It is expert guidance provided to students and researchers to help them design, execute, and write up academic research studies effectively." },
@@ -227,14 +227,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["academic editing UK", "UK proofreading service"], desc: "Ensuring your work adheres to British English conventions and UK university formatting standards." },
-            { name: "United States", flag: "🇺🇸", keywords: ["academic editing USA", "US essay proofreading"], desc: "Polishing your papers to meet American English standards and strict APA/MLA formatting guidelines." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["academic editing Australia", "Australian uni proofreading"], desc: "Editing to ensure clarity and adherence to Australian academic writing conventions." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["academic editing Canada", "Canadian thesis proofreading"], desc: "Providing meticulous editing that respects Canadian spelling variations and university standards." },
-            { name: "India", flag: "🇮🇳", keywords: ["academic editing India", "Indian research proofreading"], desc: "Helping Indian students and researchers refine their English academic writing for maximum impact." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["academic editing Ireland", "Irish essay proofreading"], desc: "Thorough proofreading for Irish university assignments, ensuring flawless grammar and flow." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["academic editing Singapore", "Singapore thesis editing"], desc: "Elevating the clarity and academic tone of papers for students in Singapore." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["academic editing Germany", "English proofreading Germany"], desc: "Specialized editing for native German speakers to ensure their English academic texts are natural and professional." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["academic editing UK", "UK proofreading service"], desc: "Ensuring your work adheres to British English conventions and UK university formatting standards." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["academic editing USA", "US essay proofreading"], desc: "Polishing your papers to meet American English standards and strict APA/MLA formatting guidelines." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["academic editing Australia", "Australian uni proofreading"], desc: "Editing to ensure clarity and adherence to Australian academic writing conventions." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["academic editing Canada", "Canadian thesis proofreading"], desc: "Providing meticulous editing that respects Canadian spelling variations and university standards." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["academic editing India", "Indian research proofreading"], desc: "Helping Indian students and researchers refine their English academic writing for maximum impact." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["academic editing Ireland", "Irish essay proofreading"], desc: "Thorough proofreading for Irish university assignments, ensuring flawless grammar and flow." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["academic editing Singapore", "Singapore thesis editing"], desc: "Elevating the clarity and academic tone of papers for students in Singapore." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["academic editing Germany", "English proofreading Germany"], desc: "Specialized editing for native German speakers to ensure their English academic texts are natural and professional." }
         ],
         faqs: [
             { question: "What is the difference between editing and proofreading?", answer: "Proofreading focuses on correcting surface errors (spelling, grammar, punctuation), while editing also addresses sentence structure, flow, clarity, and academic tone." },
@@ -265,14 +265,14 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { name: "United Kingdom", flag: "🇬🇧", keywords: ["academic coaching UK", "UK university study tips"], desc: "Strategies for managing independent study time and preparing effectively for UK university exams." },
-            { name: "United States", flag: "🇺🇸", keywords: ["academic coaching USA", "US college study guidance"], desc: "Guidance on balancing coursework, extracurriculars, and maintaining a high GPA in the US system." },
-            { name: "Australia", flag: "🇦🇺", keywords: ["academic coaching Australia", "Australian study skills"], desc: "Help with adapting to university life in Australia and mastering effective study techniques." },
-            { name: "Canada", flag: "🇨🇦", keywords: ["academic coaching Canada", "Canadian student coaching"], desc: "Personalized coaching to help Canadian students optimize their study habits and achieve academic success." },
-            { name: "India", flag: "🇮🇳", keywords: ["academic coaching India", "Indian exam preparation strategies"], desc: "Effective techniques for managing heavy workloads and preparing for rigorous examinations in India." },
-            { name: "Ireland", flag: "🇮🇪", keywords: ["academic coaching Ireland", "Irish university study support"], desc: "Support for developing critical thinking and independent learning skills necessary for Irish universities." },
-            { name: "Singapore", flag: "🇸🇬", keywords: ["academic coaching Singapore", "Singapore student mentoring"], desc: "Strategies for excelling in highly competitive academic environments in Singapore." },
-            { name: "Germany", flag: "🇩🇪", keywords: ["academic coaching Germany", "German university study tips"], desc: "Guidance for international and local students navigating the demands of the German higher education system." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["academic coaching UK", "UK university study tips"], desc: "Strategies for managing independent study time and preparing effectively for UK university exams." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["academic coaching USA", "US college study guidance"], desc: "Guidance on balancing coursework, extracurriculars, and maintaining a high GPA in the US system." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["academic coaching Australia", "Australian study skills"], desc: "Help with adapting to university life in Australia and mastering effective study techniques." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["academic coaching Canada", "Canadian student coaching"], desc: "Personalized coaching to help Canadian students optimize their study habits and achieve academic success." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["academic coaching India", "Indian exam preparation strategies"], desc: "Effective techniques for managing heavy workloads and preparing for rigorous examinations in India." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["academic coaching Ireland", "Irish university study support"], desc: "Support for developing critical thinking and independent learning skills necessary for Irish universities." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["academic coaching Singapore", "Singapore student mentoring"], desc: "Strategies for excelling in highly competitive academic environments in Singapore." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["academic coaching Germany", "German university study tips"], desc: "Guidance for international and local students navigating the demands of the German higher education system." }
         ],
         faqs: [
             { question: "What is academic coaching?", answer: "Academic coaching is a personalized, one-on-one process that helps students develop effective study habits, time management skills, and strategies for academic success." },

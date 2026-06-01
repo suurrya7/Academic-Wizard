@@ -46,6 +46,23 @@ STATIC_PAGES = [
 ]
 
 TARGET_COUNTRIES = ["United Kingdom", "United States", "India", "Ireland", "Australia", "Singapore", "Canada", "Germany"]
+TARGET_COUNTRY_SLUGS = ["uk", "usa", "india", "ireland", "australia", "singapore", "canada", "germany"]
+
+for service in [
+    "assignment-help",
+    "essay-help",
+    "dissertation-help",
+    "literature-review",
+    "research-paper-help",
+    "editing-proofreading",
+    "study-guidance"
+]:
+    for slug in TARGET_COUNTRY_SLUGS:
+        STATIC_PAGES.append({
+            "path": f"services/{service}/{slug}",
+            "changefreq": "weekly",
+            "priority": "0.85"
+        })
 
 SERVICE_DETAILS = {
     "Assignment Help": {

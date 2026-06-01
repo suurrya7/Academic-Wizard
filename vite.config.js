@@ -28,6 +28,15 @@ const serviceRoutes = [
   '/services/study-guidance',
 ];
 
+const countries = ['uk', 'usa', 'australia', 'canada', 'india', 'ireland', 'singapore', 'germany'];
+const countryServiceRoutes = [];
+
+serviceRoutes.forEach(service => {
+    countries.forEach(country => {
+        countryServiceRoutes.push(`${service}/${country}`);
+    });
+});
+
 // https://vite.dev/config/
 export default defineConfig({
   base: process.env.BASE_PATH || '/',
@@ -44,6 +53,7 @@ export default defineConfig({
         '/privacy-policy',
         '/terms-of-service',
         ...serviceRoutes,
+        ...countryServiceRoutes,
         ...blogRoutes
       ],
       renderer: new puppeteer({
