@@ -125,14 +125,18 @@ const CountryServicePage = () => {
                     <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed mb-10">
                         <p>{service.overview}</p>
                     </div>
-                    <div className="glass-card p-8 border-accent-gold/20 inline-block text-left">
-                        <h3 className="text-xl font-bold text-white mb-4">Targeted Keywords for Your Region</h3>
-                        <div className="flex flex-wrap gap-2">
-                            {country.keywords.map((kw, i) => (
-                                <span key={i} className="text-xs uppercase tracking-widest text-accent-gold/90 bg-white/5 px-3 py-2 rounded border border-white/10">
-                                    {kw}
-                                </span>
-                            ))}
+                    <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
+                        <div className="glass-card p-8 border-accent-gold/10">
+                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">Why Choose Us in {country.name}?</h3>
+                            <p className="text-text-secondary leading-relaxed">
+                                Our academic experts are intimately familiar with the specific grading rubrics, formatting guidelines, and educational standards required by universities in {country.name}. We don't just provide generic assistance; we tailor every piece of guidance to ensure it meets local expectations for critical analysis and academic rigor.
+                            </p>
+                        </div>
+                        <div className="glass-card p-8 border-accent-gold/10">
+                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">Localized Expertise</h3>
+                            <p className="text-text-secondary leading-relaxed">
+                                Whether you are struggling with complex research methodologies or need help refining your academic tone, our {country.name}-focused {service.title.toLowerCase()} service is designed to elevate your work. We help you navigate the nuances of your local academic system with confidence.
+                            </p>
                         </div>
                     </div>
                 </div>
