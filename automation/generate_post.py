@@ -225,7 +225,7 @@ Output rules:
 You must output exactly two sections, separated by a specific marker `===FAQS_JSON===`.
 Do not output a JSON object.
 
-1. First, output the raw HTML string of the article (use <h2>, <h3>, <p>, <ul>, <li>, <strong>, <a>). Do not include <html>, <head>, or <body> tags. Do not wrap in markdown code blocks.
+1. First, output the raw HTML string of the article (use <h2>, <h3>, <p>, <ul>, <li>, <strong>, <a>). Do NOT include <h1> tags — the page template already renders the title. Start your content directly with the first <h2> or <p>. Do not include <html>, <head>, or <body> tags. Do not wrap in markdown code blocks.
 Length of HTML: 1100-1500 words. Mention {SITE_NAME} naturally once near the end.
 
 2. Then, output the exact string `===FAQS_JSON===` on its own line.

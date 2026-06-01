@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
 import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
 import { assetPath } from '../config/site';
 
 const BlogPost = () => {
     const { slug } = useParams();
+    const navigate = useNavigate();
     const [postData, setPostData] = useState(null);
     const [htmlContent, setHtmlContent] = useState('');
     const [status, setStatus] = useState('loading'); // loading, ready, error, notfound
+    const contentRef = useRef(null);
 
     useEffect(() => {
         // Fetch post metadata from posts.json (prevent caching)
@@ -31,7 +33,10 @@ const BlogPost = () => {
                         return res.text();
                     })
                     .then(html => {
-                        setHtmlContent(html);
+                        // Strip any <h1> tags from the HTML content since
+                        // the React component already renders the title as <h1>
+                        const cleanedHtml = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+                        setHtmlContent(cleanedHtml);
                         setStatus('ready');
                     });
             })
@@ -40,6 +45,24 @@ const BlogPost = () => {
                 setStatus('error');
             });
     }, [slug]);
+
+    // Intercept clicks on internal links inside the blog HTML content
+    // so they use React Router navigation instead of full page reloads
+    const handleContentClick = useCallback((e) => {
+        const anchor = e.target.closest('a');
+        if (!anchor) return;
+        
+        const href = anchor.getAttribute('href');
+        if (!href) return;
+        
+        // Only intercept internal links (starting with /)
+        if (href.startsWith('/')) {
+            e.preventDefault();
+            navigate(href);
+            // Scroll to top on navigation
+            window.scrollTo(0, 0);
+        }
+    }, [navigate]);
 
     if (status === 'loading') {
         return (
@@ -106,6 +129,8 @@ const BlogPost = () => {
                 </header>
 
                 <div 
+                    ref={contentRef}
+                    onClick={handleContentClick}
                     className="prose prose-invert prose-lg max-w-none 
                                prose-headings:text-white prose-a:text-accent-gold hover:prose-a:text-white
                                prose-strong:text-white prose-ul:list-disc prose-ol:list-decimal"

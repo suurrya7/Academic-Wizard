@@ -10,7 +10,16 @@ Disallow: /.github/
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: ClaudeBot
@@ -31,4 +40,17 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://academicwizard.online/sitemap.xml
+
+# LLM-optimised context files (AEO / GEO)
+# llms.txt: https://academicwizard.online/llms.txt
+# llms-full.txt: https://academicwizard.online/llms-full.txt
