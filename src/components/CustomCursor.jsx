@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { Book, Sparkles, Pencil, ArrowRight } from 'lucide-react';
+import { Wand2, Sparkles } from 'lucide-react';
 
 const CustomCursor = () => {
     const [hovered, setHovered] = useState(false);
-    const [cursorType, setCursorType] = useState('default');
 
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    // Smooth spring physics for premium feel
-    const outerSpringConfig = { damping: 20, stiffness: 250 };
-    const innerSpringConfig = { damping: 30, stiffness: 800 };
+    const springConfig = { damping: 25, stiffness: 400 };
 
-    const outerX = useSpring(mouseX, outerSpringConfig);
-    const outerY = useSpring(mouseY, outerSpringConfig);
-
-    const innerX = useSpring(mouseX, innerSpringConfig);
-    const innerY = useSpring(mouseY, innerSpringConfig);
+    const cursorX = useSpring(mouseX, springConfig);
+    const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
         const moveMouse = (e) => {
@@ -38,11 +32,6 @@ const CustomCursor = () => {
             } else {
                 setHovered(false);
             }
-
-            if (target.closest('.service-card')) setCursorType('sparkle');
-            else if (target.closest('input') || target.closest('textarea')) setCursorType('pencil');
-            else if (target.closest('.cta-button')) setCursorType('arrow');
-            else setCursorType('default');
         };
 
         window.addEventListener('mousemove', moveMouse);
@@ -56,67 +45,50 @@ const CustomCursor = () => {
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', zIndex: 9999 }}>
-            {/* Outer Ring - Dynamic & Smooth */}
+            {/* Glowing Aura Effect */}
             <motion.div
                 style={{
-                    x: outerX,
-                    y: outerY,
+                    x: cursorX,
+                    y: cursorY,
                     translateX: '-50%',
                     translateY: '-50%',
-                    width: hovered ? 70 : 35,
-                    height: hovered ? 70 : 35,
-                    borderRadius: '50%',
-                    border: '1.5px solid #D4AF37',
-                    boxShadow: hovered ? '0 0 25px rgba(212, 175, 55, 0.4)' : 'none',
-                    backgroundColor: hovered ? 'rgba(212, 175, 55, 0.05)' : 'transparent',
                     position: 'absolute',
+                    width: hovered ? 140 : 70,
+                    height: hovered ? 140 : 70,
+                    borderRadius: '50%',
+                    background: hovered ? 'radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0) 70%)' : 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0) 70%)',
+                    filter: 'blur(8px)',
                 }}
                 animate={{
                     scale: hovered ? 1.2 : 1,
-                    opacity: 1,
                 }}
+                transition={{ duration: 0.3 }}
             />
 
-            {/* Inner Dot / Icon Container */}
+            {/* Magic Wand Cursor */}
             <motion.div
                 style={{
-                    x: innerX,
-                    y: innerY,
-                    translateX: '-50%',
-                    translateY: '-50%',
+                    x: mouseX, 
+                    y: mouseY,
                     position: 'absolute',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    translateX: '-4px', // Align wand tip closely to actual cursor coordinate
+                    translateY: '-4px',
                 }}
                 animate={{
-                    scale: hovered ? 0.8 : 1,
+                    rotate: hovered ? -20 : -45, // tilt the wand on hover
+                    scale: hovered ? 1.2 : 1,
                 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-                <div className="relative flex items-center justify-center">
-                    {/* Inner Gold Dot */}
-                    <div
-                        className="w-1.5 h-1.5 bg-accent-gold rounded-full"
-                        style={{
-                            display: hovered ? 'none' : 'block',
-                            backgroundColor: 'var(--accent-gold)'
-                        }}
-                    />
-
-                    {/* Hover Icons */}
-                    <motion.div
+                <div className="relative text-accent-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]">
+                    <Wand2 size={24} strokeWidth={2.5} />
+                    {/* Sparkles that appear on hover */}
+                    <motion.div 
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={{
-                            opacity: hovered ? 1 : 0,
-                            scale: hovered ? 1 : 0
-                        }}
-                        className="text-accent-gold"
-                        style={{ color: 'var(--accent-gold)' }}
+                        animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0 }}
+                        className="absolute -top-3 -right-3"
                     >
-                        {cursorType === 'default' && <Book size={18} strokeWidth={2.5} />}
-                        {cursorType === 'sparkle' && <Sparkles size={22} strokeWidth={2} />}
-                        {cursorType === 'pencil' && <Pencil size={18} strokeWidth={2.5} />}
-                        {cursorType === 'arrow' && <ArrowRight size={22} strokeWidth={2.5} />}
+                        <Sparkles size={16} strokeWidth={2.5} className="animate-pulse" />
                     </motion.div>
                 </div>
             </motion.div>
