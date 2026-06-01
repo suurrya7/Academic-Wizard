@@ -73,9 +73,9 @@ const CustomCursor = () => {
                     position: 'absolute',
                     translateX: '-4px', // Align wand tip closely to actual cursor coordinate
                     translateY: '-4px',
+                    rotate: -135, // Permanently tilted left like a normal cursor
                 }}
                 animate={{
-                    rotate: hovered ? -20 : -45, // tilt the wand on hover
                     scale: hovered ? 1.2 : 1,
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
