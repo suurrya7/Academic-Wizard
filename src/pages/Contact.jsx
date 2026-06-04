@@ -69,7 +69,7 @@ const Contact = () => {
         <div className="page-contact">
             <Helmet>
                 <title>Contact Us | Academic Wizard</title>
-                <meta name="description" content="Get in touch with Academic Wizard. Contact us on WhatsApp for an instant custom quote on assignment help, essay writing, and dissertation support." />
+                <meta name="description" content="Get in touch with Academic Wizard. Reach out via WhatsApp or email for instant support on your academic writing needs." />
                 <link rel="canonical" href="https://academicwizard.online/contact" />
                 <meta property="og:title" content="Contact Us | Academic Wizard" />
                 <meta property="og:description" content="Get in touch with Academic Wizard. Contact us on WhatsApp for an instant custom quote." />
@@ -79,9 +79,13 @@ const Contact = () => {
                 </script>
             </Helmet>
 
-            <PageHeader
-                title="Contact Us"
-                subtitle="Get in touch with an academic expert today for a custom quote and professional assistance."
+            <PageHeader 
+                title="Get In Touch" 
+                subtitle="We're here to help you achieve academic success. Reach out to our experts 24/7."
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Contact', url: '/contact' }
+                ]}
             />
 
             <section className="py-20 container">

@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Breadcrumbs from './Breadcrumbs';
 
-const PageHeader = ({ title, subtitle }) => {
+const PageHeader = ({ title, subtitle, breadcrumbs }) => {
     return (
-        <section className="pt-48 pb-20 relative overflow-hidden">
-            <div className="container px-6 text-center relative z-10">
+        <section className="pt-40 pb-20 relative overflow-hidden">
+            <div className="container px-6 text-center relative z-10 flex flex-col items-center">
+                {breadcrumbs && (
+                    <div className="w-full flex justify-center mb-8">
+                        <Breadcrumbs paths={breadcrumbs} />
+                    </div>
+                )}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

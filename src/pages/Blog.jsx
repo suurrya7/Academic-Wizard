@@ -105,6 +105,10 @@ const Blog = () => {
             <PageHeader
                 title="Academic Blog"
                 subtitle="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy."
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Blog', url: '/blog' }
+                ]}
             />
 
             <section className="container px-6 pb-24">

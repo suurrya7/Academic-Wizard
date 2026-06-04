@@ -56,9 +56,14 @@ export default defineConfig({
         ...countryServiceRoutes,
         ...blogRoutes
       ],
+      server: {
+        port: 5174 // Use a custom port for the static server
+      },
       renderer: new puppeteer({
         renderAfterTime: 5000,
-        headless: true
+        headless: true,
+        maxConcurrentRoutes: 5,
+        navigationTimeout: 120000
       })
     })
   ],

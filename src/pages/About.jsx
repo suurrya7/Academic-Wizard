@@ -21,7 +21,7 @@ const About = () => {
         <div className="page-about">
             <Helmet>
                 <title>About Us | Academic Wizard</title>
-                <meta name="description" content="Learn about Academic Wizard. We are a team of dedicated academic professionals helping students worldwide achieve excellence in their university studies." />
+                <meta name="description" content="Learn about Academic Wizard, our mission, and our team of expert academic consultants dedicated to your success." />
                 <link rel="canonical" href="https://academicwizard.online/about" />
                 <meta property="og:title" content="About Us | Academic Wizard" />
                 <meta property="og:description" content="Learn about Academic Wizard and our mission to help university students achieve academic excellence." />
@@ -32,8 +32,12 @@ const About = () => {
             </Helmet>
 
             <PageHeader
-                title="About Us"
-                subtitle="Dedicated to empowering students worldwide with professional academic guidance and unparalleled research support."
+                title="About Academic Wizard"
+                subtitle="Empowering students worldwide with expert academic guidance, ethical research support, and unwavering dedication to educational success."
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'About', url: '/about' }
+                ]}
             />
 
             <section className="py-20 container">

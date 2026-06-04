@@ -9,17 +9,21 @@ const Services = () => {
     return (
         <div className="page-services">
             <Helmet>
-                <title>Our Academic Services | Academic Wizard</title>
-                <meta name="description" content="Explore Academic Wizard's comprehensive range of services, including assignment help, essay writing, and dissertation support." />
+                <title>Academic Writing Services & Consulting | Academic Wizard</title>
+                <meta name="description" content="Explore our comprehensive range of academic services including essay help, dissertation consulting, and research support." />
                 <link rel="canonical" href="https://academicwizard.online/services" />
                 <meta property="og:title" content="Our Academic Services | Academic Wizard" />
                 <meta property="og:description" content="Explore Academic Wizard's comprehensive range of academic services." />
                 <meta property="og:url" content="https://academicwizard.online/services" />
             </Helmet>
 
-            <PageHeader
-                title="Our Services"
-                subtitle="Professional academic assistance and research support tailored to your university requirements."
+            <PageHeader 
+                title="Our Services" 
+                subtitle="Comprehensive academic support tailored to your unique educational needs."
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Services', url: '/services' }
+                ]}
             />
 
             <section className="py-20">

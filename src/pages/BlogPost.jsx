@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
 import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
 import { assetPath } from '../config/site';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPost = () => {
     const { slug } = useParams();
@@ -87,9 +88,17 @@ const BlogPost = () => {
     return (
         <div className="page-blog-post pt-32 pb-24">
             <article className="container px-6 max-w-4xl mx-auto">
-                <Link to="/blog" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-8 font-heading uppercase text-xs tracking-widest">
+                <Link to="/blog" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
                     <ArrowLeft size={16} /> Back to Blog
                 </Link>
+
+                <Breadcrumbs 
+                    paths={[
+                        { name: 'Home', url: '/' },
+                        { name: 'Blog', url: '/blog' },
+                        { name: postData?.title, url: `/blog/${postData?.slug}` }
+                    ]} 
+                />
 
                 <header className="mb-12">
                     <div className="flex flex-wrap items-center gap-4 text-white/50 text-xs uppercase tracking-widest mb-6 font-heading">

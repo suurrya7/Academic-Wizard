@@ -105,9 +105,13 @@ const FAQ = () => {
                 </script>
             </Helmet>
 
-            <PageHeader
-                title="Frequently Asked Questions"
-                subtitle="Find quick answers to common questions about our academic assistance and research support services."
+            <PageHeader 
+                title="Frequently Asked Questions" 
+                subtitle="Everything you need to know about Academic Wizard and how our services work."
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'FAQs', url: '/faq' }
+                ]}
             />
 
             <section className="py-20 container">

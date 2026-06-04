@@ -74,17 +74,6 @@ const CountryServicePage = () => {
         }))
     };
 
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://academicwizard.online/services" },
-            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` },
-            { "@type": "ListItem", "position": 4, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}` }
-        ]
-    };
-
     return (
         <div className="page-country-service-details">
             <Helmet>
@@ -101,14 +90,17 @@ const CountryServicePage = () => {
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
                 </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(breadcrumbSchema)}
-                </script>
             </Helmet>
 
             <PageHeader
                 title={`${service.title} in ${country.name} ${country.flag}`}
                 subtitle={country.desc}
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Services', url: '/services' },
+                    { name: service.title, url: `/services/${service.slug}` },
+                    { name: country.name, url: `/services/${service.slug}/${country.slug}` }
+                ]}
             />
 
             <TrustStats />

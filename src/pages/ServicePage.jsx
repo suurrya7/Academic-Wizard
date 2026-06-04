@@ -65,16 +65,6 @@ const ServicePage = () => {
         }))
     };
 
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://academicwizard.online/services" },
-            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` }
-        ]
-    };
-
     return (
         <div className="page-service-details">
             <Helmet>
@@ -91,14 +81,16 @@ const ServicePage = () => {
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
                 </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(breadcrumbSchema)}
-                </script>
             </Helmet>
 
             <PageHeader
                 title={service.title}
                 subtitle={service.heroSubtitle}
+                breadcrumbs={[
+                    { name: 'Home', url: '/' },
+                    { name: 'Services', url: '/services' },
+                    { name: service.title, url: `/services/${service.slug}` }
+                ]}
             />
 
             <TrustStats />
