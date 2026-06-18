@@ -137,11 +137,11 @@ def generate_sitemap() -> None:
     posts = load_posts()
     for post in posts:
         loc = absolute_url(f"blog/{post['slug']}")
-        lastmod = post.get("date", today).split("T")[0]
+        # Always use today for lastmod to signal freshness to Google
         urls.append(
             f"  <url>\n"
             f"    <loc>{loc}</loc>\n"
-            f"    <lastmod>{lastmod}</lastmod>\n"
+            f"    <lastmod>{today}</lastmod>\n"
             f"    <changefreq>weekly</changefreq>\n"
             f"    <priority>0.7</priority>\n"
             f"  </url>"

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
 import { assetPath } from '../config/site';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -23,9 +24,6 @@ const BlogPost = () => {
                     return;
                 }
                 setPostData(post);
-                
-                // Set page title and meta
-                document.title = `${post.title} | Academic Wizard Blog`;
                 
                 // Fetch the actual HTML fragment (prevent caching)
                 return fetch(assetPath(`blog/posts/${slug}.html`), { cache: 'no-store' })
@@ -68,6 +66,10 @@ const BlogPost = () => {
     if (status === 'loading') {
         return (
             <div className="pt-32 pb-24 container px-6 min-h-[60vh] flex items-center justify-center">
+                <Helmet>
+                    <title>{`${slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} | Academic Wizard Blog`}</title>
+                    <meta name="robots" content="noindex" />
+                </Helmet>
                 <div className="text-white text-xl">Loading article...</div>
             </div>
         );
@@ -85,8 +87,55 @@ const BlogPost = () => {
         })
         : 'Latest';
 
+    const canonicalUrl = `https://academicwizard.online/blog/${postData?.slug}`;
+    const postTitle = `${postData?.title} | Academic Wizard Blog`;
+    const postDescription = postData?.excerpt || postData?.title || '';
+
+    // Article JSON-LD Schema for Google
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": postData?.title,
+        "description": postDescription,
+        "url": canonicalUrl,
+        "datePublished": postData?.date || new Date().toISOString(),
+        "dateModified": postData?.date || new Date().toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "Academic Wizard",
+            "url": "https://academicwizard.online"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Academic Wizard",
+            "url": "https://academicwizard.online"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+        },
+        "keywords": (postData?.keywords || []).join(', ')
+    };
+
     return (
         <div className="page-blog-post pt-32 pb-24">
+            <Helmet>
+                <title>{postTitle}</title>
+                <meta name="description" content={postDescription} />
+                <link rel="canonical" href={canonicalUrl} />
+                <meta property="og:title" content={postTitle} />
+                <meta property="og:description" content={postDescription} />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:type" content="article" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={postTitle} />
+                <meta name="twitter:description" content={postDescription} />
+                <script type="application/ld+json">
+                    {JSON.stringify(articleSchema)}
+                </script>
+            </Helmet>
+
             <article className="container px-6 max-w-4xl mx-auto">
                 <Link to="/blog" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
                     <ArrowLeft size={16} /> Back to Blog
@@ -163,6 +212,21 @@ const BlogPost = () => {
                     </div>
                 </div>
             </article>
+
+            {/* SEO fallback: if JS doesn't execute (or during prerender snapshot), 
+                Google still sees meaningful content with internal links */}
+            <noscript>
+                <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+                    <h1>{postData?.title}</h1>
+                    <p>{postData?.excerpt}</p>
+                    <p>Published: {formattedDate}</p>
+                    <p>
+                        <a href="/blog">← Back to Blog</a> | 
+                        <a href="/services"> Our Services</a> | 
+                        <a href="/contact"> Contact Us</a>
+                    </p>
+                </div>
+            </noscript>
         </div>
     );
 };

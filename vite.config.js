@@ -1,22 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import fs from 'node:fs'
 import prerenderer from '@prerenderer/rollup-plugin'
 import puppeteer from '@prerenderer/renderer-puppeteer'
 
 const projectRoot = fileURLToPath(new URL('.', import.meta.url))
 
-// Read posts for dynamic routes
-let blogRoutes = [];
-try {
-  const postsJson = fs.readFileSync(resolve(projectRoot, 'public/data/posts.json'), 'utf-8')
-  const posts = JSON.parse(postsJson)
-  blogRoutes = posts.map(p => `/blog/${p.slug}`)
-} catch (e) {
-  console.warn('Could not read posts.json for prerendering:', e)
-}
+// Blog routes are handled by scripts/generate-blog-pages.mjs post-build
+// (Puppeteer prerenderer can't handle async-fetched blog content)
 
 const serviceRoutes = [
   '/services/assignment-help',
@@ -53,16 +44,15 @@ export default defineConfig({
         '/privacy-policy',
         '/terms-of-service',
         ...serviceRoutes,
-        ...countryServiceRoutes,
-        ...blogRoutes
+        ...countryServiceRoutes
       ],
       server: {
         port: 5174 // Use a custom port for the static server
       },
       renderer: new puppeteer({
-        renderAfterTime: 5000,
+        renderAfterTime: 10000,
         headless: true,
-        maxConcurrentRoutes: 5,
+        maxConcurrentRoutes: 3,
         navigationTimeout: 120000
       })
     })
