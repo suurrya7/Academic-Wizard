@@ -27,20 +27,28 @@ LLMS_PATH = PUBLIC_DIR / "llms.txt"
 LLMS_FULL_PATH = PUBLIC_DIR / "llms-full.txt"
 POSTS_JSON_PATH = DATA_DIR / "posts.json"
 
-STATIC_PAGES = [
-    {"path": "", "changefreq": "weekly", "priority": "1.0"},
-    {"path": "services", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/assignment-help", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/essay-help", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/dissertation-help", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/literature-review", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/research-paper-help", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/editing-proofreading", "changefreq": "weekly", "priority": "0.9"},
-    {"path": "services/study-guidance", "changefreq": "weekly", "priority": "0.9"},
+# Pages whose content changes frequently get lastmod = "today" (set at build time).
+# Pages whose content is static get a fixed lastmod (update manually when you edit them).
+STATIC_PAGES_DYNAMIC = [
+    {"path": "", "changefreq": "weekly", "priority": "1.0"},          # Homepage — shows latest posts
+    {"path": "blog", "changefreq": "daily", "priority": "0.9"},       # Blog index — changes every new post
+    {"path": "services", "changefreq": "weekly", "priority": "0.9"},  # Services hub — may show new services
+]
+
+# Last manually updated: 2026-06-20. Change this date when you edit these pages.
+STATIC_CONTENT_DATE = "2026-06-20"
+
+STATIC_PAGES_FIXED = [
+    {"path": "services/assignment-help", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/essay-help", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/dissertation-help", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/literature-review", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/research-paper-help", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/editing-proofreading", "changefreq": "monthly", "priority": "0.9"},
+    {"path": "services/study-guidance", "changefreq": "monthly", "priority": "0.9"},
     {"path": "about", "changefreq": "monthly", "priority": "0.8"},
     {"path": "faq", "changefreq": "monthly", "priority": "0.7"},
     {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
-    {"path": "blog", "changefreq": "daily", "priority": "0.9"},
     {"path": "privacy-policy", "changefreq": "yearly", "priority": "0.3"},
     {"path": "terms-of-service", "changefreq": "yearly", "priority": "0.3"},
 ]
@@ -58,9 +66,9 @@ for service in [
     "study-guidance"
 ]:
     for slug in TARGET_COUNTRY_SLUGS:
-        STATIC_PAGES.append({
+        STATIC_PAGES_FIXED.append({
             "path": f"services/{service}/{slug}",
-            "changefreq": "weekly",
+            "changefreq": "monthly",
             "priority": "0.85"
         })
 
@@ -123,7 +131,8 @@ def generate_sitemap() -> None:
     today = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
     urls = []
 
-    for page in STATIC_PAGES:
+    # Dynamic pages: lastmod = today (content changes with each build)
+    for page in STATIC_PAGES_DYNAMIC:
         loc = absolute_url(page["path"])
         urls.append(
             f"  <url>\n"
@@ -134,15 +143,28 @@ def generate_sitemap() -> None:
             f"  </url>"
         )
 
-    posts = load_posts()
-    for post in posts:
-        loc = absolute_url(f"blog/{post['slug']}")
-        # Always use today for lastmod to signal freshness to Google
+    # Fixed pages: lastmod = STATIC_CONTENT_DATE (only changes when you edit them)
+    for page in STATIC_PAGES_FIXED:
+        loc = absolute_url(page["path"])
         urls.append(
             f"  <url>\n"
             f"    <loc>{loc}</loc>\n"
-            f"    <lastmod>{today}</lastmod>\n"
-            f"    <changefreq>weekly</changefreq>\n"
+            f"    <lastmod>{STATIC_CONTENT_DATE}</lastmod>\n"
+            f"    <changefreq>{page['changefreq']}</changefreq>\n"
+            f"    <priority>{page['priority']}</priority>\n"
+            f"  </url>"
+        )
+
+    # Blog posts: lastmod = actual publish date (accurate, Google trusts this)
+    posts = load_posts()
+    for post in posts:
+        loc = absolute_url(f"blog/{post['slug']}")
+        lastmod = post.get("date", today).split("T")[0]
+        urls.append(
+            f"  <url>\n"
+            f"    <loc>{loc}</loc>\n"
+            f"    <lastmod>{lastmod}</lastmod>\n"
+            f"    <changefreq>monthly</changefreq>\n"
             f"    <priority>0.7</priority>\n"
             f"  </url>"
         )
