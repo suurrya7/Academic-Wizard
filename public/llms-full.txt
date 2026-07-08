@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-07-05
+        **Last updated**: 2026-07-08
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -232,6 +232,18 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Ethical Planning for US University Dissertation Literature Reviews](https://academicwizard.online/blog/ethical-planning-for-us-university-dissertation-literature-reviews)**
+  - Excerpt: Master ethical literature review planning for US university dissertations. Get guidance on sourcing, critical analysis, and maintaining academic integrity.
+  - Keywords: ethical literature review help USA, US dissertation guidance, academic integrity US research, research paper ethics US, dissertation planning USA
+  - Target Region: USA
+  - Published: 2026-07-08
+
+- **[Ethical Dissertation Chapter Structuring for Canadian Universities](https://academicwizard.online/blog/ethical-dissertation-chapter-structuring-for-canadian-universities)**
+  - Excerpt: Get ethical guidance on dissertation chapter structuring for Canadian universities. Learn to organize your thesis for clarity and academic rigor.
+  - Keywords: ethical dissertation help Canada, Canadian thesis chapter guide, academic integrity dissertation CA, research chapter organization Canada, PhD support Canada
+  - Target Region: Canada
+  - Published: 2026-07-08
+
 - **[Ethical Research Planning for Canadian University Dissertations](https://academicwizard.online/blog/ethical-research-planning-for-canadian-university-dissertations)**
   - Excerpt: Navigate ethical research planning for Canadian university dissertations. Understand key principles, data considerations, and methodologies for integrity.
   - Keywords: ethical research planning Canadian dissertations, Canadian dissertation methodology, ethical data handling Canada, research ethics Canada, PhD support Canada
@@ -317,6 +329,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-05-28
 
 ### Editing and Proofreading
+
+- **[Ethical Academic Proofreading for Australian University Papers](https://academicwizard.online/blog/ethical-academic-proofreading-for-australian-university-papers)**
+  - Excerpt: Discover ethical academic proofreading services for Australian university students. Enhance clarity, grammar, and style in your papers responsibly.
+  - Keywords: proofreading for Australian university students, Australian academic editing services, ethical paper review Australia, university essay proofreading AU, academic writing quality Australia
+  - Target Region: Australia
+  - Published: 2026-07-08
 
 - **[Refining Your US Research Papers: Ethical Academic Editing Tips](https://academicwizard.online/blog/refining-your-us-research-papers-ethical-academic-editing-tips)**
   - Excerpt: US university students can refine their research papers ethically with expert academic editing tips, ensuring clarity, conciseness, and adherence to integrity.
@@ -607,6 +625,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-05-28
 
 ### Study Guidance
+
+- **[Navigating Ethical Academic Support for UK University Students](https://academicwizard.online/blog/navigating-ethical-academic-support-for-uk-university-students)**
+  - Excerpt: Discover ethical academic support resources for UK university students. Learn how to leverage assistance responsibly to improve your studies and uphold integrity.
+  - Keywords: ethical academic support UK university, UK university study guidance, academic integrity UK, ethical learning strategies UK, student support UK
+  - Target Region: UK
+  - Published: 2026-07-08
 
 - **[Mastering Ethical Study Habits: A Guide for Canadian University Students](https://academicwizard.online/blog/mastering-ethical-study-habits-a-guide-for-canadian-university-students)**
   - Excerpt: Canadian university students can master ethical study habits and academic integrity with this guide, ensuring responsible research, time management, and learning.
