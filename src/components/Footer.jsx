@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h4>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
                         <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h4>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/services/assignment-help" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
                         <li><Link to="/services/essay-help" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h4 className="font-heading text-sm mb-8 tracking-widest text-white">Trust & Quality</h4>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Trust & Quality</h3>
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-3">
                             <ShieldCheck className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
