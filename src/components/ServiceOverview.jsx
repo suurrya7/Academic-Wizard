@@ -40,7 +40,12 @@ const ServiceOverview = () => {
                             <p className="text-text-secondary text-sm leading-relaxed line-clamp-3" style={{ color: 'var(--text-secondary)' }}>
                                 {service.overview}
                             </p>
-                            <Link to={`/services/${service.slug}`} className="text-accent-gold text-xs uppercase tracking-[3px] font-heading mt-4 flex items-center gap-3 group/link" style={{ color: 'var(--accent-gold)' }}>
+                            <Link 
+                                to={`/services/${service.slug}`} 
+                                className="text-accent-gold text-xs uppercase tracking-[3px] font-heading mt-4 flex items-center gap-3 group/link" 
+                                style={{ color: 'var(--accent-gold)' }}
+                                aria-label={`Learn more about our ${service.title} services`}
+                            >
                                 Learn More
                                 <span className="w-8 h-[1px] bg-accent-gold scale-x-0 group-hover/link:scale-x-100 transition-transform origin-left" style={{ backgroundColor: 'var(--accent-gold)' }} />
                             </Link>
