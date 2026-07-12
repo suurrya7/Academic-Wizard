@@ -5,9 +5,10 @@ import { HelmetProvider } from 'react-helmet-async';
 // Core UI components loaded eagerly
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
-import ParticleBackground from './components/ParticleBackground';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+const CustomCursor = React.lazy(() => import('./components/CustomCursor'));
+const ParticleBackground = React.lazy(() => import('./components/ParticleBackground'));
+const FloatingWhatsApp = React.lazy(() => import('./components/FloatingWhatsApp'));
 
 // Pages loaded lazily (Code Splitting)
 const Home = React.lazy(() => import('./pages/Home'));
@@ -30,8 +31,10 @@ function App() {
   return (
     <HelmetProvider>
       <Router basename={import.meta.env.BASE_URL}>
-        <CustomCursor />
-        <ParticleBackground />
+        <Suspense fallback={null}>
+          <CustomCursor />
+          <ParticleBackground />
+        </Suspense>
         <Navbar />
         <main>
           <Suspense fallback={<LoadingFallback />}>
@@ -51,7 +54,9 @@ function App() {
           </Suspense>
         </main>
         <Footer />
-        <FloatingWhatsApp />
+        <Suspense fallback={null}>
+          <FloatingWhatsApp />
+        </Suspense>
       </Router>
     </HelmetProvider>
   );

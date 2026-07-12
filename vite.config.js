@@ -58,6 +58,12 @@ export default defineConfig({
     })
   ],
   build: {
-    // default output is index.html
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'lucide': ['lucide-react']
+        }
+      }
+    }
   },
 })
