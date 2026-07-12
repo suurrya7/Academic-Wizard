@@ -17,7 +17,7 @@ const Home = () => {
         "@type": "Organization",
         "name": "Academic Wizard",
         "url": "https://academicwizard.online",
-        "logo": "https://academicwizard.online/academic-wizard-favicon.png",
+        "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
         "description": "Expert academic assistance for essays, assignments, dissertations, theses, research papers, and academic editing.",
         "contactPoint": {
             "@type": "ContactPoint",

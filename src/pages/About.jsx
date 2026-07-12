@@ -13,7 +13,7 @@ const About = () => {
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "logo": "https://academicwizard.online/academic-wizard-favicon.png"
+            "logo": "https://academicwizard.online/academic-wizard-favicon.webp"
         }
     };
 

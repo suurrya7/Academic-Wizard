@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Award, ThumbsUp } from 'lucide-react';
-import academicWizardLogo from '../assets/academic-wizard-logo.png';
+import academicWizardLogo from '../assets/academic-wizard-logo.webp';
 
 const Footer = () => {
     return (

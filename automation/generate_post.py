@@ -332,7 +332,7 @@ def generate_json_ld(meta: dict, faqs: list) -> str:
             "publisher": {
                 "@type": "Organization",
                 "name": SITE_NAME,
-                "logo": {"@type": "ImageObject", "url": absolute_url("academic-wizard-favicon.png")},
+                "logo": {"@type": "ImageObject", "url": absolute_url("academic-wizard-favicon.webp")},
             },
             "datePublished": meta["date"],
             "dateModified": meta["date"],

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
-import academicWizardFavicon from '../assets/academic-wizard-favicon.png';
+import academicWizardFavicon from '../assets/academic-wizard-favicon.webp';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

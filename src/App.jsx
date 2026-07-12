@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import ServicePage from './pages/ServicePage';
-import CountryServicePage from './pages/CountryServicePage';
-import About from './pages/About';
-import FAQ from './pages/FAQ';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
+
+// Core UI components loaded eagerly
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import ParticleBackground from './components/ParticleBackground';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+// Pages loaded lazily (Code Splitting)
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const ServicePage = React.lazy(() => import('./pages/ServicePage'));
+const CountryServicePage = React.lazy(() => import('./pages/CountryServicePage'));
+const About = React.lazy(() => import('./pages/About'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
+
+const LoadingFallback = () => (
+  <div style={{ minHeight: '100vh', background: '#050505' }}></div>
+);
 
 function App() {
   return (
@@ -26,19 +34,21 @@ function App() {
         <ParticleBackground />
         <Navbar />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:slug" element={<ServicePage />} />
-            <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-          </Routes>
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/:slug" element={<ServicePage />} />
+              <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <FloatingWhatsApp />
