@@ -12,6 +12,8 @@ const Footer = () => {
                         <img
                             src={academicWizardLogo}
                             alt="Academic Wizard"
+                            width="190"
+                            height="45"
                             className="h-auto w-full object-contain"
                         />
                     </Link>

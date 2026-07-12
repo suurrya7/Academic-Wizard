@@ -10,20 +10,13 @@ const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
             <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                >
-                    <motion.span
-                        className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                <div className="animate-fade-in-left">
+                    <span
+                        className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block animate-fade-in-up"
                         style={{ color: 'var(--accent-gold)' }}
                     >
                         Elite Academic Support
-                    </motion.span>
+                    </span>
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
                         <span className="premium-gradient-text" style={{ display: 'block' }}>Academic Wizard</span>
                         Assistance & Research <br />
@@ -53,7 +46,7 @@ const Hero = () => {
                             Trusted by <span className="text-white">5000+ Students</span> Worldwide
                         </p>
                     </div>
-                </motion.div>
+                </div>
 
                 <motion.div
                     className="h-[600px] lg:h-[700px] relative rounded-3xl overflow-hidden bg-bg-secondary/30"

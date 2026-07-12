@@ -39,6 +39,8 @@ const Navbar = () => {
                         <img
                             src={academicWizardFavicon}
                             alt="Academic Wizard"
+                            width="64"
+                            height="64"
                             className="h-full w-full object-contain"
                         />
                     </motion.div>
