@@ -16,7 +16,13 @@
     "date": "2026-07-13T05:30:54.426358+00:00",
     "readingTime": 7,
     "url": "blog/posts/navigating-ethical-dilemmas-in-uk-university-assignment-writing.html",
-    "targetCountry": "UK"
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
   },
   {
     "title": "Ethical Proofreading & Editing for US Graduate Research Theses",
@@ -35,7 +41,13 @@
     "date": "2026-07-13T05:31:27.094326+00:00",
     "readingTime": 7,
     "url": "blog/posts/ethical-proofreading-editing-for-us-graduate-research-theses.html",
-    "targetCountry": "USA"
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
   },
   {
     "title": "Ethical Source Evaluation for Australian University Literature Reviews",
@@ -54,7 +66,13 @@
     "date": "2026-07-13T05:31:50.227040+00:00",
     "readingTime": 7,
     "url": "blog/posts/ethical-source-evaluation-for-australian-university-literature-reviews.html",
-    "targetCountry": "Australia"
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
   },
   {
     "title": "Ethical Quantitative Research Design for Canadian Dissertations",
@@ -73,7 +91,13 @@
     "date": "2026-07-13T05:32:13.288901+00:00",
     "readingTime": 7,
     "url": "blog/posts/ethical-quantitative-research-design-for-canadian-dissertations.html",
-    "targetCountry": "Canada"
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
   },
   {
     "title": "Integrating Ethical Research into Your UK University Assignments",
