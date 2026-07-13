@@ -61,6 +61,20 @@ function generateBlogPages() {
         const publishDate = post.date || new Date().toISOString();
         const keywords = (post.keywords || []).join(', ');
 
+        const authorSchema = post.author ? {
+            "@type": "Person",
+            "name": post.author.name,
+            "jobTitle": "Academic Coach & Editor",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Academic Wizard"
+            }
+        } : {
+            "@type": "Organization",
+            "name": "Academic Wizard",
+            "url": SITE_URL
+        };
+
         // Build SEO meta tags to inject
         const seoTags = `
     <title>${title} | Academic Wizard Blog</title>
@@ -84,11 +98,7 @@ function generateBlogPages() {
         "url": canonicalUrl,
         "datePublished": publishDate,
         "dateModified": publishDate,
-        "author": {
-            "@type": "Organization",
-            "name": "Academic Wizard",
-            "url": SITE_URL
-        },
+        "author": authorSchema,
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
@@ -150,7 +160,14 @@ function generateBlogPages() {
         <nav><a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; ${title}</nav>
         <h1>${title}</h1>
         <p><em>${description}</em></p>
+        ${post.author ? `<p><strong>Written by:</strong> ${escapeHtml(post.author.name)} (${escapeHtml(post.author.credentials)})</p>` : ''}
         ${cleanContent}
+        ${post.author ? `
+        <div style="margin-top:2rem;padding:1rem;border:1px solid #333;background:#111;border-radius:8px;">
+          <h3>About the Author</h3>
+          <p><strong>${escapeHtml(post.author.name)}</strong> - ${escapeHtml(post.author.credentials)}</p>
+          <p>${escapeHtml(post.author.bio)}</p>
+        </div>` : ''}
         <footer>
           <p><a href="/blog">← More Articles</a> | <a href="/services">Our Services</a> | <a href="/contact">Contact Us</a></p>
         </footer>

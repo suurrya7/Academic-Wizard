@@ -47,6 +47,186 @@ TARGET_COUNTRIES = [
     "UK", "USA", "Australia", "Canada", "India", "Singapore", "Ireland", "Germany"
 ]
 
+CATEGORY_TO_SERVICE = {
+    "assignment-help": "assignment-help",
+    "essay-writing": "essay-help",
+    "literature-review": "literature-review",
+    "dissertation": "dissertation-help",
+    "research": "research-paper-help",
+    "editing": "editing-proofreading",
+    "study-guidance": "study-guidance",
+}
+
+COUNTRY_TO_SLUG = {
+    "UK": "uk",
+    "USA": "usa",
+    "Australia": "australia",
+    "Canada": "canada",
+    "India": "india",
+    "Singapore": "singapore",
+    "Ireland": "ireland",
+    "Germany": "germany",
+}
+
+AUTHORS = [
+    {
+        "id": "dr-sarah-evans",
+        "name": "Dr. Sarah Evans",
+        "credentials": "PhD in Education, University of Oxford",
+        "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments.",
+        "countries": ["UK", "Ireland"]
+    },
+    {
+        "id": "dr-amit-sharma",
+        "name": "Dr. Amit Sharma",
+        "credentials": "PhD in Computer Science, IIT Delhi",
+        "bio": "Dr. Amit Sharma is a computer science professor and research mentor specializing in STEM methodology, academic research design, and data analysis support in India.",
+        "countries": ["India", "Singapore"]
+    },
+    {
+        "id": "prof-james-henderson",
+        "name": "Prof. James Henderson",
+        "credentials": "PhD in English Literature, Harvard University",
+        "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation.",
+        "countries": ["USA", "Canada"]
+    },
+    {
+        "id": "dr-emily-chen",
+        "name": "Dr. Emily Chen",
+        "credentials": "PhD in Psychology, University of Toronto",
+        "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development.",
+        "countries": ["Canada", "USA"]
+    },
+    {
+        "id": "dr-hans-mueller",
+        "name": "Dr. Hans Müller",
+        "credentials": "PhD in Economics, LMU Munich",
+        "bio": "Dr. Hans Müller specializes in quantitative economics, financial modeling, and guiding European students through academic proofreading and data-heavy dissertations.",
+        "countries": ["Germany", "Ireland"]
+    },
+    {
+        "id": "dr-fiona-gallagher",
+        "name": "Dr. Fiona Gallagher",
+        "credentials": "PhD in Sociology, Trinity College Dublin",
+        "bio": "Dr. Fiona Gallagher is a social scientist who provides thesis support and essay writing coaching with a focus on Irish and European university grading systems.",
+        "countries": ["Ireland", "UK"]
+    },
+    {
+        "id": "dr-cheryl-tan",
+        "name": "Dr. Cheryl Tan",
+        "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+        "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards.",
+        "countries": ["Singapore", "Australia"]
+    },
+    {
+        "id": "dr-robert-oconnor",
+        "name": "Dr. Robert O'Connor",
+        "credentials": "PhD in History, University of Cambridge",
+        "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities.",
+        "countries": ["UK"]
+    },
+    {
+        "id": "dr-priya-patel",
+        "name": "Dr. Priya Patel",
+        "credentials": "PhD in Biotechnology, IISc Bangalore",
+        "bio": "Dr. Priya Patel is a scientific editor and researcher with a focus on biological sciences, assisting students in India and Singapore with journal publication formatting.",
+        "countries": ["India", "Singapore"]
+    },
+    {
+        "id": "dr-marcus-vance",
+        "name": "Dr. Marcus Vance",
+        "credentials": "PhD in Political Science, Yale University",
+        "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA.",
+        "countries": ["USA"]
+    },
+    {
+        "id": "dr-alistair-macleod",
+        "name": "Dr. Alistair Macleod",
+        "credentials": "PhD in Philosophy, University of Edinburgh",
+        "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays.",
+        "countries": ["UK", "Canada"]
+    },
+    {
+        "id": "dr-chloe-desjardins",
+        "name": "Dr. Chloe Desjardins",
+        "credentials": "PhD in Nursing, McGill University",
+        "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports.",
+        "countries": ["Canada", "USA"]
+    },
+    {
+        "id": "dr-vikram-rao",
+        "name": "Dr. Vikram Rao",
+        "credentials": "PhD in Statistics, Indian Statistical Institute (ISI)",
+        "bio": "Dr. Vikram Rao is an applied statistician who provides dissertation support for statistical modeling, quantitative analysis, SPSS, and R coding in India.",
+        "countries": ["India"]
+    },
+    {
+        "id": "dr-eleanor-wright",
+        "name": "Dr. Eleanor Wright",
+        "credentials": "PhD in English, King's College London",
+        "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays.",
+        "countries": ["UK"]
+    },
+    {
+        "id": "dr-arthur-pendleton",
+        "name": "Dr. Arthur Pendleton",
+        "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+        "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers.",
+        "countries": ["USA", "Canada"]
+    },
+    {
+        "id": "dr-dieter-koch",
+        "name": "Dr. Dieter Koch",
+        "credentials": "PhD in Philosophy, Heidelberg University",
+        "bio": "Dr. Dieter Koch is a critical theory specialist who helps European students refine their methodology chapters and structure academic thesis drafts.",
+        "countries": ["Germany"]
+    },
+    {
+        "id": "dr-niamh-brennan",
+        "name": "Dr. Niamh Brennan",
+        "credentials": "PhD in Medicine, University College Dublin",
+        "bio": "Dr. Niamh Brennan is a medical writer and editor who supports biomedical and healthcare students with systematic reviews and research proposals in Ireland.",
+        "countries": ["Ireland"]
+    },
+    {
+        "id": "dr-david-johnston",
+        "name": "Dr. David Johnston",
+        "credentials": "PhD in Environmental Science, University of British Columbia",
+        "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning.",
+        "countries": ["Canada", "Australia"]
+    },
+    {
+        "id": "dr-sarah-lim",
+        "name": "Dr. Sarah Lim",
+        "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+        "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance.",
+        "countries": ["Singapore", "Australia"]
+    },
+    {
+        "id": "dr-jessica-carter",
+        "name": "Dr. Jessica Carter",
+        "credentials": "PhD in Chemistry, Columbia University",
+        "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations.",
+        "countries": ["USA", "UK"]
+    }
+]
+
+def select_author(target_country: str) -> dict:
+    import random
+    # Filter authors that match the target country
+    matching = [a for a in AUTHORS if target_country in a["countries"]]
+    if not matching:
+        # Fallback to any author
+        matching = AUTHORS
+    
+    selected = random.choice(matching)
+    return {
+        "id": selected["id"],
+        "name": selected["name"],
+        "credentials": selected["credentials"],
+        "bio": selected["bio"]
+    }
+
 def slugify(value: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
     return slug[:90].strip("-") or "academic-guide"
@@ -203,6 +383,18 @@ def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> 
     # Select a few random existing posts to interlink
     interlink_candidates = [{"title": p["title"], "slug": p["slug"]} for p in existing_posts[:15]]
     
+    category = brief.get("category", "assignment-help")
+    service_slug = CATEGORY_TO_SERVICE.get(category, "assignment-help")
+    country = brief.get("targetCountry")
+    country_slug = COUNTRY_TO_SLUG.get(country)
+    
+    if country_slug:
+        service_link = f"/services/{service_slug}/{country_slug}"
+        service_anchor_text = f"{CATEGORIES[category]} in {country}"
+    else:
+        service_link = f"/services/{service_slug}"
+        service_anchor_text = f"{CATEGORIES[category]}"
+        
     prompt = f"""
 You are an expert academic writing coach and SEO editor for {SITE_NAME}.
 Write a helpful, ethical, SEO-optimized blog article for this brief:
@@ -212,8 +404,12 @@ Target Country/Region: {brief.get("targetCountry", "Global")}
 Adapt spelling and terminology appropriately for this region.
 
 Internal Linking Strategy:
-You must organically include HTML anchor links (<a href="/blog/their-slug">Their Title</a>) to at least 2 of these existing articles:
+1. You must organically include HTML anchor links (<a href="/blog/their-slug">Their Title</a>) to at least 2 of these existing articles:
 {json.dumps(interlink_candidates, ensure_ascii=False)}
+
+2. You MUST organically include exactly one prominent link back to our commercial service page:
+Link URL: {service_link}
+Anchor Text: Integrate this link naturally using keyword-rich anchor text related to "{service_anchor_text}". For example, "Looking for ethical {service_anchor_text.lower()}? Let our experts guide you..." or similar. Place this link near the end of the article, but before the FAQs.
 
 Generative Engine Optimization (GEO) & AEO Requirements:
 - Use specific "What is..." and "How to..." H2 headings.
@@ -291,6 +487,9 @@ def build_meta(brief: dict) -> dict:
     if not excerpt:
         excerpt = f"Practical academic guidance for {brief.get('primaryKeyword', title)}."
 
+    target_country = brief.get("targetCountry", "Global")
+    author = select_author(target_country)
+
     return {
         "title": title,
         "slug": slug,
@@ -302,7 +501,8 @@ def build_meta(brief: dict) -> dict:
         "date": now.isoformat(),
         "readingTime": 7,
         "url": f"blog/posts/{slug}.html",
-        "targetCountry": brief.get("targetCountry", "Global"),
+        "targetCountry": target_country,
+        "author": author,
     }
 
 
@@ -322,13 +522,27 @@ def uniquify_meta(meta: dict, existing_posts: list[dict], created_slugs: set[str
 
 
 def generate_json_ld(meta: dict, faqs: list) -> str:
+    author_meta = meta.get("author")
+    if author_meta:
+        author_schema = {
+            "@type": "Person",
+            "name": author_meta["name"],
+            "jobTitle": "Academic Coach & Editor",
+            "worksFor": {
+                "@type": "Organization",
+                "name": SITE_NAME
+            }
+        }
+    else:
+        author_schema = {"@type": "Organization", "name": SITE_NAME}
+
     payload = [
         {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": meta["title"],
             "description": meta["excerpt"],
-            "author": {"@type": "Organization", "name": SITE_NAME},
+            "author": author_schema,
             "publisher": {
                 "@type": "Organization",
                 "name": SITE_NAME,

@@ -92,6 +92,20 @@ const BlogPost = () => {
     const postDescription = postData?.excerpt || postData?.title || '';
 
     // Article JSON-LD Schema for Google
+    const authorSchema = postData?.author ? {
+        "@type": "Person",
+        "name": postData.author.name,
+        "jobTitle": "Academic Coach & Editor",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Academic Wizard"
+        }
+    } : {
+        "@type": "Organization",
+        "name": "Academic Wizard",
+        "url": "https://academicwizard.online"
+    };
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -100,11 +114,7 @@ const BlogPost = () => {
         "url": canonicalUrl,
         "datePublished": postData?.date || new Date().toISOString(),
         "dateModified": postData?.date || new Date().toISOString(),
-        "author": {
-            "@type": "Organization",
-            "name": "Academic Wizard",
-            "url": "https://academicwizard.online"
-        },
+        "author": authorSchema,
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
@@ -194,6 +204,20 @@ const BlogPost = () => {
                                prose-strong:text-white prose-ul:list-disc prose-ol:list-decimal"
                     dangerouslySetInnerHTML={{ __html: htmlContent }} 
                 />
+
+                {postData?.author && (
+                    <div className="mt-12 p-8 glass-card flex flex-col sm:flex-row gap-6 items-center sm:items-start text-left border-white/10">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-accent-gold to-accent-gold-light flex items-center justify-center text-black font-heading text-xl font-bold shrink-0 shadow-lg" style={{ background: 'linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light))' }}>
+                            {postData.author.name.split(' ').filter(n => !n.includes('.')).map(n => n[0]).join('')}
+                        </div>
+                        <div className="flex-1">
+                            <span className="text-[10px] uppercase tracking-[3px] font-heading text-accent-gold block mb-1" style={{ color: 'var(--accent-gold)' }}>Expert Contributor</span>
+                            <h3 className="text-xl font-bold font-heading text-white mb-2">{postData.author.name}</h3>
+                            <p className="text-xs text-white/50 mb-3 font-medium">{postData.author.credentials}</p>
+                            <p className="text-sm text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{postData.author.bio}</p>
+                        </div>
+                    </div>
+                )}
 
                 <div className="mt-16 pt-12 border-t border-white/10">
                     <div className="glass-card p-8 text-center rounded-2xl">

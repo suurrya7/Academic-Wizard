@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ubersuggest": {
+      "type": "sse",
+      "url": "https://ubersuggest-mcp.neilpatelapi.com/mcp"
+    }
+  }
+}
