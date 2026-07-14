@@ -97,37 +97,37 @@ export const servicesData = [
     {
         slug: "dissertation-help",
         title: "Dissertation Help",
-        metaTitle: "Comprehensive Dissertation Help & Thesis Support",
-        metaDescription: "End-to-end dissertation help including topic selection, methodology design, literature reviews, and formatting.",
-        heroSubtitle: "Expert guidance for undergraduate, postgraduate, and PhD dissertations.",
+        metaTitle: "Dissertation Help & Thesis Writing Support | Academic Wizard",
+        metaDescription: "Looking for expert dissertation help? We provide professional, ethical assistance with topic selection, research design, literature reviews, and data analysis.",
+        heroSubtitle: "Get expert, one-on-one dissertation help and thesis coaching for undergraduate, postgraduate, and PhD candidates.",
         icon: Library,
-        overview: "We provide comprehensive dissertation guidance including research structure, literature review assistance, and editing support. Tailored help for undergraduate and postgraduate dissertations. A dissertation is often the most significant piece of academic work you will undertake. Our dedicated team of PhD-qualified experts provides step-by-step guidance, from the initial proposal to the final defense, ensuring your research is rigorous and your writing is impeccable.",
+        overview: "Academic Wizard offers premier dissertation help and professional thesis coaching to assist university students at all academic levels. From undergraduate capstones to postgraduate and PhD theses, our qualified academic coaches provide expert guidance on structuring, research methodologies, and formatting. A dissertation is a monumental milestone, and our personalized dissertation help services are designed to give you the resources and confidence needed to succeed.",
         features: [
-            "Research proposal development and refinement",
-            "Comprehensive literature review structuring",
-            "Robust research methodology design",
-            "Data analysis and interpretation guidance",
-            "Chapter-by-chapter review and editing",
-            "Final proofreading and formatting for submission"
+            "Expert research proposal development and refinement",
+            "Comprehensive literature review structuring and synthesis",
+            "Robust quantitative and qualitative methodology design",
+            "Data analysis and statistical interpretation guidance",
+            "Detailed chapter-by-chapter editing and review",
+            "Final proofreading and formatting (APA, Harvard, Chicago, etc.)"
         ],
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["dissertation help UK", "UK thesis support"], desc: "Expert support aligned with UK university expectations for original research and substantial contribution to knowledge." },
-            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["dissertation help USA", "US PhD thesis assistance"], desc: "Comprehensive guidance for US doctoral candidates navigating the complex dissertation process from proposal to defense." },
-            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["dissertation help Australia", "Australian thesis writing support"], desc: "Tailored help for Australian students focusing on rigorous methodology and clear presentation of research findings." },
-            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["dissertation help Canada", "Canadian masters thesis support"], desc: "Support for Canadian students in conducting ethical research and writing compelling academic dissertations." },
-            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["dissertation help India", "Indian PhD research support"], desc: "Guidance on structuring and presenting extensive research projects for Indian academic institutions." },
-            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["dissertation help Ireland", "Irish university dissertation guidance"], desc: "Expert assistance with literature reviews and data analysis for Irish university dissertations." },
-            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["dissertation help Singapore", "Singapore thesis research help"], desc: "Support in meeting the high standards for methodological rigor and academic writing in Singapore." },
-            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["dissertation help Germany", "English thesis editing Germany"], desc: "Assistance for researchers in Germany writing their dissertations in English, ensuring flawless academic language." }
+            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["dissertation help UK", "UK thesis support", "dissertation writing help UK"], desc: "Expert support aligned with UK university expectations for original research and substantial contribution to knowledge." },
+            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["dissertation help USA", "US PhD thesis assistance", "dissertation help US"], desc: "Comprehensive guidance for US doctoral candidates navigating the complex dissertation process from proposal to defense." },
+            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["dissertation help Australia", "Australian thesis writing support", "dissertation help AU"], desc: "Tailored help for Australian students focusing on rigorous methodology and clear presentation of research findings." },
+            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["dissertation help Canada", "Canadian masters thesis support", "thesis help Canada"], desc: "Support for Canadian students in conducting ethical research and writing compelling academic dissertations." },
+            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["dissertation help India", "Indian PhD research support", "thesis writing help India"], desc: "Guidance on structuring and presenting extensive research projects for Indian academic institutions." },
+            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["dissertation help Ireland", "Irish university dissertation guidance", "dissertation writing Ireland"], desc: "Expert assistance with literature reviews and data analysis for Irish university dissertations." },
+            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["dissertation help Singapore", "Singapore thesis research help", "thesis assistance Singapore"], desc: "Support in meeting the high standards for methodological rigor and academic writing in Singapore." },
+            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["dissertation help Germany", "English thesis editing Germany", "dissertation assistance Germany"], desc: "Assistance for researchers in Germany writing their dissertations in English, ensuring flawless academic language." }
         ],
         faqs: [
-            { question: "Can you help with just one chapter of my dissertation?", answer: "Yes, we offer flexible support. Whether you need help with just the literature review, methodology, or data analysis chapter, we can assist." },
-            { question: "Do you provide statistical analysis help for dissertations?", answer: "Yes, our experts can guide you through quantitative data analysis and help you interpret the results accurately for your dissertation." },
-            { question: "Is the dissertation help provided by qualified experts?", answer: "Absolutely. All our dissertation consultants hold PhDs or advanced Master's degrees in their respective fields." },
-            { question: "How do you ensure my dissertation remains my own work?", answer: "Our service is based on coaching, guidance, and editing. We empower you to conduct your own research and write your own findings, while we refine and elevate your work." },
-            { question: "What are the rates for dissertation support?", answer: pricingInfo }
+            { question: "How does your professional dissertation help work?", answer: "Our dissertation help service is highly flexible. We can guide you from day one (topic selection and research proposal) or assist with specific chapters like the literature review, methodology, or results." },
+            { question: "Do you provide data analysis or statistics help for dissertations?", answer: "Yes, our academic advisors hold advanced degrees and are experts in quantitative (SPSS, R, Python) and qualitative data analysis methodologies to guide you in interpreting results." },
+            { question: "Who provides the dissertation coaching?", answer: "All our dissertation coaches and consultants hold PhD or Master's degrees from top international universities and have extensive academic coaching experience." },
+            { question: "How does Academic Wizard ensure academic integrity?", answer: "Our service is based on expert tutoring, formatting, and proofreading. We help you refine and structuralize your own research and ideas ethically, ensuring the final work is truly yours." },
+            { question: "What are your rates for dissertation help?", answer: pricingInfo }
         ],
         relatedServices: ["literature-review", "research-paper-help"],
         relatedBlogSlugs: ["crafting-your-dissertation-a-guide-to-a-robust-research-methodology", "navigating-dissertation-research-best-practices-for-topic-selection"]
