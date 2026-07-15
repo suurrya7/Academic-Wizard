@@ -22,7 +22,7 @@ const AIHumanizer = () => {
             />
 
             <section className="py-20 text-white">
-                <div className="container max-w-4xl space-y-8">
+                <div className="container max-w-6xl space-y-8">
                     <div className="glass-card p-6 border-accent-gold/20 rounded-2xl" style={{ borderColor: 'rgba(212, 175, 55, 0.15)' }}>
                         <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-4">
                             <h3 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Humanizer Engine</h3>
@@ -34,10 +34,10 @@ const AIHumanizer = () => {
                         {/* Streamlit clean embed iframe */}
                         <div 
                             className="w-full bg-black/40 rounded-xl overflow-hidden relative"
-                            style={{ height: '700px' }}
+                            style={{ height: '900px' }}
                         >
                             <iframe
-                                src="https://dn-bot.streamlit.app/~/+/humanize_text?embed=true#a367619d"
+                                src="https://academic-wizard.streamlit.app/?embed=true"
                                 title="Academic Wizard Text Humanizer"
                                 width="100%"
                                 height="100%"
