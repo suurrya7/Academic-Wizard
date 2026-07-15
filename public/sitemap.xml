@@ -91,6 +91,36 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://academicwizard.online/tools</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://academicwizard.online/tools/citation-generator</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://academicwizard.online/tools/grammar-checker</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://academicwizard.online/tools/ai-detector</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://academicwizard.online/tools/ai-humanizer</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://academicwizard.online/services/assignment-help/uk</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>

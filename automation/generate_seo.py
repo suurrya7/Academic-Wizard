@@ -51,6 +51,11 @@ STATIC_PAGES_FIXED = [
     {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
     {"path": "privacy-policy", "changefreq": "yearly", "priority": "0.3"},
     {"path": "terms-of-service", "changefreq": "yearly", "priority": "0.3"},
+    {"path": "tools", "changefreq": "weekly", "priority": "0.9"},
+    {"path": "tools/citation-generator", "changefreq": "weekly", "priority": "0.8"},
+    {"path": "tools/grammar-checker", "changefreq": "weekly", "priority": "0.8"},
+    {"path": "tools/ai-detector", "changefreq": "weekly", "priority": "0.8"},
+    {"path": "tools/ai-humanizer", "changefreq": "weekly", "priority": "0.8"},
 ]
 
 TARGET_COUNTRIES = ["United Kingdom", "United States", "India", "Ireland", "Australia", "Singapore", "Canada", "Germany"]

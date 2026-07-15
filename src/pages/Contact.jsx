@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
-import { MessageCircle, Mail, Globe, Clock, CheckCircle } from 'lucide-react';
+import { MessageCircle, Mail, Globe, Clock, CheckCircle, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -135,7 +135,44 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16">
+                        {/* Social Links Row */}
+                        <div className="mt-10 border-t border-white/10 pt-8">
+                            <h4 className="font-heading text-xs uppercase tracking-widest text-white/50 mb-4 animate-fade-in">Connect with us</h4>
+                            <div className="flex gap-4">
+                                <a 
+                                    href="https://www.linkedin.com/company/academic-wizard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="LinkedIn"
+                                >
+                                    <Linkedin size={20} />
+                                </a>
+                                <a 
+                                    href="https://www.facebook.com/academics.wizard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook size={20} />
+                                </a>
+                                <a 
+                                    href="https://www.instagram.com/_academic.wizard_" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram size={20} />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="mt-12">
                             <Button onClick={() => window.open(whatsappUrl, '_blank')} className="w-full sm:w-auto px-16 py-6 text-sm">
                                 Chat on WhatsApp
                             </Button>

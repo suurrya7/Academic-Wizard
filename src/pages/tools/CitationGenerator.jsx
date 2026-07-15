@@ -311,9 +311,54 @@ const CitationGenerator = () => {
     return (
         <div className="page-citation-generator">
             <Helmet>
-                <title>All-In-One Citation Generator | Academic Wizard</title>
-                <meta name="description" content="Generate instant, accurate citations in APA 7th, MLA 9th, Harvard, Chicago, IEEE, and Vancouver formatting with in-text output." />
+                <title>Free APA, MLA, Harvard, Chicago Citation Generator | Academic Wizard</title>
+                <meta name="description" content="Generate accurate bibliography listings and in-text citations instantly. Online referencing generator supporting APA 7th, MLA 9th, Harvard, Chicago, and Vancouver." />
                 <link rel="canonical" href="https://academicwizard.online/tools/citation-generator" />
+                <meta property="og:title" content="Free APA, MLA, Harvard Citation Generator | Academic Wizard" />
+                <meta property="og:description" content="Instantly format website, book, and journal references with our free bibliography builder." />
+                <meta property="og:url" content="https://academicwizard.online/tools/citation-generator" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebApplication",
+                        "name": "Citation Generator",
+                        "url": "https://academicwizard.online/tools/citation-generator",
+                        "applicationCategory": "EducationalApplication",
+                        "operatingSystem": "All",
+                        "browserRequirements": "Requires HTML5",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0.00",
+                            "priceCurrency": "USD"
+                        }
+                    })}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://academicwizard.online"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Tools",
+                                "item": "https://academicwizard.online/tools"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Citation Generator",
+                                "item": "https://academicwizard.online/tools/citation-generator"
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             <PageHeader 
@@ -591,6 +636,43 @@ const CitationGenerator = () => {
                                     ))}
                                 </div>
                             )}
+                        </div>
+                    </div>
+
+                    {/* FAQ and Content Section */}
+                    <div className="lg:col-span-3 border-t border-white/10 pt-16 mt-16 max-w-4xl mx-auto space-y-12">
+                        <div className="space-y-4 text-center lg:text-left animate-fade-in">
+                            <h3 className="text-2xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                                Academic Referencing Made Easy & Accurate
+                            </h3>
+                            <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                In academic research, citing your sources correctly is crucial to avoid plagiarism and demonstrate academic integrity. Our free citation maker allows you to instantly generate full references and corresponding in-text citations for websites, scholarly journals, and textbooks. By automating bibliography creation, you can focus on building arguments and analyzing data.
+                            </p>
+                        </div>
+
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-bold font-heading text-white">Frequently Asked Questions</h3>
+                            
+                            <div className="space-y-4">
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">How do in-text citations work in APA 7th vs. MLA 9th?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        APA 7th Edition uses the author-date system for in-text citations (e.g., Smith, 2023), whereas MLA 9th Edition uses the author-page system (e.g., Smith 45). Our generator automatically outputs both referencing formats side-by-side so you can copy the exact style needed.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">What is the difference between Harvard and Vancouver citation styles?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Harvard referencing is an author-date system used widely in humanities and social sciences. Vancouver referencing is a numeric system commonly used in medical and scientific fields, where sources are numbered in the order they appear in the text (e.g., [1] or (1)).
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Can I export my generated bibliography?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Yes! You can add multiple sources to your list using the "Add to Bibliography" button and then export the entire bibliography as a text file (`bibliography.txt`) formatted cleanly for easy copy-pasting into Microsoft Word, Google Docs, or LaTeX.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

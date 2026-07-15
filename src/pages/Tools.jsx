@@ -37,11 +37,54 @@ const Tools = () => {
         <div className="page-tools">
             <Helmet>
                 <title>Free Academic Writing Tools | Academic Wizard</title>
-                <meta name="description" content="Use our free suite of academic tools: Citation Generator (APA/MLA/Harvard), Grammar Checker, AI Detector, and Streamlit AI Humanizer." />
+                <meta name="description" content="Boost your grades with our free academic tools: Automatic Citation Generator, Online Grammar Editor, Essay AI Detector, and Streamlit Text Humanizer." />
                 <link rel="canonical" href="https://academicwizard.online/tools" />
                 <meta property="og:title" content="Free Academic Writing Tools | Academic Wizard" />
-                <meta property="og:description" content="Enhance your essays and research papers with our Citation Generator, Grammar Checker, AI Detector, and AI Humanizer." />
+                <meta property="og:description" content="Automate bibliography generation, fix grammar mistakes, and scan/humanize AI text with our free tools suite." />
                 <meta property="og:url" content="https://academicwizard.online/tools" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "Free Academic Writing Tools Suite",
+                        "url": "https://academicwizard.online/tools",
+                        "description": "Unlock Academic Wizard's free suite of college tools, including Citation Generator, Grammar and Spell Checker, AI Content Detector, and AI Text Humanizer.",
+                        "hasPart": [
+                            {
+                                "@type": "WebApplication",
+                                "name": "Citation Generator",
+                                "url": "https://academicwizard.online/tools/citation-generator",
+                                "applicationCategory": "EducationalApplication",
+                                "operatingSystem": "All",
+                                "browserRequirements": "Requires HTML5"
+                            },
+                            {
+                                "@type": "WebApplication",
+                                "name": "Grammar & Spell Checker",
+                                "url": "https://academicwizard.online/tools/grammar-checker",
+                                "applicationCategory": "EducationalApplication",
+                                "operatingSystem": "All",
+                                "browserRequirements": "Requires HTML5"
+                            },
+                            {
+                                "@type": "WebApplication",
+                                "name": "Linguistic AI Detector",
+                                "url": "https://academicwizard.online/tools/ai-detector",
+                                "applicationCategory": "EducationalApplication",
+                                "operatingSystem": "All",
+                                "browserRequirements": "Requires HTML5"
+                            },
+                            {
+                                "@type": "WebApplication",
+                                "name": "AI Text Humanizer",
+                                "url": "https://academicwizard.online/tools/ai-humanizer",
+                                "applicationCategory": "EducationalApplication",
+                                "operatingSystem": "All",
+                                "browserRequirements": "Requires HTML5"
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             <PageHeader 
@@ -93,6 +136,44 @@ const Tools = () => {
                             </div>
                         </div>
                     ))}
+
+                    {/* Detailed Content & FAQ Section (GEO/AEO optimized) */}
+                    <div className="border-t border-white/10 pt-20 max-w-4xl mx-auto space-y-12">
+                        <div className="space-y-4">
+                            <h3 className="text-2xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                                Elevate Your Research with Free Academic Writing Tools
+                            </h3>
+                            <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                Academic writing requires precision, proper formatting, and rigorous integrity. To support students in their university assignments, essays, and PhD research, Academic Wizard offers this suite of tools. Our citation builder, grammar checker, and AI detection tools operate entirely within the browser, ensuring your work is uploaded nowhere, keeping your research 100% private and secure.
+                            </p>
+                        </div>
+
+                        {/* Visual FAQ Block */}
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-bold font-heading text-white">Frequently Asked Questions</h3>
+                            
+                            <div className="space-y-4">
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Are these academic writing tools completely free?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Yes, our entire suite of academic tools is completely free. We provide a limited daily trial for visitors, which can be unlocked for unlimited weekly use by requesting a free activation code from our support team on WhatsApp or social media.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Do these tools store my essays or private data?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        No. Unlike commercial alternatives that save your work to database servers, Academic Wizard's tools analyze data locally on your computer. Your text is never stored, sold, or shared with third parties, keeping your intellectual property safe.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Which academic citation formats are supported?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Our Citation Generator supports major styling guidelines, including APA 7th Edition, MLA 9th Edition, Harvard, Chicago manual of style, IEEE, and Vancouver numeric formatting, suitable for all college subjects.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

@@ -47,6 +47,13 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div>
+                        <h2 className="text-2xl text-white mb-4">Academic Writing Tools & Browser Storage</h2>
+                        <p className="text-text-secondary leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
+                            Our free client-side writing tools (including the Citation Generator, Grammar Checker, and AI Detector) use standard browser storage (<code className="font-mono bg-white/5 px-1.5 py-0.5 rounded text-[11px] text-accent-gold">localStorage</code>) on your local device to store a generated unique Device ID, remaining free trial usage count, and active activation keys. No text, academic essays, citation records, or analyzed writing drafts are ever uploaded to our servers, sold, or shared with third parties.
+                        </p>
+                    </div>
+
+                    <div>
                         <h2 className="text-2xl text-white mb-4">Contact</h2>
                         <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                             To request updates or deletion of your information, contact Academic Wizard through the contact page or WhatsApp support.

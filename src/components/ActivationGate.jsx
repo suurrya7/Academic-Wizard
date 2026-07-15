@@ -186,13 +186,14 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
         );
     }
 
-    const whatsappMsg = encodeURIComponent(`Hi Academic Wizard! My Device ID is ${deviceId}. Please send my Activation Code.`);
+    const msgText = `Hello Academic Wizard Team! 👋\n\nI would like to activate my free academic tools suite.\n\nHere is my unique Device ID:\n${deviceId}\n\nPlease send me my weekly activation link. Thank you!`;
+    const whatsappMsg = encodeURIComponent(msgText);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
     
-    const copySocialPitch = () => {
-        const text = `Hi, I need an Activation Code. My Device ID is: ${deviceId}`;
+    const copySocialPitch = (platform) => {
+        const text = `Hello Academic Wizard Team! 👋\n\nI would like to activate my free academic tools suite.\n\nHere is my unique Device ID:\n${deviceId}\n\nPlease send me my weekly activation link. Thank you!`;
         navigator.clipboard.writeText(text);
-        alert('Verification request text copied to clipboard! You can paste it into Instagram or Facebook direct message.');
+        alert(`Verification request text copied to clipboard! You can paste it into ${platform} DMs.`);
     };
 
     return (
@@ -243,24 +244,40 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     </a>
 
                     <a 
-                        href="https://instagram.com/academic_wizard"
+                        href="https://www.instagram.com/_academic.wizard_"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={copySocialPitch}
+                        onClick={() => copySocialPitch('Instagram')}
                         className="flex items-center justify-center gap-2 py-3 bg-pink-500/10 hover:bg-pink-500 text-pink-400 hover:text-white border border-pink-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
                     >
                         <Instagram size={16} /> Instagram
                     </a>
 
                     <a 
-                        href="https://facebook.com/academic.wizard.online"
+                        href="https://www.facebook.com/academics.wizard"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={copySocialPitch}
+                        onClick={() => copySocialPitch('Facebook')}
                         className="flex items-center justify-center gap-2 py-3 bg-blue-500/10 hover:bg-blue-500 text-blue-400 hover:text-white border border-blue-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
                     >
                         <Facebook size={16} /> Facebook
                     </a>
+                </div>
+
+                {/* Step-by-Step Instructions */}
+                <div className="w-full bg-white/5 border border-white/5 rounded-xl p-5 text-left text-xs space-y-3.5">
+                    <h4 className="font-bold text-accent-gold uppercase tracking-wider text-[10px]" style={{ color: 'var(--accent-gold)' }}>How to Activate:</h4>
+                    <ul className="space-y-3 text-white/70 leading-relaxed list-decimal pl-4">
+                        <li>
+                            <strong className="text-white">WhatsApp:</strong> Click WhatsApp to open a chat with a pre-filled request message, then send it (or manually copy/paste your Device ID to us).
+                        </li>
+                        <li>
+                            <strong className="text-white">Instagram:</strong> Click Instagram to follow our page, then paste your copied request message in our DMs.
+                        </li>
+                        <li>
+                            <strong className="text-white">Facebook:</strong> Click Facebook to visit and follow our page, and send your request message via Messenger DMs.
+                        </li>
+                    </ul>
                 </div>
 
                 {/* Code Entry Input */}

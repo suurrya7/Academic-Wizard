@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Award, ThumbsUp } from 'lucide-react';
+import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram } from 'lucide-react';
 import academicWizardLogo from '../assets/academic-wizard-logo.webp';
 
 const Footer = () => {
@@ -20,6 +20,38 @@ const Footer = () => {
                     <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         Supporting university students worldwide with professional academic guidance and research assistance. Trusted for quality and confidentiality.
                     </p>
+                    <div className="flex gap-4 mt-2">
+                        <a 
+                            href="https://www.linkedin.com/company/academic-wizard" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin size={18} />
+                        </a>
+                        <a 
+                            href="https://www.facebook.com/academics.wizard" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="Facebook"
+                        >
+                            <Facebook size={18} />
+                        </a>
+                        <a 
+                            href="https://www.instagram.com/_academic.wizard_" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="Instagram"
+                        >
+                            <Instagram size={18} />
+                        </a>
+                    </div>
                 </div>
 
                 <div>

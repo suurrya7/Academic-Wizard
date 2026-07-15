@@ -71,9 +71,54 @@ const GrammarChecker = () => {
     return (
         <div className="page-grammar-checker">
             <Helmet>
-                <title>Free Grammar & Spell Checker | Academic Wizard</title>
-                <meta name="description" content="Check your academic papers and essays for grammar, spelling, and punctuation errors. Real-time suggestions and one-click corrections." />
+                <title>Free AI Grammar Checker & Essay Editor | Academic Wizard</title>
+                <meta name="description" content="Check your essays, thesis papers, and university assignments for spelling, punctuation, and syntax errors. Real-time proofreading with one-click suggestions." />
                 <link rel="canonical" href="https://academicwizard.online/tools/grammar-checker" />
+                <meta property="og:title" content="Free AI Grammar Checker & Essay Editor | Academic Wizard" />
+                <meta property="og:description" content="Polish your academic papers with our free spelling, syntax, and punctuation editor." />
+                <meta property="og:url" content="https://academicwizard.online/tools/grammar-checker" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebApplication",
+                        "name": "Grammar Checker",
+                        "url": "https://academicwizard.online/tools/grammar-checker",
+                        "applicationCategory": "EducationalApplication",
+                        "operatingSystem": "All",
+                        "browserRequirements": "Requires HTML5",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0.00",
+                            "priceCurrency": "USD"
+                        }
+                    })}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://academicwizard.online"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Tools",
+                                "item": "https://academicwizard.online/tools"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Grammar Checker",
+                                "item": "https://academicwizard.online/tools/grammar-checker"
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             <PageHeader 
@@ -207,6 +252,43 @@ const GrammarChecker = () => {
                                     ))}
                                 </div>
                             )}
+                        </div>
+                    </div>
+
+                    {/* FAQ and Content Section */}
+                    <div className="lg:col-span-3 border-t border-white/10 pt-16 mt-16 max-w-4xl mx-auto space-y-12">
+                        <div className="space-y-4 text-center lg:text-left animate-fade-in">
+                            <h3 className="text-2xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                                Polish Your Academic Writing with Free Essay Editing
+                            </h3>
+                            <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                When writing a dissertation, research paper, or term essay, presenting clear and error-free sentences is essential for high grades. Our online grammar editor scans your text instantly to identify spelling slips, punctuation mismatches, and syntax errors, helping you output polished work that reads professionally.
+                            </p>
+                        </div>
+
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-bold font-heading text-white">Frequently Asked Questions</h3>
+                            
+                            <div className="space-y-4">
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">How does the online essay grammar checker work?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Our grammar tool connects securely to the LanguageTool API. It scans your text for grammatical patterns, style inconsistencies, and vocabulary spelling errors, displaying recommended changes that you can apply with a single click.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Is my text private when using this grammar checker?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Yes. We value your confidentiality above all else. Your text is processed in-memory during the check and is never stored in any database or used to train AI models. Clicking "Clear" or refreshing the page immediately wipes the text.
+                                    </p>
+                                </div>
+                                <div className="bg-white/5 border border-white/5 p-6 rounded-xl space-y-2">
+                                    <h4 className="font-bold text-white text-sm">Does the tool support British (UK) vs. American (US) English?</h4>
+                                    <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                        Yes! The tool automatically adapts checks for both American and British academic English, highlighting specific differences like spelling (e.g., color vs. colour) and punctuation formatting.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

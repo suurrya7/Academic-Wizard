@@ -411,6 +411,14 @@ Internal Linking Strategy:
 Link URL: {service_link}
 Anchor Text: Integrate this link naturally using keyword-rich anchor text related to "{service_anchor_text}". For example, "Looking for ethical {service_anchor_text.lower()}? Let our experts guide you..." or similar. Place this link near the end of the article, but before the FAQs.
 
+3. You MUST organically include at least one link to our free academic tools suite where contextually appropriate:
+Choose the most relevant tool depending on the article's topic:
+- Citation Generator: <a href="/tools/citation-generator">APA/MLA Citation Generator</a> (Discussing references, bibliography, formatting, APA, MLA, Harvard, Chicago, Vancouver style).
+- Grammar & Spell Checker: <a href="/tools/grammar-checker">Academic Grammar & Spell Checker</a> (Discussing proofreading, editing, essays, writing styles, punctuation).
+- Linguistic AI Detector: <a href="/tools/ai-detector">Linguistic AI Essay Detector</a> (Discussing AI writing, plagiarism detection, ChatGPT, Claude, academic integrity).
+- AI Text Humanizer: <a href="/tools/ai-humanizer">AI Essay Humanizer</a> (Discussing Turnitin AI bypass, text rewriting, bypassing AI detection, natural phrasing).
+Anchor Text: Integrate this link naturally using descriptive, keyword-rich anchor text.
+
 Generative Engine Optimization (GEO) & AEO Requirements:
 - Use specific "What is..." and "How to..." H2 headings.
 - Keep paragraphs short (under 60 words).
