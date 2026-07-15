@@ -9,3 +9,6 @@ export function staticPostUrl(post) {
     if (!post?.slug) return SITE_BASE_PATH;
     return assetPath(`blog/${post.slug}`);
 }
+
+// Web3Forms API key for email forwarding. Paste your key from web3forms.com here:
+export const WEB3FORMS_ACCESS_KEY = "";

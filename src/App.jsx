@@ -23,6 +23,13 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
 
+// Tools Pages (Lazy Loaded)
+const Tools = React.lazy(() => import('./pages/Tools'));
+const CitationGenerator = React.lazy(() => import('./pages/tools/CitationGenerator'));
+const GrammarChecker = React.lazy(() => import('./pages/tools/GrammarChecker'));
+const AIDetector = React.lazy(() => import('./pages/tools/AIDetector'));
+const AIHumanizer = React.lazy(() => import('./pages/tools/AIHumanizer'));
+
 const LoadingFallback = () => (
   <div style={{ minHeight: '100vh', background: '#050505' }}></div>
 );
@@ -50,6 +57,13 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              
+              {/* Tools Routes */}
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/tools/citation-generator" element={<CitationGenerator />} />
+              <Route path="/tools/grammar-checker" element={<GrammarChecker />} />
+              <Route path="/tools/ai-detector" element={<AIDetector />} />
+              <Route path="/tools/ai-humanizer" element={<AIHumanizer />} />
             </Routes>
           </Suspense>
         </main>
