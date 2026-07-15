@@ -23,6 +23,9 @@ const AIDetector = () => {
 
     const analyzeText = () => {
         if (!text.trim()) return;
+        if (window.trigger_detector_use && !window.trigger_detector_use()) {
+            return;
+        }
         setLoading(true);
         
         setTimeout(() => {

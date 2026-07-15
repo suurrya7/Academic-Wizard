@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Core UI components loaded eagerly
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ActivationGate from './components/ActivationGate';
 
 const CustomCursor = React.lazy(() => import('./components/CustomCursor'));
 const ParticleBackground = React.lazy(() => import('./components/ParticleBackground'));
@@ -29,6 +30,7 @@ const CitationGenerator = React.lazy(() => import('./pages/tools/CitationGenerat
 const GrammarChecker = React.lazy(() => import('./pages/tools/GrammarChecker'));
 const AIDetector = React.lazy(() => import('./pages/tools/AIDetector'));
 const AIHumanizer = React.lazy(() => import('./pages/tools/AIHumanizer'));
+const AdminPortal = React.lazy(() => import('./pages/AdminPortal'));
 
 const LoadingFallback = () => (
   <div style={{ minHeight: '100vh', background: '#050505' }}></div>
@@ -60,10 +62,13 @@ function App() {
               
               {/* Tools Routes */}
               <Route path="/tools" element={<Tools />} />
-              <Route path="/tools/citation-generator" element={<CitationGenerator />} />
-              <Route path="/tools/grammar-checker" element={<GrammarChecker />} />
-              <Route path="/tools/ai-detector" element={<AIDetector />} />
-              <Route path="/tools/ai-humanizer" element={<AIHumanizer />} />
+              <Route path="/tools/citation-generator" element={<ActivationGate toolKey="citation" maxUses={10}><CitationGenerator /></ActivationGate>} />
+              <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={10}><GrammarChecker /></ActivationGate>} />
+              <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={10}><AIDetector /></ActivationGate>} />
+              <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={5}><AIHumanizer /></ActivationGate>} />
+              
+              {/* Admin Portal */}
+              <Route path="/admin-portal" element={<AdminPortal />} />
             </Routes>
           </Suspense>
         </main>

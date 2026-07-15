@@ -13,6 +13,9 @@ const GrammarChecker = () => {
 
     const checkGrammar = async () => {
         if (!text.trim()) return;
+        if (window.trigger_grammar_use && !window.trigger_grammar_use()) {
+            return;
+        }
         setLoading(true);
         try {
             const response = await fetch('https://api.languagetool.org/v2/check', {

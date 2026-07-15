@@ -261,6 +261,9 @@ const CitationGenerator = () => {
     }, [sourceType, style, authors, title, containerTitle, publisher, pubDate, accessDate, url, volume, issue, pages, edition, doi, bibliography.length]);
 
     const handleCopy = (text, type) => {
+        if (window.trigger_citation_use && !window.trigger_citation_use()) {
+            return;
+        }
         // Strip HTML tags for clean copy
         const cleanText = text.replace(/<[^>]*>/g, '');
         navigator.clipboard.writeText(cleanText);
@@ -274,6 +277,9 @@ const CitationGenerator = () => {
     };
 
     const addCitation = () => {
+        if (window.trigger_citation_use && !window.trigger_citation_use()) {
+            return;
+        }
         setBibliography([...bibliography, { ...citation, id: Date.now() }]);
         // Reset inputs
         setAuthors('');
