@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
-import { Lock, Copy, Check, MessageSquare, Instagram, Facebook, AlertCircle, RefreshCw } from 'lucide-react';
+import { Lock, Copy, Check, MessageSquare, Instagram, Facebook, AlertCircle, RefreshCw, Sparkles } from 'lucide-react';
 
 const OBFUSCATED_SECRET = "QUNBRF9XSVpfU0VDX0tFWV8yMDI2"; // "ACAD_WIZ_SEC_KEY_2026" base64
 const SECRET = atob(OBFUSCATED_SECRET);

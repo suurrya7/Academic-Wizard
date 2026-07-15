@@ -30,7 +30,6 @@ const CitationGenerator = React.lazy(() => import('./pages/tools/CitationGenerat
 const GrammarChecker = React.lazy(() => import('./pages/tools/GrammarChecker'));
 const AIDetector = React.lazy(() => import('./pages/tools/AIDetector'));
 const AIHumanizer = React.lazy(() => import('./pages/tools/AIHumanizer'));
-const AdminPortal = React.lazy(() => import('./pages/AdminPortal'));
 
 const LoadingFallback = () => (
   <div style={{ minHeight: '100vh', background: '#050505' }}></div>
@@ -66,9 +65,6 @@ function App() {
               <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={10}><GrammarChecker /></ActivationGate>} />
               <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={10}><AIDetector /></ActivationGate>} />
               <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={5}><AIHumanizer /></ActivationGate>} />
-              
-              {/* Admin Portal */}
-              <Route path="/admin-portal" element={<AdminPortal />} />
             </Routes>
           </Suspense>
         </main>

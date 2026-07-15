@@ -89,13 +89,9 @@ const AIHumanizer = () => {
                             <h3 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
                                 Humanizer Engine
                             </h3>
-                            {sessionActive ? (
+                            {sessionActive && (
                                 <span className="text-xs px-3 py-1.5 bg-red-500/10 border border-red-500/20 text-red-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">
                                     <Clock size={14} /> Session Time: {formatTime(timeLeft)}
-                                </span>
-                            ) : (
-                                <span className="text-xs px-2.5 py-1 bg-accent-gold/15 text-accent-gold font-bold uppercase rounded-full">
-                                    Streamlit Node
                                 </span>
                             )}
                         </div>
@@ -107,7 +103,7 @@ const AIHumanizer = () => {
                                 style={{ height: '900px' }}
                             >
                                 <iframe
-                                    src="https://academic-wizard.streamlit.app/?embed=true"
+                                    src="https://academic-wizard.streamlit.app/~/+/?embed=true#academic-wizard"
                                     title="Academic Wizard Text Humanizer"
                                     width="100%"
                                     height="100%"
