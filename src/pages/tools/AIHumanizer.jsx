@@ -21,7 +21,7 @@ const AIHumanizer = () => {
                 ]}
             />
 
-            <section className="py-20 bg-bg-primary text-white">
+            <section className="py-20 text-white">
                 <div className="container max-w-4xl space-y-8">
                     <div className="glass-card p-6 border-accent-gold/20 rounded-2xl" style={{ borderColor: 'rgba(212, 175, 55, 0.15)' }}>
                         <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-4">

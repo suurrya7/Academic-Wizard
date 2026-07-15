@@ -53,7 +53,7 @@ const Tools = () => {
                 ]}
             />
 
-            <section className="py-20 bg-bg-primary text-white">
+            <section className="py-20 text-white">
                 <div className="container space-y-20">
                     {toolsData.map((tool, index) => (
                         <div
