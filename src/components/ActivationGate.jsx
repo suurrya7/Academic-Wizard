@@ -2,14 +2,35 @@ import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
 import { Lock, Copy, Check, MessageSquare, Instagram, Facebook, AlertCircle, RefreshCw, Sparkles } from 'lucide-react';
 
-const OBFUSCATED_SECRET = "QUNBRF9XSVpfU0VDX0tFWV8yMDI2"; // "ACAD_WIZ_SEC_KEY_2026" base64
-const SECRET = atob(OBFUSCATED_SECRET);
+// Shift +1 character shift algorithm for hex UUIDs
+const shiftChar = (char) => {
+    if (char >= '0' && char <= '9') {
+        return char === '9' ? '0' : String.fromCharCode(char.charCodeAt(0) + 1);
+    }
+    if (char >= 'a' && char <= 'f') {
+        return char === 'f' ? 'a' : String.fromCharCode(char.charCodeAt(0) + 1);
+    }
+    return char;
+};
 
-// Helper to generate a UUID (Device ID)
+// Generates the shift +1 code for the given UUID Device ID
+export const generateCode = (deviceId) => {
+    const parts = deviceId.trim().toLowerCase().split('-');
+    if (parts.length !== 5) return '';
+    
+    const char1 = shiftChar(parts[0][0]);
+    const char2 = shiftChar(parts[1][0]);
+    const char3 = shiftChar(parts[2][0]);
+    const char4 = shiftChar(parts[3][0]);
+    const char5 = shiftChar(parts[4][0]);
+    
+    return `${char1}${char2}${char3}AWIZ${char4}${char5}`;
+};
+
+// Helper to get or create a Device ID
 export const getOrCreateDeviceId = () => {
     let deviceId = localStorage.getItem('academic_wizard_device_id');
     if (!deviceId) {
-        // Simple UUID v4 generator
         deviceId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
             const r = Math.random() * 16 | 0;
             const v = c === 'x' ? r : (r & 0x3 | 0x8);
@@ -20,39 +41,67 @@ export const getOrCreateDeviceId = () => {
     return deviceId;
 };
 
-// Cryptographic HMAC SHA256 logic using native browser SubtleCrypto
-export const generateCode = async (deviceId, slot) => {
-    const message = `${deviceId}-${slot}`;
-    const enc = new TextEncoder();
-    const key = await window.crypto.subtle.importKey(
-        "raw",
-        enc.encode(SECRET),
-        { name: "HMAC", hash: { name: "SHA-256" } },
-        false,
-        ["sign"]
-    );
-    const signature = await window.crypto.subtle.sign(
-        "HMAC",
-        key,
-        enc.encode(message)
-    );
-    const hashArray = Array.from(new Uint8Array(signature));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    
-    // Prefix + first 8 characters of hex hash in uppercase
-    return `AW-${hashHex.substring(0, 8).toUpperCase()}`;
-};
-
 const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
     const [deviceId] = useState(() => getOrCreateDeviceId());
     const [activationCode, setActivationCode] = useState('');
-    const [unlocked, setUnlocked] = useState(() => !!localStorage.getItem('academic_wizard_unlocked'));
+    const [unlocked, setUnlocked] = useState(() => localStorage.getItem('academic_wizard_unlocked') === 'true');
     const [useCount, setUseCount] = useState(0);
     const [copiedId, setCopiedId] = useState(false);
     const [error, setError] = useState('');
     const [verifying, setVerifying] = useState(false);
+    const [activationSuccess, setActivationSuccess] = useState(false);
 
     const counterKey = `academic_wizard_${toolKey}_uses`;
+
+    // 1. Weekly Reset/Expiration Logic
+    useEffect(() => {
+        const isUnlocked = localStorage.getItem('academic_wizard_unlocked') === 'true';
+        const activationDate = localStorage.getItem('academic_wizard_activation_date');
+        
+        if (isUnlocked && activationDate) {
+            const elapsed = Date.now() - parseInt(activationDate, 10);
+            const sevenDaysMs = 7 * 24 * 60 * 60 * 1000; // 604,800,000 ms
+            
+            if (elapsed > sevenDaysMs) {
+                // Lock the site immediately
+                localStorage.removeItem('academic_wizard_unlocked');
+                localStorage.removeItem('academic_wizard_activation_date');
+                
+                // Max out counters so they are locked immediately and see the activation screen
+                localStorage.setItem('academic_wizard_citation_uses', '10');
+                localStorage.setItem('academic_wizard_grammar_uses', '10');
+                localStorage.setItem('academic_wizard_detector_uses', '10');
+                localStorage.setItem('academic_wizard_humanizer_uses', '5');
+                
+                setUnlocked(false);
+                setError('Your weekly activation code has expired. Please request a new weekly code.');
+            }
+        }
+    }, []);
+
+    // 2. 1-Click Link Auto-Unlock (?activate=...)
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const codeFromUrl = params.get('activate');
+
+        if (codeFromUrl) {
+            const expectedCode = generateCode(deviceId);
+            if (codeFromUrl.trim().toLowerCase() === expectedCode.toLowerCase()) {
+                localStorage.setItem('academic_wizard_unlocked', 'true');
+                localStorage.setItem('academic_wizard_activation_date', Date.now().toString());
+                setUnlocked(true);
+                setActivationSuccess(true);
+                
+                // Remove ?activate from URL
+                const newUrl = window.location.pathname;
+                window.history.replaceState({}, document.title, newUrl);
+                
+                setTimeout(() => setActivationSuccess(false), 5000);
+            } else {
+                setError('The activation link you clicked is invalid or expired.');
+            }
+        }
+    }, [deviceId]);
 
     useEffect(() => {
         if (!unlocked) {
@@ -67,7 +116,7 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
         setTimeout(() => setCopiedId(false), 2000);
     };
 
-    const handleVerify = async (e) => {
+    const handleVerify = (e) => {
         e.preventDefault();
         setError('');
         setVerifying(true);
@@ -78,35 +127,22 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
             return;
         }
 
-        try {
-            // Get current 10-minute UTC slot
-            const currentSlot = Math.floor(Date.now() / 600000);
-            
-            // Generate codes for drift window: previous, current, next 10-minute slots
-            const validCodes = await Promise.all([
-                generateCode(deviceId, currentSlot - 1),
-                generateCode(deviceId, currentSlot),
-                generateCode(deviceId, currentSlot + 1)
-            ]);
+        const expectedCode = generateCode(deviceId);
+        const enteredCodeClean = activationCode.trim().toLowerCase();
 
-            const enteredCodeClean = activationCode.trim().toUpperCase();
-
-            if (validCodes.includes(enteredCodeClean)) {
-                // Success
-                localStorage.setItem('academic_wizard_unlocked', 'true');
-                setUnlocked(true);
-            } else {
-                setError('Invalid Activation Code. Please check the code or contact our support.');
-            }
-        } catch (err) {
-            console.error('Verification error:', err);
-            setError('Verification failed. Please try again.');
-        } finally {
-            setVerifying(false);
+        if (enteredCodeClean === expectedCode.toLowerCase()) {
+            // Success
+            localStorage.setItem('academic_wizard_unlocked', 'true');
+            localStorage.setItem('academic_wizard_activation_date', Date.now().toString());
+            setUnlocked(true);
+            setActivationSuccess(true);
+            setTimeout(() => setActivationSuccess(false), 5000);
+        } else {
+            setError('Invalid Activation Code. Please request a valid code.');
         }
+        setVerifying(false);
     };
 
-    // Increments usage locally and returns true if within limit, false if locked
     const triggerUse = () => {
         if (unlocked) return true;
 
@@ -121,7 +157,6 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
         return newCount <= maxUses;
     };
 
-    // Attach function to window so tools can increment uses
     useEffect(() => {
         window[`trigger_${toolKey}_use`] = triggerUse;
         return () => {
@@ -132,7 +167,6 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
     const isLimitExceeded = !unlocked && useCount >= maxUses;
 
     if (!isLimitExceeded) {
-        // Expose trial count element for tools
         return (
             <div className="relative">
                 {!unlocked && (
@@ -140,16 +174,21 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                         Trial Uses: {useCount} / {maxUses}
                     </div>
                 )}
+                
+                {activationSuccess && (
+                    <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-[100] bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-2 border border-emerald-400/30 animate-bounce">
+                        <Check size={16} /> Academic Suite Activated for 7 Days!
+                    </div>
+                )}
+                
                 {children}
             </div>
         );
     }
 
-    // Gated Overlay screen
     const whatsappMsg = encodeURIComponent(`Hi Academic Wizard! My Device ID is ${deviceId}. Please send my Activation Code.`);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
     
-    // Copies pitch text for social platforms that don't support custom message URLs
     const copySocialPitch = () => {
         const text = `Hi, I need an Activation Code. My Device ID is: ${deviceId}`;
         navigator.clipboard.writeText(text);
@@ -158,7 +197,6 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
 
     return (
         <div className="relative min-h-[7vh] flex items-center justify-center py-20 px-6 bg-bg-primary text-white">
-            {/* Blurred visual elements */}
             <div className="absolute inset-0 filter blur-[15px] opacity-10 pointer-events-none select-none">
                 <div className="w-full h-full flex flex-col justify-center items-center gap-10">
                     <div className="h-10 w-96 bg-white/20 rounded"></div>
@@ -172,16 +210,16 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                 </div>
 
                 <div className="space-y-2">
-                    <h3 className="text-2xl font-bold font-heading">Trial Limit Reached</h3>
+                    <h3 className="text-2xl font-bold font-heading">Activation Required</h3>
                     <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                        You have exhausted your free trial uses. Send your Device ID to our team on WhatsApp, Instagram, or Facebook to get a free activation code.
+                        To keep our tools free and protect server resources, we require a free weekly activation. Get your code instantly on WhatsApp, Instagram, or Facebook.
                     </p>
                 </div>
 
                 {/* Device ID Display */}
                 <div className="w-full bg-black/40 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
                     <div className="text-left overflow-hidden">
-                        <span className="block text-[9px] uppercase tracking-wider text-white/40">Your Device ID</span>
+                        <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Your Device ID</span>
                         <span className="font-mono text-xs text-white/95 block truncate">{deviceId}</span>
                     </div>
                     <button 
@@ -193,7 +231,7 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     </button>
                 </div>
 
-                {/* Grid of Social Channels */}
+                {/* Social Channels */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
                     <a 
                         href={whatsappUrl}
@@ -237,7 +275,7 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     <div className="flex gap-3">
                         <input 
                             type="text"
-                            placeholder="Paste Activation Code (e.g. AW-8D7C51A9)"
+                            placeholder="Enter Weekly Code"
                             value={activationCode}
                             onChange={(e) => setActivationCode(e.target.value)}
                             className="flex-grow bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent-gold transition-colors text-sm text-white text-center font-mono uppercase"
