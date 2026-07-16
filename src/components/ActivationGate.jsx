@@ -53,6 +53,8 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
     const [verifying, setVerifying] = useState(false);
     const [activationSuccess, setActivationSuccess] = useState(false);
 
+    const [copiedMsg, setCopiedMsg] = useState(false);
+
     const counterKey = `academic_wizard_${toolKey}_uses`;
 
     // 1. Weekly Reset/Expiration Logic
@@ -187,11 +189,12 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
     const msgText = `Hello Academic Wizard Team! 👋\n\nI would like to activate my free academic tools suite.\n\nHere is my unique Device ID:\n${deviceId}\n\nPlease send me my weekly activation link. Thank you!`;
     const whatsappMsg = encodeURIComponent(msgText);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
+    const fbUrl = `https://m.me/108992517116465?text=${whatsappMsg}`;
     
-    const copySocialPitch = (platform) => {
-        const text = `Hello Academic Wizard Team! 👋\n\nI would like to activate my free academic tools suite.\n\nHere is my unique Device ID:\n${deviceId}\n\nPlease send me my weekly activation link. Thank you!`;
-        navigator.clipboard.writeText(text);
-        alert(`Verification request text copied to clipboard! You can paste it into ${platform} DMs.`);
+    const handleCopyMsg = () => {
+        navigator.clipboard.writeText(msgText);
+        setCopiedMsg(true);
+        setTimeout(() => setCopiedMsg(false), 2000);
     };
 
     return (
@@ -215,65 +218,71 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     </p>
                 </div>
 
-                {/* Device ID Display */}
-                <div className="w-full bg-black/40 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
-                    <div className="text-left overflow-hidden">
-                        <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Your Device ID</span>
-                        <span className="font-mono text-xs text-white/95 block truncate">{deviceId}</span>
+                {/* Step 1: Copy Request Code/Message */}
+                <div className="w-full space-y-2 text-left">
+                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 1: Copy Verification Request Code</span>
+                    <div className="w-full bg-black/40 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
+                        <div className="text-left overflow-hidden">
+                            <span className="font-mono text-xs text-accent-gold block truncate">{msgText}</span>
+                        </div>
+                        <button 
+                            onClick={handleCopyMsg}
+                            className="px-3.5 py-2 bg-accent-gold text-bg-primary hover:bg-white hover:text-bg-primary rounded-lg text-[10px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-1.5 flex-shrink-0"
+                            aria-label="Copy Verification Message"
+                        >
+                            {copiedMsg ? <Check size={12} className="text-bg-primary" /> : <Copy size={12} />}
+                            {copiedMsg ? 'Copied' : 'Copy Code'}
+                        </button>
                     </div>
-                    <button 
-                        onClick={handleCopyId}
-                        className="text-white/50 hover:text-accent-gold transition-colors flex-shrink-0"
-                        aria-label="Copy Device ID"
-                    >
-                        {copiedId ? <Check size={18} className="text-emerald-500" /> : <Copy size={18} />}
-                    </button>
                 </div>
 
-                {/* Social Channels */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
-                    <a 
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 py-3 bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-white border border-emerald-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
-                    >
-                        <MessageSquare size={16} /> WhatsApp
-                    </a>
+                {/* Step 2: Send Message on Social Channels */}
+                <div className="w-full space-y-2 text-left">
+                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 2: Send on any platform to support us</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
+                        <a 
+                            href={whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 py-3 bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-white border border-emerald-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
+                        >
+                            <MessageSquare size={16} /> WhatsApp
+                        </a>
 
-                    <a 
-                        href="https://www.instagram.com/_academic.wizard_"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => copySocialPitch('Instagram')}
-                        className="flex items-center justify-center gap-2 py-3 bg-pink-500/10 hover:bg-pink-500 text-pink-400 hover:text-white border border-pink-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
-                    >
-                        <Instagram size={16} /> Instagram
-                    </a>
+                        <a 
+                            href="https://www.instagram.com/_academic.wizard_"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={handleCopyMsg}
+                            className="flex items-center justify-center gap-2 py-3 bg-pink-500/10 hover:bg-pink-500 text-pink-400 hover:text-white border border-pink-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
+                        >
+                            <Instagram size={16} /> Instagram
+                        </a>
 
-                    <a 
-                        href="https://www.facebook.com/academics.wizard"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => copySocialPitch('Facebook')}
-                        className="flex items-center justify-center gap-2 py-3 bg-blue-500/10 hover:bg-blue-500 text-blue-400 hover:text-white border border-blue-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
-                    >
-                        <Facebook size={16} /> Facebook
-                    </a>
+                        <a 
+                            href={fbUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 py-3 bg-blue-500/10 hover:bg-blue-500 text-blue-400 hover:text-white border border-blue-500/20 hover:border-transparent rounded-xl text-xs font-bold transition-all duration-300"
+                        >
+                            <Facebook size={16} /> Facebook
+                        </a>
+                    </div>
                 </div>
 
-                {/* Step-by-Step Instructions */}
+                {/* Step-by-Step Instructions & Prefilled Message Note */}
                 <div className="w-full bg-white/5 border border-white/5 rounded-xl p-5 text-left text-xs space-y-3.5">
                     <h4 className="font-bold text-accent-gold uppercase tracking-wider text-[10px]" style={{ color: 'var(--accent-gold)' }}>How to Activate:</h4>
                     <ul className="space-y-3 text-white/70 leading-relaxed list-decimal pl-4">
                         <li>
-                            <strong className="text-white">WhatsApp:</strong> Click WhatsApp to open a chat with a pre-filled request message, then send it (or manually copy/paste your Device ID to us).
+                            <strong className="text-white">Copy the Verification Code:</strong> Click the "Copy Code" button in Step 1. You will need to send this to us.
                         </li>
                         <li>
-                            <strong className="text-white">Instagram:</strong> Click Instagram to follow our page, then paste your copied request message in our DMs.
-                        </li>
-                        <li>
-                            <strong className="text-white">Facebook:</strong> Click Facebook to visit and follow our page, and send your request message via Messenger DMs.
+                            <strong className="text-white">Send on Social Media:</strong> Click any of the social platforms in Step 2.
+                            <div className="mt-2 p-3 bg-white/5 border-l-2 border-accent-gold rounded text-white/60 text-[11px] leading-relaxed">
+                                <strong className="text-accent-gold uppercase text-[9px] tracking-wider block mb-1">Prefilled Message Note:</strong>
+                                Clicking <strong>WhatsApp</strong> or <strong>Facebook</strong> will open Messenger with your activation request pre-filled automatically! For <strong>Instagram</strong>, please paste the copied text manually into our DMs.
+                            </div>
                         </li>
                     </ul>
                 </div>
