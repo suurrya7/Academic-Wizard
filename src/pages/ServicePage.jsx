@@ -75,6 +75,18 @@ const ServicePage = () => {
                 <meta property="og:description" content={service.metaDescription} />
                 <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}`} />
                 
+                {/* Hreflang alternate tags linking parent to regional alternate variations */}
+                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}`} />
+                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}`} />
+                {service.countries.map(c => (
+                    <link 
+                        key={c.slug} 
+                        rel="alternate" 
+                        hreflang={`en-${c.slug === 'uk' ? 'gb' : c.slug}`} 
+                        href={`https://academicwizard.online/services/${service.slug}/${c.slug}`} 
+                    />
+                ))}
+
                 <script type="application/ld+json">
                     {JSON.stringify(serviceSchema)}
                 </script>

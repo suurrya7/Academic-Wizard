@@ -37,6 +37,12 @@ const CountryServicePage = () => {
         return <Navigate to={`/services/${serviceSlug}`} replace />;
     }
 
+    // Localized Overrides
+    const overviewText = country.overview || service.overview;
+    const featuresList = country.features || service.features;
+    const pricingText = country.pricing || service.pricing;
+    const faqsList = country.faqs || service.faqs;
+
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
 
     const Icon = service.icon;
@@ -64,7 +70,7 @@ const CountryServicePage = () => {
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": service.faqs.map(faq => ({
+        "mainEntity": faqsList.map(faq => ({
             "@type": "Question",
             "name": faq.question,
             "acceptedAnswer": {
@@ -84,6 +90,18 @@ const CountryServicePage = () => {
                 <meta property="og:description" content={pageDescription} />
                 <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}/${country.slug}`} />
                 
+                {/* Hreflang alternates to tell Google this is location-specific content */}
+                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}`} />
+                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}`} />
+                {service.countries.map(c => (
+                    <link 
+                        key={c.slug} 
+                        rel="alternate" 
+                        hreflang={`en-${c.slug === 'uk' ? 'gb' : c.slug}`} 
+                        href={`https://academicwizard.online/services/${service.slug}/${c.slug}`} 
+                    />
+                ))}
+
                 <script type="application/ld+json">
                     {JSON.stringify(serviceSchema)}
                 </script>
@@ -115,7 +133,7 @@ const CountryServicePage = () => {
                         Local Academic Excellence in {country.name}
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed mb-10">
-                        <p>{service.overview}</p>
+                        <p>{overviewText}</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
                         <div className="glass-card p-8 border-accent-gold/10">
@@ -142,7 +160,7 @@ const CountryServicePage = () => {
                         <p className="text-text-secondary max-w-2xl mx-auto">Comprehensive support tailored to your academic needs.</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {service.features.map((feature, idx) => (
+                        {featuresList.map((feature, idx) => (
                             <div key={idx} className="glass-card p-6 flex items-start gap-4">
                                 <CheckCircle className="text-accent-gold shrink-0 mt-1" size={20} />
                                 <span className="text-white/80">{feature}</span>
@@ -181,7 +199,7 @@ const CountryServicePage = () => {
                     <h2 className="text-3xl font-bold font-heading text-white mb-8">Transparent Pricing</h2>
                     <div className="glass-card p-10 border-accent-gold/20">
                         <p className="text-xl text-white/90 leading-relaxed mb-8">
-                            {service.pricing}
+                            {pricingText}
                         </p>
                         <Button onClick={() => window.open(whatsappUrl, '_blank')}>
                             Get a Personalized Quote for {country.name}
@@ -198,7 +216,7 @@ const CountryServicePage = () => {
                         <p className="text-text-secondary">Everything you need to know about our {service.title.toLowerCase()} service.</p>
                     </div>
                     <div className="space-y-4">
-                        {service.faqs.map((faq, idx) => (
+                        {faqsList.map((faq, idx) => (
                             <div key={idx} className="glass-card overflow-hidden">
                                 <button 
                                     className="w-full text-left p-6 flex justify-between items-center text-white font-bold"

@@ -37,14 +37,151 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["assignment help UK", "UK university assignment support"], desc: "Tailored to UK university marking criteria, focusing on critical analysis and independent research to help you achieve higher degree classifications." },
-            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["assignment help USA", "US college assignment assistance"], desc: "Designed to meet the rigorous standards of US colleges and universities, helping you maintain a strong GPA with well-structured, persuasive assignments." },
-            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["assignment help Australia", "Australian uni assignment support"], desc: "Aligned with Australian university standards (HD/D/C grading), emphasizing evidence-based arguments and clear academic expression." },
-            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["assignment help Canada", "Canadian university assignments"], desc: "Supporting Canadian students with comprehensive research and writing assistance, focusing on academic integrity and clear communication." },
-            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["assignment help India", "Indian university assignments"], desc: "Expert guidance for Indian university students, helping you navigate complex topics and present your ideas with clarity and academic rigor." },
-            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["assignment help Ireland", "Irish university assignments"], desc: "Specialized support for Irish academic institutions, ensuring your assignments reflect deep understanding and critical evaluation." },
-            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["assignment help Singapore", "Singapore university assignments"], desc: "Meeting the high academic expectations of Singaporean universities with meticulously researched and impeccably written assignments." },
-            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["assignment help Germany", "German university assignments"], desc: "Assisting students in Germany with structuring and articulating complex academic concepts in clear, formal English." }
+            { 
+                slug: "uk", 
+                name: "United Kingdom", 
+                flag: "🇬🇧", 
+                keywords: ["assignment help UK", "UK university assignment support"], 
+                desc: "Tailored to UK university marking criteria, focusing on critical analysis and independent research to help you achieve higher degree classifications.",
+                overview: "Academic Wizard provides expert academic support for students at UK universities. Our services are fully aligned with the British higher education system, covering undergraduate and postgraduate structures. Our UK guides are experts in the critical analysis methodologies required by top Russell Group and London universities.",
+                features: [
+                    "UK-native academic writers and proofreaders",
+                    "Cite Them Right Harvard, MHRA, and OSCOLA referencing formats",
+                    "Proofreading adjusted for British spelling and academic lexicon",
+                    "100% original, plagiarism-free research guidance"
+                ],
+                pricing: "Flexible pricing structured in British Pounds starting from £8 per page or £24 per 1000 words. Contact us for a quote in GBP.",
+                faqs: [
+                    { question: "Are your writers familiar with UK grading criteria?", answer: "Yes, our academic advisors hold degrees from leading British universities and specialize in the critical evaluation frameworks required for UK degrees." },
+                    { question: "Can you format according to Cite Them Right Harvard?", answer: "Absolutely. Our editors are fully trained in the Cite Them Right standard used by most UK institutions." }
+                ]
+            },
+            { 
+                slug: "usa", 
+                name: "United States", 
+                flag: "🇺🇸", 
+                keywords: ["assignment help USA", "US college assignment assistance"], 
+                desc: "Designed to meet the rigorous standards of US colleges and universities, helping you maintain a strong GPA with well-structured, persuasive assignments.",
+                overview: "Supporting students across American colleges and universities, our academic assistance focuses on the specific thesis-driven structure, research rigor, and analytical clarity expected in the US education system. We help you navigate complex course requirements and maintain a strong cumulative GPA.",
+                features: [
+                    "Aligned with US university syllabus guidelines and GPA rubrics",
+                    "Flawless APA 7th Edition, MLA 9th Edition, and Chicago formatting",
+                    "Academic editing using American English spelling and style conventions",
+                    "Original, high-integrity research support and outline drafting"
+                ],
+                pricing: "Pricing starts at $10 per page or $30 per 1000 words. Custom quote in USD is provided upon requirement review.",
+                faqs: [
+                    { question: "Does your service cover GPA improvement guidelines?", answer: "Yes, we focus on helping you understand grading rubrics to produce essays that hit high GPA requirements." }
+                ]
+            },
+            { 
+                slug: "australia", 
+                name: "Australia", 
+                flag: "🇦🇺", 
+                keywords: ["assignment help Australia", "Australian uni assignment support"], 
+                desc: "Aligned with Australian university standards (HD/D/C grading), emphasizing evidence-based arguments and clear academic expression.",
+                overview: "Our Australian academic support is tailored specifically to the Australian Higher Education Standards Framework. We specialize in assisting students at Group of Eight (Go8) and key metropolitan universities, aligning with regional grading structures (High Distinction, Distinction, Credit).",
+                features: [
+                    "Tailored to Australian university grading rubrics (HD/D/C scales)",
+                    "Expertise in AGM, Harvard (AGPS), and APA referencing styles",
+                    "Vocabulary and proofreading tailored to Australian English standards",
+                    "Direct subject-matter tutoring and research structure guidance"
+                ],
+                pricing: "Pricing starts from AUD $15 per page or AUD $45 per 1000 words. Contact us for a custom quote in AUD.",
+                faqs: [
+                    { question: "Do you understand the HD/D/C grading scale in Australia?", answer: "Yes, our tutors are fully versed in Australian university marking rubrics and structure support to hit HD and Distinction benchmarks." }
+                ]
+            },
+            { 
+                slug: "canada", 
+                name: "Canada", 
+                flag: "🇨🇦", 
+                keywords: ["assignment help Canada", "Canadian university assignments"], 
+                desc: "Supporting Canadian students with comprehensive research and writing assistance, focusing on academic integrity and clear communication.",
+                overview: "Providing academic assistance for Canadian college and university courses. We assist with research, structural planning, and editing to ensure your work meets the high standards of academic integrity and clear critical expression expected in Canada.",
+                features: [
+                    "Designed to meet Canadian academic grading and styling guidelines",
+                    "Accurate APA, MLA, and Chicago citation formatting",
+                    "Proofreading and grammar checks in Canadian English standards",
+                    "Plagiarism-free research guidance and outline development"
+                ],
+                pricing: "Flexible pricing starting from CAD $14 per page or CAD $42 per 1000 words. Custom quotes in CAD are available.",
+                faqs: [
+                    { question: "Do your editors support Canadian spelling conventions?", answer: "Yes, we adjust spelling and vocabulary styles specifically for Canadian university submissions." }
+                ]
+            },
+            { 
+                slug: "india", 
+                name: "India", 
+                flag: "🇮🇳", 
+                keywords: ["assignment help India", "Indian university assignments"], 
+                desc: "Expert guidance for Indian university students, helping you navigate complex topics and present your ideas with clarity and academic rigor.",
+                overview: "Academic Wizard supports students at premium Indian institutions (IITs, IIMs, Central and State universities) with expert writing guidance, formatting help, and deep research methodologies. We help you structure complex topics clearly and professionally.",
+                features: [
+                    "Tailored for leading Indian universities and technical institutes",
+                    "Guidance on complex engineering, management, and research topics",
+                    "Clear structural planning and academic tone refinement",
+                    "100% original plagiarism-free research support"
+                ],
+                pricing: "Customized pricing in Indian Rupees starting from ₹600 per page or ₹1800 per 1000 words.",
+                faqs: [
+                    { question: "Can you help with thesis structuring for Indian universities?", answer: "Yes, we specialize in structuring theses and research papers to align with UGC and specific university guidelines in India." }
+                ]
+            },
+            { 
+                slug: "ireland", 
+                name: "Ireland", 
+                flag: "🇮🇪", 
+                keywords: ["assignment help Ireland", "Irish university assignments"], 
+                desc: "Specialized support for Irish academic institutions, ensuring your assignments reflect deep understanding and critical evaluation.",
+                overview: "Supporting students in Irish colleges and universities (TCD, UCD, UCC, Galway). We offer writing help, referencing checks, and editing to ensure your essays reflect deep critical understanding and Irish university standards.",
+                features: [
+                    "Aligned with the Irish National Framework of Qualifications (NFQ)",
+                    "Cite Them Right Harvard and APA referencing styles",
+                    "Refining academic vocabulary and essay structure",
+                    "100% original, plagiarism-free research guidelines"
+                ],
+                pricing: "Flexible pricing starting from €9 per page or €27 per 1000 words. Contact us for quotes in Euros.",
+                faqs: [
+                    { question: "Are your services compliant with Irish university policies?", answer: "Yes, our services focus on ethical editing and academic guidance to help you write better papers, in full compliance with university guidelines." }
+                ]
+            },
+            { 
+                slug: "singapore", 
+                name: "Singapore", 
+                flag: "🇸🇬", 
+                keywords: ["assignment help Singapore", "Singapore university assignments"], 
+                desc: "Meeting the high academic expectations of Singaporean universities with meticulously researched and impeccably written assignments.",
+                overview: "Meeting the extremely high academic expectations of universities in Singapore (NUS, NTU, SMU, SUSS). We provide meticulous research, structural design, and writing guidance to ensure your assignments stand out for analytical depth.",
+                features: [
+                    "Meticulous research aligned with Singaporean university standards",
+                    "APA, Harvard, and numeric citation formatting",
+                    "Focus on advanced critical analysis and evidence integration",
+                    "Secure, confidential, and original academic editing"
+                ],
+                pricing: "Pricing starts from SGD $14 per page or SGD $42 per 1000 words. Contact us for a personalized quote in SGD.",
+                faqs: [
+                    { question: "Do your writers cover NUS and NTU course guidelines?", answer: "Yes, our academic advisors are familiar with the high standards and rubrics used at NUS, NTU, and SMU." }
+                ]
+            },
+            { 
+                slug: "germany", 
+                name: "Germany", 
+                flag: "🇩🇪", 
+                keywords: ["assignment help Germany", "German university assignments"], 
+                desc: "Assisting students in Germany with structuring and articulating complex academic concepts in clear, formal English.",
+                overview: "Assisting international and local students at German universities (TU9, state universities, and private colleges) who need help structuring and drafting academic papers in English. We focus on clarity, precise scientific language, and rigorous methodology.",
+                features: [
+                    "Specialized in English-language academic programs in Germany",
+                    "Rigorous structuring and scientific tone assistance",
+                    "APA, Harvard, and IEEE citation style formatting",
+                    "Methodological outline editing and data presentation"
+                ],
+                pricing: "Flexible pricing starting from €9 per page or €27 per 1000 words. Contact us for a custom quote in EUR.",
+                faqs: [
+                    { question: "Can you help me write my master's thesis in English?", answer: "Yes, we specialize in helping students structure, write, and edit English-language theses for German universities." }
+                ]
+            }
         ],
         faqs: [
             { question: "What is Assignment Help?", answer: "Assignment help is a service that provides expert guidance, research assistance, and editing to help students complete their university assignments successfully." },
@@ -75,14 +212,150 @@ export const servicesData = [
         process: processSteps,
         pricing: pricingInfo,
         countries: [
-            { slug: "uk", name: "United Kingdom", flag: "🇬🇧", keywords: ["essay help UK", "UK essay writing support"], desc: "Guidance on crafting essays that meet UK standards for critical thinking and independent argumentation." },
-            { slug: "usa", name: "United States", flag: "🇺🇸", keywords: ["essay help USA", "US college essay assistance"], desc: "Support for US students in developing persuasive, well-evidenced essays that contribute to a strong academic record." },
-            { slug: "australia", name: "Australia", flag: "🇦🇺", keywords: ["essay help Australia", "Australian university essay support"], desc: "Help with structuring essays to achieve High Distinction (HD) grades by demonstrating deep understanding and critical analysis." },
-            { slug: "canada", name: "Canada", flag: "🇨🇦", keywords: ["essay help Canada", "Canadian academic essay writing"], desc: "Assistance in writing clear, concise, and well-researched essays for Canadian academic institutions." },
-            { slug: "india", name: "India", flag: "🇮🇳", keywords: ["essay help India", "Indian university essay support"], desc: "Expert help in articulating complex ideas and maintaining formal academic language in your essays." },
-            { slug: "ireland", name: "Ireland", flag: "🇮🇪", keywords: ["essay help Ireland", "Irish university essay writing"], desc: "Support in developing robust arguments and engaging with academic literature for Irish university essays." },
-            { slug: "singapore", name: "Singapore", flag: "🇸🇬", keywords: ["essay help Singapore", "Singapore university essays"], desc: "Guidance on meeting the rigorous analytical and writing standards expected in Singaporean universities." },
-            { slug: "germany", name: "Germany", flag: "🇩🇪", keywords: ["essay help Germany", "English essay writing Germany"], desc: "Assistance for students in Germany to write polished, academic essays in English with perfect grammar and style." }
+            { 
+                slug: "uk", 
+                name: "United Kingdom", 
+                flag: "🇬🇧", 
+                keywords: ["essay help UK", "UK essay writing support"], 
+                desc: "Guidance on crafting essays that meet UK standards for critical thinking and independent argumentation.",
+                overview: "Academic Wizard offers premium academic essay guidance for students at British universities. We help you refine your arguments, structure your reasoning, and integrate scholarly sources to meet the critical expectations of UK university essays.",
+                features: [
+                    "Custom structural outlines matching UK essay formats",
+                    "Cite Them Right Harvard and Oxford footnoted referencing styles",
+                    "Polished academic vocabulary and formal tone refinement",
+                    "Detailed proofreading tailored for British spelling conventions"
+                ],
+                pricing: "Flexible pricing structured in GBP starting from £8 per page or £24 per 1000 words. Contact us for a quote.",
+                faqs: [
+                    { question: "Can you check my essay for UK university standards?", answer: "Yes, our academic advisors are experts in British higher education standards, focusing on the critical analysis and argumentation required for high grades." }
+                ]
+            },
+            { 
+                slug: "usa", 
+                name: "United States", 
+                flag: "🇺🇸", 
+                keywords: ["essay help USA", "US college essay assistance"], 
+                desc: "Support for US students in developing persuasive, well-evidenced essays that contribute to a strong academic record.",
+                overview: "Supporting college students in the United States with expert essay assistance. We guide you through the process of developing a clear thesis statement, structuring persuasive paragraphs, and integrating primary and secondary academic evidence.",
+                features: [
+                    "Persuasive and logical US college essay structure assistance",
+                    "APA 7th, MLA 9th, and Chicago style formatting check",
+                    "Proofreading and grammar audits using American English spelling",
+                    "Outline development and thesis statement refinement help"
+                ],
+                pricing: "Essay assistance pricing starting from $10 per page or $30 per 1000 words. Contact us for a USD quote.",
+                faqs: [
+                    { question: "Can you format my essay bibliography in APA style?", answer: "Yes, we ensure all reference lists and in-text citations are perfectly aligned with APA 7th Edition guidelines." }
+                ]
+            },
+            { 
+                slug: "australia", 
+                name: "Australia", 
+                flag: "🇦🇺", 
+                keywords: ["essay help Australia", "Australian university essay support"], 
+                desc: "Help with structuring essays to achieve High Distinction (HD) grades by demonstrating deep understanding and critical analysis.",
+                overview: "Our Australian essay help service is designed to support students in achieving high standards of critical reflection and analytical writing. We align our structural and styling checks with the requirements of major Australian universities.",
+                features: [
+                    "Tailored to Australian university grading rubrics (HD/Distinction scale)",
+                    "Harvard AGPS, APA 7th, and Vancouver referencing check",
+                    "Vocabulary proofing matching Australian English standards",
+                    "Logical evidence integration and critical analysis advice"
+                ],
+                pricing: "Pricing starts at AUD $15 per page or AUD $45 per 1000 words. Get a custom quote in AUD.",
+                faqs: [
+                    { question: "Do you help with critical reflection essays for Australian unis?", answer: "Yes, our tutors are highly experienced in guiding students through both argumentative essays and critical reflection pieces." }
+                ]
+            },
+            { 
+                slug: "canada", 
+                name: "Canada", 
+                flag: "🇨🇦", 
+                keywords: ["essay help Canada", "Canadian academic essay writing"], 
+                desc: "Assistance in writing clear, concise, and well-researched essays for Canadian academic institutions.",
+                overview: "Helping students across Canada draft, structure, and polish academic essays. We focus on helping you construct a coherent line of reasoning, develop a robust thesis, and format citations perfectly in your required style.",
+                features: [
+                    "Coherent structure planning matching Canadian essay standards",
+                    "Accurate APA and MLA formatting support",
+                    "Grammar and style adjustments for Canadian English spelling",
+                    "Original, plagiarism-free research outline development"
+                ],
+                pricing: "Pricing starts from CAD $14 per page or CAD $42 per 1000 words. Custom quote in CAD is provided upon request.",
+                faqs: [
+                    { question: "Do your guides check for essay flow and logical connection?", answer: "Yes, our editors review paragraph transitions and argument flow to ensure your essay reads smoothly." }
+                ]
+            },
+            { 
+                slug: "india", 
+                name: "India", 
+                flag: "🇮🇳", 
+                keywords: ["essay help India", "Indian university essay support"], 
+                desc: "Expert help in articulating complex ideas and maintaining formal academic language in your essays.",
+                overview: "Expert essay support for students at top Indian universities and technical institutes. We help you write well-structured, clear, and formally styled essays that explain complex concepts simply and professionally.",
+                features: [
+                    "Clear structural guidance for Indian university essays",
+                    "Grammar check and formal academic vocabulary alignment",
+                    "Plagiarism-free research advice and source synthesis",
+                    "Help with engineering, humanities, and management essays"
+                ],
+                pricing: "Flexible pricing in INR starting from ₹600 per page or ₹1800 per 1000 words.",
+                faqs: [
+                    { question: "Do you help write college application essays for Indian students?", answer: "Yes, we provide admissions essay editing to help you draft highly persuasive statements of purpose (SOP)." }
+                ]
+            },
+            { 
+                slug: "ireland", 
+                name: "Ireland", 
+                flag: "🇮🇪", 
+                keywords: ["essay help Ireland", "Irish university essay writing"], 
+                desc: "Support in developing robust arguments and engaging with academic literature for Irish university essays.",
+                overview: "Supporting students in Irish colleges and universities with expert essay help. We guide you in structuring robust arguments, writing clearly, and referencing according to Irish academic requirements.",
+                features: [
+                    "Tailored to the grading expectations of Irish universities",
+                    "Cite Them Right Harvard and APA referencing formatting",
+                    "Proofreading for clarity, sentence structure, and tone",
+                    "Original research outlines and bibliography building"
+                ],
+                pricing: "Pricing starts from €9 per page or €27 per 1000 words. Get a custom quote in Euros.",
+                faqs: [
+                    { question: "Do you help with essays for Trinity College and UCD?", answer: "Yes, our academic guides are highly familiar with the essay guidelines and rubrics of leading Irish universities." }
+                ]
+            },
+            { 
+                slug: "singapore", 
+                name: "Singapore", 
+                flag: "🇸🇬", 
+                keywords: ["essay help Singapore", "Singapore university essays"], 
+                desc: "Guidance on meeting the rigorous analytical and writing standards expected in Singaporean universities.",
+                overview: "Achieve the high analytical depth required by Singaporean academic institutions. Our essay service provides rigorous proofreading, formatting audits, and structural advice to help you meet the highest grading rubrics.",
+                features: [
+                    "Meticulous structural formatting check for NUS, NTU, SMU rubrics",
+                    "APA, Harvard, and Vancouver citation formatting audit",
+                    "Focus on advanced critical analysis and thesis-driven writing",
+                    "Confidential editing and proofreading by expert advisors"
+                ],
+                pricing: "Pricing starts from SGD $14 per page or SGD $42 per 1000 words. Get a personalized quote in SGD.",
+                faqs: [
+                    { question: "Can you check my essay for logical flow and evidence density?", answer: "Yes, our Singapore team specializes in ensuring that your essay contains strong evidence and is structured logically." }
+                ]
+            },
+            { 
+                slug: "germany", 
+                name: "Germany", 
+                flag: "🇩🇪", 
+                keywords: ["essay help Germany", "English essay writing Germany"], 
+                desc: "Assistance for students in Germany to write polished, academic essays in English with perfect grammar and style.",
+                overview: "Helping students in Germany structure, edit, and write academic essays in English. We assist in translating complex academic ideas into clear, scientific English prose that meets the high standards of German universities.",
+                features: [
+                    "Expertise in English-language academic essay guidelines in Germany",
+                    "Scientific vocabulary and sentence flow adjustments",
+                    "APA, Harvard, and IEEE citation style checks",
+                    "Structuring support for research questions and literature synthesis"
+                ],
+                pricing: "Pricing starts from €9 per page or €27 per 1000 words. Contact us for custom quotes in EUR.",
+                faqs: [
+                    { question: "Can you help me write in formal academic English?", answer: "Yes, our editors specialize in refining grammar, vocabulary, and flow for non-native English speakers writing for German universities." }
+                ]
+            }
         ],
         faqs: [
             { question: "What does your essay help include?", answer: "Our essay help includes thesis development, structural planning, research guidance, argument refinement, and thorough proofreading." },
