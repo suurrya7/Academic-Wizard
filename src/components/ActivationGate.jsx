@@ -15,9 +15,18 @@ const shiftChar = (char) => {
     return char;
 };
 
-// Generates the activation code for the given UUID Device ID (static code for all users)
+// Generates the shift +1 code for the given UUID Device ID
 export const generateCode = (deviceId) => {
-    return 'AWIZ-ACAD-PRO-SUITE';
+    const parts = deviceId.trim().toLowerCase().split('-');
+    if (parts.length !== 5) return '';
+    
+    const char1 = shiftChar(parts[0][0]);
+    const char2 = shiftChar(parts[1][0]);
+    const char3 = shiftChar(parts[2][0]);
+    const char4 = shiftChar(parts[3][0]);
+    const char5 = shiftChar(parts[4][0]);
+    
+    return `${char1}${char2}${char3}AWIZ${char4}${char5}`;
 };
 
 // Helper to get or create a Device ID
@@ -177,8 +186,8 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
         );
     }
 
-    const requestCode = 'AWIZ-FREE-7D-ACCESS';
-    const msgText = `Hello Academic Wizard Team! 👋\n\nI want to request free access.\nRequest Code: ${requestCode}\nDevice ID: ${deviceId}`;
+    const requestCode = 'AWIZ-ACAD-PRO-SUITE';
+    const msgText = `AWIZ-ACAD-PRO-SUITE - Device ID: ${deviceId}`;
     const whatsappMsg = encodeURIComponent(msgText);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
     const fbUrl = `https://m.me/108992517116465?text=${whatsappMsg}`;
