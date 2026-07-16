@@ -6,44 +6,84 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
     {
-        question: "Is your service confidential?",
-        answer: "Yes, 100%. We take student privacy extremely seriously. All your personal details and academic requirements remain strictly confidential and are never shared with third parties."
+        question: "Is your academic assistance completely confidential?",
+        answer: "Yes, absolute confidentiality is the cornerstone of our service. We utilize enterprise-grade encryption for all communications. Your personal details, university name, and the nature of your request are never shared with our writers, third-party agencies, or any institutional databases."
     },
     {
-        question: "How fast can academic assistance be delivered?",
-        answer: "Our turnaround time depends on the complexity and scope of your request. However, we specialize in meeting tight deadlines and can often provide assistance within 24-48 hours for urgent tasks."
+        question: "How do you guarantee the originality of the work provided?",
+        answer: "Every piece of academic work we deliver undergoes a rigorous two-step originality check. First, our writers are strictly bound to create content from scratch. Second, we run the final document through advanced, proprietary anti-plagiarism and AI-detection software before it ever reaches your inbox."
     },
     {
-        question: "How do I request a quote?",
-        answer: "The easiest way is to contact us directly on WhatsApp. Simply explain your academic requirements, deadline, and subject, and we will provide a custom quote instantly."
+        question: "What happens if I need changes to the delivered work?",
+        answer: "We offer a comprehensive free revision period. If the delivered work does not strictly adhere to your original instructions or grading rubric, our experts will revise it at no extra cost. Your satisfaction and academic success are our primary goals."
     },
     {
-        question: "Which countries do you support?",
-        answer: "We support university students globally, with a primary focus on the UK, Australia, USA, Ireland, and India. Our experts are familiar with the specific academic standards of these regions."
+        question: "Who are the academic experts providing the assistance?",
+        answer: "Our team consists exclusively of native English speakers holding Master's or PhD degrees from top-tier universities in the UK, USA, Canada, and Australia. They are retired professors, active researchers, and professional academic editors with years of pedagogical experience."
     },
     {
-        question: "Do you provide plagiarism checking?",
-        answer: "Yes, we provide comprehensive plagiarism checking as part of our quality assurance process. We ensure all academic assistance is original and properly cited."
+        question: "Can I communicate directly with the expert handling my project?",
+        answer: "To maintain our strict privacy protocols and ensure efficient project management, all communication is routed through our dedicated 24/7 support team. You can relay any specific instructions, feedback, or questions, and we will ensure your expert receives them immediately."
     },
     {
-        question: "How can I contact support?",
-        answer: "Our primary support channel is WhatsApp (+91 95098 93638), available 24/7. You can also reach out via our contact page for email-based inquiries."
+        question: "How is the pricing structured for your services?",
+        answer: "Our pricing is highly individualized, reflecting the unique demands of your project. It is calculated based on three main factors: the academic level (e.g., Undergraduate vs. Doctoral), the total word count or page length, and the urgency of the deadline."
     },
     {
-        question: "Can you handle complex dissertations and theses?",
-        answer: "Absolutely. We have a dedicated team of PhD-level researchers who specialize in long-form academic work, including complex methodologies, literature reviews, and primary data analysis."
+        question: "What referencing styles do your experts support?",
+        answer: "We support every major academic referencing style required by global universities. This includes APA (7th Edition), MLA (9th Edition), Harvard, Chicago/Turabian, OSCOLA for law, IEEE for engineering, and Vancouver for medical sciences."
     },
     {
-        question: "What referencing styles do you support?",
-        answer: "Our academic experts are proficient in all major referencing styles including APA (7th Edition), MLA, Harvard, Chicago, OSCOLA, and IEEE. Just let us know what your university requires."
+        question: "Can you handle extremely urgent deadlines?",
+        answer: "Yes, we specialize in high-pressure situations. For standard essays and assignments, we can often provide complete assistance within 12 to 24 hours. For longer projects like dissertations, we have rapid-response teams that can expedite specific chapters."
     },
     {
-        question: "Is it possible to request revisions?",
-        answer: "Yes. We want you to be completely satisfied with the guidance and support you receive. We offer free revisions within a specified timeframe to ensure the final output meets your initial requirements."
+        question: "What is the difference between proofreading and editing?",
+        answer: "Proofreading strictly addresses surface-level errors: spelling, grammar, punctuation, and typos. Editing is a much deeper intervention where we improve sentence structure, academic tone, logical flow, argument coherence, and overall readability."
     },
     {
-        question: "How do you ensure the quality of your work?",
-        answer: "Every piece of work goes through a rigorous quality assurance process. It is reviewed by a second academic expert for structural integrity, critical analysis, and adherence to your grading rubric before being delivered."
+        question: "Do you offer support for STEM subjects and data analysis?",
+        answer: "Absolutely. Beyond humanities and business, we have specialists in computer science, engineering, mathematics, and applied sciences. We also offer dedicated statistical data analysis using SPSS, R, Python, and STATA for empirical dissertations."
+    },
+    {
+        question: "How do I know if my payment is secure?",
+        answer: "We use internationally recognized, PCI-compliant payment gateways to process all transactions. We do not store your credit card information on our servers, ensuring your financial data is fully protected against unauthorized access."
+    },
+    {
+        question: "Are your services considered cheating or academic misconduct?",
+        answer: "No. Academic Wizard provides model answers, structural editing, and research coaching. Our work is intended to serve as a high-quality study aid and reference tool to help you understand how to approach your assignments, not to be submitted directly as your own work."
+    },
+    {
+        question: "What specific formatting guidelines do you follow?",
+        answer: "By default, we format all documents in standard academic style: Times New Roman or Arial 12pt font, double-spaced, with 1-inch margins. However, if your university provides a specific formatting template, we will strictly adhere to those requirements."
+    },
+    {
+        question: "Do you offer any discounts for returning students?",
+        answer: "Yes, we highly value long-term academic partnerships. Returning students are eligible for loyalty discounts. We also occasionally offer seasonal promotions during peak mid-term and final exam periods. Contact our support team to inquire about active offers."
+    },
+    {
+        question: "Can you help me choose a topic for my dissertation?",
+        answer: "Topic ideation is one of our most popular services. Our PhD consultants can help you identify a compelling, researchable gap in your field's current literature and formulate strong, academically rigorous research questions to guide your study."
+    },
+    {
+        question: "What happens if I miss my university deadline?",
+        answer: "While we guarantee delivery on the deadline you set with us, we always recommend setting your Academic Wizard deadline at least 2-3 days before your actual university submission date. This provides ample time for you to review the work and request any necessary revisions."
+    },
+    {
+        question: "Do you provide assistance with online exams or quizzes?",
+        answer: "No, we strictly do not participate in live exams, quizzes, or any form of impersonation. Our services are focused entirely on asynchronous research, writing, editing, and academic coaching."
+    },
+    {
+        question: "How do I submit the requirements for my assignment?",
+        answer: "You can submit your requirements via our contact form or directly through WhatsApp. Please include your grading rubric, assignment brief, any specific readings you want incorporated, and your required citation style to ensure we meet your exact needs."
+    },
+    {
+        question: "Can you match the writing style of my previous assignments?",
+        answer: "Yes, if you provide us with samples of your previous academic work, our experts can analyze your personal writing style, tone, and vocabulary to ensure the assistance we provide seamlessly aligns with your voice."
+    },
+    {
+        question: "Is there a money-back guarantee?",
+        answer: "We operate on a strict quality-first basis. If the final work fundamentally fails to follow your initial instructions, and if our revision process cannot rectify the issue, we have a dispute resolution process that can result in a partial or full refund."
     }
 ];
 

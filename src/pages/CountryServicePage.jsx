@@ -151,17 +151,11 @@ const CountryServicePage = () => {
                         </div>
                     )}
 
-                    <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
+                    <div className="text-left mt-12">
                         <div className="glass-card p-8 border-accent-gold/10">
-                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">Why Choose Us in {country.name}?</h3>
-                            <p className="text-text-secondary leading-relaxed">
-                                Our academic experts are intimately familiar with the specific grading rubrics, formatting guidelines, and educational standards required by universities in {country.name}. We don't just provide generic assistance; we tailor every piece of guidance to ensure it meets local expectations for critical analysis and academic rigor.
-                            </p>
-                        </div>
-                        <div className="glass-card p-8 border-accent-gold/10">
-                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">Localized Expertise</h3>
-                            <p className="text-text-secondary leading-relaxed">
-                                Whether you are struggling with complex research methodologies or need help refining your academic tone, our {country.name}-focused {service.title.toLowerCase()} service is designed to elevate your work. We help you navigate the nuances of your local academic system with confidence.
+                            <h3 className="text-2xl font-bold text-white mb-4 font-heading">Why Choose Academic Wizard for {service.title}?</h3>
+                            <p className="text-text-secondary leading-relaxed whitespace-pre-wrap">
+                                {service.whyChooseUs}
                             </p>
                         </div>
                     </div>
@@ -191,7 +185,6 @@ const CountryServicePage = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold font-heading text-white mb-4">How It Works</h2>
-                        <p className="text-text-secondary max-w-2xl mx-auto">A simple, transparent process to get you the academic help you need.</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {service.process.map((step, idx) => (

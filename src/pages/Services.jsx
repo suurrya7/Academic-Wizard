@@ -15,7 +15,40 @@ const Services = () => {
                 <meta property="og:title" content="Our Academic Services | Academic Wizard" />
                 <meta property="og:description" content="Explore Academic Wizard's comprehensive range of academic services." />
                 <meta property="og:url" content="https://academicwizard.online/services" />
-            </Helmet>
+            
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "What is the difference between essay help and dissertation consulting?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Essay help focuses on shorter, argument-driven papers typical of undergraduate courses, while dissertation consulting provides long-term, structural support for large-scale original research projects at the postgraduate level."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Can I combine multiple academic services?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, many students combine our editing services with study guidance to both improve their current submission and develop long-term academic skills."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Are your services tailored to specific countries?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Absolutely. Each of our services is adapted to meet the specific grading rubrics and academic standards of universities in the UK, USA, Australia, Canada, and other major educational hubs."
+                                }
+                            }
+                        ]
+                    })}
+                </script>
+</Helmet>
 
             <PageHeader 
                 title="Our Services" 
@@ -25,6 +58,30 @@ const Services = () => {
                     { name: 'Services', url: '/services' }
                 ]}
             />
+
+            
+            <section className="py-12 bg-bg-secondary">
+                <div className="container px-6 max-w-5xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold font-heading text-white mb-6">Choose the Right Academic Support</h2>
+                    <p className="text-text-secondary leading-relaxed mb-10 max-w-3xl mx-auto">
+                        At Academic Wizard, we recognize that every student's journey is unique. Whether you are an undergraduate seeking guidance on your first major essay, or a doctoral candidate navigating a complex dissertation, our specialized services are designed to provide targeted support.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6 text-left">
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Undergraduate</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">Core essay support, fundamental research methods, and assignment structuring.</p>
+                        </div>
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Postgraduate</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">Master's level dissertation consulting, literature review synthesis, and advanced data analysis.</p>
+                        </div>
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Doctoral</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">PhD thesis editing, methodological framework defense, and publication-ready formatting.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section className="py-20">
                 <div className="container space-y-20">

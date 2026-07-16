@@ -159,7 +159,6 @@ const ServicePage = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold font-heading text-white mb-4">How It Works</h2>
-                        <p className="text-text-secondary max-w-2xl mx-auto">A simple, transparent process to get you the academic help you need.</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {service.process.map((step, idx) => (

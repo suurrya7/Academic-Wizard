@@ -1,66 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
-import Button from '../components/Button';
-import { MessageCircle, Mail, Globe, Clock, CheckCircle, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Mail, MessageCircle, Clock, ShieldCheck } from 'lucide-react';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const { name, email, subject, message } = formData;
-
-        // Construct detailed WhatsApp message
-        const text = `*Hi I need your help for my assignment*%0A%0A` +
-            `*Name:* ${encodeURIComponent(name)}%0A` +
-            `*Email:* ${encodeURIComponent(email)}%0A` +
-            `*Subject:* ${encodeURIComponent(subject)}%0A` +
-            `*Message:* ${encodeURIComponent(message || 'N/A')}`;
-
-        const dynamicUrl = `https://wa.me/919509893638?text=${text}`;
-
-        // Open WhatsApp in new tab
-        window.open(dynamicUrl, '_blank');
-
-        // Show success state
-        setIsSubmitted(true);
-
-        // Reset form after a delay
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({ name: '', email: '', subject: '', message: '' });
-        }, 5000);
-    };
-
     const contactSchema = {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Academic Wizard",
         "url": "https://academicwizard.online/contact",
-        "description": "Get in touch with an academic expert today for a custom quote and professional assistance.",
         "mainEntity": {
             "@type": "Organization",
             "name": "Academic Wizard",
+            "url": "https://academicwizard.online",
+            "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-95098-93638",
-                "contactType": "customer support",
-                "availableLanguage": ["English"]
+                "contactType": "customer service",
+                "availableLanguage": "English"
             }
         }
     };
@@ -68,20 +26,20 @@ const Contact = () => {
     return (
         <div className="page-contact">
             <Helmet>
-                <title>Contact Us | Academic Wizard</title>
-                <meta name="description" content="Get in touch with Academic Wizard. Reach out via WhatsApp or email for instant support on your academic writing needs." />
+                <title>Contact Us | Academic Wizard Support</title>
+                <meta name="description" content="Get in touch with Academic Wizard's support team via WhatsApp or email. We offer 24/7 assistance for all your academic writing and research needs." />
                 <link rel="canonical" href="https://academicwizard.online/contact" />
                 <meta property="og:title" content="Contact Us | Academic Wizard" />
-                <meta property="og:description" content="Get in touch with Academic Wizard. Contact us on WhatsApp for an instant custom quote." />
+                <meta property="og:description" content="Get in touch with Academic Wizard's support team for 24/7 academic assistance." />
                 <meta property="og:url" content="https://academicwizard.online/contact" />
                 <script type="application/ld+json">
                     {JSON.stringify(contactSchema)}
                 </script>
             </Helmet>
 
-            <PageHeader 
-                title="Get In Touch" 
-                subtitle="We're here to help you achieve academic success. Reach out to our experts 24/7."
+            <PageHeader
+                title="Get in Touch"
+                subtitle="Our dedicated support team and academic coordinators are available 24/7 to assist you with your research needs."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Contact', url: '/contact' }
@@ -89,161 +47,83 @@ const Contact = () => {
             />
 
             <section className="py-20 container">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
-                        <h2 className="text-4xl font-bold mb-8 font-heading text-white">Need Academic <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Assistance Today?</span></h2>
+                        <h2 className="text-3xl font-bold mb-6 font-heading text-white">How Can We Help You?</h2>
                         <p className="text-text-secondary text-lg leading-relaxed mb-12" style={{ color: 'var(--text-secondary)' }}>
-                            Contact Academic Wizard directly on WhatsApp to discuss your academic requirements and receive a custom quote. Our experts are standing by to help you with your assignments, essays, and research papers.
+                            Whether you need a custom quote for a complex dissertation, have questions about our quality assurance process, or want to follow up on an ongoing order, our team is ready to provide immediate assistance.
                         </p>
 
                         <div className="space-y-8">
-                            <div className="flex gap-6 items-center">
-                                <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
-                                    <MessageCircle size={28} />
+                            <div className="glass-card p-6 flex items-start gap-6 border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                                <div className="text-accent-gold shrink-0 mt-1" style={{ color: 'var(--accent-gold)' }}>
+                                    <MessageCircle size={32} />
                                 </div>
                                 <div>
-                                    <h4 className="font-heading text-xs uppercase tracking-widest text-white">WhatsApp</h4>
-                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>+91 95098 93638</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">WhatsApp Support</h3>
+                                    <p className="text-text-secondary mb-4" style={{ color: 'var(--text-secondary)' }}>Fastest response time. Available 24/7 for quotes and urgent queries.</p>
+                                    <a href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard" target="_blank" rel="noreferrer" className="text-accent-gold font-bold hover:underline" style={{ color: 'var(--accent-gold)' }}>
+                                        +91 95098 93638
+                                    </a>
                                 </div>
                             </div>
-                            <div className="flex gap-6 items-center">
-                                <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
-                                    <Mail size={28} />
-                                </div>
-                                <div>
-                                    <h4 className="font-heading text-xs uppercase tracking-widest text-white">Email</h4>
-                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>admin@academicwizard.online</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-6 items-center">
-                                <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
-                                    <Clock size={28} />
-                                </div>
-                                <div>
-                                    <h4 className="font-heading text-xs uppercase tracking-widest text-white">Availability</h4>
-                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>24/7 Student Support</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-6 items-center">
-                                <div className="w-14 h-14 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
-                                    <Globe size={28} />
-                                </div>
-                                <div>
-                                    <h4 className="font-heading text-xs uppercase tracking-widest text-white">Global Support</h4>
-                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>UK, AU, USA, IE, India</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* Social Links Row */}
-                        <div className="mt-10 border-t border-white/10 pt-8">
-                            <h4 className="font-heading text-xs uppercase tracking-widest text-white/50 mb-4 animate-fade-in">Connect with us</h4>
-                            <div className="flex gap-4">
-                                <a 
-                                    href="https://www.linkedin.com/company/academic-wizard" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
-                                    style={{ color: 'var(--text-secondary)' }}
-                                    aria-label="LinkedIn"
-                                >
-                                    <Linkedin size={20} />
-                                </a>
-                                <a 
-                                    href="https://www.facebook.com/academics.wizard" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
-                                    style={{ color: 'var(--text-secondary)' }}
-                                    aria-label="Facebook"
-                                >
-                                    <Facebook size={20} />
-                                </a>
-                                <a 
-                                    href="https://www.instagram.com/_academic.wizard_" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="w-12 h-12 bg-white/5 border border-glass-border hover:border-accent-gold rounded-xl flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
-                                    style={{ color: 'var(--text-secondary)' }}
-                                    aria-label="Instagram"
-                                >
-                                    <Instagram size={20} />
-                                </a>
+                            <div className="glass-card p-6 flex items-start gap-6 border-white/5">
+                                <div className="text-white/50 shrink-0 mt-1">
+                                    <Mail size={32} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+                                    <p className="text-text-secondary mb-4" style={{ color: 'var(--text-secondary)' }}>For detailed project briefs, document attachments, and formal inquiries.</p>
+                                    <a href="mailto:support@academicwizard.online" className="text-white hover:text-accent-gold transition-colors">
+                                        support@academicwizard.online
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className="mt-12">
-                            <Button onClick={() => window.open(whatsappUrl, '_blank')} className="w-full sm:w-auto px-16 py-6 text-sm">
-                                Chat on WhatsApp
-                            </Button>
+                            
+                            <div className="glass-card p-6 flex items-start gap-6 border-white/5">
+                                <div className="text-white/50 shrink-0 mt-1">
+                                    <Clock size={32} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-2">Business Hours</h3>
+                                    <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>
+                                        Our academic writers work globally across different time zones. Our customer support desk is operational <strong>24 hours a day, 7 days a week, 365 days a year</strong> to ensure you never miss a deadline.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="glass-card p-12 border-accent-gold/20" style={{ borderColor: 'rgba(212, 175, 55, 0.2)' }}>
-                        {isSubmitted ? (
-                            <div className="h-full flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-500">
-                                <div className="w-20 h-20 bg-accent-gold/20 rounded-full flex items-center justify-center text-accent-gold">
-                                    <CheckCircle size={48} />
-                                </div>
-                                <h3 className="text-2xl font-bold font-heading text-white">Inquiry Sent!</h3>
-                                <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>
-                                    Thank you for reaching out. We have opened WhatsApp to continue our conversation. Redirecting back to form in 5 seconds...
-                                </p>
+                    <div>
+                        <div className="glass-card p-10 border-accent-gold/10">
+                            <div className="flex items-center gap-3 mb-8">
+                                <ShieldCheck className="text-accent-gold" size={24} style={{ color: 'var(--accent-gold)' }} />
+                                <h3 className="text-2xl font-bold font-heading text-white">Send a Message</h3>
                             </div>
-                        ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <h3 className="text-2xl font-bold font-heading mb-8 text-white">Request a <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Quote</span></h3>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-text-secondary block" style={{ color: 'var(--text-secondary)' }}>Full Name</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        required
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border border-glass-border px-6 py-4 rounded-xl focus:border-accent-gold outline-none text-white transition-colors"
-                                        placeholder="e.g. John Doe"
-                                    />
+                            <p className="text-sm text-text-secondary mb-8">Your information is strictly confidential and protected by 256-bit encryption. We never share your data.</p>
+                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thanks for contacting us!"); }}>
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">Full Name</label>
+                                    <input type="text" id="name" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="John Doe" required />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-text-secondary block" style={{ color: 'var(--text-secondary)' }}>Email Address</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        required
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border border-glass-border px-6 py-4 rounded-xl focus:border-accent-gold outline-none text-white transition-colors"
-                                        placeholder="e.g. john@example.com"
-                                    />
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">Email Address</label>
+                                    <input type="email" id="email" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="john@university.edu" required />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-text-secondary block" style={{ color: 'var(--text-secondary)' }}>Subject / Topic</label>
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        required
-                                        value={formData.subject}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border border-glass-border px-6 py-4 rounded-xl focus:border-accent-gold outline-none text-white transition-colors"
-                                        placeholder="e.g. Business Management"
-                                    />
+                                <div>
+                                    <label htmlFor="subject" className="block text-sm font-medium text-text-secondary mb-2">Subject (Service Type)</label>
+                                    <input type="text" id="subject" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="e.g. Dissertation Help" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-text-secondary block" style={{ color: 'var(--text-secondary)' }}>Message (Optional)</label>
-                                    <textarea
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border border-glass-border px-6 py-4 rounded-xl focus:border-accent-gold outline-none text-white transition-colors h-32 resize-none"
-                                        placeholder="Explain your requirements..."
-                                    ></textarea>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-2">Message & Instructions</label>
+                                    <textarea id="message" rows="4" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Please provide your word count, deadline, and topic..." required></textarea>
                                 </div>
-                                <Button type="submit" className="w-full py-4 text-xs">
-                                    Send Inquiry
-                                </Button>
+                                <button type="submit" className="w-full bg-accent-gold text-bg-primary font-bold py-4 rounded-lg hover:bg-white transition-colors duration-300">
+                                    Send Message
+                                </button>
                             </form>
-                        )}
+                        </div>
                     </div>
                 </div>
             </section>

@@ -85,7 +85,40 @@ const Tools = () => {
                         ]
                     })}
                 </script>
-            </Helmet>
+            
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "Are these academic writing tools completely free?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, our entire suite of academic tools is completely free. We provide a limited daily trial for visitors, which can be unlocked for unlimited weekly use by requesting a free activation code from our support team on WhatsApp or social media."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Do these tools store my essays or private data?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "No. Unlike commercial alternatives that save your work to database servers, Academic Wizard's tools analyze data locally on your computer. Your text is never stored, sold, or shared with third parties, keeping your intellectual property safe."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Which academic citation formats are supported?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Our Citation Generator supports major styling guidelines, including APA 7th Edition, MLA 9th Edition, Harvard, Chicago manual of style, IEEE, and Vancouver numeric formatting, suitable for all college subjects."
+                                }
+                            }
+                        ]
+                    })}
+                </script>
+</Helmet>
 
             <PageHeader 
                 title="Free Student Tools" 
@@ -95,6 +128,30 @@ const Tools = () => {
                     { name: 'Tools', url: '/tools' }
                 ]}
             />
+
+            
+            <section className="py-12 bg-bg-secondary">
+                <div className="container px-6 max-w-5xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold font-heading text-white mb-6">Enhance Your Writing Workflow</h2>
+                    <p className="text-text-secondary leading-relaxed mb-10 max-w-3xl mx-auto">
+                        We believe that powerful academic tools should be accessible to all students. Whether you're checking for grammatical precision, formatting complex bibliographies, or ensuring originality, our specialized, browser-based utilities offer premium features completely free of charge.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6 text-left">
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Privacy First</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">Unlike commercial platforms, our tools process your text locally. Your essays and research are never saved, stored, or indexed.</p>
+                        </div>
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Unlimited Access</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">No expensive monthly subscriptions. Simply reach out to our team to unlock unlimited weekly access to all features.</p>
+                        </div>
+                        <div className="glass-card p-6 border-accent-gold/20">
+                            <h3 className="text-xl font-bold mb-3 font-heading" style={{ color: 'var(--accent-gold)' }}>Academic Accuracy</h3>
+                            <p className="text-sm text-text-secondary leading-relaxed">Built specifically for university standards, from accurate 7th Edition APA citations to rigorous AI detection algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section className="py-20 text-white">
                 <div className="container space-y-20">
