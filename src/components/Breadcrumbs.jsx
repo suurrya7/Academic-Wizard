@@ -9,8 +9,10 @@ import { ChevronRight } from 'lucide-react';
  * 
  * @param {Array} paths - Array of objects { name: string, url: string }
  */
-const Breadcrumbs = ({ paths }) => {
+const Breadcrumbs = ({ paths, align = "left" }) => {
     if (!paths || paths.length === 0) return null;
+
+    const alignClass = align === "center" ? "justify-center" : "justify-start";
 
     // Generate JSON-LD Schema
     const breadcrumbSchema = {
@@ -25,7 +27,7 @@ const Breadcrumbs = ({ paths }) => {
     };
 
     return (
-        <nav aria-label="Breadcrumb" className="w-full flex items-center text-xs font-heading tracking-wider uppercase text-white/50 mb-6 overflow-x-auto whitespace-nowrap hide-scrollbar">
+        <nav aria-label="Breadcrumb" className={`w-full flex items-center ${alignClass} text-xs font-heading tracking-wider uppercase text-white/50 mb-6 overflow-x-auto whitespace-nowrap hide-scrollbar`}>
             <Helmet>
                 <script type="application/ld+json">
                     {JSON.stringify(breadcrumbSchema)}

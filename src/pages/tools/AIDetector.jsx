@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import { Cpu, AlertCircle, Sparkles, User, RefreshCw, BarChart2 } from 'lucide-react';
+import { ActivationContext } from '../../components/ActivationGate';
 
 const AI_BUZZWORDS = [
     'delve', 'testament', 'furthermore', 'meticulously', 'showcasing', 
@@ -16,6 +17,7 @@ const AI_BUZZWORDS = [
 ];
 
 const AIDetector = () => {
+    const { useCount, maxUses, unlocked } = useContext(ActivationContext);
     const [text, setText] = useState('');
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(null);
@@ -199,9 +201,16 @@ const AIDetector = () => {
                             />
                             
                             <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-4">
-                                <span className="text-xs text-white/40 font-mono">
-                                    {text.split(/\s+/).filter(Boolean).length} words
-                                </span>
+                                <div className="flex items-center gap-4">
+                                    <span className="text-xs text-white/40 font-mono">
+                                        {text.split(/\s+/).filter(Boolean).length} words
+                                    </span>
+                                    {!unlocked && (
+                                        <span className="text-xs bg-accent-gold/10 border border-accent-gold/20 text-accent-gold px-2.5 py-1 rounded-full font-bold">
+                                            Free Uses: {useCount} / {maxUses}
+                                        </span>
+                                    )}
+                                </div>
                                 <div className="flex gap-3">
                                     {text.trim() && (
                                         <button 

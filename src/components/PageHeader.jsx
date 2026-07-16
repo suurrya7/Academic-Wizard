@@ -8,7 +8,7 @@ const PageHeader = ({ title, subtitle, breadcrumbs }) => {
             <div className="container px-6 text-center relative z-10 flex flex-col items-center">
                 {breadcrumbs && (
                     <div className="w-full flex justify-center mb-8">
-                        <Breadcrumbs paths={breadcrumbs} />
+                        <Breadcrumbs paths={breadcrumbs} align="center" />
                     </div>
                 )}
                 <motion.h1

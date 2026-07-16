@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import { Copy, Trash2, Plus, Download, Check } from 'lucide-react';
+import { ActivationContext } from '../../components/ActivationGate';
 
 const CitationGenerator = () => {
+    const { useCount, maxUses, unlocked } = useContext(ActivationContext);
     const [sourceType, setSourceType] = useState('website'); // website, journal, book
     const [style, setStyle] = useState('apa'); // apa, mla, harvard, chicago, ieee, vancouver
     
@@ -564,7 +566,14 @@ const CitationGenerator = () => {
                     <div className="space-y-8">
                         {/* Live Output */}
                         <div className="glass-card p-8 border-accent-gold/30" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
-                            <h3 className="text-xl font-bold mb-6 font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Live Citation</h3>
+                            <div className="flex justify-between items-center mb-6">
+                                <h3 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Live Citation</h3>
+                                {!unlocked && (
+                                    <span className="text-xs bg-accent-gold/10 border border-accent-gold/20 text-accent-gold px-2.5 py-1 rounded-full font-bold">
+                                        Free Uses: {useCount} / {maxUses}
+                                    </span>
+                                )}
+                            </div>
                             
                             <div className="space-y-6">
                                 <div>

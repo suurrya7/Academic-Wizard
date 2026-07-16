@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import { Sparkles, Play, Clock } from 'lucide-react';
+import { ActivationContext } from '../../components/ActivationGate';
 
 const AIHumanizer = () => {
+    const { useCount, maxUses, unlocked } = useContext(ActivationContext);
     const [sessionActive, setSessionActive] = useState(false);
     const [timeLeft, setTimeLeft] = useState(0);
 
@@ -134,11 +136,18 @@ const AIHumanizer = () => {
                             <h3 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
                                 Humanizer Engine
                             </h3>
-                            {sessionActive && (
-                                <span className="text-xs px-3 py-1.5 bg-red-500/10 border border-red-500/20 text-red-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">
-                                    <Clock size={14} /> Session Time: {formatTime(timeLeft)}
-                                </span>
-                            )}
+                            <div className="flex items-center gap-3">
+                                {sessionActive && (
+                                    <span className="text-xs px-3 py-1.5 bg-red-500/10 border border-red-500/20 text-red-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">
+                                        <Clock size={14} /> Session Time: {formatTime(timeLeft)}
+                                    </span>
+                                )}
+                                {!unlocked && (
+                                    <span className="text-xs bg-accent-gold/10 border border-accent-gold/20 text-accent-gold px-3 py-1.5 rounded-full font-bold">
+                                        Free Sessions: {useCount} / {maxUses}
+                                    </span>
+                                )}
+                            </div>
                         </div>
 
                         {sessionActive ? (

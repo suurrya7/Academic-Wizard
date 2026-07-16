@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
 import { Lock, Copy, Check, MessageSquare, Instagram, Facebook, AlertCircle, RefreshCw, Sparkles } from 'lucide-react';
 
+export const ActivationContext = React.createContext();
+
 // Shift +1 character shift algorithm for hex UUIDs
 const shiftChar = (char) => {
     if (char >= '0' && char <= '9') {
@@ -68,10 +70,10 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                 localStorage.removeItem('academic_wizard_activation_date');
                 
                 // Max out counters so they are locked immediately and see the activation screen
-                localStorage.setItem('academic_wizard_citation_uses', '10');
-                localStorage.setItem('academic_wizard_grammar_uses', '10');
-                localStorage.setItem('academic_wizard_detector_uses', '10');
-                localStorage.setItem('academic_wizard_humanizer_uses', '5');
+                localStorage.setItem('academic_wizard_citation_uses', '5');
+                localStorage.setItem('academic_wizard_grammar_uses', '5');
+                localStorage.setItem('academic_wizard_detector_uses', '5');
+                localStorage.setItem('academic_wizard_humanizer_uses', '3');
                 
                 setUnlocked(false);
                 setError('Your weekly activation code has expired. Please request a new weekly code.');
@@ -168,21 +170,17 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
 
     if (!isLimitExceeded) {
         return (
-            <div className="relative">
-                {!unlocked && (
-                    <div className="absolute top-4 right-4 z-50 bg-accent-gold/10 border border-accent-gold/20 text-accent-gold text-xs px-3 py-1.5 rounded-full font-bold">
-                        Trial Uses: {useCount} / {maxUses}
-                    </div>
-                )}
-                
-                {activationSuccess && (
-                    <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-[100] bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-2 border border-emerald-400/30 animate-bounce">
-                        <Check size={16} /> Academic Suite Activated for 7 Days!
-                    </div>
-                )}
-                
-                {children}
-            </div>
+            <ActivationContext.Provider value={{ useCount, maxUses, unlocked }}>
+                <div className="relative">
+                    {activationSuccess && (
+                        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-[100] bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-2 border border-emerald-400/30 animate-bounce">
+                            <Check size={16} /> Academic Suite Activated for 7 Days!
+                        </div>
+                    )}
+                    
+                    {children}
+                </div>
+            </ActivationContext.Provider>
         );
     }
 

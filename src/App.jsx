@@ -62,10 +62,10 @@ function App() {
               
               {/* Tools Routes */}
               <Route path="/tools" element={<Tools />} />
-              <Route path="/tools/citation-generator" element={<ActivationGate toolKey="citation" maxUses={10}><CitationGenerator /></ActivationGate>} />
-              <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={10}><GrammarChecker /></ActivationGate>} />
-              <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={10}><AIDetector /></ActivationGate>} />
-              <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={5}><AIHumanizer /></ActivationGate>} />
+              <Route path="/tools/citation-generator" element={<ActivationGate toolKey="citation" maxUses={5}><CitationGenerator /></ActivationGate>} />
+              <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={5}><GrammarChecker /></ActivationGate>} />
+              <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={5}><AIDetector /></ActivationGate>} />
+              <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={3}><AIHumanizer /></ActivationGate>} />
               <Route path="/activation-generator-secret" element={<ActivationCodeGenerator />} />
             </Routes>
           </Suspense>

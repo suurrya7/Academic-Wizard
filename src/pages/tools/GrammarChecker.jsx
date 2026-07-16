@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import { CheckCircle, AlertTriangle, RefreshCw, Copy, Check } from 'lucide-react';
+import { ActivationContext } from '../../components/ActivationGate';
 
 const GrammarChecker = () => {
+    const { useCount, maxUses, unlocked } = useContext(ActivationContext);
     const [text, setText] = useState('');
     const [loading, setLoading] = useState(false);
     const [matches, setMatches] = useState([]);
@@ -148,9 +150,16 @@ const GrammarChecker = () => {
                             />
                             
                             <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-4">
-                                <span className="text-xs text-white/40 font-mono">
-                                    {text.length} / 20,000 characters
-                                </span>
+                                <div className="flex items-center gap-4">
+                                    <span className="text-xs text-white/40 font-mono">
+                                        {text.length} / 20,000 characters
+                                    </span>
+                                    {!unlocked && (
+                                        <span className="text-xs bg-accent-gold/10 border border-accent-gold/20 text-accent-gold px-2.5 py-1 rounded-full font-bold">
+                                            Free Uses: {useCount} / {maxUses}
+                                        </span>
+                                    )}
+                                </div>
                                 <div className="flex gap-3">
                                     {text.trim() && (
                                         <>
