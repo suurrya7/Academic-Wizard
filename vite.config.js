@@ -36,18 +36,18 @@ export default defineConfig({
     prerenderer({
       routes: [
         '/', 
-        '/services', 
-        '/about', 
-        '/faq', 
-        '/contact', 
-        '/blog',
-        '/privacy-policy',
-        '/terms-of-service',
-        '/tools',
-        '/tools/citation-generator',
-        '/tools/grammar-checker',
-        '/tools/ai-detector',
-        '/tools/ai-humanizer',
+        '/services/', 
+        '/about/', 
+        '/faq/', 
+        '/contact/', 
+        '/blog/',
+        '/privacy-policy/',
+        '/terms-of-service/',
+        '/tools/',
+        '/tools/citation-generator/',
+        '/tools/grammar-checker/',
+        '/tools/ai-detector/',
+        '/tools/ai-humanizer/',
         ...serviceRoutes,
         ...countryServiceRoutes
       ],
@@ -55,10 +55,10 @@ export default defineConfig({
         port: 5174 // Use a custom port for the static server
       },
       renderer: new puppeteer({
-        renderAfterTime: 10000,
+        renderAfterTime: 1000, // 1 second is plenty for static rendering
         headless: true,
-        maxConcurrentRoutes: 3,
-        navigationTimeout: 120000
+        maxConcurrentRoutes: 5, // Process 5 routes at a time to speed it up
+        navigationTimeout: 60000
       })
     })
   ],
