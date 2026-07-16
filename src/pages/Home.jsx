@@ -56,6 +56,68 @@ const Home = () => {
             </section>
 
             <ServiceOverview />
+
+            {/* Free Writing Tools Teaser */}
+            <section className="py-20 text-white relative">
+                <div className="container space-y-12">
+                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                        <h2 className="text-3xl md:text-5xl font-bold font-heading">
+                            Free <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Student Tools</span> Suite
+                        </h2>
+                        <p className="text-text-secondary text-sm md:text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                            Instantly boost your academic grades with our free, browser-based referencing, editing, and authenticity checkers.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">Citation Maker</h3>
+                                <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Generate referencing citations in APA 7th, MLA 9th, Harvard, IEEE, and Chicago styles instantly.
+                                </p>
+                            </div>
+                            <Button type="outline" onClick={() => window.location.href='/tools/citation-generator'} className="w-full py-2 text-[10px]">
+                                Launch Builder
+                            </Button>
+                        </div>
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">Grammar Checker</h3>
+                                <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Proofread your essays, edit spelling slips, and improve writing styles in real-time.
+                                </p>
+                            </div>
+                            <Button type="outline" onClick={() => window.location.href='/tools/grammar-checker'} className="w-full py-2 text-[10px]">
+                                Launch Editor
+                            </Button>
+                        </div>
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">AI Detector</h3>
+                                <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Scan drafts for perplexity metrics, sentence uniformity, and AI-typical buzzwords.
+                                </p>
+                            </div>
+                            <Button type="outline" onClick={() => window.location.href='/tools/ai-detector'} className="w-full py-2 text-[10px]">
+                                Scan Draft
+                            </Button>
+                        </div>
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">AI Humanizer</h3>
+                                <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                    Transform robotic AI text into natural academic phrasing to bypass detectors like Turnitin.
+                                </p>
+                            </div>
+                            <Button type="outline" onClick={() => window.location.href='/tools/ai-humanizer'} className="w-full py-2 text-[10px]">
+                                Humanize Text
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <SubjectsGrid />
             <FeaturesGrid />
             <Testimonials />
