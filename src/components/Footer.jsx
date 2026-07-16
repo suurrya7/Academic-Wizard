@@ -58,12 +58,12 @@ const Footer = () => {
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
-                        <li><Link to="/tools" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
-                        <li><Link to="/about" className="hover:text-accent-gold transition-colors">About Us</Link></li>
-                        <li><Link to="/faq" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
-                        <li><Link to="/blog" className="hover:text-accent-gold transition-colors">Blog</Link></li>
-                        <li><Link to="/contact" className="hover:text-accent-gold transition-colors">Contact</Link></li>
+                        <li><Link to="/services/" className="hover:text-accent-gold transition-colors">Services</Link></li>
+                        <li><Link to="/tools/" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
+                        <li><Link to="/about/" className="hover:text-accent-gold transition-colors">About Us</Link></li>
+                        <li><Link to="/faq/" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
+                        <li><Link to="/blog/" className="hover:text-accent-gold transition-colors">Blog</Link></li>
+                        <li><Link to="/contact/" className="hover:text-accent-gold transition-colors">Contact</Link></li>
                     </ul>
                 </div>
 

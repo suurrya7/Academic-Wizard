@@ -43,6 +43,11 @@ export default defineConfig({
         '/blog',
         '/privacy-policy',
         '/terms-of-service',
+        '/tools',
+        '/tools/citation-generator',
+        '/tools/grammar-checker',
+        '/tools/ai-detector',
+        '/tools/ai-humanizer',
         ...serviceRoutes,
         ...countryServiceRoutes
       ],
