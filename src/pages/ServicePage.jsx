@@ -122,6 +122,20 @@ const ServicePage = () => {
                 </div>
             </section>
 
+            {/* Why Choose Us Section */}
+            {service.whyChooseUs && (
+                <section className="py-16 border-t border-glass-border">
+                    <div className="container px-6 max-w-4xl mx-auto">
+                        <div className="glass-card p-10 border-accent-gold/20">
+                            <h2 className="text-2xl md:text-3xl font-bold font-heading text-white mb-6">
+                                Why Academic Wizard for {service.title}?
+                            </h2>
+                            <p className="text-text-secondary leading-relaxed text-lg">{service.whyChooseUs}</p>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Features / What's Included */}
             <section className="py-20 border-t border-glass-border">
                 <div className="container px-6">

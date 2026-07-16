@@ -135,6 +135,22 @@ const CountryServicePage = () => {
                     <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed mb-10">
                         <p>{overviewText}</p>
                     </div>
+
+                    {/* Local University Insight Block */}
+                    {country.localInsight && (
+                        <div className="glass-card p-8 mb-10 border-l-4" style={{ borderLeftColor: 'var(--accent-gold)' }}>
+                            <div className="flex items-start gap-4">
+                                <div className="shrink-0 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent-gold)' }}><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-white mb-2 font-heading" style={{ color: 'var(--accent-gold)' }}>University Insight: {country.name}</h3>
+                                    <p className="text-text-secondary text-sm leading-relaxed">{country.localInsight}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     <div className="grid md:grid-cols-2 gap-8 text-left mt-12">
                         <div className="glass-card p-8 border-accent-gold/10">
                             <h3 className="text-2xl font-bold text-white mb-4 font-heading">Why Choose Us in {country.name}?</h3>
