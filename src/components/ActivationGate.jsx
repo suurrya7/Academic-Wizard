@@ -15,18 +15,9 @@ const shiftChar = (char) => {
     return char;
 };
 
-// Generates the shift +1 code for the given UUID Device ID
+// Generates the activation code for the given UUID Device ID (static code for all users)
 export const generateCode = (deviceId) => {
-    const parts = deviceId.trim().toLowerCase().split('-');
-    if (parts.length !== 5) return '';
-    
-    const char1 = shiftChar(parts[0][0]);
-    const char2 = shiftChar(parts[1][0]);
-    const char3 = shiftChar(parts[2][0]);
-    const char4 = shiftChar(parts[3][0]);
-    const char5 = shiftChar(parts[4][0]);
-    
-    return `${char1}${char2}${char3}AWIZ${char4}${char5}`;
+    return 'AWIZ-ACAD-PRO-SUITE';
 };
 
 // Helper to get or create a Device ID
