@@ -28,7 +28,7 @@ const CountryServicePage = () => {
     }, [service]);
 
     if (!service) {
-        return <Navigate to="/services" replace />;
+        return <Navigate to="/services/" replace />;
     }
 
     const country = service.countries.find(c => c.slug === countrySlug);

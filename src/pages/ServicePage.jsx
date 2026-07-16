@@ -30,7 +30,7 @@ const ServicePage = () => {
     }, [service]);
 
     if (!service) {
-        return <Navigate to="/services" replace />;
+        return <Navigate to="/services/" replace />;
     }
 
     const Icon = service.icon;

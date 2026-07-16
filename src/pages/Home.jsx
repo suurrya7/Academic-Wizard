@@ -77,7 +77,7 @@ const Home = () => {
                                     Generate referencing citations in APA 7th, MLA 9th, Harvard, IEEE, and Chicago styles instantly.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/citation-generator'} className="w-full py-2 text-[10px]">
+                            <Button type="outline" onClick={() => window.location.href='/tools/citation-generator/'} className="w-full py-2 text-[10px]">
                                 Launch Builder
                             </Button>
                         </div>
@@ -88,7 +88,7 @@ const Home = () => {
                                     Proofread your essays, edit spelling slips, and improve writing styles in real-time.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/grammar-checker'} className="w-full py-2 text-[10px]">
+                            <Button type="outline" onClick={() => window.location.href='/tools/grammar-checker/'} className="w-full py-2 text-[10px]">
                                 Launch Editor
                             </Button>
                         </div>
@@ -99,7 +99,7 @@ const Home = () => {
                                     Scan drafts for perplexity metrics, sentence uniformity, and AI-typical buzzwords.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/ai-detector'} className="w-full py-2 text-[10px]">
+                            <Button type="outline" onClick={() => window.location.href='/tools/ai-detector/'} className="w-full py-2 text-[10px]">
                                 Scan Draft
                             </Button>
                         </div>
@@ -110,7 +110,7 @@ const Home = () => {
                                     Transform robotic AI text into natural academic phrasing to bypass detectors like Turnitin.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/ai-humanizer'} className="w-full py-2 text-[10px]">
+                            <Button type="outline" onClick={() => window.location.href='/tools/ai-humanizer/'} className="w-full py-2 text-[10px]">
                                 Humanize Text
                             </Button>
                         </div>

@@ -3,12 +3,23 @@ import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 
 const TermsOfService = () => {
+    const termsSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service | Academic Wizard",
+        "url": "https://academicwizard.online/terms-of-service/",
+        "description": "Read the terms of service and usage conditions for Academic Wizard's consulting and research services."
+    };
+
     return (
         <div className="page-legal">
             <Helmet>
                 <title>Terms of Service | Academic Wizard</title>
                 <meta name="description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
-                <link rel="canonical" href="https://academicwizard.online/terms-of-service" />
+                <link rel="canonical" href="https://academicwizard.online/terms-of-service/" />
+                <script type="application/ld+json">
+                    {JSON.stringify(termsSchema)}
+                </script>
             </Helmet>
 
             <PageHeader 

@@ -344,7 +344,7 @@ const AIDetector = () => {
                                             <p className="text-xs text-red-200 leading-relaxed">
                                                 Audited scores show robotically structured sentences and phrases. Bypass AI scanning by runnning our Text Humanizer.
                                             </p>
-                                            <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white" onClick={() => window.location.href='/tools/ai-humanizer'}>
+                                            <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white" onClick={() => window.location.href='/tools/ai-humanizer/'}>
                                                 Humanize Text Now
                                             </Button>
                                         </div>

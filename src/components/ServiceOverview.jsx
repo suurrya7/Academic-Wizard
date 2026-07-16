@@ -16,7 +16,7 @@ const ServiceOverview = () => {
                             Academic Wizard offers professional academic assistance for students who need help with assignments, essays, dissertations, and research papers. Our academic experts provide research guidance, editing services, and academic writing support.
                         </p>
                     </div>
-                    <Link to="/services">
+                    <Link to="/services/">
                         <Button type="outline">View All Services</Button>
                     </Link>
                 </div>

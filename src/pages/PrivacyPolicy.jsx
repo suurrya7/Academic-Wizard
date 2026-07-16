@@ -3,12 +3,23 @@ import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 
 const PrivacyPolicy = () => {
+    const policySchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy | Academic Wizard",
+        "url": "https://academicwizard.online/privacy-policy/",
+        "description": "Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data."
+    };
+
     return (
         <div className="page-legal">
             <Helmet>
                 <title>Privacy Policy | Academic Wizard</title>
                 <meta name="description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
-                <link rel="canonical" href="https://academicwizard.online/privacy-policy" />
+                <link rel="canonical" href="https://academicwizard.online/privacy-policy/" />
+                <script type="application/ld+json">
+                    {JSON.stringify(policySchema)}
+                </script>
             </Helmet>
 
             <PageHeader 
