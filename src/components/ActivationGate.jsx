@@ -186,7 +186,8 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
         );
     }
 
-    const msgText = `Hello Academic Wizard Team! 👋\n\nI would like to activate my free academic tools suite.\n\nHere is my unique Device ID:\n${deviceId}\n\nPlease send me my weekly activation link. Thank you!`;
+    const requestCode = 'AWIZ-FREE-7D-ACCESS';
+    const msgText = `Hello Academic Wizard Team! 👋\n\nI want to request free access.\nRequest Code: ${requestCode}\nDevice ID: ${deviceId}`;
     const whatsappMsg = encodeURIComponent(msgText);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
     const fbUrl = `https://m.me/108992517116465?text=${whatsappMsg}`;
@@ -218,9 +219,27 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     </p>
                 </div>
 
-                {/* Step 1: Copy Request Code/Message */}
+                {/* Step 1: Copy Device ID */}
                 <div className="w-full space-y-2 text-left">
-                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 1: Copy Verification Request Code</span>
+                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 1: Copy Your Device ID</span>
+                    <div className="w-full bg-black/40 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
+                        <div className="text-left overflow-hidden">
+                            <span className="font-mono text-xs text-white/90 block truncate">{deviceId}</span>
+                        </div>
+                        <button 
+                            onClick={handleCopyId}
+                            className="px-3.5 py-2 bg-white/10 text-white hover:bg-white/20 rounded-lg text-[10px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-1.5 flex-shrink-0"
+                            aria-label="Copy Device ID"
+                        >
+                            {copiedId ? <Check size={12} className="text-emerald-400" /> : <Copy size={12} />}
+                            {copiedId ? 'Copied' : 'Copy ID'}
+                        </button>
+                    </div>
+                </div>
+
+                {/* Step 2: Copy Request Code */}
+                <div className="w-full space-y-2 text-left">
+                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 2: Copy Verification Request Code</span>
                     <div className="w-full bg-black/40 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
                         <div className="text-left overflow-hidden">
                             <span className="font-mono text-xs text-accent-gold block truncate">{msgText}</span>
@@ -228,7 +247,7 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                         <button 
                             onClick={handleCopyMsg}
                             className="px-3.5 py-2 bg-accent-gold text-bg-primary hover:bg-white hover:text-bg-primary rounded-lg text-[10px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-1.5 flex-shrink-0"
-                            aria-label="Copy Verification Message"
+                            aria-label="Copy Request Code"
                         >
                             {copiedMsg ? <Check size={12} className="text-bg-primary" /> : <Copy size={12} />}
                             {copiedMsg ? 'Copied' : 'Copy Code'}
@@ -236,9 +255,9 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     </div>
                 </div>
 
-                {/* Step 2: Send Message on Social Channels */}
+                {/* Step 3: Send Message on Social Channels */}
                 <div className="w-full space-y-2 text-left">
-                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 2: Send on any platform to support us</span>
+                    <span className="block text-[9px] uppercase tracking-wider text-white/40 font-bold">Step 3: Send to support on any platform</span>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
                         <a 
                             href={whatsappUrl}
@@ -275,14 +294,23 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
                     <h4 className="font-bold text-accent-gold uppercase tracking-wider text-[10px]" style={{ color: 'var(--accent-gold)' }}>How to Activate:</h4>
                     <ul className="space-y-3 text-white/70 leading-relaxed list-decimal pl-4">
                         <li>
-                            <strong className="text-white">Copy the Verification Code:</strong> Click the "Copy Code" button in Step 1. You will need to send this to us.
+                            <strong className="text-white">Copy Code and ID:</strong> Copy your <strong>Device ID</strong> (Step 1) and your <strong>Verification Request Code</strong> (Step 2).
                         </li>
                         <li>
-                            <strong className="text-white">Send on Social Media:</strong> Click any of the social platforms in Step 2.
+                            <strong className="text-white">Send to us:</strong> Click WhatsApp, Instagram, or Facebook in Step 3 to open our support chat. Send the copied details.
                             <div className="mt-2 p-3 bg-white/5 border-l-2 border-accent-gold rounded text-white/60 text-[11px] leading-relaxed">
                                 <strong className="text-accent-gold uppercase text-[9px] tracking-wider block mb-1">Prefilled Message Note:</strong>
-                                Clicking <strong>WhatsApp</strong> or <strong>Facebook</strong> will open Messenger with your activation request pre-filled automatically! For <strong>Instagram</strong>, please paste the copied text manually into our DMs.
+                                Clicking <strong>WhatsApp</strong> or <strong>Facebook</strong> will open the chat with your request details pre-filled automatically! For <strong>Instagram</strong>, please paste the copied text manually.
                             </div>
+                        </li>
+                        <li>
+                            <strong className="text-white">Open the generation link:</strong> Our support team will reply with a secret key generation URL.
+                        </li>
+                        <li>
+                            <strong className="text-white">Generate activation key:</strong> Open the URL provided by support, paste your copied <strong>Device ID</strong>, and click generate to get your activation key.
+                        </li>
+                        <li>
+                            <strong className="text-white">Unlock the suite:</strong> Paste the generated activation key into the "Enter Weekly Code" box below and click <strong>Activate Suite</strong>.
                         </li>
                     </ul>
                 </div>
