@@ -187,7 +187,7 @@ const ActivationGate = ({ children, toolKey, maxUses = 10 }) => {
     }
 
     const requestCode = 'AWIZ-ACAD-PRO-SUITE';
-    const msgText = `AWIZ-ACAD-PRO-SUITE - Device ID: ${deviceId}`;
+    const msgText = 'AWIZ-ACAD-PRO-SUITE';
     const whatsappMsg = encodeURIComponent(msgText);
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMsg}`;
     const fbUrl = `https://m.me/108992517116465?text=${whatsappMsg}`;
