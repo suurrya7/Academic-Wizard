@@ -15,4 +15,11 @@ def absolute_url(path: str = "") -> str:
     clean_path = path.lstrip("/")
     if not clean_path:
         return f"{SITE_URL}/"
+    
+    # Don't append trailing slash to files
+    if any(clean_path.endswith(ext) for ext in ['.xml', '.txt', '.html', '.webp', '.png', '.jpg', '.css', '.js']):
+        return f"{SITE_URL}/{clean_path}"
+        
+    if not clean_path.endswith("/"):
+        clean_path = f"{clean_path}/"
     return f"{SITE_URL}/{clean_path}"
