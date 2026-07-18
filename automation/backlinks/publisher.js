@@ -361,7 +361,7 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite-preview-02-05';
+            let modelName = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
             modelName = modelName.trim().replace(/['"]/g, '');
             console.log(`Phase 1 Model being used: "${modelName}"`);
             
@@ -438,7 +438,7 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite-preview-02-05';
+        let modelName = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
         modelName = modelName.trim().replace(/['"]/g, '');
         console.log(`Phase 2 Model being used: "${modelName}"`);
 
