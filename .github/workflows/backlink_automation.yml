@@ -1,9 +1,8 @@
 name: Publish Backlinks
 
 on:
-  push:
-    branches: [main]
-    paths: ['public/data/posts.json']
+  schedule:
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
