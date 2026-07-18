@@ -84,10 +84,14 @@ async function publishBlogger(title, content) {
 
 async function publishPinterest(title, description, link) {
     const accessToken = process.env.PINTEREST_ACCESS_TOKEN;
-    const boardId = process.env.PINTEREST_BOARD_ID; // Assuming a board ID is needed, maybe create one manually and set secret
+    const boardId = process.env.PINTEREST_BOARD_ID;
     if(!boardId) throw new Error("PINTEREST_BOARD_ID missing");
 
-    const res = await fetchApi(`https://api.pinterest.com/v5/pins`, {
+    // Enforce 500 max length
+    let safeDescription = description || "";
+    if (safeDescription.length > 490) safeDescription = safeDescription.substring(0, 490) + "...";
+
+    const res = await fetchApi(`https://api-sandbox.pinterest.com/v5/pins`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
@@ -96,7 +100,7 @@ async function publishPinterest(title, description, link) {
         body: JSON.stringify({
             link: link,
             title: title,
-            description: description,
+            description: safeDescription,
             board_id: boardId,
             media_source: {
                 source_type: "image_url",
@@ -356,6 +360,7 @@ Requirements:
 
         // Publish to Blogger
         try {
+            if (!variations.blogger) throw new Error("Missing 'blogger' key in AI response");
             const url = postUrl + UTM_TAGS.replace('{src}', 'blogger');
             const content = variations.blogger.replace(postUrl, url);
             const res = await publishBlogger(post.title, content);
@@ -365,6 +370,7 @@ Requirements:
 
         // Publish to Pinterest
         try {
+            if (!variations.pinterest) throw new Error("Missing 'pinterest' key in AI response");
             const url = postUrl + UTM_TAGS.replace('{src}', 'pinterest');
             const res = await publishPinterest(post.title, variations.pinterest, url);
             stateData.published_posts[slug].pinterest = { id: res.id };
@@ -373,6 +379,7 @@ Requirements:
 
         // Publish to Telegraph
         try {
+            if (!variations.telegraph) throw new Error("Missing 'telegraph' key in AI response");
             const url = postUrl + UTM_TAGS.replace('{src}', 'telegraph');
             const content = variations.telegraph.replace(postUrl, url);
             const res = await publishTelegraph(post.title, content);
@@ -382,6 +389,7 @@ Requirements:
         
         // Publish to Tumblr (Placeholder)
         try {
+            if (!variations.tumblr) throw new Error("Missing 'tumblr' key in AI response");
             const url = postUrl + UTM_TAGS.replace('{src}', 'tumblr');
             const content = variations.tumblr.replace(postUrl, url);
             const res = await publishTumblr(post.title, content, "study");
