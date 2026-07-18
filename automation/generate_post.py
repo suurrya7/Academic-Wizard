@@ -18,7 +18,7 @@ DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "nvidia/nemotron-3-ultra-550b-a55b:free"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "google/gemini-2.0-flash:free"
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",

@@ -362,12 +362,12 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'nvidia/nemotron-3-ultra-550b-a55b:free';
+            let modelName = process.env.GEMINI_MODEL || 'google/gemini-2.0-flash:free';
             modelName = modelName.trim().replace(/['"]/g, '');
             // OpenRouter models contain slashes and colons
             if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
-                console.log(`WARNING: Invalid model name format. Falling back to nvidia/nemotron-3-ultra-550b-a55b:free.`);
-                modelName = 'nvidia/nemotron-3-ultra-550b-a55b:free';
+                console.log(`WARNING: Invalid model name format. Falling back to google/gemini-2.0-flash:free.`);
+                modelName = 'google/gemini-2.0-flash:free';
             }
             console.log(`Phase 1 Model being used: "${modelName}"`);
             
@@ -444,10 +444,10 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'nvidia/nemotron-3-ultra-550b-a55b:free';
+        let modelName = process.env.GEMINI_MODEL || 'google/gemini-2.0-flash:free';
         modelName = modelName.trim().replace(/['"]/g, '');
         if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
-            modelName = 'nvidia/nemotron-3-ultra-550b-a55b:free';
+            modelName = 'google/gemini-2.0-flash:free';
         }
         console.log(`Phase 2 Model being used: "${modelName}"`);
 
