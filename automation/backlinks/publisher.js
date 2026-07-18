@@ -335,8 +335,12 @@ Requirements:
 
         let variations;
         try {
+            let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+            modelName = modelName.replace(/['"]/g, '').trim();
+            if (modelName.startsWith('models/')) modelName = modelName.replace('models/', '');
+
             const result = await ai.models.generateContent({
-                model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+                model: modelName,
                 contents: prompt,
                 config: {
                     systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content.",
@@ -416,8 +420,12 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
+        let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+        modelName = modelName.replace(/['"]/g, '').trim();
+        if (modelName.startsWith('models/')) modelName = modelName.replace('models/', '');
+
         const result = await ai.models.generateContent({
-            model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+            model: modelName,
             contents: promptCombined,
             config: {
                 systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress.",
