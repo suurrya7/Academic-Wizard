@@ -335,18 +335,16 @@ Requirements:
 
         let variations;
         try {
-            const model = ai.getGenerativeModel({
+            const result = await ai.models.generateContent({
                 model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
-                systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content."
-            });
-            const result = await model.generateContent({
                 contents: prompt,
                 config: {
+                    systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content.",
                     responseMimeType: 'application/json',
                     responseSchema: responseSchemaIndividual
                 }
             });
-            variations = JSON.parse(result.text());
+            variations = JSON.parse(result.text);
         } catch (e) {
             console.error(`Gemini API failed for ${slug}:`, e.message);
             continue;
@@ -418,18 +416,16 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        const model = ai.getGenerativeModel({
+        const result = await ai.models.generateContent({
             model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
-            systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress."
-        });
-        const result = await model.generateContent({
             contents: promptCombined,
             config: {
+                systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress.",
                 responseMimeType: 'application/json',
                 responseSchema: responseSchemaCombined
             }
         });
-        const digests = JSON.parse(result.text());
+        const digests = JSON.parse(result.text);
 
         const primarySlug = newSlugs[0];
         const primaryCanonical = `${SITE_URL}/blog/${primarySlug}`;
