@@ -1,0 +1,10 @@
+{
+  "name": "backlink-automation",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^0.1.2",
+    "@octokit/rest": "^21.0.0",
+    "sodium-native": "^4.0.0"
+  }
+}

@@ -1,0 +1,63 @@
+name: Publish Backlinks
+
+on:
+  push:
+    branches: [main]
+    paths: ['public/data/posts.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-backlinks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install backlink dependencies
+        run: npm ci --prefix automation/backlinks
+
+      - name: Publish backlinks for new posts
+        run: node automation/backlinks/publisher.js
+        env:
+          BACKLINK_GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          WP_ACCESS_TOKEN: ${{ secrets.WP_ACCESS_TOKEN }}
+          WP_SITE_URL: ${{ secrets.WP_SITE_URL }}
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_ACCESS_TOKEN: ${{ secrets.TUMBLR_ACCESS_TOKEN }}
+          TUMBLR_ACCESS_SECRET: ${{ secrets.TUMBLR_ACCESS_SECRET }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
+          PINTEREST_CLIENT_ID: ${{ secrets.PINTEREST_CLIENT_ID }}
+          PINTEREST_CLIENT_SECRET: ${{ secrets.PINTEREST_CLIENT_SECRET }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+          TELEGRAPH_ACCESS_TOKEN: ${{ secrets.TELEGRAPH_ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+
+      - name: Commit updated state
+        run: |
+          git config user.name "Backlink Bot"
+          git config user.email "bot@academicwizard.online"
+          git add automation/backlink_state.json
+          git diff --cached --quiet || git commit -m "chore: update backlink state [skip ci]"
+          git push
