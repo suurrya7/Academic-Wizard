@@ -193,11 +193,14 @@ async function publishLinkedIn(text, link) {
     const accessToken = process.env.LINKEDIN_ACCESS_TOKEN;
     
     // First, get the user's URN (author ID)
-    const meRes = await fetchApi('https://api.linkedin.com/v2/userinfo', {
-        headers: { 'Authorization': `Bearer ${accessToken}` }
-    });
-    const meData = await meRes.json();
-    const authorUrn = `urn:li:person:${meData.sub}`;
+    let authorUrn = process.env.LINKEDIN_AUTHOR_URN;
+    if (!authorUrn) {
+        const meRes = await fetchApi('https://api.linkedin.com/v2/userinfo', {
+            headers: { 'Authorization': `Bearer ${accessToken}` }
+        });
+        const meData = await meRes.json();
+        authorUrn = `urn:li:person:${meData.sub}`;
+    }
 
     // Publish post
     const res = await fetchApi('https://api.linkedin.com/v2/ugcPosts', {
