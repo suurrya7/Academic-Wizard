@@ -290,14 +290,14 @@ async function main() {
     const postsData = await readJson(POSTS_JSON_PATH);
     const stateData = await readJson(STATE_JSON_PATH) || { published_posts: {} };
     
-    if (!postsData || !postsData.posts || postsData.posts.length === 0) {
+    if (!postsData || !Array.isArray(postsData) || postsData.length === 0) {
         console.log("No posts found in posts.json. Exiting.");
         return;
     }
 
     // Find up to 4 new posts
-    const allSlugs = Object.keys(postsData.posts);
-    const newSlugs = allSlugs.filter(slug => !stateData.published_posts[slug]).slice(0, 4);
+    const newPosts = postsData.filter(post => !stateData.published_posts[post.slug]).slice(0, 4);
+    const newSlugs = newPosts.map(post => post.slug);
 
     if (newSlugs.length === 0) {
         console.log("No new posts to process. Exiting.");
@@ -319,7 +319,7 @@ async function main() {
     };
 
     for (const slug of newSlugs) {
-        const post = postsData.posts[slug];
+        const post = postsData.find(p => p.slug === slug);
         const postUrl = `${SITE_URL}/blog/${slug}`;
         
         console.log(`\nGenerating Phase 1 content for: ${slug}`);
@@ -394,7 +394,8 @@ Requirements:
     console.log(`\nGenerating Phase 2 (Combined Digests)...`);
     
     const combinedData = newSlugs.map(slug => {
-        return `Title: ${postsData.posts[slug].title}\nExcerpt: ${postsData.posts[slug].excerpt}\nURL: ${SITE_URL}/blog/${slug}`;
+        const p = postsData.find(x => x.slug === slug);
+        return `Title: ${p.title}\nExcerpt: ${p.excerpt}\nURL: ${SITE_URL}/blog/${slug}`;
     }).join('\n\n');
 
     const responseSchemaCombined = {
