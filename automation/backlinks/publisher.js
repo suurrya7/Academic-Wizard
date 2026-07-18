@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { GoogleGenAI, Type } from '@google/genai';
+import OpenAI from 'openai';
 import { Octokit } from '@octokit/rest';
 import sodium from 'sodium-native';
 import https from 'https';
@@ -15,8 +15,11 @@ const STATE_JSON_PATH = path.join(ROOT_DIR, 'automation', 'backlink_state.json')
 const SITE_URL = 'https://academicwizard.online';
 const UTM_TAGS = '?utm_source={src}&utm_medium=referral&utm_campaign=auto_backlink';
 
-// Initialize Gemini
-const ai = new GoogleGenAI({ apiKey: process.env.BACKLINK_GEMINI_API_KEY });
+// Initialize OpenRouter (via OpenAI SDK)
+const ai = new OpenAI({
+    apiKey: process.env.BACKLINK_GEMINI_API_KEY,
+    baseURL: 'https://openrouter.ai/api/v1'
+});
 const octokit = new Octokit({ auth: process.env.GH_PAT });
 
 // --- Helper Functions ---
@@ -307,16 +310,7 @@ async function main() {
     console.log(`Found ${newSlugs.length} new posts. Processing...`);
 
     // --- Phase 1: Individual Posts ---
-    const responseSchemaIndividual = {
-        type: Type.OBJECT,
-        properties: {
-            blogger: { type: Type.STRING },
-            pinterest: { type: Type.STRING },
-            telegraph: { type: Type.STRING },
-            tumblr: { type: Type.STRING }
-        },
-        required: ["blogger", "pinterest", "telegraph", "tumblr"]
-    };
+    // We will ask the model to return a JSON object with these keys.
 
     for (const slug of newSlugs) {
         const post = postsData.find(p => p.slug === slug);
@@ -335,27 +329,26 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+            let modelName = process.env.GEMINI_MODEL || 'nvidia/nemotron-3-ultra-550b-a55b:free';
             modelName = modelName.trim().replace(/['"]/g, '');
-            // If the string contains spaces or weird characters, fallback
-            if (!/^[a-zA-Z0-9.-]+$/.test(modelName)) {
-                console.log(`WARNING: Invalid model name format "***". Falling back to gemini-2.0-flash.`);
-                modelName = 'gemini-2.0-flash';
+            // OpenRouter models contain slashes and colons
+            if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
+                console.log(`WARNING: Invalid model name format. Falling back to nvidia/nemotron-3-ultra-550b-a55b:free.`);
+                modelName = 'nvidia/nemotron-3-ultra-550b-a55b:free';
             }
             console.log(`Phase 1 Model being used: "${modelName}"`);
             
-            const result = await ai.models.generateContent({
+            const result = await ai.chat.completions.create({
                 model: modelName,
-                contents: prompt,
-                config: {
-                    systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content.",
-                    responseMimeType: 'application/json',
-                    responseSchema: responseSchemaIndividual
-                }
+                messages: [
+                    { role: "system", content: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content. You must return ONLY raw valid JSON with exactly the keys requested." },
+                    { role: "user", content: prompt + "\n\nReturn a JSON object with keys: blogger, pinterest, telegraph, tumblr." }
+                ],
+                response_format: { type: "json_object" }
             });
-            variations = JSON.parse(result.text);
+            variations = JSON.parse(result.choices[0].message.content);
         } catch (e) {
-            console.error(`Gemini API failed for ${slug}:`, e.message);
+            console.error(`OpenRouter API failed for ${slug}:`, e.message);
             continue;
         }
 
@@ -405,17 +398,6 @@ Requirements:
         return `Title: ${p.title}\nExcerpt: ${p.excerpt}\nURL: ${SITE_URL}/blog/${slug}`;
     }).join('\n\n');
 
-    const responseSchemaCombined = {
-        type: Type.OBJECT,
-        properties: {
-            devto: { type: Type.STRING },
-            linkedin: { type: Type.STRING },
-            wordpress_1: { type: Type.STRING },
-            wordpress_2: { type: Type.STRING }
-        },
-        required: ["devto", "linkedin", "wordpress_1", "wordpress_2"]
-    };
-
     const promptCombined = `You are a professional content curator. Here are up to 4 recent blog posts from our site:\n\n${combinedData}\n\n
 Create combined digest content for these platforms.
 Requirements:
@@ -425,23 +407,22 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+        let modelName = process.env.GEMINI_MODEL || 'nvidia/nemotron-3-ultra-550b-a55b:free';
         modelName = modelName.trim().replace(/['"]/g, '');
-        if (!/^[a-zA-Z0-9.-]+$/.test(modelName)) {
-            modelName = 'gemini-2.0-flash';
+        if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
+            modelName = 'nvidia/nemotron-3-ultra-550b-a55b:free';
         }
         console.log(`Phase 2 Model being used: "${modelName}"`);
 
-        const result = await ai.models.generateContent({
+        const result = await ai.chat.completions.create({
             model: modelName,
-            contents: promptCombined,
-            config: {
-                systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress.",
-                responseMimeType: 'application/json',
-                responseSchema: responseSchemaCombined
-            }
+            messages: [
+                { role: "system", content: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress. You must return ONLY raw valid JSON with exactly the keys requested." },
+                { role: "user", content: promptCombined + "\n\nReturn a JSON object with keys: devto, linkedin, wordpress_1, wordpress_2." }
+            ],
+            response_format: { type: "json_object" }
         });
-        const digests = JSON.parse(result.text);
+        const digests = JSON.parse(result.choices[0].message.content);
 
         const primarySlug = newSlugs[0];
         const primaryCanonical = `${SITE_URL}/blog/${primarySlug}`;
@@ -478,7 +459,7 @@ Requirements:
         }
 
     } catch (e) {
-        console.error("Gemini API failed for combined digests:", e.message);
+        console.error("OpenRouter API failed for combined digests:", e.message);
     }
 
     // --- Finish ---

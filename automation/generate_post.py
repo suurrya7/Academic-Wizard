@@ -18,7 +18,7 @@ DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-2.0-flash"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "nvidia/nemotron-3-ultra-550b-a55b:free"
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",
@@ -250,9 +250,8 @@ def save_posts(posts: list[dict]) -> None:
 def configure_model():
     if not GEMINI_API_KEY:
         raise RuntimeError("GEMINI_API_KEY is required unless --dry-run is used.")
-    from google import genai
-
-    return genai.Client(api_key=GEMINI_API_KEY)
+    import openai
+    return openai.Client(api_key=GEMINI_API_KEY, base_url="https://openrouter.ai/api/v1")
 
 
 def parse_json_response(text: str):
@@ -318,12 +317,14 @@ Rules:
 - Do not promise guaranteed grades.
 - Do not frame content as contract cheating or submitting purchased work.
 """
-    response = model.models.generate_content(
-        model=GEMINI_MODEL, 
-        contents=prompt,
-        config={"response_mime_type": "application/json"}
+    response = model.chat.completions.create(
+        model=GEMINI_MODEL,
+        messages=[
+            {"role": "system", "content": "You are a daily SEO content planner. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown."},
+            {"role": "user", "content": prompt}
+        ]
     )
-    briefs = parse_json_response(response.text)
+    briefs = parse_json_response(response.choices[0].message.content)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
     return briefs[:count]
@@ -438,12 +439,15 @@ Length of HTML: 1100-1500 words. Mention {SITE_NAME} naturally once near the end
 
 Keep the content ethical: no contract cheating.
 """
-    response = model.models.generate_content(
-        model=GEMINI_MODEL, 
-        contents=prompt
+    response = model.chat.completions.create(
+        model=GEMINI_MODEL,
+        messages=[
+            {"role": "system", "content": "You are an expert academic writing coach and SEO editor. Follow all formatting instructions perfectly."},
+            {"role": "user", "content": prompt}
+        ]
     )
     
-    text = response.text.strip()
+    text = response.choices[0].message.content.strip()
     if "===FAQS_JSON===" in text:
         html_part, faqs_part = text.split("===FAQS_JSON===", 1)
         html_content = html_part.strip()
