@@ -419,7 +419,7 @@ Requirements:
     try {
         const model = ai.getGenerativeModel({
             model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
-            systemInstruction: "You are an expert Pinterest strategist and SEO copywriter. Create highly engaging, click-worthy descriptions for Pinterest pins based on the provided article."
+            systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress."
         });
         const result = await model.generateContent({
             contents: promptCombined,
