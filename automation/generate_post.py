@@ -18,7 +18,7 @@ DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "meta-llama/llama-3.3-70b-instruct:free"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-2.0-flash-lite-preview-02-05"
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",
@@ -250,8 +250,8 @@ def save_posts(posts: list[dict]) -> None:
 def configure_model():
     if not GEMINI_API_KEY:
         raise RuntimeError("GEMINI_API_KEY is required unless --dry-run is used.")
-    import openai
-    return openai.Client(api_key=GEMINI_API_KEY, base_url="https://openrouter.ai/api/v1")
+    from google import genai
+    return genai.Client(api_key=GEMINI_API_KEY)
 
 
 def parse_json_response(text: str):
@@ -317,14 +317,15 @@ Rules:
 - Do not promise guaranteed grades.
 - Do not frame content as contract cheating or submitting purchased work.
 """
-    response = model.chat.completions.create(
+    response = model.models.generate_content(
         model=GEMINI_MODEL,
-        messages=[
-            {"role": "system", "content": "You are a daily SEO content planner. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown."},
-            {"role": "user", "content": prompt}
-        ]
+        contents=prompt,
+        config={
+            "system_instruction": "You are a daily SEO content planner. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
+            "response_mime_type": "application/json"
+        }
     )
-    briefs = parse_json_response(response.choices[0].message.content)
+    briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
     return briefs[:count]
@@ -439,15 +440,15 @@ Length of HTML: 1100-1500 words. Mention {SITE_NAME} naturally once near the end
 
 Keep the content ethical: no contract cheating.
 """
-    response = model.chat.completions.create(
+    response = model.models.generate_content(
         model=GEMINI_MODEL,
-        messages=[
-            {"role": "system", "content": "You are an expert academic writing coach and SEO editor. Follow all formatting instructions perfectly."},
-            {"role": "user", "content": prompt}
-        ]
+        contents=prompt,
+        config={
+            "system_instruction": "You are an expert academic writing coach and SEO editor. Follow all formatting instructions perfectly."
+        }
     )
     
-    text = response.choices[0].message.content.strip()
+    text = response.text.strip()
     if "===FAQS_JSON===" in text:
         html_part, faqs_part = text.split("===FAQS_JSON===", 1)
         html_content = html_part.strip()

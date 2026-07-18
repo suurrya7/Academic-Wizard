@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import { Octokit } from '@octokit/rest';
 import sodium from 'sodium-native';
 import https from 'https';
@@ -15,10 +15,9 @@ const STATE_JSON_PATH = path.join(ROOT_DIR, 'automation', 'backlink_state.json')
 const SITE_URL = 'https://academicwizard.online';
 const UTM_TAGS = '?utm_source={src}&utm_medium=referral&utm_campaign=auto_backlink';
 
-// Initialize OpenRouter (via OpenAI SDK)
-const ai = new OpenAI({
-    apiKey: process.env.BACKLINK_GEMINI_API_KEY,
-    baseURL: 'https://openrouter.ai/api/v1'
+// Initialize Google GenAI
+const ai = new GoogleGenAI({
+    apiKey: process.env.BACKLINK_GEMINI_API_KEY
 });
 const octokit = new Octokit({ auth: process.env.GH_PAT });
 
@@ -362,26 +361,21 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'meta-llama/llama-3.3-70b-instruct:free';
+            let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite-preview-02-05';
             modelName = modelName.trim().replace(/['"]/g, '');
-            // OpenRouter models contain slashes and colons
-            if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
-                console.log(`WARNING: Invalid model name format. Falling back to meta-llama/llama-3.3-70b-instruct:free.`);
-                modelName = 'meta-llama/llama-3.3-70b-instruct:free';
-            }
             console.log(`Phase 1 Model being used: "${modelName}"`);
             
-            const result = await ai.chat.completions.create({
+            const result = await ai.models.generateContent({
                 model: modelName,
-                messages: [
-                    { role: "system", content: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content. You must return ONLY raw valid JSON with exactly the keys requested." },
-                    { role: "user", content: prompt + "\n\nReturn a JSON object with keys: blogger, pinterest, telegraph, tumblr." }
-                ],
-                response_format: { type: "json_object" }
+                contents: prompt + "\n\nReturn a JSON object with keys: blogger, pinterest, telegraph, tumblr.",
+                config: {
+                    systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content. You must return ONLY raw valid JSON with exactly the keys requested.",
+                    responseMimeType: "application/json"
+                }
             });
-            variations = parseJsonResponse(result.choices[0].message.content);
+            variations = parseJsonResponse(result.text);
         } catch (e) {
-            console.error(`OpenRouter API failed for ${slug}:`, e.message);
+            console.error(`Google API failed for ${slug}:`, e.message);
             continue;
         }
 
@@ -444,22 +438,19 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'meta-llama/llama-3.3-70b-instruct:free';
+        let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite-preview-02-05';
         modelName = modelName.trim().replace(/['"]/g, '');
-        if (!/^[a-zA-Z0-9.\-:/]+$/.test(modelName)) {
-            modelName = 'meta-llama/llama-3.3-70b-instruct:free';
-        }
         console.log(`Phase 2 Model being used: "${modelName}"`);
 
-        const result = await ai.chat.completions.create({
+        const result = await ai.models.generateContent({
             model: modelName,
-            messages: [
-                { role: "system", content: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress. You must return ONLY raw valid JSON with exactly the keys requested." },
-                { role: "user", content: promptCombined + "\n\nReturn a JSON object with keys: devto, linkedin, wordpress_1, wordpress_2." }
-            ],
-            response_format: { type: "json_object" }
+            contents: promptCombined + "\n\nReturn a JSON object with keys: devto, linkedin, wordpress_1, wordpress_2.",
+            config: {
+                systemInstruction: "You are an expert digital marketer and content curator. Your job is to analyze multiple blog posts and create highly engaging, professional digests for LinkedIn, Dev.to, and WordPress. You must return ONLY raw valid JSON with exactly the keys requested.",
+                responseMimeType: "application/json"
+            }
         });
-        const digests = parseJsonResponse(result.choices[0].message.content);
+        const digests = parseJsonResponse(result.text);
 
         const primarySlug = newSlugs[0];
         const primaryCanonical = `${SITE_URL}/blog/${primarySlug}`;
