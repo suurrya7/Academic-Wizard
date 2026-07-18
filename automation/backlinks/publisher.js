@@ -335,8 +335,11 @@ Requirements:
 
         let variations;
         try {
-            const result = await ai.models.generateContent({
-                model: 'gemini-2.5-flash',
+            const model = ai.getGenerativeModel({
+                model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+                systemInstruction: "You are an expert SEO content syndicator. Your job is to rewrite an original article into a unique, highly engaging summary for social platforms. Maintain the core message but completely change the phrasing so it is not duplicate content."
+            });
+            const result = await model.generateContent({
                 contents: prompt,
                 config: {
                     responseMimeType: 'application/json',
@@ -414,8 +417,11 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+        const model = ai.getGenerativeModel({
+            model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+            systemInstruction: "You are an expert Pinterest strategist and SEO copywriter. Create highly engaging, click-worthy descriptions for Pinterest pins based on the provided article."
+        });
+        const result = await model.generateContent({
             contents: promptCombined,
             config: {
                 responseMimeType: 'application/json',
