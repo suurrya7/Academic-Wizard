@@ -38,10 +38,15 @@ async function writeJson(filePath, data) {
 
 function parseJsonResponse(text) {
     let clean = text.trim();
-    if (clean.includes("```")) {
-        const match = clean.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
-        if (match) clean = match[1].trim();
+    
+    // Ultimate fallback: extract everything from the first '{' to the last '}'
+    const firstBrace = clean.indexOf('{');
+    const lastBrace = clean.lastIndexOf('}');
+    
+    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace >= firstBrace) {
+        clean = clean.substring(firstBrace, lastBrace + 1);
     }
+
     try {
         return JSON.parse(clean);
     } catch (e) {
