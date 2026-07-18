@@ -309,6 +309,7 @@ async function rotateTokens() {
         const data = await res.json();
         if (data.access_token) {
             await updateGithubSecret('PINTEREST_ACCESS_TOKEN', data.access_token);
+            process.env.PINTEREST_ACCESS_TOKEN = data.access_token;
         } else {
             console.error("Pinterest Token rotation failed: no access_token in response.");
         }
