@@ -322,6 +322,9 @@ async function rotateTokens() {
 async function main() {
     console.log("Starting Backlink Publisher Pipeline...");
     
+    // Refresh Pinterest token FIRST so the updated token is available in process.env for this run
+    await rotateTokens();
+    
     const postsData = await readJson(POSTS_JSON_PATH);
     const stateData = await readJson(STATE_JSON_PATH) || { published_posts: {} };
     
@@ -491,7 +494,6 @@ Requirements:
     }
 
     // --- Finish ---
-    await rotateTokens();
     await writeJson(STATE_JSON_PATH, stateData);
     console.log("\nPipeline finished. State updated.");
 }
