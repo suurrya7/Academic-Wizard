@@ -335,12 +335,12 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+            let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
             modelName = modelName.trim().replace(/['"]/g, '');
             // If the string contains spaces or weird characters, fallback
             if (!/^[a-zA-Z0-9.-]+$/.test(modelName)) {
-                console.log(`WARNING: Invalid model name format "${modelName}". Falling back to gemini-1.5-flash.`);
-                modelName = 'gemini-1.5-flash';
+                console.log(`WARNING: Invalid model name format "***". Falling back to gemini-2.0-flash.`);
+                modelName = 'gemini-2.0-flash';
             }
             console.log(`Phase 1 Model being used: "${modelName}"`);
             
@@ -425,10 +425,10 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+        let modelName = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
         modelName = modelName.trim().replace(/['"]/g, '');
         if (!/^[a-zA-Z0-9.-]+$/.test(modelName)) {
-            modelName = 'gemini-1.5-flash';
+            modelName = 'gemini-2.0-flash';
         }
         console.log(`Phase 2 Model being used: "${modelName}"`);
 

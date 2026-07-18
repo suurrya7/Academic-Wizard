@@ -18,7 +18,7 @@ DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.1-flash-lite"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-2.0-flash"
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",
