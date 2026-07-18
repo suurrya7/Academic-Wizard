@@ -36,6 +36,30 @@ async function writeJson(filePath, data) {
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
 }
 
+function parseJsonResponse(text) {
+    let clean = text.trim();
+    if (clean.includes("```")) {
+        const match = clean.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+        if (match) clean = match[1].trim();
+    }
+    try {
+        return JSON.parse(clean);
+    } catch (e) {
+        // Fallback for unescaped newlines which are common in generated JSON
+        const sanitized = clean.replace(/\\n/g, '\\n')
+                               .replace(/\\'/g, "\\'")
+                               .replace(/\\"/g, '\\"')
+                               .replace(/\\&/g, '\\&')
+                               .replace(/\\r/g, '\\r')
+                               .replace(/\\t/g, '\\t')
+                               .replace(/\\b/g, '\\b')
+                               .replace(/\\f/g, '\\f')
+                               // Remove actual literal line breaks that break JSON
+                               .replace(/[\u0000-\u0019]+/g,""); 
+        return JSON.parse(sanitized);
+    }
+}
+
 // Simple fetch wrapper since Node 22 has fetch, but for robust API calls sometimes https is needed.
 // Actually, Node 22 native fetch is perfect.
 async function fetchApi(url, options = {}) {
@@ -350,7 +374,7 @@ Requirements:
                 ],
                 response_format: { type: "json_object" }
             });
-            variations = JSON.parse(result.choices[0].message.content);
+            variations = parseJsonResponse(result.choices[0].message.content);
         } catch (e) {
             console.error(`OpenRouter API failed for ${slug}:`, e.message);
             continue;
@@ -430,7 +454,7 @@ Requirements:
             ],
             response_format: { type: "json_object" }
         });
-        const digests = JSON.parse(result.choices[0].message.content);
+        const digests = parseJsonResponse(result.choices[0].message.content);
 
         const primarySlug = newSlugs[0];
         const primaryCanonical = `${SITE_URL}/blog/${primarySlug}`;
