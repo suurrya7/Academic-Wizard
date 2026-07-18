@@ -335,7 +335,7 @@ Requirements:
 
         let variations;
         try {
-            let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+            let modelName = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
             modelName = modelName.replace(/['"]/g, '').trim();
             if (modelName.startsWith('models/')) modelName = modelName.replace('models/', '');
 
@@ -420,7 +420,7 @@ Requirements:
 - wordpress_2: A combined editorial essay discussing topics 3 and 4 (if available).`;
 
     try {
-        let modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+        let modelName = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite';
         modelName = modelName.replace(/['"]/g, '').trim();
         if (modelName.startsWith('models/')) modelName = modelName.replace('models/', '');
 
