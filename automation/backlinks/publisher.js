@@ -119,7 +119,7 @@ async function publishPinterest(title, description, link) {
     let safeDescription = description || "";
     if (safeDescription.length > 490) safeDescription = safeDescription.substring(0, 490) + "...";
 
-    const res = await fetchApi(`https://api-sandbox.pinterest.com/v5/pins`, {
+    const res = await fetchApi(`https://api.pinterest.com/v5/pins`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${accessToken}`,

@@ -266,14 +266,17 @@ def parse_json_response(text: str):
         cleaned = cleaned[:-3]
         
     cleaned = cleaned.strip()
-    first_char = cleaned[0] if cleaned else ''
+    start_brace = cleaned.find('{')
+    start_bracket = cleaned.find('[')
     
-    if first_char == '[':
-        start = cleaned.find('[')
+    if start_bracket != -1 and (start_brace == -1 or start_bracket < start_brace):
+        start = start_bracket
         end = cleaned.rfind(']')
-    else:
-        start = cleaned.find('{')
+    elif start_brace != -1:
+        start = start_brace
         end = cleaned.rfind('}')
+    else:
+        start, end = -1, -1
         
     if start != -1 and end != -1 and end > start:
         json_str = cleaned[start:end+1]
