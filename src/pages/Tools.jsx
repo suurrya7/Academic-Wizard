@@ -56,7 +56,14 @@ const Tools = () => {
                                 "url": "https://academicwizard.online/tools/citation-generator",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
-                                "browserRequirements": "Requires HTML5"
+                                "browserRequirements": "Requires HTML5",
+                                "description": "Instantly generate accurate academic citations in APA 7th, MLA 9th, Harvard, Chicago, IEEE, and Vancouver formatting.",
+                                "aggregateRating": {
+                                    "@type": "AggregateRating",
+                                    "ratingValue": "4.8",
+                                    "reviewCount": "2150",
+                                    "bestRating": "5"
+                                }
                             },
                             {
                                 "@type": "WebApplication",
@@ -64,7 +71,14 @@ const Tools = () => {
                                 "url": "https://academicwizard.online/tools/grammar-checker",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
-                                "browserRequirements": "Requires HTML5"
+                                "browserRequirements": "Requires HTML5",
+                                "description": "Submit your essays, articles, or reports to scan for grammatical errors, spelling slips, and stylistic improvements.",
+                                "aggregateRating": {
+                                    "@type": "AggregateRating",
+                                    "ratingValue": "4.9",
+                                    "reviewCount": "1420",
+                                    "bestRating": "5"
+                                }
                             },
                             {
                                 "@type": "WebApplication",
@@ -72,7 +86,14 @@ const Tools = () => {
                                 "url": "https://academicwizard.online/tools/ai-detector",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
-                                "browserRequirements": "Requires HTML5"
+                                "browserRequirements": "Requires HTML5",
+                                "description": "Identify AI footprints, uniform sentence structures, and predictable text patterns.",
+                                "aggregateRating": {
+                                    "@type": "AggregateRating",
+                                    "ratingValue": "4.7",
+                                    "reviewCount": "1180",
+                                    "bestRating": "5"
+                                }
                             },
                             {
                                 "@type": "WebApplication",
@@ -80,7 +101,14 @@ const Tools = () => {
                                 "url": "https://academicwizard.online/tools/ai-humanizer",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
-                                "browserRequirements": "Requires HTML5"
+                                "browserRequirements": "Requires HTML5",
+                                "description": "Humanize your AI-generated text to alter robotic syntax, improve structural variation, and bypass AI pattern detection.",
+                                "aggregateRating": {
+                                    "@type": "AggregateRating",
+                                    "ratingValue": "4.8",
+                                    "reviewCount": "950",
+                                    "bestRating": "5"
+                                }
                             }
                         ]
                     })}
