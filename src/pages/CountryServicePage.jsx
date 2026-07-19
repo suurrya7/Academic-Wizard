@@ -97,7 +97,7 @@ const CountryServicePage = () => {
                     <link 
                         key={c.slug} 
                         rel="alternate" 
-                        hreflang={`en-${c.slug === 'uk' ? 'gb' : c.slug}`} 
+                        hreflang={SLUG_TO_HREFLANG[c.slug] || `en-${c.slug}`} 
                         href={`https://academicwizard.online/services/${service.slug}/${c.slug}`} 
                     />
                 ))}

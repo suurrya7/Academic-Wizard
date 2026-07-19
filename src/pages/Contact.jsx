@@ -39,12 +39,20 @@ const Contact = () => {
 
             <PageHeader
                 title="Get in Touch"
-                subtitle="Our dedicated support team and academic coordinators are available 24/7 to assist you with your research needs."
+                subtitle="We're here to help you achieve academic success."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Contact', url: '/contact' }
                 ]}
             />
+            
+            <section className="py-12 bg-bg-secondary">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <p className="text-text-secondary leading-relaxed mb-8">
+                        At Academic Wizard, we understand that academic writing deadlines can be stressful. That's why our dedicated support team is available around the clock to answer your queries, guide you through our services, and connect you with the right academic expert. Whether you need an update on an ongoing dissertation, assistance formatting a bibliography, or just want to discuss your next big essay project, you can reach out via WhatsApp, email, or our live support channels. We typically respond within 15 minutes during standard office hours.
+                    </p>
+                </div>
+            </section>
 
             <section className="py-20 container">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

@@ -1,56 +1,53 @@
-# Full SEO Audit Report: Academic Wizard
-URL: https://academicwizard.online/
+# Full Audit Report
 
-## 1. Technical SEO & Indexability
-| Element | Value | Severity |
-|---------|-------|----------|
-| Canonical Tag | Missing | 🔴 Critical |
-| JavaScript Rendering | Client-Side Rendered (React/Vite) | ⚠️ Warning |
+- URL: `https://academicwizard.online`
+- Generated: `2026-07-20T01:59:32.406693`
+- Overall score: `71/100`
+- Score confidence: `Medium`
+- Scoring version: `1`
 
-**Finding**: Missing Canonical Tag
-**Evidence**: `<head>` section lacks `<link rel="canonical" href="..." />`.
-**Impact**: Can cause duplicate content issues if the site is accessible via `www` and `non-www`, or HTTP/HTTPS. Google needs to know the exact preferred URL.
-**Fix**: Add a canonical tag to the `<head>` of the page.
+## Score Card
 
-**Finding**: Client-Side Rendering (SPA)
-**Evidence**: Core content and styles are injected via `<script type="module" crossorigin src="/assets/index-DtuxI6Yu.js"></script>`.
-**Impact**: While Google can execute JavaScript, relying entirely on client-side rendering can delay indexing and negatively impact Core Web Vitals (specifically LCP and INP).
-**Fix**: Consider Server-Side Rendering (SSR) or Static Site Generation (SSG) using frameworks like Next.js, or use pre-rendering (like `vite-plugin-prerender`) so bots get raw HTML.
+| Category | Weight | Score |
+| --- | ---: | ---: |
+| Security Headers | 8 | 25 |
+| Social Meta | 5 | 69 |
+| Robots and Crawlers | 8 | 98 |
+| Broken Links | 10 | 100 |
+| Internal Links | 8 | 60 |
+| Redirects | 3 | 100 |
+| AI Search | 5 | 100 |
+| Performance and Core Web Vitals | 13 | 0 |
+| On-Page SEO | 10 | 100 |
+| Readability | 8 | 27 |
+| Entity SEO | 5 | 0 |
+| Link Profile | 7 | 75 |
+| Hreflang | 5 | 0 |
+| Content Uniqueness | 5 | 100 |
 
-## 2. On-Page SEO
-| Element | Value | Severity |
-|---------|-------|----------|
-| Title Tag | Academic Wizard \| Academic Assistance & Research Support | ✅ Pass |
-| Meta Description | Academic Wizard provides expert academic assistance for essays, assignments... | ✅ Pass |
-| H1 Tag | Academic Wizard Assistance & Research Support | ✅ Pass |
-| Meta Keywords | Present (Deprecated) | ℹ️ Info |
+## Findings
 
-**Finding**: Good use of Title and Meta Description
-**Evidence**: The title and description are well-optimized for target keywords (academic assistance, research support).
-**Impact**: High impact on Click-Through Rate (CTR) in search results.
-**Fix**: Maintain.
+| Severity | Area | Finding | Evidence | Fix |
+| --- | --- | --- | --- | --- |
+| Critical | environment | 6 security headers missing | Missing headers reduce trust and can expose the site to browser/security risks. | Set missing security headers at web server or CDN layer. |
+| Critical | link_profile | 2 orphan page(s) with zero inbound internal links. |  | Add internal links from relevant content pages to these orphan pages. |
+| Critical | sameAs | Entity schema exists but has no sameAs properties. |  | Add sameAs URLs pointing to Wikipedia, LinkedIn, Twitter/X, etc. |
+| Critical | security | 🔴 6 security headers missing — poor security posture |  |  |
+| Warning | environment | Content readability is difficult | Long, complex text can reduce engagement and comprehension. | Rewrite key sections with shorter sentences (15-20 words), shorter paragraphs (2-4 sentences), and clearer subheadings. |
+| Warning | internal_links | ⚠️ 56 potential orphan page(s) (≤1 internal link pointing to them) |  |  |
+| Warning | internal_links | ⚠️ 27 link(s) have no anchor text |  |  |
+| Warning | readability | ⚠️ Content is difficult to read (Flesch: 16.6) — may reduce engagement |  |  |
+| Warning | readability | ⚠️ 29.8% complex words (3+ syllables) — consider simplifying |  |  |
+| Warning | robots | ⚠️ 2 AI crawlers not explicitly managed: FacebookBot, Amazonbot |  |  |
+| Info | Wikidata | No Wikidata entry found for 'Academic Wizard'. |  | If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO. |
+| Info | Wikipedia | No Wikipedia article found for 'Academic Wizard'. |  | Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals. |
+| Info | environment | Performance measurement incomplete | PageSpeed API returned an error, so CWV recommendations are less reliable. | Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output. |
+| info | pagespeed | pagespeed measurement incomplete | Rate limited by Google API. Wait a few minutes or add an API key. | Rerun this check after resolving the environment/API/network limitation. |
+| Info | sameAs | Missing sameAs link to Wikipedia (Primary KG signal). |  | Add the existing official 'wikipedia.org' URL to sameAs; do not create this profile solely for SEO. |
+| Info | sameAs | Missing sameAs link to Wikidata (Primary KG signal). |  | Add the existing official 'wikidata.org' URL to sameAs; do not create this profile solely for SEO. |
+| Info | sameAs | Missing sameAs link to LinkedIn (Strong KG signal). |  | Add 'linkedin.com' profile URL to sameAs array in your entity schema. |
+| Info | sameAs | Missing sameAs link to Twitter/X (Strong KG signal). |  | Add 'x.com' profile URL to sameAs array in your entity schema. |
 
-**Finding**: Deprecated Meta Keywords
-**Evidence**: `<meta name="keywords" content="...">` is present.
-**Impact**: Search engines have ignored meta keywords for over a decade. It only serves to show competitors your target keywords.
-**Fix**: Remove the meta keywords tag.
+## Measurement Notes
 
-## 3. Schema / Structured Data
-| Element | Value | Severity |
-|---------|-------|----------|
-| JSON-LD Schema | Missing | ⚠️ Warning |
-
-**Finding**: No Structured Data
-**Evidence**: Missing `<script type="application/ld+json">` in the HTML.
-**Impact**: Reduces the chances of obtaining rich snippets in Google search results. For an academic service business, `Organization` or `Service` schema is vital for E-E-A-T.
-**Fix**: Add JSON-LD schema markup to the `<head>` of the site.
-
-## 4. Open Graph & Social SEO
-| Element | Value | Severity |
-|---------|-------|----------|
-| OG & Twitter Cards | Present | ✅ Pass |
-
-**Finding**: Great social sharing setup.
-**Evidence**: `og:title`, `og:image`, and `twitter:card` tags are present and correctly filled out.
-**Impact**: Ensures links shared on Twitter, LinkedIn, and Facebook look professional and generate clicks.
-**Fix**: Maintain.
+1 checks returned errors or incomplete measurements; treat affected scores as directional.

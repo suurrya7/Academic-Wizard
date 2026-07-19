@@ -145,14 +145,22 @@ const FAQ = () => {
                 </script>
             </Helmet>
 
-            <PageHeader 
-                title="Frequently Asked Questions" 
-                subtitle="Everything you need to know about Academic Wizard and how our services work."
+            <PageHeader
+                title="Frequently Asked Questions"
+                subtitle="Everything you need to know about our academic services."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'FAQs', url: '/faq' }
+                    { name: 'FAQ', url: '/faq' }
                 ]}
             />
+            
+            <section className="pt-12 pb-4 bg-bg-primary">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <p className="text-text-secondary leading-relaxed">
+                        Navigating university assignments, essays, and research papers can often raise important questions regarding confidentiality, originality, and the overall writing process. To help you make an informed decision, we have compiled a comprehensive list of frequently asked questions about Academic Wizard's services. Here you'll find detailed answers concerning our guarantees, expert qualifications, and strict adherence to academic integrity guidelines.
+                    </p>
+                </div>
+            </section>
 
             <section className="py-20 container">
                 <div className="max-w-4xl mx-auto">

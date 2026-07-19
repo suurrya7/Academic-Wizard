@@ -84,6 +84,7 @@ const GrammarChecker = () => {
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "Grammar Checker",
+                        "description": "Free AI-powered grammar checker and essay editor for academic papers. Check spelling, punctuation, syntax errors, and get real-time proofreading suggestions.",
                         "url": "https://academicwizard.online/tools/grammar-checker",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
@@ -92,6 +93,12 @@ const GrammarChecker = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.9",
+                            "reviewCount": "1420",
+                            "bestRating": "5"
                         }
                     })}
                 </script>

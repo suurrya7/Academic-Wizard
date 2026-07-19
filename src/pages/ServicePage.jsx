@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+
+const SLUG_TO_HREFLANG = {
+    'uk': 'en-GB', 'usa': 'en-US', 'australia': 'en-AU', 'canada': 'en-CA',
+    'india': 'en-IN', 'ireland': 'en-IE', 'singapore': 'en-SG', 'germany': 'en-DE'
+};
+
 import { servicesData } from '../data/services';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
@@ -82,7 +88,7 @@ const ServicePage = () => {
                     <link 
                         key={c.slug} 
                         rel="alternate" 
-                        hreflang={`en-${c.slug === 'uk' ? 'gb' : c.slug}`} 
+                        hreflang={SLUG_TO_HREFLANG[c.slug] || `en-${c.slug}`} 
                         href={`https://academicwizard.online/services/${service.slug}/${c.slug}`} 
                     />
                 ))}

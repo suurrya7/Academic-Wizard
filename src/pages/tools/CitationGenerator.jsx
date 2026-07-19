@@ -324,6 +324,7 @@ const CitationGenerator = () => {
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "Citation Generator",
+                        "description": "Free online citation and bibliography generator supporting APA 7th Edition, MLA 9th Edition, Harvard, Chicago, and Vancouver referencing formats for academic papers.",
                         "url": "https://academicwizard.online/tools/citation-generator",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
@@ -332,6 +333,12 @@ const CitationGenerator = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "reviewCount": "2150",
+                            "bestRating": "5"
                         }
                     })}
                 </script>

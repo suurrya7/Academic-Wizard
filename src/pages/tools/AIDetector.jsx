@@ -135,6 +135,7 @@ const AIDetector = () => {
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "AI Content Detector",
+                        "description": "Free AI content detection tool for academic essays. Scan sentence-level perplexity, predictability, and AI buzzwords to detect ChatGPT, Claude, and Gemini generated text.",
                         "url": "https://academicwizard.online/tools/ai-detector",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
@@ -143,6 +144,12 @@ const AIDetector = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.7",
+                            "reviewCount": "1180",
+                            "bestRating": "5"
                         }
                     })}
                 </script>

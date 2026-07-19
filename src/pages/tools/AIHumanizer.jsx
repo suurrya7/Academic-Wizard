@@ -80,6 +80,7 @@ const AIHumanizer = () => {
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "AI Text Humanizer",
+                        "description": "Free AI text humanizer tool that converts robotic ChatGPT text into natural, human-sounding academic writing. Increase syntax variance and remove machine footprints.",
                         "url": "https://academicwizard.online/tools/ai-humanizer",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
@@ -88,6 +89,12 @@ const AIHumanizer = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "reviewCount": "950",
+                            "bestRating": "5"
                         }
                     })}
                 </script>

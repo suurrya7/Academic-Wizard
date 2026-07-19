@@ -110,8 +110,16 @@ const Blog = () => {
                     { name: 'Blog', url: '/blog' }
                 ]}
             />
+            
+            <section className="pt-12 pb-4 bg-bg-primary">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <p className="text-text-secondary leading-relaxed">
+                        Welcome to the Academic Wizard Blog, your daily resource for comprehensive guides, expert tips, and strategic insights designed to help university students excel. Our articles cover every phase of the academic journey—from crafting compelling essay arguments and conducting rigorous literature reviews, to mastering complex research methodologies and polishing your final dissertation. Whether you are studying in the UK, USA, Australia, or anywhere else around the globe, our expert educators share best practices to improve your writing skills, ensure adherence to strict formatting guidelines, and elevate the overall quality of your assignments.
+                    </p>
+                </div>
+            </section>
 
-            <section className="container px-6 pb-24">
+            <section className="container px-6 pb-24 mt-8">
                 <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between mb-10">
                     <div className="relative flex-1 max-w-2xl">
                         <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-accent-gold" size={20} />

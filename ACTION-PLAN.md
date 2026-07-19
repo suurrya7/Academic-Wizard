@@ -1,12 +1,62 @@
-# SEO Action Plan: Academic Wizard
+# Action Plan
 
-## 🔴 Critical Priority (Do This Week)
-1. **Add Canonical Tags**: Insert `<link rel="canonical" href="https://academicwizard.online/" />` to the `<head>` of your website to prevent duplicate content issues. Without this, search engines might get confused if your site is loaded via HTTP, HTTPS, `www`, or non-`www`.
+- URL: `https://academicwizard.online`
+- Overall score: `71/100`
 
-## ⚠️ High Priority (Do This Month)
-2. **Review Client-Side Rendering Strategy**: Your site is heavily reliant on JavaScript to render its content (via Vite). Ensure that your Vite/React setup does not block search engine bots from seeing the content. If you notice your pages aren't getting indexed, consider using a pre-rendering tool (like `vite-plugin-prerender`) so search bots receive raw HTML immediately.
-3. **Implement JSON-LD Schema**: Add `Organization` or `Service` structured data into your `<head>` tag. This helps search engines understand your brand and services, drastically increasing your chances for rich snippets in search results (which builds E-E-A-T).
+## Priority Fixes
 
-## 🟡 Medium Priority (Do Next Month)
-4. **Remove Meta Keywords**: Delete `<meta name="keywords" content="...">` from your HTML. It provides zero SEO value and only serves to expose your target keyword strategy to competitors.
-5. **Optimize Performance (INP/LCP)**: Implement code-splitting to reduce the size of your main JavaScript bundle. The faster the site loads and becomes interactive, the higher Google will rank it.
+1. **6 security headers missing**
+   - Priority: `Critical`
+   - Area: `environment`
+   - Evidence: Missing headers reduce trust and can expose the site to browser/security risks.
+   - Fix: Set missing security headers at web server or CDN layer.
+2. **2 orphan page(s) with zero inbound internal links.**
+   - Priority: `Critical`
+   - Area: `link_profile`
+   - Evidence: See audit output.
+   - Fix: Add internal links from relevant content pages to these orphan pages.
+3. **Entity schema exists but has no sameAs properties.**
+   - Priority: `Critical`
+   - Area: `sameAs`
+   - Evidence: See audit output.
+   - Fix: Add sameAs URLs pointing to Wikipedia, LinkedIn, Twitter/X, etc.
+4. **Content readability is difficult**
+   - Priority: `Warning`
+   - Area: `environment`
+   - Evidence: Long, complex text can reduce engagement and comprehension.
+   - Fix: Rewrite key sections with shorter sentences (15-20 words), shorter paragraphs (2-4 sentences), and clearer subheadings.
+5. **No Wikidata entry found for 'Academic Wizard'.**
+   - Priority: `Info`
+   - Area: `Wikidata`
+   - Evidence: See audit output.
+   - Fix: If the entity meets Wikidata notability guidelines, create or improve an item with accurate third-party references. Do not create one solely for SEO.
+6. **No Wikipedia article found for 'Academic Wizard'.**
+   - Priority: `Info`
+   - Area: `Wikipedia`
+   - Evidence: See audit output.
+   - Fix: Only pursue Wikipedia if the entity meets independent notability standards. Otherwise, strengthen official schema, sameAs profiles, citations, and About/Contact signals.
+7. **Performance measurement incomplete**
+   - Priority: `Info`
+   - Area: `environment`
+   - Evidence: PageSpeed API returned an error, so CWV recommendations are less reliable.
+   - Fix: Set `PAGESPEED_API_KEY` in your environment or `.env` file (see `.env.example`), then rerun. The CLI also accepts `--api-key`. Prioritize LCP/INP/CLS fixes from that output.
+8. **Missing sameAs link to Wikipedia (Primary KG signal).**
+   - Priority: `Info`
+   - Area: `sameAs`
+   - Evidence: See audit output.
+   - Fix: Add the existing official 'wikipedia.org' URL to sameAs; do not create this profile solely for SEO.
+9. **Missing sameAs link to Wikidata (Primary KG signal).**
+   - Priority: `Info`
+   - Area: `sameAs`
+   - Evidence: See audit output.
+   - Fix: Add the existing official 'wikidata.org' URL to sameAs; do not create this profile solely for SEO.
+10. **Missing sameAs link to LinkedIn (Strong KG signal).**
+   - Priority: `Info`
+   - Area: `sameAs`
+   - Evidence: See audit output.
+   - Fix: Add 'linkedin.com' profile URL to sameAs array in your entity schema.
+11. **Missing sameAs link to Twitter/X (Strong KG signal).**
+   - Priority: `Info`
+   - Area: `sameAs`
+   - Evidence: See audit output.
+   - Fix: Add 'x.com' profile URL to sameAs array in your entity schema.
