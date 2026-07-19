@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Core UI components loaded eagerly
 import Navbar from './components/Navbar';
@@ -39,6 +39,13 @@ const LoadingFallback = () => (
 function App() {
   return (
     <HelmetProvider>
+      <Helmet>
+        {/* Global Twitter Card Defaults */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@academicwizard" />
+        <meta name="twitter:title" content="Academic Wizard | Expert Academic Assistance" />
+        <meta name="twitter:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students worldwide." />
+      </Helmet>
       <Router basename={import.meta.env.BASE_URL}>
         <Suspense fallback={null}>
           <CustomCursor />

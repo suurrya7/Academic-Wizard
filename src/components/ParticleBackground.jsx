@@ -53,21 +53,36 @@ function Particles() {
     );
 }
 
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error, errorInfo) {
+        console.warn("WebGL not supported or Canvas crashed:", error);
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return null;
+        }
+        return this.props.children; 
+    }
+}
+
 const ParticleBackground = () => {
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            zIndex: -1,
-            background: 'radial-gradient(circle at center, #1a1a1a 0%, #0F0F0F 100%)',
-            pointerEvents: 'none'
-        }}>
-            <Canvas camera={{ position: [0, 0, 1] }}>
-                <Particles />
-            </Canvas>
+        <div className="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#0F0F0F_100%)]">
+            <ErrorBoundary>
+                <Canvas camera={{ position: [0, 0, 1] }}>
+                    <Particles />
+                </Canvas>
+            </ErrorBoundary>
         </div>
     );
 };

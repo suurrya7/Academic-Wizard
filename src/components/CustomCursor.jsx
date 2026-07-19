@@ -44,15 +44,15 @@ const CustomCursor = () => {
     }, [mouseX, mouseY]);
 
     return (
-        <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', zIndex: 9999 }}>
+        <div className="fixed top-0 left-0 pointer-events-none z-[9999]">
             {/* Glowing Aura Effect */}
             <motion.div
+                className="absolute rounded-full"
                 style={{
                     x: cursorX,
                     y: cursorY,
                     translateX: '-50%',
                     translateY: '-50%',
-                    position: 'absolute',
                     width: hovered ? 140 : 70,
                     height: hovered ? 140 : 70,
                     borderRadius: '50%',
@@ -67,10 +67,10 @@ const CustomCursor = () => {
 
             {/* Fairy Star Wand Cursor */}
             <motion.div
+                className="absolute"
                 style={{
                     x: mouseX, 
                     y: mouseY,
-                    position: 'absolute',
                     translateX: '-4px', // Align star tip to cursor coordinate
                     translateY: '-4px',
                 }}

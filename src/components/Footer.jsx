@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import academicWizardLogo from '../assets/academic-wizard-logo.webp';
 
 const Footer = () => {
@@ -20,7 +20,18 @@ const Footer = () => {
                     <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         Supporting university students worldwide with professional academic guidance and research assistance. Trusted for quality and confidentiality.
                     </p>
-                    <div className="flex gap-4 mt-2">
+                    <div className="flex flex-col gap-2 mt-2 mb-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
+                        <div className="flex items-center gap-2">
+                            <span className="font-semibold text-white">Phone:</span> +91 95098 93638
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="font-semibold text-white">Email:</span> support@academicwizard.online
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="font-semibold text-white">Location:</span> Global Online Service
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap gap-4 mt-2">
                         <a 
                             href="https://www.linkedin.com/company/academic-wizard" 
                             target="_blank" 
@@ -50,6 +61,26 @@ const Footer = () => {
                             aria-label="Instagram"
                         >
                             <Instagram size={18} />
+                        </a>
+                        <a 
+                            href="https://twitter.com/academicwizard" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="Twitter"
+                        >
+                            <Twitter size={18} />
+                        </a>
+                        <a 
+                            href="https://youtube.com/@academicwizard" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="YouTube"
+                        >
+                            <Youtube size={18} />
                         </a>
                     </div>
                 </div>

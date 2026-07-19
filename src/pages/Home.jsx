@@ -14,11 +14,22 @@ const Home = () => {
 
     const orgSchema = {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "EducationalOrganization",
         "name": "Academic Wizard",
         "url": "https://academicwizard.online",
         "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
         "description": "Expert academic assistance for essays, assignments, dissertations, theses, research papers, and academic editing.",
+        "sameAs": [
+            "https://twitter.com/academicwizard",
+            "https://youtube.com/@academicwizard",
+            "https://www.facebook.com/academics.wizard",
+            "https://www.instagram.com/_academic.wizard_",
+            "https://www.linkedin.com/company/academic-wizard"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "UK"
+        },
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-95098-93638",
@@ -29,7 +40,7 @@ const Home = () => {
     return (
         <div className="page-home overflow-hidden">
             <Helmet>
-                <title>Academic Wizard | Expert Academic Assistance & Research Support</title>
+                <title>Academic Wizard | Expert Academic & Research Support</title>
                 <meta name="description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students in the UK, USA, Australia, and worldwide." />
                 <link rel="canonical" href="https://academicwizard.online/" />
                 <meta property="og:title" content="Academic Wizard | Expert Academic Assistance" />
