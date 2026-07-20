@@ -426,6 +426,9 @@ Requirements:
             stateData.published_posts[slug].tumblr = { url: res.url };
             console.log("✅ Tumblr");
         } catch (e) { console.error("⚠️ Tumblr failed:", e.message); }
+        
+        // Progressively save state after each post to prevent duplicates if the script times out
+        await writeJson(STATE_JSON_PATH, stateData);
     }
 
     // --- Phase 2: Combined Digests ---
