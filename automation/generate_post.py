@@ -292,13 +292,16 @@ def generate_keyword_briefs(model, existing_posts: list[dict], count: int) -> li
     today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
 
     prompt = f"""
-You are planning daily SEO content for {SITE_NAME}, an ethical academic support service.
-Create {count} fresh long-tail blog keyword briefs for {today}.
+You are the Master SEO Strategist for {SITE_NAME}, an ethical academic support service.
+Your task is to perform live keyword research to generate {count} highly engaging, trending blog post briefs for {today}.
 
-Crucially, you must assign a TARGET COUNTRY to each brief by rotating through these options: {", ".join(TARGET_COUNTRIES)}. Focus the keyword intent specifically on that region's academic market (e.g. "university assignment help UK", "essay editing Australia").
-
-Core niches to rotate:
-{", ".join(NICHE_KEYWORDS)}
+USE YOUR GOOGLE SEARCH TOOL to identify real-time trends, news, and common student pain points right now.
+Do not use generic programmatic titles (e.g. "Assignment Help in USA").
+Instead, find highly topical, long-tail queries that students are actually searching for. Examples of good topics:
+- "How to handle Turnitin AI detection false positives"
+- "APA 7th Edition formatting changes you must know"
+- "Overcoming dissertation burnout: Mental health tips for PhDs"
+- "How to use AI ethically for your literature review outline"
 
 Avoid these existing titles:
 {json.dumps(used_titles[-200:], ensure_ascii=False)}
@@ -307,25 +310,25 @@ Avoid these existing slugs:
 {json.dumps(used_slugs[-200:], ensure_ascii=False)}
 
 Return only valid JSON as an array of objects. Each object must have:
-- title: practical blog title, 50-75 characters
-- primaryKeyword: long-tail keyword containing the target country context if appropriate
-- secondaryKeywords: array of 4 related keywords
+- title: Highly engaging, click-worthy blog title, 50-75 characters
+- primaryKeyword: The real-world long-tail keyword you identified
+- secondaryKeywords: array of 4 related keywords (LSI keywords)
 - category: one of {list(CATEGORIES.keys())}
-- searchIntent: one sentence describing the reader need in the target country
-- excerpt: 130-155 character meta description
-- targetCountry: the country this brief targets (from the list provided)
+- searchIntent: one sentence describing the exact problem the searcher is trying to solve
+- excerpt: 130-155 character meta description designed to maximize CTR from Google
+- targetCountry: Assign one relevant country from: {", ".join(TARGET_COUNTRIES)} (used for localized spelling/examples later)
 
 Rules:
-- Focus on ethical guidance, editing, research support, planning, and study help.
-- Do not promise guaranteed grades.
-- Do not frame content as contract cheating or submitting purchased work.
+- Focus on real-world trends, software, methodologies, formatting, or study guides.
+- Keep the content ethical: no contract cheating.
 """
     response = model.models.generate_content(
         model=GEMINI_MODEL,
         contents=prompt,
         config={
-            "system_instruction": "You are a daily SEO content planner. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
-            "response_mime_type": "application/json"
+            "system_instruction": "You are a master SEO content strategist. Use Google Search to find trends. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
+            "response_mime_type": "application/json",
+            "tools": [{"google_search": {}}]
         }
     )
     briefs = parse_json_response(response.text)
