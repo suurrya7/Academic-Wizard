@@ -1,5 +1,105 @@
 [
   {
+    "title": "Is Your AI Writing Flagged? How to Resolve Turnitin False Positives",
+    "slug": "is-your-ai-writing-flagged-how-to-resolve-turnitin-false-positives",
+    "excerpt": "Accused of AI use by Turnitin? Discover how to address false positives ethically, compile your evidence, and protect your academic record with expert tips.",
+    "keywords": [
+      "turnitin false positive ai detection",
+      "how to prove original work turnitin",
+      "AI writing detection accuracy issues",
+      "how to appeal false plagiarism claims",
+      "academic integrity AI tools"
+    ],
+    "primaryKeyword": "turnitin false positive ai detection",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-07-24T13:14:33.098188+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/is-your-ai-writing-flagged-how-to-resolve-turnitin-false-positives.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Struggling with Zotero? Advanced Tips for Complex Dissertations",
+    "slug": "struggling-with-zotero-advanced-tips-for-complex-dissertations",
+    "excerpt": "Master Zotero for your dissertation. Learn how to manage thousands of citations, sync libraries, and automate your bibliography to save weeks of work.",
+    "keywords": [
+      "using zotero for complex research papers",
+      "zotero citation management guide",
+      "organizing large literature reviews",
+      "automating bibliography formatting",
+      "academic research organization tools"
+    ],
+    "primaryKeyword": "using zotero for complex research papers",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-24T13:14:59.212327+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/struggling-with-zotero-advanced-tips-for-complex-dissertations.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "The 2026 Guide to Ethical Prompt Engineering for Student Research",
+    "slug": "the-2026-guide-to-ethical-prompt-engineering-for-student-research",
+    "excerpt": "Learn how to use AI as a research assistant, not a writer. Master ethical prompt engineering to outline your literature review and find academic sources.",
+    "keywords": [
+      "ethical use of AI in academic research",
+      "AI for literature review outline",
+      "using LLMs for research brainstorming",
+      "responsible AI practices for students",
+      "academic AI guidelines 2026"
+    ],
+    "primaryKeyword": "ethical use of AI in academic research",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-24T13:15:25.999734+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/the-2026-guide-to-ethical-prompt-engineering-for-student-research.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Beat PhD Burnout: A Sustainable Workflow for Dissertation Writing",
+    "slug": "beat-phd-burnout-a-sustainable-workflow-for-dissertation-writing",
+    "excerpt": "Dissertation burnout is real. Implement these sustainable writing workflows, time-management strategies, and mental health tips to finish your PhD strong.",
+    "keywords": [
+      "overcoming dissertation burnout",
+      "mental health tips for phd students",
+      "dissertation productivity hacks",
+      "academic writing exhaustion help",
+      "managing research stress levels"
+    ],
+    "primaryKeyword": "overcoming dissertation burnout",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-24T13:15:52.294352+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beat-phd-burnout-a-sustainable-workflow-for-dissertation-writing.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Ethical Assignment Help: Strategies for UK University Success",
     "slug": "ethical-assignment-help-strategies-for-uk-university-success",
     "excerpt": "Struggling with your UK university workload? Discover ethical assignment help strategies to manage deadlines and improve your academic writing process today.",
