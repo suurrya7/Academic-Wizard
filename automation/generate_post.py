@@ -339,15 +339,33 @@ Rules:
 - Focus on real-world trends, software, methodologies, formatting, or study guides.
 - Keep the content ethical: no contract cheating.
 """
-    response = call_with_retry(lambda: model.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt,
-        config={
-            "system_instruction": "You are a master SEO content strategist. Use Google Search to find trends. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
-            "response_mime_type": "application/json",
-            "tools": [{"google_search": {}}]
-        }
-    ))
+    # Try with google_search grounding first; fall back to plain generation if quota is exhausted
+    try:
+        response = call_with_retry(lambda: model.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt,
+            config={
+                "system_instruction": "You are a master SEO content strategist. Use Google Search to find trends. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
+                "response_mime_type": "application/json",
+                "tools": [{"google_search": {}}]
+            }
+        ))
+        print("  ✅ Keyword research completed with Google Search grounding.")
+    except Exception as grounding_exc:
+        print(f"  ⚠️  Google Search grounding failed ({grounding_exc}). Falling back to model knowledge …")
+        fallback_prompt = prompt.replace(
+            "USE YOUR GOOGLE SEARCH TOOL to identify real-time trends, news, and common student pain points right now.",
+            "Use your training knowledge to identify evergreen and seasonally relevant student pain points."
+        )
+        response = call_with_retry(lambda: model.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=fallback_prompt,
+            config={
+                "system_instruction": "You are a master SEO content strategist. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
+                "response_mime_type": "application/json",
+            }
+        ))
+        print("  ✅ Keyword research completed with model knowledge (no grounding).")
     briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
