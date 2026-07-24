@@ -134,15 +134,24 @@ def load_posts() -> list[dict]:
 def generate_sitemap() -> None:
     PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
+    posts = load_posts()
+
+    # For dynamic pages (Homepage, Blog, Services), use the most recent post date
+    # instead of blindly stamping today — this keeps lastmod truthful
+    latest_post_date = today  # fallback
+    if posts:
+        raw = posts[0].get("date", today)
+        latest_post_date = raw.split("T")[0] if "T" in raw else raw
+
     urls = []
 
-    # Dynamic pages: lastmod = today (content changes with each build)
+    # Dynamic pages: lastmod = latest post date (only "changes" when new content exists)
     for page in STATIC_PAGES_DYNAMIC:
         loc = absolute_url(page["path"])
         urls.append(
             f"  <url>\n"
             f"    <loc>{loc}</loc>\n"
-            f"    <lastmod>{today}</lastmod>\n"
+            f"    <lastmod>{latest_post_date}</lastmod>\n"
             f"    <changefreq>{page['changefreq']}</changefreq>\n"
             f"    <priority>{page['priority']}</priority>\n"
             f"  </url>"
@@ -161,7 +170,6 @@ def generate_sitemap() -> None:
         )
 
     # Blog posts: lastmod = actual publish date (accurate, Google trusts this)
-    posts = load_posts()
     for post in posts:
         loc = absolute_url(f"blog/{post['slug']}")
         lastmod = post.get("date", today).split("T")[0]
