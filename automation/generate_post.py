@@ -7,6 +7,8 @@ import os
 import re
 import sys
 import time
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 from site_config import SITE_NAME, absolute_url
@@ -20,6 +22,8 @@ POSTS_JSON = DATA_DIR / "posts.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.1-flash-lite"
+GOOGLE_CSE_API_KEY = os.getenv("GOOGLE_CSE_API_KEY")
+GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
 
 CATEGORIES = {
     "assignment-help": "Assignment Help",
@@ -303,16 +307,55 @@ def parse_json_response(text: str):
 
 
 
+def fetch_google_cse_trends(query: str = "university student academic writing challenges trends") -> list[str]:
+    """Fetch live web search results using Google Custom Search JSON API if configured."""
+    if not GOOGLE_CSE_API_KEY or not GOOGLE_CSE_ID:
+        return []
+    try:
+        url = (
+            "https://www.googleapis.com/customsearch/v1?"
+            + urllib.parse.urlencode({
+                "key": GOOGLE_CSE_API_KEY,
+                "cx": GOOGLE_CSE_ID,
+                "q": query,
+                "num": 5
+            })
+        )
+        req = urllib.request.Request(url, headers={"User-Agent": "AcademicWizardBot/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            items = data.get("items", [])
+            snippets = []
+            for item in items:
+                title = item.get("title", "")
+                snippet = item.get("snippet", "")
+                snippets.append(f"- {title}: {snippet}")
+            return snippets
+    except Exception as exc:
+        print(f"  ⚠️  Google Custom Search API query failed: {exc}")
+        return []
+
+
 def generate_keyword_briefs(model, existing_posts: list[dict], count: int) -> list[dict]:
     used_titles = [post.get("title", "") for post in existing_posts]
     used_slugs = [post.get("slug", "") for post in existing_posts]
     today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
 
+    # Attempt to pull live Google Custom Search results first
+    search_snippets = fetch_google_cse_trends("academic writing assignment dissertation trends 2026")
+    if search_snippets:
+        print("  ✅ Retrieved real-time web search trends via Google Custom Search API.")
+        trend_context = "Real-Time Google Search Results to inspire topics:\n" + "\n".join(search_snippets)
+    else:
+        print("  ℹ️  Using model's internal topic intelligence for keyword research.")
+        trend_context = "Use your deep knowledge of current higher-education trends, software (Zotero, Turnitin, NVivo), citation updates (APA 7, Chicago 17), and student pain points."
+
     prompt = f"""
 You are the Master SEO Strategist for {SITE_NAME}, an ethical academic support service.
-Your task is to perform live keyword research to generate {count} highly engaging, trending blog post briefs for {today}.
+Your task is to generate {count} highly engaging, trending blog post briefs for {today}.
 
-USE YOUR GOOGLE SEARCH TOOL to identify real-time trends, news, and common student pain points right now.
+{trend_context}
+
 Do not use generic programmatic titles (e.g. "Assignment Help in USA").
 Instead, find highly topical, long-tail queries that students are actually searching for. Examples of good topics:
 - "How to handle Turnitin AI detection false positives"
@@ -339,33 +382,14 @@ Rules:
 - Focus on real-world trends, software, methodologies, formatting, or study guides.
 - Keep the content ethical: no contract cheating.
 """
-    # Try with google_search grounding first; fall back to plain generation if quota is exhausted
-    try:
-        response = call_with_retry(lambda: model.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-            config={
-                "system_instruction": "You are a master SEO content strategist. Use Google Search to find trends. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
-                "response_mime_type": "application/json",
-                "tools": [{"google_search": {}}]
-            }
-        ))
-        print("  ✅ Keyword research completed with Google Search grounding.")
-    except Exception as grounding_exc:
-        print(f"  ⚠️  Google Search grounding failed ({grounding_exc}). Falling back to model knowledge …")
-        fallback_prompt = prompt.replace(
-            "USE YOUR GOOGLE SEARCH TOOL to identify real-time trends, news, and common student pain points right now.",
-            "Use your training knowledge to identify evergreen and seasonally relevant student pain points."
-        )
-        response = call_with_retry(lambda: model.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=fallback_prompt,
-            config={
-                "system_instruction": "You are a master SEO content strategist. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
-                "response_mime_type": "application/json",
-            }
-        ))
-        print("  ✅ Keyword research completed with model knowledge (no grounding).")
+    response = call_with_retry(lambda: model.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt,
+        config={
+            "system_instruction": "You are a master SEO content strategist. Return ONLY valid JSON representing the array of objects as requested. Do not wrap it in markdown.",
+            "response_mime_type": "application/json",
+        }
+    ))
     briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")

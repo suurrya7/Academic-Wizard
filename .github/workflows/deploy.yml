@@ -25,6 +25,8 @@ jobs:
       BASE_PATH: /
       GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY }}
       GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+      GOOGLE_CSE_API_KEY: ${{ secrets.GOOGLE_CSE_API_KEY }}
+      GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
 
     steps:
       - name: Checkout
