@@ -23,7 +23,7 @@ jobs:
     env:
       SITE_URL: https://academicwizard.online
       BASE_PATH: /
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY }}
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
 
     steps:
