@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 from site_config import SITE_NAME, absolute_url
@@ -254,6 +255,22 @@ def configure_model():
     return genai.Client(api_key=GEMINI_API_KEY)
 
 
+def call_with_retry(fn, max_retries=5, initial_delay=15):
+    """Call *fn()* with exponential back-off on 429 / 503 errors."""
+    delay = initial_delay
+    for attempt in range(1, max_retries + 1):
+        try:
+            return fn()
+        except Exception as exc:
+            err_str = str(exc)
+            is_retryable = any(code in err_str for code in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE"])
+            if not is_retryable or attempt == max_retries:
+                raise
+            print(f"  ⏳ Rate-limited (attempt {attempt}/{max_retries}). Retrying in {delay}s …")
+            time.sleep(delay)
+            delay = min(delay * 2, 120)  # cap at 2 minutes
+
+
 def parse_json_response(text: str):
     """Extract a JSON object or array from Gemini's response."""
     cleaned = text.strip()
@@ -322,7 +339,7 @@ Rules:
 - Focus on real-world trends, software, methodologies, formatting, or study guides.
 - Keep the content ethical: no contract cheating.
 """
-    response = model.models.generate_content(
+    response = call_with_retry(lambda: model.models.generate_content(
         model=GEMINI_MODEL,
         contents=prompt,
         config={
@@ -330,7 +347,7 @@ Rules:
             "response_mime_type": "application/json",
             "tools": [{"google_search": {}}]
         }
-    )
+    ))
     briefs = parse_json_response(response.text)
     if not isinstance(briefs, list):
         raise ValueError("Gemini keyword brief response was not a JSON array.")
@@ -446,13 +463,13 @@ Length of HTML: 1100-1500 words. Mention {SITE_NAME} naturally once near the end
 
 Keep the content ethical: no contract cheating.
 """
-    response = model.models.generate_content(
+    response = call_with_retry(lambda: model.models.generate_content(
         model=GEMINI_MODEL,
         contents=prompt,
         config={
             "system_instruction": "You are an expert academic writing coach and SEO editor. Follow all formatting instructions perfectly."
         }
-    )
+    ))
     
     text = response.text.strip()
     if "===FAQS_JSON===" in text:
@@ -602,7 +619,10 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
     created = []
     created_slugs = set()
 
-    for brief in briefs:
+    for i, brief in enumerate(briefs):
+        if not dry_run and i > 0:
+            print(f"  ⏳ Waiting 20s before next API call to stay within rate limits …")
+            time.sleep(20)
         meta = uniquify_meta(build_meta(brief), existing_posts, created_slugs)
         content, faqs = dry_run_content(brief) if dry_run else generate_article_content(model, brief, existing_posts)
         if dry_run:
