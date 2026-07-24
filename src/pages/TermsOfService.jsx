@@ -16,7 +16,7 @@ const TermsOfService = () => {
             <Helmet>
                 <title>Terms of Service | Academic Wizard</title>
                 <meta name="description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
-                <link rel="canonical" href="https://academicwizard.online/terms-of-service/" />
+                <link rel="canonical" href="https://academicwizard.online/terms-of-service" />
                 <script type="application/ld+json">
                     {JSON.stringify(termsSchema)}
                 </script>

@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
             <Helmet>
                 <title>Privacy Policy | Academic Wizard</title>
                 <meta name="description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
-                <link rel="canonical" href="https://academicwizard.online/privacy-policy/" />
+                <link rel="canonical" href="https://academicwizard.online/privacy-policy" />
                 <script type="application/ld+json">
                     {JSON.stringify(policySchema)}
                 </script>
