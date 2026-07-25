@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Turnitin Score Spikes: Addressing AI Hallucinations in Drafting",
+    "slug": "fixing-turnitin-score-spikes-addressing-ai-hallucinations-in-drafting",
+    "excerpt": "Is your original work being wrongly flagged by AI detectors? Learn why Turnitin scores spike and how to transparently document your ethical writing process.",
+    "keywords": [
+      "fixing Turnitin AI detection false positives",
+      "AI writing detection accuracy",
+      "academic integrity in student writing",
+      "humanizing AI-assisted drafts",
+      "Turnitin similarity report interpretation"
+    ],
+    "primaryKeyword": "fixing Turnitin AI detection false positives",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-07-25T04:59:31.353817+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-score-spikes-addressing-ai-hallucinations-in-drafting.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Automating Citations: Zotero vs. Mendeley for Massive Literature Reviews",
+    "slug": "automating-citations-zotero-vs-mendeley-for-massive-literature-reviews",
+    "excerpt": "Struggling to track 100+ sources? We compare top citation managers to help you streamline your literature review and keep your bibliography error-free.",
+    "keywords": [
+      "best citation manager for large literature reviews",
+      "Zotero PDF library management",
+      "organizing research for PhD thesis",
+      "APA 7 citation automation guide",
+      "streamlining academic bibliography"
+    ],
+    "primaryKeyword": "best citation manager for large literature reviews",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-25T04:59:57.881601+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/automating-citations-zotero-vs-mendeley-for-massive-literature-reviews.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Navigating Qualitative Coding: A Guide to NVivo for PhD Thesis Success",
+    "slug": "navigating-qualitative-coding-a-guide-to-nvivo-for-phd-thesis-success",
+    "excerpt": "Master qualitative analysis with our practical guide to NVivo 15. Learn how to structure your codes and themes for a rigorous, high-quality dissertation.",
+    "keywords": [
+      "NVivo 15 qualitative coding workflow for beginners",
+      "thematic analysis in NVivo",
+      "coding interview transcripts for research",
+      "PhD dissertation data analysis",
+      "qualitative research methodology tips"
+    ],
+    "primaryKeyword": "NVivo 15 qualitative coding workflow for beginners",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-25T05:00:23.117096+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/navigating-qualitative-coding-a-guide-to-nvivo-for-phd-thesis-success.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Structural Edits for Thesis Clarity: Transforming Your First Draft",
+    "slug": "structural-edits-for-thesis-clarity-transforming-your-first-draft",
+    "excerpt": "Turn your messy first draft into a polished masterpiece. Learn expert structural editing techniques to sharpen your arguments and improve thesis flow.",
+    "keywords": [
+      "how to restructure a PhD thesis for academic flow",
+      "improving academic argument clarity",
+      "thesis editing checklist for students",
+      "academic writing coherence tips",
+      "dissertation organization strategies"
+    ],
+    "primaryKeyword": "how to restructure a PhD thesis for academic flow",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-25T05:00:48.650660+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/structural-edits-for-thesis-clarity-transforming-your-first-draft.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
     "title": "Optimizing NVivo 15: Coding Qualitative Data for PhD Success",
     "slug": "optimizing-nvivo-15-coding-qualitative-data-for-phd-success",
     "excerpt": "Struggling with NVivo 15? Learn expert techniques to code your qualitative data efficiently and streamline your dissertation analysis with these tips.",

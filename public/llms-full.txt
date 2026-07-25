@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-07-24
+        **Last updated**: 2026-07-25
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Navigating Qualitative Coding: A Guide to NVivo for PhD Thesis Success](https://academicwizard.online/blog/navigating-qualitative-coding-a-guide-to-nvivo-for-phd-thesis-success)**
+  - Excerpt: Master qualitative analysis with our practical guide to NVivo 15. Learn how to structure your codes and themes for a rigorous, high-quality dissertation.
+  - Keywords: NVivo 15 qualitative coding workflow for beginners, thematic analysis in NVivo, coding interview transcripts for research, PhD dissertation data analysis, qualitative research methodology tips
+  - Target Region: Australia
+  - Published: 2026-07-25
+
 - **[Optimizing NVivo 15: Coding Qualitative Data for PhD Success](https://academicwizard.online/blog/optimizing-nvivo-15-coding-qualitative-data-for-phd-success)**
   - Excerpt: Struggling with NVivo 15? Learn expert techniques to code your qualitative data efficiently and streamline your dissertation analysis with these tips.
   - Keywords: NVivo 15 qualitative analysis tips for dissertations, thematic analysis software, NVivo research coding nodes, dissertation data management, qualitative research methodology help
@@ -233,6 +239,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Structural Edits for Thesis Clarity: Transforming Your First Draft](https://academicwizard.online/blog/structural-edits-for-thesis-clarity-transforming-your-first-draft)**
+  - Excerpt: Turn your messy first draft into a polished masterpiece. Learn expert structural editing techniques to sharpen your arguments and improve thesis flow.
+  - Keywords: how to restructure a PhD thesis for academic flow, improving academic argument clarity, thesis editing checklist for students, academic writing coherence tips, dissertation organization strategies
+  - Target Region: Canada
+  - Published: 2026-07-25
 
 - **[Refining Your Thesis: Ethical Academic Editing for Australian Chapters](https://academicwizard.online/blog/refining-your-thesis-ethical-academic-editing-for-australian-chapters)**
   - Excerpt: Explore ethical academic editing techniques to refine your thesis chapters for Australian universities. Enhance clarity, coherence, and academic integrity effectively.
@@ -303,6 +315,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-16
 
 ### Literature Review
+
+- **[Automating Citations: Zotero vs. Mendeley for Massive Literature Reviews](https://academicwizard.online/blog/automating-citations-zotero-vs-mendeley-for-massive-literature-reviews)**
+  - Excerpt: Struggling to track 100+ sources? We compare top citation managers to help you streamline your literature review and keep your bibliography error-free.
+  - Keywords: best citation manager for large literature reviews, Zotero PDF library management, organizing research for PhD thesis, APA 7 citation automation guide, streamlining academic bibliography
+  - Target Region: UK
+  - Published: 2026-07-25
 
 - **[Beyond Generative AI: Ethical Source Synthesis Techniques](https://academicwizard.online/blog/beyond-generative-ai-ethical-source-synthesis-techniques)**
   - Excerpt: Learn how to synthesize diverse academic sources manually. Build a strong, original literature review while maintaining total research integrity.
@@ -385,6 +403,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-12
 
 ### Study Guidance
+
+- **[Fixing Turnitin Score Spikes: Addressing AI Hallucinations in Drafting](https://academicwizard.online/blog/fixing-turnitin-score-spikes-addressing-ai-hallucinations-in-drafting)**
+  - Excerpt: Is your original work being wrongly flagged by AI detectors? Learn why Turnitin scores spike and how to transparently document your ethical writing process.
+  - Keywords: fixing Turnitin AI detection false positives, AI writing detection accuracy, academic integrity in student writing, humanizing AI-assisted drafts, Turnitin similarity report interpretation
+  - Target Region: USA
+  - Published: 2026-07-25
 
 - **[Zotero 8 Integration Guide: Syncing PDFs and APA 7 Citations](https://academicwizard.online/blog/zotero-8-integration-guide-syncing-pdfs-and-apa-7-citations)**
   - Excerpt: Master Zotero 8 to manage your references effortlessly. Our guide covers syncing PDFs and ensuring perfect APA 7th edition formatting for your papers.
