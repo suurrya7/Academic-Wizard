@@ -1,5 +1,105 @@
 [
   {
+    "title": "Resolving Turnitin AI Detection Discrepancies in Academic Drafting",
+    "slug": "resolving-turnitin-ai-detection-discrepancies-in-academic-drafting",
+    "excerpt": "Facing unfair AI-detection flags? Learn how to document your writing process and effectively communicate with instructors to resolve false positive reports.",
+    "keywords": [
+      "turnitin ai detection false positives",
+      "academic integrity guidelines",
+      "writing style inconsistency",
+      "university plagiarism policies",
+      "AI generated content verification"
+    ],
+    "primaryKeyword": "turnitin ai detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-26T05:25:09.563956+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/resolving-turnitin-ai-detection-discrepancies-in-academic-drafting.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Mastering NVivo 16: Streamlining Thematic Coding for PhD Theses",
+    "slug": "mastering-nvivo-16-streamlining-thematic-coding-for-phd-theses",
+    "excerpt": "Struggling with NVivo 16? Master the art of thematic coding to organize your thesis data efficiently and maintain academic rigor in your research.",
+    "keywords": [
+      "nvivo 16 qualitative coding tutorial",
+      "thematic analysis methodology",
+      "phd dissertation data management",
+      "coding software for students",
+      "qualitative research workflow"
+    ],
+    "primaryKeyword": "nvivo 16 qualitative coding tutorial",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-26T05:25:36.175279+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-16-streamlining-thematic-coding-for-phd-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Avoiding Common Citation Errors in Long Papers",
+    "slug": "apa-7th-edition-avoiding-common-citation-errors-in-long-papers",
+    "excerpt": "Don't let formatting errors lower your grade. Discover the most common APA 7th edition citation pitfalls and how to fix them before your final submission.",
+    "keywords": [
+      "apa 7th edition formatting common mistakes",
+      "citation style guide 2026",
+      "academic reference management",
+      "in-text citation rules",
+      "bibliography formatting help"
+    ],
+    "primaryKeyword": "apa 7th edition formatting common mistakes",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-07-26T05:26:02.118839+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-avoiding-common-citation-errors-in-long-papers.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Structured Literature Review Outlining: Avoiding Thesis Stagnation",
+    "slug": "structured-literature-review-outlining-avoiding-thesis-stagnation",
+    "excerpt": "Feeling stuck on your literature review? Learn a proven structural framework to synthesize academic sources and maintain momentum in your dissertation work.",
+    "keywords": [
+      "literature review outline strategy",
+      "dissertation research methodology",
+      "academic source synthesis",
+      "organizing research chapters",
+      "thesis writing productivity"
+    ],
+    "primaryKeyword": "literature review outline strategy",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-26T05:26:31.027867+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/structured-literature-review-outlining-avoiding-thesis-stagnation.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Fixing Turnitin Score Spikes: Addressing AI Hallucinations in Drafting",
     "slug": "fixing-turnitin-score-spikes-addressing-ai-hallucinations-in-drafting",
     "excerpt": "Is your original work being wrongly flagged by AI detectors? Learn why Turnitin scores spike and how to transparently document your ethical writing process.",
