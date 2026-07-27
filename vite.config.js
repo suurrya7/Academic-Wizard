@@ -59,7 +59,9 @@ export default defineConfig({
         headless: true,
         maxConcurrentRoutes: 5, // Process 5 routes at a time to speed it up
         navigationTimeout: 60000,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
+        launchOptions: {
+          args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
+        }
       })
     })
   ],
