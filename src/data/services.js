@@ -85,20 +85,24 @@ export const servicesData = [
                 slug: "uk", 
                 name: "United Kingdom", 
                 flag: "🇬🇧", 
-                keywords: ["assignment help UK", "UK university assignment support"], 
+                keywords: ["assignment help UK", "UK university assignment support", "assignment help Edinburgh", "assignment help Glasgow", "assignment help Leeds", "assignment help Cardiff", "HNC assignment help", "Edexcel assignment help", "resit assignment help"], 
                 desc: "Tailored to UK university marking criteria, focusing on critical analysis and independent research to help you achieve higher degree classifications.",
-                localInsight: "UK universities such as the University of Oxford, University College London (UCL), the University of Edinburgh, and King's College London demand a high standard of independent critical analysis. Our advisors understand how OSCOLA, Harvard (Cite Them Right), and MHRA styles are assessed, and are familiar with UK module descriptors and learning outcomes.",
-                overview: "Academic Wizard provides expert academic support for students at UK universities. Our services are fully aligned with the British higher education system, covering undergraduate and postgraduate structures. Our UK guides are experts in the critical analysis methodologies required by top Russell Group and London universities.",
+                localInsight: "UK universities across cities like Edinburgh, Glasgow, Leeds, Cardiff, Canterbury, Southampton, Nottingham, and Oxford demand a high standard of independent critical analysis. Our advisors understand how OSCOLA, Harvard (Cite Them Right), and MHRA styles are assessed, and are familiar with UK module descriptors and learning outcomes.",
+                overview: "Academic Wizard provides expert academic support for students at UK universities. Our services are fully aligned with the British higher education system, covering undergraduate, postgraduate, HNC, HND, and Edexcel structures. We also provide specialized support for university resits. Our UK guides are experts in the critical analysis methodologies required by top Russell Group and local universities alike.",
                 features: [
                     "UK-native academic writers and proofreaders",
                     "Cite Them Right Harvard, MHRA, and OSCOLA referencing formats",
+                    "Specialized support for HNC, HND, Edexcel, and university resit assignments",
                     "Proofreading adjusted for British spelling and academic lexicon",
                     "100% original, plagiarism-free research guidance"
                 ],
                 pricing: "Flexible pricing structured in British Pounds starting from £8 per page or £24 per 1000 words. Contact us for a quote in GBP.",
                 faqs: [
                     { question: "Are your writers familiar with UK grading criteria?", answer: "Yes, our academic advisors hold degrees from leading British universities and specialize in the critical evaluation frameworks required for UK degrees." },
-                    { question: "Can you format according to Cite Them Right Harvard?", answer: "Absolutely. Our editors are fully trained in the Cite Them Right standard used by most UK institutions." }
+                    { question: "Can you format according to Cite Them Right Harvard?", answer: "Absolutely. Our editors are fully trained in the Cite Them Right standard used by most UK institutions." },
+                    { question: "Do you offer assignment help for students in Scotland or Wales?", answer: "Yes, we regularly support students across the UK, including those studying in Edinburgh, Glasgow, Cardiff, and beyond, ensuring alignment with their specific university rubrics." },
+                    { question: "Can you help with HNC, HND, and Edexcel assignments?", answer: "Absolutely. Our experts are well-versed in the practical and theoretical requirements of HNC, HND, and Edexcel qualifications." },
+                    { question: "Do you provide support for university resit assignments?", answer: "Yes, we offer targeted support for resit assignments. We can review your previous feedback to ensure the new submission addresses all tutor comments and meets the required passing standard." }
                 ]
             },
             { 

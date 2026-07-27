@@ -58,7 +58,8 @@ export default defineConfig({
         renderAfterTime: 1000, // 1 second is plenty for static rendering
         headless: true,
         maxConcurrentRoutes: 5, // Process 5 routes at a time to speed it up
-        navigationTimeout: 60000
+        navigationTimeout: 60000,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
       })
     })
   ],
