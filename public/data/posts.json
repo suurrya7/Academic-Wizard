@@ -1,5 +1,105 @@
 [
   {
+    "title": "Managing Zotero 9 Plugin Conflicts During Complex Dissertation Work",
+    "slug": "managing-zotero-9-plugin-conflicts-during-complex-dissertation-work",
+    "excerpt": "Troubleshooting Zotero 9 plugin conflicts to keep your dissertation bibliography error-free. Learn the best workflows to maintain research integrity today.",
+    "keywords": [
+      "Zotero 9 plugin errors in thesis writing",
+      "Zotero PDF indexing issues",
+      "fixing citation styles in Zotero",
+      "Zotero 9 sync workflow",
+      "academic research software troubleshooting"
+    ],
+    "primaryKeyword": "Zotero 9 plugin errors in thesis writing",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-27T05:43:05.161069+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/managing-zotero-9-plugin-conflicts-during-complex-dissertation-work.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo 17 Coding Workflows: Reducing Bias in Qualitative Analysis",
+    "slug": "nvivo-17-coding-workflows-reducing-bias-in-qualitative-analysis",
+    "excerpt": "Learn how to use NVivo 17 features to document your research audit trail and minimize subjective bias in your qualitative thematic coding analysis.",
+    "keywords": [
+      "minimizing researcher bias in NVivo 17",
+      "thematic analysis coding frame",
+      "qualitative data reliability tips",
+      "NVivo research audit trail",
+      "coding consistency in NVivo"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo 17",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-27T05:43:34.472419+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-17-coding-workflows-reducing-bias-in-qualitative-analysis.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Fixing APA 7 Footnote Errors in Complex Graduate Research Papers",
+    "slug": "fixing-apa-7-footnote-errors-in-complex-graduate-research-papers",
+    "excerpt": "Stop losing marks on formatting. Master the correct APA 7th edition rules for footnotes and endnotes to ensure your graduate paper meets academic rigor.",
+    "keywords": [
+      "APA 7th edition footnote vs endnote rules",
+      "APA 7 citation formatting help",
+      "academic writing style guides",
+      "fixing APA reference list errors",
+      "student formatting checklist"
+    ],
+    "primaryKeyword": "APA 7th edition footnote vs endnote rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-27T05:44:01.929224+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-apa-7-footnote-errors-in-complex-graduate-research-papers.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Ethical Use of AI Tools for Synthesizing Literature Review Themes",
+    "slug": "ethical-use-of-ai-tools-for-synthesizing-literature-review-themes",
+    "excerpt": "Learn how to ethically integrate AI tools to organize your literature review themes without compromising your academic integrity or original analysis.",
+    "keywords": [
+      "ethical AI tools for literature synthesis",
+      "AI for literature review outlines",
+      "synthesizing academic sources ethically",
+      "identifying research gaps with AI",
+      "responsible AI use in research"
+    ],
+    "primaryKeyword": "ethical AI tools for literature synthesis",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-27T05:44:32.585615+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-use-of-ai-tools-for-synthesizing-literature-review-themes.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Resolving Turnitin AI Detection Discrepancies in Academic Drafting",
     "slug": "resolving-turnitin-ai-detection-discrepancies-in-academic-drafting",
     "excerpt": "Facing unfair AI-detection flags? Learn how to document your writing process and effectively communicate with instructors to resolve false positive reports.",
