@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-07-27
+        **Last updated**: 2026-07-28
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Mitigating AI Bias in Qualitative Coding with NVivo 18 Features](https://academicwizard.online/blog/mitigating-ai-bias-in-qualitative-coding-with-nvivo-18-features)**
+  - Excerpt: Ensure your qualitative data analysis remains objective. Discover how to identify and mitigate AI bias when using NVivo 18 for your thesis coding process.
+  - Keywords: reducing algorithmic bias in qualitative coding, NVivo 18 qualitative analysis, thematic analysis best practices, ethical AI in social sciences, validating qualitative research findings
+  - Target Region: UK
+  - Published: 2026-07-28
+
 - **[Managing Zotero 9 Plugin Conflicts During Complex Dissertation Work](https://academicwizard.online/blog/managing-zotero-9-plugin-conflicts-during-complex-dissertation-work)**
   - Excerpt: Troubleshooting Zotero 9 plugin conflicts to keep your dissertation bibliography error-free. Learn the best workflows to maintain research integrity today.
   - Keywords: Zotero 9 plugin errors in thesis writing, Zotero PDF indexing issues, fixing citation styles in Zotero, Zotero 9 sync workflow, academic research software troubleshooting
@@ -245,6 +251,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Handling Multi-Author Source Citation Quirks](https://academicwizard.online/blog/apa-7th-edition-handling-multi-author-source-citation-quirks)**
+  - Excerpt: Master the APA 7th Edition multi-author citation rules. Stop losing points on bibliography errors and learn exactly how to format complex academic sources.
+  - Keywords: APA 7 citation rules for complex multi-author sources, APA 7 reference list formatting, academic citation guidance, citing papers with many authors, APA 7 in-text citation examples
+  - Target Region: Australia
+  - Published: 2026-07-28
 
 - **[Fixing APA 7 Footnote Errors in Complex Graduate Research Papers](https://academicwizard.online/blog/fixing-apa-7-footnote-errors-in-complex-graduate-research-papers)**
   - Excerpt: Stop losing marks on formatting. Master the correct APA 7th edition rules for footnotes and endnotes to ensure your graduate paper meets academic rigor.
@@ -396,6 +408,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Optimizing Obsidian and Zotero Workflows for Graduate Research](https://academicwizard.online/blog/optimizing-obsidian-and-zotero-workflows-for-graduate-research)**
+  - Excerpt: Struggling to track your citations? Learn how to sync Zotero with Obsidian to build a powerful, searchable personal knowledge base for your 2026 research.
+  - Keywords: connecting Obsidian to Zotero for academic research, zotero research management, academic note taking strategies, obsidian for PhD students, managing academic citations 2026
+  - Target Region: USA
+  - Published: 2026-07-28
+
 - **[NVivo 17 Coding Workflows: Reducing Bias in Qualitative Analysis](https://academicwizard.online/blog/nvivo-17-coding-workflows-reducing-bias-in-qualitative-analysis)**
   - Excerpt: Learn how to use NVivo 17 features to document your research audit trail and minimize subjective bias in your qualitative thematic coding analysis.
   - Keywords: minimizing researcher bias in NVivo 17, thematic analysis coding frame, qualitative data reliability tips, NVivo research audit trail, coding consistency in NVivo
@@ -445,6 +463,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-12
 
 ### Study Guidance
+
+- **[Sustainable Dissertation Writing: Beating the Mid-Year Slump](https://academicwizard.online/blog/sustainable-dissertation-writing-beating-the-mid-year-slump)**
+  - Excerpt: Feel like your PhD progress has stalled? Get back on track with sustainable, science-backed mental health and productivity strategies for dissertation writers.
+  - Keywords: mental health strategies for dissertation students, PhD dissertation motivation, overcoming graduate research burnout, academic time management tips, dissertation milestone planning
+  - Target Region: Canada
+  - Published: 2026-07-28
 
 - **[APA 7th Edition: Avoiding Common Citation Errors in Long Papers](https://academicwizard.online/blog/apa-7th-edition-avoiding-common-citation-errors-in-long-papers)**
   - Excerpt: Don't let formatting errors lower your grade. Discover the most common APA 7th edition citation pitfalls and how to fix them before your final submission.

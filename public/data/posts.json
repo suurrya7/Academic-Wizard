@@ -1,5 +1,105 @@
 [
   {
+    "title": "Optimizing Obsidian and Zotero Workflows for Graduate Research",
+    "slug": "optimizing-obsidian-and-zotero-workflows-for-graduate-research",
+    "excerpt": "Struggling to track your citations? Learn how to sync Zotero with Obsidian to build a powerful, searchable personal knowledge base for your 2026 research.",
+    "keywords": [
+      "connecting Obsidian to Zotero for academic research",
+      "zotero research management",
+      "academic note taking strategies",
+      "obsidian for PhD students",
+      "managing academic citations 2026"
+    ],
+    "primaryKeyword": "connecting Obsidian to Zotero for academic research",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-28T04:58:23.696436+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/optimizing-obsidian-and-zotero-workflows-for-graduate-research.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Mitigating AI Bias in Qualitative Coding with NVivo 18 Features",
+    "slug": "mitigating-ai-bias-in-qualitative-coding-with-nvivo-18-features",
+    "excerpt": "Ensure your qualitative data analysis remains objective. Discover how to identify and mitigate AI bias when using NVivo 18 for your thesis coding process.",
+    "keywords": [
+      "reducing algorithmic bias in qualitative coding",
+      "NVivo 18 qualitative analysis",
+      "thematic analysis best practices",
+      "ethical AI in social sciences",
+      "validating qualitative research findings"
+    ],
+    "primaryKeyword": "reducing algorithmic bias in qualitative coding",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-28T04:58:51.035797+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mitigating-ai-bias-in-qualitative-coding-with-nvivo-18-features.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling Multi-Author Source Citation Quirks",
+    "slug": "apa-7th-edition-handling-multi-author-source-citation-quirks",
+    "excerpt": "Master the APA 7th Edition multi-author citation rules. Stop losing points on bibliography errors and learn exactly how to format complex academic sources.",
+    "keywords": [
+      "APA 7 citation rules for complex multi-author sources",
+      "APA 7 reference list formatting",
+      "academic citation guidance",
+      "citing papers with many authors",
+      "APA 7 in-text citation examples"
+    ],
+    "primaryKeyword": "APA 7 citation rules for complex multi-author sources",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-28T04:59:17.716410+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-multi-author-source-citation-quirks.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Sustainable Dissertation Writing: Beating the Mid-Year Slump",
+    "slug": "sustainable-dissertation-writing-beating-the-mid-year-slump",
+    "excerpt": "Feel like your PhD progress has stalled? Get back on track with sustainable, science-backed mental health and productivity strategies for dissertation writers.",
+    "keywords": [
+      "mental health strategies for dissertation students",
+      "PhD dissertation motivation",
+      "overcoming graduate research burnout",
+      "academic time management tips",
+      "dissertation milestone planning"
+    ],
+    "primaryKeyword": "mental health strategies for dissertation students",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-07-28T04:59:44.535292+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/sustainable-dissertation-writing-beating-the-mid-year-slump.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Managing Zotero 9 Plugin Conflicts During Complex Dissertation Work",
     "slug": "managing-zotero-9-plugin-conflicts-during-complex-dissertation-work",
     "excerpt": "Troubleshooting Zotero 9 plugin conflicts to keep your dissertation bibliography error-free. Learn the best workflows to maintain research integrity today.",
