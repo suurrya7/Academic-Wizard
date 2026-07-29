@@ -1,5 +1,105 @@
 [
   {
+    "title": "When Turnitin Flags AI: Steps to Audit Your Own Academic Integrity",
+    "slug": "when-turnitin-flags-ai-steps-to-audit-your-own-academic-integrity",
+    "excerpt": "Did Turnitin incorrectly flag your essay? Learn how to audit your writing history and maintain academic integrity when facing AI detection discrepancies.",
+    "keywords": [
+      "challenging Turnitin AI detection false positives",
+      "academic integrity policy 2026",
+      "human-written text flagged as AI",
+      "proving original work Turnitin",
+      "AI detector inaccuracy rates"
+    ],
+    "primaryKeyword": "challenging Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-29T05:16:09.801337+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/when-turnitin-flags-ai-steps-to-audit-your-own-academic-integrity.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Formatting Large Theses: Common Chicago 17 Citation Traps to Avoid",
+    "slug": "formatting-large-theses-common-chicago-17-citation-traps-to-avoid",
+    "excerpt": "Master your long-form citations. Avoid common Chicago 17 footnote pitfalls and streamline your dissertation formatting with these expert tips.",
+    "keywords": [
+      "Chicago 17 footnote formatting for dissertations",
+      "complex citation management",
+      "Chicago style manual 17th edition guide",
+      "troubleshooting bibliography errors",
+      "academic formatting software"
+    ],
+    "primaryKeyword": "Chicago 17 footnote formatting for dissertations",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-29T05:16:36.266622+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/formatting-large-theses-common-chicago-17-citation-traps-to-avoid.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "The 2026 Guide to Ethical AI Use for Organizing Literature Themes",
+    "slug": "the-2026-guide-to-ethical-ai-use-for-organizing-literature-themes",
+    "excerpt": "Struggling to map your literature review? Discover ethical ways to use AI for thematic synthesis while keeping your original analysis at the forefront.",
+    "keywords": [
+      "ethical AI tools for literature review synthesis",
+      "responsible AI for research",
+      "organizing research papers",
+      "systematic literature review methodology",
+      "academic research tools 2026"
+    ],
+    "primaryKeyword": "ethical AI tools for literature review synthesis",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-29T05:17:02.398941+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/the-2026-guide-to-ethical-ai-use-for-organizing-literature-themes.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Breaking Thesis Stagnation: Managing Qualitative Data in NVivo 19",
+    "slug": "breaking-thesis-stagnation-managing-qualitative-data-in-nvivo-19",
+    "excerpt": "Stuck on your qualitative coding? Reclaim your PhD momentum with efficient NVivo 19 workflows designed to clear roadblocks and organize complex data.",
+    "keywords": [
+      "NVivo 19 qualitative data analysis for PhD thesis",
+      "thematic coding workflows",
+      "phd dissertation productivity",
+      "qualitative research software tips",
+      "overcoming research roadblocks"
+    ],
+    "primaryKeyword": "NVivo 19 qualitative data analysis for PhD thesis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-29T05:17:28.329240+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/breaking-thesis-stagnation-managing-qualitative-data-in-nvivo-19.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Optimizing Obsidian and Zotero Workflows for Graduate Research",
     "slug": "optimizing-obsidian-and-zotero-workflows-for-graduate-research",
     "excerpt": "Struggling to track your citations? Learn how to sync Zotero with Obsidian to build a powerful, searchable personal knowledge base for your 2026 research.",
