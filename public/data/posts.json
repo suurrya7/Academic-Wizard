@@ -1,5 +1,105 @@
 [
   {
+    "title": "Troubleshooting Zotero 9 Plugin Conflicts in Large Thesis Documents",
+    "slug": "troubleshooting-zotero-9-plugin-conflicts-in-large-thesis-documents",
+    "excerpt": "Struggling with Zotero 9 crashing your thesis file? Discover how to resolve plugin conflicts and streamline your complex academic bibliography efficiently.",
+    "keywords": [
+      "resolving Zotero 9 plugin conflicts for thesis",
+      "Zotero citation manager tips",
+      "managing large academic bibliographies",
+      "fixing Zotero integration errors",
+      "thesis reference management software"
+    ],
+    "primaryKeyword": "resolving Zotero 9 plugin conflicts for thesis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-30T04:52:38.637486+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/troubleshooting-zotero-9-plugin-conflicts-in-large-thesis-documents.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Ethical AI Citation: A Guide to Proper Attribution in Modern Research",
+    "slug": "ethical-ai-citation-a-guide-to-proper-attribution-in-modern-research",
+    "excerpt": "Wondering how to cite AI tools properly? Learn the ethical standards for documenting generative AI use in your assignments while maintaining academic integrity.",
+    "keywords": [
+      "how to cite AI tools in academic papers",
+      "academic integrity and generative AI",
+      "APA 7th edition AI citation rules",
+      "referencing LLM outputs ethically",
+      "transparent research methodology"
+    ],
+    "primaryKeyword": "how to cite AI tools in academic papers",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-30T04:53:04.448779+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-citation-a-guide-to-proper-attribution-in-modern-research.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Solving Qualitative Coding Drift: Advanced NVivo 20 Strategies",
+    "slug": "solving-qualitative-coding-drift-advanced-nvivo-20-strategies",
+    "excerpt": "Combat coding drift in your dissertation. Learn expert techniques for maintaining consistency and reducing bias during qualitative analysis in NVivo 20.",
+    "keywords": [
+      "preventing thematic coding bias in NVivo 20",
+      "qualitative data analysis workflows",
+      "improving thematic analysis consistency",
+      "NVivo coding best practices",
+      "PhD research methodology support"
+    ],
+    "primaryKeyword": "preventing thematic coding bias in NVivo 20",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-30T04:53:29.757483+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/solving-qualitative-coding-drift-advanced-nvivo-20-strategies.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing Complex Multi-Author Reference Formatting",
+    "slug": "apa-7th-edition-fixing-complex-multi-author-reference-formatting",
+    "excerpt": "Struggling with complex APA 7 citations? Master the rules for multi-author sources and fix common reference list errors before submitting your final paper.",
+    "keywords": [
+      "fixing APA 7th edition multi-author errors",
+      "common APA 7 formatting mistakes",
+      "citing papers with many authors",
+      "APA reference list guidelines",
+      "academic writing formatting help"
+    ],
+    "primaryKeyword": "fixing APA 7th edition multi-author errors",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-07-30T04:53:56.075859+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-complex-multi-author-reference-formatting.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
     "title": "When Turnitin Flags AI: Steps to Audit Your Own Academic Integrity",
     "slug": "when-turnitin-flags-ai-steps-to-audit-your-own-academic-integrity",
     "excerpt": "Did Turnitin incorrectly flag your essay? Learn how to audit your writing history and maintain academic integrity when facing AI detection discrepancies.",
