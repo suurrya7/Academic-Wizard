@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-07-30
+        **Last updated**: 2026-07-31
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[How to Conduct Thematic Analysis in NVivo Without Software Bias](https://academicwizard.online/blog/how-to-conduct-thematic-analysis-in-nvivo-without-software-bias)**
+  - Excerpt: Ensure the integrity of your PhD findings. Learn how to perform robust thematic analysis in NVivo while maintaining your unique analytical perspective.
+  - Keywords: avoiding bias in NVivo thematic analysis, NVivo qualitative coding best practices, interpretive reliability in research, qualitative data analysis workflow, systematic coding for PhD thesis
+  - Target Region: UK
+  - Published: 2026-07-31
+
 - **[Solving Qualitative Coding Drift: Advanced NVivo 20 Strategies](https://academicwizard.online/blog/solving-qualitative-coding-drift-advanced-nvivo-20-strategies)**
   - Excerpt: Combat coding drift in your dissertation. Learn expert techniques for maintaining consistency and reducing bias during qualitative analysis in NVivo 20.
   - Keywords: preventing thematic coding bias in NVivo 20, qualitative data analysis workflows, improving thematic analysis consistency, NVivo coding best practices, PhD research methodology support
@@ -263,6 +269,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Chicago 17 Footnote vs. Bibliography: Solving Common Formatting Loops](https://academicwizard.online/blog/chicago-17-footnote-vs-bibliography-solving-common-formatting-loops)**
+  - Excerpt: Tired of manual citation fixes? Master the Chicago 17 style with our guide to clearing common footnote loops and bibliography inconsistencies today.
+  - Keywords: Chicago 17 citation formatting errors, Chicago style bibliography guide, footnote placement in long papers, correcting citation inconsistencies, academic formatting for humanities
+  - Target Region: Canada
+  - Published: 2026-07-31
 
 - **[Ethical AI Citation: A Guide to Proper Attribution in Modern Research](https://academicwizard.online/blog/ethical-ai-citation-a-guide-to-proper-attribution-in-modern-research)**
   - Excerpt: Wondering how to cite AI tools properly? Learn the ethical standards for documenting generative AI use in your assignments while maintaining academic integrity.
@@ -376,6 +388,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Scaffolding Your Lit Review Without Losing Voice](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-lit-review-without-losing-voice)**
+  - Excerpt: Use AI to organize your literature review outline while keeping your voice authentic. Learn ethical scaffolding techniques for your research project.
+  - Keywords: how to use AI for literature review outlining, ethical AI tools for researchers, synthesizing academic literature, maintaining academic voice in writing, organizing themes for a dissertation
+  - Target Region: Australia
+  - Published: 2026-07-31
+
 - **[The 2026 Guide to Ethical AI Use for Organizing Literature Themes](https://academicwizard.online/blog/the-2026-guide-to-ethical-ai-use-for-organizing-literature-themes)**
   - Excerpt: Struggling to map your literature review? Discover ethical ways to use AI for thematic synthesis while keeping your original analysis at the forefront.
   - Keywords: ethical AI tools for literature review synthesis, responsible AI for research, organizing research papers, systematic literature review methodology, academic research tools 2026
@@ -443,6 +461,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Automating Reference Lists: Zotero vs. EndNote for Large Projects](https://academicwizard.online/blog/automating-reference-lists-zotero-vs-endnote-for-large-projects)**
+  - Excerpt: Struggling to track thousands of sources? We compare Zotero and EndNote to help you choose the best citation manager for your long-form thesis project.
+  - Keywords: Zotero vs EndNote for thesis research, citation management software comparison, automating academic bibliographies, managing thousands of citations, reference manager for dissertations
+  - Target Region: USA
+  - Published: 2026-07-31
 
 - **[Troubleshooting Zotero 9 Plugin Conflicts in Large Thesis Documents](https://academicwizard.online/blog/troubleshooting-zotero-9-plugin-conflicts-in-large-thesis-documents)**
   - Excerpt: Struggling with Zotero 9 crashing your thesis file? Discover how to resolve plugin conflicts and streamline your complex academic bibliography efficiently.

@@ -1,5 +1,105 @@
 [
   {
+    "title": "Automating Reference Lists: Zotero vs. EndNote for Large Projects",
+    "slug": "automating-reference-lists-zotero-vs-endnote-for-large-projects",
+    "excerpt": "Struggling to track thousands of sources? We compare Zotero and EndNote to help you choose the best citation manager for your long-form thesis project.",
+    "keywords": [
+      "Zotero vs EndNote for thesis research",
+      "citation management software comparison",
+      "automating academic bibliographies",
+      "managing thousands of citations",
+      "reference manager for dissertations"
+    ],
+    "primaryKeyword": "Zotero vs EndNote for thesis research",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-07-31T05:29:30.731008+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/automating-reference-lists-zotero-vs-endnote-for-large-projects.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "How to Conduct Thematic Analysis in NVivo Without Software Bias",
+    "slug": "how-to-conduct-thematic-analysis-in-nvivo-without-software-bias",
+    "excerpt": "Ensure the integrity of your PhD findings. Learn how to perform robust thematic analysis in NVivo while maintaining your unique analytical perspective.",
+    "keywords": [
+      "avoiding bias in NVivo thematic analysis",
+      "NVivo qualitative coding best practices",
+      "interpretive reliability in research",
+      "qualitative data analysis workflow",
+      "systematic coding for PhD thesis"
+    ],
+    "primaryKeyword": "avoiding bias in NVivo thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-07-31T05:29:57.382009+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/how-to-conduct-thematic-analysis-in-nvivo-without-software-bias.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "Chicago 17 Footnote vs. Bibliography: Solving Common Formatting Loops",
+    "slug": "chicago-17-footnote-vs-bibliography-solving-common-formatting-loops",
+    "excerpt": "Tired of manual citation fixes? Master the Chicago 17 style with our guide to clearing common footnote loops and bibliography inconsistencies today.",
+    "keywords": [
+      "Chicago 17 citation formatting errors",
+      "Chicago style bibliography guide",
+      "footnote placement in long papers",
+      "correcting citation inconsistencies",
+      "academic formatting for humanities"
+    ],
+    "primaryKeyword": "Chicago 17 citation formatting errors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-07-31T05:30:23.245292+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/chicago-17-footnote-vs-bibliography-solving-common-formatting-loops.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Lit Review Without Losing Voice",
+    "slug": "ethical-ai-use-scaffolding-your-lit-review-without-losing-voice",
+    "excerpt": "Use AI to organize your literature review outline while keeping your voice authentic. Learn ethical scaffolding techniques for your research project.",
+    "keywords": [
+      "how to use AI for literature review outlining",
+      "ethical AI tools for researchers",
+      "synthesizing academic literature",
+      "maintaining academic voice in writing",
+      "organizing themes for a dissertation"
+    ],
+    "primaryKeyword": "how to use AI for literature review outlining",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-07-31T05:30:49.913574+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-lit-review-without-losing-voice.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Troubleshooting Zotero 9 Plugin Conflicts in Large Thesis Documents",
     "slug": "troubleshooting-zotero-9-plugin-conflicts-in-large-thesis-documents",
     "excerpt": "Struggling with Zotero 9 crashing your thesis file? Discover how to resolve plugin conflicts and streamline your complex academic bibliography efficiently.",
