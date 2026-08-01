@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-07-31
+        **Last updated**: 2026-08-01
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Qualitative Data Overload: Mastering NVivo for PhD Theses in 2026](https://academicwizard.online/blog/qualitative-data-overload-mastering-nvivo-for-phd-theses-in-2026)**
+  - Excerpt: Struggling with messy transcript files? Learn our expert-backed workflow for organizing qualitative data in NVivo to ace your PhD dissertation analysis.
+  - Keywords: organizing qualitative data in NVivo for dissertation, NVivo coding tips for doctoral students, managing large qualitative datasets, thematic analysis software workflow, PhD research data organization
+  - Target Region: USA
+  - Published: 2026-08-01
+
 - **[How to Conduct Thematic Analysis in NVivo Without Software Bias](https://academicwizard.online/blog/how-to-conduct-thematic-analysis-in-nvivo-without-software-bias)**
   - Excerpt: Ensure the integrity of your PhD findings. Learn how to perform robust thematic analysis in NVivo while maintaining your unique analytical perspective.
   - Keywords: avoiding bias in NVivo thematic analysis, NVivo qualitative coding best practices, interpretive reliability in research, qualitative data analysis workflow, systematic coding for PhD thesis
@@ -269,6 +275,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Detection: How to Conduct an Academic Integrity Audit](https://academicwizard.online/blog/turnitin-ai-detection-how-to-conduct-an-academic-integrity-audit)**
+  - Excerpt: Received a high AI detection score? Discover how to conduct a professional audit of your writing process to verify your academic integrity and voice.
+  - Keywords: how to audit Turnitin AI report for false positives, understanding AI detection scores, academic integrity and AI tools, resolving AI writing allegations, improving academic voice
+  - Target Region: UK
+  - Published: 2026-08-01
 
 - **[Chicago 17 Footnote vs. Bibliography: Solving Common Formatting Loops](https://academicwizard.online/blog/chicago-17-footnote-vs-bibliography-solving-common-formatting-loops)**
   - Excerpt: Tired of manual citation fixes? Master the Chicago 17 style with our guide to clearing common footnote loops and bibliography inconsistencies today.
@@ -388,6 +400,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Prompt Engineering: Elevating Your Lit Review Strategy](https://academicwizard.online/blog/ethical-ai-prompt-engineering-elevating-your-lit-review-strategy)**
+  - Excerpt: Enhance your literature review without compromising integrity. Master ethical AI prompting techniques to organize themes and synthesize your academic sources.
+  - Keywords: using AI prompts for literature review synthesis, AI for academic research ethics, structured literature review techniques, AI-assisted source mapping, academic writing productivity
+  - Target Region: Australia
+  - Published: 2026-08-01
+
 - **[Ethical AI Use: Scaffolding Your Lit Review Without Losing Voice](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-lit-review-without-losing-voice)**
   - Excerpt: Use AI to organize your literature review outline while keeping your voice authentic. Learn ethical scaffolding techniques for your research project.
   - Keywords: how to use AI for literature review outlining, ethical AI tools for researchers, synthesizing academic literature, maintaining academic voice in writing, organizing themes for a dissertation
@@ -461,6 +479,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Mastering Chicago 17: Handling Complex Multi-Volume Source Citations](https://academicwizard.online/blog/mastering-chicago-17-handling-complex-multi-volume-source-citations)**
+  - Excerpt: Tired of citation errors? Learn the precise rules for formatting multi-volume sources in Chicago 17 style to ensure your research paper is polished.
+  - Keywords: Chicago 17 multi-volume source citation guide, Chicago manual of style footnotes, complex citation formatting, archival research documentation, history paper citation tips
+  - Target Region: Canada
+  - Published: 2026-08-01
 
 - **[Automating Reference Lists: Zotero vs. EndNote for Large Projects](https://academicwizard.online/blog/automating-reference-lists-zotero-vs-endnote-for-large-projects)**
   - Excerpt: Struggling to track thousands of sources? We compare Zotero and EndNote to help you choose the best citation manager for your long-form thesis project.

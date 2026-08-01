@@ -1,5 +1,105 @@
 [
   {
+    "title": "Qualitative Data Overload: Mastering NVivo for PhD Theses in 2026",
+    "slug": "qualitative-data-overload-mastering-nvivo-for-phd-theses-in-2026",
+    "excerpt": "Struggling with messy transcript files? Learn our expert-backed workflow for organizing qualitative data in NVivo to ace your PhD dissertation analysis.",
+    "keywords": [
+      "organizing qualitative data in NVivo for dissertation",
+      "NVivo coding tips for doctoral students",
+      "managing large qualitative datasets",
+      "thematic analysis software workflow",
+      "PhD research data organization"
+    ],
+    "primaryKeyword": "organizing qualitative data in NVivo for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-01T05:21:23.133201+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/qualitative-data-overload-mastering-nvivo-for-phd-theses-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Turnitin AI Detection: How to Conduct an Academic Integrity Audit",
+    "slug": "turnitin-ai-detection-how-to-conduct-an-academic-integrity-audit",
+    "excerpt": "Received a high AI detection score? Discover how to conduct a professional audit of your writing process to verify your academic integrity and voice.",
+    "keywords": [
+      "how to audit Turnitin AI report for false positives",
+      "understanding AI detection scores",
+      "academic integrity and AI tools",
+      "resolving AI writing allegations",
+      "improving academic voice"
+    ],
+    "primaryKeyword": "how to audit Turnitin AI report for false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-01T05:21:49.523168+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-how-to-conduct-an-academic-integrity-audit.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Mastering Chicago 17: Handling Complex Multi-Volume Source Citations",
+    "slug": "mastering-chicago-17-handling-complex-multi-volume-source-citations",
+    "excerpt": "Tired of citation errors? Learn the precise rules for formatting multi-volume sources in Chicago 17 style to ensure your research paper is polished.",
+    "keywords": [
+      "Chicago 17 multi-volume source citation guide",
+      "Chicago manual of style footnotes",
+      "complex citation formatting",
+      "archival research documentation",
+      "history paper citation tips"
+    ],
+    "primaryKeyword": "Chicago 17 multi-volume source citation guide",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-01T05:22:15.634786+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-chicago-17-handling-complex-multi-volume-source-citations.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Ethical AI Prompt Engineering: Elevating Your Lit Review Strategy",
+    "slug": "ethical-ai-prompt-engineering-elevating-your-lit-review-strategy",
+    "excerpt": "Enhance your literature review without compromising integrity. Master ethical AI prompting techniques to organize themes and synthesize your academic sources.",
+    "keywords": [
+      "using AI prompts for literature review synthesis",
+      "AI for academic research ethics",
+      "structured literature review techniques",
+      "AI-assisted source mapping",
+      "academic writing productivity"
+    ],
+    "primaryKeyword": "using AI prompts for literature review synthesis",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-01T05:22:41.511854+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-prompt-engineering-elevating-your-lit-review-strategy.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Automating Reference Lists: Zotero vs. EndNote for Large Projects",
     "slug": "automating-reference-lists-zotero-vs-endnote-for-large-projects",
     "excerpt": "Struggling to track thousands of sources? We compare Zotero and EndNote to help you choose the best citation manager for your long-form thesis project.",
