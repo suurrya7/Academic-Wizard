@@ -70,7 +70,7 @@ const AIHumanizer = () => {
         <div className="page-ai-humanizer">
             <Helmet>
                 <title>Free AI Text Humanizer & Turnitin Bypass Tool | Academic Wizard</title>
-                <meta name="description" content="Humanize your AI-generated essays. Remove robotic vocabulary patterns, increase sentence perplexity, and bypass Turnitin AI detectors instantly." />
+                <meta name="description" content="Free AI Humanizer tool — paste AI-generated text and get a human-sounding rewrite that passes Turnitin, Winston AI, and other AI detection tools. No sign-up required." />
                 <link rel="canonical" href="https://academicwizard.online/tools/ai-humanizer" />
                 <meta property="og:title" content="Free AI Text Humanizer & Turnitin Bypass Tool | Academic Wizard" />
                 <meta property="og:description" content="Convert robotic ChatGPT text into natural academic writing. Bypass AI detectors seamlessly." />
