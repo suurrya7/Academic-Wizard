@@ -8,6 +8,11 @@ import TrustStats from '../components/TrustStats';
 import { CheckCircle, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
 import { assetPath } from '../config/site';
 
+const SLUG_TO_HREFLANG = {
+    'uk': 'en-GB', 'usa': 'en-US', 'australia': 'en-AU', 'canada': 'en-CA',
+    'india': 'en-IN', 'ireland': 'en-IE', 'singapore': 'en-SG', 'germany': 'en-DE'
+};
+
 const CountryServicePage = () => {
     const { serviceSlug, countrySlug } = useParams();
     const service = servicesData.find(s => s.slug === serviceSlug);
