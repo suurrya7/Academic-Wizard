@@ -1,5 +1,105 @@
 [
   {
+    "title": "Zotero PDF Metadata Errors: How to Fix Citations in Large Theses",
+    "slug": "zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses",
+    "excerpt": "Struggling with messy Zotero metadata in your thesis? Learn how to automate cleanup, fix broken citations, and keep your references perfect for submission.",
+    "keywords": [
+      "fixing Zotero metadata errors in large documents",
+      "Zotero PDF attachment cleanup",
+      "automatic citation correction",
+      "thesis reference management",
+      "Zotero library organization"
+    ],
+    "primaryKeyword": "fixing Zotero metadata errors in large documents",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-02T05:22:19.184057+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Avoiding Turnitin AI Flags: Best Practices for Human-Authored Work",
+    "slug": "avoiding-turnitin-ai-flags-best-practices-for-human-authored-work",
+    "excerpt": "Worried about Turnitin flagging your original work? Discover how to maintain your academic voice and prevent false AI detection in your research papers.",
+    "keywords": [
+      "how to prevent Turnitin false positive AI flags",
+      "Turnitin AI detector accuracy",
+      "academic writing style verification",
+      "reducing AI similarity scores",
+      "proving original academic authorship"
+    ],
+    "primaryKeyword": "how to prevent Turnitin false positive AI flags",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-02T05:22:45.120268+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/avoiding-turnitin-ai-flags-best-practices-for-human-authored-work.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Qualitative Coding Strategy: Transitioning from Manual to NVivo 22",
+    "slug": "qualitative-coding-strategy-transitioning-from-manual-to-nvivo-22",
+    "excerpt": "Transitioning to NVivo 22 for your dissertation? Learn how to streamline your thematic coding, reduce bias, and manage complex qualitative data sets efficiently.",
+    "keywords": [
+      "efficient qualitative coding workflow in NVivo 22",
+      "thematic analysis software tips",
+      "managing qualitative data sets",
+      "coding drift in dissertation research",
+      "NVivo workspace organization"
+    ],
+    "primaryKeyword": "efficient qualitative coding workflow in NVivo 22",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-02T05:23:11.020451+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/qualitative-coding-strategy-transitioning-from-manual-to-nvivo-22.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Structuring a PhD Literature Review: A 2026 Synthesis Framework",
+    "slug": "structuring-a-phd-literature-review-a-2026-synthesis-framework",
+    "excerpt": "Stop listing and start synthesizing. Master the 2026 framework for organizing academic literature and building a compelling argument for your dissertation.",
+    "keywords": [
+      "how to synthesize research for literature reviews",
+      "academic literature mapping techniques",
+      "organizing PhD research themes",
+      "critical literature review structure",
+      "academic synthesis writing guide"
+    ],
+    "primaryKeyword": "how to synthesize research for literature reviews",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-02T05:23:37.336236+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/structuring-a-phd-literature-review-a-2026-synthesis-framework.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Qualitative Data Overload: Mastering NVivo for PhD Theses in 2026",
     "slug": "qualitative-data-overload-mastering-nvivo-for-phd-theses-in-2026",
     "excerpt": "Struggling with messy transcript files? Learn our expert-backed workflow for organizing qualitative data in NVivo to ace your PhD dissertation analysis.",
