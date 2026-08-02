@@ -192,14 +192,20 @@ async function publishDevTo(title, content, canonicalUrl) {
 async function publishLinkedIn(text, link) {
     const accessToken = process.env.LINKEDIN_ACCESS_TOKEN;
     
-    // First, get the user's URN (author ID)
+    // First, get the user's URN (author ID) or organization URN
     let authorUrn = process.env.LINKEDIN_AUTHOR_URN;
     if (!authorUrn) {
-        const meRes = await fetchApi('https://api.linkedin.com/v2/userinfo', {
-            headers: { 'Authorization': `Bearer ${accessToken}` }
-        });
-        const meData = await meRes.json();
-        authorUrn = `urn:li:person:${meData.sub}`;
+        if (process.env.LINKEDIN_ORG_ID) {
+            // Post to a Company Page
+            authorUrn = `urn:li:organization:${process.env.LINKEDIN_ORG_ID}`;
+        } else {
+            // Fallback to Personal Profile
+            const meRes = await fetchApi('https://api.linkedin.com/v2/userinfo', {
+                headers: { 'Authorization': `Bearer ${accessToken}` }
+            });
+            const meData = await meRes.json();
+            authorUrn = `urn:li:person:${meData.sub}`;
+        }
     }
 
     // Publish post
