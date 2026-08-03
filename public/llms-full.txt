@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-02
+        **Last updated**: 2026-08-03
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Organizing Your Thesis: Zotero and Obsidian Integration for Success](https://academicwizard.online/blog/organizing-your-thesis-zotero-and-obsidian-integration-for-success)**
+  - Excerpt: Tired of losing track of sources? Sync Zotero with Obsidian to build a powerful, searchable knowledge base for your upcoming thesis or dissertation.
+  - Keywords: using zotero with obsidian for research notes, academic workflow management, automating literature review notes, zotero bibliography management, phd research productivity tools
+  - Target Region: Canada
+  - Published: 2026-08-03
+
 - **[Qualitative Coding Strategy: Transitioning from Manual to NVivo 22](https://academicwizard.online/blog/qualitative-coding-strategy-transitioning-from-manual-to-nvivo-22)**
   - Excerpt: Transitioning to NVivo 22 for your dissertation? Learn how to streamline your thematic coding, reduce bias, and manage complex qualitative data sets efficiently.
   - Keywords: efficient qualitative coding workflow in NVivo 22, thematic analysis software tips, managing qualitative data sets, coding drift in dissertation research, NVivo workspace organization
@@ -281,6 +287,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Handling Complex Multi-Author In-Text Citations](https://academicwizard.online/blog/apa-7th-edition-handling-complex-multi-author-in-text-citations)**
+  - Excerpt: Avoid common grade-draining citation mistakes. Our 2026 guide breaks down complex APA 7th edition multi-author rules for your next research paper.
+  - Keywords: apa 7 citation rules for four or more authors, apa formatting cheat sheet 2026, in-text citation examples apa 7, correcting bibliography errors, academic writing style guide
+  - Target Region: Australia
+  - Published: 2026-08-03
 
 - **[Avoiding Turnitin AI Flags: Best Practices for Human-Authored Work](https://academicwizard.online/blog/avoiding-turnitin-ai-flags-best-practices-for-human-authored-work)**
   - Excerpt: Worried about Turnitin flagging your original work? Discover how to maintain your academic voice and prevent false AI detection in your research papers.
@@ -498,6 +510,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Mastering NVivo 23: Coding Complex Qualitative Data for PhD Success](https://academicwizard.online/blog/mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success)**
+  - Excerpt: Struggling with qualitative data overload? Master NVivo 23 workflows to streamline your thematic analysis and finish your PhD dissertation faster.
+  - Keywords: nvivo 23 thematic coding tutorial for phd students, qualitative research methodology guide, organizing research data in nvivo, improving inter-coder reliability, phd dissertation software workflows
+  - Target Region: UK
+  - Published: 2026-08-03
+
 - **[Zotero PDF Metadata Errors: How to Fix Citations in Large Theses](https://academicwizard.online/blog/zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses)**
   - Excerpt: Struggling with messy Zotero metadata in your thesis? Learn how to automate cleanup, fix broken citations, and keep your references perfect for submission.
   - Keywords: fixing Zotero metadata errors in large documents, Zotero PDF attachment cleanup, automatic citation correction, thesis reference management, Zotero library organization
@@ -583,6 +601,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-12
 
 ### Study Guidance
+
+- **[Fixing Turnitin 'AI Writing' Flags: A Guide for Academic Integrity](https://academicwizard.online/blog/fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity)**
+  - Excerpt: Received an unfair AI flag on your work? Learn how to audit your writing process and prepare a professional appeal to uphold your academic integrity.
+  - Keywords: how to appeal turnitin ai detection false positives, academic integrity appeal letter, turnitin ai report accuracy, disputing academic misconduct claims, preventing false positives in turnitin
+  - Target Region: USA
+  - Published: 2026-08-03
 
 - **[Sustainable Dissertation Writing: Beating the Mid-Year Slump](https://academicwizard.online/blog/sustainable-dissertation-writing-beating-the-mid-year-slump)**
   - Excerpt: Feel like your PhD progress has stalled? Get back on track with sustainable, science-backed mental health and productivity strategies for dissertation writers.

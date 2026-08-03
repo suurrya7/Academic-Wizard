@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Turnitin 'AI Writing' Flags: A Guide for Academic Integrity",
+    "slug": "fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity",
+    "excerpt": "Received an unfair AI flag on your work? Learn how to audit your writing process and prepare a professional appeal to uphold your academic integrity.",
+    "keywords": [
+      "how to appeal turnitin ai detection false positives",
+      "academic integrity appeal letter",
+      "turnitin ai report accuracy",
+      "disputing academic misconduct claims",
+      "preventing false positives in turnitin"
+    ],
+    "primaryKeyword": "how to appeal turnitin ai detection false positives",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-03T05:35:24.068319+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Mastering NVivo 23: Coding Complex Qualitative Data for PhD Success",
+    "slug": "mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success",
+    "excerpt": "Struggling with qualitative data overload? Master NVivo 23 workflows to streamline your thematic analysis and finish your PhD dissertation faster.",
+    "keywords": [
+      "nvivo 23 thematic coding tutorial for phd students",
+      "qualitative research methodology guide",
+      "organizing research data in nvivo",
+      "improving inter-coder reliability",
+      "phd dissertation software workflows"
+    ],
+    "primaryKeyword": "nvivo 23 thematic coding tutorial for phd students",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-03T05:35:49.852749+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling Complex Multi-Author In-Text Citations",
+    "slug": "apa-7th-edition-handling-complex-multi-author-in-text-citations",
+    "excerpt": "Avoid common grade-draining citation mistakes. Our 2026 guide breaks down complex APA 7th edition multi-author rules for your next research paper.",
+    "keywords": [
+      "apa 7 citation rules for four or more authors",
+      "apa formatting cheat sheet 2026",
+      "in-text citation examples apa 7",
+      "correcting bibliography errors",
+      "academic writing style guide"
+    ],
+    "primaryKeyword": "apa 7 citation rules for four or more authors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-03T05:36:15.580249+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-complex-multi-author-in-text-citations.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Organizing Your Thesis: Zotero and Obsidian Integration for Success",
+    "slug": "organizing-your-thesis-zotero-and-obsidian-integration-for-success",
+    "excerpt": "Tired of losing track of sources? Sync Zotero with Obsidian to build a powerful, searchable knowledge base for your upcoming thesis or dissertation.",
+    "keywords": [
+      "using zotero with obsidian for research notes",
+      "academic workflow management",
+      "automating literature review notes",
+      "zotero bibliography management",
+      "phd research productivity tools"
+    ],
+    "primaryKeyword": "using zotero with obsidian for research notes",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-03T05:36:56.456512+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/organizing-your-thesis-zotero-and-obsidian-integration-for-success.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Zotero PDF Metadata Errors: How to Fix Citations in Large Theses",
     "slug": "zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses",
     "excerpt": "Struggling with messy Zotero metadata in your thesis? Learn how to automate cleanup, fix broken citations, and keep your references perfect for submission.",
