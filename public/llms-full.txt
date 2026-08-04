@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-03
+        **Last updated**: 2026-08-04
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[NVivo vs. Manual Coding: When to Switch for PhD Data Analysis](https://academicwizard.online/blog/nvivo-vs-manual-coding-when-to-switch-for-phd-data-analysis)**
+  - Excerpt: Overwhelmed by your qualitative data? Discover the signs it's time to transition from manual coding to NVivo for a more streamlined research process.
+  - Keywords: transitioning from manual coding to NVivo for PhD, NVivo thematic analysis workflows, qualitative research coding strategies, is NVivo necessary for dissertation data, managing qualitative data overload
+  - Target Region: UK
+  - Published: 2026-08-04
+
 - **[Organizing Your Thesis: Zotero and Obsidian Integration for Success](https://academicwizard.online/blog/organizing-your-thesis-zotero-and-obsidian-integration-for-success)**
   - Excerpt: Tired of losing track of sources? Sync Zotero with Obsidian to build a powerful, searchable knowledge base for your upcoming thesis or dissertation.
   - Keywords: using zotero with obsidian for research notes, academic workflow management, automating literature review notes, zotero bibliography management, phd research productivity tools
@@ -287,6 +293,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Fixing In-Text Citation Errors: APA 7th Edition Common Pitfalls](https://academicwizard.online/blog/fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls)**
+  - Excerpt: Are your APA 7 citations flagged for errors? Learn how to fix common multi-author and reference list mistakes to ensure your paper meets standards.
+  - Keywords: APA 7th edition in-text citation common errors, how to cite multiple authors in APA 7, fixing APA citation formatting loops, APA 7 manual formatting guide, avoiding citation errors in long papers
+  - Target Region: Australia
+  - Published: 2026-08-04
 
 - **[APA 7th Edition: Handling Complex Multi-Author In-Text Citations](https://academicwizard.online/blog/apa-7th-edition-handling-complex-multi-author-in-text-citations)**
   - Excerpt: Avoid common grade-draining citation mistakes. Our 2026 guide breaks down complex APA 7th edition multi-author rules for your next research paper.
@@ -424,6 +436,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Scaffolding Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-outline)**
+  - Excerpt: Learn to use AI ethically to scaffold your literature review. Master techniques to structure your themes while ensuring your academic voice remains clear.
+  - Keywords: ethical AI scaffolding for literature review, using AI to organize research themes, AI tools for academic literature synthesis, how to use AI for academic outlining, maintaining voice in AI-assisted writing
+  - Target Region: Canada
+  - Published: 2026-08-04
+
 - **[Structuring a PhD Literature Review: A 2026 Synthesis Framework](https://academicwizard.online/blog/structuring-a-phd-literature-review-a-2026-synthesis-framework)**
   - Excerpt: Stop listing and start synthesizing. Master the 2026 framework for organizing academic literature and building a compelling argument for your dissertation.
   - Keywords: how to synthesize research for literature reviews, academic literature mapping techniques, organizing PhD research themes, critical literature review structure, academic synthesis writing guide
@@ -509,6 +527,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Automating Your Bibliography: Zotero vs. ZoteroBib for 2026 Theses](https://academicwizard.online/blog/automating-your-bibliography-zotero-vs-zoterobib-for-2026-theses)**
+  - Excerpt: Struggling with your massive bibliography? We compare Zotero and ZoteroBib to help you choose the right tool for your 2026 dissertation project.
+  - Keywords: Zotero vs ZoteroBib for large thesis projects, automated citation managers for PhD, best Zotero plugins for dissertation, managing complex citations in Zotero, reference management software comparison
+  - Target Region: USA
+  - Published: 2026-08-04
 
 - **[Mastering NVivo 23: Coding Complex Qualitative Data for PhD Success](https://academicwizard.online/blog/mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success)**
   - Excerpt: Struggling with qualitative data overload? Master NVivo 23 workflows to streamline your thematic analysis and finish your PhD dissertation faster.

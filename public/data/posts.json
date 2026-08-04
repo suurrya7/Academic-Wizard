@@ -1,5 +1,105 @@
 [
   {
+    "title": "Automating Your Bibliography: Zotero vs. ZoteroBib for 2026 Theses",
+    "slug": "automating-your-bibliography-zotero-vs-zoterobib-for-2026-theses",
+    "excerpt": "Struggling with your massive bibliography? We compare Zotero and ZoteroBib to help you choose the right tool for your 2026 dissertation project.",
+    "keywords": [
+      "Zotero vs ZoteroBib for large thesis projects",
+      "automated citation managers for PhD",
+      "best Zotero plugins for dissertation",
+      "managing complex citations in Zotero",
+      "reference management software comparison"
+    ],
+    "primaryKeyword": "Zotero vs ZoteroBib for large thesis projects",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-04T04:57:41.959466+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/automating-your-bibliography-zotero-vs-zoterobib-for-2026-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Fixing In-Text Citation Errors: APA 7th Edition Common Pitfalls",
+    "slug": "fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls",
+    "excerpt": "Are your APA 7 citations flagged for errors? Learn how to fix common multi-author and reference list mistakes to ensure your paper meets standards.",
+    "keywords": [
+      "APA 7th edition in-text citation common errors",
+      "how to cite multiple authors in APA 7",
+      "fixing APA citation formatting loops",
+      "APA 7 manual formatting guide",
+      "avoiding citation errors in long papers"
+    ],
+    "primaryKeyword": "APA 7th edition in-text citation common errors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-04T04:58:08.274095+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "NVivo vs. Manual Coding: When to Switch for PhD Data Analysis",
+    "slug": "nvivo-vs-manual-coding-when-to-switch-for-phd-data-analysis",
+    "excerpt": "Overwhelmed by your qualitative data? Discover the signs it's time to transition from manual coding to NVivo for a more streamlined research process.",
+    "keywords": [
+      "transitioning from manual coding to NVivo for PhD",
+      "NVivo thematic analysis workflows",
+      "qualitative research coding strategies",
+      "is NVivo necessary for dissertation data",
+      "managing qualitative data overload"
+    ],
+    "primaryKeyword": "transitioning from manual coding to NVivo for PhD",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-04T04:58:35.130616+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-vs-manual-coding-when-to-switch-for-phd-data-analysis.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Literature Review Outline",
+    "slug": "ethical-ai-use-scaffolding-your-literature-review-outline",
+    "excerpt": "Learn to use AI ethically to scaffold your literature review. Master techniques to structure your themes while ensuring your academic voice remains clear.",
+    "keywords": [
+      "ethical AI scaffolding for literature review",
+      "using AI to organize research themes",
+      "AI tools for academic literature synthesis",
+      "how to use AI for academic outlining",
+      "maintaining voice in AI-assisted writing"
+    ],
+    "primaryKeyword": "ethical AI scaffolding for literature review",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-04T04:59:02.204759+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-literature-review-outline.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Fixing Turnitin 'AI Writing' Flags: A Guide for Academic Integrity",
     "slug": "fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity",
     "excerpt": "Received an unfair AI flag on your work? Learn how to audit your writing process and prepare a professional appeal to uphold your academic integrity.",
