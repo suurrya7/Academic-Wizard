@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-05
+        **Last updated**: 2026-08-06
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -190,6 +190,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Dynamic Thematic Coding in NVivo: A 2026 Guide to Minimizing Bias](https://academicwizard.online/blog/dynamic-thematic-coding-in-nvivo-a-2026-guide-to-minimizing-bias)**
+  - Excerpt: Improve the rigor of your qualitative analysis. Discover how to identify and minimize researcher bias during thematic coding in NVivo for your PhD thesis.
+  - Keywords: reducing researcher bias in NVivo thematic analysis, NVivo coding reliability, qualitative data interpretation ethics, inductive vs deductive coding NVivo, rigor in qualitative dissertation
+  - Target Region: Australia
+  - Published: 2026-08-06
+
 - **[Structuring Your Dissertation: A 2026 Guide to Thesis Synthesis](https://academicwizard.online/blog/structuring-your-dissertation-a-2026-guide-to-thesis-synthesis)**
   - Excerpt: Feeling stuck on your dissertation? Use our 2026 synthesis framework to structure your chapters, clarify your arguments, and finish your degree on time.
   - Keywords: dissertation synthesis framework, academic argument structure, thesis planning guide, organizing research chapters, overcoming dissertation burnout
@@ -299,6 +305,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI False Positives: How to Verify Your Own Writing Integrity](https://academicwizard.online/blog/turnitin-ai-false-positives-how-to-verify-your-own-writing-integrity)**
+  - Excerpt: Received a false AI flag on Turnitin? Learn the technical steps to verify your writing's originality and prepare an evidence-based appeal for your tutors.
+  - Keywords: challenging turnitin ai detection errors, AI detector inaccuracy, academic integrity appeal process, human-written text flagged as AI, proving original work Turnitin
+  - Target Region: USA
+  - Published: 2026-08-06
 
 - **[Why Turnitin Flags Student Writing: Decoding False Positives in 2026](https://academicwizard.online/blog/why-turnitin-flags-student-writing-decoding-false-positives-in-2026)**
   - Excerpt: Struggling with a high AI detection score? Discover why Turnitin flags human-written work and learn the steps to prove your academic integrity in 2026.
@@ -448,6 +460,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Zotero Workflow Hacks: Managing 100+ Sources for Your Lit Review](https://academicwizard.online/blog/zotero-workflow-hacks-managing-100-sources-for-your-lit-review)**
+  - Excerpt: Feeling buried by research? Learn high-level Zotero organization strategies to streamline your literature review and keep 100+ sources perfectly in sync.
+  - Keywords: organizing large literature reviews in Zotero, Zotero collections for thesis, mastering Zotero tag organization, efficient source synthesis software, Zotero citation management tips
+  - Target Region: Canada
+  - Published: 2026-08-06
+
 - **[Ethical AI Use: Scaffolding Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-outline)**
   - Excerpt: Learn to use AI ethically to scaffold your literature review. Master techniques to structure your themes while ensuring your academic voice remains clear.
   - Keywords: ethical AI scaffolding for literature review, using AI to organize research themes, AI tools for academic literature synthesis, how to use AI for academic outlining, maintaining voice in AI-assisted writing
@@ -539,6 +557,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Mastering Chicago 17 Style: Handling Complex Archival Footnote Citations](https://academicwizard.online/blog/mastering-chicago-17-style-handling-complex-archival-footnote-citations)**
+  - Excerpt: Struggling with archival citations in Chicago 17? Master the art of complex footnote formatting with our clear, step-by-step guide for history students.
+  - Keywords: chicago 17 archival footnote formatting, citing historical primary sources, Chicago style multi-source footnotes, archival document citation guide, Chicago 17 short form citations
+  - Target Region: UK
+  - Published: 2026-08-06
 
 - **[Mastering Qualitative Coding: When to Use NVivo vs. Manual Analysis](https://academicwizard.online/blog/mastering-qualitative-coding-when-to-use-nvivo-vs-manual-analysis)**
   - Excerpt: Choosing between manual coding and NVivo? Compare both methodologies to find the most efficient way to organize your thesis data for 2026 research.
