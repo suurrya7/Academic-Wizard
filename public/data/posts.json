@@ -1,5 +1,105 @@
 [
   {
+    "title": "Zotero 10: Syncing Large Libraries for Multi-Chapter Thesis Projects",
+    "slug": "zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects",
+    "excerpt": "Struggling with Zotero sync errors during your dissertation? Learn how to manage large libraries and maintain citation integrity in our 2026 Zotero guide.",
+    "keywords": [
+      "Zotero 10 library syncing for thesis",
+      "managing thesis bibliography",
+      "Zotero cloud storage limits",
+      "fixing Zotero sync conflicts",
+      "organizing research sources"
+    ],
+    "primaryKeyword": "Zotero 10 library syncing for thesis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-08T03:18:26.618597+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Turnitin AI Score Spikes: Auditing Your Draft for False Positives",
+    "slug": "turnitin-ai-score-spikes-auditing-your-draft-for-false-positives",
+    "excerpt": "Is your assignment showing a false AI detection score? Discover how to audit your writing process and effectively challenge Turnitin flags with confidence.",
+    "keywords": [
+      "Turnitin AI detection false positive audit",
+      "high AI score in student writing",
+      "Turnitin academic integrity check",
+      "legitimate AI detection errors",
+      "improving writing originality"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positive audit",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-08T03:18:52.801067+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-auditing-your-draft-for-false-positives.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Mastering NVivo 25: Visualizing Thematic Maps for Qualitative Data",
+    "slug": "mastering-nvivo-25-visualizing-thematic-maps-for-qualitative-data",
+    "excerpt": "Struggling to code your qualitative data? Our expert guide to NVivo 25 shows you how to build clear, accurate thematic maps for your PhD dissertation.",
+    "keywords": [
+      "NVivo 25 thematic analysis guide",
+      "qualitative coding software",
+      "mapping PhD research themes",
+      "NVivo coding methodology",
+      "analyzing qualitative datasets"
+    ],
+    "primaryKeyword": "NVivo 25 thematic analysis guide",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-08T03:19:23.570568+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-25-visualizing-thematic-maps-for-qualitative-data.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Citation Nuances in Technical Papers",
+    "slug": "beyond-apa-7-managing-citation-nuances-in-technical-papers",
+    "excerpt": "Avoid common grade-draining errors. Master the complex nuances of APA 7th edition formatting with our guide to perfect citations in your technical papers.",
+    "keywords": [
+      "APA 7 citation troubleshooting",
+      "academic formatting tips",
+      "complex in-text citations",
+      "APA style reference guide",
+      "technical writing standards"
+    ],
+    "primaryKeyword": "APA 7 citation troubleshooting",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-08T03:19:50.541840+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-citation-nuances-in-technical-papers.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Recovering from Zotero Sync Errors: A 2026 Guide for Thesis Data",
     "slug": "recovering-from-zotero-sync-errors-a-2026-guide-for-thesis-data",
     "excerpt": "Struggling with Zotero sync errors? Learn how to fix library conflicts and secure your massive thesis bibliography with our step-by-step 2026 manual.",
