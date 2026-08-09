@@ -232,6 +232,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Fixing Zotero Link Rot: Preserving Citations for Long-Form Theses](https://academicwizard.online/blog/fixing-zotero-link-rot-preserving-citations-for-long-form-theses)**
+  - Excerpt: Don't lose your bibliography to link rot. Learn how to systematically audit, restore, and preserve your Zotero thesis citations for a perfect grade.
+  - Keywords: fixing Zotero broken links in thesis, Zotero library maintenance, citation management software, PDF snapshot tools, reference list integrity
+  - Target Region: USA
+  - Published: 2026-08-09
+
 - **[Mastering NVivo 25: Visualizing Thematic Maps for Qualitative Data](https://academicwizard.online/blog/mastering-nvivo-25-visualizing-thematic-maps-for-qualitative-data)**
   - Excerpt: Struggling to code your qualitative data? Our expert guide to NVivo 25 shows you how to build clear, accurate thematic maps for your PhD dissertation.
   - Keywords: NVivo 25 thematic analysis guide, qualitative coding software, mapping PhD research themes, NVivo coding methodology, analyzing qualitative datasets
@@ -359,6 +365,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Detection: Why Your Original Writing is Being Flagged](https://academicwizard.online/blog/turnitin-ai-detection-why-your-original-writing-is-being-flagged)**
+  - Excerpt: Stressed by a high Turnitin AI score on original work? Discover the common patterns that trigger false positives and how to audit your writing draft.
+  - Keywords: why Turnitin flags original student work, academic integrity audit, Turnitin false positive rate, human-written AI detector, reducing similarity scores
+  - Target Region: UK
+  - Published: 2026-08-09
 
 - **[Beyond APA 7: Managing Citation Nuances in Technical Papers](https://academicwizard.online/blog/beyond-apa-7-managing-citation-nuances-in-technical-papers)**
   - Excerpt: Avoid common grade-draining errors. Master the complex nuances of APA 7th edition formatting with our guide to perfect citations in your technical papers.
@@ -562,6 +574,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[The Ethical Student Guide to Refining Literature Review Outlines](https://academicwizard.online/blog/the-ethical-student-guide-to-refining-literature-review-outlines)**
+  - Excerpt: Struggling to find the thread in your literature review? Use these ethical scaffolding techniques to structure your arguments while keeping your voice.
+  - Keywords: scaffolding literature review outlines ethically, AI for academic structure, thematic synthesis techniques, literature review framework, academic voice preservation
+  - Target Region: Canada
+  - Published: 2026-08-09
+
 - **[Zotero Workflow Hacks: Managing 100+ Sources for Your Lit Review](https://academicwizard.online/blog/zotero-workflow-hacks-managing-100-sources-for-your-lit-review)**
   - Excerpt: Feeling buried by research? Learn high-level Zotero organization strategies to streamline your literature review and keep 100+ sources perfectly in sync.
   - Keywords: organizing large literature reviews in Zotero, Zotero collections for thesis, mastering Zotero tag organization, efficient source synthesis software, Zotero citation management tips
@@ -659,6 +677,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[NVivo vs. Manual Coding: Finding Your Qualitative Analysis Rhythm](https://academicwizard.online/blog/nvivo-vs-manual-coding-finding-your-qualitative-analysis-rhythm)**
+  - Excerpt: Is your qualitative data overwhelming you? Learn to decide if NVivo is the right tool to scale your thematic analysis or if manual coding is safer.
+  - Keywords: when to use NVivo for qualitative data, thematic coding strategy, qualitative analysis methodology, NVivo project setup, coding research interviews
+  - Target Region: Australia
+  - Published: 2026-08-09
 
 - **[Zotero 10: Syncing Large Libraries for Multi-Chapter Thesis Projects](https://academicwizard.online/blog/zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects)**
   - Excerpt: Struggling with Zotero sync errors during your dissertation? Learn how to manage large libraries and maintain citation integrity in our 2026 Zotero guide.

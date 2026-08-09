@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Zotero Link Rot: Preserving Citations for Long-Form Theses",
+    "slug": "fixing-zotero-link-rot-preserving-citations-for-long-form-theses",
+    "excerpt": "Don't lose your bibliography to link rot. Learn how to systematically audit, restore, and preserve your Zotero thesis citations for a perfect grade.",
+    "keywords": [
+      "fixing Zotero broken links in thesis",
+      "Zotero library maintenance",
+      "citation management software",
+      "PDF snapshot tools",
+      "reference list integrity"
+    ],
+    "primaryKeyword": "fixing Zotero broken links in thesis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-09T03:26:35.846370+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-zotero-link-rot-preserving-citations-for-long-form-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Turnitin AI Detection: Why Your Original Writing is Being Flagged",
+    "slug": "turnitin-ai-detection-why-your-original-writing-is-being-flagged",
+    "excerpt": "Stressed by a high Turnitin AI score on original work? Discover the common patterns that trigger false positives and how to audit your writing draft.",
+    "keywords": [
+      "why Turnitin flags original student work",
+      "academic integrity audit",
+      "Turnitin false positive rate",
+      "human-written AI detector",
+      "reducing similarity scores"
+    ],
+    "primaryKeyword": "why Turnitin flags original student work",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-09T03:27:02.444973+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-why-your-original-writing-is-being-flagged.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo vs. Manual Coding: Finding Your Qualitative Analysis Rhythm",
+    "slug": "nvivo-vs-manual-coding-finding-your-qualitative-analysis-rhythm",
+    "excerpt": "Is your qualitative data overwhelming you? Learn to decide if NVivo is the right tool to scale your thematic analysis or if manual coding is safer.",
+    "keywords": [
+      "when to use NVivo for qualitative data",
+      "thematic coding strategy",
+      "qualitative analysis methodology",
+      "NVivo project setup",
+      "coding research interviews"
+    ],
+    "primaryKeyword": "when to use NVivo for qualitative data",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-09T03:27:28.272617+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-vs-manual-coding-finding-your-qualitative-analysis-rhythm.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "The Ethical Student Guide to Refining Literature Review Outlines",
+    "slug": "the-ethical-student-guide-to-refining-literature-review-outlines",
+    "excerpt": "Struggling to find the thread in your literature review? Use these ethical scaffolding techniques to structure your arguments while keeping your voice.",
+    "keywords": [
+      "scaffolding literature review outlines ethically",
+      "AI for academic structure",
+      "thematic synthesis techniques",
+      "literature review framework",
+      "academic voice preservation"
+    ],
+    "primaryKeyword": "scaffolding literature review outlines ethically",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-09T03:27:54.782998+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/the-ethical-student-guide-to-refining-literature-review-outlines.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Zotero 10: Syncing Large Libraries for Multi-Chapter Thesis Projects",
     "slug": "zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects",
     "excerpt": "Struggling with Zotero sync errors during your dissertation? Learn how to manage large libraries and maintain citation integrity in our 2026 Zotero guide.",
