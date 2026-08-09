@@ -373,6 +373,7 @@ const CitationGenerator = () => {
             <PageHeader 
                 title="Citation Generator" 
                 subtitle="All-in-one referencing builder supporting major university formats and real-time in-text citation output."
+                backgroundImage="/images/tools/citation-generator.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Tools', url: '/tools' },

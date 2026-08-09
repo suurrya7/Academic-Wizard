@@ -17,6 +17,10 @@ const TermsOfService = () => {
                 <title>Terms of Service | Academic Wizard</title>
                 <meta name="description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
                 <link rel="canonical" href="https://academicwizard.online/terms-of-service" />
+                <meta property="og:title" content="Terms of Service | Academic Wizard" />
+                <meta property="og:description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
+                <meta property="og:url" content="https://academicwizard.online/terms-of-service" />
+                <meta property="og:type" content="website" />
                 <script type="application/ld+json">
                     {JSON.stringify(termsSchema)}
                 </script>
@@ -74,7 +78,7 @@ const TermsOfService = () => {
                     <p>To resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p>
                     <p className="mt-4">
                         Academic Wizard<br />
-                        Email: support@academicwizard.online<br />
+                        Email: admin@academicwizard.online<br />
                         WhatsApp: +91 95098 93638
                     </p>
                 </div>

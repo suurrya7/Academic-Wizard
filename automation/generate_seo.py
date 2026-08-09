@@ -61,6 +61,15 @@ STATIC_PAGES_FIXED = [
 TARGET_COUNTRIES = ["United Kingdom", "United States", "India", "Ireland", "Australia", "Singapore", "Canada", "Germany"]
 TARGET_COUNTRY_SLUGS = ["uk", "usa", "india", "ireland", "australia", "singapore", "canada", "germany"]
 
+# Load specialized pages
+SPECIALIZED_JSON_PATH = SCRIPT_DIR / "specialized.json"
+specialized_data = {"countrySubjects": {}, "countryCities": {}}
+if SPECIALIZED_JSON_PATH.exists():
+    try:
+        specialized_data = json.loads(SPECIALIZED_JSON_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        pass
+
 for service in [
     "assignment-help",
     "essay-help",
@@ -76,6 +85,22 @@ for service in [
             "changefreq": "monthly",
             "priority": "0.85"
         })
+        
+        # Add Subjects
+        for subject in specialized_data.get("countrySubjects", {}).get(slug, []):
+            STATIC_PAGES_FIXED.append({
+                "path": f"services/{service}/{slug}/{subject['slug']}",
+                "changefreq": "monthly",
+                "priority": "0.8"
+            })
+            
+        # Add Cities
+        for city in specialized_data.get("countryCities", {}).get(slug, []):
+            STATIC_PAGES_FIXED.append({
+                "path": f"services/{service}/{slug}/{city['slug']}",
+                "changefreq": "monthly",
+                "priority": "0.8"
+            })
 
 SERVICE_DETAILS = {
     "Assignment Help": {
@@ -359,7 +384,7 @@ def generate_llms_txt() -> None:
         ## Contact
 
         - Website: {SITE_URL}
-        - Email: support@academicwizard.online
+        - Email: admin@academicwizard.online
 
         ---
         Last updated: {today}
@@ -538,7 +563,7 @@ def generate_llms_full_txt() -> None:
         ## Contact Information
 
         - **Website**: {SITE_URL}
-        - **Email**: support@academicwizard.online
+        - **Email**: admin@academicwizard.online
         - **Support Hours**: 24/7, 365 days a year
         - **Response Time**: Typically within 1 hour
 

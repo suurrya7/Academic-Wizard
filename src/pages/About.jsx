@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
+import Testimonials from '../components/Testimonials';
 import { Target, Users, Globe, Shield, BookOpen, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
@@ -74,10 +75,9 @@ const About = () => {
                     </div>
 
                     <div className="relative">
-                        <div className="glass-card p-4 aspect-[4/5] relative z-10">
-                            <div className="w-full h-full bg-accent-gold/10 rounded-xl flex items-center justify-center border border-accent-gold/20" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'rgba(212, 175, 55, 0.2)' }}>
-                                <span className="text-accent-gold font-heading text-xl tracking-[10px]" style={{ color: 'var(--accent-gold)' }}>ACADEMIC WIZARD</span>
-                            </div>
+                        <div className="glass-card p-2 rounded-2xl aspect-[4/5] relative z-10 overflow-hidden border border-accent-gold/20">
+                            <img src="/images/abstract-library.webp" alt="Abstract Academic Library" className="w-full h-full object-cover rounded-xl opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent pointer-events-none rounded-xl" />
                         </div>
                         <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent-gold/10 blur-[100px] -z-10" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }} />
                     </div>
@@ -134,6 +134,8 @@ const About = () => {
                     </div>
                 </div>
             </section>
+            
+            <Testimonials />
         </div>
     );
 };

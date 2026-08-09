@@ -19,6 +19,7 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 POSTS_DIR = PROJECT_ROOT / "public" / "blog" / "posts"
 DATA_DIR = PROJECT_ROOT / "public" / "data"
 POSTS_JSON = DATA_DIR / "posts.json"
+SPECIALIZED_JSON = DATA_DIR / "specialized.json"
 POSTS_PER_RUN = int(os.getenv("POSTS_PER_RUN", "4"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.1-flash-lite"
@@ -462,6 +463,19 @@ def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> 
         service_link = f"/services/{service_slug}"
         service_anchor_text = f"{CATEGORIES[category]}"
         
+    specialized_links_prompt = ""
+    try:
+        import random
+        if SPECIALIZED_JSON.exists():
+            with open(SPECIALIZED_JSON, "r", encoding="utf-8") as f:
+                specialized_data = json.load(f)
+            if specialized_data:
+                chosen_specialized = random.sample(specialized_data, min(2, len(specialized_data)))
+                spec_json_str = json.dumps([{"title": s["title"], "slug": f"/services/{s['serviceSlug']}/{s['citySlug']}"} for s in chosen_specialized], ensure_ascii=False)
+                specialized_links_prompt = f"\n4. You MUST organically include HTML anchor links to at least 1 of these localized/niche service pages where relevant:\n{spec_json_str}\n"
+    except Exception:
+        pass
+        
     prompt = f"""
 You are an expert academic writing coach and SEO editor for {SITE_NAME}.
 Write a helpful, ethical, SEO-optimized blog article for this brief:
@@ -479,12 +493,15 @@ Link URL: {service_link}
 Anchor Text: Integrate this link naturally using keyword-rich anchor text related to "{service_anchor_text}". For example, "Looking for ethical {service_anchor_text.lower()}? Let our experts guide you..." or similar. Place this link near the end of the article, but before the FAQs.
 
 3. You MUST organically include at least one link to our free academic tools suite where contextually appropriate:
-Choose the most relevant tool depending on the article's topic:
-- Citation Generator: <a href="/tools/citation-generator">APA/MLA Citation Generator</a> (Discussing references, bibliography, formatting, APA, MLA, Harvard, Chicago, Vancouver style).
-- Grammar & Spell Checker: <a href="/tools/grammar-checker">Academic Grammar & Spell Checker</a> (Discussing proofreading, editing, essays, writing styles, punctuation).
-- Linguistic AI Detector: <a href="/tools/ai-detector">Linguistic AI Essay Detector</a> (Discussing AI writing, plagiarism detection, ChatGPT, Claude, academic integrity).
-- AI Text Humanizer: <a href="/tools/ai-humanizer">AI Essay Humanizer</a> (Discussing Turnitin AI bypass, text rewriting, bypassing AI detection, natural phrasing).
+<a href="/tools/citation-generator">Free Citation Generator</a>
+<a href="/tools/grammar-checker">Free Grammar Checker</a>
+<a href="/tools/ai-detector">Free AI Content Detector</a>
+<a href="/tools/ai-humanizer">Free AI Text Humanizer</a>
 Anchor Text: Integrate this link naturally using descriptive, keyword-rich anchor text.
+{specialized_links_prompt}
+Tone & Style:
+- Academic yet accessible. Empowering and ethical.
+- Write naturally with varied sentence structure and rhythm (to bypass AI detectors).
 
 Generative Engine Optimization (GEO) & AEO Requirements:
 - Use specific "What is..." and "How to..." H2 headings.

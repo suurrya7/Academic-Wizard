@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram } from 'lucide-react';
 import academicWizardLogo from '../assets/academic-wizard-logo.webp';
 
 const Footer = () => {
     return (
-        <footer className="bg-bg-secondary pt-20 pb-10 border-t border-glass-border" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-            <div className="container px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
-                <div className="flex flex-col gap-6">
+        <footer className="bg-bg-secondary pt-16 pb-8 border-t border-glass-border" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+            <div className="container px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12 mb-12">
+                <div className="flex flex-col gap-5 lg:col-span-2">
                     <Link to="/" className="block w-[190px]" aria-label="Academic Wizard home">
                         <img
                             src={academicWizardLogo}
@@ -25,7 +25,7 @@ const Footer = () => {
                             <span className="font-semibold text-white">Phone:</span> +91 95098 93638
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold text-white">Email:</span> support@academicwizard.online
+                            <span className="font-semibold text-white">Email:</span> admin@academicwizard.online
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="font-semibold text-white">Location:</span> Global Online Service
@@ -61,26 +61,6 @@ const Footer = () => {
                             aria-label="Instagram"
                         >
                             <Instagram size={18} />
-                        </a>
-                        <a 
-                            href="https://twitter.com/academicwizard" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
-                            style={{ color: 'var(--text-secondary)' }}
-                            aria-label="Twitter"
-                        >
-                            <Twitter size={18} />
-                        </a>
-                        <a 
-                            href="https://youtube.com/@academicwizard" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
-                            style={{ color: 'var(--text-secondary)' }}
-                            aria-label="YouTube"
-                        >
-                            <Youtube size={18} />
                         </a>
                     </div>
                 </div>
@@ -138,14 +118,14 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="container px-6 pt-10 border-t border-glass-border flex flex-col items-center justify-center gap-4">
+            <div className="container px-6 pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-text-secondary text-xs text-center md:text-left" style={{ color: 'var(--text-secondary)' }}>
+                    &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
+                </p>
                 <div className="flex gap-8 text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
                     <Link to="/privacy-policy/" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
                     <Link to="/terms-of-service/" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
                 </div>
-                <p className="text-text-secondary text-xs text-center" style={{ color: 'var(--text-secondary)' }}>
-                    &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
-                </p>
             </div>
         </footer>
     );

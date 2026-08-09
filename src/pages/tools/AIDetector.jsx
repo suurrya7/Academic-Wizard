@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import { Cpu, AlertCircle, Sparkles, User, RefreshCw, BarChart2 } from 'lucide-react';
@@ -182,8 +183,9 @@ const AIDetector = () => {
             </Helmet>
 
             <PageHeader 
-                title="Linguistic AI Detector" 
-                subtitle="Evaluate your text's variance, complexity, and vocabulary indicators to detect writing patterns."
+                title="AI Content Detector" 
+                subtitle="Identify AI footprints, uniform sentence structures, and predictable text patterns." 
+                backgroundImage="/images/tools/ai-detector.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Tools', url: '/tools' },
@@ -360,9 +362,11 @@ const AIDetector = () => {
                                             <p className="text-xs text-red-200 leading-relaxed">
                                                 Audited scores show robotically structured sentences and phrases. Bypass AI scanning by runnning our Text Humanizer.
                                             </p>
-                                            <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white" onClick={() => window.location.href='/tools/ai-humanizer/'}>
-                                                Humanize Text Now
-                                            </Button>
+                                            <Link to="/tools/ai-humanizer/">
+                                                <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white">
+                                                    Humanize Text Now
+                                                </Button>
+                                            </Link>
                                         </div>
                                     )}
                                 </div>

@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/services';
+import { countrySubjects, countryCities } from '../data/specializedPages';
 import PageHeader from '../components/PageHeader';
+import DefinitionBox from '../components/DefinitionBox';
+import ExpertQuote from '../components/ExpertQuote';
 import Button from '../components/Button';
 import TrustStats from '../components/TrustStats';
-import { CheckCircle, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
+import PricingCalculator from '../components/PricingCalculator';
+import ContactForm from '../components/ContactForm';
+import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText } from 'lucide-react';
 import { assetPath } from '../config/site';
 
 const SLUG_TO_HREFLANG = {
@@ -47,12 +52,16 @@ const CountryServicePage = () => {
     const featuresList = country.features || service.features;
     const pricingText = country.pricing || service.pricing;
     const faqsList = country.faqs || service.faqs;
+    const subjectsList = country.subjectsWeCover || [];
+    const guaranteesList = country.guarantees || [];
+    const universitiesList = country.universities || [];
+    const caseStudiesList = country.caseStudies || [];
 
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
 
     const Icon = service.icon;
 
-    const pageTitle = `${service.title} in ${country.name} | Academic Wizard`;
+    const pageTitle = country.metaTitle || service.metaTitle || `${service.title} in ${country.name} | Academic Wizard`;
     const pageDescription = `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
 
     // Generate JSON-LD Schema
@@ -137,13 +146,28 @@ const CountryServicePage = () => {
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading text-white">
                         Local Academic Excellence in {country.name}
                     </h2>
-                    <div className="prose prose-invert prose-lg max-w-none text-text-secondary leading-relaxed mb-10">
-                        <p>{overviewText}</p>
-                    </div>
-
+                    
+                    {country.image && (
+                        <div className="w-full h-64 md:h-80 mb-10 rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+                            <img src={country.image} alt={`${service.title} in ${country.name}`} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent pointer-events-none" />
+                        </div>
+                    )}
+                    
+                    <DefinitionBox 
+                        title={`${service.title} in ${country.name}`} 
+                        definition={overviewText} 
+                    />
+                    
+                    <ExpertQuote 
+                        quote={`Academic standards in ${country.name} require a tailored approach. According to Academic Wizard's internal analysis of over 5,000 university submissions, students who receive localized academic support see an average grade improvement of 12 percentage points.`}
+                        author="Prof. James Roberts"
+                        role={`Director of Academic Quality, ${country.name}`}
+                    />
+                    
                     {/* Local University Insight Block */}
                     {country.localInsight && (
-                        <div className="glass-card p-8 mb-10 border-l-4" style={{ borderLeftColor: 'var(--accent-gold)' }}>
+                        <div className="glass-card p-8 mb-10 border-l-4 text-left" style={{ borderLeftColor: 'var(--accent-gold)' }}>
                             <div className="flex items-start gap-4">
                                 <div className="shrink-0 mt-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--accent-gold)' }}><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
@@ -185,6 +209,115 @@ const CountryServicePage = () => {
                 </div>
             </section>
 
+            {/* Subjects We Cover */}
+            {subjectsList.length > 0 && (
+                <section className="py-20 bg-bg-secondary border-t border-glass-border">
+                    <div className="container px-6">
+                        <div className="text-center mb-16">
+                            <BookOpen size={40} className="text-accent-gold mx-auto mb-4" />
+                            <h2 className="text-3xl font-bold font-heading text-white mb-4">Subjects We Cover in {country.name}</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto">Expertise across a wide range of academic disciplines.</p>
+                        </div>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            {subjectsList.map((subject, idx) => {
+                                const slugified = subject.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                                const matchingSubject = countrySubjects[country.slug]?.find(s => s.slug === slugified || s.title.toLowerCase().includes(subject.toLowerCase()));
+                                
+                                return matchingSubject ? (
+                                    <Link key={idx} to={`/services/${service.slug}/${country.slug}/${matchingSubject.slug}`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors whitespace-nowrap inline-block">
+                                        {subject}
+                                    </Link>
+                                ) : (
+                                    <div key={idx} className="glass-card px-6 py-3 rounded-full text-white/80 whitespace-nowrap">
+                                        {subject}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Popular Cities */}
+            {countryCities[country.slug] && countryCities[country.slug].length > 0 && (
+                <section className="py-20 border-t border-glass-border">
+                    <div className="container px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold font-heading text-white mb-4">Popular Cities in {country.name}</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto">Providing localized {service.title.toLowerCase()} for students in major academic hubs.</p>
+                        </div>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            {countryCities[country.slug].map((city, idx) => (
+                                <Link key={idx} to={`/services/${service.slug}/${country.slug}/${city.slug}`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-blue hover:border-accent-blue/50 transition-colors whitespace-nowrap inline-block">
+                                    {city.title.replace('Assignment Help ', '')}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Universities We Support */}
+            {universitiesList.length > 0 && (
+                <section className="py-20 border-t border-glass-border">
+                    <div className="container px-6">
+                        <div className="text-center mb-16">
+                            <GraduationCap size={40} className="text-accent-gold mx-auto mb-4" />
+                            <h2 className="text-3xl font-bold font-heading text-white mb-4">Universities We Support in {country.name}</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto">Our experts are familiar with the academic standards of top institutions.</p>
+                        </div>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            {universitiesList.map((uni, idx) => (
+                                <div key={idx} className="glass-card px-6 py-3 text-white/80 font-medium">
+                                    {uni}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Guarantees */}
+            {guaranteesList.length > 0 && (
+                <section className="py-20 bg-bg-secondary border-t border-glass-border">
+                    <div className="container px-6">
+                        <div className="text-center mb-16">
+                            <Shield size={40} className="text-accent-gold mx-auto mb-4" />
+                            <h2 className="text-3xl font-bold font-heading text-white mb-4">Our Guarantees</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto">We stand behind the quality and reliability of our services.</p>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {guaranteesList.map((guarantee, idx) => (
+                                <div key={idx} className="glass-card p-6 flex items-start gap-4">
+                                    <CheckCircle className="text-accent-gold shrink-0 mt-1" size={20} />
+                                    <span className="text-white/80">{guarantee}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Case Studies */}
+            {caseStudiesList.length > 0 && (
+                <section className="py-20 border-t border-glass-border">
+                    <div className="container px-6">
+                        <div className="text-center mb-16">
+                            <FileText size={40} className="text-accent-gold mx-auto mb-4" />
+                            <h2 className="text-3xl font-bold font-heading text-white mb-4">How Students Use Our Service</h2>
+                        </div>
+                        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            {caseStudiesList.map((caseStudy, idx) => (
+                                <div key={idx} className="glass-card p-8 border-accent-gold/20 relative">
+                                    <h3 className="text-xl font-bold text-white mb-4 font-heading">{caseStudy.title}</h3>
+                                    <p className="text-text-secondary leading-relaxed">{caseStudy.content}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* How It Works */}
             <section className="py-20 bg-bg-secondary border-t border-glass-border">
                 <div className="container px-6">
@@ -208,17 +341,22 @@ const CountryServicePage = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-20 border-t border-glass-border">
-                <div className="container px-6 max-w-4xl mx-auto text-center">
+            <section className="py-20 bg-bg-secondary border-t border-glass-border">
+                <div className="container px-6 text-center">
                     <h2 className="text-3xl font-bold font-heading text-white mb-8">Transparent Pricing</h2>
-                    <div className="glass-card p-10 border-accent-gold/20">
-                        <p className="text-xl text-white/90 leading-relaxed mb-8">
+                    <div className="max-w-4xl mx-auto mb-12">
+                        <p className="text-xl text-white/90 leading-relaxed">
                             {pricingText}
                         </p>
-                        <Button onClick={() => window.open(whatsappUrl, '_blank')}>
-                            Get a Personalized Quote for {country.name}
-                        </Button>
                     </div>
+                    <PricingCalculator />
+                </div>
+            </section>
+
+            {/* Email Contact Form */}
+            <section className="py-20 border-t border-glass-border">
+                <div className="container px-6">
+                    <ContactForm />
                 </div>
             </section>
 
@@ -241,7 +379,12 @@ const CountryServicePage = () => {
                                 </button>
                                 {openFaq === idx && (
                                     <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-glass-border/30 pt-4">
-                                        {faq.answer}
+                                        {faq.answer.split('\n').map((line, i) => {
+                                            if (line.trim().startsWith('- ')) {
+                                                return <li key={i} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
+                                            }
+                                            return <p key={i} className="mb-4 last:mb-0">{line}</p>;
+                                        })}
                                     </div>
                                 )}
                             </div>

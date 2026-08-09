@@ -83,8 +83,8 @@ const Contact = () => {
                                 <div>
                                     <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
                                     <p className="text-text-secondary mb-4" style={{ color: 'var(--text-secondary)' }}>For detailed project briefs, document attachments, and formal inquiries.</p>
-                                    <a href="mailto:support@academicwizard.online" className="text-white hover:text-accent-gold transition-colors">
-                                        support@academicwizard.online
+                                    <a href="mailto:admin@academicwizard.online" className="text-white hover:text-accent-gold transition-colors">
+                                        admin@academicwizard.online
                                     </a>
                                 </div>
                             </div>
@@ -110,7 +110,15 @@ const Contact = () => {
                                 <h3 className="text-2xl font-bold font-heading text-white">Send a Message</h3>
                             </div>
                             <p className="text-sm text-text-secondary mb-8">Your information is strictly confidential and protected by 256-bit encryption. We never share your data.</p>
-                            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Thanks for contacting us!"); }}>
+                            <form className="space-y-6" onSubmit={(e) => { 
+                                e.preventDefault(); 
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const subject = document.getElementById('subject').value;
+                                const message = document.getElementById('message').value;
+                                const text = `*New Contact Form Lead*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+                                window.open(`https://wa.me/919509893638?text=${text}`, '_blank');
+                            }}>
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">Full Name</label>
                                     <input type="text" id="name" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="John Doe" required />
@@ -128,7 +136,7 @@ const Contact = () => {
                                     <textarea id="message" rows="4" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Please provide your word count, deadline, and topic..." required></textarea>
                                 </div>
                                 <button type="submit" className="w-full bg-accent-gold text-bg-primary font-bold py-4 rounded-lg hover:bg-white transition-colors duration-300">
-                                    Send Message
+                                    Send via WhatsApp
                                 </button>
                             </form>
                         </div>

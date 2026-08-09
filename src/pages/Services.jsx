@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
+import Testimonials from '../components/Testimonials';
 import { servicesData } from '../data/services';
 
 const Services = () => {
@@ -90,10 +91,14 @@ const Services = () => {
                             key={index}
                             className={`flex flex-col lg:flex-row gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
                         >
-                            <div className="w-full lg:w-1/3">
-                                <Link to={`/services/${service.slug}`} className="block group">
-                                    <div className="glass-card p-12 flex items-center justify-center aspect-square border-accent-gold/20 group-hover:border-accent-gold/50 transition-colors" style={{ borderColor: 'rgba(212, 175, 55, 0.2)' }}>
-                                        <service.icon size={100} className="text-accent-gold group-hover:scale-110 transition-transform duration-500" style={{ color: 'var(--accent-gold)' }} />
+                            <div className="w-full lg:w-5/12">
+                                <Link to={`/services/${service.slug}`} className="block group relative rounded-3xl overflow-hidden">
+                                    <div className="aspect-[4/3] w-full">
+                                        <img src={service.image || "/images/dark-office.webp"} alt={service.title} className="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/20 to-transparent pointer-events-none" />
+                                    </div>
+                                    <div className="absolute top-6 left-6 glass-card p-4 rounded-2xl border-accent-gold/30 backdrop-blur-md">
+                                        <service.icon size={32} className="text-accent-gold group-hover:scale-110 transition-transform duration-500" style={{ color: 'var(--accent-gold)' }} />
                                     </div>
                                 </Link>
                             </div>
@@ -116,6 +121,8 @@ const Services = () => {
                     ))}
                 </div>
             </section>
+            
+            <Testimonials />
         </div>
     );
 };

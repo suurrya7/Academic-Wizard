@@ -128,7 +128,8 @@ const AIHumanizer = () => {
 
             <PageHeader 
                 title="AI Text Humanizer" 
-                subtitle="Transform robotic AI text into natural academic writing. Increase syntax variance and remove machine footprints."
+                subtitle="Humanize AI-generated text to improve variation and bypass AI pattern detection."
+                backgroundImage="/images/tools/ai-humanizer.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Tools', url: '/tools' },

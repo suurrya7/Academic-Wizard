@@ -17,6 +17,10 @@ const PrivacyPolicy = () => {
                 <title>Privacy Policy | Academic Wizard</title>
                 <meta name="description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
                 <link rel="canonical" href="https://academicwizard.online/privacy-policy" />
+                <meta property="og:title" content="Privacy Policy | Academic Wizard" />
+                <meta property="og:description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
+                <meta property="og:url" content="https://academicwizard.online/privacy-policy" />
+                <meta property="og:type" content="website" />
                 <script type="application/ld+json">
                     {JSON.stringify(policySchema)}
                 </script>
@@ -81,7 +85,7 @@ const PrivacyPolicy = () => {
                     <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
                     <p className="mt-4">
                         Academic Wizard<br />
-                        Email: support@academicwizard.online<br />
+                        Email: admin@academicwizard.online<br />
                         WhatsApp: +91 95098 93638
                     </p>
                 </div>

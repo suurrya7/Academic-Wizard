@@ -65,22 +65,7 @@ const EmailGate = ({ children }) => {
         setLoading(true);
 
         try {
-            // 2. Submit to Web3Forms in background (if key is set)
-            if (WEB3FORMS_ACCESS_KEY) {
-                const formData = new FormData();
-                formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-                formData.append("subject", "New Lead - Academic Tools Unlocked");
-                formData.append("email", email);
-                formData.append("whatsapp", phone);
-                formData.append("from_name", "Academic Wizard Tools Portal");
-
-                await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData
-                });
-            }
-
-            // Save locally to prevent locking again
+            // 2. Save locally to prevent locking again
             localStorage.setItem('academic_wizard_user_email', email);
             localStorage.setItem('academic_wizard_user_phone', phone);
             

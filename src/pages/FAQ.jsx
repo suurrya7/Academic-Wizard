@@ -107,9 +107,14 @@ const FAQItem = ({ faq }) => {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                     >
-                        <p className="pb-8 text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            {faq.answer}
-                        </p>
+                        <div className="pb-8 text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                            {faq.answer.split('\n').map((line, idx) => {
+                                if (line.trim().startsWith('- ')) {
+                                    return <li key={idx} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
+                                }
+                                return <p key={idx} className="mb-4">{line}</p>;
+                            })}
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

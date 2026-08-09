@@ -133,6 +133,7 @@ const GrammarChecker = () => {
             <PageHeader 
                 title="Grammar & Spell Checker" 
                 subtitle="Instant proofreading and editing checker. Find grammatical slips, spelling mistakes, and structural errors."
+                backgroundImage="/images/tools/grammar-checker.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Tools', url: '/tools' },

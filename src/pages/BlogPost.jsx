@@ -10,6 +10,7 @@ const BlogPost = () => {
     const navigate = useNavigate();
     const [postData, setPostData] = useState(null);
     const [htmlContent, setHtmlContent] = useState('');
+    const [jsonLdSchemas, setJsonLdSchemas] = useState([]);
     const [status, setStatus] = useState('loading'); // loading, ready, error, notfound
     const contentRef = useRef(null);
 
@@ -32,10 +33,21 @@ const BlogPost = () => {
                         return res.text();
                     })
                     .then(html => {
+                        const schemas = [];
+                        let processedHtml = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi, (match, innerJson) => {
+                            try {
+                                schemas.push(JSON.parse(innerJson));
+                            } catch (e) {
+                                console.error('Failed to parse json-ld from blog post', e);
+                            }
+                            return '';
+                        });
+
                         // Strip any <h1> tags from the HTML content since
                         // the React component already renders the title as <h1>
-                        const cleanedHtml = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+                        const cleanedHtml = processedHtml.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
                         setHtmlContent(cleanedHtml);
+                        setJsonLdSchemas(schemas);
                         setStatus('ready');
                     });
             })
@@ -144,6 +156,11 @@ const BlogPost = () => {
                 <script type="application/ld+json">
                     {JSON.stringify(articleSchema)}
                 </script>
+                {jsonLdSchemas.map((schema, index) => (
+                    <script key={`schema-${index}`} type="application/ld+json">
+                        {JSON.stringify(schema)}
+                    </script>
+                ))}
             </Helmet>
 
             <article className="container px-6 max-w-4xl mx-auto">
@@ -241,7 +258,7 @@ const BlogPost = () => {
                 Google still sees meaningful content with internal links */}
             <noscript>
                 <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-                    <h1>{postData?.title}</h1>
+                    <h2>{postData?.title}</h2>
                     <p>{postData?.excerpt}</p>
                     <p>Published: {formattedDate}</p>
                     <p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import TrustStats from '../components/TrustStats';
 import ServiceOverview from '../components/ServiceOverview';
@@ -81,49 +82,69 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">Citation Maker</h3>
+                                <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
+                                    <img src="/images/tools/citation-generator.webp" alt="Citation Maker" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">Citation Maker</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                     Generate referencing citations in APA 7th, MLA 9th, Harvard, IEEE, and Chicago styles instantly.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/citation-generator/'} className="w-full py-2 text-[10px]">
-                                Launch Builder
-                            </Button>
+                            <Link to="/tools/citation-generator/" className="w-full mt-4 block">
+                                <Button type="outline" className="w-full py-2 text-[10px]">
+                                    Launch Builder
+                                </Button>
+                            </Link>
                         </div>
-                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">Grammar Checker</h3>
+                                <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
+                                    <img src="/images/tools/grammar-checker.webp" alt="Grammar Checker" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">Grammar Checker</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                     Proofread your essays, edit spelling slips, and improve writing styles in real-time.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/grammar-checker/'} className="w-full py-2 text-[10px]">
-                                Launch Editor
-                            </Button>
+                            <Link to="/tools/grammar-checker/" className="w-full mt-4 block">
+                                <Button type="outline" className="w-full py-2 text-[10px]">
+                                    Launch Editor
+                                </Button>
+                            </Link>
                         </div>
-                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">AI Detector</h3>
+                                <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
+                                    <img src="/images/tools/ai-detector.webp" alt="AI Detector" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">AI Detector</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                     Scan drafts for perplexity metrics, sentence uniformity, and AI-typical buzzwords.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/ai-detector/'} className="w-full py-2 text-[10px]">
-                                Scan Draft
-                            </Button>
+                            <Link to="/tools/ai-detector/" className="w-full mt-4 block">
+                                <Button type="outline" className="w-full py-2 text-[10px]">
+                                    Scan Draft
+                                </Button>
+                            </Link>
                         </div>
-                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300">
+                        <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">AI Humanizer</h3>
+                                <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
+                                    <img src="/images/tools/ai-humanizer.webp" alt="AI Humanizer" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">AI Humanizer</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                                     Transform robotic AI text into natural academic phrasing to bypass detectors like Turnitin.
                                 </p>
                             </div>
-                            <Button type="outline" onClick={() => window.location.href='/tools/ai-humanizer/'} className="w-full py-2 text-[10px]">
-                                Humanize Text
-                            </Button>
+                            <Link to="/tools/ai-humanizer/" className="w-full mt-4 block">
+                                <Button type="outline" className="w-full py-2 text-[10px]">
+                                    Humanize Text
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -146,9 +167,16 @@ const Home = () => {
                         <p className="text-text-secondary text-lg mb-12" style={{ color: 'var(--text-secondary)' }}>
                             Join thousands of students who have achieved academic success with our expert guidance. Get a custom quote on WhatsApp today.
                         </p>
-                        <Button onClick={() => window.open(whatsappUrl, '_blank')} className="px-16 py-6 text-sm">
-                            Chat With Academic Expert
-                        </Button>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <Button onClick={() => window.open(whatsappUrl, '_blank')} className="px-16 py-6 text-sm w-full sm:w-auto">
+                                Chat With Academic Expert
+                            </Button>
+                            <Link to="/blog" className="w-full sm:w-auto">
+                                <Button type="outline" className="px-16 py-6 text-sm w-full">
+                                    Read Academic Resources
+                                </Button>
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-accent-gold/5 blur-[120px] -z-10 rounded-full" style={{ backgroundColor: 'rgba(212, 175, 55, 0.05)' }} />

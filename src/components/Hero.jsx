@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
-import Academic3DScene from './Academic3D';
+
 import Button from './Button';
 
 const Hero = () => {
@@ -48,17 +48,42 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <motion.div
-                    className="h-[600px] lg:h-[700px] relative rounded-3xl overflow-hidden bg-bg-secondary/30"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2, delay: 0.5 }}
-                >
-                    <div className="absolute inset-0 bg-accent-gold/5 rounded-full blur-[120px] -z-10" style={{ backgroundColor: 'rgba(212, 175, 55, 0.05)' }} />
-                    <React.Suspense fallback={<div className="w-full h-full flex items-center justify-center text-accent-gold-light font-heading animate-pulse">Loading Wizardry...</div>}>
-                        <Academic3DScene />
-                    </React.Suspense>
-                </motion.div>
+                <div className="h-[600px] lg:h-[700px] relative w-full">
+                    <div className="absolute inset-0 bg-accent-gold/10 rounded-full blur-[120px] -z-10" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }} />
+                    
+                    {/* Main floating image */}
+                    <motion.div 
+                        className="absolute top-[5%] right-[5%] w-[65%] h-[55%] rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-20"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: [0, -10, 0] }}
+                        transition={{ opacity: { duration: 1 }, y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+                    >
+                        <img src="/images/students-working.webp" alt="Students studying" className="w-full h-full object-cover opacity-90 hover:opacity-100 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-bg-primary/80 to-transparent pointer-events-none" />
+                    </motion.div>
+
+                    {/* Left floating image */}
+                    <motion.div 
+                        className="absolute bottom-[10%] left-[5%] w-[55%] h-[45%] rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-30"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: [0, 15, 0] }}
+                        transition={{ opacity: { duration: 1, delay: 0.2 }, y: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
+                    >
+                        <img src="/images/library-books.webp" alt="Library" className="w-full h-full object-cover opacity-90 hover:opacity-100 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-bg-primary/80 to-transparent pointer-events-none" />
+                    </motion.div>
+
+                    {/* Bottom right floating image */}
+                    <motion.div 
+                        className="absolute bottom-[20%] right-[0%] w-[45%] h-[40%] rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-10"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: [0, -15, 0] }}
+                        transition={{ opacity: { duration: 1, delay: 0.4 }, y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }}
+                    >
+                        <img src="/images/study-desk.webp" alt="Study desk" className="w-full h-full object-cover opacity-90 hover:opacity-100 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-bl from-bg-primary/80 to-transparent pointer-events-none" />
+                    </motion.div>
+                </div>
             </div>
 
             {/* Flag decoration */}

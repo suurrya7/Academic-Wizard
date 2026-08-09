@@ -29,11 +29,21 @@ const ServiceOverview = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.05 }}
-                            className="glass-card p-10 flex flex-col gap-6 group hover:translate-y-[-10px] interactive service-card"
+                            className="glass-card p-6 flex flex-col gap-6 group hover:translate-y-[-10px] interactive service-card overflow-hidden"
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-accent-gold/10 flex items-center justify-center group-hover:bg-accent-gold group-hover:text-black transition-all duration-500 text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
-                                <service.icon size={32} />
-                            </div>
+                            {service.image ? (
+                                <div className="w-[calc(100%+3rem)] h-48 -mt-6 -mx-6 mb-[-1rem] relative">
+                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity mix-blend-luminosity group-hover:mix-blend-normal" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/50 to-transparent" />
+                                    <div className="absolute bottom-4 left-6 w-12 h-12 rounded-xl bg-bg-secondary/80 backdrop-blur-md flex items-center justify-center border border-accent-gold/20">
+                                        <service.icon size={24} className="text-accent-gold" />
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="w-16 h-16 rounded-2xl bg-accent-gold/10 flex items-center justify-center group-hover:bg-accent-gold group-hover:text-black transition-all duration-500 text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                                    <service.icon size={32} />
+                                </div>
+                            )}
                             <h3 className="text-xl font-bold font-heading group-hover:text-accent-gold transition-colors text-white">
                                 {service.title}
                             </h3>
