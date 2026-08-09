@@ -108,7 +108,7 @@ const FAQItem = ({ faq }) => {
                         className="overflow-hidden"
                     >
                         <div className="pb-8 text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                            {faq.answer.split('\n').map((line, idx) => {
+                            {(faq.answer || '').split('\n').map((line, idx) => {
                                 if (line.trim().startsWith('- ')) {
                                     return <li key={idx} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
                                 }

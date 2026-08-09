@@ -408,7 +408,7 @@ const ServicePage = () => {
                                 </button>
                                 {openFaq === idx && (
                                     <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-glass-border/30 pt-4">
-                                        {faq.answer.split('\n').map((line, i) => {
+                                        {(faq.answer || '').split('\n').map((line, i) => {
                                             if (line.trim().startsWith('- ')) {
                                                 return <li key={i} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
                                             }

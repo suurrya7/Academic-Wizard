@@ -106,10 +106,10 @@ const SubjectCityPage = () => {
                             "@type": "FAQPage",
                             "mainEntity": faqsList.map(faq => ({
                                 "@type": "Question",
-                                "name": faq.q,
+                                "name": faq.question,
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": faq.a.replace(/\n/g, ' ')
+                                    "text": (faq.answer || '').replace(/\n/g, ' ')
                                 }
                             }))
                         })}
@@ -266,7 +266,7 @@ const SubjectCityPage = () => {
                                         }`}
                                     >
                                         <div className="text-white/70 leading-relaxed">
-                                            {faq.answer.split('\n').map((line, i) => {
+                                            {(faq.answer || '').split('\n').map((line, i) => {
                                                 if (line.trim().startsWith('- ')) {
                                                     return <li key={i} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
                                                 }

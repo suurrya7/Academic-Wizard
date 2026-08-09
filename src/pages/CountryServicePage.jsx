@@ -23,6 +23,7 @@ const CountryServicePage = () => {
     const service = servicesData.find(s => s.slug === serviceSlug);
     const [openFaq, setOpenFaq] = useState(0);
     const [posts, setPosts] = useState([]);
+    const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
 
     useEffect(() => {
         // Fetch posts for the related blogs section
@@ -51,7 +52,7 @@ const CountryServicePage = () => {
     const overviewText = country.overview || service.overview;
     const featuresList = country.features || service.features;
     const pricingText = country.pricing || service.pricing;
-    const faqsList = country.faqs || service.faqs;
+    const faqsList = country.faqs || service.faqs || [];
     const subjectsList = country.subjectsWeCover || [];
     const guaranteesList = country.guarantees || [];
     const universitiesList = country.universities || [];
@@ -306,13 +307,40 @@ const CountryServicePage = () => {
                             <FileText size={40} className="text-accent-gold mx-auto mb-4" />
                             <h2 className="text-3xl font-bold font-heading text-white mb-4">How Students Use Our Service</h2>
                         </div>
-                        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                            {caseStudiesList.map((caseStudy, idx) => (
-                                <div key={idx} className="glass-card p-8 border-accent-gold/20 relative">
-                                    <h3 className="text-xl font-bold text-white mb-4 font-heading">{caseStudy.title}</h3>
-                                    <p className="text-text-secondary leading-relaxed">{caseStudy.content}</p>
+                        <div className="relative max-w-4xl mx-auto">
+                            <div className="overflow-hidden relative pb-4">
+                                <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentCaseStudy * 100}%)` }}>
+                                    {caseStudiesList.map((caseStudy, idx) => (
+                                        <div key={idx} className="w-full shrink-0 px-2 sm:px-4">
+                                            <div className="glass-card p-8 border-accent-gold/20 h-full text-center flex flex-col justify-center">
+                                                <h3 className="text-2xl font-bold text-white mb-6 font-heading">{caseStudy.title}</h3>
+                                                <p className="text-white/80 leading-relaxed text-lg max-w-2xl mx-auto">{caseStudy.content}</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
+                            {caseStudiesList.length > 1 && (
+                                <div className="flex justify-center items-center gap-6 mt-8">
+                                    <button 
+                                        onClick={() => setCurrentCaseStudy(prev => (prev === 0 ? caseStudiesList.length - 1 : prev - 1))}
+                                        className="p-3 px-6 rounded-full bg-white/5 hover:bg-accent-gold/20 text-white transition-colors border border-white/10 hover:border-accent-gold/50 font-semibold"
+                                        aria-label="Previous Case Study"
+                                    >
+                                        ← Prev
+                                    </button>
+                                    <div className="text-white/50 text-sm font-medium">
+                                        {currentCaseStudy + 1} / {caseStudiesList.length}
+                                    </div>
+                                    <button 
+                                        onClick={() => setCurrentCaseStudy(prev => (prev === caseStudiesList.length - 1 ? 0 : prev + 1))}
+                                        className="p-3 px-6 rounded-full bg-white/5 hover:bg-accent-gold/20 text-white transition-colors border border-white/10 hover:border-accent-gold/50 font-semibold"
+                                        aria-label="Next Case Study"
+                                    >
+                                        Next →
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -379,7 +407,7 @@ const CountryServicePage = () => {
                                 </button>
                                 {openFaq === idx && (
                                     <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-glass-border/30 pt-4">
-                                        {faq.answer.split('\n').map((line, i) => {
+                                        {(faq.answer || '').split('\n').map((line, i) => {
                                             if (line.trim().startsWith('- ')) {
                                                 return <li key={i} className="ml-4 mb-2">{line.trim().substring(2)}</li>;
                                             }
