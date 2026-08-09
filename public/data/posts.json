@@ -1,5 +1,605 @@
 [
   {
+    "title": "Zotero 10: Syncing Large Libraries for Multi-Chapter Thesis Projects",
+    "slug": "zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects",
+    "excerpt": "Struggling with Zotero sync errors during your dissertation? Learn how to manage large libraries and maintain citation integrity in our 2026 Zotero guide.",
+    "keywords": [
+      "Zotero 10 library syncing for thesis",
+      "managing thesis bibliography",
+      "Zotero cloud storage limits",
+      "fixing Zotero sync conflicts",
+      "organizing research sources"
+    ],
+    "primaryKeyword": "Zotero 10 library syncing for thesis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-08T03:18:26.618597+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-10-syncing-large-libraries-for-multi-chapter-thesis-projects.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Turnitin AI Score Spikes: Auditing Your Draft for False Positives",
+    "slug": "turnitin-ai-score-spikes-auditing-your-draft-for-false-positives",
+    "excerpt": "Is your assignment showing a false AI detection score? Discover how to audit your writing process and effectively challenge Turnitin flags with confidence.",
+    "keywords": [
+      "Turnitin AI detection false positive audit",
+      "high AI score in student writing",
+      "Turnitin academic integrity check",
+      "legitimate AI detection errors",
+      "improving writing originality"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positive audit",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-08T03:18:52.801067+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-auditing-your-draft-for-false-positives.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Mastering NVivo 25: Visualizing Thematic Maps for Qualitative Data",
+    "slug": "mastering-nvivo-25-visualizing-thematic-maps-for-qualitative-data",
+    "excerpt": "Struggling to code your qualitative data? Our expert guide to NVivo 25 shows you how to build clear, accurate thematic maps for your PhD dissertation.",
+    "keywords": [
+      "NVivo 25 thematic analysis guide",
+      "qualitative coding software",
+      "mapping PhD research themes",
+      "NVivo coding methodology",
+      "analyzing qualitative datasets"
+    ],
+    "primaryKeyword": "NVivo 25 thematic analysis guide",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-08T03:19:23.570568+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-25-visualizing-thematic-maps-for-qualitative-data.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Citation Nuances in Technical Papers",
+    "slug": "beyond-apa-7-managing-citation-nuances-in-technical-papers",
+    "excerpt": "Avoid common grade-draining errors. Master the complex nuances of APA 7th edition formatting with our guide to perfect citations in your technical papers.",
+    "keywords": [
+      "APA 7 citation troubleshooting",
+      "academic formatting tips",
+      "complex in-text citations",
+      "APA style reference guide",
+      "technical writing standards"
+    ],
+    "primaryKeyword": "APA 7 citation troubleshooting",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-08T03:19:50.541840+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-citation-nuances-in-technical-papers.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Recovering from Zotero Sync Errors: A 2026 Guide for Thesis Data",
+    "slug": "recovering-from-zotero-sync-errors-a-2026-guide-for-thesis-data",
+    "excerpt": "Struggling with Zotero sync errors? Learn how to fix library conflicts and secure your massive thesis bibliography with our step-by-step 2026 manual.",
+    "keywords": [
+      "fixing Zotero sync errors in dissertation",
+      "Zotero library conflict resolution",
+      "managing large bibliography Zotero",
+      "cloud backup for thesis research",
+      "Zotero 10 sync troubleshooting"
+    ],
+    "primaryKeyword": "fixing Zotero sync errors in dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-07T04:21:21.875682+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/recovering-from-zotero-sync-errors-a-2026-guide-for-thesis-data.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Ethical AI Benchmarking: Checking Your Own Tone in Academic Essays",
+    "slug": "ethical-ai-benchmarking-checking-your-own-tone-in-academic-essays",
+    "excerpt": "Is your essay sounding too robotic? Discover how to maintain your unique academic voice and bypass AI-detection tools using ethical, manual editing.",
+    "keywords": [
+      "academic voice vs generative AI style",
+      "detecting AI-generated text in essays",
+      "improving academic writing voice",
+      "AI humanization techniques for students",
+      "academic integrity best practices"
+    ],
+    "primaryKeyword": "academic voice vs generative AI style",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-07T04:21:47.749303+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-benchmarking-checking-your-own-tone-in-academic-essays.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo 24: Mapping Complex Thematic Relationships for PhD Success",
+    "slug": "nvivo-24-mapping-complex-thematic-relationships-for-phd-success",
+    "excerpt": "Overwhelmed by raw data? Master the latest NVivo 24 features to map complex themes effectively and accelerate your qualitative research analysis.",
+    "keywords": [
+      "thematic coding strategies in NVivo 24",
+      "qualitative data analysis for PhD",
+      "NVivo thematic map tutorial",
+      "managing research bias in qualitative coding",
+      "advanced NVivo 24 features"
+    ],
+    "primaryKeyword": "thematic coding strategies in NVivo 24",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-07T04:22:14.302916+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-24-mapping-complex-thematic-relationships-for-phd-success.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Refining Chicago 17 Citations for Multi-Volume Archival Sources",
+    "slug": "refining-chicago-17-citations-for-multi-volume-archival-sources",
+    "excerpt": "Stop guessing your Chicago 17 citations. Learn the exact formula for referencing tricky multi-volume archival sources in your thesis with confidence.",
+    "keywords": [
+      "Chicago 17 citation for multi-volume archives",
+      "formatting archival research footnotes",
+      "Chicago style bibliography guide",
+      "citing historical primary sources",
+      "complex Chicago 17 citation examples"
+    ],
+    "primaryKeyword": "Chicago 17 citation for multi-volume archives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-07T04:22:40.549212+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/refining-chicago-17-citations-for-multi-volume-archival-sources.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Turnitin AI False Positives: How to Verify Your Own Writing Integrity",
+    "slug": "turnitin-ai-false-positives-how-to-verify-your-own-writing-integrity",
+    "excerpt": "Received a false AI flag on Turnitin? Learn the technical steps to verify your writing's originality and prepare an evidence-based appeal for your tutors.",
+    "keywords": [
+      "challenging turnitin ai detection errors",
+      "AI detector inaccuracy",
+      "academic integrity appeal process",
+      "human-written text flagged as AI",
+      "proving original work Turnitin"
+    ],
+    "primaryKeyword": "challenging turnitin ai detection errors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-06T05:10:08.587007+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-how-to-verify-your-own-writing-integrity.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Mastering Chicago 17 Style: Handling Complex Archival Footnote Citations",
+    "slug": "mastering-chicago-17-style-handling-complex-archival-footnote-citations",
+    "excerpt": "Struggling with archival citations in Chicago 17? Master the art of complex footnote formatting with our clear, step-by-step guide for history students.",
+    "keywords": [
+      "chicago 17 archival footnote formatting",
+      "citing historical primary sources",
+      "Chicago style multi-source footnotes",
+      "archival document citation guide",
+      "Chicago 17 short form citations"
+    ],
+    "primaryKeyword": "chicago 17 archival footnote formatting",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-06T05:10:35.092218+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-chicago-17-style-handling-complex-archival-footnote-citations.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Dynamic Thematic Coding in NVivo: A 2026 Guide to Minimizing Bias",
+    "slug": "dynamic-thematic-coding-in-nvivo-a-2026-guide-to-minimizing-bias",
+    "excerpt": "Improve the rigor of your qualitative analysis. Discover how to identify and minimize researcher bias during thematic coding in NVivo for your PhD thesis.",
+    "keywords": [
+      "reducing researcher bias in NVivo thematic analysis",
+      "NVivo coding reliability",
+      "qualitative data interpretation ethics",
+      "inductive vs deductive coding NVivo",
+      "rigor in qualitative dissertation"
+    ],
+    "primaryKeyword": "reducing researcher bias in NVivo thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-06T05:11:00.071825+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dynamic-thematic-coding-in-nvivo-a-2026-guide-to-minimizing-bias.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Zotero Workflow Hacks: Managing 100+ Sources for Your Lit Review",
+    "slug": "zotero-workflow-hacks-managing-100-sources-for-your-lit-review",
+    "excerpt": "Feeling buried by research? Learn high-level Zotero organization strategies to streamline your literature review and keep 100+ sources perfectly in sync.",
+    "keywords": [
+      "organizing large literature reviews in Zotero",
+      "Zotero collections for thesis",
+      "mastering Zotero tag organization",
+      "efficient source synthesis software",
+      "Zotero citation management tips"
+    ],
+    "primaryKeyword": "organizing large literature reviews in Zotero",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-06T05:11:26.367810+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-workflow-hacks-managing-100-sources-for-your-lit-review.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Why Turnitin Flags Student Writing: Decoding False Positives in 2026",
+    "slug": "why-turnitin-flags-student-writing-decoding-false-positives-in-2026",
+    "excerpt": "Struggling with a high AI detection score? Discover why Turnitin flags human-written work and learn the steps to prove your academic integrity in 2026.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity software",
+      "how to appeal turnitin score",
+      "AI writing detection accuracy",
+      "AI hallucination in academic drafting"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-05T04:59:08.341458+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/why-turnitin-flags-student-writing-decoding-false-positives-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "Mastering Qualitative Coding: When to Use NVivo vs. Manual Analysis",
+    "slug": "mastering-qualitative-coding-when-to-use-nvivo-vs-manual-analysis",
+    "excerpt": "Choosing between manual coding and NVivo? Compare both methodologies to find the most efficient way to organize your thesis data for 2026 research.",
+    "keywords": [
+      "NVivo vs manual qualitative coding",
+      "thematic analysis methodology",
+      "NVivo research software guide",
+      "qualitative data organization",
+      "PhD coding strategies"
+    ],
+    "primaryKeyword": "NVivo vs manual qualitative coding",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-05T04:59:35.242580+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-qualitative-coding-when-to-use-nvivo-vs-manual-analysis.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating Complex Multi-Author In-Text Citations",
+    "slug": "apa-7th-edition-navigating-complex-multi-author-in-text-citations",
+    "excerpt": "Tired of citation errors? Learn the latest APA 7th edition rules for complex multi-author sources to ensure your bibliography is perfectly formatted.",
+    "keywords": [
+      "APA 7th edition complex citation rules",
+      "APA reference formatting help",
+      "in-text citation guide 2026",
+      "academic writing citation tips",
+      "Zotero citation troubleshooting"
+    ],
+    "primaryKeyword": "APA 7th edition complex citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-05T05:00:01.504081+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-complex-multi-author-in-text-citations.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Structuring Your Dissertation: A 2026 Guide to Thesis Synthesis",
+    "slug": "structuring-your-dissertation-a-2026-guide-to-thesis-synthesis",
+    "excerpt": "Feeling stuck on your dissertation? Use our 2026 synthesis framework to structure your chapters, clarify your arguments, and finish your degree on time.",
+    "keywords": [
+      "dissertation synthesis framework",
+      "academic argument structure",
+      "thesis planning guide",
+      "organizing research chapters",
+      "overcoming dissertation burnout"
+    ],
+    "primaryKeyword": "dissertation synthesis framework",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-05T05:00:27.414687+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/structuring-your-dissertation-a-2026-guide-to-thesis-synthesis.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Automating Your Bibliography: Zotero vs. ZoteroBib for 2026 Theses",
+    "slug": "automating-your-bibliography-zotero-vs-zoterobib-for-2026-theses",
+    "excerpt": "Struggling with your massive bibliography? We compare Zotero and ZoteroBib to help you choose the right tool for your 2026 dissertation project.",
+    "keywords": [
+      "Zotero vs ZoteroBib for large thesis projects",
+      "automated citation managers for PhD",
+      "best Zotero plugins for dissertation",
+      "managing complex citations in Zotero",
+      "reference management software comparison"
+    ],
+    "primaryKeyword": "Zotero vs ZoteroBib for large thesis projects",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-04T04:57:41.959466+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/automating-your-bibliography-zotero-vs-zoterobib-for-2026-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Fixing In-Text Citation Errors: APA 7th Edition Common Pitfalls",
+    "slug": "fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls",
+    "excerpt": "Are your APA 7 citations flagged for errors? Learn how to fix common multi-author and reference list mistakes to ensure your paper meets standards.",
+    "keywords": [
+      "APA 7th edition in-text citation common errors",
+      "how to cite multiple authors in APA 7",
+      "fixing APA citation formatting loops",
+      "APA 7 manual formatting guide",
+      "avoiding citation errors in long papers"
+    ],
+    "primaryKeyword": "APA 7th edition in-text citation common errors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-04T04:58:08.274095+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "NVivo vs. Manual Coding: When to Switch for PhD Data Analysis",
+    "slug": "nvivo-vs-manual-coding-when-to-switch-for-phd-data-analysis",
+    "excerpt": "Overwhelmed by your qualitative data? Discover the signs it's time to transition from manual coding to NVivo for a more streamlined research process.",
+    "keywords": [
+      "transitioning from manual coding to NVivo for PhD",
+      "NVivo thematic analysis workflows",
+      "qualitative research coding strategies",
+      "is NVivo necessary for dissertation data",
+      "managing qualitative data overload"
+    ],
+    "primaryKeyword": "transitioning from manual coding to NVivo for PhD",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-04T04:58:35.130616+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-vs-manual-coding-when-to-switch-for-phd-data-analysis.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Literature Review Outline",
+    "slug": "ethical-ai-use-scaffolding-your-literature-review-outline",
+    "excerpt": "Learn to use AI ethically to scaffold your literature review. Master techniques to structure your themes while ensuring your academic voice remains clear.",
+    "keywords": [
+      "ethical AI scaffolding for literature review",
+      "using AI to organize research themes",
+      "AI tools for academic literature synthesis",
+      "how to use AI for academic outlining",
+      "maintaining voice in AI-assisted writing"
+    ],
+    "primaryKeyword": "ethical AI scaffolding for literature review",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-04T04:59:02.204759+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-literature-review-outline.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Fixing Turnitin 'AI Writing' Flags: A Guide for Academic Integrity",
+    "slug": "fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity",
+    "excerpt": "Received an unfair AI flag on your work? Learn how to audit your writing process and prepare a professional appeal to uphold your academic integrity.",
+    "keywords": [
+      "how to appeal turnitin ai detection false positives",
+      "academic integrity appeal letter",
+      "turnitin ai report accuracy",
+      "disputing academic misconduct claims",
+      "preventing false positives in turnitin"
+    ],
+    "primaryKeyword": "how to appeal turnitin ai detection false positives",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-03T05:35:24.068319+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-ai-writing-flags-a-guide-for-academic-integrity.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Mastering NVivo 23: Coding Complex Qualitative Data for PhD Success",
+    "slug": "mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success",
+    "excerpt": "Struggling with qualitative data overload? Master NVivo 23 workflows to streamline your thematic analysis and finish your PhD dissertation faster.",
+    "keywords": [
+      "nvivo 23 thematic coding tutorial for phd students",
+      "qualitative research methodology guide",
+      "organizing research data in nvivo",
+      "improving inter-coder reliability",
+      "phd dissertation software workflows"
+    ],
+    "primaryKeyword": "nvivo 23 thematic coding tutorial for phd students",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-03T05:35:49.852749+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-23-coding-complex-qualitative-data-for-phd-success.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling Complex Multi-Author In-Text Citations",
+    "slug": "apa-7th-edition-handling-complex-multi-author-in-text-citations",
+    "excerpt": "Avoid common grade-draining citation mistakes. Our 2026 guide breaks down complex APA 7th edition multi-author rules for your next research paper.",
+    "keywords": [
+      "apa 7 citation rules for four or more authors",
+      "apa formatting cheat sheet 2026",
+      "in-text citation examples apa 7",
+      "correcting bibliography errors",
+      "academic writing style guide"
+    ],
+    "primaryKeyword": "apa 7 citation rules for four or more authors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-03T05:36:15.580249+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-complex-multi-author-in-text-citations.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Organizing Your Thesis: Zotero and Obsidian Integration for Success",
+    "slug": "organizing-your-thesis-zotero-and-obsidian-integration-for-success",
+    "excerpt": "Tired of losing track of sources? Sync Zotero with Obsidian to build a powerful, searchable knowledge base for your upcoming thesis or dissertation.",
+    "keywords": [
+      "using zotero with obsidian for research notes",
+      "academic workflow management",
+      "automating literature review notes",
+      "zotero bibliography management",
+      "phd research productivity tools"
+    ],
+    "primaryKeyword": "using zotero with obsidian for research notes",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-03T05:36:56.456512+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/organizing-your-thesis-zotero-and-obsidian-integration-for-success.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Zotero PDF Metadata Errors: How to Fix Citations in Large Theses",
     "slug": "zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses",
     "excerpt": "Struggling with messy Zotero metadata in your thesis? Learn how to automate cleanup, fix broken citations, and keep your references perfect for submission.",
