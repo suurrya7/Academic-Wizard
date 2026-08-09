@@ -26,6 +26,7 @@ You must configure these GitHub Repository Secrets:
 | `LINKEDIN_REFRESH_TOKEN` | LinkedIn Developer Portal → "Share on LinkedIn" product |
 | `LINKEDIN_CLIENT_ID` | LinkedIn Developer Portal → "Share on LinkedIn" product |
 | `LINKEDIN_CLIENT_SECRET` | LinkedIn Developer Portal → "Share on LinkedIn" product |
+| `LINKEDIN_ORG_ID` | (Optional) Your LinkedIn Company Page ID. Leave blank to post to your personal profile. |
 | `PINTEREST_ACCESS_TOKEN` | Pinterest Developers → Submit for Standard Access |
 | `PINTEREST_REFRESH_TOKEN` | Pinterest Developers → Submit for Standard Access |
 | `PINTEREST_CLIENT_ID` | Pinterest Developers → Submit for Standard Access |
