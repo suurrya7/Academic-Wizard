@@ -1,5 +1,105 @@
 [
   {
+    "title": "Recovering From Turnitin AI Over-Detection: A Step-by-Step Guide",
+    "slug": "recovering-from-turnitin-ai-over-detection-a-step-by-step-guide",
+    "excerpt": "Don't let inaccurate AI scores hurt your grades. Learn how to document your writing process and effectively challenge false Turnitin flags today.",
+    "keywords": [
+      "how to challenge false turnitin ai detection",
+      "academic integrity appeal process",
+      "provenance of student writing",
+      "turnitin similarity report analysis",
+      "proving original academic work"
+    ],
+    "primaryKeyword": "how to challenge false turnitin ai detection",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-10T03:46:20.467856+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/recovering-from-turnitin-ai-over-detection-a-step-by-step-guide.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Mastering NVivo 26: Coding Qualitative Data Without Research Bias",
+    "slug": "mastering-nvivo-26-coding-qualitative-data-without-research-bias",
+    "excerpt": "Struggling to keep your qualitative analysis objective? Discover how to leverage NVivo 26 features to streamline your thematic coding and reduce bias.",
+    "keywords": [
+      "nvivo 26 qualitative coding methodology",
+      "thematic analysis software",
+      "reducing researcher bias in qualitative studies",
+      "coding large scale interview data",
+      "advanced nvivo node management"
+    ],
+    "primaryKeyword": "nvivo 26 qualitative coding methodology",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-10T03:46:46.176276+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-26-coding-qualitative-data-without-research-bias.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Zotero for Multi-Volume Projects: Managing Complex Citations",
+    "slug": "zotero-for-multi-volume-projects-managing-complex-citations",
+    "excerpt": "Manage your 500+ source thesis with ease. Learn expert Zotero workflows to automate your bibliography and sync large libraries without losing data.",
+    "keywords": [
+      "organizing 500+ citations in zotero for dissertation",
+      "zotero library sync errors",
+      "automating bibliography formatting",
+      "citation management for long form thesis",
+      "zotero group library collaboration"
+    ],
+    "primaryKeyword": "organizing 500+ citations in zotero for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-10T03:47:11.761997+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-multi-volume-projects-managing-complex-citations.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Navigating New Citation Rules for Digital Sources",
+    "slug": "beyond-apa-7-navigating-new-citation-rules-for-digital-sources",
+    "excerpt": "Confused about citing digital content in APA 7? Get the latest breakdown on formatting social media, web, and AI sources for your next assignment.",
+    "keywords": [
+      "apa 7th edition digital source citation guide",
+      "citing social media in academic papers",
+      "managing complex multi-author references",
+      "apa 7 citation formatting pitfalls",
+      "citing generative ai outputs ethically"
+    ],
+    "primaryKeyword": "apa 7th edition digital source citation guide",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-10T03:47:38.107543+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-navigating-new-citation-rules-for-digital-sources.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Fixing Zotero Link Rot: Preserving Citations for Long-Form Theses",
     "slug": "fixing-zotero-link-rot-preserving-citations-for-long-form-theses",
     "excerpt": "Don't lose your bibliography to link rot. Learn how to systematically audit, restore, and preserve your Zotero thesis citations for a perfect grade.",
