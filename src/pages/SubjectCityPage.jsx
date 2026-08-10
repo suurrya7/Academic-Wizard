@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/services';
 import { countrySubjects, countryCities } from '../data/specializedPages';
+import specializedContent from '../data/specializedContent.json';
 import PageHeader from '../components/PageHeader';
 import DefinitionBox from '../components/DefinitionBox';
 import ExpertQuote from '../components/ExpertQuote';
@@ -96,7 +97,24 @@ const SubjectCityPage = () => {
                 <meta property="og:url" content={url} />
                 
                 {/* Hreflang alternate */}
-                <link rel="alternate" hreflang={SLUG_TO_HREFLANG[country.slug] || `en-${country.slug}`} href={url} />
+                <link rel="alternate" hreflang="x-default" href={url} />
+                <link rel="alternate" hreflang="en" href={url} />
+                {service.countries?.map(c => {
+                    const cSubjects = countrySubjects[c.slug] || [];
+                    const cCities = countryCities[c.slug] || [];
+                    const hasSpecializedSlug = cSubjects.some(s => s.slug === specializedSlug) || cCities.some(city => city.slug === specializedSlug);
+                    if (hasSpecializedSlug) {
+                        return (
+                            <link 
+                                key={c.slug}
+                                rel="alternate" 
+                                hreflang={SLUG_TO_HREFLANG[c.slug] || `en-${c.slug}`} 
+                                href={`https://academicwizard.online/services/${serviceSlug}/${c.slug}/${specializedSlug}`} 
+                            />
+                        );
+                    }
+                    return null;
+                })}
                 
                 {/* FAQ Schema */}
                 {faqsList.length > 0 && (
@@ -158,6 +176,12 @@ const SubjectCityPage = () => {
                                 author={selectedQuote.author}
                                 role={selectedQuote.role}
                             />
+
+                            {specializedContent[`${country.slug}-${specializedData.slug}`] && (
+                                <div className="mt-8 mb-8 prose prose-invert prose-lg max-w-none prose-headings:text-accent-gold prose-a:text-accent-gold hover:prose-a:text-white"
+                                     dangerouslySetInnerHTML={{ __html: specializedContent[`${country.slug}-${specializedData.slug}`] }}
+                                />
+                            )}
                             
                             <div className="space-y-4 mb-8">
                                 {guaranteesList.slice(0, 4).map((guarantee, i) => (

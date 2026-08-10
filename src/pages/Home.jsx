@@ -92,7 +92,7 @@ const Home = () => {
                                     Generate referencing citations in APA 7th, MLA 9th, Harvard, IEEE, and Chicago styles instantly.
                                 </p>
                             </div>
-                            <Link to="/tools/citation-generator/" className="w-full mt-4 block">
+                            <Link to="/tools/citation-generator" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Launch Builder
                                 </Button>
@@ -108,7 +108,7 @@ const Home = () => {
                                     Proofread your essays, edit spelling slips, and improve writing styles in real-time.
                                 </p>
                             </div>
-                            <Link to="/tools/grammar-checker/" className="w-full mt-4 block">
+                            <Link to="/tools/grammar-checker" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Launch Editor
                                 </Button>
@@ -124,7 +124,7 @@ const Home = () => {
                                     Scan drafts for perplexity metrics, sentence uniformity, and AI-typical buzzwords.
                                 </p>
                             </div>
-                            <Link to="/tools/ai-detector/" className="w-full mt-4 block">
+                            <Link to="/tools/ai-detector" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Scan Draft
                                 </Button>
@@ -140,7 +140,7 @@ const Home = () => {
                                     Transform robotic AI text into natural academic phrasing to bypass detectors like Turnitin.
                                 </p>
                             </div>
-                            <Link to="/tools/ai-humanizer/" className="w-full mt-4 block">
+                            <Link to="/tools/ai-humanizer" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Humanize Text
                                 </Button>

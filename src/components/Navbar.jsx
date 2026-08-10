@@ -60,7 +60,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     {Button && (
-                        <Link to="/contact/">
+                        <Link to="/contact">
                             <Button type="outline" className="px-8 py-3 text-[10px]">
                                 Order Now
                             </Button>

@@ -69,33 +69,33 @@ const Footer = () => {
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
-                        <li><Link to="/services/" className="hover:text-accent-gold transition-colors">Services</Link></li>
-                        <li><Link to="/tools/" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
-                        <li><Link to="/about/" className="hover:text-accent-gold transition-colors">About Us</Link></li>
-                        <li><Link to="/faq/" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
-                        <li><Link to="/blog/" className="hover:text-accent-gold transition-colors">Blog</Link></li>
-                        <li><Link to="/contact/" className="hover:text-accent-gold transition-colors">Contact</Link></li>
+                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
+                        <li><Link to="/tools" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
+                        <li><Link to="/about" className="hover:text-accent-gold transition-colors">About Us</Link></li>
+                        <li><Link to="/faq" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
+                        <li><Link to="/blog" className="hover:text-accent-gold transition-colors">Blog</Link></li>
+                        <li><Link to="/contact" className="hover:text-accent-gold transition-colors">Contact</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
-                        <li><Link to="/services/assignment-help/" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
-                        <li><Link to="/services/essay-help/" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
-                        <li><Link to="/services/dissertation-help/" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
-                        <li><Link to="/services/literature-review/" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
-                        <li><Link to="/services/editing-proofreading/" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
+                        <li><Link to="/services/assignment-help" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
+                        <li><Link to="/services/essay-help" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
+                        <li><Link to="/services/dissertation-help" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
+                        <li><Link to="/services/literature-review" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
+                        <li><Link to="/services/editing-proofreading" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Free Tools</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
-                        <li><Link to="/tools/citation-generator/" className="hover:text-accent-gold transition-colors">Citation Builder</Link></li>
-                        <li><Link to="/tools/grammar-checker/" className="hover:text-accent-gold transition-colors">Grammar Editor</Link></li>
-                        <li><Link to="/tools/ai-detector/" className="hover:text-accent-gold transition-colors">AI Content Scanner</Link></li>
-                        <li><Link to="/tools/ai-humanizer/" className="hover:text-accent-gold transition-colors">AI Text Humanizer</Link></li>
+                        <li><Link to="/tools/citation-generator" className="hover:text-accent-gold transition-colors">Citation Builder</Link></li>
+                        <li><Link to="/tools/grammar-checker" className="hover:text-accent-gold transition-colors">Grammar Editor</Link></li>
+                        <li><Link to="/tools/ai-detector" className="hover:text-accent-gold transition-colors">AI Content Scanner</Link></li>
+                        <li><Link to="/tools/ai-humanizer" className="hover:text-accent-gold transition-colors">AI Text Humanizer</Link></li>
                     </ul>
                 </div>
 
@@ -123,8 +123,8 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
                 </p>
                 <div className="flex gap-8 text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
-                    <Link to="/privacy-policy/" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
-                    <Link to="/terms-of-service/" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
+                    <Link to="/privacy-policy" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
+                    <Link to="/terms-of-service" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
                 </div>
             </div>
         </footer>

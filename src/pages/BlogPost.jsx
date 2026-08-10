@@ -88,7 +88,7 @@ const BlogPost = () => {
     }
 
     if (status === 'notfound' || status === 'error') {
-        return <Navigate to="/blog/" replace />;
+        return <Navigate to="/blog" replace />;
     }
 
     const formattedDate = postData?.date
@@ -164,7 +164,7 @@ const BlogPost = () => {
             </Helmet>
 
             <article className="container px-6 max-w-4xl mx-auto">
-                <Link to="/blog/" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
+                <Link to="/blog" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
                     <ArrowLeft size={16} /> Back to Blog
                 </Link>
 
@@ -243,10 +243,10 @@ const BlogPost = () => {
                             Our team of experts is ready to provide ethical guidance, editing, and research support to help you achieve your academic goals.
                         </p>
                         <div className="flex justify-center gap-4">
-                            <Link to="/contact/" className="btn-primary">
+                            <Link to="/contact" className="btn-primary">
                                 Get Expert Help
                             </Link>
-                            <Link to="/services/" className="btn-secondary">
+                            <Link to="/services" className="btn-secondary">
                                 View Services
                             </Link>
                         </div>
@@ -262,9 +262,9 @@ const BlogPost = () => {
                     <p>{postData?.excerpt}</p>
                     <p>Published: {formattedDate}</p>
                     <p>
-                        <a href="/blog/">← Back to Blog</a> | 
-                        <a href="/services/"> Our Services</a> | 
-                        <a href="/contact/"> Contact Us</a>
+                        <Link to="/blog">← Back to Blog</Link> | 
+                        <Link to="/services"> Our Services</Link> | 
+                        <Link to="/contact"> Contact Us</Link>
                     </p>
                 </div>
             </noscript>
