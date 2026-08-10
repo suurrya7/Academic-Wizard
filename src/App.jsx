@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Core UI components loaded eagerly
@@ -39,6 +39,15 @@ const LoadingFallback = () => (
   <div style={{ minHeight: '100vh', background: '#050505' }}></div>
 );
 
+// Redirects trailing slashes to non-slash URLs for SEO (e.g. /blog/ -> /blog)
+const TrailingSlashRedirect = () => {
+  const location = useLocation();
+  if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
+    return <Navigate replace to={{ ...location, pathname: location.pathname.slice(0, -1) }} />;
+  }
+  return null;
+};
+
 function App() {
   return (
     <HelmetProvider>
@@ -50,6 +59,7 @@ function App() {
         <meta name="twitter:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students worldwide." />
       </Helmet>
       <Router basename={import.meta.env.BASE_URL}>
+        <TrailingSlashRedirect />
         <Suspense fallback={null}>
           <CustomCursor />
           <ParticleBackground />
