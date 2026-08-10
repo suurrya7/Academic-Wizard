@@ -150,7 +150,7 @@ const SubjectCityPage = () => {
 
             <section className="py-20 relative">
                 <div className="container px-6 max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="text-left">
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-gold/10 text-accent-gold font-semibold mb-6">
                                 <Icon size={18} />
@@ -198,23 +198,30 @@ const SubjectCityPage = () => {
                                 </Button>
                             </div>
                         </div>
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-accent-gold/20 to-accent-blue/20 blur-3xl rounded-full" />
-                            <div className="relative glass-card p-2 rounded-2xl border-accent-gold/20">
-                                <img 
-                                    src={country.image || service.image || "/images/dark-office.webp"}
-                                    alt={specializedData.title}
-                                    className="rounded-xl w-full h-[500px] object-cover"
-                                />
-                                <div className="absolute -bottom-6 -left-6 bg-bg-secondary p-6 rounded-xl border border-glass-border shadow-2xl flex items-center gap-4">
-                                    <div className="p-3 bg-accent-gold/10 rounded-lg">
-                                        <Shield className="text-accent-gold" size={24} />
-                                    </div>
-                                    <div>
-                                        <div className="text-white font-bold font-heading text-lg">Trusted Support</div>
-                                        <div className="text-white/70 text-sm">Top-rated by students</div>
+                        <div className="relative lg:sticky lg:top-24 space-y-12 pb-12">
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-gradient-to-r from-accent-gold/20 to-accent-blue/20 blur-3xl rounded-full" />
+                                <div className="relative glass-card p-2 rounded-2xl border-accent-gold/20">
+                                    <img 
+                                        src={country.image || service.image || "/images/dark-office.webp"}
+                                        alt={specializedData.title}
+                                        className="rounded-xl w-full h-[300px] object-cover"
+                                    />
+                                    <div className="absolute -bottom-6 -left-6 bg-bg-secondary p-4 rounded-xl border border-glass-border shadow-2xl flex items-center gap-3">
+                                        <div className="p-2 bg-accent-gold/10 rounded-lg">
+                                            <Shield className="text-accent-gold" size={20} />
+                                        </div>
+                                        <div>
+                                            <div className="text-white font-bold font-heading text-base">Trusted Support</div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div className="glass-card p-6 border-accent-gold/20 relative z-10">
+                                <h3 className="text-2xl font-bold font-heading text-white mb-2">Request Expert Help</h3>
+                                <p className="text-white/70 mb-6 text-sm">Get a free, no-obligation quote for your assignment.</p>
+                                <ContactForm />
                             </div>
                         </div>
                     </div>
@@ -305,12 +312,7 @@ const SubjectCityPage = () => {
                 </section>
             )}
 
-            {/* Email Contact Form */}
-            <section className="py-20 border-t border-glass-border">
-                <div className="container px-6">
-                    <ContactForm />
-                </div>
-            </section>
+            {/* Email Contact Form (Removed from here as it's now sticky on the right) */}
         </div>
     );
 };
