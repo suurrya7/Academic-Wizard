@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing NVivo Data Mismatches: A 2026 Workflow for Qualitative Accuracy",
+    "slug": "fixing-nvivo-data-mismatches-a-2026-workflow-for-qualitative-accuracy",
+    "excerpt": "Struggling with NVivo data import errors? Learn our 2026 troubleshooting workflow to ensure your qualitative thesis data stays accurate and organized.",
+    "keywords": [
+      "fixing NVivo data import errors",
+      "qualitative data management tips",
+      "NVivo 26 troubleshooting guide",
+      "coding qualitative research bias",
+      "thesis data organization methods"
+    ],
+    "primaryKeyword": "fixing NVivo data import errors",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-11T03:28:50.952553+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-nvivo-data-mismatches-a-2026-workflow-for-qualitative-accuracy.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "APA 7 Tables & Figures: Avoiding Common Formatting Penalties in 2026",
+    "slug": "apa-7-tables-figures-avoiding-common-formatting-penalties-in-2026",
+    "excerpt": "Don't let formatting mistakes lower your grade. Master the latest APA 7 table and figure standards to ensure your thesis meets strict academic criteria.",
+    "keywords": [
+      "APA 7th edition table formatting rules",
+      "APA 7 figure caption standards",
+      "academic formatting pitfalls",
+      "thesis design guidelines",
+      "citation style compliance"
+    ],
+    "primaryKeyword": "APA 7th edition table formatting rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-11T03:29:17.351786+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-tables-figures-avoiding-common-formatting-penalties-in-2026.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Beyond AI Detectors: How to Audit Your Own Tone for Academic Integrity",
+    "slug": "beyond-ai-detectors-how-to-audit-your-own-tone-for-academic-integrity",
+    "excerpt": "Concerned about AI writing flags? Learn how to audit your own tone and strengthen your unique academic voice to ensure complete research integrity.",
+    "keywords": [
+      "auditing student writing for academic integrity",
+      "human-authored content verification",
+      "avoiding AI writing style flags",
+      "improving academic voice",
+      "ethical writing practices"
+    ],
+    "primaryKeyword": "auditing student writing for academic integrity",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-11T03:29:43.216629+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-ai-detectors-how-to-audit-your-own-tone-for-academic-integrity.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Integrating Zotero with Scrivener: A 2026 Dissertation Power Workflow",
+    "slug": "integrating-zotero-with-scrivener-a-2026-dissertation-power-workflow",
+    "excerpt": "Boost your dissertation productivity in 2026. Discover how to sync Zotero with Scrivener for a seamless, citation-perfect long-form writing workflow.",
+    "keywords": [
+      "using Zotero with Scrivener for dissertation",
+      "managing thesis citations",
+      "academic research tools 2026",
+      "thesis writing software setup",
+      "streamlining bibliography generation"
+    ],
+    "primaryKeyword": "using Zotero with Scrivener for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-11T03:30:11.092502+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/integrating-zotero-with-scrivener-a-2026-dissertation-power-workflow.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Recovering From Turnitin AI Over-Detection: A Step-by-Step Guide",
     "slug": "recovering-from-turnitin-ai-over-detection-a-step-by-step-guide",
     "excerpt": "Don't let inaccurate AI scores hurt your grades. Learn how to document your writing process and effectively challenge false Turnitin flags today.",
