@@ -227,7 +227,7 @@ async function publishLinkedIn(text, link) {
     if (!authorUrn) {
         if (process.env.LINKEDIN_ORG_ID) {
             // Post to a Company Page
-            authorUrn = `urn:li:organization:${process.env.LINKEDIN_ORG_ID}`;
+            authorUrn = `urn:li:organization:${process.env.LINKEDIN_ORG_ID.trim()}`;
         } else {
             // Fallback to Personal Profile
             const meRes = await fetchApi('https://api.linkedin.com/v2/userinfo', {
