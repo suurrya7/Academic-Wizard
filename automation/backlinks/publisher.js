@@ -38,29 +38,59 @@ async function writeJson(filePath, data) {
 function parseJsonResponse(text) {
     let clean = text.trim();
     
-    // Ultimate fallback: extract everything from the first '{' to the last '}'
-    const firstBrace = clean.indexOf('{');
-    const lastBrace = clean.lastIndexOf('}');
-    
-    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace >= firstBrace) {
-        clean = clean.substring(firstBrace, lastBrace + 1);
+    // 1. Try to extract from markdown code blocks
+    const jsonBlocks = [];
+    const blockRegex = /```(?:json)?\s*([\s\S]*?)```/g;
+    let match;
+    while ((match = blockRegex.exec(clean)) !== null) {
+        jsonBlocks.push(match[1].trim());
     }
 
+    if (jsonBlocks.length > 0) {
+        // If the model split the response into multiple blocks, merge them
+        let mergedObject = {};
+        for (const block of jsonBlocks) {
+            try {
+                const parsed = JSON.parse(block);
+                if (typeof parsed === 'object' && parsed !== null) {
+                    mergedObject = { ...mergedObject, ...parsed };
+                }
+            } catch (e) {
+                console.error("Failed to parse a JSON block:", e.message);
+            }
+        }
+        if (Object.keys(mergedObject).length > 0) return mergedObject;
+    }
+
+    // 2. Try parsing the raw text directly
     try {
         return JSON.parse(clean);
     } catch (e) {
-        // Fallback for unescaped newlines which are common in generated JSON
-        const sanitized = clean.replace(/\\n/g, '\\n')
-                               .replace(/\\'/g, "\\'")
-                               .replace(/\\"/g, '\\"')
-                               .replace(/\\&/g, '\\&')
-                               .replace(/\\r/g, '\\r')
-                               .replace(/\\t/g, '\\t')
-                               .replace(/\\b/g, '\\b')
-                               .replace(/\\f/g, '\\f')
-                               // Remove actual literal line breaks that break JSON
-                               .replace(/[\u0000-\u0019]+/g,""); 
-        return JSON.parse(sanitized);
+        // 3. Fallback: extract the first complete JSON object we can find
+        const firstBrace = clean.indexOf('{');
+        // Find the matching closing brace for the FIRST object, not the last brace in the whole string
+        // Since that's complex, let's just try matching the first `{ ... }` block
+        if (firstBrace !== -1) {
+            let braceCount = 0;
+            let lastBrace = -1;
+            for (let i = firstBrace; i < clean.length; i++) {
+                if (clean[i] === '{') braceCount++;
+                if (clean[i] === '}') braceCount--;
+                if (braceCount === 0) {
+                    lastBrace = i;
+                    break;
+                }
+            }
+            if (lastBrace !== -1) {
+                const substring = clean.substring(firstBrace, lastBrace + 1);
+                try {
+                    return JSON.parse(substring);
+                } catch (e2) {
+                    // Ignore and fall through to throw original error
+                }
+            }
+        }
+        throw e;
     }
 }
 
