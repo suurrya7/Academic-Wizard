@@ -7,103 +7,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help UK",
             "targetKeyword": "nursing assignment help UK",
-            "desc": "Top-rated Nursing assignment writing service in the UK. We ensure high academic standards for your university submissions."
+            "desc": "Struggling with clinical case studies or OSCE prep? Our UK nursing experts help you master evidence-based practice assignments to NHS standards."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help UK",
             "targetKeyword": "law assignment help UK",
-            "desc": "Top-rated Law assignment writing service in the UK. We ensure high academic standards for your university submissions."
+            "desc": "From constitutional analysis to Bluebook citations, get expert guidance on UK law assignments from practicing academics to boost your grades today."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help UK",
             "targetKeyword": "MBA assignment help UK",
-            "desc": "Need help with your MBA assignments in the UK? Our local academic experts provide custom research and writing assistance."
+            "desc": "Tackling strategic management cases or financial models? Our UK MBA tutors provide executive-level analysis for your business school assignments."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help UK",
             "targetKeyword": "engineering assignment help UK",
-            "desc": "Expert Engineering assignment help tailored for students in the UK. Get comprehensive support for coursework and research."
+            "desc": "Overwhelmed by thermodynamic equations or structural designs? Our UK engineering experts deliver precise, calculation-backed assignment solutions."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help UK",
             "targetKeyword": "CS assignment help UK",
-            "desc": "Top-rated Computer Science assignment writing service in the UK. We ensure high academic standards for your university submissions."
+            "desc": "Debugging algorithmic complexity or system architecture? Get flawless code and detailed documentation for your UK computer science projects."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help UK",
             "targetKeyword": "psychology assignment help UK",
-            "desc": "Need help with your Psychology assignments in the UK? Our local academic experts provide custom research and writing assistance."
+            "desc": "Stuck on cognitive behavior models or SPSS data analysis? Our UK psychology academics help you craft well-researched, APA-compliant papers."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help UK",
             "targetKeyword": "accounting assignment help UK",
-            "desc": "Custom Accounting assignment solutions for the UK universities. From essays to research papers, we cover it all."
+            "desc": "Balancing complex ledgers or tax regulations? Our UK accounting experts ensure accurate calculations and compliant financial reporting."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help UK",
             "targetKeyword": "business assignment help UK",
-            "desc": "Professional Business assignment help across the UK. Achieve better grades with our specialized academic support."
+            "desc": "Navigating market entry strategies or organizational behavior? Get top-tier business assignment help tailored to UK academic standards."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help UK",
             "targetKeyword": "marketing assignment help UK",
-            "desc": "Custom Marketing assignment solutions for the UK universities. From essays to research papers, we cover it all."
+            "desc": "Crafting digital campaign strategies or consumer behavior reports? Our UK marketing specialists help you deliver compelling, data-driven assignments."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help UK",
             "targetKeyword": "economics assignment help UK",
-            "desc": "Need help with your Economics assignments in the UK? Our local academic experts provide custom research and writing assistance."
+            "desc": "Analyzing macroeconomic policies or econometrics models? Our UK economics tutors provide robust statistical analysis and theoretical insights."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help UK",
             "targetKeyword": "education assignment help UK",
-            "desc": "Professional Education assignment help across the UK. Achieve better grades with our specialized academic support."
+            "desc": "Developing lesson plans or pedagogical theories? Our UK education experts support your teaching coursework with modern educational frameworks."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help UK",
             "targetKeyword": "sociology assignment help UK",
-            "desc": "Top-rated Sociology assignment writing service in the UK. We ensure high academic standards for your university submissions."
+            "desc": "Critiquing social stratification or qualitative research? Get nuanced, theoretically sound sociology assignments from our UK academic writers."
         },
         {
             "slug": "history",
             "title": "History Assignment Help UK",
             "targetKeyword": "history assignment help UK",
-            "desc": "Professional History assignment help across the UK. Achieve better grades with our specialized academic support."
+            "desc": "Synthesizing primary sources or historical historiography? Our UK history experts help you craft compelling, well-evidenced academic essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help UK",
             "targetKeyword": "data science assignment help UK",
-            "desc": "Need help with your Data Science assignments in the UK? Our local academic experts provide custom research and writing assistance."
+            "desc": "Struggling with machine learning models or big data analytics? Get expert coding and statistical support for your UK data science assignments."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help UK",
             "targetKeyword": "finance assignment help UK",
-            "desc": "Top-rated Finance assignment writing service in the UK. We ensure high academic standards for your university submissions."
+            "desc": "Modeling corporate valuation or portfolio management? Our UK finance experts deliver precise financial analysis for your university submissions."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help UK",
             "targetKeyword": "English lit assignment help UK",
-            "desc": "Need help with your English Literature assignments in the UK? Our local academic experts provide custom research and writing assistance."
+            "desc": "Deconstructing literary themes or critical theory? Our UK literature academics help you craft articulate, highly analytical essays."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help UK",
             "targetKeyword": "healthcare assignment help UK",
-            "desc": "Professional Healthcare assignment help across the UK. Achieve better grades with our specialized academic support."
+            "desc": "Analyzing public health policies or healthcare administration? Get expert support for your UK healthcare assignments backed by current research."
         }
     ],
     "usa": [
@@ -111,103 +111,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help USA",
             "targetKeyword": "nursing assignment help USA",
-            "desc": "Top-rated Nursing assignment writing service in the USA. We ensure high academic standards for your university submissions."
+            "desc": "Get your USA nursing assignments done by RN-qualified experts. We excel in crafting care plans and clinical essays for American universities."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help USA",
             "targetKeyword": "law assignment help USA",
-            "desc": "Top-rated Law assignment writing service in the USA. We ensure high academic standards for your university submissions."
+            "desc": "Master US constitutional law, torts, and case briefs with our seasoned American legal scholars. We guarantee flawless Bluebook citations."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help USA",
             "targetKeyword": "MBA assignment help USA",
-            "desc": "Need help with your MBA assignments in the USA? Our local academic experts provide custom research and writing assistance."
+            "desc": "Elevate your business school performance in the USA with our expert MBA writing help. We specialize in strategic management and leadership case studies."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help USA",
             "targetKeyword": "engineering assignment help USA",
-            "desc": "Expert Engineering assignment help tailored for students in the USA. Get comprehensive support for coursework and research."
+            "desc": "From civil infrastructure to electrical circuits, our USA engineering assignment helpers deliver precise calculations and MATLAB designs."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help USA",
             "targetKeyword": "CS assignment help USA",
-            "desc": "Top-rated Computer Science assignment writing service in the USA. We ensure high academic standards for your university submissions."
+            "desc": "Tackling Python, Java, or C++? Our American tech experts provide bug-free code and comprehensive documentation for your CS assignments."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help USA",
             "targetKeyword": "psychology assignment help USA",
-            "desc": "Need help with your Psychology assignments in the USA? Our local academic experts provide custom research and writing assistance."
+            "desc": "Struggling with American Psychological Association (APA) formatting? We deliver deeply researched psychology papers on cognitive and behavioral science."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help USA",
             "targetKeyword": "accounting assignment help USA",
-            "desc": "Custom Accounting assignment solutions for the USA universities. From essays to research papers, we cover it all."
+            "desc": "Master GAAP principles and complex financial statements with our USA-based accounting assignment experts. Get accurate and timely solutions."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help USA",
             "targetKeyword": "business assignment help USA",
-            "desc": "Professional Business assignment help across the USA. Achieve better grades with our specialized academic support."
+            "desc": "Score high in your US business degree with custom-written essays on market analysis, organizational behavior, and international trade."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help USA",
             "targetKeyword": "marketing assignment help USA",
-            "desc": "Custom Marketing assignment solutions for the USA universities. From essays to research papers, we cover it all."
+            "desc": "Create winning marketing plans and consumer behavior analysis for your USA university. Our marketing experts deliver data-driven assignment solutions."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help USA",
             "targetKeyword": "economics assignment help USA",
-            "desc": "Need help with your Economics assignments in the USA? Our local academic experts provide custom research and writing assistance."
+            "desc": "From microeconomic theory to econometric modeling, our USA economics writers help you understand complex economic indicators and policies."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help USA",
             "targetKeyword": "education assignment help USA",
-            "desc": "Professional Education assignment help across the USA. Achieve better grades with our specialized academic support."
+            "desc": "Future teachers in the USA rely on our education assignment help for lesson planning, pedagogical theory, and classroom management essays."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help USA",
             "targetKeyword": "sociology assignment help USA",
-            "desc": "Top-rated Sociology assignment writing service in the USA. We ensure high academic standards for your university submissions."
+            "desc": "Explore American social structures and cultural diversity with our expert sociology assignment help. We deliver nuanced, high-quality research papers."
         },
         {
             "slug": "history",
             "title": "History Assignment Help USA",
             "targetKeyword": "history assignment help USA",
-            "desc": "Professional History assignment help across the USA. Achieve better grades with our specialized academic support."
+            "desc": "Writing about American history or global conflicts? Our US history assignment experts help you craft well-argued essays with credible primary sources."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help USA",
             "targetKeyword": "data science assignment help USA",
-            "desc": "Need help with your Data Science assignments in the USA? Our local academic experts provide custom research and writing assistance."
+            "desc": "Need help with R, Python, or SQL in the US? Our data science experts assist with predictive modeling, big data analytics, and visualization assignments."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help USA",
             "targetKeyword": "finance assignment help USA",
-            "desc": "Top-rated Finance assignment writing service in the USA. We ensure high academic standards for your university submissions."
+            "desc": "Our USA finance assignment helpers specialize in corporate finance, investment analysis, and financial modeling to ensure you get top grades."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help USA",
             "targetKeyword": "English lit assignment help USA",
-            "desc": "Need help with your English Literature assignments in the USA? Our local academic experts provide custom research and writing assistance."
+            "desc": "Analyze classic American literature and poetry with our expert writers. We deliver compelling essays on literary criticism and thematic analysis."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help USA",
             "targetKeyword": "healthcare assignment help USA",
-            "desc": "Professional Healthcare assignment help across the USA. Achieve better grades with our specialized academic support."
+            "desc": "Get expert assistance on US healthcare administration, public health policies, and healthcare ethics assignments from experienced professionals."
         }
     ],
     "australia": [
@@ -215,103 +215,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help Australia",
             "targetKeyword": "nursing assignment help Australia",
-            "desc": "Professional Nursing assignment help across Australia. Achieve better grades with our specialized academic support."
+            "desc": "Excel in your Australian nursing degree with custom AHPRA-aligned assignments. We assist with critical reflection and clinical reasoning essays."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help Australia",
             "targetKeyword": "law assignment help Australia",
-            "desc": "Professional Law assignment help across Australia. Achieve better grades with our specialized academic support."
+            "desc": "Need help with Australian constitutional law or commercial contracts? Our local legal experts deliver accurate case notes and research papers."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help Australia",
             "targetKeyword": "MBA assignment help Australia",
-            "desc": "Custom MBA assignment solutions for Australia universities. From essays to research papers, we cover it all."
+            "desc": "Achieve top marks in your Australian MBA program. Get professional assistance with financial analysis, leadership papers, and strategic management."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help Australia",
             "targetKeyword": "engineering assignment help Australia",
-            "desc": "Need help with your Engineering assignments in Australia? Our local academic experts provide custom research and writing assistance."
+            "desc": "Our Australian engineering assignment help covers thermodynamics, structural analysis, and fluid mechanics. Get precise calculations from experts."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help Australia",
             "targetKeyword": "CS assignment help Australia",
-            "desc": "Professional Computer Science assignment help across Australia. Achieve better grades with our specialized academic support."
+            "desc": "Stuck on Java, Python, or algorithms in Australia? Get high-quality, bug-free code and complete project documentation from top IT professionals."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help Australia",
             "targetKeyword": "psychology assignment help Australia",
-            "desc": "Custom Psychology assignment solutions for Australia universities. From essays to research papers, we cover it all."
+            "desc": "Tackle your APS-aligned psychology assignments with ease. We provide deep research and flawless APA formatting for Australian university students."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help Australia",
             "targetKeyword": "accounting assignment help Australia",
-            "desc": "Top-rated Accounting assignment writing service in Australia. We ensure high academic standards for your university submissions."
+            "desc": "Master AASB standards and taxation law. Our Australian accounting assignment helpers deliver precise financial reports and ledger calculations."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help Australia",
             "targetKeyword": "business assignment help Australia",
-            "desc": "Expert Business assignment help tailored for students in Australia. Get comprehensive support for coursework and research."
+            "desc": "From consumer behavior to global supply chains, our Australian business assignment experts provide top-tier academic research and writing."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help Australia",
             "targetKeyword": "marketing assignment help Australia",
-            "desc": "Top-rated Marketing assignment writing service in Australia. We ensure high academic standards for your university submissions."
+            "desc": "Elevate your marketing degree in Australia. Get expertly crafted marketing plans, digital strategy reports, and brand management assignments."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help Australia",
             "targetKeyword": "economics assignment help Australia",
-            "desc": "Custom Economics assignment solutions for Australia universities. From essays to research papers, we cover it all."
+            "desc": "Struggling with macroeconomic policy or econometrics in Australia? Our expert economics tutors provide in-depth statistical and theoretical analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help Australia",
             "targetKeyword": "education assignment help Australia",
-            "desc": "Expert Education assignment help tailored for students in Australia. Get comprehensive support for coursework and research."
+            "desc": "We support Australian pre-service teachers with high-quality essays on pedagogy, inclusive education, and AITSL standards-aligned lesson plans."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help Australia",
             "targetKeyword": "sociology assignment help Australia",
-            "desc": "Professional Sociology assignment help across Australia. Achieve better grades with our specialized academic support."
+            "desc": "Critique Australian social policy and cultural dynamics with our sociology experts. We deliver well-researched, deeply analytical assignments."
         },
         {
             "slug": "history",
             "title": "History Assignment Help Australia",
             "targetKeyword": "history assignment help Australia",
-            "desc": "Expert History assignment help tailored for students in Australia. Get comprehensive support for coursework and research."
+            "desc": "From ancient civilizations to modern Australian history, our academic writers help you craft compelling historical essays with credible sources."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help Australia",
             "targetKeyword": "data science assignment help Australia",
-            "desc": "Custom Data Science assignment solutions for Australia universities. From essays to research papers, we cover it all."
+            "desc": "Get expert help with machine learning and data visualization assignments in Australia. We provide coding and statistical support for your projects."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help Australia",
             "targetKeyword": "finance assignment help Australia",
-            "desc": "Professional Finance assignment help across Australia. Achieve better grades with our specialized academic support."
+            "desc": "Our Australian finance assignment experts specialize in corporate valuation, risk management, and portfolio analysis for top university grades."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help Australia",
             "targetKeyword": "English lit assignment help Australia",
-            "desc": "Custom English Literature assignment solutions for Australia universities. From essays to research papers, we cover it all."
+            "desc": "Need help analyzing Australian literature or Shakespearean plays? We deliver highly critical and articulate essays for your literature degree."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help Australia",
             "targetKeyword": "healthcare assignment help Australia",
-            "desc": "Expert Healthcare assignment help tailored for students in Australia. Get comprehensive support for coursework and research."
+            "desc": "Get professional support for Australian healthcare administration, policy analysis, and aged care assignments from experienced medical writers."
         }
     ],
     "canada": [
@@ -319,103 +319,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help Canada",
             "targetKeyword": "nursing assignment help Canada",
-            "desc": "Need help with your Nursing assignments in Canada? Our local academic experts provide custom research and writing assistance."
+            "desc": "Get your Canadian nursing assignments done by RNs. We cover public health models, clinical assessments, and community nursing papers."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help Canada",
             "targetKeyword": "law assignment help Canada",
-            "desc": "Need help with your Law assignments in Canada? Our local academic experts provide custom research and writing assistance."
+            "desc": "Struggling with Canadian Charter rights or corporate law? Get meticulously researched case studies and legal essays from our local experts."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help Canada",
             "targetKeyword": "MBA assignment help Canada",
-            "desc": "Professional MBA assignment help across Canada. Achieve better grades with our specialized academic support."
+            "desc": "Elevate your MBA grades at Canadian universities. We deliver premium assignments on business strategy, organizational behavior, and finance."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help Canada",
             "targetKeyword": "engineering assignment help Canada",
-            "desc": "Top-rated Engineering assignment writing service in Canada. We ensure high academic standards for your university submissions."
+            "desc": "Master Canadian engineering codes with our expert help. We deliver flawless assignments for civil, mechanical, and software engineering students."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help Canada",
             "targetKeyword": "CS assignment help Canada",
-            "desc": "Need help with your Computer Science assignments in Canada? Our local academic experts provide custom research and writing assistance."
+            "desc": "Tackling complex coding projects in Canada? We provide top-tier computer science assignment help, including algorithms and database management."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help Canada",
             "targetKeyword": "psychology assignment help Canada",
-            "desc": "Professional Psychology assignment help across Canada. Achieve better grades with our specialized academic support."
+            "desc": "Score high on your Canadian psychology assignments. We specialize in developmental psychology, cognitive research, and APA-styled reports."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help Canada",
             "targetKeyword": "accounting assignment help Canada",
-            "desc": "Expert Accounting assignment help tailored for students in Canada. Get comprehensive support for coursework and research."
+            "desc": "Need help with ASPE or IFRS standards in Canada? Our accounting experts deliver precise financial calculations and corporate tax assignments."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help Canada",
             "targetKeyword": "business assignment help Canada",
-            "desc": "Custom Business assignment solutions for Canada universities. From essays to research papers, we cover it all."
+            "desc": "From human resources to Canadian business law, our expert writers provide comprehensive assignment help tailored for top university grades."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help Canada",
             "targetKeyword": "marketing assignment help Canada",
-            "desc": "Expert Marketing assignment help tailored for students in Canada. Get comprehensive support for coursework and research."
+            "desc": "Ace your Canadian marketing degree with expertly written marketing plans, SEO strategies, and consumer behavior assignments."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help Canada",
             "targetKeyword": "economics assignment help Canada",
-            "desc": "Professional Economics assignment help across Canada. Achieve better grades with our specialized academic support."
+            "desc": "Understand Canadian macroeconomic trends and microeconomic models with our expert economics assignment writing and data analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help Canada",
             "targetKeyword": "education assignment help Canada",
-            "desc": "Custom Education assignment solutions for Canada universities. From essays to research papers, we cover it all."
+            "desc": "We support Canadian teachers-in-training with custom lesson plans, classroom management essays, and pedagogical research assignments."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help Canada",
             "targetKeyword": "sociology assignment help Canada",
-            "desc": "Need help with your Sociology assignments in Canada? Our local academic experts provide custom research and writing assistance."
+            "desc": "Analyze Canadian society, multiculturalism, and social inequality with our well-researched, deeply analytical sociology assignments."
         },
         {
             "slug": "history",
             "title": "History Assignment Help Canada",
             "targetKeyword": "history assignment help Canada",
-            "desc": "Custom History assignment solutions for Canada universities. From essays to research papers, we cover it all."
+            "desc": "From Indigenous history to modern Canadian politics, our writers help you craft articulate, highly researched historical essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help Canada",
             "targetKeyword": "data science assignment help Canada",
-            "desc": "Professional Data Science assignment help across Canada. Achieve better grades with our specialized academic support."
+            "desc": "Get expert assistance with Canadian data science assignments. We excel in Python, R programming, predictive modeling, and data mining."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help Canada",
             "targetKeyword": "finance assignment help Canada",
-            "desc": "Need help with your Finance assignments in Canada? Our local academic experts provide custom research and writing assistance."
+            "desc": "Our Canadian finance assignment help covers corporate finance, risk modeling, and investment banking strategies for your university degree."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help Canada",
             "targetKeyword": "English lit assignment help Canada",
-            "desc": "Professional English Literature assignment help across Canada. Achieve better grades with our specialized academic support."
+            "desc": "Need help deconstructing Canadian literature or classic novels? We write compelling literary essays with strong critical analysis."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help Canada",
             "targetKeyword": "healthcare assignment help Canada",
-            "desc": "Custom Healthcare assignment solutions for Canada universities. From essays to research papers, we cover it all."
+            "desc": "Expert Canadian healthcare assignment help covering Medicare policies, health administration, and medical ethics for university students."
         }
     ],
     "india": [
@@ -423,103 +423,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help India",
             "targetKeyword": "nursing assignment help India",
-            "desc": "Custom Nursing assignment solutions for India universities. From essays to research papers, we cover it all."
+            "desc": "Excel in your Indian nursing degree. We provide expert assistance with clinical case presentations, community health, and midwifery assignments."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help India",
             "targetKeyword": "law assignment help India",
-            "desc": "Custom Law assignment solutions for India universities. From essays to research papers, we cover it all."
+            "desc": "Struggling with Indian Penal Code or corporate law? Get perfectly cited legal drafts and case briefs from our Indian legal experts."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help India",
             "targetKeyword": "MBA assignment help India",
-            "desc": "Expert MBA assignment help tailored for students in India. Get comprehensive support for coursework and research."
+            "desc": "Top-rated MBA assignment help in India. We assist with strategic management, financial analysis, and marketing case studies for top B-schools."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help India",
             "targetKeyword": "engineering assignment help India",
-            "desc": "Professional Engineering assignment help across India. Achieve better grades with our specialized academic support."
+            "desc": "Our Indian engineering experts solve complex problems in structural design, electronics, and thermodynamics with flawless calculations."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help India",
             "targetKeyword": "CS assignment help India",
-            "desc": "Custom Computer Science assignment solutions for India universities. From essays to research papers, we cover it all."
+            "desc": "Get top marks in your Indian CS degree. We provide clean code, algorithmic analysis, and software development assignment solutions."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help India",
             "targetKeyword": "psychology assignment help India",
-            "desc": "Expert Psychology assignment help tailored for students in India. Get comprehensive support for coursework and research."
+            "desc": "Need help with psychology assignments in India? We deliver well-researched papers on organizational psychology and mental health."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help India",
             "targetKeyword": "accounting assignment help India",
-            "desc": "Need help with your Accounting assignments in India? Our local academic experts provide custom research and writing assistance."
+            "desc": "Master Indian accounting standards and taxation. Our experts deliver precise balance sheets, financial analysis, and ledger assignments."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help India",
             "targetKeyword": "business assignment help India",
-            "desc": "Top-rated Business assignment writing service in India. We ensure high academic standards for your university submissions."
+            "desc": "Ace your Indian business degree. Our experts provide well-structured assignments on entrepreneurship, supply chain, and business ethics."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help India",
             "targetKeyword": "marketing assignment help India",
-            "desc": "Need help with your Marketing assignments in India? Our local academic experts provide custom research and writing assistance."
+            "desc": "Elevate your marketing assignments in India. We craft comprehensive marketing strategies, brand management papers, and market research."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help India",
             "targetKeyword": "economics assignment help India",
-            "desc": "Expert Economics assignment help tailored for students in India. Get comprehensive support for coursework and research."
+            "desc": "Understand the Indian economy and global macroeconomics with our expert assignment help. We provide robust statistical and theoretical analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help India",
             "targetKeyword": "education assignment help India",
-            "desc": "Top-rated Education assignment writing service in India. We ensure high academic standards for your university submissions."
+            "desc": "We support B.Ed. and M.Ed. students in India with high-quality lesson plans, educational psychology, and teaching methodology assignments."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help India",
             "targetKeyword": "sociology assignment help India",
-            "desc": "Custom Sociology assignment solutions for India universities. From essays to research papers, we cover it all."
+            "desc": "Critique Indian social structures, caste dynamics, and urban sociology with our deeply analytical and well-researched assignments."
         },
         {
             "slug": "history",
             "title": "History Assignment Help India",
             "targetKeyword": "history assignment help India",
-            "desc": "Top-rated History assignment writing service in India. We ensure high academic standards for your university submissions."
+            "desc": "From ancient India to the modern independence movement, our history experts help you craft well-argued, evidence-based academic essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help India",
             "targetKeyword": "data science assignment help India",
-            "desc": "Expert Data Science assignment help tailored for students in India. Get comprehensive support for coursework and research."
+            "desc": "Struggling with machine learning in India? Get expert help with Python, SQL, and big data assignments for your data science degree."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help India",
             "targetKeyword": "finance assignment help India",
-            "desc": "Custom Finance assignment solutions for India universities. From essays to research papers, we cover it all."
+            "desc": "Our Indian finance experts help you with portfolio management, corporate finance, and risk assessment assignments for top university grades."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help India",
             "targetKeyword": "English lit assignment help India",
-            "desc": "Expert English Literature assignment help tailored for students in India. Get comprehensive support for coursework and research."
+            "desc": "Analyze Indian-English literature or Victorian classics. We deliver highly articulate and critical essays for your literature assignments."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help India",
             "targetKeyword": "healthcare assignment help India",
-            "desc": "Top-rated Healthcare assignment writing service in India. We ensure high academic standards for your university submissions."
+            "desc": "Get professional support for Indian healthcare management, public health policies, and hospital administration assignments from experts."
         }
     ],
     "ireland": [
@@ -527,103 +527,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help Ireland",
             "targetKeyword": "nursing assignment help Ireland",
-            "desc": "Need help with your Nursing assignments in Ireland? Our local academic experts provide custom research and writing assistance."
+            "desc": "Pursuing nursing in Ireland? We provide expert assignment help covering NMBI standards, patient care models, and clinical placement reflections."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help Ireland",
             "targetKeyword": "law assignment help Ireland",
-            "desc": "Need help with your Law assignments in Ireland? Our local academic experts provide custom research and writing assistance."
+            "desc": "Need help with Irish constitutional law or EU directives? Our legal experts deliver perfectly researched and cited assignments for top grades."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help Ireland",
             "targetKeyword": "MBA assignment help Ireland",
-            "desc": "Professional MBA assignment help across Ireland. Achieve better grades with our specialized academic support."
+            "desc": "Elevate your MBA studies in Ireland. We craft comprehensive assignments on global business strategy, organizational leadership, and finance."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help Ireland",
             "targetKeyword": "engineering assignment help Ireland",
-            "desc": "Top-rated Engineering assignment writing service in Ireland. We ensure high academic standards for your university submissions."
+            "desc": "Master Irish engineering principles with our expert help. We deliver flawless calculations and technical reports for all engineering branches."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help Ireland",
             "targetKeyword": "CS assignment help Ireland",
-            "desc": "Need help with your Computer Science assignments in Ireland? Our local academic experts provide custom research and writing assistance."
+            "desc": "Tackling coding assignments in Ireland's tech hubs? We provide expert assistance with Java, Python, and software architecture projects."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help Ireland",
             "targetKeyword": "psychology assignment help Ireland",
-            "desc": "Professional Psychology assignment help across Ireland. Achieve better grades with our specialized academic support."
+            "desc": "Score high on your Irish psychology assignments. We specialize in developmental studies, cognitive research, and APA-formatted essays."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help Ireland",
             "targetKeyword": "accounting assignment help Ireland",
-            "desc": "Expert Accounting assignment help tailored for students in Ireland. Get comprehensive support for coursework and research."
+            "desc": "Need help with Irish taxation or financial reporting? Our accounting experts deliver precise calculations and well-structured corporate assignments."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help Ireland",
             "targetKeyword": "business assignment help Ireland",
-            "desc": "Custom Business assignment solutions for Ireland universities. From essays to research papers, we cover it all."
+            "desc": "From entrepreneurship to Irish commercial law, our writers provide comprehensive business assignment help tailored for top university grades."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help Ireland",
             "targetKeyword": "marketing assignment help Ireland",
-            "desc": "Expert Marketing assignment help tailored for students in Ireland. Get comprehensive support for coursework and research."
+            "desc": "Ace your marketing degree in Ireland with expertly written digital marketing strategies, SEO plans, and consumer behavior assignments."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help Ireland",
             "targetKeyword": "economics assignment help Ireland",
-            "desc": "Professional Economics assignment help across Ireland. Achieve better grades with our specialized academic support."
+            "desc": "Understand Ireland's economy and macro-level models with our expert economics assignment writing. We provide robust theoretical analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help Ireland",
             "targetKeyword": "education assignment help Ireland",
-            "desc": "Custom Education assignment solutions for Ireland universities. From essays to research papers, we cover it all."
+            "desc": "We support Irish student teachers with high-quality lesson plans, educational philosophy essays, and classroom management assignments."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help Ireland",
             "targetKeyword": "sociology assignment help Ireland",
-            "desc": "Need help with your Sociology assignments in Ireland? Our local academic experts provide custom research and writing assistance."
+            "desc": "Analyze modern Irish society and social inequality with our well-researched, deeply critical sociology assignments for university students."
         },
         {
             "slug": "history",
             "title": "History Assignment Help Ireland",
             "targetKeyword": "history assignment help Ireland",
-            "desc": "Custom History assignment solutions for Ireland universities. From essays to research papers, we cover it all."
+            "desc": "From the Irish Civil War to modern European politics, our writers help you craft articulate, highly researched historical essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help Ireland",
             "targetKeyword": "data science assignment help Ireland",
-            "desc": "Professional Data Science assignment help across Ireland. Achieve better grades with our specialized academic support."
+            "desc": "Get expert assistance with data science assignments in Ireland. We excel in Python, machine learning, predictive modeling, and data mining."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help Ireland",
             "targetKeyword": "finance assignment help Ireland",
-            "desc": "Need help with your Finance assignments in Ireland? Our local academic experts provide custom research and writing assistance."
+            "desc": "Our Irish finance assignment help covers risk modeling, investment strategies, and corporate finance to guarantee your academic success."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help Ireland",
             "targetKeyword": "English lit assignment help Ireland",
-            "desc": "Professional English Literature assignment help across Ireland. Achieve better grades with our specialized academic support."
+            "desc": "Need help deconstructing Irish literature or classic poetry? We write compelling literary essays with strong critical analysis and flair."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help Ireland",
             "targetKeyword": "healthcare assignment help Ireland",
-            "desc": "Custom Healthcare assignment solutions for Ireland universities. From essays to research papers, we cover it all."
+            "desc": "Expert Irish healthcare assignment help covering HSE policies, health administration, and medical ethics for university nursing students."
         }
     ],
     "singapore": [
@@ -631,103 +631,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help Singapore",
             "targetKeyword": "nursing assignment help Singapore",
-            "desc": "Expert Nursing assignment help tailored for students in Singapore. Get comprehensive support for coursework and research."
+            "desc": "Get top grades in your Singapore nursing diploma or degree. We assist with patient care plans, reflective journals, and clinical assignments."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help Singapore",
             "targetKeyword": "law assignment help Singapore",
-            "desc": "Expert Law assignment help tailored for students in Singapore. Get comprehensive support for coursework and research."
+            "desc": "Struggling with Singapore commercial law or torts? Get meticulously researched legal drafts and case study analyses from our local experts."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help Singapore",
             "targetKeyword": "MBA assignment help Singapore",
-            "desc": "Top-rated MBA assignment writing service in Singapore. We ensure high academic standards for your university submissions."
+            "desc": "Elevate your MBA grades at Singapore universities. We deliver premium assignments on Asian business strategy, leadership, and finance."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help Singapore",
             "targetKeyword": "engineering assignment help Singapore",
-            "desc": "Custom Engineering assignment solutions for Singapore universities. From essays to research papers, we cover it all."
+            "desc": "Master Singapore's rigorous engineering curriculum. We deliver precise assignments for civil, electrical, and mechanical engineering students."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help Singapore",
             "targetKeyword": "CS assignment help Singapore",
-            "desc": "Expert Computer Science assignment help tailored for students in Singapore. Get comprehensive support for coursework and research."
+            "desc": "Tackling complex IT projects in Singapore? We provide expert computer science assignment help, including algorithms and software engineering."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help Singapore",
             "targetKeyword": "psychology assignment help Singapore",
-            "desc": "Top-rated Psychology assignment writing service in Singapore. We ensure high academic standards for your university submissions."
+            "desc": "Score high on your Singapore psychology assignments. We deliver well-researched papers on cognitive behavior and organizational psychology."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help Singapore",
             "targetKeyword": "accounting assignment help Singapore",
-            "desc": "Professional Accounting assignment help across Singapore. Achieve better grades with our specialized academic support."
+            "desc": "Need help with Singapore Financial Reporting Standards? Our experts deliver precise balance sheets, tax calculations, and accounting essays."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help Singapore",
             "targetKeyword": "business assignment help Singapore",
-            "desc": "Need help with your Business assignments in Singapore? Our local academic experts provide custom research and writing assistance."
+            "desc": "From logistics to international trade, our expert writers provide comprehensive business assignment help tailored for Singapore universities."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help Singapore",
             "targetKeyword": "marketing assignment help Singapore",
-            "desc": "Professional Marketing assignment help across Singapore. Achieve better grades with our specialized academic support."
+            "desc": "Ace your Singapore marketing degree with expertly written brand management plans, digital strategies, and consumer behavior analysis."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help Singapore",
             "targetKeyword": "economics assignment help Singapore",
-            "desc": "Top-rated Economics assignment writing service in Singapore. We ensure high academic standards for your university submissions."
+            "desc": "Understand Singapore's open economy and microeconomic models with our expert economics assignment writing and statistical data analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help Singapore",
             "targetKeyword": "education assignment help Singapore",
-            "desc": "Need help with your Education assignments in Singapore? Our local academic experts provide custom research and writing assistance."
+            "desc": "We support Singaporean student teachers with custom lesson plans, NIE-aligned essays, and educational technology assignments."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help Singapore",
             "targetKeyword": "sociology assignment help Singapore",
-            "desc": "Expert Sociology assignment help tailored for students in Singapore. Get comprehensive support for coursework and research."
+            "desc": "Analyze Singaporean society, public housing, and multiculturalism with our deeply analytical and well-researched sociology assignments."
         },
         {
             "slug": "history",
             "title": "History Assignment Help Singapore",
             "targetKeyword": "history assignment help Singapore",
-            "desc": "Need help with your History assignments in Singapore? Our local academic experts provide custom research and writing assistance."
+            "desc": "From colonial Singapore to modern nation-building, our history experts help you craft well-argued, evidence-based academic essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help Singapore",
             "targetKeyword": "data science assignment help Singapore",
-            "desc": "Top-rated Data Science assignment writing service in Singapore. We ensure high academic standards for your university submissions."
+            "desc": "Get expert help with machine learning and AI assignments in Singapore. We provide Python coding and statistical support for your projects."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help Singapore",
             "targetKeyword": "finance assignment help Singapore",
-            "desc": "Expert Finance assignment help tailored for students in Singapore. Get comprehensive support for coursework and research."
+            "desc": "Our Singapore finance assignment helpers specialize in wealth management, corporate finance, and investment banking for top university grades."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help Singapore",
             "targetKeyword": "English lit assignment help Singapore",
-            "desc": "Top-rated English Literature assignment writing service in Singapore. We ensure high academic standards for your university submissions."
+            "desc": "Analyze Asian-English literature or Western classics. We deliver highly articulate and critical essays for your literature degree in Singapore."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help Singapore",
             "targetKeyword": "healthcare assignment help Singapore",
-            "desc": "Need help with your Healthcare assignments in Singapore? Our local academic experts provide custom research and writing assistance."
+            "desc": "Get professional support for Singapore healthcare management, public health policies, and hospital administration assignments from experts."
         }
     ],
     "germany": [
@@ -735,103 +735,103 @@ export const countrySubjects = {
             "slug": "nursing",
             "title": "Nursing Assignment Help Germany",
             "targetKeyword": "nursing assignment help Germany",
-            "desc": "Need help with your Nursing assignments in Germany? Our local academic experts provide custom research and writing assistance."
+            "desc": "Excel in your German nursing Ausbildung or degree. We provide expert help with healthcare essays, clinical reflections, and care planning."
         },
         {
             "slug": "law",
             "title": "Law Assignment Help Germany",
             "targetKeyword": "law assignment help Germany",
-            "desc": "Need help with your Law assignments in Germany? Our local academic experts provide custom research and writing assistance."
+            "desc": "Need help with German civil law (BGB) or corporate regulations? Our legal experts deliver highly accurate case analyses and legal assignments."
         },
         {
             "slug": "mba",
             "title": "MBA Assignment Help Germany",
             "targetKeyword": "MBA assignment help Germany",
-            "desc": "Professional MBA assignment help across Germany. Achieve better grades with our specialized academic support."
+            "desc": "Boost your MBA grades in Germany. We specialize in organizational strategy, German business models, and leadership assignments."
         },
         {
             "slug": "engineering",
             "title": "Engineering Assignment Help Germany",
             "targetKeyword": "engineering assignment help Germany",
-            "desc": "Top-rated Engineering assignment writing service in Germany. We ensure high academic standards for your university submissions."
+            "desc": "Master German engineering precision with our assignment help. We deliver perfect structural, mechanical, and automotive engineering solutions."
         },
         {
             "slug": "computer-science",
             "title": "Computer Science Assignment Help Germany",
             "targetKeyword": "CS assignment help Germany",
-            "desc": "Need help with your Computer Science assignments in Germany? Our local academic experts provide custom research and writing assistance."
+            "desc": "Tackling software development or algorithm projects in Germany? Get clean, well-commented code and complete documentation from our experts."
         },
         {
             "slug": "psychology",
             "title": "Psychology Assignment Help Germany",
             "targetKeyword": "psychology assignment help Germany",
-            "desc": "Professional Psychology assignment help across Germany. Achieve better grades with our specialized academic support."
+            "desc": "Score high on your German psychology assignments. We deliver well-researched essays on cognitive behavior, clinical psychology, and APA formatting."
         },
         {
             "slug": "accounting",
             "title": "Accounting Assignment Help Germany",
             "targetKeyword": "accounting assignment help Germany",
-            "desc": "Expert Accounting assignment help tailored for students in Germany. Get comprehensive support for coursework and research."
+            "desc": "Need help with German GAAP (HGB) or IFRS? Our accounting experts deliver precise financial calculations and corporate tax reporting assignments."
         },
         {
             "slug": "business",
             "title": "Business Assignment Help Germany",
             "targetKeyword": "business assignment help Germany",
-            "desc": "Custom Business assignment solutions for Germany universities. From essays to research papers, we cover it all."
+            "desc": "From supply chain management to Mittelstand business models, we provide comprehensive business assignment help tailored for German universities."
         },
         {
             "slug": "marketing",
             "title": "Marketing Assignment Help Germany",
             "targetKeyword": "marketing assignment help Germany",
-            "desc": "Expert Marketing assignment help tailored for students in Germany. Get comprehensive support for coursework and research."
+            "desc": "Ace your German marketing degree with expertly written digital marketing plans, consumer behavior analysis, and SEO strategy assignments."
         },
         {
             "slug": "economics",
             "title": "Economics Assignment Help Germany",
             "targetKeyword": "economics assignment help Germany",
-            "desc": "Professional Economics assignment help across Germany. Achieve better grades with our specialized academic support."
+            "desc": "Understand the German economy and microeconomic models with our expert economics assignment writing and robust statistical data analysis."
         },
         {
             "slug": "education",
             "title": "Education Assignment Help Germany",
             "targetKeyword": "education assignment help Germany",
-            "desc": "Custom Education assignment solutions for Germany universities. From essays to research papers, we cover it all."
+            "desc": "We support German student teachers with custom lesson plans, pedagogical theory essays, and educational psychology research assignments."
         },
         {
             "slug": "sociology",
             "title": "Sociology Assignment Help Germany",
             "targetKeyword": "sociology assignment help Germany",
-            "desc": "Need help with your Sociology assignments in Germany? Our local academic experts provide custom research and writing assistance."
+            "desc": "Analyze modern German society, migration, and social policy with our deeply analytical and well-researched sociology assignments."
         },
         {
             "slug": "history",
             "title": "History Assignment Help Germany",
             "targetKeyword": "history assignment help Germany",
-            "desc": "Custom History assignment solutions for Germany universities. From essays to research papers, we cover it all."
+            "desc": "From the Weimar Republic to modern German reunification, our history experts help you craft well-argued, evidence-based academic essays."
         },
         {
             "slug": "data-science",
             "title": "Data Science Assignment Help Germany",
             "targetKeyword": "data science assignment help Germany",
-            "desc": "Professional Data Science assignment help across Germany. Achieve better grades with our specialized academic support."
+            "desc": "Get expert help with big data and machine learning assignments in Germany. We provide Python coding and statistical support for your projects."
         },
         {
             "slug": "finance",
             "title": "Finance Assignment Help Germany",
             "targetKeyword": "finance assignment help Germany",
-            "desc": "Need help with your Finance assignments in Germany? Our local academic experts provide custom research and writing assistance."
+            "desc": "Our German finance assignment helpers specialize in risk management, corporate finance, and investment strategies for top university grades."
         },
         {
             "slug": "english-literature",
             "title": "English Literature Assignment Help Germany",
             "targetKeyword": "English lit assignment help Germany",
-            "desc": "Professional English Literature assignment help across Germany. Achieve better grades with our specialized academic support."
+            "desc": "Analyze classic English literature with our expert writers. We deliver highly articulate and critical essays for your literature degree in Germany."
         },
         {
             "slug": "healthcare",
             "title": "Healthcare Assignment Help Germany",
             "targetKeyword": "healthcare assignment help Germany",
-            "desc": "Custom Healthcare assignment solutions for Germany universities. From essays to research papers, we cover it all."
+            "desc": "Get professional support for German healthcare management, public health policies, and hospital administration assignments from our experts."
         }
     ]
 };
@@ -842,61 +842,61 @@ export const countryCities = {
             "slug": "london",
             "title": "Assignment Help London",
             "targetKeyword": "assignment help London",
-            "desc": "Struggling with assignments in London? Our dedicated team provides custom essays and research papers."
+            "desc": "Assignment help for students at UCL, King's College, and Imperial. Local London tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "manchester",
             "title": "Assignment Help Manchester",
             "targetKeyword": "assignment help Manchester",
-            "desc": "The leading assignment help service in Manchester. Trusted by university students for quality and timely delivery."
+            "desc": "Expert assignment support for University of Manchester and MMU students. We understand local academic standards and referencing styles in Manchester."
         },
         {
             "slug": "birmingham",
             "title": "Assignment Help Birmingham",
             "targetKeyword": "assignment help Birmingham",
-            "desc": "Professional academic assistance tailored for Birmingham students. Expert writers familiar with your university's standards."
+            "desc": "Struggling at University of Birmingham or Aston? Our Birmingham-based academic experts provide custom research tailored for UK universities."
         },
         {
             "slug": "leeds",
             "title": "Assignment Help Leeds",
             "targetKeyword": "assignment help Leeds",
-            "desc": "Struggling with assignments in Leeds? Our dedicated team provides custom essays and research papers."
+            "desc": "Top-rated writing service for University of Leeds and Leeds Beckett. Get localized Leeds assignment help that meets strict UK academic standards."
         },
         {
             "slug": "edinburgh",
             "title": "Assignment Help Edinburgh",
             "targetKeyword": "assignment help Edinburgh",
-            "desc": "Top-tier assignment help for students studying at universities across Edinburgh. Expert academic support in your local area."
+            "desc": "Need help with coursework at University of Edinburgh or Heriot-Watt? Our local experts deliver premium assignments customized for Scottish grading."
         },
         {
             "slug": "glasgow",
             "title": "Assignment Help Glasgow",
             "targetKeyword": "assignment help Glasgow",
-            "desc": "The leading assignment help service in Glasgow. Trusted by university students for quality and timely delivery."
+            "desc": "Assignment help for students at University of Glasgow and Strathclyde. Local Glasgow tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "bristol",
             "title": "Assignment Help Bristol",
             "targetKeyword": "assignment help Bristol",
-            "desc": "Top-tier assignment help for students studying at universities across Bristol. Expert academic support in your local area."
+            "desc": "Expert assignment support for University of Bristol and UWE students. We understand local academic standards and referencing styles in Bristol."
         },
         {
             "slug": "nottingham",
             "title": "Assignment Help Nottingham",
             "targetKeyword": "assignment help Nottingham",
-            "desc": "The leading assignment help service in Nottingham. Trusted by university students for quality and timely delivery."
+            "desc": "Struggling at University of Nottingham or Trent? Our Nottingham-based academic experts provide custom research tailored for UK universities."
         },
         {
             "slug": "cardiff",
             "title": "Assignment Help Cardiff",
             "targetKeyword": "assignment help Cardiff",
-            "desc": "Professional academic assistance tailored for Cardiff students. Expert writers familiar with your university's standards."
+            "desc": "Top-rated writing service for Cardiff University and Cardiff Met. Get localized Cardiff assignment help that meets strict UK academic standards."
         },
         {
             "slug": "southampton",
             "title": "Assignment Help Southampton",
             "targetKeyword": "assignment help Southampton",
-            "desc": "Get reliable assignment writing services in Southampton. We help students at local universities achieve their academic goals."
+            "desc": "Need help with coursework at University of Southampton or Solent? Our local experts deliver premium assignments customized for UK grading criteria."
         }
     ],
     "usa": [
@@ -904,61 +904,61 @@ export const countryCities = {
             "slug": "new-york",
             "title": "Assignment Help New York",
             "targetKeyword": "assignment help New York",
-            "desc": "Get reliable assignment writing services in New York. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at NYU, Columbia, and CUNY. Local New York tutors who understand your US university's strict marking criteria."
         },
         {
             "slug": "los-angeles",
             "title": "Assignment Help Los Angeles",
             "targetKeyword": "assignment help Los Angeles",
-            "desc": "Professional academic assistance tailored for Los Angeles students. Expert writers familiar with your university's standards."
+            "desc": "Expert assignment support for UCLA, USC, and Cal State students. We understand local academic standards and referencing styles in Los Angeles."
         },
         {
             "slug": "chicago",
             "title": "Assignment Help Chicago",
             "targetKeyword": "assignment help Chicago",
-            "desc": "Get reliable assignment writing services in Chicago. We help students at local universities achieve their academic goals."
+            "desc": "Struggling at UChicago, UIC, or DePaul? Our Chicago-based academic experts provide custom research tailored for US universities and colleges."
         },
         {
             "slug": "houston",
             "title": "Assignment Help Houston",
             "targetKeyword": "assignment help Houston",
-            "desc": "Professional academic assistance tailored for Houston students. Expert writers familiar with your university's standards."
+            "desc": "Top-rated writing service for University of Houston and Rice. Get localized Houston assignment help that meets strict US academic standards."
         },
         {
             "slug": "phoenix",
             "title": "Assignment Help Phoenix",
             "targetKeyword": "assignment help Phoenix",
-            "desc": "Get reliable assignment writing services in Phoenix. We help students at local universities achieve their academic goals."
+            "desc": "Need help with coursework at ASU or University of Phoenix? Our local experts deliver premium assignments customized for US grading criteria."
         },
         {
             "slug": "philadelphia",
             "title": "Assignment Help Philadelphia",
             "targetKeyword": "assignment help Philadelphia",
-            "desc": "Get reliable assignment writing services in Philadelphia. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at UPenn, Temple, and Drexel. Local Philadelphia tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "san-antonio",
             "title": "Assignment Help San Antonio",
             "targetKeyword": "assignment help San Antonio",
-            "desc": "Top-tier assignment help for students studying at universities across San Antonio. Expert academic support in your local area."
+            "desc": "Expert assignment support for UTSA and Texas A&M students. We understand local academic standards and referencing styles in San Antonio."
         },
         {
             "slug": "san-diego",
             "title": "Assignment Help San Diego",
             "targetKeyword": "assignment help San Diego",
-            "desc": "Top-tier assignment help for students studying at universities across San Diego. Expert academic support in your local area."
+            "desc": "Struggling at UCSD or San Diego State? Our San Diego-based academic experts provide custom research tailored for Californian universities."
         },
         {
             "slug": "dallas",
             "title": "Assignment Help Dallas",
             "targetKeyword": "assignment help Dallas",
-            "desc": "Struggling with assignments in Dallas? Our dedicated team provides custom essays and research papers."
+            "desc": "Top-rated writing service for SMU, UTD, and Dallas College. Get localized Dallas assignment help that meets strict US academic standards."
         },
         {
             "slug": "austin",
             "title": "Assignment Help Austin",
             "targetKeyword": "assignment help Austin",
-            "desc": "Struggling with assignments in Austin? Our dedicated team provides custom essays and research papers."
+            "desc": "Need help with coursework at UT Austin or St. Edward's? Our local experts deliver premium assignments customized for US grading criteria."
         }
     ],
     "australia": [
@@ -966,49 +966,49 @@ export const countryCities = {
             "slug": "sydney",
             "title": "Assignment Help Sydney",
             "targetKeyword": "assignment help Sydney",
-            "desc": "Get reliable assignment writing services in Sydney. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at USYD, UTS, and Macquarie. Local Sydney tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "melbourne",
             "title": "Assignment Help Melbourne",
             "targetKeyword": "assignment help Melbourne",
-            "desc": "Professional academic assistance tailored for Melbourne students. Expert writers familiar with your university's standards."
+            "desc": "Expert assignment support for University of Melbourne and Monash students. We understand local academic standards and referencing styles in Melbourne."
         },
         {
             "slug": "brisbane",
             "title": "Assignment Help Brisbane",
             "targetKeyword": "assignment help Brisbane",
-            "desc": "Get reliable assignment writing services in Brisbane. We help students at local universities achieve their academic goals."
+            "desc": "Struggling at UQ, QUT, or Griffith? Our Brisbane-based academic experts provide custom research tailored for Australian universities."
         },
         {
             "slug": "perth",
             "title": "Assignment Help Perth",
             "targetKeyword": "assignment help Perth",
-            "desc": "Top-tier assignment help for students studying at universities across Perth. Expert academic support in your local area."
+            "desc": "Top-rated writing service for UWA, Curtin, and Murdoch. Get localized Perth assignment help that meets strict Australian academic standards."
         },
         {
             "slug": "adelaide",
             "title": "Assignment Help Adelaide",
             "targetKeyword": "assignment help Adelaide",
-            "desc": "Professional academic assistance tailored for Adelaide students. Expert writers familiar with your university's standards."
+            "desc": "Need help with coursework at University of Adelaide or UniSA? Our local experts deliver premium assignments customized for Australian grading."
         },
         {
             "slug": "gold-coast",
             "title": "Assignment Help Gold Coast",
             "targetKeyword": "assignment help Gold Coast",
-            "desc": "Struggling with assignments in Gold Coast? Our dedicated team provides custom essays and research papers."
+            "desc": "Assignment help for students at Griffith University and Bond. Local Gold Coast tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "newcastle",
             "title": "Assignment Help Newcastle",
             "targetKeyword": "assignment help Newcastle",
-            "desc": "The leading assignment help service in Newcastle. Trusted by university students for quality and timely delivery."
+            "desc": "Expert assignment support for University of Newcastle students. We understand local academic standards and referencing styles in Newcastle."
         },
         {
             "slug": "canberra",
             "title": "Assignment Help Canberra",
             "targetKeyword": "assignment help Canberra",
-            "desc": "Struggling with assignments in Canberra? Our dedicated team provides custom essays and research papers."
+            "desc": "Struggling at ANU or University of Canberra? Our Canberra-based academic experts provide custom research tailored for Australian universities."
         }
     ],
     "canada": [
@@ -1016,49 +1016,49 @@ export const countryCities = {
             "slug": "toronto",
             "title": "Assignment Help Toronto",
             "targetKeyword": "assignment help Toronto",
-            "desc": "Professional academic assistance tailored for Toronto students. Expert writers familiar with your university's standards."
+            "desc": "Assignment help for students at UofT, TMU, and York University. Local Toronto tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "vancouver",
             "title": "Assignment Help Vancouver",
             "targetKeyword": "assignment help Vancouver",
-            "desc": "Struggling with assignments in Vancouver? Our dedicated team provides custom essays and research papers."
+            "desc": "Expert assignment support for UBC, SFU, and Capilano students. We understand local academic standards and referencing styles in Vancouver."
         },
         {
             "slug": "montreal",
             "title": "Assignment Help Montreal",
             "targetKeyword": "assignment help Montreal",
-            "desc": "The leading assignment help service in Montreal. Trusted by university students for quality and timely delivery."
+            "desc": "Struggling at McGill, Concordia, or UdeM? Our Montreal-based academic experts provide custom research tailored for Canadian universities."
         },
         {
             "slug": "calgary",
             "title": "Assignment Help Calgary",
             "targetKeyword": "assignment help Calgary",
-            "desc": "Professional academic assistance tailored for Calgary students. Expert writers familiar with your university's standards."
+            "desc": "Top-rated writing service for University of Calgary and MRU. Get localized Calgary assignment help that meets strict Canadian academic standards."
         },
         {
             "slug": "edmonton",
             "title": "Assignment Help Edmonton",
             "targetKeyword": "assignment help Edmonton",
-            "desc": "Get reliable assignment writing services in Edmonton. We help students at local universities achieve their academic goals."
+            "desc": "Need help with coursework at University of Alberta or MacEwan? Our local experts deliver premium assignments customized for Canadian grading criteria."
         },
         {
             "slug": "ottawa",
             "title": "Assignment Help Ottawa",
             "targetKeyword": "assignment help Ottawa",
-            "desc": "The leading assignment help service in Ottawa. Trusted by university students for quality and timely delivery."
+            "desc": "Assignment help for students at University of Ottawa and Carleton. Local Ottawa tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "winnipeg",
             "title": "Assignment Help Winnipeg",
             "targetKeyword": "assignment help Winnipeg",
-            "desc": "Struggling with assignments in Winnipeg? Our dedicated team provides custom essays and research papers."
+            "desc": "Expert assignment support for University of Winnipeg and UofM students. We understand local academic standards and referencing styles in Winnipeg."
         },
         {
             "slug": "quebec-city",
             "title": "Assignment Help Quebec City",
             "targetKeyword": "assignment help Quebec City",
-            "desc": "Struggling with assignments in Quebec City? Our dedicated team provides custom essays and research papers."
+            "desc": "Struggling at Université Laval or UQAR? Our Quebec City-based academic experts provide custom research tailored for Canadian universities."
         }
     ],
     "india": [
@@ -1066,49 +1066,49 @@ export const countryCities = {
             "slug": "delhi",
             "title": "Assignment Help Delhi",
             "targetKeyword": "assignment help Delhi",
-            "desc": "Get reliable assignment writing services in Delhi. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at DU, JNU, and Jamia. Local Delhi tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "mumbai",
             "title": "Assignment Help Mumbai",
             "targetKeyword": "assignment help Mumbai",
-            "desc": "Struggling with assignments in Mumbai? Our dedicated team provides custom essays and research papers."
+            "desc": "Expert assignment support for Mumbai University and NMIMS students. We understand local academic standards and referencing styles in Mumbai."
         },
         {
             "slug": "bangalore",
             "title": "Assignment Help Bangalore",
             "targetKeyword": "assignment help Bangalore",
-            "desc": "Professional academic assistance tailored for Bangalore students. Expert writers familiar with your university's standards."
+            "desc": "Struggling at IISc, Christ University, or PES? Our Bangalore-based academic experts provide custom research tailored for Indian universities."
         },
         {
             "slug": "hyderabad",
             "title": "Assignment Help Hyderabad",
             "targetKeyword": "assignment help Hyderabad",
-            "desc": "Top-tier assignment help for students studying at universities across Hyderabad. Expert academic support in your local area."
+            "desc": "Top-rated writing service for Osmania and University of Hyderabad. Get localized Hyderabad assignment help that meets strict Indian academic standards."
         },
         {
             "slug": "chennai",
             "title": "Assignment Help Chennai",
             "targetKeyword": "assignment help Chennai",
-            "desc": "The leading assignment help service in Chennai. Trusted by university students for quality and timely delivery."
+            "desc": "Need help with coursework at Anna University or IIT Madras? Our local experts deliver premium assignments customized for Indian grading criteria."
         },
         {
             "slug": "kolkata",
             "title": "Assignment Help Kolkata",
             "targetKeyword": "assignment help Kolkata",
-            "desc": "Get reliable assignment writing services in Kolkata. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at Jadavpur and Calcutta University. Local Kolkata tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "pune",
             "title": "Assignment Help Pune",
             "targetKeyword": "assignment help Pune",
-            "desc": "Struggling with assignments in Pune? Our dedicated team provides custom essays and research papers."
+            "desc": "Expert assignment support for Savitribai Phule Pune University students. We understand local academic standards and referencing styles in Pune."
         },
         {
             "slug": "ahmedabad",
             "title": "Assignment Help Ahmedabad",
             "targetKeyword": "assignment help Ahmedabad",
-            "desc": "Get reliable assignment writing services in Ahmedabad. We help students at local universities achieve their academic goals."
+            "desc": "Struggling at Gujarat University or Ahmedabad Uni? Our Ahmedabad-based academic experts provide custom research tailored for Indian universities."
         }
     ],
     "ireland": [
@@ -1116,37 +1116,37 @@ export const countryCities = {
             "slug": "dublin",
             "title": "Assignment Help Dublin",
             "targetKeyword": "assignment help Dublin",
-            "desc": "Get reliable assignment writing services in Dublin. We help students at local universities achieve their academic goals."
+            "desc": "Assignment help for students at Trinity College, UCD, and DCU. Local Dublin tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "cork",
             "title": "Assignment Help Cork",
             "targetKeyword": "assignment help Cork",
-            "desc": "The leading assignment help service in Cork. Trusted by university students for quality and timely delivery."
+            "desc": "Expert assignment support for UCC and MTU students. We understand local academic standards and referencing styles in Cork."
         },
         {
             "slug": "limerick",
             "title": "Assignment Help Limerick",
             "targetKeyword": "assignment help Limerick",
-            "desc": "Get reliable assignment writing services in Limerick. We help students at local universities achieve their academic goals."
+            "desc": "Struggling at University of Limerick or MIC? Our Limerick-based academic experts provide custom research tailored for Irish universities."
         },
         {
             "slug": "galway",
             "title": "Assignment Help Galway",
             "targetKeyword": "assignment help Galway",
-            "desc": "Struggling with assignments in Galway? Our dedicated team provides custom essays and research papers."
+            "desc": "Top-rated writing service for University of Galway and ATU. Get localized Galway assignment help that meets strict Irish academic standards."
         },
         {
             "slug": "waterford",
             "title": "Assignment Help Waterford",
             "targetKeyword": "assignment help Waterford",
-            "desc": "Professional academic assistance tailored for Waterford students. Expert writers familiar with your university's standards."
+            "desc": "Need help with coursework at SETU Waterford? Our local experts deliver premium assignments customized for Irish grading criteria."
         },
         {
             "slug": "drogheda",
             "title": "Assignment Help Drogheda",
             "targetKeyword": "assignment help Drogheda",
-            "desc": "Struggling with assignments in Drogheda? Our dedicated team provides custom essays and research papers."
+            "desc": "Assignment help for students at DIFE and local colleges. Local Drogheda tutors who understand your institution's strict marking criteria."
         }
     ],
     "singapore": [
@@ -1154,31 +1154,31 @@ export const countryCities = {
             "slug": "central",
             "title": "Assignment Help Central",
             "targetKeyword": "assignment help Central",
-            "desc": "Struggling with assignments in Central? Our dedicated team provides custom essays and research papers."
+            "desc": "Assignment help for students at SMU and local institutions. Local Central region tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "east-region",
             "title": "Assignment Help East Region",
             "targetKeyword": "assignment help East Region",
-            "desc": "Get reliable assignment writing services in East Region. We help students at local universities achieve their academic goals."
+            "desc": "Expert assignment support for SUTD and eastern colleges students. We understand local academic standards and referencing styles in the East Region."
         },
         {
             "slug": "north-region",
             "title": "Assignment Help North Region",
             "targetKeyword": "assignment help North Region",
-            "desc": "Professional academic assistance tailored for North Region students. Expert writers familiar with your university's standards."
+            "desc": "Struggling at Republic Polytechnic? Our North Region-based academic experts provide custom research tailored for Singaporean universities."
         },
         {
             "slug": "north-east-region",
             "title": "Assignment Help North-East Region",
             "targetKeyword": "assignment help North-East Region",
-            "desc": "The leading assignment help service in North-East Region. Trusted by university students for quality and timely delivery."
+            "desc": "Top-rated writing service for SIT and local tech institutes. Get localized North-East assignment help that meets strict Singapore academic standards."
         },
         {
             "slug": "west-region",
             "title": "Assignment Help West Region",
             "targetKeyword": "assignment help West Region",
-            "desc": "Struggling with assignments in West Region? Our dedicated team provides custom essays and research papers."
+            "desc": "Need help with coursework at NTU or NUS? Our local experts deliver premium assignments customized for Singaporean grading criteria."
         }
     ],
     "germany": [
@@ -1186,49 +1186,49 @@ export const countryCities = {
             "slug": "berlin",
             "title": "Assignment Help Berlin",
             "targetKeyword": "assignment help Berlin",
-            "desc": "The leading assignment help service in Berlin. Trusted by university students for quality and timely delivery."
+            "desc": "Assignment help for students at HU Berlin, FU Berlin, and TU Berlin. Local Berlin tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "munich",
             "title": "Assignment Help Munich",
             "targetKeyword": "assignment help Munich",
-            "desc": "Professional academic assistance tailored for Munich students. Expert writers familiar with your university's standards."
+            "desc": "Expert assignment support for LMU and TUM students. We understand local academic standards and referencing styles in Munich."
         },
         {
             "slug": "hamburg",
             "title": "Assignment Help Hamburg",
             "targetKeyword": "assignment help Hamburg",
-            "desc": "Top-tier assignment help for students studying at universities across Hamburg. Expert academic support in your local area."
+            "desc": "Struggling at University of Hamburg or TUHH? Our Hamburg-based academic experts provide custom research tailored for German universities."
         },
         {
             "slug": "frankfurt",
             "title": "Assignment Help Frankfurt",
             "targetKeyword": "assignment help Frankfurt",
-            "desc": "Professional academic assistance tailored for Frankfurt students. Expert writers familiar with your university's standards."
+            "desc": "Top-rated writing service for Goethe University and Frankfurt UAS. Get localized Frankfurt assignment help that meets strict German academic standards."
         },
         {
             "slug": "cologne",
             "title": "Assignment Help Cologne",
             "targetKeyword": "assignment help Cologne",
-            "desc": "Get reliable assignment writing services in Cologne. We help students at local universities achieve their academic goals."
+            "desc": "Need help with coursework at University of Cologne or TH Köln? Our local experts deliver premium assignments customized for German grading criteria."
         },
         {
             "slug": "stuttgart",
             "title": "Assignment Help Stuttgart",
             "targetKeyword": "assignment help Stuttgart",
-            "desc": "Struggling with assignments in Stuttgart? Our dedicated team provides custom essays and research papers."
+            "desc": "Assignment help for students at University of Stuttgart and Hohenheim. Local Stuttgart tutors who understand your university's strict marking criteria."
         },
         {
             "slug": "düsseldorf",
             "title": "Assignment Help Düsseldorf",
             "targetKeyword": "assignment help Düsseldorf",
-            "desc": "Get reliable assignment writing services in Düsseldorf. We help students at local universities achieve their academic goals."
+            "desc": "Expert assignment support for Heinrich Heine University students. We understand local academic standards and referencing styles in Düsseldorf."
         },
         {
             "slug": "leipzig",
             "title": "Assignment Help Leipzig",
             "targetKeyword": "assignment help Leipzig",
-            "desc": "The leading assignment help service in Leipzig. Trusted by university students for quality and timely delivery."
+            "desc": "Struggling at Leipzig University or HTWK? Our Leipzig-based academic experts provide custom research tailored for German universities."
         }
     ]
 };

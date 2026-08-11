@@ -116,6 +116,24 @@ const SubjectCityPage = () => {
                     return null;
                 })}
                 
+                {/* Service Schema */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": specializedData.title,
+                        "description": pageDescription,
+                        "url": url,
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Academic Wizard",
+                            "url": "https://academicwizard.online"
+                        },
+                        "areaServed": country.name,
+                        "serviceType": service.title
+                    })}
+                </script>
+
                 {/* FAQ Schema */}
                 {faqsList.length > 0 && (
                     <script type="application/ld+json">

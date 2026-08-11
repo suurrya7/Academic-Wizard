@@ -33,6 +33,28 @@ const DissertationTopicPage = () => {
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={topicData.desc} />
                 <meta property="og:url" content={url} />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "name": pageTitle,
+                        "description": topicData.desc,
+                        "url": url,
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Academic Wizard",
+                            "url": "https://academicwizard.online"
+                        },
+                        "breadcrumb": {
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
+                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog" },
+                                { "@type": "ListItem", "position": 3, "name": topicData.category, "item": url }
+                            ]
+                        }
+                    })}
+                </script>
             </Helmet>
 
             <PageHeader 

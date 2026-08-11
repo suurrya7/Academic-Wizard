@@ -43,10 +43,10 @@ const Home = () => {
             <Helmet>
                 <title>Academic Wizard | Expert Academic & Research Support</title>
                 <meta name="description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students in the UK, USA, Australia, and worldwide." />
-                <link rel="canonical" href="https://academicwizard.online/" />
+                <link rel="canonical" href="https://academicwizard.online" />
                 <meta property="og:title" content="Academic Wizard | Expert Academic Assistance" />
                 <meta property="og:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students." />
-                <meta property="og:url" content="https://academicwizard.online/" />
+                <meta property="og:url" content="https://academicwizard.online" />
                 <script type="application/ld+json">
                     {JSON.stringify(orgSchema)}
                 </script>

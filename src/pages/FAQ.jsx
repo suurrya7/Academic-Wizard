@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
+import { Link } from 'react-router-dom';
 import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -182,6 +183,20 @@ const FAQ = () => {
                     <a href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20have%20a%20question" target="_blank" rel="noreferrer" className="text-accent-gold font-heading tracking-widest uppercase border-b border-accent-gold pb-2 hover:text-white hover:border-white transition-all" style={{ color: 'var(--accent-gold)', borderColor: 'var(--accent-gold)' }}>
                         Chat on WhatsApp
                     </a>
+                </div>
+            </section>
+
+            {/* Contextual Internal Links */}
+            <section className="py-16 border-t border-glass-border">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <h2 className="text-2xl font-bold font-heading text-white mb-6">Browse Our Services & Resources</h2>
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Our Services</Link>
+                        <Link to="/services/essay-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Essay Help</Link>
+                        <Link to="/services/editing-proofreading" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Editing & Proofreading</Link>
+                        <Link to="/tools/citation-generator" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Citation Generator</Link>
+                        <Link to="/contact" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Contact Us</Link>
+                    </div>
                 </div>
             </section>
         </div>

@@ -86,6 +86,8 @@ const Footer = () => {
                         <li><Link to="/services/dissertation-help" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
                         <li><Link to="/services/literature-review" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
                         <li><Link to="/services/editing-proofreading" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
+                        <li><Link to="/services/research-paper-help" className="hover:text-accent-gold transition-colors">Research Paper Help</Link></li>
+                        <li><Link to="/services/study-guidance" className="hover:text-accent-gold transition-colors">Study Guidance</Link></li>
                     </ul>
                 </div>
 

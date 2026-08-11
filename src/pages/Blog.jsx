@@ -4,6 +4,7 @@ import { Search, CalendarDays, Clock, ArrowUpRight, Tags } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { assetPath, staticPostUrl } from '../config/site';
+import { dissertationTopics } from '../data/specializedPages';
 
 const POSTS_PER_PAGE = 9;
 
@@ -100,6 +101,27 @@ const Blog = () => {
                 <meta property="og:title" content="Academic Blog & Research Guides | Academic Wizard" />
                 <meta property="og:description" content="Daily guides on academic writing, research, and study strategies." />
                 <meta property="og:url" content="https://academicwizard.online/blog" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        "name": "Academic Blog & Research Guides",
+                        "description": "Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy.",
+                        "url": "https://academicwizard.online/blog",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Academic Wizard",
+                            "url": "https://academicwizard.online"
+                        },
+                        "breadcrumb": {
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
+                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog" }
+                            ]
+                        }
+                    })}
+                </script>
             </Helmet>
 
             <PageHeader
@@ -116,6 +138,24 @@ const Blog = () => {
                     <p className="text-text-secondary leading-relaxed">
                         Welcome to the Academic Wizard Blog, your daily resource for comprehensive guides, expert tips, and strategic insights designed to help university students excel. Our articles cover every phase of the academic journey—from crafting compelling essay arguments and conducting rigorous literature reviews, to mastering complex research methodologies and polishing your final dissertation. Whether you are studying in the UK, USA, Australia, or anywhere else around the globe, our expert educators share best practices to improve your writing skills, ensure adherence to strict formatting guidelines, and elevate the overall quality of your assignments.
                     </p>
+                </div>
+            </section>
+
+            {/* Dissertation Topics Section — fixes orphan pages */}
+            <section className="pb-8 bg-bg-primary">
+                <div className="container px-6 max-w-6xl mx-auto">
+                    <h3 className="text-xl font-bold font-heading text-white mb-4 text-center">📚 Dissertation Topic Ideas</h3>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        {dissertationTopics.map((topic) => (
+                            <Link
+                                key={topic.slug}
+                                to={`/blog/dissertation-topics/${topic.slug}`}
+                                className="glass-card px-5 py-2.5 rounded-full text-sm text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors whitespace-nowrap"
+                            >
+                                {topic.category}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Testimonials from '../components/Testimonials';
 import { Target, Users, Globe, Shield, BookOpen, Award, CheckCircle } from 'lucide-react';
@@ -131,6 +132,21 @@ const About = () => {
                             <h4 className="font-heading text-sm mb-4 text-white">Ethics</h4>
                             <p className="text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>Promoting academic integrity through targeted pedagogical guidance and support.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contextual Internal Links */}
+            <section className="py-16 border-t border-glass-border">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <h2 className="text-2xl font-bold font-heading text-white mb-6">Explore Our Academic Services</h2>
+                    <p className="text-text-secondary mb-8" style={{ color: 'var(--text-secondary)' }}>Discover how our experts can support your academic journey across assignments, essays, dissertations, and more.</p>
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">All Services</Link>
+                        <Link to="/services/assignment-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Assignment Help</Link>
+                        <Link to="/services/dissertation-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Dissertation Help</Link>
+                        <Link to="/tools" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Free Tools</Link>
+                        <Link to="/blog" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
                     </div>
                 </div>
             </section>

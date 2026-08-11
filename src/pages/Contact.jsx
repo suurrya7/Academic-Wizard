@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
+import { Link } from 'react-router-dom';
 import { Mail, MessageCircle, Clock, ShieldCheck } from 'lucide-react';
 
 const Contact = () => {
@@ -140,6 +141,20 @@ const Contact = () => {
                                 </button>
                             </form>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contextual Internal Links */}
+            <section className="py-16 border-t border-glass-border">
+                <div className="container px-6 max-w-4xl mx-auto text-center">
+                    <h2 className="text-2xl font-bold font-heading text-white mb-6">Need Immediate Assistance?</h2>
+                    <p className="text-text-secondary mb-8" style={{ color: 'var(--text-secondary)' }}>Explore our services or get answers right away.</p>
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">View Services</Link>
+                        <Link to="/faq" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Read FAQs</Link>
+                        <Link to="/about" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">About Us</Link>
+                        <Link to="/blog" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
                     </div>
                 </div>
             </section>
