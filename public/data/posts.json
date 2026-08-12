@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Troubleshooting False Positives in 2026",
+    "slug": "turnitin-ai-detection-troubleshooting-false-positives-in-2026",
+    "excerpt": "Struggling with Turnitin AI false positives? Learn how to conduct an academic integrity audit to verify your original writing and protect your grade.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity audit",
+      "AI writing detection issues",
+      "verifying human authored work",
+      "Turnitin originality report"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-12T03:58:50.817959+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-troubleshooting-false-positives-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Mastering Complex Multi-Author In-Text Citations",
+    "slug": "apa-7th-edition-mastering-complex-multi-author-in-text-citations",
+    "excerpt": "Avoid formatting penalties with this guide to APA 7th Edition multi-author citations. Learn the exact rules for in-text and reference list entries today.",
+    "keywords": [
+      "APA 7 multi-author in-text citation rules",
+      "APA 7 formatting guide",
+      "citation style nuances",
+      "citing academic papers",
+      "APA 7 reference list"
+    ],
+    "primaryKeyword": "APA 7 multi-author in-text citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-12T03:59:21.542650+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-mastering-complex-multi-author-in-text-citations.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "NVivo vs Manual Coding: Choosing Your Qualitative Analysis Strategy",
+    "slug": "nvivo-vs-manual-coding-choosing-your-qualitative-analysis-strategy",
+    "excerpt": "Deciding between NVivo and manual coding for your PhD? Compare these qualitative analysis strategies to find the best workflow for your research data.",
+    "keywords": [
+      "choosing between NVivo and manual coding",
+      "qualitative data analysis",
+      "coding research data",
+      "thematic analysis workflow",
+      "PhD methodology help"
+    ],
+    "primaryKeyword": "choosing between NVivo and manual coding",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-12T04:00:01.846492+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-vs-manual-coding-choosing-your-qualitative-analysis-strategy.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Zotero Workflow: Managing 100+ Sources for Your Literature Review",
+    "slug": "zotero-workflow-managing-100-sources-for-your-literature-review",
+    "excerpt": "Overwhelmed by your literature review? Master Zotero with this workflow for managing large libraries, tracking tags, and automating your bibliography.",
+    "keywords": [
+      "organizing 100+ sources in Zotero",
+      "Zotero library management",
+      "literature review organization",
+      "thesis research workflow",
+      "automated citation tools"
+    ],
+    "primaryKeyword": "organizing 100+ sources in Zotero",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-12T04:00:31.394693+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-workflow-managing-100-sources-for-your-literature-review.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Fixing NVivo Data Mismatches: A 2026 Workflow for Qualitative Accuracy",
     "slug": "fixing-nvivo-data-mismatches-a-2026-workflow-for-qualitative-accuracy",
     "excerpt": "Struggling with NVivo data import errors? Learn our 2026 troubleshooting workflow to ensure your qualitative thesis data stays accurate and organized.",
