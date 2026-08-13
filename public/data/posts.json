@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin 'AI Score' Spikes: How to Audit Your Draft for Human Tone",
+    "slug": "turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone",
+    "excerpt": "Is your human-authored work being flagged? Learn how to audit your tone, verify citations, and troubleshoot Turnitin AI false positives effectively.",
+    "keywords": [
+      "Turnitin AI detection false positive audit",
+      "AI detector accuracy",
+      "academic integrity check",
+      "originality report analysis",
+      "writing tone validation"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positive audit",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-13T04:03:26.004631+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Mastering Cross-Reference Rules for Complex Theses",
+    "slug": "beyond-apa-7-mastering-cross-reference-rules-for-complex-theses",
+    "excerpt": "Master complex cross-referencing and tricky citation rules. Our guide helps you align your thesis with strict APA 7 standards effortlessly.",
+    "keywords": [
+      "APA 7th edition complex cross-referencing",
+      "academic formatting guide",
+      "thesis citation rules",
+      "APA 7 reference lists",
+      "scholarly writing standards"
+    ],
+    "primaryKeyword": "APA 7th edition complex cross-referencing",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-13T04:03:51.572223+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-mastering-cross-reference-rules-for-complex-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "NVivo 26: A Practical Workflow for Reducing Coding Bias in Research",
+    "slug": "nvivo-26-a-practical-workflow-for-reducing-coding-bias-in-research",
+    "excerpt": "Struggling with qualitative data? Learn how to use NVivo 26 to systematize your thematic coding while effectively minimizing potential research bias.",
+    "keywords": [
+      "NVivo qualitative data coding bias",
+      "thematic analysis software",
+      "qualitative research methodology",
+      "NVivo coding best practices",
+      "PhD data management"
+    ],
+    "primaryKeyword": "NVivo qualitative data coding bias",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-13T04:04:17.453991+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-a-practical-workflow-for-reducing-coding-bias-in-research.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Zotero Plugin Sync Guide: Solving Data Conflicts in 2026 Theses",
+    "slug": "zotero-plugin-sync-guide-solving-data-conflicts-in-2026-theses",
+    "excerpt": "Prevent library corruption in your dissertation. Learn how to resolve common Zotero plugin sync conflicts for seamless large-scale reference management.",
+    "keywords": [
+      "Zotero sync errors large thesis",
+      "Zotero citation management",
+      "reference library troubleshooting",
+      "thesis data organization",
+      "research workflow tools"
+    ],
+    "primaryKeyword": "Zotero sync errors large thesis",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-13T04:04:43.063113+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-plugin-sync-guide-solving-data-conflicts-in-2026-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Troubleshooting False Positives in 2026",
     "slug": "turnitin-ai-detection-troubleshooting-false-positives-in-2026",
     "excerpt": "Struggling with Turnitin AI false positives? Learn how to conduct an academic integrity audit to verify your original writing and protect your grade.",
