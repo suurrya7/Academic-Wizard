@@ -1,5 +1,105 @@
 [
   {
+    "title": "Managing Qualitative Coding Drift: A 2026 NVivo Troubleshooting Guide",
+    "slug": "managing-qualitative-coding-drift-a-2026-nvivo-troubleshooting-guide",
+    "excerpt": "Struggling with coding drift in your thesis? Learn how to audit your NVivo 26 project and maintain consistency in your qualitative analysis today.",
+    "keywords": [
+      "qualitative coding drift in NVivo",
+      "NVivo thematic analysis consistency",
+      "qualitative research reliability",
+      "coding reliability audit",
+      "NVivo 26 best practices"
+    ],
+    "primaryKeyword": "qualitative coding drift in NVivo",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-14T03:59:40.736504+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/managing-qualitative-coding-drift-a-2026-nvivo-troubleshooting-guide.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing Complex In-Text Citations for Digital Media",
+    "slug": "apa-7th-edition-fixing-complex-in-text-citations-for-digital-media",
+    "excerpt": "Stop losing marks on your bibliography! Discover how to correctly format complex digital sources and social media in your APA 7th edition paper.",
+    "keywords": [
+      "APA 7 digital media citation errors",
+      "citing social media APA 7",
+      "APA 7 online video citation",
+      "academic formatting pitfalls",
+      "digital source attribution"
+    ],
+    "primaryKeyword": "APA 7 digital media citation errors",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-14T04:00:11.066986+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-complex-in-text-citations-for-digital-media.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener: A 2026 Workflow for Large-Scale Dissertation Docs",
+    "slug": "zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs",
+    "excerpt": "Drowning in research notes? Learn the power-user workflow for connecting Zotero and Scrivener to keep your dissertation organized and error-free.",
+    "keywords": [
+      "syncing Zotero with Scrivener for thesis",
+      "dissertation organization tools",
+      "large document reference management",
+      "academic writing software workflow",
+      "automating bibliography Scrivener"
+    ],
+    "primaryKeyword": "syncing Zotero with Scrivener for thesis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-14T04:00:37.765193+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Lit Review Without Losing Your Voice",
+    "slug": "ethical-ai-use-scaffolding-your-lit-review-without-losing-your-voice",
+    "excerpt": "Learn how to ethically use AI to outline your literature review while keeping your original voice. Master your thesis synthesis with these tips.",
+    "keywords": [
+      "scaffolding literature review with AI ethics",
+      "academic integrity in AI writing",
+      "AI-assisted literature synthesis",
+      "maintaining academic voice",
+      "ethical AI for students"
+    ],
+    "primaryKeyword": "scaffolding literature review with AI ethics",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-14T04:01:08.016628+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-lit-review-without-losing-your-voice.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Turnitin 'AI Score' Spikes: How to Audit Your Draft for Human Tone",
     "slug": "turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone",
     "excerpt": "Is your human-authored work being flagged? Learn how to audit your tone, verify citations, and troubleshoot Turnitin AI false positives effectively.",

@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-13
+        **Last updated**: 2026-08-14
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -232,6 +232,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Zotero to Scrivener: A 2026 Workflow for Large-Scale Dissertation Docs](https://academicwizard.online/blog/zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs)**
+  - Excerpt: Drowning in research notes? Learn the power-user workflow for connecting Zotero and Scrivener to keep your dissertation organized and error-free.
+  - Keywords: syncing Zotero with Scrivener for thesis, dissertation organization tools, large document reference management, academic writing software workflow, automating bibliography Scrivener
+  - Target Region: Australia
+  - Published: 2026-08-14
+
 - **[NVivo 26: A Practical Workflow for Reducing Coding Bias in Research](https://academicwizard.online/blog/nvivo-26-a-practical-workflow-for-reducing-coding-bias-in-research)**
   - Excerpt: Struggling with qualitative data? Learn how to use NVivo 26 to systematize your thematic coding while effectively minimizing potential research bias.
   - Keywords: NVivo qualitative data coding bias, thematic analysis software, qualitative research methodology, NVivo coding best practices, PhD data management
@@ -389,6 +395,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Fixing Complex In-Text Citations for Digital Media](https://academicwizard.online/blog/apa-7th-edition-fixing-complex-in-text-citations-for-digital-media)**
+  - Excerpt: Stop losing marks on your bibliography! Discover how to correctly format complex digital sources and social media in your APA 7th edition paper.
+  - Keywords: APA 7 digital media citation errors, citing social media APA 7, APA 7 online video citation, academic formatting pitfalls, digital source attribution
+  - Target Region: UK
+  - Published: 2026-08-14
 
 - **[Turnitin 'AI Score' Spikes: How to Audit Your Draft for Human Tone](https://academicwizard.online/blog/turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone)**
   - Excerpt: Is your human-authored work being flagged? Learn how to audit your tone, verify citations, and troubleshoot Turnitin AI false positives effectively.
@@ -628,6 +640,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Scaffolding Your Lit Review Without Losing Your Voice](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-lit-review-without-losing-your-voice)**
+  - Excerpt: Learn how to ethically use AI to outline your literature review while keeping your original voice. Master your thesis synthesis with these tips.
+  - Keywords: scaffolding literature review with AI ethics, academic integrity in AI writing, AI-assisted literature synthesis, maintaining academic voice, ethical AI for students
+  - Target Region: Canada
+  - Published: 2026-08-14
+
 - **[Zotero Workflow: Managing 100+ Sources for Your Literature Review](https://academicwizard.online/blog/zotero-workflow-managing-100-sources-for-your-literature-review)**
   - Excerpt: Overwhelmed by your literature review? Master Zotero with this workflow for managing large libraries, tracking tags, and automating your bibliography.
   - Keywords: organizing 100+ sources in Zotero, Zotero library management, literature review organization, thesis research workflow, automated citation tools
@@ -737,6 +755,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Managing Qualitative Coding Drift: A 2026 NVivo Troubleshooting Guide](https://academicwizard.online/blog/managing-qualitative-coding-drift-a-2026-nvivo-troubleshooting-guide)**
+  - Excerpt: Struggling with coding drift in your thesis? Learn how to audit your NVivo 26 project and maintain consistency in your qualitative analysis today.
+  - Keywords: qualitative coding drift in NVivo, NVivo thematic analysis consistency, qualitative research reliability, coding reliability audit, NVivo 26 best practices
+  - Target Region: USA
+  - Published: 2026-08-14
 
 - **[Beyond APA 7: Mastering Cross-Reference Rules for Complex Theses](https://academicwizard.online/blog/beyond-apa-7-mastering-cross-reference-rules-for-complex-theses)**
   - Excerpt: Master complex cross-referencing and tricky citation rules. Our guide helps you align your thesis with strict APA 7 standards effortlessly.
