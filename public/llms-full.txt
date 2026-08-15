@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-14
+        **Last updated**: 2026-08-15
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -232,6 +232,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Dissertation Fatigue: Strategies for Long-Term Mental Resilience](https://academicwizard.online/blog/dissertation-fatigue-strategies-for-long-term-mental-resilience)**
+  - Excerpt: Dissertation burnout is a common reality for PhD candidates. Discover sustainable habits to regain your focus and finish your thesis without the overwhelm.
+  - Keywords: overcoming dissertation burnout for phd students, phd mental health support, maintaining dissertation momentum, research productivity tips, academic self-care strategies
+  - Target Region: UK
+  - Published: 2026-08-15
+
 - **[Zotero to Scrivener: A 2026 Workflow for Large-Scale Dissertation Docs](https://academicwizard.online/blog/zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs)**
   - Excerpt: Drowning in research notes? Learn the power-user workflow for connecting Zotero and Scrivener to keep your dissertation organized and error-free.
   - Keywords: syncing Zotero with Scrivener for thesis, dissertation organization tools, large document reference management, academic writing software workflow, automating bibliography Scrivener
@@ -395,6 +401,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Report: How to Contextualize and Dispute False Positives](https://academicwizard.online/blog/turnitin-ai-report-how-to-contextualize-and-dispute-false-positives)**
+  - Excerpt: Received an unfair AI flag on your latest submission? Learn the steps to document your writing process and effectively dispute Turnitin AI false positives.
+  - Keywords: how to dispute turnitin ai detection false positives, turnitin ai report accuracy, academic integrity appeal process, reducing ai detection scores in essays, verifying academic originality
+  - Target Region: USA
+  - Published: 2026-08-15
 
 - **[APA 7th Edition: Fixing Complex In-Text Citations for Digital Media](https://academicwizard.online/blog/apa-7th-edition-fixing-complex-in-text-citations-for-digital-media)**
   - Excerpt: Stop losing marks on your bibliography! Discover how to correctly format complex digital sources and social media in your APA 7th edition paper.
@@ -640,6 +652,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Crafting Your Lit Review Outline: Ethical AI Scaffolding Methods](https://academicwizard.online/blog/crafting-your-lit-review-outline-ethical-ai-scaffolding-methods)**
+  - Excerpt: Learn how to use AI for effective literature review scaffolding while ensuring your arguments remain original, ethical, and entirely your own.
+  - Keywords: using ai ethically for literature review structure, literature review synthesis techniques, academic writing ai tools, structuring a systematic literature review, avoiding plagiarism in literature reviews
+  - Target Region: Canada
+  - Published: 2026-08-15
+
 - **[Ethical AI Use: Scaffolding Your Lit Review Without Losing Your Voice](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-lit-review-without-losing-your-voice)**
   - Excerpt: Learn how to ethically use AI to outline your literature review while keeping your original voice. Master your thesis synthesis with these tips.
   - Keywords: scaffolding literature review with AI ethics, academic integrity in AI writing, AI-assisted literature synthesis, maintaining academic voice, ethical AI for students
@@ -755,6 +773,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Zotero vs. Mendeley: Which Citation Manager Wins for 2026 Theses?](https://academicwizard.online/blog/zotero-vs-mendeley-which-citation-manager-wins-for-2026-theses)**
+  - Excerpt: Struggling to manage hundreds of sources? We compare the latest features of Zotero and Mendeley to see which supports your 2026 thesis research best.
+  - Keywords: zotero versus mendeley for large research projects, best reference management software 2026, managing large bibliography zotero, research workflow optimization, automated citation tools for students
+  - Target Region: Australia
+  - Published: 2026-08-15
 
 - **[Managing Qualitative Coding Drift: A 2026 NVivo Troubleshooting Guide](https://academicwizard.online/blog/managing-qualitative-coding-drift-a-2026-nvivo-troubleshooting-guide)**
   - Excerpt: Struggling with coding drift in your thesis? Learn how to audit your NVivo 26 project and maintain consistency in your qualitative analysis today.

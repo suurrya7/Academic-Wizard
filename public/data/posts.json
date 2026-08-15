@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Report: How to Contextualize and Dispute False Positives",
+    "slug": "turnitin-ai-report-how-to-contextualize-and-dispute-false-positives",
+    "excerpt": "Received an unfair AI flag on your latest submission? Learn the steps to document your writing process and effectively dispute Turnitin AI false positives.",
+    "keywords": [
+      "how to dispute turnitin ai detection false positives",
+      "turnitin ai report accuracy",
+      "academic integrity appeal process",
+      "reducing ai detection scores in essays",
+      "verifying academic originality"
+    ],
+    "primaryKeyword": "how to dispute turnitin ai detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-15T02:45:07.202051+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-report-how-to-contextualize-and-dispute-false-positives.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Dissertation Fatigue: Strategies for Long-Term Mental Resilience",
+    "slug": "dissertation-fatigue-strategies-for-long-term-mental-resilience",
+    "excerpt": "Dissertation burnout is a common reality for PhD candidates. Discover sustainable habits to regain your focus and finish your thesis without the overwhelm.",
+    "keywords": [
+      "overcoming dissertation burnout for phd students",
+      "phd mental health support",
+      "maintaining dissertation momentum",
+      "research productivity tips",
+      "academic self-care strategies"
+    ],
+    "primaryKeyword": "overcoming dissertation burnout for phd students",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-15T02:45:33.735509+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dissertation-fatigue-strategies-for-long-term-mental-resilience.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Zotero vs. Mendeley: Which Citation Manager Wins for 2026 Theses?",
+    "slug": "zotero-vs-mendeley-which-citation-manager-wins-for-2026-theses",
+    "excerpt": "Struggling to manage hundreds of sources? We compare the latest features of Zotero and Mendeley to see which supports your 2026 thesis research best.",
+    "keywords": [
+      "zotero versus mendeley for large research projects",
+      "best reference management software 2026",
+      "managing large bibliography zotero",
+      "research workflow optimization",
+      "automated citation tools for students"
+    ],
+    "primaryKeyword": "zotero versus mendeley for large research projects",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-15T02:46:00.989963+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-vs-mendeley-which-citation-manager-wins-for-2026-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Crafting Your Lit Review Outline: Ethical AI Scaffolding Methods",
+    "slug": "crafting-your-lit-review-outline-ethical-ai-scaffolding-methods",
+    "excerpt": "Learn how to use AI for effective literature review scaffolding while ensuring your arguments remain original, ethical, and entirely your own.",
+    "keywords": [
+      "using ai ethically for literature review structure",
+      "literature review synthesis techniques",
+      "academic writing ai tools",
+      "structuring a systematic literature review",
+      "avoiding plagiarism in literature reviews"
+    ],
+    "primaryKeyword": "using ai ethically for literature review structure",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-15T02:46:27.133505+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/crafting-your-lit-review-outline-ethical-ai-scaffolding-methods.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
     "title": "Managing Qualitative Coding Drift: A 2026 NVivo Troubleshooting Guide",
     "slug": "managing-qualitative-coding-drift-a-2026-nvivo-troubleshooting-guide",
     "excerpt": "Struggling with coding drift in your thesis? Learn how to audit your NVivo 26 project and maintain consistency in your qualitative analysis today.",
