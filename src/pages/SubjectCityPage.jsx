@@ -37,6 +37,7 @@ const EXPERT_QUOTES = [
 
 const SubjectCityPage = () => {
     const { serviceSlug, countrySlug, specializedSlug } = useParams();
+    const [openFaq, setOpenFaq] = React.useState(0);
     const quoteIndex = Array.from(specializedSlug || '').reduce((acc, char) => acc + char.charCodeAt(0), 0) % EXPERT_QUOTES.length;
     const selectedQuote = EXPERT_QUOTES[quoteIndex];
 
@@ -83,8 +84,6 @@ const SubjectCityPage = () => {
     const caseStudiesList = country.caseStudies || [];
 
     const Icon = service.icon || FileText;
-
-    const [openFaq, setOpenFaq] = React.useState(0);
 
     return (
         <div className="page-specialized">
