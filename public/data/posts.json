@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Troubleshooting Unexpected High Similarity Scores",
+    "slug": "turnitin-ai-detection-troubleshooting-unexpected-high-similarity-scores",
+    "excerpt": "Struggling with a high Turnitin AI score? Learn how to audit your draft, identify false positives, and protect your academic integrity effectively.",
+    "keywords": [
+      "troubleshooting Turnitin AI detection high scores",
+      "AI writing detection false positives",
+      "Academic integrity and AI tools",
+      "Turnitin similarity report analysis",
+      "verifying academic writing authenticity"
+    ],
+    "primaryKeyword": "troubleshooting Turnitin AI detection high scores",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-16T02:53:35.139566+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-troubleshooting-unexpected-high-similarity-scores.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Managing Multi-Author Citations in Complex Theses",
+    "slug": "apa-7th-edition-managing-multi-author-citations-in-complex-theses",
+    "excerpt": "Master the nuances of APA 7th edition. Our guide breaks down how to format complex multi-author citations correctly to avoid common penalties in your thesis.",
+    "keywords": [
+      "APA 7th edition multi-author citation rules",
+      "citing academic sources APA 7",
+      "APA 7 in-text citation guidelines",
+      "formatting graduate thesis references",
+      "handling et al in APA"
+    ],
+    "primaryKeyword": "APA 7th edition multi-author citation rules",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-16T02:54:02.461717+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-managing-multi-author-citations-in-complex-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Beyond Manual Coding: Enhancing NVivo Workflows for Thematic Analysis",
+    "slug": "beyond-manual-coding-enhancing-nvivo-workflows-for-thematic-analysis",
+    "excerpt": "Ready to streamline your qualitative research? Discover how to use NVivo for robust thematic analysis and maintain accuracy in your doctoral thesis.",
+    "keywords": [
+      "using NVivo for thematic analysis",
+      "qualitative research coding strategies",
+      "reducing researcher bias in NVivo",
+      "organizing qualitative thesis data",
+      "NVivo software methodology for PhD"
+    ],
+    "primaryKeyword": "using NVivo for thematic analysis",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-16T02:54:29.686899+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-manual-coding-enhancing-nvivo-workflows-for-thematic-analysis.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Avoiding Dissertation Burnout: A Sustainable Workflow for Success",
+    "slug": "avoiding-dissertation-burnout-a-sustainable-workflow-for-success",
+    "excerpt": "Feeling overwhelmed by your PhD? Learn sustainable writing habits and project management tips to overcome dissertation burnout and cross the finish line.",
+    "keywords": [
+      "dissertation writing burnout recovery strategies",
+      "PhD mental health support",
+      "dissertation project management",
+      "balancing research and personal wellness",
+      "academic writing productivity tips"
+    ],
+    "primaryKeyword": "dissertation writing burnout recovery strategies",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-16T02:54:56.076396+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/avoiding-dissertation-burnout-a-sustainable-workflow-for-success.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI Report: How to Contextualize and Dispute False Positives",
     "slug": "turnitin-ai-report-how-to-contextualize-and-dispute-false-positives",
     "excerpt": "Received an unfair AI flag on your latest submission? Learn the steps to document your writing process and effectively dispute Turnitin AI false positives.",
