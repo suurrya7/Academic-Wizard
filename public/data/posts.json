@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Audit Guide for Students",
+    "slug": "turnitin-ai-false-positives-a-2026-audit-guide-for-students",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to conduct an academic integrity audit and defend your human-authored research against false positive scores.",
+    "keywords": [
+      "recovering from Turnitin AI detection false positives",
+      "academic integrity audit",
+      "human-authored content validation",
+      "Turnitin similarity report tips",
+      "avoiding AI writing flags"
+    ],
+    "primaryKeyword": "recovering from Turnitin AI detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-17T02:53:40.913110+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-audit-guide-for-students.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "APA 7th Edition: New Citation Rules for Complex Digital Media",
+    "slug": "apa-7th-edition-new-citation-rules-for-complex-digital-media",
+    "excerpt": "Stop losing marks on formatting. Master the latest APA 7th edition rules for digital media, including podcasts, streams, and complex online sources.",
+    "keywords": [
+      "APA 7th edition digital media citation rules",
+      "APA 7 citation guide 2026",
+      "citing social media in thesis",
+      "APA 7 reference formatting",
+      "academic citation standards"
+    ],
+    "primaryKeyword": "APA 7th edition digital media citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-17T02:54:07.227929+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-new-citation-rules-for-complex-digital-media.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo 26: Minimizing Bias in Thematic Qualitative Analysis",
+    "slug": "nvivo-26-minimizing-bias-in-thematic-qualitative-analysis",
+    "excerpt": "Ensure research rigor in your PhD thesis. Discover actionable NVivo 26 strategies to minimize coding bias and streamline your thematic analysis process.",
+    "keywords": [
+      "reducing bias in qualitative thematic analysis NVivo",
+      "qualitative data analysis methods",
+      "NVivo 26 thematic coding",
+      "research methodology tips",
+      "coding drift in PhD thesis"
+    ],
+    "primaryKeyword": "reducing bias in qualitative thematic analysis NVivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-17T02:54:35.578034+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-minimizing-bias-in-thematic-qualitative-analysis.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Ethical AI Use: How to Outline Your Literature Review Properly",
+    "slug": "ethical-ai-use-how-to-outline-your-literature-review-properly",
+    "excerpt": "Boost your productivity ethically. Learn how to use AI to scaffold your literature review outline while maintaining your own critical research voice.",
+    "keywords": [
+      "ethical AI scaffolding for literature reviews",
+      "lit review outlining techniques",
+      "AI for research synthesis",
+      "academic writing support",
+      "structuring a thesis review"
+    ],
+    "primaryKeyword": "ethical AI scaffolding for literature reviews",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-17T02:55:14.385284+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-how-to-outline-your-literature-review-properly.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Troubleshooting Unexpected High Similarity Scores",
     "slug": "turnitin-ai-detection-troubleshooting-unexpected-high-similarity-scores",
     "excerpt": "Struggling with a high Turnitin AI score? Learn how to audit your draft, identify false positives, and protect your academic integrity effectively.",
