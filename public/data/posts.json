@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Score Spikes: Identifying False Positives in 2026",
+    "slug": "turnitin-ai-score-spikes-identifying-false-positives-in-2026",
+    "excerpt": "Received an unexpected AI score on your essay? Learn how to audit your writing for false positives and present evidence of human authorship effectively.",
+    "keywords": [
+      "how to challenge turnitin ai detection false positives",
+      "academic integrity audit",
+      "AI similarity score",
+      "contextualizing AI flags",
+      "human writing vs AI detector"
+    ],
+    "primaryKeyword": "how to challenge turnitin ai detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-18T02:49:27.900661+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-identifying-false-positives-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "NVivo 26: Eliminating Coding Bias in Qualitative Theses",
+    "slug": "nvivo-26-eliminating-coding-bias-in-qualitative-theses",
+    "excerpt": "Struggling with research bias? Master advanced NVivo 26 workflows to ensure your thematic coding remains objective and academically sound for your thesis.",
+    "keywords": [
+      "reducing qualitative coding bias in nvivo",
+      "thematic analysis workflow",
+      "qualitative research integrity",
+      "NVivo data organization",
+      "coding drift mitigation"
+    ],
+    "primaryKeyword": "reducing qualitative coding bias in nvivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-18T02:49:53.542966+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-eliminating-coding-bias-in-qualitative-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Zotero for Massive Theses: Managing 100+ Sources Effectively",
+    "slug": "zotero-for-massive-theses-managing-100-sources-effectively",
+    "excerpt": "Don't let your bibliography spiral out of control. Discover expert Zotero strategies to manage 100+ sources and automate your dissertation citations.",
+    "keywords": [
+      "organizing 100+ sources in zotero for dissertation",
+      "Zotero library management",
+      "citation software workflows",
+      "APA 7 reference lists",
+      "dissertation bibliography tips"
+    ],
+    "primaryKeyword": "organizing 100+ sources in zotero for dissertation",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-18T02:50:25.126717+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-theses-managing-100-sources-effectively.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing Complex Multi-Author Citation Rules",
+    "slug": "apa-7th-edition-fixing-complex-multi-author-citation-rules",
+    "excerpt": "Stuck on complex citations? Learn the essential APA 7th edition rules for multi-author references to avoid simple formatting penalties in your paper.",
+    "keywords": [
+      "apa 7th edition multi-author in-text citation rules",
+      "APA 7 reference formatting",
+      "citation common mistakes",
+      "academic writing style guide",
+      "thesis formatting help"
+    ],
+    "primaryKeyword": "apa 7th edition multi-author in-text citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-18T02:50:50.465341+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-complex-multi-author-citation-rules.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Turnitin AI False Positives: A 2026 Audit Guide for Students",
     "slug": "turnitin-ai-false-positives-a-2026-audit-guide-for-students",
     "excerpt": "Flagged by Turnitin for AI? Learn how to conduct an academic integrity audit and defend your human-authored research against false positive scores.",

@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-17
+        **Last updated**: 2026-08-18
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -232,6 +232,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[NVivo 26: Eliminating Coding Bias in Qualitative Theses](https://academicwizard.online/blog/nvivo-26-eliminating-coding-bias-in-qualitative-theses)**
+  - Excerpt: Struggling with research bias? Master advanced NVivo 26 workflows to ensure your thematic coding remains objective and academically sound for your thesis.
+  - Keywords: reducing qualitative coding bias in nvivo, thematic analysis workflow, qualitative research integrity, NVivo data organization, coding drift mitigation
+  - Target Region: UK
+  - Published: 2026-08-18
+
 - **[NVivo 26: Minimizing Bias in Thematic Qualitative Analysis](https://academicwizard.online/blog/nvivo-26-minimizing-bias-in-thematic-qualitative-analysis)**
   - Excerpt: Ensure research rigor in your PhD thesis. Discover actionable NVivo 26 strategies to minimize coding bias and streamline your thematic analysis process.
   - Keywords: reducing bias in qualitative thematic analysis NVivo, qualitative data analysis methods, NVivo 26 thematic coding, research methodology tips, coding drift in PhD thesis
@@ -413,6 +419,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Fixing Complex Multi-Author Citation Rules](https://academicwizard.online/blog/apa-7th-edition-fixing-complex-multi-author-citation-rules)**
+  - Excerpt: Stuck on complex citations? Learn the essential APA 7th edition rules for multi-author references to avoid simple formatting penalties in your paper.
+  - Keywords: apa 7th edition multi-author in-text citation rules, APA 7 reference formatting, citation common mistakes, academic writing style guide, thesis formatting help
+  - Target Region: Australia
+  - Published: 2026-08-18
 
 - **[APA 7th Edition: New Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-new-citation-rules-for-complex-digital-media)**
   - Excerpt: Stop losing marks on formatting. Master the latest APA 7th edition rules for digital media, including podcasts, streams, and complex online sources.
@@ -804,6 +816,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Turnitin AI Score Spikes: Identifying False Positives in 2026](https://academicwizard.online/blog/turnitin-ai-score-spikes-identifying-false-positives-in-2026)**
+  - Excerpt: Received an unexpected AI score on your essay? Learn how to audit your writing for false positives and present evidence of human authorship effectively.
+  - Keywords: how to challenge turnitin ai detection false positives, academic integrity audit, AI similarity score, contextualizing AI flags, human writing vs AI detector
+  - Target Region: USA
+  - Published: 2026-08-18
+
 - **[Turnitin AI False Positives: A 2026 Audit Guide for Students](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-audit-guide-for-students)**
   - Excerpt: Flagged by Turnitin for AI? Learn how to conduct an academic integrity audit and defend your human-authored research against false positive scores.
   - Keywords: recovering from Turnitin AI detection false positives, academic integrity audit, human-authored content validation, Turnitin similarity report tips, avoiding AI writing flags
@@ -1003,6 +1021,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[Zotero for Massive Theses: Managing 100+ Sources Effectively](https://academicwizard.online/blog/zotero-for-massive-theses-managing-100-sources-effectively)**
+  - Excerpt: Don't let your bibliography spiral out of control. Discover expert Zotero strategies to manage 100+ sources and automate your dissertation citations.
+  - Keywords: organizing 100+ sources in zotero for dissertation, Zotero library management, citation software workflows, APA 7 reference lists, dissertation bibliography tips
+  - Target Region: Canada
+  - Published: 2026-08-18
 
 - **[Avoiding Dissertation Burnout: A Sustainable Workflow for Success](https://academicwizard.online/blog/avoiding-dissertation-burnout-a-sustainable-workflow-for-success)**
   - Excerpt: Feeling overwhelmed by your PhD? Learn sustainable writing habits and project management tips to overcome dissertation burnout and cross the finish line.
