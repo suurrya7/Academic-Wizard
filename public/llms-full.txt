@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-19
+        **Last updated**: 2026-08-20
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -238,6 +238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[NVivo 26: Eliminating Coding Bias in Qualitative Theses](https://academicwizard.online/blog/nvivo-26-eliminating-coding-bias-in-qualitative-theses-2)**
+  - Excerpt: Struggling with subjective coding? Discover proven NVivo 26 workflows to minimize bias and ensure rigorous, transparent analysis for your PhD thesis.
+  - Keywords: reducing bias in NVivo thematic analysis, NVivo coding methodology, qualitative thesis research, transparency in data analysis, coding drift solutions
+  - Target Region: Canada
+  - Published: 2026-08-20
+
 - **[Mapping Your Thesis: Integrating Zotero with Obsidian for Synthesis](https://academicwizard.online/blog/mapping-your-thesis-integrating-zotero-with-obsidian-for-synthesis)**
   - Excerpt: Streamline your PhD research by syncing Zotero with Obsidian. Discover a professional workflow for organizing complex themes and citations efficiently.
   - Keywords: using obsidian for thesis note taking and zotero integration, dissertation knowledge management, zotero citation export, phd research organization, academic note-taking workflows
@@ -431,6 +437,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7 Tables & Figures: Avoiding Common Penalties in 2026](https://academicwizard.online/blog/apa-7-tables-figures-avoiding-common-penalties-in-2026)**
+  - Excerpt: Don't lose marks on formatting. Master the latest APA 7th edition rules for tables and figures to ensure your thesis meets academic excellence standards.
+  - Keywords: APA 7th edition table formatting rules, APA 7 figure legend requirements, academic citation formatting, thesis visual aid standards, APA style penalty avoidance
+  - Target Region: UK
+  - Published: 2026-08-20
 
 - **[APA 7th Edition: Avoiding Citation Penalties in Multi-Volume Theses](https://academicwizard.online/blog/apa-7th-edition-avoiding-citation-penalties-in-multi-volume-theses)**
   - Excerpt: Struggling with APA 7th edition formatting? Master the specific rules for complex multi-volume sources and avoid common penalties in your final thesis.
@@ -700,6 +712,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Structuring Your Literature Review: Ethical AI Scaffolding](https://academicwizard.online/blog/structuring-your-literature-review-ethical-ai-scaffolding)**
+  - Excerpt: Learn how to ethically use AI tools to scaffold your literature review outline while maintaining your academic voice and ensuring deep synthesis.
+  - Keywords: ethical AI use for lit review outlining, literature review synthesis techniques, AI for research organization, academic voice preservation, thesis research workflow
+  - Target Region: Australia
+  - Published: 2026-08-20
+
 - **[Ethical AI Prompting: Refining Your Qualitative Analysis Framework](https://academicwizard.online/blog/ethical-ai-prompting-refining-your-qualitative-analysis-framework)**
   - Excerpt: Learn how to use AI ethically to scaffold your literature review outline while keeping your unique academic voice and research methodology intact.
   - Keywords: ethical ai prompts for qualitative research structuring, ai-assisted literature review, qualitative research methodology, research transparency, scaffolding academic arguments
@@ -839,6 +857,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Disputing Turnitin AI Flags: A Step-by-Step Guide for Students](https://academicwizard.online/blog/disputing-turnitin-ai-flags-a-step-by-step-guide-for-students)**
+  - Excerpt: Received a high Turnitin AI score? Learn how to audit your writing, gather evidence of human authorship, and effectively appeal false positive flags today.
+  - Keywords: dispute Turnitin AI false positives, Turnitin academic integrity audit, AI detection inaccuracy, proving human authorship, academic appeal process
+  - Target Region: USA
+  - Published: 2026-08-20
 
 - **[Turnitin AI Score Spikes: Identifying False Positives in 2026](https://academicwizard.online/blog/turnitin-ai-score-spikes-identifying-false-positives-in-2026)**
   - Excerpt: Received an unexpected AI score on your essay? Learn how to audit your writing for false positives and present evidence of human authorship effectively.

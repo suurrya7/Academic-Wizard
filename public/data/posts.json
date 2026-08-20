@@ -1,5 +1,105 @@
 [
   {
+    "title": "Disputing Turnitin AI Flags: A Step-by-Step Guide for Students",
+    "slug": "disputing-turnitin-ai-flags-a-step-by-step-guide-for-students",
+    "excerpt": "Received a high Turnitin AI score? Learn how to audit your writing, gather evidence of human authorship, and effectively appeal false positive flags today.",
+    "keywords": [
+      "dispute Turnitin AI false positives",
+      "Turnitin academic integrity audit",
+      "AI detection inaccuracy",
+      "proving human authorship",
+      "academic appeal process"
+    ],
+    "primaryKeyword": "dispute Turnitin AI false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-20T02:50:15.680977+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/disputing-turnitin-ai-flags-a-step-by-step-guide-for-students.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "APA 7 Tables & Figures: Avoiding Common Penalties in 2026",
+    "slug": "apa-7-tables-figures-avoiding-common-penalties-in-2026",
+    "excerpt": "Don't lose marks on formatting. Master the latest APA 7th edition rules for tables and figures to ensure your thesis meets academic excellence standards.",
+    "keywords": [
+      "APA 7th edition table formatting rules",
+      "APA 7 figure legend requirements",
+      "academic citation formatting",
+      "thesis visual aid standards",
+      "APA style penalty avoidance"
+    ],
+    "primaryKeyword": "APA 7th edition table formatting rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-20T02:50:41.795281+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-tables-figures-avoiding-common-penalties-in-2026.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "NVivo 26: Eliminating Coding Bias in Qualitative Theses",
+    "slug": "nvivo-26-eliminating-coding-bias-in-qualitative-theses-2",
+    "excerpt": "Struggling with subjective coding? Discover proven NVivo 26 workflows to minimize bias and ensure rigorous, transparent analysis for your PhD thesis.",
+    "keywords": [
+      "reducing bias in NVivo thematic analysis",
+      "NVivo coding methodology",
+      "qualitative thesis research",
+      "transparency in data analysis",
+      "coding drift solutions"
+    ],
+    "primaryKeyword": "reducing bias in NVivo thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-20T02:51:09.238257+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-eliminating-coding-bias-in-qualitative-theses-2.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Structuring Your Literature Review: Ethical AI Scaffolding",
+    "slug": "structuring-your-literature-review-ethical-ai-scaffolding",
+    "excerpt": "Learn how to ethically use AI tools to scaffold your literature review outline while maintaining your academic voice and ensuring deep synthesis.",
+    "keywords": [
+      "ethical AI use for lit review outlining",
+      "literature review synthesis techniques",
+      "AI for research organization",
+      "academic voice preservation",
+      "thesis research workflow"
+    ],
+    "primaryKeyword": "ethical AI use for lit review outlining",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-20T02:51:40.704003+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/structuring-your-literature-review-ethical-ai-scaffolding.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Deciphering Turnitin Similarity Reports: A Student’s Guide to Context",
     "slug": "deciphering-turnitin-similarity-reports-a-student-s-guide-to-context",
     "excerpt": "Confused by your Turnitin report? Learn to distinguish between genuine citation similarity and AI-flagged text to protect your academic integrity today.",
