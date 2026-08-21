@@ -1,5 +1,105 @@
 [
   {
+    "title": "Solving Zotero Sync Conflicts in Massive 2026 Dissertation Projects",
+    "slug": "solving-zotero-sync-conflicts-in-massive-2026-dissertation-projects",
+    "excerpt": "Struggling with Zotero sync errors? Learn how to manage massive libraries and fix cloud conflicts for your 2026 dissertation with our expert workflow.",
+    "keywords": [
+      "Zotero sync errors in large thesis documents",
+      "Zotero library management",
+      "dissertation bibliography sync",
+      "Zotero cloud storage limits",
+      "managing 100+ sources in Zotero"
+    ],
+    "primaryKeyword": "Zotero sync errors in large thesis documents",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-21T02:56:17.625614+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/solving-zotero-sync-conflicts-in-massive-2026-dissertation-projects.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "NVivo 26: Debugging Thematic Coding Drift for PhD Qualitative Analysis",
+    "slug": "nvivo-26-debugging-thematic-coding-drift-for-phd-qualitative-analysis",
+    "excerpt": "Is coding drift impacting your PhD results? Master NVivo 26 techniques to ensure consistency and minimize bias in your qualitative research analysis.",
+    "keywords": [
+      "fixing coding drift in qualitative analysis",
+      "NVivo thematic coding",
+      "qualitative research consistency",
+      "coding reliability for PhD",
+      "managing NVivo 26 projects"
+    ],
+    "primaryKeyword": "fixing coding drift in qualitative analysis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-21T02:56:45.474078+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-debugging-thematic-coding-drift-for-phd-qualitative-analysis.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing In-Text Citations for Multi-Author Digital Media",
+    "slug": "apa-7th-edition-fixing-in-text-citations-for-multi-author-digital-media",
+    "excerpt": "Struggling with APA 7 citations for digital media? Learn the latest rules for multi-author sources to avoid formatting penalties on your next essay.",
+    "keywords": [
+      "APA 7 in-text citations for digital media",
+      "APA 7 multi-author rules",
+      "citing podcasts in APA 7",
+      "complex APA 7 citation formats",
+      "digital media citation guide"
+    ],
+    "primaryKeyword": "APA 7 in-text citations for digital media",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-21T02:58:51.790085+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-in-text-citations-for-multi-author-digital-media.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Escaping Dissertation Stagnation: A 2026 Holistic Mental Health Plan",
+    "slug": "escaping-dissertation-stagnation-a-2026-holistic-mental-health-plan",
+    "excerpt": "Feel stuck in your dissertation? Discover a sustainable 2026 workflow to overcome burnout and regain your research momentum with healthy habits.",
+    "keywords": [
+      "beating dissertation stagnation and burnout",
+      "PhD mental health tips",
+      "dissertation writing momentum",
+      "sustainable research workflow",
+      "academic performance anxiety"
+    ],
+    "primaryKeyword": "beating dissertation stagnation and burnout",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-21T02:59:18.179634+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/escaping-dissertation-stagnation-a-2026-holistic-mental-health-plan.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Disputing Turnitin AI Flags: A Step-by-Step Guide for Students",
     "slug": "disputing-turnitin-ai-flags-a-step-by-step-guide-for-students",
     "excerpt": "Received a high Turnitin AI score? Learn how to audit your writing, gather evidence of human authorship, and effectively appeal false positive flags today.",
