@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Why Your Original Writing Might Get Flagged",
+    "slug": "turnitin-ai-detection-why-your-original-writing-might-get-flagged",
+    "excerpt": "Is your original academic writing being flagged by Turnitin? Discover the technical reasons behind AI false positives and how to verify your integrity.",
+    "keywords": [
+      "reasons for turnitin ai false positives",
+      "turnitin similarity report accuracy",
+      "academic integrity audit tips",
+      "avoiding ai detection in essays",
+      "revising content for human tone"
+    ],
+    "primaryKeyword": "reasons for turnitin ai false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-22T02:48:05.018248+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-why-your-original-writing-might-get-flagged.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Mastering NVivo 26: A Strategy for Error-Free Qualitative Coding",
+    "slug": "mastering-nvivo-26-a-strategy-for-error-free-qualitative-coding",
+    "excerpt": "Streamline your PhD qualitative analysis. Learn a robust, bias-reducing coding workflow in NVivo 26 to keep your dissertation data organized and accurate.",
+    "keywords": [
+      "nvivo 26 qualitative coding workflow",
+      "reducing thematic analysis bias",
+      "qualitative data organization tips",
+      "nvivo software best practices",
+      "phd dissertation coding guide"
+    ],
+    "primaryKeyword": "nvivo 26 qualitative coding workflow",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-22T02:48:31.985854+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-26-a-strategy-for-error-free-qualitative-coding.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating New Citation Rules for Digital Sources",
+    "slug": "apa-7th-edition-navigating-new-citation-rules-for-digital-sources",
+    "excerpt": "Avoid common citation penalties. This guide clarifies the latest APA 7th Edition rules for citing diverse digital media in your academic research.",
+    "keywords": [
+      "apa 7th edition digital source citations",
+      "citing social media in apa 7",
+      "apa 7 reference list formatting",
+      "common apa 7 citation mistakes",
+      "citing online media academic"
+    ],
+    "primaryKeyword": "apa 7th edition digital source citations",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-22T02:49:00.045955+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-new-citation-rules-for-digital-sources.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Thesis Stagnation: Breaking the Cycle with Sustainable Writing Habits",
+    "slug": "thesis-stagnation-breaking-the-cycle-with-sustainable-writing-habits",
+    "excerpt": "Struggling to move past your dissertation block? Explore sustainable writing habits and mental health strategies to regain your momentum today.",
+    "keywords": [
+      "overcoming dissertation writing stagnation",
+      "sustainable academic writing routine",
+      "dissertation goal setting strategies",
+      "beating researcher burnout",
+      "thesis progress management"
+    ],
+    "primaryKeyword": "overcoming dissertation writing stagnation",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-08-22T02:49:27.256430+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/thesis-stagnation-breaking-the-cycle-with-sustainable-writing-habits.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Solving Zotero Sync Conflicts in Massive 2026 Dissertation Projects",
     "slug": "solving-zotero-sync-conflicts-in-massive-2026-dissertation-projects",
     "excerpt": "Struggling with Zotero sync errors? Learn how to manage massive libraries and fix cloud conflicts for your 2026 dissertation with our expert workflow.",
