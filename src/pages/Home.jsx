@@ -7,6 +7,7 @@ import ServiceOverview from '../components/ServiceOverview';
 import SubjectsGrid from '../components/SubjectsGrid';
 import FeaturesGrid from '../components/FeaturesGrid';
 import Testimonials from '../components/Testimonials';
+import PricingCalculator from '../components/PricingCalculator';
 import Button from '../components/Button';
 import { motion } from 'framer-motion';
 
@@ -55,8 +56,13 @@ const Home = () => {
             <Hero />
             <TrustStats />
 
+            {/* Instant Price Calculator Section */}
+            <section id="quote-calculator" className="py-20 container px-4 sm:px-6">
+                <PricingCalculator />
+            </section>
+
             {/* SEO Intro Section */}
-            <section className="py-20 text-center container">
+            <section className="py-12 text-center container">
                 <div className="max-w-4xl mx-auto glass-card p-12 border-accent-gold/20" style={{ borderColor: 'rgba(212, 175, 55, 0.2)' }}>
                     <p className="text-text-secondary leading-loose text-lg" style={{ color: 'var(--text-secondary)' }}>
                         Academic Wizard offers professional academic assistance for students who need help with

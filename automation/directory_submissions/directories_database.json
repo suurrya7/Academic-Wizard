@@ -1,0 +1,661 @@
+{
+  "directories": [
+    {
+      "id": "dir_01",
+      "name": "Futurepedia",
+      "da": 78,
+      "submission_url": "https://www.futurepedia.io/submit-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_02",
+      "name": "TheresAnAIForThat",
+      "da": 84,
+      "submission_url": "https://theresanaiforthat.com/submit/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_03",
+      "name": "Toolify.ai",
+      "da": 80,
+      "submission_url": "https://www.toolify.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector",
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_04",
+      "name": "ProductHunt",
+      "da": 92,
+      "submission_url": "https://www.producthunt.com/posts/new",
+      "backlink_type": "DoFollow",
+      "category": "Launch Platform",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_05",
+      "name": "AlternativeTo",
+      "da": 88,
+      "submission_url": "https://alternativeto.net/software/create/",
+      "backlink_type": "DoFollow",
+      "category": "Software Alternatives",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_06",
+      "name": "TopAI.tools",
+      "da": 76,
+      "submission_url": "https://topai.tools/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_07",
+      "name": "FutureTools.io",
+      "da": 75,
+      "submission_url": "https://www.futuretools.io/submit-a-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_08",
+      "name": "Insidr.ai",
+      "da": 72,
+      "submission_url": "https://www.insidr.ai/submit-tools/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_09",
+      "name": "Dang.ai",
+      "da": 68,
+      "submission_url": "https://dang.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_10",
+      "name": "SaaSHub",
+      "da": 82,
+      "submission_url": "https://www.saashub.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "Software Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_11",
+      "name": "Uneed.best",
+      "da": 71,
+      "submission_url": "https://www.uneed.best/submit-a-tool",
+      "backlink_type": "DoFollow",
+      "category": "Product Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_12",
+      "name": "AI Valley",
+      "da": 67,
+      "submission_url": "https://aivalley.ai/submit-tool/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_13",
+      "name": "StartupStash",
+      "da": 77,
+      "submission_url": "https://startupstash.com/add-listing/",
+      "backlink_type": "DoFollow",
+      "category": "Startup Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "grammar_checker",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_14",
+      "name": "BetaList",
+      "da": 81,
+      "submission_url": "https://betalist.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "Startup Launch",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_15",
+      "name": "MicroLaunch",
+      "da": 65,
+      "submission_url": "https://microlaunch.net/submit",
+      "backlink_type": "DoFollow",
+      "category": "Product Launch",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_16",
+      "name": "OpenTools.ai",
+      "da": 69,
+      "submission_url": "https://opentools.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_17",
+      "name": "AllThingsAI",
+      "da": 70,
+      "submission_url": "https://allthingsai.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_18",
+      "name": "Fazier",
+      "da": 65,
+      "submission_url": "https://fazier.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "Product Discovery",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_19",
+      "name": "AIcyclopedia",
+      "da": 66,
+      "submission_url": "https://aicyclopedia.com/submit-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Encyclopedia",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_20",
+      "name": "LaunchingNext",
+      "da": 74,
+      "submission_url": "https://www.launchingnext.com/submit/",
+      "backlink_type": "DoFollow",
+      "category": "Startup Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_21",
+      "name": "NextGen Tools",
+      "da": 61,
+      "submission_url": "https://nextgentools.me/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_22",
+      "name": "AI Tool Guru",
+      "da": 63,
+      "submission_url": "https://aitoolguru.com/submit-ai-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_23",
+      "name": "EasyWithAI",
+      "da": 70,
+      "submission_url": "https://easywithai.com/submit-tool/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_24",
+      "name": "FindMyAITool",
+      "da": 64,
+      "submission_url": "https://findmyaitool.com/submit-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_25",
+      "name": "AI Registry",
+      "da": 61,
+      "submission_url": "https://theairegistry.com/submit-tool/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_26",
+      "name": "Discover AI",
+      "da": 62,
+      "submission_url": "https://discoverai.tools/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_27",
+      "name": "KillerStartups",
+      "da": 76,
+      "submission_url": "https://killerstartups.com/submit-startup/",
+      "backlink_type": "DoFollow",
+      "category": "Startup Reviews",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_28",
+      "name": "StartupBuffer",
+      "da": 68,
+      "submission_url": "https://startupbuffer.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "Startup Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_29",
+      "name": "StartupBase",
+      "da": 64,
+      "submission_url": "https://startupbase.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "Startup Discovery",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_30",
+      "name": "AITools.fyi",
+      "da": 62,
+      "submission_url": "https://aitools.fyi/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_31",
+      "name": "ToolPedia",
+      "da": 64,
+      "submission_url": "https://toolpedia.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "Tool Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_32",
+      "name": "SideProjectors",
+      "da": 71,
+      "submission_url": "https://www.sideprojectors.com/project/create",
+      "backlink_type": "DoFollow",
+      "category": "Project Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_33",
+      "name": "PostMake",
+      "da": 62,
+      "submission_url": "https://postmake.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "Tool Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_34",
+      "name": "Startups.fyi",
+      "da": 70,
+      "submission_url": "https://www.startups.fyi/submit",
+      "backlink_type": "DoFollow",
+      "category": "Startup Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_35",
+      "name": "CrazyAboutAI",
+      "da": 63,
+      "submission_url": "https://crazyaboutai.com/submit-tool/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_36",
+      "name": "AI Wizard",
+      "da": 60,
+      "submission_url": "https://aiwizard.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_37",
+      "name": "ToolScout",
+      "da": 63,
+      "submission_url": "https://toolscout.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_38",
+      "name": "AI Finder Club",
+      "da": 61,
+      "submission_url": "https://aifinder.club/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Tools",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_39",
+      "name": "AIToolsDirectory",
+      "da": 62,
+      "submission_url": "https://aitoolsdirectory.com/submit-ai-tool",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_40",
+      "name": "FoundrAI",
+      "da": 60,
+      "submission_url": "https://foundr.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_41",
+      "name": "AI Depot",
+      "da": 65,
+      "submission_url": "https://aidepot.co/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_42",
+      "name": "WhatAI",
+      "da": 63,
+      "submission_url": "https://whatai.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_43",
+      "name": "AI Launch",
+      "da": 64,
+      "submission_url": "https://ailaunch.co/submit",
+      "backlink_type": "DoFollow",
+      "category": "Product Launch",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_44",
+      "name": "Free AI Tools Directory",
+      "da": 62,
+      "submission_url": "https://free-ai-tools-directory.com/submit-ai-tool/",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_45",
+      "name": "Awesome Tools Hub",
+      "da": 66,
+      "submission_url": "https://awesometoolshub.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "Tools Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_46",
+      "name": "SaaS AI Tools",
+      "da": 63,
+      "submission_url": "https://saasaitools.com/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI SaaS",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "ai_detector"
+      ]
+    },
+    {
+      "id": "dir_47",
+      "name": "AI List",
+      "da": 62,
+      "submission_url": "https://ailist.ai/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    },
+    {
+      "id": "dir_48",
+      "name": "Best AI Tools",
+      "da": 64,
+      "submission_url": "https://bestaitools.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_humanizer",
+        "grammar_checker"
+      ]
+    },
+    {
+      "id": "dir_49",
+      "name": "AI Radar",
+      "da": 61,
+      "submission_url": "https://airadar.getai.tools/submit",
+      "backlink_type": "DoFollow",
+      "category": "AI Directory",
+      "cost": "Free",
+      "target_tools": [
+        "ai_detector",
+        "citation_generator"
+      ]
+    },
+    {
+      "id": "dir_50",
+      "name": "StartupTracker",
+      "da": 65,
+      "submission_url": "https://startuptracker.io/submit",
+      "backlink_type": "DoFollow",
+      "category": "Startup Directory",
+      "cost": "Free",
+      "target_tools": [
+        "citation_generator",
+        "ai_humanizer"
+      ]
+    }
+  ]
+}

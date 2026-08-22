@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
+import ToolHireExpertBanner from '../../components/ToolHireExpertBanner';
 import { Cpu, AlertCircle, Sparkles, User, RefreshCw, BarChart2 } from 'lucide-react';
 import { ActivationContext } from '../../components/ActivationGate';
 
@@ -372,6 +373,14 @@ const AIDetector = () => {
                                 </div>
                             )}
                         </div>
+                    </div>
+
+                    <div className="lg:col-span-3">
+                        <ToolHireExpertBanner 
+                            toolName="AI Detector"
+                            headline="Concerned About Turnitin AI Detection or Academic Integrity Flags?"
+                            subheadline="Ensure 100% human authenticity. Our PhD editors will manually review, rewrite, and verify your essay with a certified plagiarism & AI-free guarantee."
+                        />
                     </div>
 
                     {/* FAQ and Content Section */}

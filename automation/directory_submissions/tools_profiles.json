@@ -1,0 +1,95 @@
+{
+  "tools": {
+    "citation_generator": {
+      "name": "Academic Wizard Citation Generator",
+      "short_name": "Citation Wizard",
+      "tagline": "Free multi-style academic referencing and in-text citation builder",
+      "website_url": "https://academicwizard.online/tools/citation-generator",
+      "category": "Academic / Education / Reference Tools",
+      "pricing": "100% Free",
+      "pricing_model": "Free",
+      "short_description": "Instant, accurate citation generator supporting APA 7th, MLA 9th, Harvard, Chicago 17th, IEEE, and Vancouver with real-time in-text citation output.",
+      "full_description": "Academic Wizard Citation Generator is an all-in-one referencing builder designed for university students, researchers, and academic writers. It automatically formats citations across websites, academic journals, books, and reports into APA 7th, MLA 9th, Harvard, Chicago 17th, IEEE, and Vancouver styles. Features live bibliography reference generation, matching in-text citations, one-click clipboard copying, and zero registration required.",
+      "keywords": [
+        "citation generator",
+        "apa citation maker",
+        "mla referencing tool",
+        "harvard referencing generator",
+        "chicago style citation",
+        "free bibliography maker",
+        "academic writing tool"
+      ],
+      "logo_url": "https://academicwizard.online/wizard-hat.svg",
+      "screenshot_url": "https://academicwizard.online/images/tools/tools-main.webp",
+      "contact_email": "admin@academicwizard.online",
+      "whatsapp": "+91 95098 93638"
+    },
+    "ai_humanizer": {
+      "name": "Academic Wizard AI Humanizer",
+      "short_name": "AI Text Humanizer",
+      "tagline": "Convert robotic AI-generated text into natural, bypass-ready academic prose",
+      "website_url": "https://academicwizard.online/tools/ai-humanizer",
+      "category": "AI / Writing Assistants / Text Editors",
+      "pricing": "Free Trial / Freemium",
+      "pricing_model": "Freemium",
+      "short_description": "Smart academic text humanizer that re-synthesizes AI drafts into natural, human-written academic prose with authentic sentence variance and flow.",
+      "full_description": "Academic Wizard AI Humanizer helps students and researchers refine AI-assisted drafts into polished, authentic human writing. It adjusts vocabulary cadence, sentence structure burstiness, and tone to ensure ethical academic clarity and avoid repetitive robotic phrasing. Seamlessly integrates with our free grammar checker and citation suite.",
+      "keywords": [
+        "ai humanizer",
+        "humanize ai text",
+        "bypass ai detection",
+        "academic text humanizer",
+        "essay rewriter",
+        "ai to human text converter"
+      ],
+      "logo_url": "https://academicwizard.online/wizard-hat.svg",
+      "screenshot_url": "https://academicwizard.online/images/tools/tools-main.webp",
+      "contact_email": "admin@academicwizard.online",
+      "whatsapp": "+91 95098 93638"
+    },
+    "ai_detector": {
+      "name": "Academic Wizard AI Detector",
+      "short_name": "AI Essay Detector",
+      "tagline": "Free multi-layer AI writing and originality checker for academic essays",
+      "website_url": "https://academicwizard.online/tools/ai-detector",
+      "category": "AI / Plagiarism & Integrity / Education",
+      "pricing": "100% Free",
+      "pricing_model": "Free",
+      "short_description": "Instant essay AI detection scoring system analyzing perplexity, burstiness, and structural patterns to detect GPT-4, Claude, and Gemini text.",
+      "full_description": "Academic Wizard AI Detector analyzes essay text for synthetic language patterns, measuring vocabulary predictability and structural repetition. Built to help students audit their work before final academic submission.",
+      "keywords": [
+        "ai detector",
+        "essay ai checker",
+        "free ai detector",
+        "check ai writing",
+        "turnitin ai alternative"
+      ],
+      "logo_url": "https://academicwizard.online/wizard-hat.svg",
+      "screenshot_url": "https://academicwizard.online/images/tools/tools-main.webp",
+      "contact_email": "admin@academicwizard.online",
+      "whatsapp": "+91 95098 93638"
+    },
+    "grammar_checker": {
+      "name": "Academic Wizard Grammar Editor",
+      "short_name": "Academic Grammar Checker",
+      "tagline": "Real-time academic grammar, syntax, and clarity checker for research papers",
+      "website_url": "https://academicwizard.online/tools/grammar-checker",
+      "category": "Education / Grammar / Writing Tools",
+      "pricing": "100% Free",
+      "pricing_model": "Free",
+      "short_description": "Comprehensive academic proofreading and grammar analysis tool tailored for formal research, dissertations, and university essays.",
+      "full_description": "Academic Wizard Grammar Editor scans academic writing for subject-verb agreement, dangling modifiers, passive voice excess, and formatting precision. Offers instant suggestions for academic vocabulary enhancement.",
+      "keywords": [
+        "grammar checker",
+        "academic proofreader",
+        "online grammar editor",
+        "essay grammar check",
+        "free proofreading tool"
+      ],
+      "logo_url": "https://academicwizard.online/wizard-hat.svg",
+      "screenshot_url": "https://academicwizard.online/images/tools/tools-main.webp",
+      "contact_email": "admin@academicwizard.online",
+      "whatsapp": "+91 95098 93638"
+    }
+  }
+}

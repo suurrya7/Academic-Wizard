@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
+import ToolHireExpertBanner from '../../components/ToolHireExpertBanner';
 import { CheckCircle, AlertTriangle, RefreshCw, Copy, Check } from 'lucide-react';
 import { ActivationContext } from '../../components/ActivationGate';
 
@@ -270,6 +271,14 @@ const GrammarChecker = () => {
                                 </div>
                             )}
                         </div>
+                    </div>
+
+                    <div className="lg:col-span-3">
+                        <ToolHireExpertBanner 
+                            toolName="Grammar & Proofreading Editor"
+                            headline="Need Professional Academic Proofreading by Human PhD Editors?"
+                            subheadline="Automated tools miss complex academic syntax, tone, and logical flow. Have our subject-matter editors meticulously polish your dissertation, thesis, or essay."
+                        />
                     </div>
 
                     {/* FAQ and Content Section */}

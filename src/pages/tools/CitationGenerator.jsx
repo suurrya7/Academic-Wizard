@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
+import ToolHireExpertBanner from '../../components/ToolHireExpertBanner';
 import { Copy, Trash2, Plus, Download, Check } from 'lucide-react';
 import { ActivationContext } from '../../components/ActivationGate';
 
@@ -654,6 +655,14 @@ const CitationGenerator = () => {
                                 </div>
                             )}
                         </div>
+                    </div>
+
+                    <div className="lg:col-span-3">
+                        <ToolHireExpertBanner 
+                            toolName="Citation Generator"
+                            headline="Need Complex Multi-Volume or OSCOLA / Harvard Citations Formatted?"
+                            subheadline="Don't lose marks on citation technicalities. Our academic researchers format your bibliography, verify every DOI, and align in-text references with university guidelines."
+                        />
                     </div>
 
                     {/* FAQ and Content Section */}
