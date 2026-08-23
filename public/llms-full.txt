@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-22
+        **Last updated**: 2026-08-23
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -238,6 +238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[NVivo 26: Practical Workflow to Minimize Coding Bias in Theses](https://academicwizard.online/blog/nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses)**
+  - Excerpt: Learn to manage qualitative coding with precision. Our 2026 workflow helps you minimize subjective bias and build a robust, defense-ready research analysis.
+  - Keywords: minimizing bias in qualitative analysis with NVivo, qualitative coding best practices, NVivo thematic analysis tutorial, dissertation data management, thematic coding software tips
+  - Target Region: Canada
+  - Published: 2026-08-23
+
 - **[Mastering NVivo 26: A Strategy for Error-Free Qualitative Coding](https://academicwizard.online/blog/mastering-nvivo-26-a-strategy-for-error-free-qualitative-coding)**
   - Excerpt: Streamline your PhD qualitative analysis. Learn a robust, bias-reducing coding workflow in NVivo 26 to keep your dissertation data organized and accurate.
   - Keywords: nvivo 26 qualitative coding workflow, reducing thematic analysis bias, qualitative data organization tips, nvivo software best practices, phd dissertation coding guide
@@ -455,6 +461,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Beyond APA 7: Managing Complex Multi-Source Citations for PhD Papers](https://academicwizard.online/blog/beyond-apa-7-managing-complex-multi-source-citations-for-phd-papers)**
+  - Excerpt: Master the nuances of APA 7 citation for complex sources. Ensure your PhD thesis meets strict academic standards with these essential formatting hacks.
+  - Keywords: APA 7th edition complex citation rules, academic citation formatting guide, multi-author in-text citation APA 7, digital source citation styles, postgraduate research referencing
+  - Target Region: UK
+  - Published: 2026-08-23
 
 - **[APA 7th Edition: Navigating New Citation Rules for Digital Sources](https://academicwizard.online/blog/apa-7th-edition-navigating-new-citation-rules-for-digital-sources)**
   - Excerpt: Avoid common citation penalties. This guide clarifies the latest APA 7th Edition rules for citing diverse digital media in your academic research.
@@ -742,6 +754,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Prompting: Building Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-prompting-building-your-literature-review-outline)**
+  - Excerpt: Stuck on your lit review? Discover ethical AI prompting techniques to structure your arguments and synthesize sources while maintaining your unique voice.
+  - Keywords: ethical AI literature review outline, academic research tools 2026, literature review synthesis methods, AI in student research ethics, scaffolding dissertation chapters
+  - Target Region: Australia
+  - Published: 2026-08-23
+
 - **[Structuring Your Literature Review: Ethical AI Scaffolding](https://academicwizard.online/blog/structuring-your-literature-review-ethical-ai-scaffolding)**
   - Excerpt: Learn how to ethically use AI tools to scaffold your literature review outline while maintaining your academic voice and ensuring deep synthesis.
   - Keywords: ethical AI use for lit review outlining, literature review synthesis techniques, AI for research organization, academic voice preservation, thesis research workflow
@@ -887,6 +905,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI Hallucinations: How to Dispute Incorrect Similarity Flags](https://academicwizard.online/blog/turnitin-ai-hallucinations-how-to-dispute-incorrect-similarity-flags)**
+  - Excerpt: Flagged for AI by Turnitin? Learn how to audit your writing history and gather the evidence needed to successfully dispute false positives in your work.
+  - Keywords: dispute Turnitin AI detection false positives, Turnitin similarity report interpretation, academic integrity appeal process, AI writing detector accuracy, prove original student writing
+  - Target Region: USA
+  - Published: 2026-08-23
 
 - **[Turnitin AI Detection: Why Your Original Writing Might Get Flagged](https://academicwizard.online/blog/turnitin-ai-detection-why-your-original-writing-might-get-flagged)**
   - Excerpt: Is your original academic writing being flagged by Turnitin? Discover the technical reasons behind AI false positives and how to verify your integrity.

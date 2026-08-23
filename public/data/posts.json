@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Hallucinations: How to Dispute Incorrect Similarity Flags",
+    "slug": "turnitin-ai-hallucinations-how-to-dispute-incorrect-similarity-flags",
+    "excerpt": "Flagged for AI by Turnitin? Learn how to audit your writing history and gather the evidence needed to successfully dispute false positives in your work.",
+    "keywords": [
+      "dispute Turnitin AI detection false positives",
+      "Turnitin similarity report interpretation",
+      "academic integrity appeal process",
+      "AI writing detector accuracy",
+      "prove original student writing"
+    ],
+    "primaryKeyword": "dispute Turnitin AI detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-23T02:55:39.714614+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-hallucinations-how-to-dispute-incorrect-similarity-flags.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Complex Multi-Source Citations for PhD Papers",
+    "slug": "beyond-apa-7-managing-complex-multi-source-citations-for-phd-papers",
+    "excerpt": "Master the nuances of APA 7 citation for complex sources. Ensure your PhD thesis meets strict academic standards with these essential formatting hacks.",
+    "keywords": [
+      "APA 7th edition complex citation rules",
+      "academic citation formatting guide",
+      "multi-author in-text citation APA 7",
+      "digital source citation styles",
+      "postgraduate research referencing"
+    ],
+    "primaryKeyword": "APA 7th edition complex citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-23T02:56:08.154546+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-complex-multi-source-citations-for-phd-papers.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo 26: Practical Workflow to Minimize Coding Bias in Theses",
+    "slug": "nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses",
+    "excerpt": "Learn to manage qualitative coding with precision. Our 2026 workflow helps you minimize subjective bias and build a robust, defense-ready research analysis.",
+    "keywords": [
+      "minimizing bias in qualitative analysis with NVivo",
+      "qualitative coding best practices",
+      "NVivo thematic analysis tutorial",
+      "dissertation data management",
+      "thematic coding software tips"
+    ],
+    "primaryKeyword": "minimizing bias in qualitative analysis with NVivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-23T02:56:34.324398+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Ethical AI Prompting: Building Your Literature Review Outline",
+    "slug": "ethical-ai-prompting-building-your-literature-review-outline",
+    "excerpt": "Stuck on your lit review? Discover ethical AI prompting techniques to structure your arguments and synthesize sources while maintaining your unique voice.",
+    "keywords": [
+      "ethical AI literature review outline",
+      "academic research tools 2026",
+      "literature review synthesis methods",
+      "AI in student research ethics",
+      "scaffolding dissertation chapters"
+    ],
+    "primaryKeyword": "ethical AI literature review outline",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-23T02:57:01.147957+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-prompting-building-your-literature-review-outline.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Why Your Original Writing Might Get Flagged",
     "slug": "turnitin-ai-detection-why-your-original-writing-might-get-flagged",
     "excerpt": "Is your original academic writing being flagged by Turnitin? Discover the technical reasons behind AI false positives and how to verify your integrity.",
