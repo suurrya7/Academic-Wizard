@@ -14,3 +14,8 @@ if (existsSync(path.join(dist, 'index.html'))) {
 
 // GitHub Pages specific: Disable Jekyll
 await writeFile(path.join(dist, '.nojekyll'), '');
+
+// Copy .htaccess for Apache / Bluehost servers
+if (existsSync(path.join(root, 'public', '.htaccess'))) {
+  await copyFile(path.join(root, 'public', '.htaccess'), path.join(dist, '.htaccess'));
+}
