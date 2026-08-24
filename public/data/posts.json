@@ -1,5 +1,105 @@
 [
   {
+    "title": "Recovering From Turnitin AI Over-Detection: A Professional Audit Guide",
+    "slug": "recovering-from-turnitin-ai-over-detection-a-professional-audit-guide",
+    "excerpt": "Caught in a Turnitin AI false positive? Learn the systematic audit process to verify your academic integrity and dispute incorrect similarity report flags.",
+    "keywords": [
+      "how to challenge incorrect Turnitin AI similarity scores",
+      "Turnitin AI false positive appeal",
+      "academic integrity audit tips",
+      "humanizing AI generated text",
+      "Turnitin report analysis"
+    ],
+    "primaryKeyword": "how to challenge incorrect Turnitin AI similarity scores",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-24T02:56:57.063646+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/recovering-from-turnitin-ai-over-detection-a-professional-audit-guide.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Zotero for Massive Theses: Solving Metadata Conflicts and Sync Errors",
+    "slug": "zotero-for-massive-theses-solving-metadata-conflicts-and-sync-errors",
+    "excerpt": "Don't let sync errors derail your PhD. Discover advanced workflows to manage 100+ sources, fix metadata corruption, and stabilize Zotero for long-form papers.",
+    "keywords": [
+      "Zotero library sync errors for large dissertation projects",
+      "Zotero PDF metadata fix",
+      "organizing large Zotero libraries",
+      "Zotero cloud storage limits",
+      "managing complex bibliographies"
+    ],
+    "primaryKeyword": "Zotero library sync errors for large dissertation projects",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-24T02:57:23.018536+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-theses-solving-metadata-conflicts-and-sync-errors.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Mastering NVivo 26: Eliminating Researcher Bias in Thematic Analysis",
+    "slug": "mastering-nvivo-26-eliminating-researcher-bias-in-thematic-analysis",
+    "excerpt": "Ensure your qualitative analysis stands up to scrutiny. Master NVivo 26 protocols to identify and eliminate coding bias during your thematic research phase.",
+    "keywords": [
+      "how to reduce thematic coding bias in NVivo",
+      "NVivo 26 qualitative coding workflow",
+      "thematic drift troubleshooting",
+      "reflexivity in qualitative research",
+      "software-assisted analysis validity"
+    ],
+    "primaryKeyword": "how to reduce thematic coding bias in NVivo",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-24T02:57:48.697888+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-26-eliminating-researcher-bias-in-thematic-analysis.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Navigating Citation Rules for Complex Digital Media",
+    "slug": "beyond-apa-7-navigating-citation-rules-for-complex-digital-media",
+    "excerpt": "Confused by APA 7 citation rules for digital media? Solve common formatting traps and ensure your bibliography is perfectly compliant with 2026 standards.",
+    "keywords": [
+      "APA 7th edition formatting for complex digital sources",
+      "citing social media in APA 7",
+      "APA 7 reference list common errors",
+      "formatting digital archival media",
+      "academic citation guidelines 2026"
+    ],
+    "primaryKeyword": "APA 7th edition formatting for complex digital sources",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-24T02:58:15.478387+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-navigating-citation-rules-for-complex-digital-media.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
     "title": "Turnitin AI Hallucinations: How to Dispute Incorrect Similarity Flags",
     "slug": "turnitin-ai-hallucinations-how-to-dispute-incorrect-similarity-flags",
     "excerpt": "Flagged for AI by Turnitin? Learn how to audit your writing history and gather the evidence needed to successfully dispute false positives in your work.",

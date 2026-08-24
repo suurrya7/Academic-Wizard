@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-23
+        **Last updated**: 2026-08-24
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -238,6 +238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Zotero for Massive Theses: Solving Metadata Conflicts and Sync Errors](https://academicwizard.online/blog/zotero-for-massive-theses-solving-metadata-conflicts-and-sync-errors)**
+  - Excerpt: Don't let sync errors derail your PhD. Discover advanced workflows to manage 100+ sources, fix metadata corruption, and stabilize Zotero for long-form papers.
+  - Keywords: Zotero library sync errors for large dissertation projects, Zotero PDF metadata fix, organizing large Zotero libraries, Zotero cloud storage limits, managing complex bibliographies
+  - Target Region: UK
+  - Published: 2026-08-24
+
 - **[NVivo 26: Practical Workflow to Minimize Coding Bias in Theses](https://academicwizard.online/blog/nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses)**
   - Excerpt: Learn to manage qualitative coding with precision. Our 2026 workflow helps you minimize subjective bias and build a robust, defense-ready research analysis.
   - Keywords: minimizing bias in qualitative analysis with NVivo, qualitative coding best practices, NVivo thematic analysis tutorial, dissertation data management, thematic coding software tips
@@ -461,6 +467,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Beyond APA 7: Navigating Citation Rules for Complex Digital Media](https://academicwizard.online/blog/beyond-apa-7-navigating-citation-rules-for-complex-digital-media)**
+  - Excerpt: Confused by APA 7 citation rules for digital media? Solve common formatting traps and ensure your bibliography is perfectly compliant with 2026 standards.
+  - Keywords: APA 7th edition formatting for complex digital sources, citing social media in APA 7, APA 7 reference list common errors, formatting digital archival media, academic citation guidelines 2026
+  - Target Region: Canada
+  - Published: 2026-08-24
 
 - **[Beyond APA 7: Managing Complex Multi-Source Citations for PhD Papers](https://academicwizard.online/blog/beyond-apa-7-managing-complex-multi-source-citations-for-phd-papers)**
   - Excerpt: Master the nuances of APA 7 citation for complex sources. Ensure your PhD thesis meets strict academic standards with these essential formatting hacks.
@@ -905,6 +917,18 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Recovering From Turnitin AI Over-Detection: A Professional Audit Guide](https://academicwizard.online/blog/recovering-from-turnitin-ai-over-detection-a-professional-audit-guide)**
+  - Excerpt: Caught in a Turnitin AI false positive? Learn the systematic audit process to verify your academic integrity and dispute incorrect similarity report flags.
+  - Keywords: how to challenge incorrect Turnitin AI similarity scores, Turnitin AI false positive appeal, academic integrity audit tips, humanizing AI generated text, Turnitin report analysis
+  - Target Region: USA
+  - Published: 2026-08-24
+
+- **[Mastering NVivo 26: Eliminating Researcher Bias in Thematic Analysis](https://academicwizard.online/blog/mastering-nvivo-26-eliminating-researcher-bias-in-thematic-analysis)**
+  - Excerpt: Ensure your qualitative analysis stands up to scrutiny. Master NVivo 26 protocols to identify and eliminate coding bias during your thematic research phase.
+  - Keywords: how to reduce thematic coding bias in NVivo, NVivo 26 qualitative coding workflow, thematic drift troubleshooting, reflexivity in qualitative research, software-assisted analysis validity
+  - Target Region: Australia
+  - Published: 2026-08-24
 
 - **[Turnitin AI Hallucinations: How to Dispute Incorrect Similarity Flags](https://academicwizard.online/blog/turnitin-ai-hallucinations-how-to-dispute-incorrect-similarity-flags)**
   - Excerpt: Flagged for AI by Turnitin? Learn how to audit your writing history and gather the evidence needed to successfully dispute false positives in your work.
