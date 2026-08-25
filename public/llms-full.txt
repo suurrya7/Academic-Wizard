@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-24
+        **Last updated**: 2026-08-25
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -238,6 +238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Zotero for Massive Projects: Managing 100+ Sources Without Errors](https://academicwizard.online/blog/zotero-for-massive-projects-managing-100-sources-without-errors)**
+  - Excerpt: Is your Zotero library becoming unmanageable? Master advanced organization hacks to sync 100+ sources seamlessly for your 2026 dissertation.
+  - Keywords: zotero citation management for large dissertations, zotero metadata cleanup, organizing 100 plus sources, zotero pdf storage strategy, academic bibliography tools
+  - Target Region: UK
+  - Published: 2026-08-25
+
 - **[Zotero for Massive Theses: Solving Metadata Conflicts and Sync Errors](https://academicwizard.online/blog/zotero-for-massive-theses-solving-metadata-conflicts-and-sync-errors)**
   - Excerpt: Don't let sync errors derail your PhD. Discover advanced workflows to manage 100+ sources, fix metadata corruption, and stabilize Zotero for long-form papers.
   - Keywords: Zotero library sync errors for large dissertation projects, Zotero PDF metadata fix, organizing large Zotero libraries, Zotero cloud storage limits, managing complex bibliographies
@@ -467,6 +473,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7 Tables and Figures: Common Formatting Traps to Avoid](https://academicwizard.online/blog/apa-7-tables-and-figures-common-formatting-traps-to-avoid)**
+  - Excerpt: Don't lose points on simple formatting errors. Learn the exact APA 7 rules for tables and figures to ensure your paper meets 2026 academic standards.
+  - Keywords: apa 7th edition table and figure formatting rules, apa 7 visual element guidelines, fixing citation penalties, professional academic formatting, apa 7 caption placement
+  - Target Region: Canada
+  - Published: 2026-08-25
 
 - **[Beyond APA 7: Navigating Citation Rules for Complex Digital Media](https://academicwizard.online/blog/beyond-apa-7-navigating-citation-rules-for-complex-digital-media)**
   - Excerpt: Confused by APA 7 citation rules for digital media? Solve common formatting traps and ensure your bibliography is perfectly compliant with 2026 standards.
@@ -917,6 +929,18 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI False Positives: A 2026 Audit Guide for Complex Papers](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers)**
+  - Excerpt: Received a high AI score by mistake? Learn how to audit your writing and provide concrete evidence to dispute Turnitin false positives in 2026.
+  - Keywords: how to challenge turnitin ai detection false positives, academic integrity audit, turnitin similarity report analysis, disputing ai writing flags, proving human authorship
+  - Target Region: USA
+  - Published: 2026-08-25
+
+- **[Qualitative Data Overload: NVivo 26 Thematic Coding Essentials](https://academicwizard.online/blog/qualitative-data-overload-nvivo-26-thematic-coding-essentials)**
+  - Excerpt: Struggling with messy qualitative data? Discover our 2026 framework for accurate thematic coding and bias reduction in your PhD thesis using NVivo.
+  - Keywords: how to perform thematic analysis in nvivo without bias, nvivo qualitative coding workflow, reducing researcher bias, coding drift in qualitative analysis, nvivo 26 training for researchers
+  - Target Region: Australia
+  - Published: 2026-08-25
 
 - **[Recovering From Turnitin AI Over-Detection: A Professional Audit Guide](https://academicwizard.online/blog/recovering-from-turnitin-ai-over-detection-a-professional-audit-guide)**
   - Excerpt: Caught in a Turnitin AI false positive? Learn the systematic audit process to verify your academic integrity and dispute incorrect similarity report flags.

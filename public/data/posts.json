@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Audit Guide for Complex Papers",
+    "slug": "turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers",
+    "excerpt": "Received a high AI score by mistake? Learn how to audit your writing and provide concrete evidence to dispute Turnitin false positives in 2026.",
+    "keywords": [
+      "how to challenge turnitin ai detection false positives",
+      "academic integrity audit",
+      "turnitin similarity report analysis",
+      "disputing ai writing flags",
+      "proving human authorship"
+    ],
+    "primaryKeyword": "how to challenge turnitin ai detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-25T02:52:09.565695+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Zotero for Massive Projects: Managing 100+ Sources Without Errors",
+    "slug": "zotero-for-massive-projects-managing-100-sources-without-errors",
+    "excerpt": "Is your Zotero library becoming unmanageable? Master advanced organization hacks to sync 100+ sources seamlessly for your 2026 dissertation.",
+    "keywords": [
+      "zotero citation management for large dissertations",
+      "zotero metadata cleanup",
+      "organizing 100 plus sources",
+      "zotero pdf storage strategy",
+      "academic bibliography tools"
+    ],
+    "primaryKeyword": "zotero citation management for large dissertations",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-25T02:52:35.697437+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-projects-managing-100-sources-without-errors.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Qualitative Data Overload: NVivo 26 Thematic Coding Essentials",
+    "slug": "qualitative-data-overload-nvivo-26-thematic-coding-essentials",
+    "excerpt": "Struggling with messy qualitative data? Discover our 2026 framework for accurate thematic coding and bias reduction in your PhD thesis using NVivo.",
+    "keywords": [
+      "how to perform thematic analysis in nvivo without bias",
+      "nvivo qualitative coding workflow",
+      "reducing researcher bias",
+      "coding drift in qualitative analysis",
+      "nvivo 26 training for researchers"
+    ],
+    "primaryKeyword": "how to perform thematic analysis in nvivo without bias",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-25T02:53:02.571757+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/qualitative-data-overload-nvivo-26-thematic-coding-essentials.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "APA 7 Tables and Figures: Common Formatting Traps to Avoid",
+    "slug": "apa-7-tables-and-figures-common-formatting-traps-to-avoid",
+    "excerpt": "Don't lose points on simple formatting errors. Learn the exact APA 7 rules for tables and figures to ensure your paper meets 2026 academic standards.",
+    "keywords": [
+      "apa 7th edition table and figure formatting rules",
+      "apa 7 visual element guidelines",
+      "fixing citation penalties",
+      "professional academic formatting",
+      "apa 7 caption placement"
+    ],
+    "primaryKeyword": "apa 7th edition table and figure formatting rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-25T02:53:28.531681+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-tables-and-figures-common-formatting-traps-to-avoid.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Recovering From Turnitin AI Over-Detection: A Professional Audit Guide",
     "slug": "recovering-from-turnitin-ai-over-detection-a-professional-audit-guide",
     "excerpt": "Caught in a Turnitin AI false positive? Learn the systematic audit process to verify your academic integrity and dispute incorrect similarity report flags.",
