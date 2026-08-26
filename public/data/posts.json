@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Turnitin Similarity Reports: A Guide for Genuine Student Voices",
+    "slug": "fixing-turnitin-similarity-reports-a-guide-for-genuine-student-voices",
+    "excerpt": "Received a high AI flag on your original paper? Learn how to audit your draft, verify your writing integrity, and professionalize your dispute process.",
+    "keywords": [
+      "how to contest inaccurate Turnitin AI similarity scores",
+      "Turnitin false positive appeal",
+      "academic integrity audit",
+      "human-authored content validation",
+      "understanding AI detection reports"
+    ],
+    "primaryKeyword": "how to contest inaccurate Turnitin AI similarity scores",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-26T02:58:05.263805+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-similarity-reports-a-guide-for-genuine-student-voices.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Zotero to Obsidian: Syncing Your Research for 2026 Dissertation Success",
+    "slug": "zotero-to-obsidian-syncing-your-research-for-2026-dissertation-success",
+    "excerpt": "Struggling to connect your sources to your ideas? Discover the ultimate 2026 workflow to link Zotero citations directly to your Obsidian research notes.",
+    "keywords": [
+      "integrating Zotero with Obsidian for thesis research",
+      "academic knowledge management",
+      "Zotero bibliography automation",
+      "thesis literature organization",
+      "research workflow optimization"
+    ],
+    "primaryKeyword": "integrating Zotero with Obsidian for thesis research",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-26T02:58:47.438424+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-obsidian-syncing-your-research-for-2026-dissertation-success.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "NVivo Thematic Coding: Reducing Researcher Bias in Qualitative Theses",
+    "slug": "nvivo-thematic-coding-reducing-researcher-bias-in-qualitative-theses",
+    "excerpt": "Are your coding patterns biased? Master professional NVivo strategies to ensure rigorous, objective thematic analysis for your qualitative thesis.",
+    "keywords": [
+      "minimizing coding bias in qualitative NVivo analysis",
+      "thematic coding methodology",
+      "qualitative thesis software",
+      "NVivo reliability checks",
+      "research objectivity techniques"
+    ],
+    "primaryKeyword": "minimizing coding bias in qualitative NVivo analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-26T02:59:12.661824+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-thematic-coding-reducing-researcher-bias-in-qualitative-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Mastering Complex Multi-Author Citations in 2026",
+    "slug": "apa-7th-edition-mastering-complex-multi-author-citations-in-2026",
+    "excerpt": "Stop losing points on formatting. Get the definitive guide to handling complex multi-author APA 7 citations correctly in your 2026 academic paper.",
+    "keywords": [
+      "APA 7th edition formatting for multi-author sources",
+      "APA citation pitfalls",
+      "academic reference list rules",
+      "in-text citation guidelines",
+      "scholarly formatting help"
+    ],
+    "primaryKeyword": "APA 7th edition formatting for multi-author sources",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-26T02:59:39.145219+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-mastering-complex-multi-author-citations-in-2026.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI False Positives: A 2026 Audit Guide for Complex Papers",
     "slug": "turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers",
     "excerpt": "Received a high AI score by mistake? Learn how to audit your writing and provide concrete evidence to dispute Turnitin false positives in 2026.",

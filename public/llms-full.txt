@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-25
+        **Last updated**: 2026-08-26
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -237,6 +237,18 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero to Obsidian: Syncing Your Research for 2026 Dissertation Success](https://academicwizard.online/blog/zotero-to-obsidian-syncing-your-research-for-2026-dissertation-success)**
+  - Excerpt: Struggling to connect your sources to your ideas? Discover the ultimate 2026 workflow to link Zotero citations directly to your Obsidian research notes.
+  - Keywords: integrating Zotero with Obsidian for thesis research, academic knowledge management, Zotero bibliography automation, thesis literature organization, research workflow optimization
+  - Target Region: UK
+  - Published: 2026-08-26
+
+- **[NVivo Thematic Coding: Reducing Researcher Bias in Qualitative Theses](https://academicwizard.online/blog/nvivo-thematic-coding-reducing-researcher-bias-in-qualitative-theses)**
+  - Excerpt: Are your coding patterns biased? Master professional NVivo strategies to ensure rigorous, objective thematic analysis for your qualitative thesis.
+  - Keywords: minimizing coding bias in qualitative NVivo analysis, thematic coding methodology, qualitative thesis software, NVivo reliability checks, research objectivity techniques
+  - Target Region: Australia
+  - Published: 2026-08-26
 
 - **[Zotero for Massive Projects: Managing 100+ Sources Without Errors](https://academicwizard.online/blog/zotero-for-massive-projects-managing-100-sources-without-errors)**
   - Excerpt: Is your Zotero library becoming unmanageable? Master advanced organization hacks to sync 100+ sources seamlessly for your 2026 dissertation.
@@ -473,6 +485,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Mastering Complex Multi-Author Citations in 2026](https://academicwizard.online/blog/apa-7th-edition-mastering-complex-multi-author-citations-in-2026)**
+  - Excerpt: Stop losing points on formatting. Get the definitive guide to handling complex multi-author APA 7 citations correctly in your 2026 academic paper.
+  - Keywords: APA 7th edition formatting for multi-author sources, APA citation pitfalls, academic reference list rules, in-text citation guidelines, scholarly formatting help
+  - Target Region: Canada
+  - Published: 2026-08-26
 
 - **[APA 7 Tables and Figures: Common Formatting Traps to Avoid](https://academicwizard.online/blog/apa-7-tables-and-figures-common-formatting-traps-to-avoid)**
   - Excerpt: Don't lose points on simple formatting errors. Learn the exact APA 7 rules for tables and figures to ensure your paper meets 2026 academic standards.
@@ -929,6 +947,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Fixing Turnitin Similarity Reports: A Guide for Genuine Student Voices](https://academicwizard.online/blog/fixing-turnitin-similarity-reports-a-guide-for-genuine-student-voices)**
+  - Excerpt: Received a high AI flag on your original paper? Learn how to audit your draft, verify your writing integrity, and professionalize your dispute process.
+  - Keywords: how to contest inaccurate Turnitin AI similarity scores, Turnitin false positive appeal, academic integrity audit, human-authored content validation, understanding AI detection reports
+  - Target Region: USA
+  - Published: 2026-08-26
 
 - **[Turnitin AI False Positives: A 2026 Audit Guide for Complex Papers](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers)**
   - Excerpt: Received a high AI score by mistake? Learn how to audit your writing and provide concrete evidence to dispute Turnitin false positives in 2026.
