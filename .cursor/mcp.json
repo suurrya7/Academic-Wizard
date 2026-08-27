@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "keywordtool-guest": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.keywordtool.io/guest"]
+    },
+    "keywordtool-pro": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.keywordtool.io"]
+    }
+  }
+}

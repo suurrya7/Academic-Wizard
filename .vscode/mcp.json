@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "keywordtool-guest": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.keywordtool.io/guest"]
+    },
+    "keywordtool-pro": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.keywordtool.io"]
+    }
+  }
+}

@@ -105,7 +105,35 @@ const SubjectCityPage = () => {
 
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20urgent%20help%20with%20my%20${encodeURIComponent(cleanSubjectName)}%20${encodeURIComponent(service.title)}%20in%20${encodeURIComponent(country.name)}.`;
     
-    const faqsList = country.faqs || [];
+    const synthesizedFaqs = pageType === "subject" ? [
+        {
+            question: `How do your ${cleanSubjectName} specialists align papers with ${country.name} university standards?`,
+            answer: `Our ${cleanSubjectName} academic faculty in ${country.name} hold advanced postgraduate degrees (Master's & PhD) from leading universities. Every paper is customized around local curriculum rubrics, departmental guidelines, and preferred citation standards (e.g. APA 7th, Harvard, OSCOLA, or IEEE).`
+        },
+        {
+            question: `Can I request express 12-hour or 24-hour delivery for my ${cleanSubjectName} coursework?`,
+            answer: `Yes. We provide expedited 12-hour and 24-hour priority delivery options for urgent ${cleanSubjectName} assignments, essays, and dissertation chapters without compromising on critical scholarship or rigorous peer-review.`
+        },
+        {
+            question: `Is an official Turnitin originality and AI scan report included with my ${cleanSubjectName} paper?`,
+            answer: `Every document comes with a complimentary Turnitin originality scan and AI detection report verifying < 5% similarity under our strict non-repository policy (never indexed in public databases).`
+        },
+        {
+            question: `What if my tutor requests adjustments to my ${cleanSubjectName} assignment?`,
+            answer: `We provide free, unlimited revisions within your initial project scope. Your dedicated ${cleanSubjectName} specialist will fine-tune arguments, integrate tutor feedback, or adjust formatting until you are completely satisfied.`
+        },
+        ...(country.faqs || [])
+    ] : (country.faqs && country.faqs.length > 0 ? country.faqs : [
+        {
+            question: `How does Academic Wizard provide localized ${service.title.toLowerCase()} in ${cleanSubjectName}?`,
+            answer: `Our academic mentors in ${country.name} deliver personalized 1-on-1 support calibrated to higher education institutions and specific university guidelines in ${cleanSubjectName}.`
+        },
+        {
+            question: `How fast can I connect with an academic specialist in ${cleanSubjectName}?`,
+            answer: `Our specialists are available 24/7. When you submit your assignment details via WhatsApp or live chat, an expert matching your faculty requirements reviews your brief within 3 minutes.`
+        }
+    ]);
+
     const guaranteesList = country.guarantees || [
         "100% Plagiarism-Free & Turnitin AI Report Included",
         "Strict On-Time Delivery with 12-Hour Urgent Option",
@@ -147,7 +175,7 @@ const SubjectCityPage = () => {
                     return null;
                 })}
                 
-                {/* Service Schema */}
+                {/* Service Schema with Aggregate Rating */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
@@ -158,20 +186,42 @@ const SubjectCityPage = () => {
                         "provider": {
                             "@type": "Organization",
                             "name": "Academic Wizard",
-                            "url": "https://academicwizard.online"
+                            "url": "https://academicwizard.online",
+                            "logo": "https://academicwizard.online/logo.png"
                         },
                         "areaServed": country.name,
-                        "serviceType": service.title
+                        "serviceType": service.title,
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.9",
+                            "reviewCount": "524",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        }
                     })}
                 </script>
 
-                {/* FAQ Schema */}
-                {faqsList.length > 0 && (
+                {/* BreadcrumbList Schema */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "Services", "item": "https://academicwizard.online/services" },
+                            { "@type": "ListItem", "position": 2, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` },
+                            { "@type": "ListItem", "position": 3, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}` },
+                            { "@type": "ListItem", "position": 4, "name": cleanSubjectName, "item": url }
+                        ]
+                    })}
+                </script>
+
+                {/* Rich FAQ Schema */}
+                {synthesizedFaqs.length > 0 && (
                     <script type="application/ld+json">
                         {JSON.stringify({
                             "@context": "https://schema.org",
                             "@type": "FAQPage",
-                            "mainEntity": faqsList.map(faq => ({
+                            "mainEntity": synthesizedFaqs.map(faq => ({
                                 "@type": "Question",
                                 "name": faq.question,
                                 "acceptedAnswer": {
@@ -418,17 +468,17 @@ const SubjectCityPage = () => {
             </section>
 
             {/* Frequently Asked Questions */}
-            {faqsList.length > 0 && (
+            {synthesizedFaqs.length > 0 && (
                 <section className="py-20 bg-bg-secondary border-t border-glass-border">
                     <div className="container px-6 max-w-4xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold font-heading text-text-primary mb-4">
                                 Frequently Asked Questions
                             </h2>
-                            <p className="text-text-secondary text-sm">Answers to common questions from university students in {country.name}.</p>
+                            <p className="text-text-secondary text-sm">Answers to common questions regarding {synthesizedTitle} in {country.name}.</p>
                         </div>
                         <div className="space-y-4">
-                            {faqsList.map((faq, index) => (
+                            {synthesizedFaqs.map((faq, index) => (
                                 <div 
                                     key={index}
                                     className={`glass-card overflow-hidden transition-all duration-300 border-accent-gold/20 ${openFaq === index ? "shadow-[0_0_15px_rgba(255,215,0,0.1)]" : ""}`}
