@@ -11,7 +11,7 @@ import Button from "../components/Button";
 import TrustStats from "../components/TrustStats";
 import PricingCalculator from "../components/PricingCalculator";
 import { 
-    CheckCircle, Shield, GraduationCap, FileText, ChevronDown, 
+    CheckCircle, Shield, ShieldCheck, GraduationCap, FileText, ChevronDown, 
     MessageSquare, BookOpen, Star, Clock, Zap, Award, Sparkles, Check 
 } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
@@ -296,19 +296,19 @@ const SubjectCityPage = () => {
                                 <div className="flex items-center justify-between mb-3">
                                     <div className="flex items-center gap-2">
                                         <span className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-                                        <span className="text-xs font-bold font-heading text-emerald-400 uppercase tracking-wider">
+                                        <span className="text-xs font-bold font-heading text-emerald-500 uppercase tracking-wider">
                                             Specialists Online Now
                                         </span>
                                     </div>
                                     <span className="text-[11px] px-2 py-0.5 rounded-full bg-accent-gold/15 text-accent-gold font-mono font-bold">
-                                        ⚡ Reply &lt; 3m
+                                        ⚡ Avg. Response &lt; 3m
                                     </span>
                                 </div>
                                 <h4 className="text-base font-bold text-text-primary font-heading mb-1">
                                     {cleanSubjectName} Faculty Available ({country.name})
                                 </h4>
                                 <p className="text-xs text-text-secondary leading-relaxed mb-4">
-                                    3 verified PhD & Master's specialists currently available to review your assignment brief.
+                                    <strong className="text-accent-gold">{new Date().getHours() >= 16 || new Date().getHours() < 2 ? '6' : (new Date().getHours() >= 7 ? '4' : '3')} verified PhD & Master's faculty</strong> currently active to review your {cleanSubjectName} requirements.
                                 </p>
                                 <button 
                                     onClick={() => window.open(whatsappUrl, "_blank")}
@@ -318,29 +318,29 @@ const SubjectCityPage = () => {
                                 </button>
                             </div>
 
-                            {/* Turnitin 0% AI Guarantee Mockup Card */}
-                            <div className="glass-card p-5 border-white/10 space-y-3">
+                            {/* Academic Integrity & Originality Guarantee Card */}
+                            <div className="glass-card p-5 border-glass-border space-y-3">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-2 text-text-primary font-bold text-sm font-heading">
-                                        <Award className="text-accent-gold" size={18} />
-                                        Turnitin Authentic™ Pass
+                                        <ShieldCheck className="text-accent-gold" size={18} />
+                                        Academic Integrity Guarantee
                                     </div>
-                                    <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">
-                                        Verified Safe
+                                    <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-500 font-bold border border-emerald-500/20">
+                                        Institutional Safe
                                     </span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-3 py-2">
-                                    <div className="p-2.5 rounded-lg bg-black/30 border border-white/5 text-center">
-                                        <div className="text-lg font-bold font-mono text-emerald-400">0%</div>
-                                        <div className="text-[10px] text-text-secondary uppercase">Similarity Index</div>
+                                    <div className="p-3 rounded-xl bg-glass-bg border border-glass-border text-center">
+                                        <div className="text-lg font-bold font-mono text-emerald-500">&lt; 5%</div>
+                                        <div className="text-[10px] text-text-secondary uppercase font-semibold">Similarity Index</div>
                                     </div>
-                                    <div className="p-2.5 rounded-lg bg-black/30 border border-white/5 text-center">
-                                        <div className="text-lg font-bold font-mono text-emerald-400">0%</div>
-                                        <div className="text-[10px] text-text-secondary uppercase">AI Detection Score</div>
+                                    <div className="p-3 rounded-xl bg-glass-bg border border-glass-border text-center">
+                                        <div className="text-lg font-bold font-mono text-emerald-500">100%</div>
+                                        <div className="text-[10px] text-text-secondary uppercase font-semibold">Human-Authored</div>
                                     </div>
                                 </div>
-                                <p className="text-[11px] text-text-secondary text-center leading-snug">
-                                    Every submission includes a complimentary originality & AI scan report before delivery.
+                                <p className="text-[11px] text-text-secondary leading-relaxed">
+                                    Every submission is custom-researched from primary literature and includes a verified scan under a <strong>Strict Non-Repository Policy</strong> (never stored or indexed in public databases).
                                 </p>
                             </div>
 

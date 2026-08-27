@@ -92,20 +92,29 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 w-full bg-bg-primary/95 backdrop-blur-xl border-b border-glass-border flex flex-col items-center py-10 gap-6"
-                        style={{ backgroundColor: 'rgba(15, 15, 15, 0.95)' }}
+                        className="absolute top-full left-0 w-full bg-bg-primary/95 backdrop-blur-xl border-b border-glass-border shadow-2xl flex flex-col items-center py-8 gap-5"
                     >
                         {navLinks.map((link) => (
                             <Link
                                 key={link.path}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`text-lg uppercase tracking-widest font-heading transition-colors hover:text-accent-gold ${location.pathname === link.path ? 'text-accent-gold' : 'text-white'}`}
-                                style={{ color: location.pathname === link.path ? 'var(--accent-gold)' : 'white' }}
+                                className={`text-base uppercase tracking-widest font-heading transition-colors hover:text-accent-gold ${
+                                    location.pathname === link.path ? 'text-accent-gold font-bold' : 'text-text-primary'
+                                }`}
                             >
                                 {link.name}
                             </Link>
                         ))}
+                        <Link 
+                            to="/contact" 
+                            onClick={() => setIsOpen(false)}
+                            className="mt-2"
+                        >
+                            <Button type="outline" className="px-8 py-3 text-xs">
+                                Order Now
+                            </Button>
+                        </Link>
                     </motion.div>
                 )}
             </AnimatePresence>
