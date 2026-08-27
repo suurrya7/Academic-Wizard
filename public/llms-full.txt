@@ -238,6 +238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Dissertation
 
+- **[Managing Dissertation Burnout: A Sustainable Workflow](https://academicwizard.online/blog/managing-dissertation-burnout-a-sustainable-workflow)**
+  - Excerpt: Feeling stuck on your dissertation? Discover evidence-based strategies to break the cycle of burnout and build a sustainable writing routine for 2026 success.
+  - Keywords: overcoming dissertation burnout, PhD mental health tips, sustainable academic writing, dissertation time management, academic research productivity
+  - Target Region: Canada
+  - Published: 2026-08-27
+
 - **[Zotero to Obsidian: Syncing Your Research for 2026 Dissertation Success](https://academicwizard.online/blog/zotero-to-obsidian-syncing-your-research-for-2026-dissertation-success)**
   - Excerpt: Struggling to connect your sources to your ideas? Discover the ultimate 2026 workflow to link Zotero citations directly to your Obsidian research notes.
   - Keywords: integrating Zotero with Obsidian for thesis research, academic knowledge management, Zotero bibliography automation, thesis literature organization, research workflow optimization
@@ -485,6 +491,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7 Tables and Figures: Avoiding Common Formatting Traps](https://academicwizard.online/blog/apa-7-tables-and-figures-avoiding-common-formatting-traps)**
+  - Excerpt: Don't let minor formatting errors lower your grade. Master the APA 7th Edition rules for tables and figures with our clear, step-by-step 2026 checklist.
+  - Keywords: APA 7th Edition table and figure formatting, APA 7 citation rules, academic research paper formatting, APA 7 student guide, professional thesis presentation
+  - Target Region: Australia
+  - Published: 2026-08-27
 
 - **[APA 7th Edition: Mastering Complex Multi-Author Citations in 2026](https://academicwizard.online/blog/apa-7th-edition-mastering-complex-multi-author-citations-in-2026)**
   - Excerpt: Stop losing points on formatting. Get the definitive guide to handling complex multi-author APA 7 citations correctly in your 2026 academic paper.
@@ -796,6 +808,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Prompting for Literature Review Outlining](https://academicwizard.online/blog/ethical-ai-prompting-for-literature-review-outlining)**
+  - Excerpt: Struggling to structure your lit review? Learn how to use AI as a tool for brainstorming and scaffolding while keeping your analysis and voice 100% original.
+  - Keywords: ethical AI literature review outline, AI in academic research, scaffolding research methodology, AI for academic structure, literature review synthesis
+  - Target Region: UK
+  - Published: 2026-08-27
+
 - **[Ethical AI Prompting: Building Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-prompting-building-your-literature-review-outline)**
   - Excerpt: Stuck on your lit review? Discover ethical AI prompting techniques to structure your arguments and synthesize sources while maintaining your unique voice.
   - Keywords: ethical AI literature review outline, academic research tools 2026, literature review synthesis methods, AI in student research ethics, scaffolding dissertation chapters
@@ -947,6 +965,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI Detection: Troubleshooting False Positives in 2026](https://academicwizard.online/blog/turnitin-ai-detection-troubleshooting-false-positives-in-2026-2)**
+  - Excerpt: Flagged by Turnitin for AI? Learn how to audit your writing, document your drafting process, and provide evidence that your work is genuinely human-authored.
+  - Keywords: Turnitin AI detection false positives, academic integrity audit, Turnitin similarity report tips, human-authored content validation, AI writing detection issues
+  - Target Region: USA
+  - Published: 2026-08-27
 
 - **[Fixing Turnitin Similarity Reports: A Guide for Genuine Student Voices](https://academicwizard.online/blog/fixing-turnitin-similarity-reports-a-guide-for-genuine-student-voices)**
   - Excerpt: Received a high AI flag on your original paper? Learn how to audit your draft, verify your writing integrity, and professionalize your dispute process.
