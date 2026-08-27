@@ -11,8 +11,22 @@
   --accent-gold-light: #F1D575;
   --text-primary: #FFFFFF;
   --text-secondary: #A0A0A0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --font-heading: 'Orbitron', sans-serif;
   --font-body: 'Inter', sans-serif;
+}
+
+/* Day Mode (Luxury Academic Ivory & Slate) */
+.light, [data-theme="light"] {
+  --bg-primary: #F8F9FA;
+  --bg-secondary: #FFFFFF;
+  --accent-gold: #B8860B;
+  --accent-gold-light: #D4AF37;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(226, 232, 240, 0.9);
 }
 
 * {
@@ -20,11 +34,20 @@
   user-select: none;
 }
 
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 body {
-  @apply bg-bg-primary text-text-primary font-body overflow-x-hidden leading-relaxed;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.625;
   width: 100vw;
   margin: 0;
   padding: 0;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .container {
@@ -48,6 +71,12 @@ h6 {
   animation: shine 3s linear infinite;
 }
 
+.light .premium-gradient-text, [data-theme="light"] .premium-gradient-text {
+  background: linear-gradient(135deg, #B8860B, #0F172A, #B8860B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes shine {
   to {
     background-position: 200% center;
@@ -55,11 +84,159 @@ h6 {
 }
 
 .glass-card {
-  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-300;
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  @apply border-accent-gold/50 bg-accent-gold/5;
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+}
+
+.light .glass-card, [data-theme="light"] .glass-card {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Academic Callout Boxes */
+.academic-callout {
+  border-left: 4px solid var(--accent-gold);
+  background: var(--glass-bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+/* ========================================================
+   LIGHT / DAY MODE COMPREHENSIVE CONTRAST & VISIBILITY RULES
+   ======================================================== */
+.light, [data-theme="light"] {
+  color-scheme: light;
+}
+
+/* Text Visibility in Light Mode */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6,
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, 
+[data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
+  color: #0F172A;
+}
+
+.light .text-white, [data-theme="light"] .text-white {
+  color: #0F172A !important;
+}
+.light .text-white\/90, [data-theme="light"] .text-white\/90 {
+  color: #1E293B !important;
+}
+.light .text-white\/80, [data-theme="light"] .text-white\/80 {
+  color: #334155 !important;
+}
+.light .text-white\/70, [data-theme="light"] .text-white\/70 {
+  color: #475569 !important;
+}
+.light .text-white\/60, [data-theme="light"] .text-white\/60 {
+  color: #64748B !important;
+}
+.light .text-white\/50, [data-theme="light"] .text-white\/50 {
+  color: #64748B !important;
+}
+.light .text-white\/40, [data-theme="light"] .text-white\/40 {
+  color: #94A3B8 !important;
+}
+.light .text-white\/30, [data-theme="light"] .text-white\/30 {
+  color: #CBD5E1 !important;
+}
+
+/* Background & Card Visibility in Light Mode */
+.light .bg-bg-primary, [data-theme="light"] .bg-bg-primary {
+  background-color: #F8F9FA !important;
+}
+.light .bg-bg-secondary, [data-theme="light"] .bg-bg-secondary {
+  background-color: #FFFFFF !important;
+}
+.light .bg-bg-secondary\/50, [data-theme="light"] .bg-bg-secondary\/50 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+.light .bg-white\/5, [data-theme="light"] .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.light .bg-white\/10, [data-theme="light"] .bg-white\/10 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+}
+.light .bg-black, [data-theme="light"] .bg-black {
+  background-color: #F8F9FA !important;
+}
+.light .bg-black\/30, [data-theme="light"] .bg-black\/30 {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+}
+.light .bg-black\/40, [data-theme="light"] .bg-black\/40 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+}
+.light .bg-black\/80, [data-theme="light"] .bg-black\/80 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Border Visibility in Light Mode */
+.light .border-white\/10, [data-theme="light"] .border-white\/10 {
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+.light .border-white\/5, [data-theme="light"] .border-white\/5 {
+  border-color: rgba(226, 232, 240, 0.7) !important;
+}
+.light .border-glass-border, [data-theme="light"] .border-glass-border {
+  border-color: rgba(203, 213, 225, 0.9) !important;
+}
+
+/* Navigation Links in Light Mode */
+.light nav a, [data-theme="light"] nav a {
+  color: #334155 !important;
+}
+.light nav a:hover, [data-theme="light"] nav a:hover {
+  color: #B8860B !important;
+}
+.light nav a.text-accent-gold, [data-theme="light"] nav a.text-accent-gold {
+  color: #B8860B !important;
+}
+
+/* Prose & Article Content in Light Mode */
+.light .prose, [data-theme="light"] .prose,
+.light .prose-invert, [data-theme="light"] .prose-invert {
+  color: #334155 !important;
+}
+.light .prose-invert p, [data-theme="light"] .prose-invert p,
+.light .prose-invert li, [data-theme="light"] .prose-invert li {
+  color: #334155 !important;
+}
+.light .prose-invert h2, [data-theme="light"] .prose-invert h2,
+.light .prose-invert h3, [data-theme="light"] .prose-invert h3,
+.light .prose-invert h4, [data-theme="light"] .prose-invert h4,
+.light .prose-invert strong, [data-theme="light"] .prose-invert strong {
+  color: #0F172A !important;
+}
+
+/* Form Inputs in Light Mode */
+.light input, .light textarea, .light select,
+[data-theme="light"] input, [data-theme="light"] textarea, [data-theme="light"] select {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+}
+.light input::placeholder, .light textarea::placeholder,
+[data-theme="light"] input::placeholder, [data-theme="light"] textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Specific elements that MUST keep white text on colorful buttons */
+.light .bg-\[\#25D366\] *, [data-theme="light"] .bg-\[\#25D366\] *,
+.light .bg-emerald-500 *, [data-theme="light"] .bg-emerald-500 *,
+.light .bg-green-600 *, [data-theme="light"] .bg-green-600 * {
+  color: #FFFFFF !important;
+}
+
+.light .bg-accent-gold *, [data-theme="light"] .bg-accent-gold * {
+  color: #000000 !important;
 }
 
 /* Custom Scrollbar */

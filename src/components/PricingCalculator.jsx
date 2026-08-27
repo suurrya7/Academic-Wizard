@@ -80,7 +80,7 @@ const PricingCalculator = () => {
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMessage}`;
 
     return (
-        <div className="relative overflow-hidden rounded-3xl border border-accent-gold/30 bg-gradient-to-b from-bg-secondary/95 via-bg-primary to-bg-secondary/95 p-6 sm:p-10 max-w-3xl mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)] text-left">
+        <div className="relative overflow-hidden rounded-3xl border border-accent-gold/30 bg-bg-secondary p-6 sm:p-10 max-w-3xl mx-auto shadow-2xl text-left">
             {/* Ambient gold glow */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-accent-gold/10 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-gold/10 rounded-full blur-[100px] pointer-events-none" />
@@ -92,7 +92,7 @@ const PricingCalculator = () => {
                         <Sparkles size={13} className="text-accent-gold" />
                         <span>Instant Transparent Cost Estimator</span>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold font-heading text-white">
+                    <h3 className="text-3xl md:text-4xl font-bold font-heading text-text-primary">
                         Calculate Your <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Academic Assistance</span> Fee
                     </h3>
                     <p className="text-text-secondary text-sm max-w-lg mx-auto">
@@ -104,16 +104,16 @@ const PricingCalculator = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Currency Selector */}
                     <div>
-                        <label className="block text-white/90 text-xs font-heading uppercase tracking-wider mb-2">
+                        <label className="block text-text-primary text-xs font-heading uppercase tracking-wider mb-2">
                             Select Currency
                         </label>
                         <select 
-                            className="w-full bg-bg-primary/90 border border-white/10 text-white p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
+                            className="w-full bg-bg-primary border border-glass-border text-text-primary p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
                             value={currency}
                             onChange={(e) => setCurrency(e.target.value)}
                         >
                             {Object.entries(CURRENCIES).map(([code, info]) => (
-                                <option key={code} value={code} className="bg-bg-primary text-white">
+                                <option key={code} value={code} className="bg-bg-primary text-text-primary">
                                     {info.label}
                                 </option>
                             ))}
@@ -122,33 +122,33 @@ const PricingCalculator = () => {
 
                     {/* Academic Level */}
                     <div>
-                        <label className="block text-white/90 text-xs font-heading uppercase tracking-wider mb-2">
+                        <label className="block text-text-primary text-xs font-heading uppercase tracking-wider mb-2">
                             Academic Level
                         </label>
                         <select 
-                            className="w-full bg-bg-primary/90 border border-white/10 text-white p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
+                            className="w-full bg-bg-primary border border-glass-border text-text-primary p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
                             value={academicLevel}
                             onChange={(e) => setAcademicLevel(e.target.value)}
                         >
-                            <option value="high-school" className="bg-bg-primary text-white">High School / College Diploma</option>
-                            <option value="undergraduate" className="bg-bg-primary text-white">Undergraduate (BSc / BA / BEng)</option>
-                            <option value="masters" className="bg-bg-primary text-white">Master's (MSc / MA / MBA)</option>
-                            <option value="phd" className="bg-bg-primary text-white">PhD / Doctoral Research</option>
+                            <option value="high-school" className="bg-bg-primary text-text-primary">High School / College Diploma</option>
+                            <option value="undergraduate" className="bg-bg-primary text-text-primary">Undergraduate (BSc / BA / BEng)</option>
+                            <option value="masters" className="bg-bg-primary text-text-primary">Master's (MSc / MA / MBA)</option>
+                            <option value="phd" className="bg-bg-primary text-text-primary">PhD / Doctoral Research</option>
                         </select>
                     </div>
 
                     {/* Subject / Discipline */}
                     <div>
-                        <label className="block text-white/90 text-xs font-heading uppercase tracking-wider mb-2">
+                        <label className="block text-text-primary text-xs font-heading uppercase tracking-wider mb-2">
                             Subject / Discipline
                         </label>
                         <select 
-                            className="w-full bg-bg-primary/90 border border-white/10 text-white p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
+                            className="w-full bg-bg-primary border border-glass-border text-text-primary p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                         >
                             {SUBJECTS.map((sub) => (
-                                <option key={sub} value={sub} className="bg-bg-primary text-white">
+                                <option key={sub} value={sub} className="bg-bg-primary text-text-primary">
                                     {sub}
                                 </option>
                             ))}
@@ -157,16 +157,16 @@ const PricingCalculator = () => {
 
                     {/* Deadline */}
                     <div>
-                        <label className="block text-white/90 text-xs font-heading uppercase tracking-wider mb-2">
+                        <label className="block text-text-primary text-xs font-heading uppercase tracking-wider mb-2">
                             Urgency / Deadline
                         </label>
                         <select 
-                            className="w-full bg-bg-primary/90 border border-white/10 text-white p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
+                            className="w-full bg-bg-primary border border-glass-border text-text-primary p-3 rounded-xl focus:outline-none focus:border-accent-gold transition-colors text-sm font-medium"
                             value={deadline}
                             onChange={(e) => setDeadline(e.target.value)}
                         >
                             {Object.entries(deadlineLabels).map(([key, label]) => (
-                                <option key={key} value={key} className="bg-bg-primary text-white">
+                                <option key={key} value={key} className="bg-bg-primary text-text-primary">
                                     {label}
                                 </option>
                             ))}
@@ -175,9 +175,9 @@ const PricingCalculator = () => {
                 </div>
 
                 {/* Word Count Slider */}
-                <div className="bg-white/5 border border-white/10 p-5 rounded-2xl space-y-3">
+                <div className="bg-glass-bg border border-glass-border p-5 rounded-2xl space-y-3">
                     <div className="flex justify-between items-center text-sm">
-                        <label className="text-white font-medium flex items-center gap-2">
+                        <label className="text-text-primary font-medium flex items-center gap-2">
                             <span>Project Length</span>
                             <span className="text-accent-gold font-bold">({pagesCount} {pagesCount === 1 ? 'Page' : 'Pages'})</span>
                         </label>
@@ -193,10 +193,10 @@ const PricingCalculator = () => {
                         step="250"
                         value={wordCount}
                         onChange={(e) => setWordCount(parseInt(e.target.value, 10))}
-                        className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-accent-gold"
+                        className="w-full h-2 bg-text-secondary/20 rounded-lg appearance-none cursor-pointer accent-accent-gold"
                     />
 
-                    <div className="flex justify-between text-[11px] text-white/40">
+                    <div className="flex justify-between text-[11px] text-text-secondary">
                         <span>250 words (1 pg)</span>
                         <span>5,000 words (Dissertation ch.)</span>
                         <span>15,000 words (Full thesis)</span>
@@ -206,17 +206,17 @@ const PricingCalculator = () => {
                 {/* Live Quote Output Card */}
                 <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-accent-gold/20 via-accent-gold/10 to-transparent border border-accent-gold/40 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_10px_30px_rgba(212,175,55,0.1)]">
                     <div className="space-y-1 text-center sm:text-left">
-                        <div className="text-white/70 text-xs uppercase tracking-wider font-semibold">
+                        <div className="text-text-secondary text-xs uppercase tracking-wider font-semibold">
                             Estimated All-Inclusive Quote
                         </div>
                         <div className="text-4xl sm:text-5xl font-bold text-accent-gold font-heading flex items-baseline justify-center sm:justify-start gap-1">
                             <span>{currentSymbol}</span>
                             <span>{finalPrice}</span>
-                            <span className="text-xs text-white/50 font-normal uppercase tracking-widest ml-2">
+                            <span className="text-xs text-text-secondary font-normal uppercase tracking-widest ml-2">
                                 ({currency})
                             </span>
                         </div>
-                        <div className="text-[11px] text-white/60">
+                        <div className="text-[11px] text-text-secondary">
                             Includes complete referencing, Turnitin plagiarism report & free edits.
                         </div>
                     </div>
@@ -233,20 +233,20 @@ const PricingCalculator = () => {
                 </div>
 
                 {/* Trust Badges */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 border-t border-white/10 text-center">
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-white/70">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 border-t border-glass-border text-center">
+                    <div className="flex items-center justify-center gap-2 text-[11px] text-text-secondary">
                         <CheckCircle2 size={14} className="text-accent-gold shrink-0" />
                         <span>100% Turnitin-Safe</span>
                     </div>
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-white/70">
+                    <div className="flex items-center justify-center gap-2 text-[11px] text-text-secondary">
                         <Clock size={14} className="text-accent-gold shrink-0" />
                         <span>3-Min Response</span>
                     </div>
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-white/70">
+                    <div className="flex items-center justify-center gap-2 text-[11px] text-text-secondary">
                         <Award size={14} className="text-accent-gold shrink-0" />
                         <span>First-Class PhD Writers</span>
                     </div>
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-white/70">
+                    <div className="flex items-center justify-center gap-2 text-[11px] text-text-secondary">
                         <ShieldCheck size={14} className="text-accent-gold shrink-0" />
                         <span>100% Confidential</span>
                     </div>

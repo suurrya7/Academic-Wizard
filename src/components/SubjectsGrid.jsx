@@ -22,7 +22,7 @@ const SubjectsGrid = () => {
             <div className="container px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block" style={{ color: 'var(--accent-gold)' }}>Expertise Areas</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-8">Academic Subjects <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Covered</span></h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8 text-text-primary">Academic Subjects <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Covered</span></h2>
                     <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         Our academic experts provide assistance across a wide range of university subjects including business, engineering, psychology, computer science, law, and many more.
                     </p>
@@ -39,7 +39,7 @@ const SubjectsGrid = () => {
                                 whileHover={{ scale: 1.05, borderColor: 'var(--accent-gold)' }}
                                 className="px-8 py-10 border border-glass-border rounded-xl text-center group cursor-pointer"
                             >
-                                <span className="text-sm font-heading tracking-widest uppercase group-hover:text-accent-gold transition-colors text-white">
+                                <span className="text-sm font-heading tracking-widest uppercase group-hover:text-accent-gold transition-colors text-text-primary">
                                     {subject.name}
                                 </span>
                             </motion.div>

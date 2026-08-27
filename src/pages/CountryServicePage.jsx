@@ -10,7 +10,7 @@ import Button from '../components/Button';
 import TrustStats from '../components/TrustStats';
 import PricingCalculator from '../components/PricingCalculator';
 import ContactForm from '../components/ContactForm';
-import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText } from 'lucide-react';
+import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText, Star, Zap } from 'lucide-react';
 import { assetPath } from '../config/site';
 
 const SLUG_TO_HREFLANG = {
@@ -135,6 +135,28 @@ const CountryServicePage = () => {
                     { name: country.name, url: `/services/${service.slug}/${country.slug}` }
                 ]}
             />
+
+            {/* Social Proof Trust Bar */}
+            <div className="border-y border-glass-border bg-black/40 py-3 backdrop-blur-md">
+                <div className="container mx-auto px-6 max-w-7xl flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs font-semibold text-white/80">
+                    <div className="flex items-center gap-2">
+                        <div className="flex text-amber-400">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} size={14} className="fill-amber-400" />
+                            ))}
+                        </div>
+                        <span>4.9/5 Rating (1,450+ Verified Students)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Shield className="text-emerald-400" size={16} />
+                        <span>100% Turnitin-Safe & 0% AI Pass Guarantee</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Zap className="text-accent-gold" size={16} />
+                        <span>Urgent 12-Hour Turnaround Available</span>
+                    </div>
+                </div>
+            </div>
 
             <TrustStats />
 
@@ -473,6 +495,22 @@ const CountryServicePage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Mobile Sticky Floating Action Bar */}
+            <aside aria-label="Mobile quick quote" className="md:hidden fixed bottom-0 left-0 w-full z-40 bg-bg-primary/95 border-t border-glass-border backdrop-blur-lg p-3 shadow-2xl">
+                <div className="flex items-center justify-between gap-3">
+                    <div className="truncate">
+                        <div className="text-xs font-bold text-text-primary truncate">{service.title} in {country.name}</div>
+                        <div className="text-[10px] text-accent-gold font-mono">⚡ 12h Fast Delivery Available</div>
+                    </div>
+                    <button
+                        onClick={() => window.open(whatsappUrl, '_blank')}
+                        className="py-2.5 px-5 rounded-xl bg-accent-gold text-black font-heading font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shrink-0 shadow-lg shadow-accent-gold/20"
+                    >
+                        <MessageSquare size={14} /> Get Quote
+                    </button>
+                </div>
+            </aside>
         </div>
     );
 };

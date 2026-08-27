@@ -22,13 +22,13 @@ const Footer = () => {
                     </p>
                     <div className="flex flex-col gap-2 mt-2 mb-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold text-white">Phone:</span> +91 95098 93638
+                            <span className="font-semibold text-text-primary">Phone:</span> +91 95098 93638
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold text-white">Email:</span> admin@academicwizard.online
+                            <span className="font-semibold text-text-primary">Email:</span> admin@academicwizard.online
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold text-white">Location:</span> Global Online Service
+                            <span className="font-semibold text-text-primary">Location:</span> Global Online Service
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-4 mt-2">
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Quick Links</h3>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Quick Links</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
                         <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
@@ -79,7 +79,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Services</h3>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Services</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/services/assignment-help" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
                         <li><Link to="/services/essay-help" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Free Tools</h3>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Free Tools</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/tools/citation-generator" className="hover:text-accent-gold transition-colors">Citation Builder</Link></li>
                         <li><Link to="/tools/grammar-checker" className="hover:text-accent-gold transition-colors">Grammar Editor</Link></li>
@@ -102,19 +102,19 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h3 className="font-heading text-sm mb-8 tracking-widest text-white">Trust & Quality</h3>
+                    <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Trust & Quality</h3>
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-3">
                             <ShieldCheck className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
-                            <span className="text-xs uppercase tracking-widest font-heading text-white">100% Confidential</span>
+                            <span className="text-xs uppercase tracking-widest font-heading text-text-primary">100% Confidential</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <Award className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
-                            <span className="text-xs uppercase tracking-widest font-heading text-white">Expert Writers</span>
+                            <span className="text-xs uppercase tracking-widest font-heading text-text-primary">Expert Writers</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <ThumbsUp className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
-                            <span className="text-xs uppercase tracking-widest font-heading text-white">Quality Support</span>
+                            <span className="text-xs uppercase tracking-widest font-heading text-text-primary">Quality Support</span>
                         </div>
                     </div>
                 </div>

@@ -17,14 +17,14 @@ export default {
         },
         extend: {
             colors: {
-                'bg-primary': '#0F0F0F',
-                'bg-secondary': '#161616',
-                'accent-gold': '#D4AF37',
-                'accent-gold-light': '#F1D575',
-                'text-primary': '#FFFFFF',
-                'text-secondary': '#A0A0A0',
-                'glass-bg': 'rgba(255, 255, 255, 0.05)',
-                'glass-border': 'rgba(255, 255, 255, 0.1)',
+                'bg-primary': 'var(--bg-primary)',
+                'bg-secondary': 'var(--bg-secondary)',
+                'accent-gold': 'var(--accent-gold)',
+                'accent-gold-light': 'var(--accent-gold-light)',
+                'text-primary': 'var(--text-primary)',
+                'text-secondary': 'var(--text-secondary)',
+                'glass-bg': 'var(--glass-bg)',
+                'glass-border': 'var(--glass-border)',
             },
             fontFamily: {
                 heading: ['Orbitron', 'sans-serif'],

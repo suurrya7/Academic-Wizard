@@ -26,7 +26,7 @@ const PageHeader = ({ title, subtitle, breadcrumbs, backgroundImage }) => {
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-5xl md:text-7xl font-bold mb-8 relative z-10"
+                    className="text-5xl md:text-7xl font-bold mb-8 relative z-10 text-text-primary"
                 >
                     {title}
                 </motion.h1>

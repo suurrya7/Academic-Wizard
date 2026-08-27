@@ -12,7 +12,7 @@ const stats = [
 
 const TrustStats = () => {
     return (
-        <section className="bg-bg-secondary/50 py-20 border-y border-glass-border" style={{ backgroundColor: 'rgba(22, 22, 22, 0.5)' }}>
+        <section className="bg-bg-secondary/50 py-20 border-y border-glass-border">
             <div className="container px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {stats.map((stat, index) => (
                     <motion.div
@@ -26,8 +26,8 @@ const TrustStats = () => {
                         <div className="w-14 h-14 rounded-full bg-accent-gold/10 flex items-center justify-center mb-6 group-hover:bg-accent-gold group-hover:text-black transition-all duration-500 text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
                             <stat.icon size={28} />
                         </div>
-                        <h3 className="text-3xl font-bold font-heading mb-2 text-white">{stat.value}</h3>
-                        <p className="text-text-secondary text-xs uppercase tracking-widest leading-loose" style={{ color: 'var(--text-secondary)' }}>
+                        <h3 className="text-3xl font-bold font-heading mb-2 text-text-primary">{stat.value}</h3>
+                        <p className="text-text-secondary text-xs uppercase tracking-widest leading-loose">
                             {stat.label}
                         </p>
                     </motion.div>

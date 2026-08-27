@@ -1,11 +1,13 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Core UI components loaded eagerly
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ActivationGate from './components/ActivationGate';
+import ActiveSpecialistsTicker from './components/ActiveSpecialistsTicker';
 
 const CustomCursor = React.lazy(() => import('./components/CustomCursor'));
 const ParticleBackground = React.lazy(() => import('./components/ParticleBackground'));
@@ -58,46 +60,49 @@ function App() {
         <meta name="twitter:title" content="Academic Wizard | Expert Academic Assistance" />
         <meta name="twitter:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students worldwide." />
       </Helmet>
-      <Router basename={import.meta.env.BASE_URL}>
-        <TrailingSlashRedirect />
-        <Suspense fallback={null}>
-          <CustomCursor />
-          <ParticleBackground />
-        </Suspense>
-        <Navbar />
-        <main>
-          <Suspense fallback={<LoadingFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/:slug" element={<ServicePage />} />
-              <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
-              <Route path="/services/:serviceSlug/:countrySlug/:specializedSlug" element={<SubjectCityPage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/dissertation-topics/:topicSlug" element={<DissertationTopicPage />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-              
-              {/* Tools Routes */}
-              <Route path="/tools" element={<Tools />} />
-              <Route path="/tools/citation-generator" element={<ActivationGate toolKey="citation" maxUses={5}><CitationGenerator /></ActivationGate>} />
-              <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={5}><GrammarChecker /></ActivationGate>} />
-              <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={5}><AIDetector /></ActivationGate>} />
-              <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={3}><AIHumanizer /></ActivationGate>} />
-              <Route path="/activation-generator-secret" element={<ActivationCodeGenerator />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+      <ThemeProvider>
+        <Router basename={import.meta.env.BASE_URL}>
+          <TrailingSlashRedirect />
+          <Suspense fallback={null}>
+            <CustomCursor />
+            <ParticleBackground />
           </Suspense>
-        </main>
-        <Footer />
-        <Suspense fallback={null}>
-          <FloatingWhatsApp />
-        </Suspense>
-      </Router>
+          <Navbar />
+          <main>
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/services/:slug" element={<ServicePage />} />
+                <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
+                <Route path="/services/:serviceSlug/:countrySlug/:specializedSlug" element={<SubjectCityPage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/dissertation-topics/:topicSlug" element={<DissertationTopicPage />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                
+                {/* Tools Routes */}
+                <Route path="/tools" element={<Tools />} />
+                <Route path="/tools/citation-generator" element={<ActivationGate toolKey="citation" maxUses={5}><CitationGenerator /></ActivationGate>} />
+                <Route path="/tools/grammar-checker" element={<ActivationGate toolKey="grammar" maxUses={5}><GrammarChecker /></ActivationGate>} />
+                <Route path="/tools/ai-detector" element={<ActivationGate toolKey="detector" maxUses={5}><AIDetector /></ActivationGate>} />
+                <Route path="/tools/ai-humanizer" element={<ActivationGate toolKey="humanizer" maxUses={3}><AIHumanizer /></ActivationGate>} />
+                <Route path="/activation-generator-secret" element={<ActivationCodeGenerator />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <ActiveSpecialistsTicker />
+          <Suspense fallback={null}>
+            <FloatingWhatsApp />
+          </Suspense>
+        </Router>
+      </ThemeProvider>
     </HelmetProvider>
   );
 }

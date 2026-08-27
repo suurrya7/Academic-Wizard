@@ -11,7 +11,7 @@ const ServiceOverview = () => {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block" style={{ color: 'var(--accent-gold)' }}>Our Expertise</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Comprehensive Academic <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Services</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text-primary">Comprehensive Academic <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Services</span></h2>
                         <p className="text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                             Academic Wizard offers professional academic assistance for students who need help with assignments, essays, dissertations, and research papers. Our academic experts provide research guidance, editing services, and academic writing support.
                         </p>
@@ -44,7 +44,7 @@ const ServiceOverview = () => {
                                     <service.icon size={32} />
                                 </div>
                             )}
-                            <h3 className="text-xl font-bold font-heading group-hover:text-accent-gold transition-colors text-white">
+                            <h3 className="text-xl font-bold font-heading group-hover:text-accent-gold transition-colors text-text-primary">
                                 {service.title}
                             </h3>
                             <p className="text-text-secondary text-sm leading-relaxed line-clamp-3" style={{ color: 'var(--text-secondary)' }}>

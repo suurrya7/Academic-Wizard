@@ -23,14 +23,14 @@ const ExpertQuote = ({ quote, author, role, image }) => {
                 </div>
                 
                 <div>
-                    <blockquote className="text-xl md:text-2xl text-white/90 leading-relaxed font-heading italic mb-6">
+                    <blockquote className="text-xl md:text-2xl text-text-primary leading-relaxed font-heading italic mb-6">
                         "{quote}"
                     </blockquote>
                     
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-px bg-accent-gold/50" />
                         <div>
-                            <div className="text-white font-bold text-lg">{author}</div>
+                            <div className="text-text-primary font-bold text-lg">{author}</div>
                             <div className="text-accent-gold text-sm font-semibold">{role}</div>
                         </div>
                     </div>

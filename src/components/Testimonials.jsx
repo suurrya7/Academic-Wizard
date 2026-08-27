@@ -32,7 +32,7 @@ const Testimonials = () => {
             <div className="container px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block" style={{ color: 'var(--accent-gold)' }}>Success Stories</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Trusted by <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Thousands</span></h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8 text-text-primary">Trusted by <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Thousands</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -65,7 +65,7 @@ const Testimonials = () => {
                                         } else if (t.rating === i + 0.5) {
                                             return <Star key={i} size={16} fill="url(#testiHalfStarGradient)" className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} />;
                                         } else {
-                                            return <Star key={i} size={16} fill="none" className="text-white/20" />;
+                                            return <Star key={i} size={16} fill="none" className="text-text-secondary/30" />;
                                         }
                                     })}
                                 </div>
@@ -81,7 +81,7 @@ const Testimonials = () => {
                             
                             <div className="flex justify-between items-end mt-2 pt-4 border-t border-glass-border">
                                 <div>
-                                    <h5 className="font-heading text-sm text-white flex items-center gap-2">
+                                    <h5 className="font-heading text-sm text-text-primary flex items-center gap-2">
                                         {t.name}
                                     </h5>
                                     <p className="text-[10px] uppercase tracking-[2px] text-accent-gold mt-1" style={{ color: 'var(--accent-gold)' }}>{t.location}</p>

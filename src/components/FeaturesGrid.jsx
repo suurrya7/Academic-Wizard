@@ -26,7 +26,7 @@ const FeaturesGrid = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
                         <span className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block" style={{ color: 'var(--accent-gold)' }}>The Distinction</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-white">Why Choose <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Academic Wizard?</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-text-primary">Why Choose <br /><span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Academic Wizard?</span></h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex gap-4">
@@ -34,7 +34,7 @@ const FeaturesGrid = () => {
                                         <feature.icon size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="font-heading text-xs tracking-widest uppercase mb-2 text-white">{feature.title}</h4>
+                                        <h4 className="font-heading text-xs tracking-widest uppercase mb-2 text-text-primary">{feature.title}</h4>
                                         <p className="text-text-secondary text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{feature.desc}</p>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@ const FeaturesGrid = () => {
                     </div>
                     <div className="relative">
                         <div className="glass-card p-12 relative z-10">
-                            <h3 className="text-2xl font-bold font-heading mb-8 text-white">Expert <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Researchers</span></h3>
+                            <h3 className="text-2xl font-bold font-heading mb-8 text-text-primary">Expert <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Researchers</span></h3>
                             <div className="space-y-8">
                                 {[
                                     { name: 'Dr. Michael Turner', role: 'PhD in Business Research' },
@@ -55,7 +55,7 @@ const FeaturesGrid = () => {
                                             {expert.name[4]}
                                         </div>
                                         <div>
-                                            <h5 className="font-heading text-sm text-white">{expert.name}</h5>
+                                            <h5 className="font-heading text-sm text-text-primary">{expert.name}</h5>
                                             <p className="text-xs text-text-secondary uppercase tracking-widest" style={{ color: 'var(--text-secondary)' }}>{expert.role}</p>
                                         </div>
                                     </div>
@@ -68,11 +68,11 @@ const FeaturesGrid = () => {
             </section>
 
             {/* How It Works */}
-            <section className="bg-bg-secondary py-32 border-y border-glass-border" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+            <section className="bg-bg-secondary py-32 border-y border-glass-border">
                 <div className="container px-6">
                     <div className="text-center max-w-3xl mx-auto mb-20">
                         <span className="text-accent-gold font-heading text-xs tracking-[5px] uppercase mb-6 block" style={{ color: 'var(--accent-gold)' }}>The Process</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">How It <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Works</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-text-primary">How It <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Works</span></h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                         {steps.map((step, index) => (
@@ -90,7 +90,7 @@ const FeaturesGrid = () => {
                                 <div className="w-16 h-16 rounded-full bg-accent-gold flex items-center justify-center font-heading font-bold text-black mb-6" style={{ backgroundColor: 'var(--accent-gold)' }}>
                                     {step.step}
                                 </div>
-                                <h4 className="font-heading text-sm uppercase tracking-widest mb-4 text-white">{step.title}</h4>
+                                <h4 className="font-heading text-sm uppercase tracking-widest mb-4 text-text-primary">{step.title}</h4>
                                 <p className="text-text-secondary text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{step.desc}</p>
                             </motion.div>
                         ))}

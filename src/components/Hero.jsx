@@ -17,7 +17,7 @@ const Hero = () => {
                     >
                         Elite Academic Support
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
+                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-text-primary">
                         <span className="premium-gradient-text" style={{ display: 'block' }}>Academic Wizard</span>
                         Assistance & Research <br />
                         <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Support</span>

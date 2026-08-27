@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
-function Particles() {
+function Particles({ isLight }) {
     const ref = useRef();
     const stride = 3;
 
@@ -42,11 +42,12 @@ function Particles() {
             <Points ref={ref} positions={positions} stride={stride} frustumCulled={false}>
                 <PointMaterial
                     transparent
-                    color="#D4AF37"
-                    size={0.015}
+                    color={isLight ? "#B8860B" : "#D4AF37"}
+                    size={isLight ? 0.012 : 0.015}
+                    opacity={isLight ? 0.35 : 0.8}
                     sizeAttenuation={true}
                     depthWrite={false}
-                    blending={THREE.AdditiveBlending}
+                    blending={isLight ? THREE.NormalBlending : THREE.AdditiveBlending}
                 />
             </Points>
         </group>
@@ -75,12 +76,21 @@ class ErrorBoundary extends React.Component {
     }
 }
 
+import { useTheme } from '../context/ThemeContext';
+
 const ParticleBackground = () => {
+    const { theme } = useTheme();
+    const isLight = theme === 'light';
+
     return (
-        <div className="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#0F0F0F_100%)]">
+        <div className={`fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none transition-colors duration-500 ${
+            isLight 
+                ? 'bg-[radial-gradient(circle_at_center,#ffffff_0%,#f1f5f9_100%)]' 
+                : 'bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#0F0F0F_100%)]'
+        }`}>
             <ErrorBoundary>
                 <Canvas camera={{ position: [0, 0, 1] }}>
-                    <Particles />
+                    <Particles isLight={isLight} />
                 </Canvas>
             </ErrorBoundary>
         </div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
+import ThemeToggle from './ThemeToggle';
 import academicWizardFavicon from '../assets/academic-wizard-favicon.webp';
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'py-4 bg-black/80 backdrop-blur-xl border-b border-white/10' : 'py-8'}`}>
+        <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'py-4 bg-bg-primary/90 backdrop-blur-xl border-b border-glass-border shadow-lg' : 'py-8'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="flex items-center group" aria-label="Academic Wizard home">
                     <motion.div
@@ -48,17 +49,20 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center space-x-12 lg:space-x-16">
+                <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
                     {navLinks && navLinks.map((link) => (
                         <Link
                             key={link.path}
                             to={link.path}
-                            className={`text-[11px] uppercase tracking-[3px] font-heading transition-all hover:text-accent-gold relative group ${(location && location.pathname === link.path) ? 'text-accent-gold' : 'text-white/70'}`}
+                            className={`text-[11px] uppercase tracking-[3px] font-heading transition-all hover:text-accent-gold relative group ${(location && location.pathname === link.path) ? 'text-accent-gold' : 'text-text-primary/70'}`}
                         >
                             {link.name}
                             <span className={`absolute -bottom-2 left-0 h-[1px] bg-accent-gold transition-all duration-300 ${(location && location.pathname === link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                         </Link>
                     ))}
+                    
+                    <ThemeToggle />
+
                     {Button && (
                         <Link to="/contact">
                             <Button type="outline" className="px-8 py-3 text-[10px]">
@@ -68,14 +72,17 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/* Mobile Toggle */}
-                <button 
-                    className="md:hidden text-white" 
-                    onClick={() => setIsOpen(!isOpen)}
-                    aria-label={isOpen ? "Close menu" : "Open menu"}
-                >
-                    {isOpen ? <X size={30} /> : <Menu size={30} />}
-                </button>
+                {/* Mobile Actions: ThemeToggle + Hamburger */}
+                <div className="flex md:hidden items-center gap-3">
+                    <ThemeToggle />
+                    <button 
+                        className="text-text-primary" 
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
+                    >
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
