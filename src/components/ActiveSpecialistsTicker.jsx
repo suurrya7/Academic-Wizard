@@ -103,7 +103,7 @@ const ActiveSpecialistsTicker = () => {
                 setDynamicTime(nextIndex === 0 ? "Just now" : `${mins} mins ago`);
                 return nextIndex;
             });
-        }, 7500);
+        }, 18000);
         return () => clearInterval(timer);
     }, [isHovered]);
 
