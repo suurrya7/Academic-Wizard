@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-27
+        **Last updated**: 2026-08-28
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -237,6 +237,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Optimizing Qualitative Coding: NVivo Best Practices for Theses](https://academicwizard.online/blog/optimizing-qualitative-coding-nvivo-best-practices-for-theses)**
+  - Excerpt: Overwhelmed by raw data? Master a structured NVivo coding workflow to streamline your thematic analysis and improve clarity in your upcoming dissertation.
+  - Keywords: NVivo qualitative coding workflow, thematic analysis software, dissertation data analysis, qualitative research methodology, NVivo 26 tutorial
+  - Target Region: UK
+  - Published: 2026-08-28
 
 - **[Managing Dissertation Burnout: A Sustainable Workflow](https://academicwizard.online/blog/managing-dissertation-burnout-a-sustainable-workflow)**
   - Excerpt: Feeling stuck on your dissertation? Discover evidence-based strategies to break the cycle of burnout and build a sustainable writing routine for 2026 success.
@@ -492,6 +498,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Editing and Proofreading
 
+- **[Mastering Chicago 17: Navigating Archival Source Citations](https://academicwizard.online/blog/mastering-chicago-17-navigating-archival-source-citations)**
+  - Excerpt: Simplify your citations. Discover how to master Chicago 17 archival footnotes and avoid common formatting penalties in your long-form history research.
+  - Keywords: Chicago 17 archival footnote rules, history thesis formatting, Chicago style citation guide, complex academic referencing, primary source attribution
+  - Target Region: Australia
+  - Published: 2026-08-28
+
 - **[APA 7 Tables and Figures: Avoiding Common Formatting Traps](https://academicwizard.online/blog/apa-7-tables-and-figures-avoiding-common-formatting-traps)**
   - Excerpt: Don't let minor formatting errors lower your grade. Master the APA 7th Edition rules for tables and figures with our clear, step-by-step 2026 checklist.
   - Keywords: APA 7th Edition table and figure formatting, APA 7 citation rules, academic research paper formatting, APA 7 student guide, professional thesis presentation
@@ -721,6 +733,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Essay Writing
+
+- **[Ethical AI Benchmarking: Checking Tone in Academic Drafts](https://academicwizard.online/blog/ethical-ai-benchmarking-checking-tone-in-academic-drafts)**
+  - Excerpt: Ensure your academic integrity. Learn how to self-audit your writing for natural tone and verify your work isn't misidentified by AI detection systems.
+  - Keywords: auditing AI tone in academic essays, academic integrity guidelines, human-authored essay check, AI detection mitigation, ethical AI use for students
+  - Target Region: Canada
+  - Published: 2026-08-28
 
 - **[APA 7th Edition: Fixing In-Text Citations for Multi-Author Digital Media](https://academicwizard.online/blog/apa-7th-edition-fixing-in-text-citations-for-multi-author-digital-media)**
   - Excerpt: Struggling with APA 7 citations for digital media? Learn the latest rules for multi-author sources to avoid formatting penalties on your next essay.
@@ -965,6 +983,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Resolving Zotero Metadata Conflicts: A 2026 Guide for PhD Students](https://academicwizard.online/blog/resolving-zotero-metadata-conflicts-a-2026-guide-for-phd-students)**
+  - Excerpt: Struggling with messy Zotero metadata? Learn how to debug sync errors and keep your PhD bibliography accurate with this 2026 technical troubleshooting guide.
+  - Keywords: fixing Zotero metadata sync errors, Zotero library management, dissertation citation tools, Zotero sync troubleshooting, academic research organization
+  - Target Region: USA
+  - Published: 2026-08-28
 
 - **[Turnitin AI Detection: Troubleshooting False Positives in 2026](https://academicwizard.online/blog/turnitin-ai-detection-troubleshooting-false-positives-in-2026-2)**
   - Excerpt: Flagged by Turnitin for AI? Learn how to audit your writing, document your drafting process, and provide evidence that your work is genuinely human-authored.

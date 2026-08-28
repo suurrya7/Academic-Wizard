@@ -1,5 +1,105 @@
 [
   {
+    "title": "Resolving Zotero Metadata Conflicts: A 2026 Guide for PhD Students",
+    "slug": "resolving-zotero-metadata-conflicts-a-2026-guide-for-phd-students",
+    "excerpt": "Struggling with messy Zotero metadata? Learn how to debug sync errors and keep your PhD bibliography accurate with this 2026 technical troubleshooting guide.",
+    "keywords": [
+      "fixing Zotero metadata sync errors",
+      "Zotero library management",
+      "dissertation citation tools",
+      "Zotero sync troubleshooting",
+      "academic research organization"
+    ],
+    "primaryKeyword": "fixing Zotero metadata sync errors",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-28T13:38:27.734563+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/resolving-zotero-metadata-conflicts-a-2026-guide-for-phd-students.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Optimizing Qualitative Coding: NVivo Best Practices for Theses",
+    "slug": "optimizing-qualitative-coding-nvivo-best-practices-for-theses",
+    "excerpt": "Overwhelmed by raw data? Master a structured NVivo coding workflow to streamline your thematic analysis and improve clarity in your upcoming dissertation.",
+    "keywords": [
+      "NVivo qualitative coding workflow",
+      "thematic analysis software",
+      "dissertation data analysis",
+      "qualitative research methodology",
+      "NVivo 26 tutorial"
+    ],
+    "primaryKeyword": "NVivo qualitative coding workflow",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-28T13:39:11.609826+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/optimizing-qualitative-coding-nvivo-best-practices-for-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Ethical AI Benchmarking: Checking Tone in Academic Drafts",
+    "slug": "ethical-ai-benchmarking-checking-tone-in-academic-drafts",
+    "excerpt": "Ensure your academic integrity. Learn how to self-audit your writing for natural tone and verify your work isn't misidentified by AI detection systems.",
+    "keywords": [
+      "auditing AI tone in academic essays",
+      "academic integrity guidelines",
+      "human-authored essay check",
+      "AI detection mitigation",
+      "ethical AI use for students"
+    ],
+    "primaryKeyword": "auditing AI tone in academic essays",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-08-28T13:41:46.057944+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-benchmarking-checking-tone-in-academic-drafts.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Mastering Chicago 17: Navigating Archival Source Citations",
+    "slug": "mastering-chicago-17-navigating-archival-source-citations",
+    "excerpt": "Simplify your citations. Discover how to master Chicago 17 archival footnotes and avoid common formatting penalties in your long-form history research.",
+    "keywords": [
+      "Chicago 17 archival footnote rules",
+      "history thesis formatting",
+      "Chicago style citation guide",
+      "complex academic referencing",
+      "primary source attribution"
+    ],
+    "primaryKeyword": "Chicago 17 archival footnote rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-28T13:42:14.454866+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-chicago-17-navigating-archival-source-citations.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Troubleshooting False Positives in 2026",
     "slug": "turnitin-ai-detection-troubleshooting-false-positives-in-2026-2",
     "excerpt": "Flagged by Turnitin for AI? Learn how to audit your writing, document your drafting process, and provide evidence that your work is genuinely human-authored.",
