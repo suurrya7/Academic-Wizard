@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Strategy to Verify Originality",
+    "slug": "turnitin-ai-false-positives-a-2026-strategy-to-verify-originality",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to perform an academic integrity audit and protect your work using version history and authentic drafting records.",
+    "keywords": [
+      "how to challenge turnitin ai detection false positives",
+      "Turnitin similarity report explanation",
+      "academic integrity audit guide",
+      "proving original student writing",
+      "avoiding AI detection flags"
+    ],
+    "primaryKeyword": "how to challenge turnitin ai detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-08-29T08:29:40.974276+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-strategy-to-verify-originality.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Zotero 11 Workflow: Syncing 500+ Sources for PhD Thesis Success",
+    "slug": "zotero-11-workflow-syncing-500-sources-for-phd-thesis-success",
+    "excerpt": "Struggling with research overload? Master Zotero 11’s latest tools to sync large libraries, fix metadata errors, and streamline your doctoral thesis work.",
+    "keywords": [
+      "organizing massive literature review with zotero",
+      "Zotero PDF metadata management",
+      "integrating zotero with research papers",
+      "citation library cleanup",
+      "advanced zotero plugin workflows"
+    ],
+    "primaryKeyword": "organizing massive literature review with zotero",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-08-29T08:30:06.199829+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-11-workflow-syncing-500-sources-for-phd-thesis-success.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Citations for AI-Generated Data Sets",
+    "slug": "beyond-apa-7-managing-citations-for-ai-generated-data-sets",
+    "excerpt": "Ensure your paper meets 2026 standards. We break down the new APA 7 requirements for citing AI-generated datasets and complex digital research materials.",
+    "keywords": [
+      "apa 7 citation rules for ai generated datasets",
+      "referencing ai output in research",
+      "APA 7 digital media citations",
+      "academic referencing standards 2026",
+      "citation ethics for phd students"
+    ],
+    "primaryKeyword": "apa 7 citation rules for ai generated datasets",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-08-29T08:30:32.375277+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-citations-for-ai-generated-data-sets.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "NVivo 27 Qualitative Coding: Eliminating Research Bias in Theses",
+    "slug": "nvivo-27-qualitative-coding-eliminating-research-bias-in-theses",
+    "excerpt": "Improve your qualitative thesis rigor. Discover advanced NVivo 27 workflows to minimize coding bias and strengthen the validity of your research findings.",
+    "keywords": [
+      "how to reduce researcher bias in qualitative coding",
+      "NVivo 27 thematic analysis guide",
+      "qualitative thesis methodology",
+      "coding drift troubleshooting",
+      "validating qualitative research findings"
+    ],
+    "primaryKeyword": "how to reduce researcher bias in qualitative coding",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-08-29T08:30:57.897754+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-27-qualitative-coding-eliminating-research-bias-in-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Resolving Zotero Metadata Conflicts: A 2026 Guide for PhD Students",
     "slug": "resolving-zotero-metadata-conflicts-a-2026-guide-for-phd-students",
     "excerpt": "Struggling with messy Zotero metadata? Learn how to debug sync errors and keep your PhD bibliography accurate with this 2026 technical troubleshooting guide.",

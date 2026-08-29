@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-08-28
+        **Last updated**: 2026-08-29
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -237,6 +237,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo 27 Qualitative Coding: Eliminating Research Bias in Theses](https://academicwizard.online/blog/nvivo-27-qualitative-coding-eliminating-research-bias-in-theses)**
+  - Excerpt: Improve your qualitative thesis rigor. Discover advanced NVivo 27 workflows to minimize coding bias and strengthen the validity of your research findings.
+  - Keywords: how to reduce researcher bias in qualitative coding, NVivo 27 thematic analysis guide, qualitative thesis methodology, coding drift troubleshooting, validating qualitative research findings
+  - Target Region: Canada
+  - Published: 2026-08-29
 
 - **[Optimizing Qualitative Coding: NVivo Best Practices for Theses](https://academicwizard.online/blog/optimizing-qualitative-coding-nvivo-best-practices-for-theses)**
   - Excerpt: Overwhelmed by raw data? Master a structured NVivo coding workflow to streamline your thematic analysis and improve clarity in your upcoming dissertation.
@@ -497,6 +503,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Beyond APA 7: Managing Citations for AI-Generated Data Sets](https://academicwizard.online/blog/beyond-apa-7-managing-citations-for-ai-generated-data-sets)**
+  - Excerpt: Ensure your paper meets 2026 standards. We break down the new APA 7 requirements for citing AI-generated datasets and complex digital research materials.
+  - Keywords: apa 7 citation rules for ai generated datasets, referencing ai output in research, APA 7 digital media citations, academic referencing standards 2026, citation ethics for phd students
+  - Target Region: Australia
+  - Published: 2026-08-29
 
 - **[Mastering Chicago 17: Navigating Archival Source Citations](https://academicwizard.online/blog/mastering-chicago-17-navigating-archival-source-citations)**
   - Excerpt: Simplify your citations. Discover how to master Chicago 17 archival footnotes and avoid common formatting penalties in your long-form history research.
@@ -826,6 +838,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Zotero 11 Workflow: Syncing 500+ Sources for PhD Thesis Success](https://academicwizard.online/blog/zotero-11-workflow-syncing-500-sources-for-phd-thesis-success)**
+  - Excerpt: Struggling with research overload? Master Zotero 11’s latest tools to sync large libraries, fix metadata errors, and streamline your doctoral thesis work.
+  - Keywords: organizing massive literature review with zotero, Zotero PDF metadata management, integrating zotero with research papers, citation library cleanup, advanced zotero plugin workflows
+  - Target Region: UK
+  - Published: 2026-08-29
+
 - **[Ethical AI Prompting for Literature Review Outlining](https://academicwizard.online/blog/ethical-ai-prompting-for-literature-review-outlining)**
   - Excerpt: Struggling to structure your lit review? Learn how to use AI as a tool for brainstorming and scaffolding while keeping your analysis and voice 100% original.
   - Keywords: ethical AI literature review outline, AI in academic research, scaffolding research methodology, AI for academic structure, literature review synthesis
@@ -983,6 +1001,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI False Positives: A 2026 Strategy to Verify Originality](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-strategy-to-verify-originality)**
+  - Excerpt: Flagged by Turnitin for AI? Learn how to perform an academic integrity audit and protect your work using version history and authentic drafting records.
+  - Keywords: how to challenge turnitin ai detection false positives, Turnitin similarity report explanation, academic integrity audit guide, proving original student writing, avoiding AI detection flags
+  - Target Region: USA
+  - Published: 2026-08-29
 
 - **[Resolving Zotero Metadata Conflicts: A 2026 Guide for PhD Students](https://academicwizard.online/blog/resolving-zotero-metadata-conflicts-a-2026-guide-for-phd-students)**
   - Excerpt: Struggling with messy Zotero metadata? Learn how to debug sync errors and keep your PhD bibliography accurate with this 2026 technical troubleshooting guide.
