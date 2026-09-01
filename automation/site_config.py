@@ -12,7 +12,10 @@ if not BASE_PATH.endswith("/"):
 
 
 def absolute_url(path: str = "") -> str:
-    clean_path = path.lstrip("/")
+    clean_path = path.strip("/")
     if not clean_path:
         return SITE_URL
-    return f"{SITE_URL}/{clean_path}"
+    last_segment = clean_path.split("/")[-1]
+    if "." in last_segment:
+        return f"{SITE_URL}/{clean_path}"
+    return f"{SITE_URL}/{clean_path}/"

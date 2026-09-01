@@ -16,10 +16,10 @@ const PrivacyPolicy = () => {
             <Helmet>
                 <title>Privacy Policy | Academic Wizard</title>
                 <meta name="description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
-                <link rel="canonical" href="https://academicwizard.online/privacy-policy" />
+                <link rel="canonical" href="https://academicwizard.online/privacy-policy/" />
                 <meta property="og:title" content="Privacy Policy | Academic Wizard" />
                 <meta property="og:description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
-                <meta property="og:url" content="https://academicwizard.online/privacy-policy" />
+                <meta property="og:url" content="https://academicwizard.online/privacy-policy/" />
                 <meta property="og:type" content="website" />
                 <script type="application/ld+json">
                     {JSON.stringify(policySchema)}

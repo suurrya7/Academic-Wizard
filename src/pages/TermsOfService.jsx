@@ -16,10 +16,10 @@ const TermsOfService = () => {
             <Helmet>
                 <title>Terms of Service | Academic Wizard</title>
                 <meta name="description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
-                <link rel="canonical" href="https://academicwizard.online/terms-of-service" />
+                <link rel="canonical" href="https://academicwizard.online/terms-of-service/" />
                 <meta property="og:title" content="Terms of Service | Academic Wizard" />
                 <meta property="og:description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
-                <meta property="og:url" content="https://academicwizard.online/terms-of-service" />
+                <meta property="og:url" content="https://academicwizard.online/terms-of-service/" />
                 <meta property="og:type" content="website" />
                 <script type="application/ld+json">
                     {JSON.stringify(termsSchema)}

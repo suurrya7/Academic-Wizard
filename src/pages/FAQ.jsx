@@ -142,10 +142,10 @@ const FAQ = () => {
             <Helmet>
                 <title>Frequently Asked Questions | Academic Wizard</title>
                 <meta name="description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
-                <link rel="canonical" href="https://academicwizard.online/faq" />
+                <link rel="canonical" href="https://academicwizard.online/faq/" />
                 <meta property="og:title" content="Frequently Asked Questions | Academic Wizard" />
                 <meta property="og:description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
-                <meta property="og:url" content="https://academicwizard.online/faq" />
+                <meta property="og:url" content="https://academicwizard.online/faq/" />
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
                 </script>

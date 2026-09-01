@@ -100,20 +100,20 @@ const CountryServicePage = () => {
             <Helmet>
                 <title>{pageTitle}</title>
                 <meta name="description" content={pageDescription} />
-                <link rel="canonical" href={`https://academicwizard.online/services/${service.slug}/${country.slug}`} />
+                <link rel="canonical" href={`https://academicwizard.online/services/${service.slug}/${country.slug}/`} />
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={pageDescription} />
-                <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}/${country.slug}`} />
+                <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}/${country.slug}/`} />
                 
                 {/* Hreflang alternates to tell Google this is location-specific content */}
-                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}`} />
-                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}`} />
+                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}/`} />
+                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}/`} />
                 {service.countries.map(c => (
                     <link 
                         key={c.slug} 
                         rel="alternate" 
                         hreflang={SLUG_TO_HREFLANG[c.slug] || `en-${c.slug}`} 
-                        href={`https://academicwizard.online/services/${service.slug}/${c.slug}`} 
+                        href={`https://academicwizard.online/services/${service.slug}/${c.slug}/`} 
                     />
                 ))}
 

@@ -21,7 +21,7 @@ const DissertationTopicPage = () => {
     }
 
     const pageTitle = `100+ Free ${topicData.title} | Academic Wizard`;
-    const url = `https://academicwizard.online/blog/dissertation-topics/${topicSlug}`;
+    const url = `https://academicwizard.online/blog/dissertation-topics/${topicSlug}/`;
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20help%20with%20my%20${encodeURIComponent(topicData.category)}%20dissertation.`;
 
     return (
@@ -49,7 +49,7 @@ const DissertationTopicPage = () => {
                             "@type": "BreadcrumbList",
                             "itemListElement": [
                                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
-                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog" },
+                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog/" },
                                 { "@type": "ListItem", "position": 3, "name": topicData.category, "item": url }
                             ]
                         }

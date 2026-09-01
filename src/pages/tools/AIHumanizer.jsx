@@ -72,17 +72,17 @@ const AIHumanizer = () => {
             <Helmet>
                 <title>Free AI Text Humanizer & Turnitin Bypass Tool | Academic Wizard</title>
                 <meta name="description" content="Free AI Humanizer tool — paste AI-generated text and get a human-sounding rewrite that passes Turnitin, Winston AI, and other AI detection tools. No sign-up required." />
-                <link rel="canonical" href="https://academicwizard.online/tools/ai-humanizer" />
+                <link rel="canonical" href="https://academicwizard.online/tools/ai-humanizer/" />
                 <meta property="og:title" content="Free AI Text Humanizer & Turnitin Bypass Tool | Academic Wizard" />
                 <meta property="og:description" content="Convert robotic ChatGPT text into natural academic writing. Bypass AI detectors seamlessly." />
-                <meta property="og:url" content="https://academicwizard.online/tools/ai-humanizer" />
+                <meta property="og:url" content="https://academicwizard.online/tools/ai-humanizer/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "AI Text Humanizer",
                         "description": "Free AI text humanizer tool that converts robotic ChatGPT text into natural, human-sounding academic writing. Increase syntax variance and remove machine footprints.",
-                        "url": "https://academicwizard.online/tools/ai-humanizer",
+                        "url": "https://academicwizard.online/tools/ai-humanizer/",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
                         "browserRequirements": "Requires HTML5",
@@ -114,13 +114,13 @@ const AIHumanizer = () => {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Tools",
-                                "item": "https://academicwizard.online/tools"
+                                "item": "https://academicwizard.online/tools/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": "AI Humanizer",
-                                "item": "https://academicwizard.online/tools/ai-humanizer"
+                                "item": "https://academicwizard.online/tools/ai-humanizer/"
                             }
                         ]
                     })}

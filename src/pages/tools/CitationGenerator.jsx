@@ -316,17 +316,17 @@ const CitationGenerator = () => {
             <Helmet>
                 <title>Free APA, MLA, Harvard, Chicago Citation Generator | Academic Wizard</title>
                 <meta name="description" content="Generate accurate bibliography listings and in-text citations instantly. Online referencing generator supporting APA 7th, MLA 9th, Harvard, Chicago, and Vancouver." />
-                <link rel="canonical" href="https://academicwizard.online/tools/citation-generator" />
+                <link rel="canonical" href="https://academicwizard.online/tools/citation-generator/" />
                 <meta property="og:title" content="Free APA, MLA, Harvard Citation Generator | Academic Wizard" />
                 <meta property="og:description" content="Instantly format website, book, and journal references with our free bibliography builder." />
-                <meta property="og:url" content="https://academicwizard.online/tools/citation-generator" />
+                <meta property="og:url" content="https://academicwizard.online/tools/citation-generator/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "Citation Generator",
                         "description": "Free online citation and bibliography generator supporting APA 7th Edition, MLA 9th Edition, Harvard, Chicago, and Vancouver referencing formats for academic papers.",
-                        "url": "https://academicwizard.online/tools/citation-generator",
+                        "url": "https://academicwizard.online/tools/citation-generator/",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
                         "browserRequirements": "Requires HTML5",
@@ -358,13 +358,13 @@ const CitationGenerator = () => {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Tools",
-                                "item": "https://academicwizard.online/tools"
+                                "item": "https://academicwizard.online/tools/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": "Citation Generator",
-                                "item": "https://academicwizard.online/tools/citation-generator"
+                                "item": "https://academicwizard.online/tools/citation-generator/"
                             }
                         ]
                     })}

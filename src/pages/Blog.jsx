@@ -97,17 +97,17 @@ const Blog = () => {
             <Helmet>
                 <title>Academic Blog & Research Guides | Academic Wizard</title>
                 <meta name="description" content="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy." />
-                <link rel="canonical" href="https://academicwizard.online/blog" />
+                <link rel="canonical" href="https://academicwizard.online/blog/" />
                 <meta property="og:title" content="Academic Blog & Research Guides | Academic Wizard" />
                 <meta property="og:description" content="Daily guides on academic writing, research, and study strategies." />
-                <meta property="og:url" content="https://academicwizard.online/blog" />
+                <meta property="og:url" content="https://academicwizard.online/blog/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
                         "name": "Academic Blog & Research Guides",
                         "description": "Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy.",
-                        "url": "https://academicwizard.online/blog",
+                        "url": "https://academicwizard.online/blog/",
                         "publisher": {
                             "@type": "Organization",
                             "name": "Academic Wizard",
@@ -117,7 +117,7 @@ const Blog = () => {
                             "@type": "BreadcrumbList",
                             "itemListElement": [
                                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
-                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog" }
+                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog/" }
                             ]
                         }
                     })}

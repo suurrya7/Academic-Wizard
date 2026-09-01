@@ -12,10 +12,10 @@ const Services = () => {
             <Helmet>
                 <title>Academic Writing Services & Consulting | Academic Wizard</title>
                 <meta name="description" content="Explore our comprehensive range of academic services including essay help, dissertation consulting, and research support." />
-                <link rel="canonical" href="https://academicwizard.online/services" />
+                <link rel="canonical" href="https://academicwizard.online/services/" />
                 <meta property="og:title" content="Our Academic Services | Academic Wizard" />
                 <meta property="og:description" content="Explore Academic Wizard's comprehensive range of academic services." />
-                <meta property="og:url" content="https://academicwizard.online/services" />
+                <meta property="og:url" content="https://academicwizard.online/services/" />
             
                 <script type="application/ld+json">
                     {JSON.stringify({

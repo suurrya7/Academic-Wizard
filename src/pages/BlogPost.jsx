@@ -99,7 +99,7 @@ const BlogPost = () => {
         })
         : 'Latest';
 
-    const canonicalUrl = `https://academicwizard.online/blog/${postData?.slug}`;
+    const canonicalUrl = `https://academicwizard.online/blog/${postData?.slug}/`;
     const postTitle = `${postData?.title} | Academic Wizard Blog`;
     const postDescription = postData?.excerpt || postData?.title || '';
 

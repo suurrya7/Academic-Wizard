@@ -55,7 +55,7 @@ function generateBlogPages() {
         const slug = post.slug;
         if (!slug) continue;
 
-        const canonicalUrl = `${SITE_URL}/blog/${slug}`;
+        const canonicalUrl = `${SITE_URL}/blog/${slug}/`;
         const title = escapeHtml(post.title || slug.replace(/-/g, ' '));
         const description = escapeHtml(post.excerpt || post.title || '');
         const publishDate = post.date || new Date().toISOString();

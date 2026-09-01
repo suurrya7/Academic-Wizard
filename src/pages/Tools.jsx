@@ -42,10 +42,10 @@ const Tools = () => {
             <Helmet>
                 <title>Free Academic Writing Tools | Academic Wizard</title>
                 <meta name="description" content="Boost your grades with our free academic tools: Automatic Citation Generator, Online Grammar Editor, Essay AI Detector, and Streamlit Text Humanizer." />
-                <link rel="canonical" href="https://academicwizard.online/tools" />
+                <link rel="canonical" href="https://academicwizard.online/tools/" />
                 <meta property="og:title" content="Free Academic Writing Tools | Academic Wizard" />
                 <meta property="og:description" content="Automate bibliography generation, fix grammar mistakes, and scan/humanize AI text with our free tools suite." />
-                <meta property="og:url" content="https://academicwizard.online/tools" />
+                <meta property="og:url" content="https://academicwizard.online/tools/" />
                 <meta property="og:image" content="https://academicwizard.online/images/tools/tools-main.jpg" />
                 <script type="application/ld+json">
                     {JSON.stringify({

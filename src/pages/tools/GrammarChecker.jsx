@@ -76,17 +76,17 @@ const GrammarChecker = () => {
             <Helmet>
                 <title>Free AI Grammar Checker & Essay Editor | Academic Wizard</title>
                 <meta name="description" content="Check your essays, thesis papers, and university assignments for spelling, punctuation, and syntax errors. Real-time proofreading with one-click suggestions." />
-                <link rel="canonical" href="https://academicwizard.online/tools/grammar-checker" />
+                <link rel="canonical" href="https://academicwizard.online/tools/grammar-checker/" />
                 <meta property="og:title" content="Free AI Grammar Checker & Essay Editor | Academic Wizard" />
                 <meta property="og:description" content="Polish your academic papers with our free spelling, syntax, and punctuation editor." />
-                <meta property="og:url" content="https://academicwizard.online/tools/grammar-checker" />
+                <meta property="og:url" content="https://academicwizard.online/tools/grammar-checker/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "Grammar Checker",
                         "description": "Free AI-powered grammar checker and essay editor for academic papers. Check spelling, punctuation, syntax errors, and get real-time proofreading suggestions.",
-                        "url": "https://academicwizard.online/tools/grammar-checker",
+                        "url": "https://academicwizard.online/tools/grammar-checker/",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
                         "browserRequirements": "Requires HTML5",
@@ -118,13 +118,13 @@ const GrammarChecker = () => {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Tools",
-                                "item": "https://academicwizard.online/tools"
+                                "item": "https://academicwizard.online/tools/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": "Grammar Checker",
-                                "item": "https://academicwizard.online/tools/grammar-checker"
+                                "item": "https://academicwizard.online/tools/grammar-checker/"
                             }
                         ]
                     })}

@@ -29,10 +29,10 @@ const Contact = () => {
             <Helmet>
                 <title>Contact Us | Academic Wizard Support</title>
                 <meta name="description" content="Get in touch with Academic Wizard's support team via WhatsApp or email. We offer 24/7 assistance for all your academic writing and research needs." />
-                <link rel="canonical" href="https://academicwizard.online/contact" />
+                <link rel="canonical" href="https://academicwizard.online/contact/" />
                 <meta property="og:title" content="Contact Us | Academic Wizard" />
                 <meta property="og:description" content="Get in touch with Academic Wizard's support team for 24/7 academic assistance." />
-                <meta property="og:url" content="https://academicwizard.online/contact" />
+                <meta property="og:url" content="https://academicwizard.online/contact/" />
                 <script type="application/ld+json">
                     {JSON.stringify(contactSchema)}
                 </script>

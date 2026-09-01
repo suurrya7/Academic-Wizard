@@ -24,10 +24,10 @@ const About = () => {
             <Helmet>
                 <title>About Us | Academic Wizard - Professional Research Experts</title>
                 <meta name="description" content="Founded in 2018, Academic Wizard is a leading educational consultancy. Learn about our strict 3-stage QA process and our team of 150+ PhD and Master's level academic experts." />
-                <link rel="canonical" href="https://academicwizard.online/about" />
+                <link rel="canonical" href="https://academicwizard.online/about/" />
                 <meta property="og:title" content="About Us | Academic Wizard" />
                 <meta property="og:description" content="Founded in 2018, Academic Wizard is a leading educational consultancy. Learn about our strict 3-stage QA process and our team of 150+ PhD and Master's level academic experts." />
-                <meta property="og:url" content="https://academicwizard.online/about" />
+                <meta property="og:url" content="https://academicwizard.online/about/" />
                 <script type="application/ld+json">
                     {JSON.stringify(aboutSchema)}
                 </script>

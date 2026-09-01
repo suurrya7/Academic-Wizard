@@ -101,7 +101,7 @@ const SubjectCityPage = () => {
 
     const pageMetaTitle = `${synthesizedTitle} | Top-Rated Academic Experts | Academic Wizard`;
     const pageDescription = `Get professional ${synthesizedTitle.toLowerCase()}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
-    const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}`;
+    const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20urgent%20help%20with%20my%20${encodeURIComponent(cleanSubjectName)}%20${encodeURIComponent(service.title)}%20in%20${encodeURIComponent(country.name)}.`;
     
@@ -168,7 +168,7 @@ const SubjectCityPage = () => {
                                 key={c.slug}
                                 rel="alternate" 
                                 hreflang={SLUG_TO_HREFLANG[c.slug] || `en-${c.slug}`} 
-                                href={`https://academicwizard.online/services/${serviceSlug}/${c.slug}/${specializedSlug}`} 
+                                href={`https://academicwizard.online/services/${serviceSlug}/${c.slug}/${specializedSlug}/`} 
                             />
                         );
                     }
@@ -207,9 +207,9 @@ const SubjectCityPage = () => {
                         "@context": "https://schema.org",
                         "@type": "BreadcrumbList",
                         "itemListElement": [
-                            { "@type": "ListItem", "position": 1, "name": "Services", "item": "https://academicwizard.online/services" },
-                            { "@type": "ListItem", "position": 2, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}` },
-                            { "@type": "ListItem", "position": 3, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}` },
+                            { "@type": "ListItem", "position": 1, "name": "Services", "item": "https://academicwizard.online/services/" },
+                            { "@type": "ListItem", "position": 2, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}/` },
+                            { "@type": "ListItem", "position": 3, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}/` },
                             { "@type": "ListItem", "position": 4, "name": cleanSubjectName, "item": url }
                         ]
                     })}

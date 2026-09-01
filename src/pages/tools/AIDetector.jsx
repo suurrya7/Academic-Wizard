@@ -128,17 +128,17 @@ const AIDetector = () => {
             <Helmet>
                 <title>Accurate AI Content Detector & Essay Scanner | Academic Wizard</title>
                 <meta name="description" content="Check your essays and academic papers for AI content. Scan sentence-level perplexity, predictability, and AI buzzwords to detect ChatGPT, Claude, and Gemini." />
-                <link rel="canonical" href="https://academicwizard.online/tools/ai-detector" />
+                <link rel="canonical" href="https://academicwizard.online/tools/ai-detector/" />
                 <meta property="og:title" content="Accurate AI Content Detector & Essay Scanner | Academic Wizard" />
                 <meta property="og:description" content="Audit essay authenticity. Scan texts for AI-generated patterns and robotic vocabulary." />
-                <meta property="og:url" content="https://academicwizard.online/tools/ai-detector" />
+                <meta property="og:url" content="https://academicwizard.online/tools/ai-detector/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": "AI Content Detector",
                         "description": "Free AI content detection tool for academic essays. Scan sentence-level perplexity, predictability, and AI buzzwords to detect ChatGPT, Claude, and Gemini generated text.",
-                        "url": "https://academicwizard.online/tools/ai-detector",
+                        "url": "https://academicwizard.online/tools/ai-detector/",
                         "applicationCategory": "EducationalApplication",
                         "operatingSystem": "All",
                         "browserRequirements": "Requires HTML5",
@@ -170,13 +170,13 @@ const AIDetector = () => {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": "Tools",
-                                "item": "https://academicwizard.online/tools"
+                                "item": "https://academicwizard.online/tools/"
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 3,
                                 "name": "AI Detector",
-                                "item": "https://academicwizard.online/tools/ai-detector"
+                                "item": "https://academicwizard.online/tools/ai-detector/"
                             }
                         ]
                     })}

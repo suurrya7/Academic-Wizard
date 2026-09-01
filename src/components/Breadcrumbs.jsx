@@ -18,12 +18,15 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": paths.map((path, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": path.name,
-            "item": `https://academicwizard.online${path.url}`
-        }))
+        "itemListElement": paths.map((path, index) => {
+            const cleanUrl = !path.url || path.url === '/' ? '' : (path.url.endsWith('/') ? path.url : `${path.url}/`);
+            return {
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": path.name,
+                "item": `https://academicwizard.online${cleanUrl}`
+            };
+        })
     };
 
     return (
