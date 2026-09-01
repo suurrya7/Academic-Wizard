@@ -92,7 +92,7 @@ const Services = () => {
                             className={`flex flex-col lg:flex-row gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
                         >
                             <div className="w-full lg:w-5/12">
-                                <Link to={`/services/${service.slug}`} className="block group relative rounded-3xl overflow-hidden">
+                                <Link to={`/services/${service.slug}/`} className="block group relative rounded-3xl overflow-hidden">
                                     <div className="aspect-[4/3] w-full">
                                         <img src={service.image || "/images/dark-office.webp"} alt={service.title} className="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/20 to-transparent pointer-events-none" />
@@ -103,14 +103,14 @@ const Services = () => {
                                 </Link>
                             </div>
                             <div className="w-full lg:w-2/3">
-                                <Link to={`/services/${service.slug}`}>
+                                <Link to={`/services/${service.slug}/`}>
                                     <h2 className="text-3xl font-bold mb-6 font-heading text-white hover:text-accent-gold transition-colors">{service.title}</h2>
                                 </Link>
                                 <p className="text-text-secondary text-lg leading-relaxed mb-8 line-clamp-3" style={{ color: 'var(--text-secondary)' }}>
                                     {service.overview}
                                 </p>
                                 <div className="flex gap-4">
-                                    <Link to={`/services/${service.slug}`}>
+                                    <Link to={`/services/${service.slug}/`}>
                                         <Button>
                                             View Details
                                         </Button>
@@ -119,6 +119,85 @@ const Services = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* Popular Academic Disciplines & Regional Hubs — Injects High Link Equity into Commercial Pages */}
+            <section className="py-20 border-t border-glass-border bg-bg-secondary/40">
+                <div className="container px-6 max-w-7xl mx-auto">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-gold/15 text-accent-gold text-xs font-bold uppercase tracking-wider mb-3">
+                            High-Demand Specializations
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-4">
+                            Explore Top Disciplines & Regional Centers
+                        </h2>
+                        <p className="text-text-secondary text-sm leading-relaxed">
+                            Discover verified faculty specialists dedicated to university guidelines across the UK, Australia, Canada, USA, and Singapore.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* UK Cluster */}
+                        <div className="glass-card p-6 border-accent-gold/20 space-y-3">
+                            <div className="text-xs font-mono font-bold uppercase text-accent-gold tracking-widest">
+                                🇬🇧 United Kingdom
+                            </div>
+                            <h3 className="font-heading font-bold text-base text-white">UK University Specialisms</h3>
+                            <ul className="space-y-2 text-xs text-text-secondary">
+                                <li><Link to="/services/assignment-help/uk/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help UK</Link></li>
+                                <li><Link to="/services/assignment-help/uk/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help UK (OSCOLA)</Link></li>
+                                <li><Link to="/services/assignment-help/uk/mba/" className="hover:text-accent-gold transition-colors">MBA & Business Case Studies UK</Link></li>
+                                <li><Link to="/services/assignment-help/uk/psychology/" className="hover:text-accent-gold transition-colors">Psychology Assignment Help UK</Link></li>
+                                <li><Link to="/services/assignment-help/uk/london/" className="hover:text-accent-gold transition-colors">Academic Help London Universities</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* Australia Cluster */}
+                        <div className="glass-card p-6 border-accent-gold/20 space-y-3">
+                            <div className="text-xs font-mono font-bold uppercase text-accent-gold tracking-widest">
+                                🇦🇺 Australia
+                            </div>
+                            <h3 className="font-heading font-bold text-base text-white">Go8 University Support</h3>
+                            <ul className="space-y-2 text-xs text-text-secondary">
+                                <li><Link to="/services/assignment-help/australia/accounting/" className="hover:text-accent-gold transition-colors">Accounting Assignment Help Australia</Link></li>
+                                <li><Link to="/services/assignment-help/australia/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help Australia</Link></li>
+                                <li><Link to="/services/assignment-help/australia/engineering/" className="hover:text-accent-gold transition-colors">Engineering Help Australia</Link></li>
+                                <li><Link to="/services/assignment-help/australia/sydney/" className="hover:text-accent-gold transition-colors">Assignment Help Sydney</Link></li>
+                                <li><Link to="/services/assignment-help/australia/melbourne/" className="hover:text-accent-gold transition-colors">Assignment Help Melbourne</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* Canada Cluster */}
+                        <div className="glass-card p-6 border-accent-gold/20 space-y-3">
+                            <div className="text-xs font-mono font-bold uppercase text-accent-gold tracking-widest">
+                                🇨🇦 Canada
+                            </div>
+                            <h3 className="font-heading font-bold text-base text-white">U15 Academic Mentorship</h3>
+                            <ul className="space-y-2 text-xs text-text-secondary">
+                                <li><Link to="/services/assignment-help/canada/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help Canada</Link></li>
+                                <li><Link to="/services/assignment-help/canada/business/" className="hover:text-accent-gold transition-colors">Business Management Help Canada</Link></li>
+                                <li><Link to="/services/assignment-help/canada/healthcare/" className="hover:text-accent-gold transition-colors">Healthcare & Nursing Canada</Link></li>
+                                <li><Link to="/services/assignment-help/canada/toronto/" className="hover:text-accent-gold transition-colors">Assignment Help Toronto</Link></li>
+                                <li><Link to="/services/assignment-help/canada/vancouver/" className="hover:text-accent-gold transition-colors">Assignment Help Vancouver</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* High-Ticket Research */}
+                        <div className="glass-card p-6 border-accent-gold/20 space-y-3">
+                            <div className="text-xs font-mono font-bold uppercase text-accent-gold tracking-widest">
+                                🎓 Research & Dissertation
+                            </div>
+                            <h3 className="font-heading font-bold text-base text-white">Postgraduate Assistance</h3>
+                            <ul className="space-y-2 text-xs text-text-secondary">
+                                <li><Link to="/services/dissertation-help/uk/nursing/" className="hover:text-accent-gold transition-colors">Nursing Dissertation Support UK</Link></li>
+                                <li><Link to="/services/literature-review/uk/nursing/" className="hover:text-accent-gold transition-colors">Systematic Literature Review Help</Link></li>
+                                <li><Link to="/services/study-guidance/singapore/nursing/" className="hover:text-accent-gold transition-colors">Nursing Study Guidance Singapore</Link></li>
+                                <li><Link to="/services/editing-proofreading/uk/law/" className="hover:text-accent-gold transition-colors">Law Proofreading & OSCOLA Formatting</Link></li>
+                                <li><Link to="/tools/citation-generator/" className="hover:text-accent-gold transition-colors">Free APA / Harvard Citation Tool</Link></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             

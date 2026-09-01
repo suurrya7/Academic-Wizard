@@ -126,8 +126,8 @@ const ServicePage = () => {
                 subtitle={service.heroSubtitle}
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Services', url: '/services' },
-                    { name: service.title, url: `/services/${service.slug}` }
+                    { name: 'Services', url: '/services/' },
+                    { name: service.title, url: `/services/${service.slug}/` }
                 ]}
             />
 
@@ -343,7 +343,7 @@ const ServicePage = () => {
                         {service.countries.map((country, idx) => (
                             <Link 
                                 key={idx} 
-                                to={`/services/${service.slug}/${country.slug}`} 
+                                to={`/services/${service.slug}/${country.slug}/`} 
                                 className="glass-card p-6 block hover:border-accent-gold/50 transition-colors group"
                             >
                                 <div className="flex items-center gap-3 mb-4">

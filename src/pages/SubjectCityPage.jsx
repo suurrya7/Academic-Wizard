@@ -38,13 +38,90 @@ const EXPERT_QUOTES = [
 ];
 
 const SERVICE_VERBS = {
-    "assignment-help": { action: "Assignment Help", suffix: "Assignments & Coursework", badge: "Coursework Excellence" },
-    "essay-help": { action: "Essay Writing Help", suffix: "Essays & Argumentative Papers", badge: "First-Class Essay Help" },
-    "dissertation-help": { action: "Dissertation & Thesis Help", suffix: "Dissertations, Theses & Proposals", badge: "PhD Dissertation Support" },
-    "literature-review": { action: "Literature Review Help", suffix: "Systematic & Scoping Reviews", badge: "PRISMA Literature Review" },
-    "research-paper-help": { action: "Research Paper Assistance", suffix: "Research Papers & Journal Manuscripts", badge: "Empirical Research Help" },
-    "editing-proofreading": { action: "Academic Editing & Proofreading", suffix: "Line Editing & Citation Formatting", badge: "Turnitin AI-Zero Editing" },
-    "study-guidance": { action: "Study Guidance & Coaching", suffix: "1-on-1 Academic Mentorship", badge: "Academic Mentorship" }
+    "assignment-help": { 
+        action: "Assignment Help", 
+        suffix: "Assignments & Coursework", 
+        badge: "Coursework Excellence",
+        deliverables: [
+            "Comprehensive Case Study & Problem-Solving Rubrics",
+            "Calculation Sheets, Code Repositories or Lab Data",
+            "Turnitin Originality & AI Plagiarism Scan (< 5%)",
+            "Structured Referencing (Harvard, APA 7th, OSCOLA, IEEE)"
+        ],
+        usp: "100% bespoke coursework crafted to university grading rubrics."
+    },
+    "essay-help": { 
+        action: "Essay Writing Service", 
+        suffix: "Essays & Critical Argumentative Papers", 
+        badge: "First-Class Essay Writing",
+        deliverables: [
+            "Cohesive Thesis Statement & Argumentative Framework",
+            "Peer-Reviewed Primary Literature Evidence Synthesis",
+            "Critical Evaluation & Counter-Argument Analysis",
+            "Flawless In-Text Citations & Complete Bibliography"
+        ],
+        usp: "Compelling scholarly arguments written from primary sources."
+    },
+    "dissertation-help": { 
+        action: "Dissertation & Thesis Support", 
+        suffix: "Dissertations, Theses & Proposals", 
+        badge: "PhD Dissertation Support",
+        deliverables: [
+            "Full Methodology Framework & Research Design",
+            "Statistical / Qualitative Data Analysis (SPSS, R, NVivo)",
+            "Systematic Discussion & Thematic Chapter Synthesis",
+            "Chapter-by-Chapter Supervisor Milestone Reviews"
+        ],
+        usp: "Doctoral-grade research mentorship and complete thesis chapters."
+    },
+    "literature-review": { 
+        action: "Literature Review Service", 
+        suffix: "Systematic & Scoping Literature Reviews", 
+        badge: "PRISMA Literature Review",
+        deliverables: [
+            "Comprehensive Database Search Protocols (PubMed, Scopus, JSTOR)",
+            "CASP / JBI Methodological Critical Appraisal Tables",
+            "Thematic Synthesis & Conceptual Knowledge Matrix",
+            "Rigorous Identification of Empirical Gaps"
+        ],
+        usp: "Exhaustive academic literature mapping and critical synthesis."
+    },
+    "research-paper-help": { 
+        action: "Research Paper Assistance", 
+        suffix: "Research Papers & Journal Manuscripts", 
+        badge: "Empirical Research Help",
+        deliverables: [
+            "Empirical Problem Formulation & Hypotheses Testing",
+            "Data Presentation with Figures & Statistical Summary Tables",
+            "Journal-Grade Discussion Aligned to Faculty Criteria",
+            "Strict Zero-AI Footprint & Ethics Compliance Check"
+        ],
+        usp: "Publishable research quality with verified empirical citations."
+    },
+    "editing-proofreading": { 
+        action: "Academic Proofreading & Editing", 
+        suffix: "Line Editing & AI Score Reduction", 
+        badge: "Turnitin AI-Zero Editing",
+        deliverables: [
+            "Line-by-Line Academic Tone & Syntax Polish",
+            "Strict Verification of OSCOLA, Harvard, APA, Chicago Styles",
+            "Removal of AI Paraphrasing Footprints & Predictable Syntax",
+            "Track Changes Word Document + Clean Submission Copy"
+        ],
+        usp: "Eliminates grammatical flaws, formatting errors, and AI flags."
+    },
+    "study-guidance": { 
+        action: "Study Guidance & Tutoring", 
+        suffix: "1-on-1 Academic Mentorship", 
+        badge: "Academic Mentorship",
+        deliverables: [
+            "Direct 1-on-1 Conceptual Breakdown with Subject Specialist",
+            "Tutor Feedback Interpretation & Revision Roadmap",
+            "Exam Strategy, OSCE & Defense Prep Coaching",
+            "Personalized Academic Progression Planning"
+        ],
+        usp: "One-on-one expert faculty mentorship to elevate subject mastery."
+    }
 };
 
 const SubjectCityPage = () => {
@@ -60,10 +137,10 @@ const SubjectCityPage = () => {
     }, [specializedSlug, countrySlug, serviceSlug]);
 
     const service = servicesData.find(s => s.slug === serviceSlug);
-    if (!service) return <Navigate to="/services" replace />;
+    if (!service) return <Navigate to="/services/" replace />;
 
     const country = service.countries?.find(c => c.slug === countrySlug);
-    if (!country) return <Navigate to={`/services/${serviceSlug}`} replace />;
+    if (!country) return <Navigate to={`/services/${serviceSlug}/`} replace />;
 
     let specializedData = null;
     let pageType = null; // "subject" or "city"
@@ -83,9 +160,20 @@ const SubjectCityPage = () => {
         }
     }
 
-    if (!specializedData) return <Navigate to={`/services/${serviceSlug}/${countrySlug}`} replace />;
+    if (!specializedData) return <Navigate to={`/services/${serviceSlug}/${countrySlug}/`} replace />;
 
-    const serviceVerb = SERVICE_VERBS[serviceSlug] || { action: service.title, suffix: service.title, badge: "Academic Specialization" };
+    const serviceVerb = SERVICE_VERBS[serviceSlug] || { 
+        action: service.title, 
+        suffix: service.title, 
+        badge: "Academic Specialization",
+        deliverables: [
+            "Custom-Authored Academic Content",
+            "Turnitin Originality & AI Verification Report",
+            "Strict Formatting to Target University Guidelines",
+            "Unlimited Free Revisions Within Project Scope"
+        ],
+        usp: "Bespoke academic support tailored to university standards."
+    };
     
     // Clean raw subject name (e.g. "Nursing Assignment Help UK" -> "Nursing")
     const cleanSubjectName = specializedData.title
@@ -94,16 +182,30 @@ const SubjectCityPage = () => {
         .replace(/ Coursework.*/i, "")
         .trim();
 
-    // Dynamic Title & Heading Synthesis
+    // Dynamic Title & Heading Synthesis — eliminates cannibalization across the 7 services
     const synthesizedTitle = pageType === "subject"
         ? `${cleanSubjectName} ${serviceVerb.action} ${country.name}`
         : `${service.title} in ${cleanSubjectName}, ${country.name}`;
 
-    const pageMetaTitle = `${synthesizedTitle} | Top-Rated Academic Experts | Academic Wizard`;
-    const pageDescription = `Get professional ${synthesizedTitle.toLowerCase()}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
+    const pageMetaTitle = pageType === "subject"
+        ? `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.badge} | Academic Wizard`
+        : `${service.title} in ${cleanSubjectName}, ${country.name} | Top-Rated Academic Experts | Academic Wizard`;
+
+    const pageDescription = pageType === "subject"
+        ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
+        : `Get professional ${service.title.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
+    
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
-    const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20urgent%20help%20with%20my%20${encodeURIComponent(cleanSubjectName)}%20${encodeURIComponent(service.title)}%20in%20${encodeURIComponent(country.name)}.`;
+    const whatsappMessage = encodeURIComponent(
+        `Hello Academic Wizard!\n\n` +
+        `I need urgent assistance with my ${cleanSubjectName} ${serviceVerb.action} (${country.name}).\n\n` +
+        `📌 Service: ${serviceVerb.action}\n` +
+        `🎓 Subject: ${cleanSubjectName}\n` +
+        `🌍 Location: ${country.name} University\n\n` +
+        `Could an online specialist review my requirements and provide a timeline & quote?`
+    );
+    const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMessage}`;
     
     const synthesizedFaqs = pageType === "subject" ? [
         {
@@ -303,6 +405,32 @@ const SubjectCityPage = () => {
                                 role={`${selectedQuote.role} (${country.name})`}
                             />
 
+                            {/* Service-Specific Deliverables Box — Differentiates the 7 Services for Google & Students */}
+                            {serviceVerb.deliverables && (
+                                <div className="glass-card p-6 border-accent-gold/25 space-y-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-lg font-bold text-text-primary font-heading flex items-center gap-2">
+                                            <Sparkles className="text-accent-gold" size={19} />
+                                            Included in Your {serviceVerb.action} Project
+                                        </h3>
+                                        <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-accent-gold/15 text-accent-gold font-bold">
+                                            Guaranteed
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-text-secondary leading-relaxed">
+                                        Every {cleanSubjectName} submission is custom-tailored to {country.name} departmental guidelines and includes:
+                                    </p>
+                                    <div className="grid sm:grid-cols-2 gap-3 pt-1">
+                                        {serviceVerb.deliverables.map((item, i) => (
+                                            <div key={i} className="flex items-start gap-2.5 text-sm text-text-secondary">
+                                                <Check className="text-emerald-400 shrink-0 mt-0.5" size={16} />
+                                                <span>{item}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Deep Domain Specific HTML Article */}
                             {deepHtml && (
                                 <div 
@@ -365,6 +493,18 @@ const SubjectCityPage = () => {
                                     className="w-full py-3 px-4 rounded-xl bg-accent-gold hover:bg-accent-gold-light text-black font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent-gold/20"
                                 >
                                     <MessageSquare size={16} /> Chat with Specialist on WhatsApp
+                                </button>
+                                <button 
+                                    onClick={() => {
+                                        const pricingEl = document.getElementById('pricing-section');
+                                        if (pricingEl) {
+                                            pricingEl.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                    className="w-full mt-2 py-2 px-3 rounded-lg border border-white/10 hover:border-accent-gold/40 text-text-secondary hover:text-accent-gold text-[11px] font-heading uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                                >
+                                    <span>Calculate Price for Your Word Count</span>
+                                    <span>↓</span>
                                 </button>
                             </div>
 

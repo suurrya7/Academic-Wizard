@@ -21,12 +21,12 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
-        { name: 'Free Tools', path: '/tools' },
-        { name: 'About Us', path: '/about' },
-        { name: 'FAQs', path: '/faq' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Services', path: '/services/' },
+        { name: 'Free Tools', path: '/tools/' },
+        { name: 'About Us', path: '/about/' },
+        { name: 'FAQs', path: '/faq/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Contact', path: '/contact/' },
     ];
 
     return (
@@ -50,16 +50,21 @@ const Navbar = () => {
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
-                    {navLinks && navLinks.map((link) => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={`text-[11px] uppercase tracking-[3px] font-heading transition-all hover:text-accent-gold relative group ${(location && location.pathname === link.path) ? 'text-accent-gold' : 'text-text-primary/70'}`}
-                        >
-                            {link.name}
-                            <span className={`absolute -bottom-2 left-0 h-[1px] bg-accent-gold transition-all duration-300 ${(location && location.pathname === link.path) ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                        </Link>
-                    ))}
+                    {navLinks && navLinks.map((link) => {
+                        const isActive = link.path === '/' 
+                            ? location?.pathname === '/' 
+                            : location?.pathname?.startsWith(link.path);
+                        return (
+                            <Link
+                                key={link.path}
+                                to={link.path}
+                                className={`text-[11px] uppercase tracking-[3px] font-heading transition-all hover:text-accent-gold relative group ${isActive ? 'text-accent-gold' : 'text-text-primary/70'}`}
+                            >
+                                {link.name}
+                                <span className={`absolute -bottom-2 left-0 h-[1px] bg-accent-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                            </Link>
+                        );
+                    })}
                     
                     <ThemeToggle />
 
@@ -107,7 +112,7 @@ const Navbar = () => {
                             </Link>
                         ))}
                         <Link 
-                            to="/contact" 
+                            to="/contact/" 
                             onClick={() => setIsOpen(false)}
                             className="mt-2"
                         >

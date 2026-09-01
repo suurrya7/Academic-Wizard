@@ -130,9 +130,9 @@ const CountryServicePage = () => {
                 subtitle={country.desc}
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Services', url: '/services' },
-                    { name: service.title, url: `/services/${service.slug}` },
-                    { name: country.name, url: `/services/${service.slug}/${country.slug}` }
+                    { name: 'Services', url: '/services/' },
+                    { name: service.title, url: `/services/${service.slug}/` },
+                    { name: country.name, url: `/services/${service.slug}/${country.slug}/` }
                 ]}
             />
 
@@ -247,7 +247,7 @@ const CountryServicePage = () => {
                                 const matchingSubject = countrySubjects[country.slug]?.find(s => s.slug === slugified || s.title.toLowerCase().includes(subject.toLowerCase()));
                                 
                                 return matchingSubject ? (
-                                    <Link key={idx} to={`/services/${service.slug}/${country.slug}/${matchingSubject.slug}`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors whitespace-nowrap inline-block">
+                                    <Link key={idx} to={`/services/${service.slug}/${country.slug}/${matchingSubject.slug}/`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors whitespace-nowrap inline-block">
                                         {subject}
                                     </Link>
                                 ) : (
@@ -271,7 +271,7 @@ const CountryServicePage = () => {
                         </div>
                         <div className="flex flex-wrap gap-4 justify-center">
                             {countryCities[country.slug].map((city, idx) => (
-                                <Link key={idx} to={`/services/${service.slug}/${country.slug}/${city.slug}`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-blue hover:border-accent-blue/50 transition-colors whitespace-nowrap inline-block">
+                                <Link key={idx} to={`/services/${service.slug}/${country.slug}/${city.slug}/`} className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-blue hover:border-accent-blue/50 transition-colors whitespace-nowrap inline-block">
                                     {city.title.replace('Assignment Help ', '')}
                                 </Link>
                             ))}

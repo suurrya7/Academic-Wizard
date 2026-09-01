@@ -69,35 +69,35 @@ const Footer = () => {
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Quick Links</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
-                        <li><Link to="/services" className="hover:text-accent-gold transition-colors">Services</Link></li>
-                        <li><Link to="/tools" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
-                        <li><Link to="/about" className="hover:text-accent-gold transition-colors">About Us</Link></li>
-                        <li><Link to="/faq" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
-                        <li><Link to="/blog" className="hover:text-accent-gold transition-colors">Blog</Link></li>
-                        <li><Link to="/contact" className="hover:text-accent-gold transition-colors">Contact</Link></li>
+                        <li><Link to="/services/" className="hover:text-accent-gold transition-colors">Services</Link></li>
+                        <li><Link to="/tools/" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
+                        <li><Link to="/about/" className="hover:text-accent-gold transition-colors">About Us</Link></li>
+                        <li><Link to="/faq/" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
+                        <li><Link to="/blog/" className="hover:text-accent-gold transition-colors">Blog</Link></li>
+                        <li><Link to="/contact/" className="hover:text-accent-gold transition-colors">Contact</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Services</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
-                        <li><Link to="/services/assignment-help" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
-                        <li><Link to="/services/essay-help" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
-                        <li><Link to="/services/dissertation-help" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
-                        <li><Link to="/services/literature-review" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
-                        <li><Link to="/services/editing-proofreading" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
-                        <li><Link to="/services/research-paper-help" className="hover:text-accent-gold transition-colors">Research Paper Help</Link></li>
-                        <li><Link to="/services/study-guidance" className="hover:text-accent-gold transition-colors">Study Guidance</Link></li>
+                        <li><Link to="/services/assignment-help/" className="hover:text-accent-gold transition-colors">Assignment Assistance</Link></li>
+                        <li><Link to="/services/essay-help/" className="hover:text-accent-gold transition-colors">Essay Writing Support</Link></li>
+                        <li><Link to="/services/dissertation-help/" className="hover:text-accent-gold transition-colors">Dissertation Help</Link></li>
+                        <li><Link to="/services/literature-review/" className="hover:text-accent-gold transition-colors">Literature Review</Link></li>
+                        <li><Link to="/services/editing-proofreading/" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
+                        <li><Link to="/services/research-paper-help/" className="hover:text-accent-gold transition-colors">Research Paper Help</Link></li>
+                        <li><Link to="/services/study-guidance/" className="hover:text-accent-gold transition-colors">Study Guidance</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Free Tools</h3>
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
-                        <li><Link to="/tools/citation-generator" className="hover:text-accent-gold transition-colors">Citation Builder</Link></li>
-                        <li><Link to="/tools/grammar-checker" className="hover:text-accent-gold transition-colors">Grammar Editor</Link></li>
-                        <li><Link to="/tools/ai-detector" className="hover:text-accent-gold transition-colors">AI Content Scanner</Link></li>
-                        <li><Link to="/tools/ai-humanizer" className="hover:text-accent-gold transition-colors">AI Text Humanizer</Link></li>
+                        <li><Link to="/tools/citation-generator/" className="hover:text-accent-gold transition-colors">Citation Builder</Link></li>
+                        <li><Link to="/tools/grammar-checker/" className="hover:text-accent-gold transition-colors">Grammar Editor</Link></li>
+                        <li><Link to="/tools/ai-detector/" className="hover:text-accent-gold transition-colors">AI Content Scanner</Link></li>
+                        <li><Link to="/tools/ai-humanizer/" className="hover:text-accent-gold transition-colors">AI Text Humanizer</Link></li>
                     </ul>
                 </div>
 
@@ -120,13 +120,36 @@ const Footer = () => {
                 </div>
             </div>
 
+            {/* High-Intent Academic Disciplines & Regional Hubs — Passes Link Equity to High-CPC Money Pages */}
+            <div className="container px-6 pt-10 pb-6 border-t border-glass-border">
+                <div className="text-xs font-heading tracking-widest text-text-primary uppercase mb-4">
+                    Popular Academic Specializations
+                </div>
+                <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-xs text-text-secondary leading-relaxed">
+                    <Link to="/services/assignment-help/uk/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help UK</Link>
+                    <Link to="/services/assignment-help/uk/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help UK</Link>
+                    <Link to="/services/assignment-help/uk/mba/" className="hover:text-accent-gold transition-colors">MBA Assignment Help UK</Link>
+                    <Link to="/services/assignment-help/uk/psychology/" className="hover:text-accent-gold transition-colors">Psychology Assignment Help UK</Link>
+                    <Link to="/services/assignment-help/uk/computer-science/" className="hover:text-accent-gold transition-colors">Computer Science Help UK</Link>
+                    <Link to="/services/assignment-help/australia/accounting/" className="hover:text-accent-gold transition-colors">Accounting Assignment Help Australia</Link>
+                    <Link to="/services/assignment-help/australia/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help Australia</Link>
+                    <Link to="/services/assignment-help/canada/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help Canada</Link>
+                    <Link to="/services/assignment-help/canada/business/" className="hover:text-accent-gold transition-colors">Business Assignment Help Canada</Link>
+                    <Link to="/services/study-guidance/singapore/nursing/" className="hover:text-accent-gold transition-colors">Nursing Study Guidance Singapore</Link>
+                    <Link to="/services/assignment-help/uk/london/" className="hover:text-accent-gold transition-colors">Assignment Help London</Link>
+                    <Link to="/services/assignment-help/uk/manchester/" className="hover:text-accent-gold transition-colors">Assignment Help Manchester</Link>
+                    <Link to="/services/assignment-help/australia/sydney/" className="hover:text-accent-gold transition-colors">Assignment Help Sydney</Link>
+                    <Link to="/services/assignment-help/canada/toronto/" className="hover:text-accent-gold transition-colors">Assignment Help Toronto</Link>
+                </div>
+            </div>
+
             <div className="container px-6 pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
                 <p className="text-text-secondary text-xs text-center md:text-left" style={{ color: 'var(--text-secondary)' }}>
                     &copy; {new Date().getFullYear()} Academic Wizard. All Rights Reserved.
                 </p>
                 <div className="flex gap-8 text-text-secondary text-xs" style={{ color: 'var(--text-secondary)' }}>
-                    <Link to="/privacy-policy" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
-                    <Link to="/terms-of-service" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
+                    <Link to="/privacy-policy/" className="hover:text-accent-gold transition-colors">Privacy Policy</Link>
+                    <Link to="/terms-of-service/" className="hover:text-accent-gold transition-colors">Terms of Service</Link>
                 </div>
             </div>
         </footer>

@@ -41,15 +41,6 @@ const LoadingFallback = () => (
   <div style={{ minHeight: '100vh', background: '#050505' }}></div>
 );
 
-// Redirects trailing slashes to non-slash URLs for SEO (e.g. /blog/ -> /blog)
-const TrailingSlashRedirect = () => {
-  const location = useLocation();
-  if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
-    return <Navigate replace to={{ ...location, pathname: location.pathname.slice(0, -1) }} />;
-  }
-  return null;
-};
-
 function App() {
   return (
     <HelmetProvider>
@@ -62,7 +53,6 @@ function App() {
       </Helmet>
       <ThemeProvider>
         <Router basename={import.meta.env.BASE_URL}>
-          <TrailingSlashRedirect />
           <Suspense fallback={null}>
             <CustomCursor />
             <ParticleBackground />
