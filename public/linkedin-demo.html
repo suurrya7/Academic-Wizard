@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Wizard — LinkedIn Community Management API Demo</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/webp" href="/academic-wizard-favicon.webp" />
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --card-bg: #141b24;
+      --border: #232f3e;
+      --gold: #d4af37;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --blue: #58a6ff;
+      --green: #2ea043;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 30px 20px 60px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: rgba(212, 175, 55, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      margin-bottom: 28px;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background-color: #000;
+    }
+    .actions {
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      background: #0e141c;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-secondary {
+      background: #21262d;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #30363d; }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .info-card h3 {
+      font-size: 16px;
+      color: var(--blue);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-card ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 14px;
+      color: #c9d1d9;
+    }
+    .info-card li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .info-card li::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">LinkedIn Developer Application Demo</span>
+      <h1>Academic Wizard — Community Management API Walkthrough</h1>
+      <p class="subtitle">Screen recording demonstration of our platform, scholarly research publications, and LinkedIn Company Page syndication integration.</p>
+    </header>
+
+    <div class="video-card">
+      <video controls autoplay loop playsinline preload="auto" poster="/og-image.jpg">
+        <source src="/linkedin-api-demo.webm" type="video/webm" />
+        Your browser does not support the video tag. Please use the download link below.
+      </video>
+      <div class="actions">
+        <span style="font-size: 13px; color: var(--muted);">Format: 720p HD WebM • Running Time: 0:57</span>
+        <div style="display: flex; gap: 10px;">
+          <a href="/linkedin-api-demo.webm" download class="btn">Direct Video Download</a>
+          <a href="https://academicwizard.online" target="_blank" class="btn btn-secondary">Visit Website</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📋 Walkthrough Chapters</h3>
+        <ul>
+          <li><strong>0:00 - 0:20:</strong> Academic Wizard homepage & research support service overview.</li>
+          <li><strong>0:21 - 0:34:</strong> Academic Research Blog & scholarly guides repository.</li>
+          <li><strong>0:35 - 0:45:</strong> Official Academic Wizard LinkedIn Company Page (`urn:li:organization`).</li>
+          <li><strong>0:46 - 0:57:</strong> Backend API publishing integration architecture (`publisher.js` via `/v2/ugcPosts`).</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>🔒 Compliance & Scopes</h3>
+        <ul>
+          <li><strong>Requested Scope:</strong> `w_organization_social` for Company Page updates.</li>
+          <li><strong>Author URN:</strong> `urn:li:organization:...` (Owned & operated).</li>
+          <li><strong>Privacy:</strong> No member profiling, scraping, messaging, or advertising targeting.</li>
+          <li><strong>Security:</strong> All tokens securely encrypted via GitHub Secrets.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
