@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Turnitin Similarity Spikes: A Student Guide to Context",
+    "slug": "fixing-turnitin-similarity-spikes-a-student-guide-to-context",
+    "excerpt": "High Turnitin scores aren't always plagiarism. Learn how to identify false positives and create a clear, evidence-based context for your instructor today.",
+    "keywords": [
+      "how to explain high turnitin similarity in academic papers",
+      "turnitin source attribution",
+      "academic integrity appeal process",
+      "citing paraphrased content correctly",
+      "turnitin false positive resolution"
+    ],
+    "primaryKeyword": "how to explain high turnitin similarity in academic papers",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-02T06:41:01.113613+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-similarity-spikes-a-student-guide-to-context.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Master Complex In-Text Citations for Thesis Success",
+    "slug": "apa-7th-edition-master-complex-in-text-citations-for-thesis-success",
+    "excerpt": "Don't lose marks on formatting. Master the nuances of APA 7th edition in-text citations with this step-by-step guide tailored for complex graduate research.",
+    "keywords": [
+      "APA 7 in-text citation rules for multi-author sources",
+      "APA 7 reference formatting guide",
+      "citing government reports APA 7",
+      "APA 7 style for secondary sources",
+      "in-text citation punctuation rules"
+    ],
+    "primaryKeyword": "APA 7 in-text citation rules for multi-author sources",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-02T06:41:53.591571+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-master-complex-in-text-citations-for-thesis-success.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo 26: Eliminating Coding Bias in Qualitative Thesis Analysis",
+    "slug": "nvivo-26-eliminating-coding-bias-in-qualitative-thesis-analysis",
+    "excerpt": "Struggling with coding consistency? Discover how to use NVivo 26 to minimize researcher bias and build a robust, valid framework for your qualitative thesis.",
+    "keywords": [
+      "how to reduce researcher bias in qualitative thematic analysis",
+      "NVivo 26 thematic coding best practices",
+      "qualitative research reliability checks",
+      "coding drift in NVivo",
+      "improving qualitative data validity"
+    ],
+    "primaryKeyword": "how to reduce researcher bias in qualitative thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-02T06:42:46.730004+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-eliminating-coding-bias-in-qualitative-thesis-analysis.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Literature Review Outline",
+    "slug": "ethical-ai-use-scaffolding-your-literature-review-outline-2",
+    "excerpt": "Learn how to use AI as a structural assistant to scaffold your literature review without compromising your unique voice or academic integrity standards.",
+    "keywords": [
+      "how to use AI ethically for literature review outlines",
+      "AI tools for academic synthesis",
+      "maintaining academic voice with AI",
+      "ethical AI prompting for research",
+      "literature review structure templates"
+    ],
+    "primaryKeyword": "how to use AI ethically for literature review outlines",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-02T06:43:13.875616+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-literature-review-outline-2.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI False Positives: A 2026 Student Guide to Integrity Audits",
     "slug": "turnitin-ai-false-positives-a-2026-student-guide-to-integrity-audits",
     "excerpt": "Struggling with unexpected Turnitin AI flags? Learn how to audit your writing, document your process, and confidently discuss results with your professor.",

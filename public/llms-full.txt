@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-01
+        **Last updated**: 2026-09-02
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -237,6 +237,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo 26: Eliminating Coding Bias in Qualitative Thesis Analysis](https://academicwizard.online/blog/nvivo-26-eliminating-coding-bias-in-qualitative-thesis-analysis/)**
+  - Excerpt: Struggling with coding consistency? Discover how to use NVivo 26 to minimize researcher bias and build a robust, valid framework for your qualitative thesis.
+  - Keywords: how to reduce researcher bias in qualitative thematic analysis, NVivo 26 thematic coding best practices, qualitative research reliability checks, coding drift in NVivo, improving qualitative data validity
+  - Target Region: Australia
+  - Published: 2026-09-02
 
 - **[Mastering Chicago 17: Handling Archival Sources in Your Dissertation](https://academicwizard.online/blog/mastering-chicago-17-handling-archival-sources-in-your-dissertation/)**
   - Excerpt: Confused by Chicago 17 footnote requirements? Master the nuances of citing archival records and historical manuscripts to ensure your thesis is perfect.
@@ -521,6 +527,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Fixing Turnitin Similarity Spikes: A Student Guide to Context](https://academicwizard.online/blog/fixing-turnitin-similarity-spikes-a-student-guide-to-context/)**
+  - Excerpt: High Turnitin scores aren't always plagiarism. Learn how to identify false positives and create a clear, evidence-based context for your instructor today.
+  - Keywords: how to explain high turnitin similarity in academic papers, turnitin source attribution, academic integrity appeal process, citing paraphrased content correctly, turnitin false positive resolution
+  - Target Region: USA
+  - Published: 2026-09-02
 
 - **[Turnitin AI Detection: Why Your Human Writing Gets Flagged in 2026](https://academicwizard.online/blog/turnitin-ai-detection-why-your-human-writing-gets-flagged-in-2026/)**
   - Excerpt: Struggling with Turnitin AI false positives? Discover why authentic student essays get flagged and learn how to audit your draft to protect your integrity.
@@ -868,6 +880,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Scaffolding Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-outline-2/)**
+  - Excerpt: Learn how to use AI as a structural assistant to scaffold your literature review without compromising your unique voice or academic integrity standards.
+  - Keywords: how to use AI ethically for literature review outlines, AI tools for academic synthesis, maintaining academic voice with AI, ethical AI prompting for research, literature review structure templates
+  - Target Region: Canada
+  - Published: 2026-09-02
+
 - **[Ethical AI Use: Scaffolding Your Literature Review Outline Effectively](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-outline-effectively/)**
   - Excerpt: Learn how to use AI to structure your literature review without outsourcing your critical thinking. Discover ethical scaffolding techniques for success.
   - Keywords: using ai ethically for literature review outlining, ai tools for academic research, literature review synthesis methods, academic writing scaffolding strategies, ethical ai prompting for students
@@ -1037,6 +1055,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[APA 7th Edition: Master Complex In-Text Citations for Thesis Success](https://academicwizard.online/blog/apa-7th-edition-master-complex-in-text-citations-for-thesis-success/)**
+  - Excerpt: Don't lose marks on formatting. Master the nuances of APA 7th edition in-text citations with this step-by-step guide tailored for complex graduate research.
+  - Keywords: APA 7 in-text citation rules for multi-author sources, APA 7 reference formatting guide, citing government reports APA 7, APA 7 style for secondary sources, in-text citation punctuation rules
+  - Target Region: UK
+  - Published: 2026-09-02
 
 - **[NVivo 26: Practical Strategies to Eliminate Qualitative Coding Bias](https://academicwizard.online/blog/nvivo-26-practical-strategies-to-eliminate-qualitative-coding-bias/)**
   - Excerpt: Ensure your research findings hold up to scrutiny. Discover expert-backed NVivo 26 workflows to minimize subjective coding drift in your qualitative study.
