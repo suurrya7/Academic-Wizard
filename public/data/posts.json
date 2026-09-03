@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Flags: A Student Guide to Audit and Proof of Human Writing",
+    "slug": "turnitin-ai-flags-a-student-guide-to-audit-and-proof-of-human-writing",
+    "excerpt": "Struggling with false AI flags? Learn how to conduct a formal audit of your writing and build a case to verify your academic integrity against Turnitin.",
+    "keywords": [
+      "how to dispute Turnitin AI detection false positives",
+      "academic integrity audit",
+      "Turnitin similarity report analysis",
+      "proving human authorship",
+      "AI detector accuracy issues"
+    ],
+    "primaryKeyword": "how to dispute Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-03T06:43:31.042826+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-flags-a-student-guide-to-audit-and-proof-of-human-writing.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Mastering In-Text Citations for Complex Digital Sources",
+    "slug": "beyond-apa-7-mastering-in-text-citations-for-complex-digital-sources",
+    "excerpt": "Tired of citation errors? Master the nuanced APA 7th edition rules for complex digital media and multi-author sources with this clear, step-by-step guide.",
+    "keywords": [
+      "APA 7th edition complex in-text citation rules",
+      "citing social media in APA",
+      "APA 7 digital media formatting",
+      "multi-author citation hacks",
+      "avoiding citation penalties"
+    ],
+    "primaryKeyword": "APA 7th edition complex in-text citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-03T06:43:58.270081+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-mastering-in-text-citations-for-complex-digital-sources.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "NVivo 26: Eliminating Coding Bias in Qualitative Theses for Success",
+    "slug": "nvivo-26-eliminating-coding-bias-in-qualitative-theses-for-success",
+    "excerpt": "Ensure your qualitative findings stand up to scrutiny. Discover advanced NVivo 26 workflows to minimize researcher bias and improve thematic coding accuracy.",
+    "keywords": [
+      "minimizing researcher bias in qualitative analysis",
+      "NVivo 26 thematic coding",
+      "qualitative thesis methodology",
+      "coding drift troubleshooting",
+      "PhD research accuracy"
+    ],
+    "primaryKeyword": "minimizing researcher bias in qualitative analysis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-03T06:44:25.400185+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-eliminating-coding-bias-in-qualitative-theses-for-success.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Syncing Zotero and Obsidian: A Power Workflow for Dissertation Research",
+    "slug": "syncing-zotero-and-obsidian-a-power-workflow-for-dissertation-research",
+    "excerpt": "Streamline your PhD literature review. Learn how to link Zotero with Obsidian to build a dynamic, searchable network of sources for your dissertation.",
+    "keywords": [
+      "integrating Zotero with Obsidian for thesis research",
+      "Zotero library management",
+      "dissertation research organization",
+      "automated research note-taking",
+      "managing 100+ research sources"
+    ],
+    "primaryKeyword": "integrating Zotero with Obsidian for thesis research",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-03T06:44:53.991286+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/syncing-zotero-and-obsidian-a-power-workflow-for-dissertation-research.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
     "title": "Fixing Turnitin Similarity Spikes: A Student Guide to Context",
     "slug": "fixing-turnitin-similarity-spikes-a-student-guide-to-context",
     "excerpt": "High Turnitin scores aren't always plagiarism. Learn how to identify false positives and create a clear, evidence-based context for your instructor today.",
