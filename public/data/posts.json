@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Misclassification: Protecting Your Original Academic Voice",
+    "slug": "turnitin-ai-misclassification-protecting-your-original-academic-voice",
+    "excerpt": "Struggling with false AI flags in Turnitin? Learn how to audit your draft, verify your writing process, and defend your original work with confidence.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity audit",
+      "AI writing detector accuracy",
+      "Turnitin similarity report tips",
+      "proving original student writing"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-04T06:48:21.872461+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-misclassification-protecting-your-original-academic-voice.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing Complex In-Text Citation Errors in 2026",
+    "slug": "apa-7th-edition-fixing-complex-in-text-citation-errors-in-2026",
+    "excerpt": "Master the latest APA 7 in-text citation requirements. Avoid common penalty traps and ensure your bibliography is perfectly formatted for your thesis.",
+    "keywords": [
+      "APA 7th edition in-text citation rules",
+      "APA 7 formatting guide",
+      "multi-author citation pitfalls",
+      "citing digital media APA 7",
+      "academic reference styling"
+    ],
+    "primaryKeyword": "APA 7th edition in-text citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-04T06:49:29.659976+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-complex-in-text-citation-errors-in-2026.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "NVivo 26: Practical Workflow to Reduce Researcher Coding Bias",
+    "slug": "nvivo-26-practical-workflow-to-reduce-researcher-coding-bias",
+    "excerpt": "Struggling to remain objective in your qualitative analysis? Discover a structured NVivo workflow designed to minimize bias and strengthen your thesis.",
+    "keywords": [
+      "NVivo thematic coding methodology",
+      "qualitative data analysis help",
+      "minimizing researcher bias",
+      "thematic analysis workflow",
+      "NVivo coding for PhD theses"
+    ],
+    "primaryKeyword": "NVivo thematic coding methodology",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-04T06:49:57.927303+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-practical-workflow-to-reduce-researcher-coding-bias.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "How to Use AI Ethically for Your Literature Review Outline",
+    "slug": "how-to-use-ai-ethically-for-your-literature-review-outline",
+    "excerpt": "Learn to use AI ethically to scaffold your literature review outline. Organize your sources, find logical themes, and keep your unique voice intact.",
+    "keywords": [
+      "ethical AI use for literature review",
+      "AI scaffolding research",
+      "lit review organization tips",
+      "AI-assisted academic writing",
+      "maintaining student voice"
+    ],
+    "primaryKeyword": "ethical AI use for literature review",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-04T06:50:26.914164+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/how-to-use-ai-ethically-for-your-literature-review-outline.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI Flags: A Student Guide to Audit and Proof of Human Writing",
     "slug": "turnitin-ai-flags-a-student-guide-to-audit-and-proof-of-human-writing",
     "excerpt": "Struggling with false AI flags? Learn how to conduct a formal audit of your writing and build a case to verify your academic integrity against Turnitin.",
