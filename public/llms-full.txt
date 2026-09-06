@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-05
+        **Last updated**: 2026-09-06
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -243,6 +243,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo 26: Debugging Qualitative Coding for PhD Theses](https://academicwizard.online/blog/nvivo-26-debugging-qualitative-coding-for-phd-theses/)**
+  - Excerpt: Ensure your qualitative data analysis remains robust. Discover practical strategies to fix coding drift and maintain academic rigor in your PhD thesis.
+  - Keywords: fixing thematic coding drift in NVivo, NVivo 26 qualitative analysis, reducing coding bias in research, NVivo coding framework setup, thematic analysis consistency
+  - Target Region: UK
+  - Published: 2026-09-06
 
 - **[NVivo 26: Practical Workflow to Reduce Bias in Thematic Analysis](https://academicwizard.online/blog/nvivo-26-practical-workflow-to-reduce-bias-in-thematic-analysis/)**
   - Excerpt: Master your NVivo 26 workflow. Learn essential strategies to minimize researcher bias and maintain academic rigor during your PhD thematic coding process.
@@ -551,6 +557,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Navigating Multi-Author Digital Citations](https://academicwizard.online/blog/apa-7th-edition-navigating-multi-author-digital-citations/)**
+  - Excerpt: Master the latest APA 7 rules for multi-author digital sources. Avoid common citation penalties and ensure your bibliography is perfectly formatted.
+  - Keywords: APA 7 in-text citation rules for digital media, APA 7 multi-author formatting, citing websites APA 7, digital source attribution, avoiding APA citation penalties
+  - Target Region: Canada
+  - Published: 2026-09-06
 
 - **[Resolving Turnitin AI Flags: An Ethical Guide for Students](https://academicwizard.online/blog/resolving-turnitin-ai-flags-an-ethical-guide-for-students/)**
   - Excerpt: Worried about your Turnitin AI score? Learn why your original academic writing might be flagged and how to ethically audit your draft for human authenticity.
@@ -922,6 +934,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Building Your Literature Review Framework](https://academicwizard.online/blog/ethical-ai-use-building-your-literature-review-framework/)**
+  - Excerpt: Learn how to use AI for structural scaffolding and organization, ensuring your literature review remains original, ethical, and academically sound.
+  - Keywords: scaffolding literature review with ethical AI tools, AI for research organization, ethical literature synthesis, organizing academic sources, AI tools for student research
+  - Target Region: Australia
+  - Published: 2026-09-06
+
 - **[How to Use AI Ethically for Your Literature Review Outline](https://academicwizard.online/blog/how-to-use-ai-ethically-for-your-literature-review-outline/)**
   - Excerpt: Learn to use AI ethically to scaffold your literature review outline. Organize your sources, find logical themes, and keep your unique voice intact.
   - Keywords: ethical AI use for literature review, AI scaffolding research, lit review organization tips, AI-assisted academic writing, maintaining student voice
@@ -1103,6 +1121,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI Logic: How to Prove Your Own Writing Integrity](https://academicwizard.online/blog/turnitin-ai-logic-how-to-prove-your-own-writing-integrity/)**
+  - Excerpt: Caught in a Turnitin false positive? Learn how to audit your writing process and provide evidence of your genuine work to support your academic integrity.
+  - Keywords: disputing Turnitin AI false positives as a student, Turnitin AI detector accuracy, proving original student writing, academic integrity appeal letter, contextualizing AI similarity scores
+  - Target Region: USA
+  - Published: 2026-09-06
 
 - **[Optimizing Zotero Libraries for 2026 Dissertation Research Success](https://academicwizard.online/blog/optimizing-zotero-libraries-for-2026-dissertation-research-success/)**
   - Excerpt: Struggling with research chaos? Discover how to clean up Zotero metadata and organize your 2026 dissertation sources for a seamless writing process today.

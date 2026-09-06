@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Logic: How to Prove Your Own Writing Integrity",
+    "slug": "turnitin-ai-logic-how-to-prove-your-own-writing-integrity",
+    "excerpt": "Caught in a Turnitin false positive? Learn how to audit your writing process and provide evidence of your genuine work to support your academic integrity.",
+    "keywords": [
+      "disputing Turnitin AI false positives as a student",
+      "Turnitin AI detector accuracy",
+      "proving original student writing",
+      "academic integrity appeal letter",
+      "contextualizing AI similarity scores"
+    ],
+    "primaryKeyword": "disputing Turnitin AI false positives as a student",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-06T06:43:20.232317+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-logic-how-to-prove-your-own-writing-integrity.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "NVivo 26: Debugging Qualitative Coding for PhD Theses",
+    "slug": "nvivo-26-debugging-qualitative-coding-for-phd-theses",
+    "excerpt": "Ensure your qualitative data analysis remains robust. Discover practical strategies to fix coding drift and maintain academic rigor in your PhD thesis.",
+    "keywords": [
+      "fixing thematic coding drift in NVivo",
+      "NVivo 26 qualitative analysis",
+      "reducing coding bias in research",
+      "NVivo coding framework setup",
+      "thematic analysis consistency"
+    ],
+    "primaryKeyword": "fixing thematic coding drift in NVivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-06T06:43:46.936219+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-debugging-qualitative-coding-for-phd-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating Multi-Author Digital Citations",
+    "slug": "apa-7th-edition-navigating-multi-author-digital-citations",
+    "excerpt": "Master the latest APA 7 rules for multi-author digital sources. Avoid common citation penalties and ensure your bibliography is perfectly formatted.",
+    "keywords": [
+      "APA 7 in-text citation rules for digital media",
+      "APA 7 multi-author formatting",
+      "citing websites APA 7",
+      "digital source attribution",
+      "avoiding APA citation penalties"
+    ],
+    "primaryKeyword": "APA 7 in-text citation rules for digital media",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-06T06:44:13.269371+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-multi-author-digital-citations.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Building Your Literature Review Framework",
+    "slug": "ethical-ai-use-building-your-literature-review-framework",
+    "excerpt": "Learn how to use AI for structural scaffolding and organization, ensuring your literature review remains original, ethical, and academically sound.",
+    "keywords": [
+      "scaffolding literature review with ethical AI tools",
+      "AI for research organization",
+      "ethical literature synthesis",
+      "organizing academic sources",
+      "AI tools for student research"
+    ],
+    "primaryKeyword": "scaffolding literature review with ethical AI tools",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-06T06:44:40.670486+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-building-your-literature-review-framework.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Optimizing Zotero Libraries for 2026 Dissertation Research Success",
     "slug": "optimizing-zotero-libraries-for-2026-dissertation-research-success",
     "excerpt": "Struggling with research chaos? Discover how to clean up Zotero metadata and organize your 2026 dissertation sources for a seamless writing process today.",
