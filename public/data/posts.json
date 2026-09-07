@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin 'AI Score' Reality: Fixing Incorrect Similarity Flags in 2026",
+    "slug": "turnitin-ai-score-reality-fixing-incorrect-similarity-flags-in-2026",
+    "excerpt": "Flagged by Turnitin for AI usage? Learn how to audit your writing, document your unique research process, and contextually dispute incorrect AI reports.",
+    "keywords": [
+      "fixing Turnitin AI detection false positives",
+      "academic integrity audit",
+      "Turnitin similarity report interpretation",
+      "AI writing software detection",
+      "disputing Turnitin AI flags"
+    ],
+    "primaryKeyword": "fixing Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-07T06:51:51.431900+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-reality-fixing-incorrect-similarity-flags-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Master Complex Multi-Author In-Text Citation Rules",
+    "slug": "apa-7th-edition-master-complex-multi-author-in-text-citation-rules",
+    "excerpt": "Confused by APA 7 citation rules for multi-author sources? Master the nuances of in-text formatting to ensure your bibliography remains error-free.",
+    "keywords": [
+      "APA 7th edition multi-author in-text citations",
+      "APA 7 reference formatting",
+      "correct citation style for 3+ authors",
+      "academic citation guide 2026",
+      "APA 7 citation errors"
+    ],
+    "primaryKeyword": "APA 7th edition multi-author in-text citations",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-07T06:52:18.551435+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-master-complex-multi-author-in-text-citation-rules.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "NVivo 26: Eliminating Coding Bias in Your Qualitative Dissertation",
+    "slug": "nvivo-26-eliminating-coding-bias-in-your-qualitative-dissertation",
+    "excerpt": "Reduce subjective bias in your qualitative research. Learn advanced NVivo 26 workflows to ensure your thematic analysis remains objective and rigorous.",
+    "keywords": [
+      "NVivo 26 thematic coding bias",
+      "qualitative analysis software tips",
+      "coding drift in doctoral research",
+      "NVivo coding methodology",
+      "validating qualitative thesis results"
+    ],
+    "primaryKeyword": "NVivo 26 thematic coding bias",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-07T06:52:44.676083+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-eliminating-coding-bias-in-your-qualitative-dissertation.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "Literature Review Outlining: Ethical AI Scaffolding Techniques",
+    "slug": "literature-review-outlining-ethical-ai-scaffolding-techniques",
+    "excerpt": "Use AI to scaffold your lit review without losing your academic voice. Discover ethical frameworks for organizing themes and synthesizing research sources.",
+    "keywords": [
+      "ethical AI literature review outline",
+      "AI for research synthesis",
+      "literature review structure framework",
+      "academic writing AI best practices",
+      "organizing research papers effectively"
+    ],
+    "primaryKeyword": "ethical AI literature review outline",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-07T06:53:11.032320+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/literature-review-outlining-ethical-ai-scaffolding-techniques.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Logic: How to Prove Your Own Writing Integrity",
     "slug": "turnitin-ai-logic-how-to-prove-your-own-writing-integrity",
     "excerpt": "Caught in a Turnitin false positive? Learn how to audit your writing process and provide evidence of your genuine work to support your academic integrity.",
