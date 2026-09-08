@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin 'AI Score' Spikes: A 2026 Guide to Addressing False Positives",
+    "slug": "turnitin-ai-score-spikes-a-2026-guide-to-addressing-false-positives",
+    "excerpt": "Flagged by Turnitin for AI? Learn why your original academic writing might be triggering false positives and how to audit your draft for integrity.",
+    "keywords": [
+      "how to handle Turnitin AI detection false positives",
+      "Turnitin similarity report explanation",
+      "academic integrity audit guide",
+      "avoiding AI writing flags",
+      "human-authored academic tone"
+    ],
+    "primaryKeyword": "how to handle Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-08T06:47:47.256566+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-a-2026-guide-to-addressing-false-positives.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating New Citation Rules for Complex Digital Media",
+    "slug": "apa-7th-edition-navigating-new-citation-rules-for-complex-digital-media",
+    "excerpt": "Don't lose points on your bibliography. Master the latest APA 7th edition rules for citing complex digital media and multi-author sources in 2026.",
+    "keywords": [
+      "APA 7th edition formatting changes you must know",
+      "citing digital media APA 7",
+      "multi-author citation rules",
+      "APA 7 reference list tips",
+      "academic citation formatting"
+    ],
+    "primaryKeyword": "APA 7th edition formatting changes you must know",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-08T06:48:13.153565+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-new-citation-rules-for-complex-digital-media.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "Dissertation Resilience: Sustainable Habits to Overcome PhD Burnout",
+    "slug": "dissertation-resilience-sustainable-habits-to-overcome-phd-burnout",
+    "excerpt": "Struggling with dissertation fatigue? Discover sustainable, research-backed workflows to beat PhD burnout and stay focused on your final goals.",
+    "keywords": [
+      "overcoming dissertation burnout mental health tips for PhDs",
+      "thesis writing workflow",
+      "PhD student mental health",
+      "managing academic dissertation fatigue",
+      "long-term research habits"
+    ],
+    "primaryKeyword": "overcoming dissertation burnout mental health tips for PhDs",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-08T06:48:38.910311+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dissertation-resilience-sustainable-habits-to-overcome-phd-burnout.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Ethical AI Prompting for Literature Review Synthesis in 2026",
+    "slug": "ethical-ai-prompting-for-literature-review-synthesis-in-2026",
+    "excerpt": "Learn how to use AI as a tool for structuring your literature review outline while maintaining your unique academic voice and research integrity.",
+    "keywords": [
+      "how to use AI ethically for your literature review outline",
+      "AI scaffolding for research",
+      "literature review structure",
+      "ethical AI use for students",
+      "academic outlining techniques"
+    ],
+    "primaryKeyword": "how to use AI ethically for your literature review outline",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-08T06:49:06.224475+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-prompting-for-literature-review-synthesis-in-2026.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin 'AI Score' Reality: Fixing Incorrect Similarity Flags in 2026",
     "slug": "turnitin-ai-score-reality-fixing-incorrect-similarity-flags-in-2026",
     "excerpt": "Flagged by Turnitin for AI usage? Learn how to audit your writing, document your unique research process, and contextually dispute incorrect AI reports.",
