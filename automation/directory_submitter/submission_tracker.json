@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09T16:05:21.955Z",
+  "last_updated": "2026-09-09T16:25:02.994Z",
   "submissions": {
     "theresanaiforthat": {
       "name": "There's An AI For That (TAAFT)",
@@ -39,11 +39,15 @@
     },
     "futuretools": {
       "name": "FutureTools.io",
-      "status": "not_started",
+      "status": "submitted",
       "submitted_at": null,
       "tool": null,
       "live_url": null,
-      "notes": ""
+      "notes": "",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "last_submitted_at": "2026-09-09T16:25:02.994Z"
     },
     "saashub": {
       "name": "SaaSHub",
@@ -214,6 +218,16 @@
       "tool_name": "Academic Wizard Linguistic AI Detector",
       "live_url": null,
       "notes": "Auto-filled via puppeteer assistant"
+    },
+    "futuretools:ai-detector": {
+      "directory_id": "futuretools",
+      "name": "FutureTools.io (Matt Wolfe)",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:25:02.989Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Submitted by user via interactive assistant"
     }
   }
 }
