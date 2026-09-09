@@ -250,107 +250,143 @@ async function main() {
             await page.goto(dir.submit_url, { waitUntil: 'domcontentloaded', timeout: 30000 });
             await new Promise(r => setTimeout(r, 2000));
 
-            // Inject the autofill engine into the page context
-            const fillResults = await page.evaluate((toolData) => {
-                let filled = 0;
-                const fieldsFilled = [];
+            // Inject floating on-screen autofill button and perform initial fill
+            await page.evaluate((toolData) => {
+                if (document.getElementById('aw-autofill-btn')) return;
 
-                function setVal(el, val) {
-                    if (!el) return false;
-                    el.focus();
-                    el.value = val;
-                    el.dispatchEvent(new Event('input', { bubbles: true }));
-                    el.dispatchEvent(new Event('change', { bubbles: true }));
-                    el.blur();
-                    return true;
-                }
+                function runFill() {
+                    let filled = 0;
+                    function setVal(el, val) {
+                        if (!el) return false;
+                        el.focus();
+                        el.value = val;
+                        el.dispatchEvent(new Event('input', { bubbles: true }));
+                        el.dispatchEvent(new Event('change', { bubbles: true }));
+                        el.blur();
+                        return true;
+                    }
 
-                document.querySelectorAll('input, textarea, select').forEach(el => {
-                    const n = (el.name || '').toLowerCase();
-                    const id = (el.id || '').toLowerCase();
-                    const p = (el.placeholder || '').toLowerCase();
-                    const t = (el.type || '').toLowerCase();
-                    const combined = `${n} ${id} ${p}`;
+                    document.querySelectorAll('input, textarea, select').forEach(el => {
+                        const n = (el.name || '').toLowerCase();
+                        const id = (el.id || '').toLowerCase();
+                        const p = (el.placeholder || '').toLowerCase();
+                        const t = (el.type || '').toLowerCase();
+                        const combined = `${n} ${id} ${p}`;
 
-                    if (combined.includes('submitter_name') || combined.includes('your_name') || combined.includes('first_name')) {
-                        if (setVal(el, 'Academic Wizard')) { filled++; fieldsFilled.push('submitter_name'); }
-                    } else if (combined.includes('submitter_email') || (t === 'email' && (combined.includes('your_email') || combined.includes('email')))) {
-                        if (setVal(el, toolData.contact_email)) { filled++; fieldsFilled.push('email'); }
-                    } else if (combined.includes('tool_name') || combined.includes('app_name') || combined.includes('product_name') || combined.includes('form-field-name')) {
-                        if (setVal(el, toolData.name)) { filled++; fieldsFilled.push('tool_name'); }
-                    } else if (combined.includes('tagline') || combined.includes('headline') || combined.includes('short_desc') || combined.includes('summary') || combined.includes('punchline')) {
-                        if (setVal(el, toolData.tagline)) { filled++; fieldsFilled.push('tagline'); }
-                    } else if (el.tagName === 'TEXTAREA' || combined.includes('description') || combined.includes('about') || combined.includes('details') || combined.includes('message')) {
-                        if (setVal(el, toolData.short_description || toolData.full_description)) { filled++; fieldsFilled.push('description'); }
-                    } else if (combined.includes('url') || combined.includes('website') || combined.includes('link') || combined.includes('domain') || combined.includes('homepage') || combined.includes('form-field-email')) {
-                        if (setVal(el, toolData.website_url)) { filled++; fieldsFilled.push('website_url'); }
-                    } else if (combined.includes('title') || (!combined.includes('user') && combined.includes('name'))) {
-                        if (setVal(el, toolData.name)) { filled++; fieldsFilled.push('name'); }
-                    } else if (el.tagName === 'SELECT' && combined.includes('category')) {
-                        for (let opt of el.options) {
-                            if (opt.text.toLowerCase().includes('writing') || opt.text.toLowerCase().includes('education') || opt.text.toLowerCase().includes('productivity')) {
-                                el.value = opt.value;
+                        if (combined.includes('submitter_name') || combined.includes('your_name') || combined.includes('first_name')) {
+                            if (setVal(el, 'Academic Wizard')) filled++;
+                        } else if (combined.includes('submitter_email') || (t === 'email' && (combined.includes('your_email') || combined.includes('email')))) {
+                            if (setVal(el, toolData.contact_email)) filled++;
+                        } else if (combined.includes('tool_name') || combined.includes('app_name') || combined.includes('product_name') || combined.includes('form-field-name')) {
+                            if (setVal(el, toolData.name)) filled++;
+                        } else if (combined.includes('tagline') || combined.includes('headline') || combined.includes('short_desc') || combined.includes('summary') || combined.includes('punchline')) {
+                            if (setVal(el, toolData.tagline)) filled++;
+                        } else if (el.tagName === 'TEXTAREA' || combined.includes('description') || combined.includes('about') || combined.includes('details') || combined.includes('message')) {
+                            if (setVal(el, toolData.short_description || toolData.full_description)) filled++;
+                        } else if (combined.includes('url') || combined.includes('website') || combined.includes('link') || combined.includes('domain') || combined.includes('homepage') || combined.includes('form-field-email')) {
+                            if (setVal(el, toolData.website_url)) filled++;
+                        } else if (combined.includes('title') || (!combined.includes('user') && combined.includes('name'))) {
+                            if (setVal(el, toolData.name)) filled++;
+                        } else if (el.tagName === 'SELECT' && combined.includes('category')) {
+                            for (let opt of el.options) {
+                                if (opt.text.toLowerCase().includes('writing') || opt.text.toLowerCase().includes('education') || opt.text.toLowerCase().includes('productivity')) {
+                                    el.value = opt.value;
+                                    el.dispatchEvent(new Event('change', { bubbles: true }));
+                                    filled++;
+                                    break;
+                                }
+                            }
+                        } else if (t === 'radio' && (combined.includes('pricing') || combined.includes('price'))) {
+                            if (el.value.toLowerCase().includes('free') || el.nextSibling?.textContent?.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
+                                el.checked = true;
                                 el.dispatchEvent(new Event('change', { bubbles: true }));
                                 filled++;
-                                fieldsFilled.push('category');
-                                break;
                             }
+                        } else if (combined.includes('tag') || combined.includes('keyword') || combined.includes('field_20743f6')) {
+                            if (setVal(el, toolData.tags.join(', '))) filled++;
                         }
-                    } else if (t === 'radio' && (combined.includes('pricing') || combined.includes('price'))) {
-                        if (el.value.toLowerCase().includes('free') || el.nextSibling?.textContent?.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
-                            el.checked = true;
-                            el.dispatchEvent(new Event('change', { bubbles: true }));
-                            filled++;
-                            fieldsFilled.push('pricing:free');
-                        }
-                    } else if (combined.includes('tag') || combined.includes('keyword') || combined.includes('field_20743f6')) {
-                        if (setVal(el, toolData.tags.join(', '))) { filled++; fieldsFilled.push('tags'); }
-                    }
-                });
+                    });
 
-                return { filled, fieldsFilled: [...new Set(fieldsFilled)] };
+                    const btn = document.getElementById('aw-autofill-btn');
+                    if (btn) {
+                        btn.innerHTML = `✅ <b>${filled} Fields Filled!</b>`;
+                        btn.style.background = '#28a745';
+                        btn.style.color = '#fff';
+                        setTimeout(() => {
+                            btn.innerHTML = '🪄 <b>Re-Fill Form Details</b>';
+                            btn.style.background = '#D4AF37';
+                            btn.style.color = '#000';
+                        }, 3000);
+                    }
+                    return filled;
+                }
+
+                const btn = document.createElement('button');
+                btn.id = 'aw-autofill-btn';
+                btn.innerHTML = '🪄 <b>Auto-Fill Academic Wizard</b>';
+                btn.style.cssText = 'position:fixed;bottom:25px;right:25px;z-index:999999999;background:#D4AF37;color:#000;padding:14px 22px;border-radius:30px;font-family:sans-serif;font-weight:bold;font-size:15px;box-shadow:0 8px 30px rgba(0,0,0,0.6);border:2px solid #fff;cursor:pointer;transition:transform 0.2s;';
+                btn.onmouseover = () => btn.style.transform = 'scale(1.05)';
+                btn.onmouseout = () => btn.style.transform = 'scale(1)';
+                btn.onclick = runFill;
+                document.body.appendChild(btn);
+
+                // Initial fill attempt
+                runFill();
             }, tool);
 
-            console.log(`✅ Auto-filled ${fillResults.filled} form fields (${fillResults.fieldsFilled.join(', ')}).`);
+            console.log('💡 Tip: An on-screen floating gold button [🪄 Auto-Fill Academic Wizard] has been added.');
+            console.log('   If a popup appeared, close it and click the gold button (or type "f" + Enter in terminal).\n');
 
-            const answer = await askQuestion(
-                '\n👉 Action: [Enter] = Mark as Submitted & Next | [s] = Skip | [q] = Quit: '
-            );
+            while (true) {
+                const answer = await askQuestion(
+                    '👉 Action: [Enter] = Mark as Submitted & Next | [f] = Re-Fill Form | [s] = Skip | [q] = Quit: '
+                );
 
-            if (answer.toLowerCase() === 'q') {
-                console.log('Stopping assistant.');
-                break;
-            } else if (answer.toLowerCase() === 's') {
-                console.log(`⏩ Skipped ${dir.name}.`);
-            } else {
-                const subKey = `${dir.id}:${tool.slug}`;
-                tracker.submissions[subKey] = {
-                    directory_id: dir.id,
-                    name: dir.name,
-                    status: 'submitted',
-                    submitted_at: new Date().toISOString(),
-                    tool: tool.slug,
-                    tool_name: tool.name,
-                    live_url: null,
-                    notes: 'Auto-filled via puppeteer assistant'
-                };
+                if (answer.toLowerCase() === 'f') {
+                    await page.evaluate((toolData) => {
+                        const btn = document.getElementById('aw-autofill-btn');
+                        if (btn) btn.click();
+                    }, tool);
+                    console.log('🔄 Re-executed form autofill on page.\n');
+                    continue;
+                } else if (answer.toLowerCase() === 'q') {
+                    console.log('Stopping assistant.');
+                    await browser.close();
+                    return;
+                } else if (answer.toLowerCase() === 's') {
+                    console.log(`⏩ Skipped ${dir.name}.`);
+                    break;
+                } else {
+                    const subKey = `${dir.id}:${tool.slug}`;
+                    tracker.submissions[subKey] = {
+                        directory_id: dir.id,
+                        name: dir.name,
+                        status: 'submitted',
+                        submitted_at: new Date().toISOString(),
+                        tool: tool.slug,
+                        tool_name: tool.name,
+                        live_url: null,
+                        notes: 'Auto-filled via puppeteer assistant'
+                    };
 
-                // Maintain directory-level tracking
-                if (!tracker.submissions[dir.id] || typeof tracker.submissions[dir.id] !== 'object') {
-                    tracker.submissions[dir.id] = { name: dir.name, status: 'submitted', tools_submitted: [] };
+                    // Maintain directory-level tracking
+                    if (!tracker.submissions[dir.id] || typeof tracker.submissions[dir.id] !== 'object') {
+                        tracker.submissions[dir.id] = { name: dir.name, status: 'submitted', tools_submitted: [] };
+                    }
+                    if (!Array.isArray(tracker.submissions[dir.id].tools_submitted)) {
+                        tracker.submissions[dir.id].tools_submitted = tracker.submissions[dir.id].tool ? [tracker.submissions[dir.id].tool] : [];
+                    }
+                    if (!tracker.submissions[dir.id].tools_submitted.includes(tool.slug)) {
+                        tracker.submissions[dir.id].tools_submitted.push(tool.slug);
+                    }
+                    tracker.submissions[dir.id].status = 'submitted';
+                    tracker.submissions[dir.id].tool = tool.slug;
+                    tracker.submissions[dir.id].last_submitted_at = new Date().toISOString();
+
+                    saveTracker(tracker);
+                    console.log(`🎉 Logged: ${dir.name} marked as SUBMITTED for "${tool.name}"!`);
+                    break;
                 }
-                if (!Array.isArray(tracker.submissions[dir.id].tools_submitted)) {
-                    tracker.submissions[dir.id].tools_submitted = tracker.submissions[dir.id].tool ? [tracker.submissions[dir.id].tool] : [];
-                }
-                if (!tracker.submissions[dir.id].tools_submitted.includes(tool.slug)) {
-                    tracker.submissions[dir.id].tools_submitted.push(tool.slug);
-                }
-                tracker.submissions[dir.id].status = 'submitted';
-                tracker.submissions[dir.id].tool = tool.slug;
-                tracker.submissions[dir.id].last_submitted_at = new Date().toISOString();
-
-                saveTracker(tracker);
-                console.log(`🎉 Logged: ${dir.name} marked as SUBMITTED for "${tool.name}"!`);
             }
         } catch (err) {
             console.error(`⚠️ Could not complete auto-navigation for ${dir.name}: ${err.message}`);
