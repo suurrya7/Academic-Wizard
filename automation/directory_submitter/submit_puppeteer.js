@@ -104,21 +104,30 @@ async function main() {
 
     // 2. Action: Status Report
     if (hasFlag('--status')) {
-        const total = directories.length;
-        let submitted = 0;
-        let pending = 0;
+        const totalDirs = directories.length;
+        const toolCounts = {};
+        Object.keys(toolProfiles).forEach(slug => { toolCounts[slug] = 0; });
+        let totalSubmissions = 0;
 
-        directories.forEach(d => {
-            const sub = tracker.submissions[d.id];
-            if (sub && sub.status === 'submitted') submitted++;
-            else pending++;
+        // Tally submissions
+        Object.entries(tracker.submissions).forEach(([k, entry]) => {
+            if (entry.status === 'submitted') {
+                if (entry.tool && toolCounts[entry.tool] !== undefined) {
+                    toolCounts[entry.tool]++;
+                    totalSubmissions++;
+                }
+            }
         });
 
         console.log('📊 SUBMISSION CAMPAIGN SUMMARY:');
-        console.log(`• Total Curated Directories: ${total}`);
-        console.log(`• Successfully Submitted:    ${submitted}`);
-        console.log(`• Remaining Pending:         ${pending}`);
-        console.log(`• Estimated Link Equity:     ${submitted * 55}+ Average Domain Authority\n`);
+        console.log(`• Total Curated Directories: ${totalDirs}`);
+        console.log(`• Total Submissions Logged:  ${totalSubmissions}\n`);
+        console.log('Breakdown by Tool Profile:');
+        Object.entries(toolCounts).forEach(([slug, count]) => {
+            const toolName = toolProfiles[slug]?.name || slug;
+            console.log(`  - ${toolName.padEnd(46)}: ${count}/${totalDirs} submitted`);
+        });
+        console.log(`\n• Estimated Link Equity:     ${totalSubmissions * 55}+ Average Domain Authority backlinks\n`);
         return;
     }
 
@@ -128,7 +137,15 @@ async function main() {
 
     if (!tool) {
         console.error(`❌ Unknown tool slug: "${toolSlug}". Available tools:`);
-        Object.keys(toolProfiles).forEach(slug => console.log(`  - ${slug}`));
+        Object.keys(toolProfiles).forEach(slug => {
+            console.log(`  - ${slug.padEnd(24)} (${toolProfiles[slug].name})`);
+        });
+        console.log('\nExample usage:');
+        console.log('  node automation/directory_submitter/submit_puppeteer.js --tool ai-detector --interactive');
+        console.log('  node automation/directory_submitter/submit_puppeteer.js --tool ai-humanizer --interactive');
+        console.log('  node automation/directory_submitter/submit_puppeteer.js --tool citation-generator --interactive');
+        console.log('  node automation/directory_submitter/submit_puppeteer.js --tool grammar-checker --interactive');
+        console.log('  node automation/directory_submitter/submit_puppeteer.js --tool academic-wizard-suite --interactive\n');
         process.exit(1);
     }
 
@@ -206,6 +223,20 @@ async function main() {
 
     for (let i = 0; i < targetDirectories.length; i++) {
         const dir = targetDirectories[i];
+        const subKey = `${dir.id}:${tool.slug}`;
+        const prevDirSub = tracker.submissions[dir.id];
+        const isAlreadySubmitted = (tracker.submissions[subKey]?.status === 'submitted') ||
+            (prevDirSub?.status === 'submitted' && prevDirSub?.tool === tool.slug) ||
+            (prevDirSub?.tools_submitted && prevDirSub.tools_submitted.includes(tool.slug));
+
+        if (isAlreadySubmitted && !hasFlag('--force')) {
+            console.log(`\n------------------------------------------------------------`);
+            console.log(`[${i + 1}/${targetDirectories.length}] ⏩ SKIPPING: ${dir.name} (DA ${dir.estimated_da})`);
+            console.log(`   Already marked as submitted for tool: "${tool.name}".`);
+            console.log(`   (Pass --force to re-open and submit again)`);
+            continue;
+        }
+
         console.log(`\n------------------------------------------------------------`);
         console.log(`[${i + 1}/${targetDirectories.length}] Processing: ${dir.name} (DA ${dir.estimated_da})`);
         console.log(`🌐 Submission URL: ${dir.submit_url}`);
@@ -270,16 +301,34 @@ async function main() {
             } else if (answer.toLowerCase() === 's') {
                 console.log(`⏩ Skipped ${dir.name}.`);
             } else {
-                tracker.submissions[dir.id] = {
+                const subKey = `${dir.id}:${tool.slug}`;
+                tracker.submissions[subKey] = {
+                    directory_id: dir.id,
                     name: dir.name,
                     status: 'submitted',
                     submitted_at: new Date().toISOString(),
                     tool: tool.slug,
+                    tool_name: tool.name,
                     live_url: null,
                     notes: 'Auto-filled via puppeteer assistant'
                 };
+
+                // Maintain directory-level tracking
+                if (!tracker.submissions[dir.id] || typeof tracker.submissions[dir.id] !== 'object') {
+                    tracker.submissions[dir.id] = { name: dir.name, status: 'submitted', tools_submitted: [] };
+                }
+                if (!Array.isArray(tracker.submissions[dir.id].tools_submitted)) {
+                    tracker.submissions[dir.id].tools_submitted = tracker.submissions[dir.id].tool ? [tracker.submissions[dir.id].tool] : [];
+                }
+                if (!tracker.submissions[dir.id].tools_submitted.includes(tool.slug)) {
+                    tracker.submissions[dir.id].tools_submitted.push(tool.slug);
+                }
+                tracker.submissions[dir.id].status = 'submitted';
+                tracker.submissions[dir.id].tool = tool.slug;
+                tracker.submissions[dir.id].last_submitted_at = new Date().toISOString();
+
                 saveTracker(tracker);
-                console.log(`🎉 Logged: ${dir.name} marked as SUBMITTED!`);
+                console.log(`🎉 Logged: ${dir.name} marked as SUBMITTED for "${tool.name}"!`);
             }
         } catch (err) {
             console.error(`⚠️ Could not complete auto-navigation for ${dir.name}: ${err.message}`);
