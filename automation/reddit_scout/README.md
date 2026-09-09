@@ -35,45 +35,29 @@ A 100% hands-off autonomous engine running completely free on **GitHub Actions (
 
 ---
 
-## 🔑 Step-by-Step: How to Get Your Free Reddit OAuth Credentials
+## 🔑 Recommended: Setting Up Reddit Session Cookie (Bypasses Developer Approval)
 
-Reddit allows anyone to create a **Script Application** for 100% free:
+Because Reddit closed instant self-service API creation at `prefs/apps`, the bot now directly uses your browser's **`reddit_session` cookie** to authenticate and post comments:
 
-1. **Open Reddit App Preferences:**
-   * Go to: [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)
-   * (Log in with the Reddit account you want the bot to post from).
-
-2. **Create the Script App:**
-   * Scroll to the very bottom and click the button: **`are you a developer? create an app...`** (or `create another app...`).
-   * Fill in the fields:
-     * **name:** `academic-wizard-bot`
-     * **App Type (CRUCIAL):** Select the radio button labeled **`script`** *(DO NOT select web app or installed app)*.
-     * **description:** (optional, leave blank)
-     * **about url:** (optional, leave blank)
-     * **redirect uri:** `http://localhost:8080` (required by Reddit form, but not used by script bots).
-   * Click **`create app`**.
-
-3. **Copy Your Credentials:**
-   * **`REDDIT_CLIENT_ID`**: The string of ~14 characters displayed directly beneath your app name (e.g. `k8sD9x_AbC1234`).
-   * **`REDDIT_CLIENT_SECRET`**: The string next to the label **`secret`** (e.g. `w0E98fsd_as98df7as89d7f`).
-   * **`REDDIT_USERNAME`**: Your Reddit username (without `/u/`).
-   * **`REDDIT_PASSWORD`**: Your Reddit account password.
+1. **Log in to Reddit** in your desktop browser (Chrome / Edge / Brave).
+2. Press **F12** (or Right Click anywhere $\rightarrow$ **Inspect**).
+3. In Developer Tools, select the **Application** tab *(in Firefox: Storage tab)*.
+4. In the left panel: Expand **Cookies** $\rightarrow$ Click **`https://www.reddit.com`**.
+5. Find the cookie named **`reddit_session`**.
+6. Double-click its **Value** and copy the full string.
 
 ---
-
-## 🤖 Step-by-Step: How to Get Your Free Google Gemini API Key
 
 ## 🔐 Adding Secrets to GitHub
 
 1. Go to your repository on GitHub (`suurrya7/Academic-Wizard`).
 2. Click **Settings** (tab at the top right).
 3. In the left sidebar, click **Secrets and variables** $\rightarrow$ **Actions**.
+4. Click **New repository secret** and add:
 
-### Required Reddit Secrets (Click "New repository secret"):
-* `REDDIT_CLIENT_ID`
-* `REDDIT_CLIENT_SECRET`
-* `REDDIT_USERNAME`
-* `REDDIT_PASSWORD`
+| Secret Name | Value |
+| :--- | :--- |
+| **`REDDIT_SESSION_COOKIE`** | The value you copied from Developer Tools |
 
 *(Note: `BACKLINK_GEMINI_API_KEY` and `GEMINI_MODEL` are already configured in your repo from your blog automation and will be automatically reused!)*
 

@@ -3,15 +3,20 @@
 Academic Wizard — Unified Streamlit Keep-Alive & Reddit Commercial Scout Bot
 1. Pings Streamlit AI Humanizer app to maintain 24/7 uptime on free tier.
 2. Scouts Reddit for ALL commercial services & tools, posting contextual backlinks.
+3. Supports Reddit Session Cookie authentication (bypassing the closed Reddit API).
 """
 
 import os
 import sys
 import json
 import time
+import html
+import re
 import argparse
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 import requests
+
 try:
     import praw
 except ImportError:
@@ -55,6 +60,7 @@ def load_history():
             pass
     return {
         "last_run": None,
+        "last_comment_posted_at": None,
         "daily_count": {"date": None, "count": 0},
         "replied_post_ids": [],
         "history": []
@@ -117,6 +123,124 @@ def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str
             
     raise RuntimeError(f"Gemini API error with all attempted models {models_to_try}. Last error: {last_error}")
 
+class RedditSessionClient:
+    """Authenticates and posts to Reddit using the standard web login session cookie."""
+    def __init__(self, session_cookie: str):
+        cookie_val = session_cookie.strip()
+        if "reddit_session=" in cookie_val:
+            cookie_val = cookie_val.split("reddit_session=")[1].split(";")[0].strip()
+
+        self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept-Language": "en-US,en;q=0.9"
+        })
+        self.session.cookies.set("reddit_session", cookie_val, domain=".reddit.com")
+        self.modhash = None
+        self.username = None
+
+    def authenticate(self) -> bool:
+        """Verifies session cookie and retrieves the modhash CSRF token."""
+        try:
+            resp = self.session.get("https://old.reddit.com/api/me.json", timeout=15)
+            if resp.status_code == 200:
+                data = resp.json()
+                if "data" in data and "modhash" in data["data"]:
+                    self.modhash = data["data"]["modhash"]
+                    self.username = data["data"].get("name", "User")
+                    print(f"✅ Authenticated via Reddit Session Cookie as /u/{self.username}")
+                    return True
+            print(f"⚠️ Reddit session check failed (HTTP {resp.status_code}). Cookie might be expired.")
+            return False
+        except Exception as e:
+            print(f"⚠️ Error verifying Reddit session: {e}")
+            return False
+
+    def fetch_posts(self, sub_name: str, limit: int = 15) -> list:
+        """Fetches latest posts from a subreddit using authenticated session."""
+        posts = []
+        # Attempt 1: Authenticated .json feed
+        try:
+            url = f"https://old.reddit.com/r/{sub_name}/new.json?limit={limit}"
+            resp = self.session.get(url, timeout=12)
+            if resp.status_code == 200:
+                data = resp.json()
+                children = data.get("data", {}).get("children", [])
+                for c in children:
+                    pdata = c.get("data", {})
+                    if pdata.get("id"):
+                        posts.append({
+                            "id": pdata["id"],
+                            "title": pdata.get("title", ""),
+                            "body": pdata.get("selftext", ""),
+                            "permalink": pdata.get("permalink", f"/r/{sub_name}/comments/{pdata['id']}")
+                        })
+                if posts:
+                    return posts
+        except Exception:
+            pass
+
+        # Attempt 2: old.reddit RSS feed
+        try:
+            rss_url = f"https://old.reddit.com/r/{sub_name}/new.rss"
+            resp = self.session.get(rss_url, timeout=12)
+            if resp.status_code == 200 and "<feed" in resp.text:
+                root = ET.fromstring(resp.text)
+                ns = {"atom": "http://www.w3.org/2005/Atom"}
+                for entry in root.findall("atom:entry", ns)[:limit]:
+                    id_elem = entry.find("atom:id", ns)
+                    if id_elem is None or not id_elem.text:
+                        continue
+                    post_id = id_elem.text.strip().replace("t3_", "")
+                    title = (entry.find("atom:title", ns).text or "").strip()
+                    content_elem = entry.find("atom:content", ns)
+                    content_raw = content_elem.text if content_elem is not None else ""
+                    clean_body = re.sub(r"<[^<]+?>", " ", html.unescape(content_raw)).strip()
+                    link_elem = entry.find("atom:link", ns)
+                    link = link_elem.get("href") if link_elem is not None else f"https://reddit.com/r/{sub_name}/comments/{post_id}"
+                    permalink = link.replace("https://www.reddit.com", "").replace("https://old.reddit.com", "")
+                    posts.append({
+                        "id": post_id,
+                        "title": title,
+                        "body": clean_body,
+                        "permalink": permalink
+                    })
+        except Exception:
+            pass
+
+        return posts
+
+    def post_comment(self, post_id: str, text: str) -> str:
+        """Posts a comment to a Reddit post using the session cookie and modhash."""
+        if not self.modhash:
+            if not self.authenticate():
+                raise RuntimeError("Cannot post comment: Reddit session is not authenticated.")
+
+        thing_id = post_id if post_id.startswith("t3_") else f"t3_{post_id}"
+        url = "https://old.reddit.com/api/comment"
+        headers = {
+            "Origin": "https://old.reddit.com",
+            "Referer": f"https://old.reddit.com/comments/{post_id.replace('t3_', '')}",
+            "X-Requested-With": "XMLHttpRequest"
+        }
+        data = {
+            "api_type": "json",
+            "thing_id": thing_id,
+            "text": text,
+            "uh": self.modhash
+        }
+        resp = self.session.post(url, data=data, headers=headers, timeout=20)
+        if resp.status_code != 200:
+            raise RuntimeError(f"Reddit comment submission failed (HTTP {resp.status_code}): {resp.text[:200]}")
+
+        res_json = resp.json()
+        errors = res_json.get("json", {}).get("errors", [])
+        if errors:
+            raise RuntimeError(f"Reddit returned errors: {errors}")
+
+        things = res_json.get("json", {}).get("data", {}).get("things", [])
+        return things[0]["data"]["id"] if things else "posted"
+
 def main():
     parser = argparse.ArgumentParser(description="Academic Wizard — Streamlit Keeper & Reddit Scout")
     parser.add_argument("--dry-run", action="store_true", help="Run without posting to Reddit")
@@ -133,20 +257,30 @@ def main():
         ping_streamlit_app()
         print("")
 
-    # 2. Reddit Scout Setup
+    # 2. Reddit Scout & Gemini Setup
     gemini_key = os.getenv("BACKLINK_GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
     gemini_model = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip() or "gemini-2.0-flash"
     if not gemini_key:
         print("❌ Error: BACKLINK_GEMINI_API_KEY or GEMINI_API_KEY environment variable is required.")
         sys.exit(1)
 
+    session_cookie = os.getenv("REDDIT_SESSION_COOKIE")
     reddit_client_id = os.getenv("REDDIT_CLIENT_ID")
     reddit_client_secret = os.getenv("REDDIT_CLIENT_SECRET")
     reddit_username = os.getenv("REDDIT_USERNAME")
     reddit_password = os.getenv("REDDIT_PASSWORD")
 
-    if not args.dry_run and not (reddit_client_id and reddit_client_secret and reddit_username and reddit_password):
-        print("❌ Error: Reddit OAuth credentials required (REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USERNAME, REDDIT_PASSWORD).")
+    mode = None
+    if session_cookie:
+        mode = "cookie"
+    elif reddit_client_id and reddit_client_secret and reddit_username and reddit_password:
+        mode = "oauth"
+    elif args.dry_run:
+        mode = "dry_run"
+    else:
+        print("❌ Error: Reddit credentials required.")
+        print("   Please provide REDDIT_SESSION_COOKIE (recommended) in GitHub Secrets,")
+        print("   or official OAuth credentials (REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USERNAME, REDDIT_PASSWORD).")
         print("   Run with --dry-run to test simulation without credentials.")
         sys.exit(1)
 
@@ -209,33 +343,32 @@ def main():
     for cat in intents_data.get("tools", {}).values():
         subreddits_to_scan.update(cat.get("subreddits", []))
 
-    # Initialize Reddit connection
-    if praw is None:
-        print("⚠️ Warning: 'praw' package is not installed in local environment.")
-        print("   (It will be automatically installed by GitHub Actions from requirements.txt during cron runs.)")
-        if not args.dry_run:
-            sys.exit(1)
-        print("   Skipping Reddit scan in dry run due to missing praw.")
-        return
+    # Initialize Client based on active mode
+    session_client = None
+    praw_reddit = None
 
-    reddit = None
-    if not args.dry_run:
-        reddit = praw.Reddit(
-            client_id=reddit_client_id,
-            client_secret=reddit_client_secret,
-            username=reddit_username,
-            password=reddit_password,
-            user_agent=f"AcademicWizardScout:v1.0 (by /u/{reddit_username})"
-        )
-        print(f"✅ Authenticated to Reddit API as /u/{reddit_username}")
+    if mode == "cookie":
+        session_client = RedditSessionClient(session_cookie)
+        if not session_client.authenticate() and not args.dry_run:
+            print("❌ Authentication failed with REDDIT_SESSION_COOKIE. Please check the secret.")
+            sys.exit(1)
+    elif mode == "oauth":
+        if praw is None:
+            print("⚠️ 'praw' is not installed. Installing via requirements.txt in GitHub Actions.")
+            if not args.dry_run:
+                sys.exit(1)
+        else:
+            praw_reddit = praw.Reddit(
+                client_id=reddit_client_id,
+                client_secret=reddit_client_secret,
+                username=reddit_username,
+                password=reddit_password,
+                user_agent=f"AcademicWizardScout:v1.0 (by /u/{reddit_username})"
+            )
+            print(f"✅ Authenticated via OAuth as /u/{reddit_username}")
     else:
-        # Praw read-only mode requires client_id and user_agent
-        reddit = praw.Reddit(
-            client_id=reddit_client_id or "dummy_id",
-            client_secret=reddit_client_secret or "dummy_secret",
-            user_agent="AcademicWizardScoutDryRun:v1.0"
-        )
-        print("🔍 Running in DRY-RUN mode (Read-only Reddit connection).")
+        print("🔍 Running in DRY-RUN mode.")
+        session_client = RedditSessionClient("dry_run_dummy_cookie")
 
     print(f"📡 Monitoring {len(subreddits_to_scan)} academic subreddits across all services & tools:\n")
     print(", ".join(sorted(subreddits_to_scan)) + "\n")
@@ -251,15 +384,29 @@ def main():
             continue
 
         try:
-            sub = reddit.subreddit(sub_name)
-            for post in sub.new(limit=15):
+            # Fetch latest posts
+            posts_to_inspect = []
+            if session_client:
+                posts_to_inspect = session_client.fetch_posts(sub_name, limit=15)
+            elif praw_reddit:
+                sub = praw_reddit.subreddit(sub_name)
+                for p in sub.new(limit=15):
+                    posts_to_inspect.append({
+                        "id": p.id,
+                        "title": p.title,
+                        "body": p.selftext,
+                        "permalink": p.permalink
+                    })
+
+            for post in posts_to_inspect:
                 if replied_in_this_run >= args.max_posts:
                     break
 
-                if post.id in history["replied_post_ids"]:
+                post_id = post["id"]
+                if post_id in history["replied_post_ids"]:
                     continue
 
-                matched = match_query_intent(post.title, post.selftext, intents_data)
+                matched = match_query_intent(post["title"], post["body"], intents_data)
                 if not matched:
                     continue
 
@@ -268,12 +415,12 @@ def main():
                 print(f"🎯 [MATCH FOUND] in r/{sub_name}!")
                 print(f"   Category:   {cat_data['name']} ({scope_type.upper()})")
                 print(f"   Target URL: {cat_data['target_url']}")
-                print(f"   Post Title: {post.title}")
-                print(f"   Reddit URL: https://reddit.com{post.permalink}")
+                print(f"   Post Title: {post['title']}")
+                print(f"   Reddit URL: https://reddit.com{post['permalink']}")
 
                 try:
                     print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
-                    raw_reply = generate_humanized_reply(cat_data, post.title, post.selftext, gemini_key, model_name=gemini_model)
+                    raw_reply = generate_humanized_reply(cat_data, post["title"], post["body"], gemini_key, model_name=gemini_model)
                     reply_text = inject_human_quirks(raw_reply)
                     
                     print("\n--- GENERATED DRAFT REPLY ---")
@@ -282,24 +429,29 @@ def main():
 
                     if not args.dry_run:
                         print("   🚀 Submitting comment to Reddit...")
-                        submission = reddit.submission(id=post.id)
-                        comment = submission.reply(reply_text)
-                        print(f"   ✅ Comment successfully posted! (Comment ID: {comment.id})")
+                        if session_client:
+                            comment_id = session_client.post_comment(post_id, reply_text)
+                        else:
+                            submission = praw_reddit.submission(id=post_id)
+                            comment = submission.reply(reply_text)
+                            comment_id = comment.id
+
+                        print(f"   ✅ Comment successfully posted! (Comment ID: {comment_id})")
                         history["last_comment_posted_at"] = datetime.now(timezone.utc).isoformat()
                     else:
                         print("   [DRY RUN] Would submit comment with backlink.")
 
                     # Record history
-                    history["replied_post_ids"].append(post.id)
+                    history["replied_post_ids"].append(post_id)
                     history["daily_count"]["count"] += 1
                     history["history"].append({
-                        "post_id": post.id,
+                        "post_id": post_id,
                         "subreddit": sub_name,
                         "category": cat_data["name"],
                         "target_url": cat_data["target_url"],
-                        "title": post.title,
+                        "title": post["title"],
                         "posted_at": datetime.now(timezone.utc).isoformat(),
-                        "url": f"https://reddit.com{post.permalink}"
+                        "url": f"https://reddit.com{post['permalink']}"
                     })
                     save_history(history)
 
@@ -307,7 +459,7 @@ def main():
                     print(f"   💾 Saved post ID (Daily Count: {history['daily_count']['count']}/{max_daily})\n")
 
                 except Exception as e:
-                    print(f"   ⚠️ Error processing post {post.id}: {e}\n")
+                    print(f"   ⚠️ Error processing post {post_id}: {e}\n")
 
         except Exception as e:
             # Subreddit might be private or restricted, continue scanning others
