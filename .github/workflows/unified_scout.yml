@@ -40,6 +40,8 @@ jobs:
           BACKLINK_GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          MAX_DAILY_COMMENTS: ${{ vars.MAX_DAILY_COMMENTS || secrets.MAX_DAILY_COMMENTS }}
+          MIN_COOLDOWN_MINUTES: ${{ vars.MIN_COOLDOWN_MINUTES || secrets.MIN_COOLDOWN_MINUTES }}
         run: |
           python automation/reddit_scout/scout_bot.py --max-posts 1
 

@@ -63,31 +63,38 @@ Reddit allows anyone to create a **Script Application** for 100% free:
 
 ## 🤖 Step-by-Step: How to Get Your Free Google Gemini API Key
 
-1. Go to [Google AI Studio](https://aistudio.google.com/).
-2. Sign in with your Google account.
-3. Click **Get API key** $\rightarrow$ **Create API key in new project**.
-4. Copy the key $\rightarrow$ This is your `GEMINI_API_KEY` (Free up to 15 requests/minute).
+## 🔐 Adding Secrets to GitHub
+
+1. Go to your repository on GitHub (`suurrya7/Academic-Wizard`).
+2. Click **Settings** (tab at the top right).
+3. In the left sidebar, click **Secrets and variables** $\rightarrow$ **Actions**.
+
+### Required Reddit Secrets (Click "New repository secret"):
+* `REDDIT_CLIENT_ID`
+* `REDDIT_CLIENT_SECRET`
+* `REDDIT_USERNAME`
+* `REDDIT_PASSWORD`
+
+*(Note: `BACKLINK_GEMINI_API_KEY` and `GEMINI_MODEL` are already configured in your repo from your blog automation and will be automatically reused!)*
 
 ---
 
-## 🔐 Adding Secrets to GitHub
+## ⚙️ Optional: Adjusting Daily Limits & Cooldown (Ramp-Up Scaling)
 
-1. Go to your repository on GitHub.
-2. Click **Settings** (tab at the top right).
-3. In the left sidebar, click **Secrets and variables** $\rightarrow$ **Actions**.
-4. Click **New repository secret** and add each of the 5 secrets:
-   * `REDDIT_CLIENT_ID`
-   * `REDDIT_CLIENT_SECRET`
-   * `REDDIT_USERNAME`
-   * `REDDIT_PASSWORD`
-   * `GEMINI_API_KEY`
+You can customize the pacing directly in GitHub without changing any code! 
+Go to **Settings** $\rightarrow$ **Secrets and variables** $\rightarrow$ **Actions** $\rightarrow$ **Variables** (or Secrets) and add:
+
+| Variable / Secret Name | Default Value | Recommended Warm-Up | Scale-Up (After 2-3 Weeks) |
+| :--- | :--- | :--- | :--- |
+| `MAX_DAILY_COMMENTS` | `3` | `2` (Days 1–7) | `5` or `6` (After gaining 100+ karma) |
+| `MIN_COOLDOWN_MINUTES` | `150` (2.5 hrs) | `180` (3 hrs) | `60` to `90` (1–1.5 hrs) |
 
 ---
 
 ## 🚀 Activation
 
-Once the secrets are added:
+Once the 4 Reddit secrets are added:
 1. Go to the **Actions** tab on your GitHub repository.
 2. Select **Unified Reddit Auto-Scout & Backlink Bot**.
-3. Click **Run workflow** to perform your first live run!
+3. Click **Run workflow** to perform your first live test!
 4. From then on, GitHub Actions will trigger it autonomously every 30 minutes.

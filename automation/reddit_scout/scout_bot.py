@@ -157,14 +157,26 @@ def main():
     if history["daily_count"].get("date") != today_str:
         history["daily_count"] = {"date": today_str, "count": 0}
 
-    # Safety Guardrail 1: Maximum 3 comments per day across the entire account
-    if history["daily_count"]["count"] >= 3 and not args.dry_run:
-        print(f"🛡️ Safety Guardrail Active: Daily comment quota (3/3) reached for {today_str}.")
+    # Load configurable limits from environment/secrets (with safe defaults)
+    try:
+        max_daily = int(os.getenv("MAX_DAILY_COMMENTS") or os.getenv("REDDIT_DAILY_LIMIT") or 3)
+    except ValueError:
+        max_daily = 3
+
+    try:
+        cooldown_mins = int(os.getenv("MIN_COOLDOWN_MINUTES") or os.getenv("REDDIT_COOLDOWN_MINUTES") or 150)
+    except ValueError:
+        cooldown_mins = 150
+
+    MIN_COOLDOWN_SECONDS = cooldown_mins * 60
+
+    # Safety Guardrail 1: Daily comment quota across the entire account
+    if history["daily_count"]["count"] >= max_daily and not args.dry_run:
+        print(f"🛡️ Safety Guardrail Active: Daily comment quota ({history['daily_count']['count']}/{max_daily}) reached for {today_str}.")
         print("   Skipping Reddit posting to protect account karma and prevent spam flags.")
         return
 
-    # Safety Guardrail 2: Minimum 2.5 hours (9,000s) cooldown between comments
-    MIN_COOLDOWN_SECONDS = 9000
+    # Safety Guardrail 2: Minimum cooldown between comments
     last_posted_str = history.get("last_comment_posted_at")
     if last_posted_str and not args.dry_run:
         try:
@@ -173,7 +185,7 @@ def main():
             if elapsed_seconds < MIN_COOLDOWN_SECONDS:
                 mins_left = int((MIN_COOLDOWN_SECONDS - elapsed_seconds) // 60)
                 print(f"🛡️ Anti-Spam Guardrail: Last comment was posted {int(elapsed_seconds // 60)} mins ago.")
-                print(f"   Cooldown active ({mins_left} mins remaining before next comment).")
+                print(f"   Cooldown active ({mins_left} mins remaining before next comment; target cooldown: {cooldown_mins}m).")
                 print("   Skipping Reddit scan to maintain organic account pacing.")
                 save_history(history)
                 return
@@ -292,7 +304,7 @@ def main():
                     save_history(history)
 
                     replied_in_this_run += 1
-                    print(f"   💾 Saved post ID (Daily Count: {history['daily_count']['count']}/3)\n")
+                    print(f"   💾 Saved post ID (Daily Count: {history['daily_count']['count']}/{max_daily})\n")
 
                 except Exception as e:
                     print(f"   ⚠️ Error processing post {post.id}: {e}\n")
