@@ -82,24 +82,40 @@ def match_query_intent(title: str, body: str, intents_data: dict):
 
     return None
 
-def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str) -> str:
+def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str, model_name: str = "gemini-2.0-flash") -> str:
     prompt = get_commercial_prompt(cat_data, title, body)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.75,
-            "maxOutputTokens": 450
-        }
-    }
     
-    response = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
-    if response.status_code != 200:
-        raise RuntimeError(f"Gemini API error {response.status_code}: {response.text}")
-        
-    data = response.json()
-    reply_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-    return reply_text
+    # Priority list of models to try
+    models_to_try = []
+    for m in [model_name, "gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-flash"]:
+        if m:
+            clean = m.replace("models/", "").strip()
+            if clean and clean not in models_to_try:
+                models_to_try.append(clean)
+
+    last_error = None
+    for m in models_to_try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={api_key}"
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.75,
+                "maxOutputTokens": 450
+            }
+        }
+        try:
+            response = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
+            if response.status_code == 200:
+                data = response.json()
+                reply_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                print(f"   ✨ Generated response using model: {m}")
+                return reply_text
+            else:
+                last_error = f"HTTP {response.status_code}: {response.text[:200]}"
+        except Exception as e:
+            last_error = str(e)
+            
+    raise RuntimeError(f"Gemini API error with all attempted models {models_to_try}. Last error: {last_error}")
 
 def main():
     parser = argparse.ArgumentParser(description="Academic Wizard — Streamlit Keeper & Reddit Scout")
@@ -118,9 +134,10 @@ def main():
         print("")
 
     # 2. Reddit Scout Setup
-    gemini_key = os.getenv("GEMINI_API_KEY")
+    gemini_key = os.getenv("BACKLINK_GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+    gemini_model = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip() or "gemini-2.0-flash"
     if not gemini_key:
-        print("❌ Error: GEMINI_API_KEY environment variable is required.")
+        print("❌ Error: BACKLINK_GEMINI_API_KEY or GEMINI_API_KEY environment variable is required.")
         sys.exit(1)
 
     reddit_client_id = os.getenv("REDDIT_CLIENT_ID")
@@ -212,8 +229,8 @@ def main():
                 print(f"   Reddit URL: https://reddit.com{post.permalink}")
 
                 try:
-                    print("   🤖 Drafting contextual, humanized reply via Gemini...")
-                    reply_text = generate_humanized_reply(cat_data, post.title, post.selftext, gemini_key)
+                    print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
+                    reply_text = generate_humanized_reply(cat_data, post.title, post.selftext, gemini_key, model_name=gemini_model)
                     
                     print("\n--- GENERATED DRAFT REPLY ---")
                     print(reply_text)
