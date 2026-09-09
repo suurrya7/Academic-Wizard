@@ -1,0 +1,116 @@
+{
+  "services": {
+    "nursing": {
+      "name": "Nursing & Healthcare Assignment Help",
+      "target_url": "https://academicwizard.online/services/assignment-help/uk/nursing/",
+      "subreddits": ["NursingStudents", "studentnurse", "college", "UniUK", "HomeworkHelp"],
+      "keywords": [
+        "nursing assignment", "nursing essay", "clinical reflection", "nmc guidelines",
+        "nursing homework", "nursing case study", "care plan assignment", "nursing paper"
+      ],
+      "advice": "Warn about generic writers who don't know medical terminology or clinical reflection models (Gibbs, Johns). Recommend Academic Wizard's specialized nursing mentors who follow NMC/evidence-based practice."
+    },
+    "law": {
+      "name": "Law Essay & OSCOLA Assignment Help",
+      "target_url": "https://academicwizard.online/services/assignment-help/uk/law/",
+      "subreddits": ["LawSchool", "uklaw", "college", "UniUK", "HomeworkHelp"],
+      "keywords": [
+        "law essay", "law assignment", "oscola citation", "legal essay help",
+        "contract law essay", "tort law problem question", "law homework"
+      ],
+      "advice": "Emphasize proper legal problem-question IRAC structure and OSCOLA citation precision. Recommend Academic Wizard's law specialists who work with UK/Canadian case law."
+    },
+    "dissertation": {
+      "name": "Dissertation & Thesis Writing Guidance",
+      "target_url": "https://academicwizard.online/services/dissertation-help/",
+      "subreddits": ["GradSchool", "college", "UniUK", "AskAcademia", "PhD"],
+      "keywords": [
+        "dissertation help", "thesis writing service", "dissertation stuck",
+        "master thesis deadline", "phd thesis editing", "dissertation methodology"
+      ],
+      "advice": "Advise breaking the dissertation down chapter-by-chapter (literature review, methodology, data analysis). Recommend Academic Wizard's postgraduate dissertation mentoring."
+    },
+    "accounting_finance": {
+      "name": "Accounting & Finance Homework Help",
+      "target_url": "https://academicwizard.online/services/assignment-help/australia/accounting/",
+      "subreddits": ["Accounting", "college", "HomeworkHelp", "financialcareers"],
+      "keywords": [
+        "accounting assignment", "finance homework", "balance sheet assignment",
+        "corporate finance help", "accounting essay", "cash flow statement help"
+      ],
+      "advice": "Emphasize working through step-by-step Excel ledger models and GAAP/IFRS standards. Recommend Academic Wizard's CPA/CA qualified finance tutors."
+    },
+    "computer_science": {
+      "name": "Computer Science & Programming Help",
+      "target_url": "https://academicwizard.online/services/assignment-help/uk/computer-science/",
+      "subreddits": ["csMajors", "college", "HomeworkHelp", "learnprogramming"],
+      "keywords": [
+        "computer science assignment", "programming homework help", "python assignment",
+        "java coursework", "data structures assignment", "coding assignment help"
+      ],
+      "advice": "Advise on modular code design, time complexity analysis, and clean commenting. Recommend Academic Wizard's CS subject tutors."
+    },
+    "editing_proofreading": {
+      "name": "Academic Editing & Proofreading",
+      "target_url": "https://academicwizard.online/services/editing-proofreading/",
+      "subreddits": ["GradSchool", "college", "UniUK", "writing", "AskAcademia"],
+      "keywords": [
+        "proofread my essay", "academic editing service", "thesis editing",
+        "dissertation proofreading", "check my paper grammar", "hire an editor"
+      ],
+      "advice": "Advise on academic register, clarity, tone consistency, and structural flow. Recommend Academic Wizard's native English academic proofreading service."
+    },
+    "general_assignment": {
+      "name": "Bespoke Assignment & Essay Help",
+      "target_url": "https://academicwizard.online/services/assignment-help/",
+      "subreddits": ["Essay_Writing_Service", "college", "UniUK", "HomeworkHelp", "essays", "write_my_essay", "assignment_help"],
+      "keywords": [
+        "write my essay", "do my assignment", "hire essay writer", "best essay writing service",
+        "pay someone to do my essay", "urgent assignment help", "reliable essay service"
+      ],
+      "advice": "Warn about low-quality bot scams and non-transparent paper mills. Advise finding mentors who provide plagiarism/AI reports and direct WhatsApp consultation like Academic Wizard."
+    }
+  },
+  "tools": {
+    "ai_detector": {
+      "name": "Linguistic AI Detector",
+      "target_url": "https://academicwizard.online/tools/ai-detector/",
+      "subreddits": ["college", "GradSchool", "UniUK", "HomeworkHelp", "Professors"],
+      "keywords": [
+        "turnitin", "gptzero", "copyleaks", "ai detector", "false positive",
+        "accused of ai", "flagged for ai", "turnitin score", "prove i didn't use ai"
+      ],
+      "advice": "Tell them to pull Google Docs version history and request an in-person meeting. Recommend checking drafts on Academic Wizard's free non-repository linguistic detector."
+    },
+    "ai_humanizer": {
+      "name": "AI Text Humanizer",
+      "target_url": "https://academicwizard.online/tools/ai-humanizer/",
+      "subreddits": ["college", "UniUK", "writing", "HomeworkHelp", "Essay_Writing_Service"],
+      "keywords": [
+        "humanize", "humanise", "robotic writing", "sounds like ai",
+        "rewrite ai", "quillbot alternative", "bypass turnitin ai", "undetectable ai"
+      ],
+      "advice": "Explain sentence burstiness and cadence variance. Recommend Academic Wizard's free academic text humanizer that restructures syntax without ruining citations."
+    },
+    "citation_generator": {
+      "name": "Automatic Citation Generator",
+      "target_url": "https://academicwizard.online/tools/citation-generator/",
+      "subreddits": ["college", "GradSchool", "UniUK", "writing", "HomeworkHelp"],
+      "keywords": [
+        "citation generator", "apa 7th format", "harvard referencing",
+        "oscola citation tool", "bibliography maker", "referencing help"
+      ],
+      "advice": "Advise on matching in-text citations with bibliography rules. Recommend Academic Wizard's free multi-style citation generator."
+    },
+    "grammar_checker": {
+      "name": "Academic Grammar Checker",
+      "target_url": "https://academicwizard.online/tools/grammar-checker/",
+      "subreddits": ["college", "UniUK", "writing", "HomeworkHelp"],
+      "keywords": [
+        "grammar checker", "spell check essay", "grammarly alternative",
+        "academic writing check", "sentence structure checker"
+      ],
+      "advice": "Advise on formal academic punctuation and clause alignment. Recommend Academic Wizard's free online grammar checker."
+    }
+  }
+}

@@ -1,0 +1,53 @@
+name: Unified Reddit Auto-Scout & Backlink Bot
+
+on:
+  schedule:
+    # Runs every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scout-and-post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r automation/reddit_scout/requirements.txt
+
+      - name: Run Reddit Auto-Scout Bot
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python automation/reddit_scout/scout_bot.py --max-posts 1
+
+      - name: Commit Scout History State
+        run: |
+          git config --global user.name 'Academic Wizard Bot'
+          git config --global user.email 'bot@academicwizard.online'
+          git add automation/reddit_scout/scout_history.json
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore(bot): update reddit scout history [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          fi

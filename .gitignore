@@ -5,3 +5,4 @@ dist/
 .DS_Store
 __pycache__/
 automation/directory_submitter/.browser_profile/
+automation/directory_submitter/*.png
