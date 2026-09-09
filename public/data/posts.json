@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing NVivo Data Mismatches: A 2026 Guide for Qualitative Accuracy",
+    "slug": "fixing-nvivo-data-mismatches-a-2026-guide-for-qualitative-accuracy",
+    "excerpt": "Struggling with NVivo data mismatches? Learn how to fix import errors, repair broken source links, and ensure qualitative project accuracy in 2026.",
+    "keywords": [
+      "fixing nvivo data import errors",
+      "nvivo 27 qualitative analysis",
+      "qualitative data coding drift",
+      "fixing nvivo source file links",
+      "nvivo project repair"
+    ],
+    "primaryKeyword": "fixing nvivo data import errors",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-09T06:56:39.588989+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-nvivo-data-mismatches-a-2026-guide-for-qualitative-accuracy.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating New Citation Rules for Digital Archival Media",
+    "slug": "apa-7th-edition-navigating-new-citation-rules-for-digital-archival-media",
+    "excerpt": "Confused by APA 7 digital archival rules? Master the latest citation standards for complex digital media to ensure your research papers remain flawless.",
+    "keywords": [
+      "apa 7 citation rules for digital archival media",
+      "apa 7 electronic source citation",
+      "citing archival digital files",
+      "apa 7 formatting guidelines 2026",
+      "digital archive attribution"
+    ],
+    "primaryKeyword": "apa 7 citation rules for digital archival media",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-09T06:57:09.269139+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-new-citation-rules-for-digital-archival-media.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Syncing Zotero with Scrivener: A 2026 Workflow for Large Theses",
+    "slug": "syncing-zotero-with-scrivener-a-2026-workflow-for-large-theses",
+    "excerpt": "Boost your dissertation productivity! Learn the ultimate 2026 workflow for syncing Zotero with Scrivener to manage complex citations in large documents.",
+    "keywords": [
+      "integrate zotero with scrivener for dissertation",
+      "zotero scrivener workflow",
+      "large scale document management",
+      "dissertation citation automation",
+      "zotero plugin troubleshooting"
+    ],
+    "primaryKeyword": "integrate zotero with scrivener for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-09T06:57:36.684640+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/syncing-zotero-with-scrivener-a-2026-workflow-for-large-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Turnitin AI Score Spikes: Auditing Your Draft for False Positives",
+    "slug": "turnitin-ai-score-spikes-auditing-your-draft-for-false-positives-3",
+    "excerpt": "Received a high Turnitin AI score for original work? Learn how to conduct an academic integrity audit and contextually address false positive flags.",
+    "keywords": [
+      "how to audit turnitin ai detection report",
+      "turnitin false positive guide",
+      "contextualizing ai similarity scores",
+      "academic integrity audit",
+      "original writing vs ai detection"
+    ],
+    "primaryKeyword": "how to audit turnitin ai detection report",
+    "category": "assignment-help",
+    "categoryLabel": "Assignment Help",
+    "date": "2026-09-09T06:58:04.711220+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-auditing-your-draft-for-false-positives-3.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Turnitin 'AI Score' Spikes: A 2026 Guide to Addressing False Positives",
     "slug": "turnitin-ai-score-spikes-a-2026-guide-to-addressing-false-positives",
     "excerpt": "Flagged by Turnitin for AI? Learn why your original academic writing might be triggering false positives and how to audit your draft for integrity.",
