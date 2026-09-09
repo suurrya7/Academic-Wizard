@@ -88,8 +88,8 @@ def match_query_intent(title: str, body: str, intents_data: dict):
 
     return None
 
-def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str, model_name: str = "gemini-2.0-flash") -> str:
-    prompt = get_commercial_prompt(cat_data, title, body)
+def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str, model_name: str = "gemini-2.0-flash", include_link: bool = True) -> str:
+    prompt = get_commercial_prompt(cat_data, title, body, include_link=include_link)
     
     # Priority list of models to try
     models_to_try = []
@@ -138,9 +138,11 @@ class RedditSessionClient:
         self.session.cookies.set("reddit_session", cookie_val, domain=".reddit.com")
         self.modhash = None
         self.username = None
+        self.comment_karma = 0
+        self.link_karma = 0
 
     def authenticate(self) -> bool:
-        """Verifies session cookie and retrieves the modhash CSRF token."""
+        """Verifies session cookie and retrieves the modhash CSRF token and account karma."""
         try:
             resp = self.session.get("https://old.reddit.com/api/me.json", timeout=15)
             if resp.status_code == 200:
@@ -148,7 +150,9 @@ class RedditSessionClient:
                 if "data" in data and "modhash" in data["data"]:
                     self.modhash = data["data"]["modhash"]
                     self.username = data["data"].get("name", "User")
-                    print(f"✅ Authenticated via Reddit Session Cookie as /u/{self.username}")
+                    self.comment_karma = int(data["data"].get("comment_karma", 0))
+                    self.link_karma = int(data["data"].get("link_karma", 0))
+                    print(f"✅ Authenticated via Reddit Session Cookie as /u/{self.username} (Comment Karma: {self.comment_karma}, Link Karma: {self.link_karma})")
                     return True
             print(f"⚠️ Reddit session check failed (HTTP {resp.status_code}). Cookie might be expired.")
             return False
@@ -173,7 +177,8 @@ class RedditSessionClient:
                             "id": pdata["id"],
                             "title": pdata.get("title", ""),
                             "body": pdata.get("selftext", ""),
-                            "permalink": pdata.get("permalink", f"/r/{sub_name}/comments/{pdata['id']}")
+                            "permalink": pdata.get("permalink", f"/r/{sub_name}/comments/{pdata['id']}"),
+                            "created_utc": float(pdata.get("created_utc", 0.0))
                         })
                 if posts:
                     return posts
@@ -199,11 +204,25 @@ class RedditSessionClient:
                     link_elem = entry.find("atom:link", ns)
                     link = link_elem.get("href") if link_elem is not None else f"https://reddit.com/r/{sub_name}/comments/{post_id}"
                     permalink = link.replace("https://www.reddit.com", "").replace("https://old.reddit.com", "")
+                    
+                    created_utc = 0.0
+                    date_elem = entry.find("atom:updated", ns)
+                    if date_elem is None:
+                        date_elem = entry.find("atom:published", ns)
+                    if date_elem is not None and date_elem.text:
+                        try:
+                            clean_iso = date_elem.text.strip().replace("Z", "+00:00")
+                            dt = datetime.fromisoformat(clean_iso)
+                            created_utc = dt.timestamp()
+                        except Exception:
+                            pass
+
                     posts.append({
                         "id": post_id,
                         "title": title,
                         "body": clean_body,
-                        "permalink": permalink
+                        "permalink": permalink,
+                        "created_utc": created_utc
                     })
         except Exception:
             pass
@@ -373,6 +392,31 @@ def main():
     print(f"📡 Monitoring {len(subreddits_to_scan)} academic subreddits across all services & tools:\n")
     print(", ".join(sorted(subreddits_to_scan)) + "\n")
 
+    # Smart Account Warmup: Check Karma to prevent spam removal on fresh accounts
+    user_comment_karma = getattr(session_client, "comment_karma", 0) if session_client else 0
+    if praw_reddit:
+        try:
+            user_comment_karma = praw_reddit.user.me().comment_karma
+        except Exception:
+            pass
+
+    force_links = os.getenv("FORCE_DIRECT_LINKS", "").lower() in ("true", "1", "yes")
+
+    # If comment karma < 15, default to stealth brand mention mode (no raw hyperlinks) to avoid Reddit spam removal
+    include_direct_link = True
+    if user_comment_karma < 15 and not force_links:
+        include_direct_link = False
+        print(f"🛡️ Warm-up Safeguard: Account has {user_comment_karma} comment karma (< 15 threshold).")
+        print("   Using natural brand mention mode (no raw hyperlinks) to protect account from Reddit automated spam removal.")
+        print("   (Clickable markdown links will auto-enable once your account reaches 15+ karma, or set FORCE_DIRECT_LINKS=true).\n")
+    else:
+        print(f"🔗 Link Mode: Direct markdown backlinks ENABLED (Comment Karma: {user_comment_karma}).\n")
+
+    try:
+        max_post_age_hours = float(os.getenv("MAX_POST_AGE_HOURS") or 48.0)
+    except ValueError:
+        max_post_age_hours = 48.0
+
     replied_in_this_run = 0
 
     for sub_name in sorted(subreddits_to_scan):
@@ -395,7 +439,8 @@ def main():
                         "id": p.id,
                         "title": p.title,
                         "body": p.selftext,
-                        "permalink": p.permalink
+                        "permalink": p.permalink,
+                        "created_utc": float(getattr(p, "created_utc", 0.0))
                     })
 
             for post in posts_to_inspect:
@@ -405,6 +450,13 @@ def main():
                 post_id = post["id"]
                 if post_id in history["replied_post_ids"]:
                     continue
+
+                # Freshness Guard: Skip dead / archived / necro threads (> 48 hours old)
+                created_utc = post.get("created_utc", 0.0)
+                if created_utc > 0:
+                    age_hours = (datetime.now(timezone.utc).timestamp() - created_utc) / 3600
+                    if age_hours > max_post_age_hours:
+                        continue
 
                 matched = match_query_intent(post["title"], post["body"], intents_data)
                 if not matched:
@@ -420,7 +472,7 @@ def main():
 
                 try:
                     print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
-                    raw_reply = generate_humanized_reply(cat_data, post["title"], post["body"], gemini_key, model_name=gemini_model)
+                    raw_reply = generate_humanized_reply(cat_data, post["title"], post["body"], gemini_key, model_name=gemini_model, include_link=include_direct_link)
                     reply_text = inject_human_quirks(raw_reply)
                     
                     print("\n--- GENERATED DRAFT REPLY ---")

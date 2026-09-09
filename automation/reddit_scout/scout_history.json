@@ -1,22 +1,10 @@
 {
-  "last_run": "2026-09-09T19:01:13.140402+00:00",
+  "last_run": null,
   "daily_count": {
-    "date": "2026-09-09",
-    "count": 1
+    "date": null,
+    "count": 0
   },
-  "replied_post_ids": [
-    "194iop8"
-  ],
-  "history": [
-    {
-      "post_id": "194iop8",
-      "subreddit": "GPTZero",
-      "category": "Linguistic AI Detector",
-      "target_url": "https://academicwizard.online/tools/ai-detector/",
-      "title": "Flagged using ai-writing, will turnitin catch???",
-      "posted_at": "2026-09-09T19:01:13.140397+00:00",
-      "url": "https://reddit.com/r/GPTzero/comments/194iop8/flagged_using_aiwriting_will_turnitin_catch/"
-    }
-  ],
-  "last_comment_posted_at": "2026-09-09T19:01:13.140377+00:00"
+  "replied_post_ids": [],
+  "history": [],
+  "last_comment_posted_at": null
 }

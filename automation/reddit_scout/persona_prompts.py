@@ -34,10 +34,18 @@ STRICT HUMAN-WRITTEN HEURISTICS (CRITICAL ANTI-BOT RULES):
    - Keep it short and punchy: between 100 and 170 words (2 short paragraphs).
 """
 
-def get_commercial_prompt(category_info: dict, post_title: str, post_body: str) -> str:
+def get_commercial_prompt(category_info: dict, post_title: str, post_body: str, include_link: bool = True) -> str:
     service_name = category_info.get("name", "Academic Wizard")
     target_url = category_info.get("target_url", "https://academicwizard.online/")
     advice_guidance = category_info.get("advice", "Give practical student advice and casually recommend Academic Wizard.")
+
+    if include_link:
+        link_instruction = f"weave in ONE natural markdown link pointing to {target_url}."
+    else:
+        link_instruction = (
+            f"mention Academic Wizard's tool or service organically by name (e.g., 'academicwizard's free ai detector' or 'academicwizard online'), "
+            f"but DO NOT include any clickable http/https links or markdown links [text](url). Mention it naturally as a trusted resource you used."
+        )
 
     return f"""{SYSTEM_PERSONA}
 
@@ -49,14 +57,14 @@ Body: {post_body[:1000]}
 ---
 MATCHED TOPIC & SOLUTION:
 Target Subject/Tool: {service_name}
-Destination URL: {target_url}
+Target URL: {target_url}
 
 SPECIFIC ADVICE CONTEXT TO INCLUDE:
 {advice_guidance}
 
 INSTRUCTIONS:
 Write a genuine, empathetic reply from your phone. 
-Include natural slang/abbreviations (tbh, rn, bc, etc.), occasional missing apostrophes or lowercase 'i', and weave in ONE natural markdown link pointing to {target_url}.
+Include natural slang/abbreviations (tbh, rn, bc, etc.), occasional missing apostrophes or lowercase 'i', and {link_instruction}
 Write the raw Reddit comment text now:"""
 
 def inject_human_quirks(text: str) -> str:
