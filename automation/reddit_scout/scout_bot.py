@@ -18,9 +18,9 @@ except ImportError:
     praw = None
 
 try:
-    from persona_prompts import get_commercial_prompt
+    from persona_prompts import get_commercial_prompt, inject_human_quirks
 except ImportError:
-    from automation.reddit_scout.persona_prompts import get_commercial_prompt
+    from automation.reddit_scout.persona_prompts import get_commercial_prompt, inject_human_quirks
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 INTENTS_PATH = os.path.join(SCRIPT_DIR, "commercial_intents.json")
@@ -157,11 +157,38 @@ def main():
     if history["daily_count"].get("date") != today_str:
         history["daily_count"] = {"date": today_str, "count": 0}
 
-    # Safety Guardrail: Maximum 3 comments per day across the entire account
+    # Safety Guardrail 1: Maximum 3 comments per day across the entire account
     if history["daily_count"]["count"] >= 3 and not args.dry_run:
         print(f"🛡️ Safety Guardrail Active: Daily comment quota (3/3) reached for {today_str}.")
         print("   Skipping Reddit posting to protect account karma and prevent spam flags.")
         return
+
+    # Safety Guardrail 2: Minimum 2.5 hours (9,000s) cooldown between comments
+    MIN_COOLDOWN_SECONDS = 9000
+    last_posted_str = history.get("last_comment_posted_at")
+    if last_posted_str and not args.dry_run:
+        try:
+            last_posted_dt = datetime.fromisoformat(last_posted_str)
+            elapsed_seconds = (datetime.now(timezone.utc) - last_posted_dt).total_seconds()
+            if elapsed_seconds < MIN_COOLDOWN_SECONDS:
+                mins_left = int((MIN_COOLDOWN_SECONDS - elapsed_seconds) // 60)
+                print(f"🛡️ Anti-Spam Guardrail: Last comment was posted {int(elapsed_seconds // 60)} mins ago.")
+                print(f"   Cooldown active ({mins_left} mins remaining before next comment).")
+                print("   Skipping Reddit scan to maintain organic account pacing.")
+                save_history(history)
+                return
+        except Exception:
+            pass
+
+    # Safety Guardrail 3: Subreddit Anti-Cluster (Never post in the same subreddit twice in 24 hours)
+    recent_subs_24h = set()
+    for h in history.get("history", []):
+        try:
+            posted_at = datetime.fromisoformat(h.get("posted_at", ""))
+            if (datetime.now(timezone.utc) - posted_at).total_seconds() < 86400:
+                recent_subs_24h.add(h.get("subreddit"))
+        except Exception:
+            pass
 
     # Build unique list of subreddits to monitor
     subreddits_to_scan = set()
@@ -207,6 +234,10 @@ def main():
         if replied_in_this_run >= args.max_posts:
             break
 
+        if not args.dry_run and sub_name in recent_subs_24h:
+            # Skip subreddits we already interacted with today to prevent clustering
+            continue
+
         try:
             sub = reddit.subreddit(sub_name)
             for post in sub.new(limit=15):
@@ -230,7 +261,8 @@ def main():
 
                 try:
                     print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
-                    reply_text = generate_humanized_reply(cat_data, post.title, post.selftext, gemini_key, model_name=gemini_model)
+                    raw_reply = generate_humanized_reply(cat_data, post.title, post.selftext, gemini_key, model_name=gemini_model)
+                    reply_text = inject_human_quirks(raw_reply)
                     
                     print("\n--- GENERATED DRAFT REPLY ---")
                     print(reply_text)
@@ -241,6 +273,7 @@ def main():
                         submission = reddit.submission(id=post.id)
                         comment = submission.reply(reply_text)
                         print(f"   ✅ Comment successfully posted! (Comment ID: {comment.id})")
+                        history["last_comment_posted_at"] = datetime.now(timezone.utc).isoformat()
                     else:
                         print("   [DRY RUN] Would submit comment with backlink.")
 
