@@ -1,13 +1,17 @@
 {
-  "last_updated": "2026-09-09T21:11:00Z",
+  "last_updated": "2026-09-09T16:05:21.955Z",
   "submissions": {
     "theresanaiforthat": {
       "name": "There's An AI For That (TAAFT)",
-      "status": "not_started",
+      "status": "submitted",
       "submitted_at": null,
-      "tool": null,
+      "tool": "ai-detector",
       "live_url": null,
-      "notes": ""
+      "notes": "",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "last_submitted_at": "2026-09-09T16:05:21.955Z"
     },
     "futurepedia": {
       "name": "Futurepedia",
@@ -200,6 +204,16 @@
       "tool": null,
       "live_url": null,
       "notes": ""
+    },
+    "theresanaiforthat:ai-detector": {
+      "directory_id": "theresanaiforthat",
+      "name": "There's An AI For That (TAAFT)",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:05:21.942Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
     }
   }
 }

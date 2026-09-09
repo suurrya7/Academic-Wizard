@@ -29,7 +29,8 @@ const TRACKER_PATH = path.join(__dirname, 'submission_tracker.json');
 
 // Load configurations
 const toolProfiles = JSON.parse(fs.readFileSync(PROFILES_PATH, 'utf-8'));
-const directories = JSON.parse(fs.readFileSync(DIRECTORIES_PATH, 'utf-8'));
+const rawDirectories = JSON.parse(fs.readFileSync(DIRECTORIES_PATH, 'utf-8'));
+const directories = rawDirectories.filter(d => d.free_listing !== false);
 
 function loadTracker() {
     if (fs.existsSync(TRACKER_PATH)) {
@@ -269,19 +270,38 @@ async function main() {
                     const t = (el.type || '').toLowerCase();
                     const combined = `${n} ${id} ${p}`;
 
-                    if (t === 'email' || combined.includes('email')) {
+                    if (combined.includes('submitter_name') || combined.includes('your_name') || combined.includes('first_name')) {
+                        if (setVal(el, 'Academic Wizard')) { filled++; fieldsFilled.push('submitter_name'); }
+                    } else if (combined.includes('submitter_email') || (t === 'email' && (combined.includes('your_email') || combined.includes('email')))) {
                         if (setVal(el, toolData.contact_email)) { filled++; fieldsFilled.push('email'); }
+                    } else if (combined.includes('tool_name') || combined.includes('app_name') || combined.includes('product_name') || combined.includes('form-field-name')) {
+                        if (setVal(el, toolData.name)) { filled++; fieldsFilled.push('tool_name'); }
                     } else if (combined.includes('tagline') || combined.includes('headline') || combined.includes('short_desc') || combined.includes('summary') || combined.includes('punchline')) {
                         if (setVal(el, toolData.tagline)) { filled++; fieldsFilled.push('tagline'); }
-                    } else if (el.tagName === 'TEXTAREA' || combined.includes('description') || combined.includes('about') || combined.includes('details') || combined.includes('overview')) {
-                        if (setVal(el, toolData.full_description)) { filled++; fieldsFilled.push('description'); }
-                    } else if (combined.includes('url') || combined.includes('website') || combined.includes('link') || combined.includes('domain') || combined.includes('homepage')) {
+                    } else if (el.tagName === 'TEXTAREA' || combined.includes('description') || combined.includes('about') || combined.includes('details') || combined.includes('message')) {
+                        if (setVal(el, toolData.short_description || toolData.full_description)) { filled++; fieldsFilled.push('description'); }
+                    } else if (combined.includes('url') || combined.includes('website') || combined.includes('link') || combined.includes('domain') || combined.includes('homepage') || combined.includes('form-field-email')) {
                         if (setVal(el, toolData.website_url)) { filled++; fieldsFilled.push('website_url'); }
-                    } else if (combined.includes('tool_name') || combined.includes('product_name') || combined.includes('app_name') || combined.includes('title') || combined.includes('name')) {
+                    } else if (combined.includes('title') || (!combined.includes('user') && combined.includes('name'))) {
                         if (setVal(el, toolData.name)) { filled++; fieldsFilled.push('name'); }
-                    } else if (combined.includes('pricing') || combined.includes('price')) {
-                        if (setVal(el, toolData.pricing_type)) { filled++; fieldsFilled.push('pricing'); }
-                    } else if (combined.includes('tag') || combined.includes('keyword')) {
+                    } else if (el.tagName === 'SELECT' && combined.includes('category')) {
+                        for (let opt of el.options) {
+                            if (opt.text.toLowerCase().includes('writing') || opt.text.toLowerCase().includes('education') || opt.text.toLowerCase().includes('productivity')) {
+                                el.value = opt.value;
+                                el.dispatchEvent(new Event('change', { bubbles: true }));
+                                filled++;
+                                fieldsFilled.push('category');
+                                break;
+                            }
+                        }
+                    } else if (t === 'radio' && (combined.includes('pricing') || combined.includes('price'))) {
+                        if (el.value.toLowerCase().includes('free') || el.nextSibling?.textContent?.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
+                            el.checked = true;
+                            el.dispatchEvent(new Event('change', { bubbles: true }));
+                            filled++;
+                            fieldsFilled.push('pricing:free');
+                        }
+                    } else if (combined.includes('tag') || combined.includes('keyword') || combined.includes('field_20743f6')) {
                         if (setVal(el, toolData.tags.join(', '))) { filled++; fieldsFilled.push('tags'); }
                     }
                 });

@@ -1,57 +1,5 @@
 [
   {
-    "id": "theresanaiforthat",
-    "name": "There's An AI For That (TAAFT)",
-    "domain": "theresanaiforthat.com",
-    "estimated_da": 78,
-    "submit_url": "https://theresanaiforthat.com/submit/",
-    "free_listing": true,
-    "requires_login": true,
-    "login_type": "google_or_email",
-    "priority": 1,
-    "category_match": "Education & Writing",
-    "notes": "World's largest AI tool directory. Massive Google search traffic and strong dofollow backlink."
-  },
-  {
-    "id": "futurepedia",
-    "name": "Futurepedia",
-    "domain": "futurepedia.io",
-    "estimated_da": 68,
-    "submit_url": "https://www.futurepedia.io/submit-tool",
-    "free_listing": true,
-    "requires_login": true,
-    "login_type": "google",
-    "priority": 1,
-    "category_match": "Education",
-    "notes": "Top tier authority. Offers free submission queue with high referral click rates."
-  },
-  {
-    "id": "toolify",
-    "name": "Toolify.ai",
-    "domain": "toolify.ai",
-    "estimated_da": 65,
-    "submit_url": "https://www.toolify.ai/submit",
-    "free_listing": true,
-    "requires_login": false,
-    "login_type": "none",
-    "priority": 1,
-    "category_match": "Education / Writing",
-    "notes": "High traffic Asian & global directory with fast indexing on Baidu and Google."
-  },
-  {
-    "id": "topai-tools",
-    "name": "TopAI.tools",
-    "domain": "topai.tools",
-    "estimated_da": 52,
-    "submit_url": "https://topai.tools/submit",
-    "free_listing": true,
-    "requires_login": false,
-    "login_type": "none",
-    "priority": 1,
-    "category_match": "Writing & Education",
-    "notes": "Clean direct submission form without mandatory account creation."
-  },
-  {
     "id": "futuretools",
     "name": "FutureTools.io (Matt Wolfe)",
     "domain": "futuretools.io",
@@ -63,6 +11,19 @@
     "priority": 1,
     "category_match": "Productivity / Writing",
     "notes": "Curated by Matt Wolfe. Free Google Form / Web submission."
+  },
+  {
+    "id": "easywithai",
+    "name": "Easy With AI",
+    "domain": "easywithai.com",
+    "estimated_da": 52,
+    "submit_url": "https://easywithai.com/submit-tool/",
+    "free_listing": true,
+    "requires_login": false,
+    "login_type": "none",
+    "priority": 2,
+    "category_match": "Writing Assistants",
+    "notes": "Clean UI directory with dedicated section for writing and student utilities."
   },
   {
     "id": "saashub",
@@ -104,17 +65,17 @@
     "notes": "Direct submission form with free standard review tier."
   },
   {
-    "id": "aivalley",
-    "name": "AI Valley",
-    "domain": "aivalley.ai",
+    "id": "aiscout",
+    "name": "AI Scout",
+    "domain": "aiscout.net",
     "estimated_da": 48,
-    "submit_url": "https://aivalley.ai/submit",
+    "submit_url": "https://aiscout.net/submit/",
     "free_listing": true,
     "requires_login": false,
     "login_type": "none",
     "priority": 2,
-    "category_match": "Education & Student Tools",
-    "notes": "Popular newsletter and curated daily directory with easy form submission."
+    "category_match": "Education Tools",
+    "notes": "Directories of AI tools with filterable tags."
   },
   {
     "id": "aitoolhunt",
@@ -143,19 +104,6 @@
     "notes": "Comprehensive AI tool index with simple submission form."
   },
   {
-    "id": "insidr-ai",
-    "name": "Insidr AI",
-    "domain": "insidr.ai",
-    "estimated_da": 54,
-    "submit_url": "https://www.insidr.ai/submit-ai-tool/",
-    "free_listing": true,
-    "requires_login": false,
-    "login_type": "none",
-    "priority": 2,
-    "category_match": "Writing & Productivity",
-    "notes": "Curated editorial reviews and listings for AI software."
-  },
-  {
     "id": "microlaunch",
     "name": "MicroLaunch",
     "domain": "microlaunch.net",
@@ -180,32 +128,6 @@
     "priority": 2,
     "category_match": "Education",
     "notes": "One-page submission form for free AI tools."
-  },
-  {
-    "id": "aiscout",
-    "name": "AI Scout",
-    "domain": "aiscout.net",
-    "estimated_da": 48,
-    "submit_url": "https://aiscout.net/submit/",
-    "free_listing": true,
-    "requires_login": false,
-    "login_type": "none",
-    "priority": 2,
-    "category_match": "Education Tools",
-    "notes": "Directories of AI tools with filterable tags."
-  },
-  {
-    "id": "easywithai",
-    "name": "Easy With AI",
-    "domain": "easywithai.com",
-    "estimated_da": 52,
-    "submit_url": "https://easywithai.com/submit-tool/",
-    "free_listing": true,
-    "requires_login": false,
-    "login_type": "none",
-    "priority": 2,
-    "category_match": "Writing Assistants",
-    "notes": "Clean UI directory with dedicated section for writing and student utilities."
   },
   {
     "id": "opentools",
@@ -323,5 +245,83 @@
     "priority": 3,
     "category_match": "Writing Tools",
     "notes": "Niche AI directory with straightforward form submission."
+  },
+  {
+    "id": "topai-tools",
+    "name": "TopAI.tools",
+    "domain": "topai.tools",
+    "estimated_da": 52,
+    "submit_url": "https://topai.tools/submit",
+    "free_listing": true,
+    "requires_login": false,
+    "login_type": "none",
+    "priority": 1,
+    "category_match": "Writing & Education",
+    "notes": "Clean direct submission form without mandatory account creation."
+  },
+  {
+    "id": "futurepedia",
+    "name": "Futurepedia",
+    "domain": "futurepedia.io",
+    "estimated_da": 68,
+    "submit_url": "https://www.futurepedia.io/submit-tool",
+    "free_listing": true,
+    "requires_login": true,
+    "login_type": "google",
+    "priority": 1,
+    "category_match": "Education",
+    "notes": "Top tier authority. Offers free submission queue with high referral click rates."
+  },
+  {
+    "id": "insidr-ai",
+    "name": "Insidr AI",
+    "domain": "insidr.ai",
+    "estimated_da": 54,
+    "submit_url": "https://www.insidr.ai/submit-ai-tool/",
+    "free_listing": true,
+    "requires_login": false,
+    "login_type": "none",
+    "priority": 2,
+    "category_match": "Writing & Productivity",
+    "notes": "Curated editorial reviews and listings for AI software."
+  },
+  {
+    "id": "aivalley",
+    "name": "AI Valley",
+    "domain": "aivalley.ai",
+    "estimated_da": 48,
+    "submit_url": "https://aivalley.ai/submit",
+    "free_listing": true,
+    "requires_login": false,
+    "login_type": "none",
+    "priority": 2,
+    "category_match": "Education & Student Tools",
+    "notes": "Popular newsletter and curated daily directory with easy form submission."
+  },
+  {
+    "id": "theresanaiforthat",
+    "name": "There's An AI For That (TAAFT)",
+    "domain": "theresanaiforthat.com",
+    "estimated_da": 78,
+    "submit_url": "https://theresanaiforthat.com/submit/",
+    "free_listing": false,
+    "requires_login": true,
+    "login_type": "google_or_email",
+    "priority": 1,
+    "category_match": "Education & Writing",
+    "notes": "Requires paid tier (- Pay & Launch). Skipped for free automated submissions."
+  },
+  {
+    "id": "toolify",
+    "name": "Toolify.ai",
+    "domain": "toolify.ai",
+    "estimated_da": 65,
+    "submit_url": "https://www.toolify.ai/submit",
+    "free_listing": false,
+    "requires_login": false,
+    "login_type": "none",
+    "priority": 1,
+    "category_match": "Education / Writing",
+    "notes": "Requires paid tier ( Pay & Submit). Skipped for free automated submissions."
   }
 ]
