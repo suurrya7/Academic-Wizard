@@ -248,7 +248,13 @@ async function main() {
         try {
             console.log('⏳ Navigating to submission page...');
             await page.goto(dir.submit_url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 2500));
+
+            // Automatically dismiss any full-screen popup/newsletter modal
+            try {
+                await page.keyboard.press('Escape');
+                await new Promise(r => setTimeout(r, 500));
+            } catch (e) {}
 
             // Inject floating on-screen autofill button and perform initial fill
             await page.evaluate((toolData) => {
@@ -256,10 +262,26 @@ async function main() {
 
                 function runFill() {
                     let filled = 0;
+
+                    // Automatically dismiss newsletter/cookie popups
+                    document.querySelectorAll('button, a, span, p').forEach(el => {
+                        const txt = (el.innerText || '').toLowerCase().trim();
+                        if (txt.includes('no thanks') || txt === '✕' || txt === '×' || txt === 'close') {
+                            el.click();
+                        }
+                    });
+
+                    // React/Next.js and native value setter
                     function setVal(el, val) {
                         if (!el) return false;
                         el.focus();
-                        el.value = val;
+                        const proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
+                        const setter = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
+                        if (setter) {
+                            setter.call(el, val);
+                        } else {
+                            el.value = val;
+                        }
                         el.dispatchEvent(new Event('input', { bubbles: true }));
                         el.dispatchEvent(new Event('change', { bubbles: true }));
                         el.blur();
@@ -297,7 +319,8 @@ async function main() {
                                 }
                             }
                         } else if (t === 'radio' && (combined.includes('pricing') || combined.includes('price'))) {
-                            if (el.value.toLowerCase().includes('free') || el.nextSibling?.textContent?.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
+                            if (el.value.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
+                                el.click();
                                 el.checked = true;
                                 el.dispatchEvent(new Event('change', { bubbles: true }));
                                 filled++;
