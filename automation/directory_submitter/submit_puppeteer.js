@@ -204,9 +204,11 @@ async function main() {
     console.log('• If a CAPTCHA or Google login appears, complete it in the browser window.');
     console.log('• Press ENTER in this terminal when finished to log the submission and proceed.\n');
 
-    // Launch browser (headful so user can see, solve captchas, and click submit)
+    // Launch browser with persistent profile so Google logins and cookies are preserved
+    const profileDir = path.join(__dirname, '.browser_profile');
     const browser = await puppeteer.launch({
         headless: false,
+        userDataDir: profileDir,
         defaultViewport: { width: 1280, height: 800 },
         args: [
             '--no-sandbox',
