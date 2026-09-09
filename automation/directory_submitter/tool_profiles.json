@@ -1,0 +1,116 @@
+{
+  "ai-detector": {
+    "name": "Academic Wizard Linguistic AI Detector",
+    "slug": "ai-detector",
+    "tagline": "Free AI Content & Academic Integrity Detector for University Essays",
+    "short_description": "Instant linguistic AI detector analyzing perplexity and sentence burstiness to verify student essays against false Turnitin flags. 100% free with zero data logging.",
+    "full_description": "Academic Wizard's Linguistic AI Detector is an essential academic integrity companion engineered specifically for higher education students and researchers.\n\nAs universities worldwide increasingly rely on automated AI detection software, human-written academic prose is frequently misidentified due to formal phrasing and objective syntax. Academic Wizard's tool addresses this challenge by analyzing sentence-level perplexity, linguistic burstiness, and syntactic predictability in real-time.\n\nKey Capabilities:\n• Multi-Sentence Perplexity Scoring: Pinpoints exact paragraphs with uniform phrasing likely to trigger false positive flags.\n• Strict Non-Repository Policy: Your text is never stored, indexed, or shared with third-party databases, ensuring complete academic privacy.\n• Academic Convention Awareness: Calibrated for formal coursework, lab reports, and literature reviews across UK, US, Canadian, and Australian university standards.\n• Instant Color-Coded Heatmaps: Visual breakdown of human vs. algorithmic syntax patterns for targeted editing.\n\nWhether preparing an undergraduate assignment, a postgraduate dissertation chapter, or a journal submission, Academic Wizard provides the transparency and confidence students need before hitting submit.",
+    "category": "Education / Writing Assistants / AI Detection",
+    "subcategories": ["Academic Writing", "Plagiarism & AI Checkers", "Student Productivity"],
+    "pricing_type": "Free",
+    "pricing_details": "$0 / Completely Free",
+    "website_url": "https://academicwizard.online/tools/ai-detector/",
+    "logo_url": "https://academicwizard.online/assets/academic-wizard-logo.webp",
+    "screenshot_url": "https://academicwizard.online/images/tools/ai-detector.webp",
+    "contact_email": "support@academicwizard.online",
+    "key_features": [
+      "Zero data retention non-repository policy",
+      "Perplexity and burstiness sentence heatmap",
+      "Calibrated for APA, Harvard, and formal academic prose",
+      "No account or credit card required",
+      "Instant real-time analysis"
+    ],
+    "tags": ["ai detector", "ai content checker", "academic integrity", "turnitin checker", "student writing", "education ai", "essay checker"]
+  },
+  "ai-humanizer": {
+    "name": "Academic Wizard AI Text Humanizer",
+    "slug": "ai-humanizer",
+    "tagline": "Transform AI-Assisted Writing into Natural Academic Prose",
+    "short_description": "Free academic text humanizer that introduces authentic syntactic variance, varied sentence cadence, and natural authorial flow while preserving scholarly rigor.",
+    "full_description": "Academic Wizard's AI Text Humanizer helps students and scholars refine their drafts by eliminating robotic rhythms, repetitive transitions, and formulaic sentence structures.\n\nModern AI writing tools tend to generate uniform, predictable sentence structures that sound mechanical. Academic Wizard's humanizer restructures monotonous clauses, varies vocabulary, and injects dynamic academic cadence while preserving your core thesis, factual data, and primary references intact.\n\nKey Capabilities:\n• Academic Voice Preservation: Maintains sophisticated scholarly tone without dumbing down specialized arguments.\n• Structural Variance Injection: Combines short punchy sentences with compound analytical clauses to eliminate burstiness flags.\n• Active Citation Protection: Keeps in-text references (APA 7th, Harvard, OSCOLA, Chicago) uncorrupted during rewriting.\n• 100% Free & Unlimited: No daily limits or subscriptions.",
+    "category": "Writing Assistants / Paraphrasing / Education",
+    "subcategories": ["Academic Editing", "Content Rewriter", "Student Tools"],
+    "pricing_type": "Free",
+    "pricing_details": "$0 / Completely Free",
+    "website_url": "https://academicwizard.online/tools/ai-humanizer/",
+    "logo_url": "https://academicwizard.online/assets/academic-wizard-logo.webp",
+    "screenshot_url": "https://academicwizard.online/images/tools/ai-humanizer.webp",
+    "contact_email": "support@academicwizard.online",
+    "key_features": [
+      "Natural academic cadence and burstiness injection",
+      "Preserves specialized citations and academic vocabulary",
+      "Side-by-side comparison view",
+      "Free unlimited text processing",
+      "Instant 1-click clipboard copy"
+    ],
+    "tags": ["ai humanizer", "paraphrasing tool", "academic rewrite", "bypass ai detection", "essay polish", "student productivity"]
+  },
+  "citation-generator": {
+    "name": "Academic Wizard Automatic Citation Generator",
+    "slug": "citation-generator",
+    "tagline": "Free Multi-Style Academic Reference & Bibliography Generator",
+    "short_description": "Generate perfectly formatted academic references in APA 7th, MLA 9th, Harvard, Chicago 17th, IEEE, and Vancouver with dynamic bibliography export.",
+    "full_description": "Academic Wizard's Automatic Citation Generator takes the pain out of academic referencing. Designed for college students and researchers, this free tool dynamically compiles accurate in-text citations and complete bibliographic entries across all major university styles.\n\nSupports books, peer-reviewed journals, websites, conference proceedings, and legal documents with automatic formatting rules. Export your complete bibliography directly to Word, Google Docs, or BibTeX.",
+    "category": "Education / Academic Tools / Productivity",
+    "subcategories": ["Reference Management", "Citation Maker", "Student Writing"],
+    "pricing_type": "Free",
+    "pricing_details": "$0 / Completely Free",
+    "website_url": "https://academicwizard.online/tools/citation-generator/",
+    "logo_url": "https://academicwizard.online/assets/academic-wizard-logo.webp",
+    "screenshot_url": "https://academicwizard.online/images/tools/citation-generator.webp",
+    "contact_email": "support@academicwizard.online",
+    "key_features": [
+      "Supports APA 7th, MLA 9th, Harvard, Chicago 17th, IEEE, and Vancouver",
+      "In-text citation and reference list generation",
+      "Automatic URL and DOI metadata retrieval",
+      "One-click complete bibliography export",
+      "100% Free with zero ads or paywalls"
+    ],
+    "tags": ["citation generator", "apa citation", "harvard referencing", "mla citation generator", "bibliography maker", "academic references"]
+  },
+  "grammar-checker": {
+    "name": "Academic Wizard Academic Grammar & Spell Checker",
+    "slug": "grammar-checker",
+    "tagline": "Scholarly Grammar, Syntax & Style Polishing Engine",
+    "short_description": "Free academic-focused grammar editor highlighting spelling slips, passive voice overload, punctuation errors, and vocabulary enhancements for essays.",
+    "full_description": "Academic Wizard's Grammar and Spell Checker is fine-tuned specifically for academic essays, literature reviews, and research papers. Unlike generic spellcheckers, it identifies informal colloquialisms, weak transitions, faulty parallelism, and dangling modifiers, helping university students elevate their writing to distinction-level standards.",
+    "category": "Writing Assistants / Grammar Checkers / Education",
+    "subcategories": ["Proofreading", "Academic Editing", "Student Writing"],
+    "pricing_type": "Free",
+    "pricing_details": "$0 / Completely Free",
+    "website_url": "https://academicwizard.online/tools/grammar-checker/",
+    "logo_url": "https://academicwizard.online/assets/academic-wizard-logo.webp",
+    "screenshot_url": "https://academicwizard.online/images/tools/grammar-checker.webp",
+    "contact_email": "support@academicwizard.online",
+    "key_features": [
+      "Academic vocabulary and tone recommendations",
+      "Identifies colloquialisms and informal contractions",
+      "Punctuation and citation formatting validation",
+      "Instant one-click replacement",
+      "No account registration required"
+    ],
+    "tags": ["grammar checker", "essay proofreader", "academic spell check", "writing enhancer", "paper editor", "free proofreading"]
+  },
+  "academic-wizard-suite": {
+    "name": "Academic Wizard Free Student AI Tools Suite",
+    "slug": "academic-wizard-suite",
+    "tagline": "All-in-One Free AI Writing & Academic Integrity Platform for University Students",
+    "short_description": "Complete suite of free academic tools including Linguistic AI Detection, AI Humanization, APA/Harvard Citation Maker, and Scholarly Grammar Checking.",
+    "full_description": "Academic Wizard is an educational technology and academic mentorship platform helping university students across the UK, USA, Canada, and Australia achieve scholastic excellence.\n\nThe platform provides a suite of 100% free web utilities—including an AI Content Detector, AI Text Humanizer, Automated Citation Generator, and Academic Grammar Polisher—coupled with 1-on-1 doctoral faculty guidance for complex coursework, thesis methodology, and peer-review preparation.",
+    "category": "Education / AI Writing / Student Utilities",
+    "subcategories": ["EdTech Platform", "AI Tools Directory", "University Assistance"],
+    "pricing_type": "Free",
+    "pricing_details": "Free Suite + Optional 1-on-1 Faculty Mentorship",
+    "website_url": "https://academicwizard.online/tools/",
+    "logo_url": "https://academicwizard.online/assets/academic-wizard-logo.webp",
+    "screenshot_url": "https://academicwizard.online/images/tools/tools-main.jpg",
+    "contact_email": "support@academicwizard.online",
+    "key_features": [
+      "4 comprehensive student tools in one clean dashboard",
+      "100% free with strict zero-logging privacy",
+      "Tailored for UK, USA, Canadian, and Australian grading criteria",
+      "24/7 student support"
+    ],
+    "tags": ["ai tools for students", "free academic tools", "essay helper", "ai detector free", "citation maker", "edtech"]
+  }
+}
