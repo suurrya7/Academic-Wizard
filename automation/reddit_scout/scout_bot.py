@@ -23,9 +23,9 @@ except ImportError:
     praw = None
 
 try:
-    from persona_prompts import get_commercial_prompt, inject_human_quirks
+    from persona_prompts import get_commercial_prompt, inject_human_quirks, get_karma_prompt
 except ImportError:
-    from automation.reddit_scout.persona_prompts import get_commercial_prompt, inject_human_quirks
+    from automation.reddit_scout.persona_prompts import get_commercial_prompt, inject_human_quirks, get_karma_prompt
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 INTENTS_PATH = os.path.join(SCRIPT_DIR, "commercial_intents.json")
@@ -123,6 +123,118 @@ def generate_humanized_reply(cat_data: dict, title: str, body: str, api_key: str
             
     raise RuntimeError(f"Gemini API error with all attempted models {models_to_try}. Last error: {last_error}")
 
+KARMA_SUBREDDITS = ["AskReddit", "NoStupidQuestions", "CasualConversation", "college", "Advice"]
+
+def generate_karma_reply(title: str, body: str, subreddit: str, api_key: str, model_name: str = "gemini-2.0-flash") -> str:
+    """Generates an authentic, witty, high-upvote answer with ZERO promotional content or links."""
+    prompt = get_karma_prompt(title, body, subreddit)
+    
+    models_to_try = []
+    for m in [model_name, "gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-flash"]:
+        if m:
+            clean = m.replace("models/", "").strip()
+            if clean and clean not in models_to_try:
+                models_to_try.append(clean)
+
+    last_error = None
+    for m in models_to_try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={api_key}"
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.85,
+                "maxOutputTokens": 200
+            }
+        }
+        try:
+            response = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
+            if response.status_code == 200:
+                data = response.json()
+                reply_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                # Defensive anti-promo filter: guarantee NO URLs or markdown links appear in karma comments
+                reply_text = re.sub(r'https?://\S+', '', reply_text)
+                reply_text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', reply_text)
+                print(f"   ✨ Generated karma response using model: {m}")
+                return reply_text
+            else:
+                last_error = f"HTTP {response.status_code}: {response.text[:200]}"
+        except Exception as e:
+            last_error = str(e)
+            
+    raise RuntimeError(f"Gemini API error with all attempted models {models_to_try}. Last error: {last_error}")
+
+def is_good_karma_question(title: str) -> bool:
+    """Verifies that the post is an engaging, open-ended question suitable for witty/relatable replies."""
+    t = title.strip().lower()
+    if t.endswith("?"):
+        return True
+    question_starters = (
+        "what", "why", "how", "who", "when", "where", "which",
+        "is it", "does anyone", "do you", "has anyone", "can someone",
+        "would you", "what's", "whats", "reddit,"
+    )
+    return any(t.startswith(q) for q in question_starters)
+
+def find_best_karma_post(session_client, praw_reddit, replied_ids: list, recent_subs: set) -> dict:
+    """
+    Finds the highest-potential fresh rising question to comment on for maximum upvotes.
+    """
+    candidates = []
+    
+    for sub in KARMA_SUBREDDITS:
+        if sub in recent_subs:
+            continue
+            
+        posts = []
+        if session_client:
+            posts = session_client.fetch_posts(sub, limit=15, sort="rising")
+            if not posts:
+                posts = session_client.fetch_posts(sub, limit=15, sort="new")
+        elif praw_reddit:
+            try:
+                sub_obj = praw_reddit.subreddit(sub)
+                for p in list(sub_obj.rising(limit=10)) or list(sub_obj.new(limit=10)):
+                    posts.append({
+                        "id": p.id,
+                        "title": p.title,
+                        "body": p.selftext,
+                        "permalink": p.permalink,
+                        "created_utc": float(getattr(p, "created_utc", 0.0)),
+                        "num_comments": int(getattr(p, "num_comments", 0)),
+                        "over_18": bool(getattr(p, "over_18", False)),
+                        "subreddit": sub
+                    })
+            except Exception:
+                pass
+
+        now_ts = datetime.now(timezone.utc).timestamp()
+        for p in posts:
+            if p["id"] in replied_ids:
+                continue
+            if p.get("over_18"):
+                continue
+            if not is_good_karma_question(p["title"]):
+                continue
+
+            created = p.get("created_utc", 0.0)
+            if created > 0:
+                age_hours = (now_ts - created) / 3600
+                # Must be between 10 mins and 6.0 hours old (ideal window for rising questions)
+                if age_hours < 0.15 or age_hours > 6.0:
+                    continue
+                p["age_hours"] = age_hours
+            else:
+                p["age_hours"] = 1.0
+
+            candidates.append(p)
+
+    if not candidates:
+        return None
+
+    # Pick candidate closest to ~1.2 hours old (ideal momentum before thread gets saturated)
+    candidates.sort(key=lambda x: abs(x.get("age_hours", 1.5) - 1.2))
+    return candidates[0]
+
 class RedditSessionClient:
     """Authenticates and posts to Reddit using the standard web login session cookie."""
     def __init__(self, session_cookie: str):
@@ -160,12 +272,12 @@ class RedditSessionClient:
             print(f"⚠️ Error verifying Reddit session: {e}")
             return False
 
-    def fetch_posts(self, sub_name: str, limit: int = 15) -> list:
-        """Fetches latest posts from a subreddit using authenticated session."""
+    def fetch_posts(self, sub_name: str, limit: int = 15, sort: str = "new") -> list:
+        """Fetches latest posts from a subreddit using authenticated session or RSS."""
         posts = []
         # Attempt 1: Authenticated .json feed
         try:
-            url = f"https://old.reddit.com/r/{sub_name}/new.json?limit={limit}"
+            url = f"https://old.reddit.com/r/{sub_name}/{sort}.json?limit={limit}"
             resp = self.session.get(url, timeout=12)
             if resp.status_code == 200:
                 data = resp.json()
@@ -178,54 +290,65 @@ class RedditSessionClient:
                             "title": pdata.get("title", ""),
                             "body": pdata.get("selftext", ""),
                             "permalink": pdata.get("permalink", f"/r/{sub_name}/comments/{pdata['id']}"),
-                            "created_utc": float(pdata.get("created_utc", 0.0))
+                            "created_utc": float(pdata.get("created_utc", 0.0)),
+                            "num_comments": int(pdata.get("num_comments", 0)),
+                            "score": int(pdata.get("score", 0)),
+                            "over_18": bool(pdata.get("over_18", False)),
+                            "subreddit": sub_name
                         })
                 if posts:
                     return posts
         except Exception:
             pass
 
-        # Attempt 2: old.reddit RSS feed
-        try:
-            rss_url = f"https://old.reddit.com/r/{sub_name}/new.rss"
-            resp = self.session.get(rss_url, timeout=12)
-            if resp.status_code == 200 and "<feed" in resp.text:
-                root = ET.fromstring(resp.text)
-                ns = {"atom": "http://www.w3.org/2005/Atom"}
-                for entry in root.findall("atom:entry", ns)[:limit]:
-                    id_elem = entry.find("atom:id", ns)
-                    if id_elem is None or not id_elem.text:
-                        continue
-                    post_id = id_elem.text.strip().replace("t3_", "")
-                    title = (entry.find("atom:title", ns).text or "").strip()
-                    content_elem = entry.find("atom:content", ns)
-                    content_raw = content_elem.text if content_elem is not None else ""
-                    clean_body = re.sub(r"<[^<]+?>", " ", html.unescape(content_raw)).strip()
-                    link_elem = entry.find("atom:link", ns)
-                    link = link_elem.get("href") if link_elem is not None else f"https://reddit.com/r/{sub_name}/comments/{post_id}"
-                    permalink = link.replace("https://www.reddit.com", "").replace("https://old.reddit.com", "")
-                    
-                    created_utc = 0.0
-                    date_elem = entry.find("atom:updated", ns)
-                    if date_elem is None:
-                        date_elem = entry.find("atom:published", ns)
-                    if date_elem is not None and date_elem.text:
-                        try:
-                            clean_iso = date_elem.text.strip().replace("Z", "+00:00")
-                            dt = datetime.fromisoformat(clean_iso)
-                            created_utc = dt.timestamp()
-                        except Exception:
-                            pass
+        # Attempt 2: www.reddit / old.reddit RSS feeds
+        for feed_host in ["https://www.reddit.com", "https://old.reddit.com"]:
+            try:
+                rss_url = f"{feed_host}/r/{sub_name}/{sort}.rss"
+                resp = self.session.get(rss_url, timeout=12)
+                if resp.status_code == 200 and "<feed" in resp.text:
+                    root = ET.fromstring(resp.text)
+                    ns = {"atom": "http://www.w3.org/2005/Atom"}
+                    for entry in root.findall("atom:entry", ns)[:limit]:
+                        id_elem = entry.find("atom:id", ns)
+                        if id_elem is None or not id_elem.text:
+                            continue
+                        post_id = id_elem.text.strip().replace("t3_", "")
+                        title = (entry.find("atom:title", ns).text or "").strip()
+                        content_elem = entry.find("atom:content", ns)
+                        content_raw = content_elem.text if content_elem is not None else ""
+                        clean_body = re.sub(r"<[^<]+?>", " ", html.unescape(content_raw)).strip()
+                        link_elem = entry.find("atom:link", ns)
+                        link = link_elem.get("href") if link_elem is not None else f"https://reddit.com/r/{sub_name}/comments/{post_id}"
+                        permalink = link.replace("https://www.reddit.com", "").replace("https://old.reddit.com", "")
+                        
+                        created_utc = 0.0
+                        date_elem = entry.find("atom:updated", ns)
+                        if date_elem is None:
+                            date_elem = entry.find("atom:published", ns)
+                        if date_elem is not None and date_elem.text:
+                            try:
+                                clean_iso = date_elem.text.strip().replace("Z", "+00:00")
+                                dt = datetime.fromisoformat(clean_iso)
+                                created_utc = dt.timestamp()
+                            except Exception:
+                                pass
 
-                    posts.append({
-                        "id": post_id,
-                        "title": title,
-                        "body": clean_body,
-                        "permalink": permalink,
-                        "created_utc": created_utc
-                    })
-        except Exception:
-            pass
+                        posts.append({
+                            "id": post_id,
+                            "title": title,
+                            "body": clean_body,
+                            "permalink": permalink,
+                            "created_utc": created_utc,
+                            "num_comments": 0,
+                            "score": 0,
+                            "over_18": False,
+                            "subreddit": sub_name
+                        })
+                    if posts:
+                        return posts
+            except Exception:
+                pass
 
         return posts
 
@@ -265,6 +388,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run without posting to Reddit")
     parser.add_argument("--skip-ping", action="store_true", help="Skip Streamlit keep-alive ping")
     parser.add_argument("--max-posts", type=int, default=1, help="Max comments to post in this run")
+    parser.add_argument("--mode", choices=["auto", "karma", "commercial"], default="auto",
+                        help="Operation mode: 'auto' (smart ratio), 'karma' (build karma), or 'commercial' (backlink scout)")
     args = parser.parse_args()
 
     print("========================================================")
@@ -417,105 +542,195 @@ def main():
     except ValueError:
         max_post_age_hours = 48.0
 
+    # Determine Active Mode (Auto Karma Warmup vs Commercial Scout)
+    active_mode = args.mode
+    if active_mode == "auto":
+        if user_comment_karma < 25:
+            active_mode = "karma"
+            print(f"🌱 [Karma Warmup Active] Account has {user_comment_karma} comment karma (< 25 threshold).")
+            print("   Prioritizing high-upvote viral engagement on AskReddit/NoStupidQuestions to build authority & trust.\n")
+        else:
+            # Check recent history to maintain 2:1 organic ratio
+            recent_posts = history.get("history", [])[-3:]
+            recent_commercial = sum(1 for h in recent_posts if h.get("mode") == "commercial")
+            if recent_commercial >= 1:
+                active_mode = "karma"
+                print(f"⚖️ [Ratio Balancing] Maintaining 2:1 organic ratio (Recent: {recent_commercial} commercial / {len(recent_posts)} total).")
+                print("   Executing karma building post on r/AskReddit / r/NoStupidQuestions to protect account reputation.\n")
+            else:
+                active_mode = "commercial"
+                print(f"🎯 [Commercial Scout Mode] Account karma is healthy ({user_comment_karma}).")
+                print("   Executing commercial backlink scout across 72 academic subreddits.\n")
+
     replied_in_this_run = 0
 
-    for sub_name in sorted(subreddits_to_scan):
-        if replied_in_this_run >= args.max_posts:
-            break
+    # -------------------------------------------------------------
+    # HELPER: Post Karma Comment
+    # -------------------------------------------------------------
+    def try_post_karma_comment() -> bool:
+        print(f"📡 Karma Engine: Scouting {len(KARMA_SUBREDDITS)} high-engagement subreddits ({', '.join(KARMA_SUBREDDITS)})...")
+        karma_post = find_best_karma_post(session_client, praw_reddit, history.get("replied_post_ids", []), recent_subs_24h)
+        if not karma_post:
+            print("   ℹ️ No ideal fresh rising questions found at this moment. Will retry next cycle.\n")
+            return False
 
-        if not args.dry_run and sub_name in recent_subs_24h:
-            # Skip subreddits we already interacted with today to prevent clustering
-            continue
+        sub_name = karma_post["subreddit"]
+        post_id = karma_post["id"]
+        print(f"\n🎯 [KARMA QUESTION MATCH] in r/{sub_name}!")
+        print(f"   Title: {karma_post['title']}")
+        print(f"   Reddit URL: https://reddit.com{karma_post['permalink']}")
 
         try:
-            # Fetch latest posts
-            posts_to_inspect = []
-            if session_client:
-                posts_to_inspect = session_client.fetch_posts(sub_name, limit=15)
-            elif praw_reddit:
-                sub = praw_reddit.subreddit(sub_name)
-                for p in sub.new(limit=15):
-                    posts_to_inspect.append({
-                        "id": p.id,
-                        "title": p.title,
-                        "body": p.selftext,
-                        "permalink": p.permalink,
-                        "created_utc": float(getattr(p, "created_utc", 0.0))
-                    })
+            print(f"   🤖 Drafting witty, authentic peer reply via Gemini ({gemini_model})...")
+            raw_reply = generate_karma_reply(karma_post["title"], karma_post.get("body", ""), sub_name, gemini_key, model_name=gemini_model)
+            reply_text = inject_human_quirks(raw_reply)
 
-            for post in posts_to_inspect:
-                if replied_in_this_run >= args.max_posts:
-                    break
+            print("\n--- GENERATED KARMA REPLY ---")
+            print(reply_text)
+            print("-----------------------------\n")
 
-                post_id = post["id"]
-                if post_id in history["replied_post_ids"]:
-                    continue
+            if not args.dry_run:
+                print("   🚀 Submitting comment to Reddit...")
+                if session_client:
+                    comment_id = session_client.post_comment(post_id, reply_text)
+                else:
+                    submission = praw_reddit.submission(id=post_id)
+                    comment = submission.reply(reply_text)
+                    comment_id = comment.id
 
-                # Freshness Guard: Skip dead / archived / necro threads (> 48 hours old)
-                created_utc = post.get("created_utc", 0.0)
-                if created_utc > 0:
-                    age_hours = (datetime.now(timezone.utc).timestamp() - created_utc) / 3600
-                    if age_hours > max_post_age_hours:
+                print(f"   ✅ Karma comment successfully posted! (Comment ID: {comment_id})")
+                history["last_comment_posted_at"] = datetime.now(timezone.utc).isoformat()
+            else:
+                print("   [DRY RUN] Would submit karma comment.")
+
+            # Record history
+            history["replied_post_ids"].append(post_id)
+            history["daily_count"]["count"] += 1
+            history["history"].append({
+                "post_id": post_id,
+                "subreddit": sub_name,
+                "mode": "karma",
+                "title": karma_post["title"],
+                "posted_at": datetime.now(timezone.utc).isoformat(),
+                "url": f"https://reddit.com{karma_post['permalink']}"
+            })
+            save_history(history)
+            print(f"   💾 Saved karma post ID (Daily Count: {history['daily_count']['count']}/{max_daily})\n")
+            return True
+        except Exception as e:
+            print(f"   ⚠️ Error posting karma comment for {post_id}: {e}\n")
+            return False
+
+    # -------------------------------------------------------------
+    # EXECUTION: Branch on Active Mode
+    # -------------------------------------------------------------
+    if active_mode == "karma":
+        if try_post_karma_comment():
+            replied_in_this_run = 1
+
+    elif active_mode == "commercial":
+        for sub_name in sorted(subreddits_to_scan):
+            if replied_in_this_run >= args.max_posts:
+                break
+
+            if not args.dry_run and sub_name in recent_subs_24h:
+                continue
+
+            try:
+                posts_to_inspect = []
+                if session_client:
+                    posts_to_inspect = session_client.fetch_posts(sub_name, limit=15)
+                elif praw_reddit:
+                    sub = praw_reddit.subreddit(sub_name)
+                    for p in sub.new(limit=15):
+                        posts_to_inspect.append({
+                            "id": p.id,
+                            "title": p.title,
+                            "body": p.selftext,
+                            "permalink": p.permalink,
+                            "created_utc": float(getattr(p, "created_utc", 0.0))
+                        })
+
+                for post in posts_to_inspect:
+                    if replied_in_this_run >= args.max_posts:
+                        break
+
+                    post_id = post["id"]
+                    if post_id in history["replied_post_ids"]:
                         continue
 
-                matched = match_query_intent(post["title"], post["body"], intents_data)
-                if not matched:
-                    continue
+                    # Freshness Guard: Skip dead / archived / necro threads (> 48 hours old)
+                    created_utc = post.get("created_utc", 0.0)
+                    if created_utc > 0:
+                        age_hours = (datetime.now(timezone.utc).timestamp() - created_utc) / 3600
+                        if age_hours > max_post_age_hours:
+                            continue
 
-                scope_type, cat_key, cat_data = matched
+                    matched = match_query_intent(post["title"], post["body"], intents_data)
+                    if not matched:
+                        continue
 
-                print(f"🎯 [MATCH FOUND] in r/{sub_name}!")
-                print(f"   Category:   {cat_data['name']} ({scope_type.upper()})")
-                print(f"   Target URL: {cat_data['target_url']}")
-                print(f"   Post Title: {post['title']}")
-                print(f"   Reddit URL: https://reddit.com{post['permalink']}")
+                    scope_type, cat_key, cat_data = matched
 
-                try:
-                    print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
-                    raw_reply = generate_humanized_reply(cat_data, post["title"], post["body"], gemini_key, model_name=gemini_model, include_link=include_direct_link)
-                    reply_text = inject_human_quirks(raw_reply)
-                    
-                    print("\n--- GENERATED DRAFT REPLY ---")
-                    print(reply_text)
-                    print("-----------------------------\n")
+                    print(f"🎯 [COMMERCIAL MATCH FOUND] in r/{sub_name}!")
+                    print(f"   Category:   {cat_data['name']} ({scope_type.upper()})")
+                    print(f"   Target URL: {cat_data['target_url']}")
+                    print(f"   Post Title: {post['title']}")
+                    print(f"   Reddit URL: https://reddit.com{post['permalink']}")
 
-                    if not args.dry_run:
-                        print("   🚀 Submitting comment to Reddit...")
-                        if session_client:
-                            comment_id = session_client.post_comment(post_id, reply_text)
+                    try:
+                        print(f"   🤖 Drafting contextual, humanized reply via Gemini ({gemini_model})...")
+                        raw_reply = generate_humanized_reply(cat_data, post["title"], post["body"], gemini_key, model_name=gemini_model, include_link=include_direct_link)
+                        reply_text = inject_human_quirks(raw_reply)
+                        
+                        print("\n--- GENERATED DRAFT REPLY ---")
+                        print(reply_text)
+                        print("-----------------------------\n")
+
+                        if not args.dry_run:
+                            print("   🚀 Submitting comment to Reddit...")
+                            if session_client:
+                                comment_id = session_client.post_comment(post_id, reply_text)
+                            else:
+                                submission = praw_reddit.submission(id=post_id)
+                                comment = submission.reply(reply_text)
+                                comment_id = comment.id
+
+                            print(f"   ✅ Comment successfully posted! (Comment ID: {comment_id})")
+                            history["last_comment_posted_at"] = datetime.now(timezone.utc).isoformat()
                         else:
-                            submission = praw_reddit.submission(id=post_id)
-                            comment = submission.reply(reply_text)
-                            comment_id = comment.id
+                            print("   [DRY RUN] Would submit comment with backlink.")
 
-                        print(f"   ✅ Comment successfully posted! (Comment ID: {comment_id})")
-                        history["last_comment_posted_at"] = datetime.now(timezone.utc).isoformat()
-                    else:
-                        print("   [DRY RUN] Would submit comment with backlink.")
+                        # Record history
+                        history["replied_post_ids"].append(post_id)
+                        history["daily_count"]["count"] += 1
+                        history["history"].append({
+                            "post_id": post_id,
+                            "subreddit": sub_name,
+                            "mode": "commercial",
+                            "category": cat_data["name"],
+                            "target_url": cat_data["target_url"],
+                            "title": post["title"],
+                            "posted_at": datetime.now(timezone.utc).isoformat(),
+                            "url": f"https://reddit.com{post['permalink']}"
+                        })
+                        save_history(history)
 
-                    # Record history
-                    history["replied_post_ids"].append(post_id)
-                    history["daily_count"]["count"] += 1
-                    history["history"].append({
-                        "post_id": post_id,
-                        "subreddit": sub_name,
-                        "category": cat_data["name"],
-                        "target_url": cat_data["target_url"],
-                        "title": post["title"],
-                        "posted_at": datetime.now(timezone.utc).isoformat(),
-                        "url": f"https://reddit.com{post['permalink']}"
-                    })
-                    save_history(history)
+                        replied_in_this_run += 1
+                        print(f"   💾 Saved post ID (Daily Count: {history['daily_count']['count']}/{max_daily})\n")
 
-                    replied_in_this_run += 1
-                    print(f"   💾 Saved post ID (Daily Count: {history['daily_count']['count']}/{max_daily})\n")
+                    except Exception as e:
+                        print(f"   ⚠️ Error processing post {post_id}: {e}\n")
 
-                except Exception as e:
-                    print(f"   ⚠️ Error processing post {post_id}: {e}\n")
+            except Exception as e:
+                pass
 
-        except Exception as e:
-            # Subreddit might be private or restricted, continue scanning others
-            pass
+        # Intelligent Fallback: If no commercial intent was found, keep the account active with a karma post!
+        if replied_in_this_run == 0 and not args.dry_run:
+            print("ℹ️ No active commercial student queries found in this scan.")
+            print("🌱 Falling back to Karma Builder to keep account warm and growing...")
+            if try_post_karma_comment():
+                replied_in_this_run = 1
 
     print("========================================================")
     print(f"✅ Run complete. Streamlit pinged: Yes | Comments posted: {replied_in_this_run}")
