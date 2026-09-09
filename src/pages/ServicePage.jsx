@@ -75,7 +75,15 @@ const ServicePage = () => {
         "areaServed": service.countries.map(c => ({
             "@type": "Country",
             "name": c.name
-        }))
+        })),
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "4",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
     };
 
     const faqSchema = {

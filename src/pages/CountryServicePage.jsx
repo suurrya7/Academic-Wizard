@@ -62,14 +62,15 @@ const CountryServicePage = () => {
 
     const Icon = service.icon;
 
+    const headingTitle = country.heading || `${service.title} in ${country.name}`;
     const pageTitle = country.metaTitle || service.metaTitle || `${service.title} in ${country.name} | Academic Wizard`;
-    const pageDescription = `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
+    const pageDescription = country.metaDescription || `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
 
     // Generate JSON-LD Schema
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": `${service.title} in ${country.name}`,
+        "name": headingTitle,
         "description": pageDescription,
         "provider": {
             "@type": "Organization",
@@ -79,7 +80,15 @@ const CountryServicePage = () => {
         "areaServed": {
             "@type": "Country",
             "name": country.name
-        }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "4",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
     };
 
     const faqSchema = {
@@ -126,7 +135,7 @@ const CountryServicePage = () => {
             </Helmet>
 
             <PageHeader
-                title={`${service.title} in ${country.name} ${country.flag}`}
+                title={`${headingTitle} ${country.flag}`}
                 subtitle={country.desc}
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
@@ -145,7 +154,7 @@ const CountryServicePage = () => {
                                 <Star key={i} size={14} className="fill-amber-400" />
                             ))}
                         </div>
-                        <span>4.9/5 Rating (1,450+ Verified Students)</span>
+                        <span>5.0/5 Trustpilot Rating · 1,450+ Students Helped</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Shield className="text-emerald-400" size={16} />
@@ -178,7 +187,7 @@ const CountryServicePage = () => {
                     )}
                     
                     <DefinitionBox 
-                        title={`${service.title} in ${country.name}`} 
+                        title={headingTitle} 
                         definition={overviewText} 
                     />
                     

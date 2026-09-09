@@ -5,6 +5,21 @@ import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
 import { assetPath } from '../config/site';
 import Breadcrumbs from '../components/Breadcrumbs';
 
+const SERVICE_MAPPING = {
+    'assignment-help': { slug: 'assignment-help', name: 'Assignment Help', verb: 'Assignments & Coursework' },
+    'essay-writing': { slug: 'essay-help', name: 'Essay Writing Service', verb: 'Academic Essays' },
+    'dissertation': { slug: 'dissertation-help', name: 'Dissertation & Thesis Support', verb: 'Dissertations & Theses' },
+    'literature-review': { slug: 'literature-review', name: 'Literature Review Service', verb: 'Systematic Literature Reviews' },
+    'research': { slug: 'research-paper-help', name: 'Research Paper Assistance', verb: 'Journal Research Papers' },
+    'editing': { slug: 'editing-proofreading', name: 'Academic Proofreading & Editing', verb: 'Manuscript Editing & AI Verification' },
+    'study-guidance': { slug: 'study-guidance', name: 'Study Guidance & Tutoring', verb: '1-on-1 Academic Mentorship' }
+};
+
+const COUNTRY_SLUG_MAP = {
+    'UK': 'uk', 'USA': 'usa', 'Australia': 'australia', 'Canada': 'canada',
+    'India': 'india', 'Ireland': 'ireland', 'Singapore': 'singapore', 'Germany': 'germany'
+};
+
 const BlogPost = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -139,6 +154,11 @@ const BlogPost = () => {
         "keywords": (postData?.keywords || []).join(', ')
     };
 
+    const matchedService = postData?.category ? SERVICE_MAPPING[postData.category] : null;
+    const countrySlug = postData?.targetCountry ? COUNTRY_SLUG_MAP[postData.targetCountry] : null;
+    const regionalServiceUrl = (matchedService && countrySlug) ? `/services/${matchedService.slug}/${countrySlug}/` : null;
+    const mainServiceUrl = matchedService ? `/services/${matchedService.slug}/` : '/services/';
+
     return (
         <div className="page-blog-post pt-32 pb-24">
             <Helmet>
@@ -164,15 +184,15 @@ const BlogPost = () => {
             </Helmet>
 
             <article className="container px-6 max-w-4xl mx-auto">
-                <Link to="/blog" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
+                <Link to="/blog/" className="inline-flex items-center gap-2 text-accent-gold hover:text-white transition-colors mb-6 font-heading uppercase text-xs tracking-widest">
                     <ArrowLeft size={16} /> Back to Blog
                 </Link>
 
                 <Breadcrumbs 
                     paths={[
                         { name: 'Home', url: '/' },
-                        { name: 'Blog', url: '/blog' },
-                        { name: postData?.title, url: `/blog/${postData?.slug}` }
+                        { name: 'Blog', url: '/blog/' },
+                        { name: postData?.title, url: `/blog/${postData?.slug}/` }
                     ]} 
                 />
 
@@ -237,17 +257,28 @@ const BlogPost = () => {
                 )}
 
                 <div className="mt-16 pt-12 border-t border-white/10">
-                    <div className="glass-card p-8 text-center rounded-2xl">
-                        <h3 className="text-2xl text-white mb-4">Need help with your academic writing?</h3>
-                        <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-                            Our team of experts is ready to provide ethical guidance, editing, and research support to help you achieve your academic goals.
+                    <div className="glass-card p-8 text-center rounded-2xl border-accent-gold/20">
+                        <h3 className="text-2xl font-bold text-white mb-3 font-heading">
+                            {matchedService 
+                                ? `Need Expert Assistance with Your ${matchedService.verb}?`
+                                : "Need Help with Your Academic Coursework?"}
+                        </h3>
+                        <p className="text-white/70 mb-6 max-w-2xl mx-auto leading-relaxed">
+                            {regionalServiceUrl 
+                                ? `Our verified faculty specialists provide 100% Turnitin-safe, PhD-level ${matchedService.name.toLowerCase()} tailored for university students in ${postData.targetCountry}.`
+                                : "Our team of verified PhD subject specialists is ready to provide ethical guidance, meticulous editing, and research support tailored to university rubrics."}
                         </p>
-                        <div className="flex justify-center gap-4">
-                            <Link to="/contact" className="btn-primary">
-                                Get Expert Help
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {regionalServiceUrl && (
+                                <Link to={regionalServiceUrl} className="btn-primary">
+                                    {matchedService.name} {postData.targetCountry} →
+                                </Link>
+                            )}
+                            <Link to={mainServiceUrl} className="btn-secondary">
+                                {matchedService ? matchedService.name : "View Services"}
                             </Link>
-                            <Link to="/services" className="btn-secondary">
-                                View Services
+                            <Link to="/contact/" className="btn-secondary">
+                                Contact Academic Advisor
                             </Link>
                         </div>
                     </div>
@@ -262,9 +293,10 @@ const BlogPost = () => {
                     <p>{postData?.excerpt}</p>
                     <p>Published: {formattedDate}</p>
                     <p>
-                        <Link to="/blog">← Back to Blog</Link> | 
-                        <Link to="/services"> Our Services</Link> | 
-                        <Link to="/contact"> Contact Us</Link>
+                        <Link to="/blog/">← Back to Blog</Link> | 
+                        {regionalServiceUrl && <Link to={regionalServiceUrl}> {matchedService.name} {postData.targetCountry} |</Link>}
+                        <Link to={mainServiceUrl}> {matchedService ? matchedService.name : "Our Services"} |</Link> 
+                        <Link to="/contact/"> Contact Us</Link>
                     </p>
                 </div>
             </noscript>

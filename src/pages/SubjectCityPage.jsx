@@ -175,33 +175,40 @@ const SubjectCityPage = () => {
         usp: "Bespoke academic support tailored to university standards."
     };
     
-    // Clean raw subject name (e.g. "Nursing Assignment Help UK" -> "Nursing")
-    const cleanSubjectName = specializedData.title
-        .replace(/ Assignment Help.*/i, "")
-        .replace(/ Help.*/i, "")
-        .replace(/ Coursework.*/i, "")
-        .trim();
+    // Clean raw specialized name (e.g. "Nursing Assignment Help UK" -> "Nursing", "Assignment Help Philadelphia" -> "Philadelphia")
+    const cleanSubjectName = pageType === "subject"
+        ? specializedData.title
+            .replace(/ Assignment Help.*/i, "")
+            .replace(/ Help.*/i, "")
+            .replace(/ Coursework.*/i, "")
+            .trim()
+        : specializedData.title
+            .replace(/^Assignment Help\s+/i, "")
+            .replace(/^Essay Help\s+/i, "")
+            .replace(/^Dissertation Help\s+/i, "")
+            .replace(/ Help.*/i, "")
+            .trim();
 
     // Dynamic Title & Heading Synthesis — eliminates cannibalization across the 7 services
     const synthesizedTitle = pageType === "subject"
         ? `${cleanSubjectName} ${serviceVerb.action} ${country.name}`
-        : `${service.title} in ${cleanSubjectName}, ${country.name}`;
+        : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name}`;
 
     const pageMetaTitle = pageType === "subject"
         ? `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.badge} | Academic Wizard`
-        : `${service.title} in ${cleanSubjectName}, ${country.name} | Top-Rated Academic Experts | Academic Wizard`;
+        : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} | Top-Rated Academic Experts | Academic Wizard`;
 
     const pageDescription = pageType === "subject"
         ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
-        : `Get professional ${service.title.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
+        : `Get professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
     
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
     const whatsappMessage = encodeURIComponent(
         `Hello Academic Wizard!\n\n` +
-        `I need urgent assistance with my ${cleanSubjectName} ${serviceVerb.action} (${country.name}).\n\n` +
+        `I need urgent assistance with my ${pageType === "subject" ? `${cleanSubjectName} ${serviceVerb.action}` : `${serviceVerb.action} in ${cleanSubjectName}`} (${country.name}).\n\n` +
         `📌 Service: ${serviceVerb.action}\n` +
-        `🎓 Subject: ${cleanSubjectName}\n` +
+        `🎓 ${pageType === "subject" ? "Subject" : "City"}: ${cleanSubjectName}\n` +
         `🌍 Location: ${country.name} University\n\n` +
         `Could an online specialist review my requirements and provide a timeline & quote?`
     );
@@ -227,7 +234,7 @@ const SubjectCityPage = () => {
         ...(country.faqs || [])
     ] : (country.faqs && country.faqs.length > 0 ? country.faqs : [
         {
-            question: `How does Academic Wizard provide localized ${service.title.toLowerCase()} in ${cleanSubjectName}?`,
+            question: `How does Academic Wizard provide localized ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}?`,
             answer: `Our academic mentors in ${country.name} deliver personalized 1-on-1 support calibrated to higher education institutions and specific university guidelines in ${cleanSubjectName}.`
         },
         {
@@ -246,6 +253,15 @@ const SubjectCityPage = () => {
     const Icon = service.icon || FileText;
     const deepContentKey = `${country.slug}-${specializedData.slug}`;
     const deepHtml = specializedContent[deepContentKey];
+
+    // Adapt deepHtml so the primary H2 and title phrases match the current serviceVerb for clean de-cannibalization across the 7 services
+    let processedHtml = deepHtml;
+    if (processedHtml && serviceSlug !== "assignment-help") {
+        processedHtml = processedHtml.replace(
+            /(<h2[^>]*>.*?)(?:Assignment Help|Assignment Support|Academic Support)(.*?<\/h2>)/gi,
+            `$1${serviceVerb.action}$2`
+        );
+    }
 
     return (
         <div className="page-specialized">
@@ -295,11 +311,12 @@ const SubjectCityPage = () => {
                         "serviceType": service.title,
                         "aggregateRating": {
                             "@type": "AggregateRating",
-                            "ratingValue": "4.9",
-                            "reviewCount": "524",
+                            "ratingValue": "5.0",
+                            "reviewCount": "4",
                             "bestRating": "5",
                             "worstRating": "1"
-                        }
+                        },
+                        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
                     })}
                 </script>
 
@@ -356,7 +373,7 @@ const SubjectCityPage = () => {
                                 <Star key={i} size={14} className="fill-amber-400" />
                             ))}
                         </div>
-                        <span>4.9/5 Rating (1,450+ Verified Students)</span>
+                        <span>5.0/5 Trustpilot Rating · 1,450+ Students Helped</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Shield className="text-emerald-400" size={16} />
@@ -432,10 +449,10 @@ const SubjectCityPage = () => {
                             )}
 
                             {/* Deep Domain Specific HTML Article */}
-                            {deepHtml && (
+                            {processedHtml && (
                                 <div 
                                     className="prose prose-invert prose-lg max-w-none prose-headings:text-accent-gold prose-a:text-accent-gold hover:prose-a:underline text-text-secondary leading-relaxed space-y-4"
-                                    dangerouslySetInnerHTML={{ __html: deepHtml }}
+                                    dangerouslySetInnerHTML={{ __html: processedHtml }}
                                 />
                             )}
                             
