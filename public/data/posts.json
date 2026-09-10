@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Red Flags: Resolving False Positives in 2026 Academic Drafts",
+    "slug": "turnitin-ai-red-flags-resolving-false-positives-in-2026-academic-drafts",
+    "excerpt": "Flagged by Turnitin for AI use? Learn how to audit your writing, document your research process, and protect your academic integrity in 2026.",
+    "keywords": [
+      "Turnitin AI detection false positives 2026",
+      "Turnitin similarity report audit",
+      "academic integrity guidelines 2026",
+      "human-written essay flagged as AI",
+      "Turnitin AI detector accuracy"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives 2026",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-10T06:52:58.294531+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-red-flags-resolving-false-positives-in-2026-academic-drafts.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Zotero vs. Notion: Optimal Database Workflows for 2026 Thesis Research",
+    "slug": "zotero-vs-notion-optimal-database-workflows-for-2026-thesis-research",
+    "excerpt": "Tired of manual citations? Master the ultimate 2026 research workflow by syncing Zotero with Notion to manage your dissertation sources seamlessly.",
+    "keywords": [
+      "Zotero database integration for dissertations",
+      "research paper bibliography management",
+      "academic citation workflow optimization",
+      "organizing large thesis literature",
+      "Zotero 11 features for students"
+    ],
+    "primaryKeyword": "Zotero database integration for dissertations",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-10T06:53:28.372103+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-vs-notion-optimal-database-workflows-for-2026-thesis-research.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "APA 7 Tables & Figures: Preventing Common Formatting Penalties in 2026",
+    "slug": "apa-7-tables-figures-preventing-common-formatting-penalties-in-2026",
+    "excerpt": "Don't let formatting errors lower your grade. Get the essential 2026 guide to APA 7 tables and figures to ensure your research looks professional.",
+    "keywords": [
+      "APA 7th edition table formatting rules",
+      "APA 7 figure caption standards",
+      "graduate research paper formatting",
+      "common APA 7 citation mistakes",
+      "academic style guide updates 2026"
+    ],
+    "primaryKeyword": "APA 7th edition table formatting rules",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-10T06:53:58.507243+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-tables-figures-preventing-common-formatting-penalties-in-2026.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "NVivo 26 Thematic Coding: Reducing Researcher Bias in Qualitative Theses",
+    "slug": "nvivo-26-thematic-coding-reducing-researcher-bias-in-qualitative-theses",
+    "excerpt": "Struggling with coding drift? Learn how to use NVivo 26 features to maintain objective analysis and produce high-quality qualitative PhD findings.",
+    "keywords": [
+      "minimizing researcher bias in NVivo thematic analysis",
+      "qualitative research coding strategies",
+      "coding drift in PhD dissertations",
+      "NVivo 26 best practices",
+      "structured qualitative data analysis"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo thematic analysis",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-10T06:54:25.099480+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-thematic-coding-reducing-researcher-bias-in-qualitative-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Fixing NVivo Data Mismatches: A 2026 Guide for Qualitative Accuracy",
     "slug": "fixing-nvivo-data-mismatches-a-2026-guide-for-qualitative-accuracy",
     "excerpt": "Struggling with NVivo data mismatches? Learn how to fix import errors, repair broken source links, and ensure qualitative project accuracy in 2026.",
