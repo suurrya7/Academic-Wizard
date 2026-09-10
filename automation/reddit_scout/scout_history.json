@@ -1,13 +1,14 @@
 {
-  "last_run": "2026-09-10T05:49:41.362986+00:00",
+  "last_run": "2026-09-10T10:46:58.190310+00:00",
   "daily_count": {
     "date": "2026-09-10",
-    "count": 2
+    "count": 3
   },
   "replied_post_ids": [
     "1wbv0ft",
     "1wc31xd",
-    "1wc6nfi"
+    "1wc6nfi",
+    "1wcdywd"
   ],
   "history": [
     {
@@ -33,7 +34,15 @@
       "title": "Would you accept 10 million if you had to live in the same house with everyone you\u2019ve ever dated for 1 year? Why or why not?",
       "posted_at": "2026-09-10T05:49:41.362982+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1wc6nfi/would_you_accept_10_million_if_you_had_to_live_in/"
+    },
+    {
+      "post_id": "1wcdywd",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Why do modern Smart TVs feel noticeably slower and laggier to navigate than basic TVs from 15 years ago?",
+      "posted_at": "2026-09-10T10:46:58.190306+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1wcdywd/why_do_modern_smart_tvs_feel_noticeably_slower/"
     }
   ],
-  "last_comment_posted_at": "2026-09-10T05:49:41.362963+00:00"
+  "last_comment_posted_at": "2026-09-10T10:46:58.190286+00:00"
 }
