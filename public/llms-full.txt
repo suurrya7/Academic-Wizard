@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-10
+        **Last updated**: 2026-09-11
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -249,6 +249,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[APA 7th Edition: Multi-Author In-Text Citations for Complex Theses](https://academicwizard.online/blog/apa-7th-edition-multi-author-in-text-citations-for-complex-theses/)**
+  - Excerpt: Avoid costly formatting penalties. Master APA 7th edition rules for complex multi-author in-text citations and streamline your bibliography management.
+  - Keywords: APA 7th edition multi-author citation rules for theses, APA 7 in-text citation guide, academic formatting for long papers, complex citation management, reference list formatting 2026
+  - Target Region: Canada
+  - Published: 2026-09-11
 
 - **[Zotero vs. Notion: Optimal Database Workflows for 2026 Thesis Research](https://academicwizard.online/blog/zotero-vs-notion-optimal-database-workflows-for-2026-thesis-research/)**
   - Excerpt: Tired of manual citations? Master the ultimate 2026 research workflow by syncing Zotero with Notion to manage your dissertation sources seamlessly.
@@ -587,6 +593,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI False Positives: A 2026 Student Guide to Integrity Audits](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-student-guide-to-integrity-audits-2/)**
+  - Excerpt: Received an incorrect AI flag from Turnitin? Discover how to audit your draft for human tone and document your writing process to protect your integrity.
+  - Keywords: Turnitin AI detection false positive student guide, Turnitin similarity report interpretation, academic integrity audit, AI writing detection error, human-authored academic writing
+  - Target Region: USA
+  - Published: 2026-09-11
 
 - **[Turnitin AI Red Flags: Resolving False Positives in 2026 Academic Drafts](https://academicwizard.online/blog/turnitin-ai-red-flags-resolving-false-positives-in-2026-academic-drafts/)**
   - Excerpt: Flagged by Turnitin for AI use? Learn how to audit your writing, document your research process, and protect your academic integrity in 2026.
@@ -988,6 +1000,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Beyond Generative AI: Ethical Scaffolding for Literature Reviews](https://academicwizard.online/blog/beyond-generative-ai-ethical-scaffolding-for-literature-reviews/)**
+  - Excerpt: Learn to use AI ethically to build your literature review outline. Discover how to scaffold your ideas while keeping your unique voice at the forefront.
+  - Keywords: ethical AI scaffolding for literature review outlines, AI-assisted research planning, literature review synthesis techniques, academic voice protection, research scaffolding methods
+  - Target Region: Australia
+  - Published: 2026-09-11
+
 - **[NVivo 26 Thematic Coding: Reducing Researcher Bias in Qualitative Theses](https://academicwizard.online/blog/nvivo-26-thematic-coding-reducing-researcher-bias-in-qualitative-theses/)**
   - Excerpt: Struggling with coding drift? Learn how to use NVivo 26 features to maintain objective analysis and produce high-quality qualitative PhD findings.
   - Keywords: minimizing researcher bias in NVivo thematic analysis, qualitative research coding strategies, coding drift in PhD dissertations, NVivo 26 best practices, structured qualitative data analysis
@@ -1193,6 +1211,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Mastering NVivo 26: Eliminating Coding Bias in Qualitative Research](https://academicwizard.online/blog/mastering-nvivo-26-eliminating-coding-bias-in-qualitative-research/)**
+  - Excerpt: Struggling to stay objective? Learn how to structure your NVivo 26 workflow to minimize subjective coding bias and produce valid qualitative research.
+  - Keywords: minimizing researcher bias in NVivo 26 thematic analysis, qualitative coding best practices, NVivo research methodology, thematic analysis software tips, PhD thesis coding workflow
+  - Target Region: UK
+  - Published: 2026-09-11
 
 - **[APA 7 Tables & Figures: Preventing Common Formatting Penalties in 2026](https://academicwizard.online/blog/apa-7-tables-figures-preventing-common-formatting-penalties-in-2026/)**
   - Excerpt: Don't let formatting errors lower your grade. Get the essential 2026 guide to APA 7 tables and figures to ensure your research looks professional.
