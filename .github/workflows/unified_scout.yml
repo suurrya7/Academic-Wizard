@@ -20,6 +20,11 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Keep Streamlit Humanizer Awake (Headless Browser)
+        run: |
+          npm install --no-save puppeteer
+          node automation/wake_streamlit.cjs
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -44,7 +49,7 @@ jobs:
           MAX_DAILY_COMMENTS: ${{ vars.MAX_DAILY_COMMENTS || secrets.MAX_DAILY_COMMENTS }}
           MIN_COOLDOWN_MINUTES: ${{ vars.MIN_COOLDOWN_MINUTES || secrets.MIN_COOLDOWN_MINUTES }}
         run: |
-          python automation/reddit_scout/scout_bot.py --max-posts 1
+          python automation/reddit_scout/scout_bot.py --max-posts 1 --skip-ping
 
       - name: Commit Scout History State
         run: |
