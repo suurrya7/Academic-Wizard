@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
                 subtitle="Your privacy and academic confidentiality are our highest priorities."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Privacy Policy', url: '/privacy-policy' }
+                    { name: 'Privacy Policy', url: '/privacy-policy/' }
                 ]}
             />
 

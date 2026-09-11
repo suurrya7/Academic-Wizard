@@ -111,12 +111,12 @@ const Blog = () => {
                         "publisher": {
                             "@type": "Organization",
                             "name": "Academic Wizard",
-                            "url": "https://academicwizard.online"
+                            "url": "https://academicwizard.online/"
                         },
                         "breadcrumb": {
                             "@type": "BreadcrumbList",
                             "itemListElement": [
-                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
                                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog/" }
                             ]
                         }
@@ -129,7 +129,7 @@ const Blog = () => {
                 subtitle="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Blog', url: '/blog' }
+                    { name: 'Blog', url: '/blog/' }
                 ]}
             />
             

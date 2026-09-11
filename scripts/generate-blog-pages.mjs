@@ -72,7 +72,7 @@ function generateBlogPages() {
         } : {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": SITE_URL
+            "url": `${SITE_URL}/`
         };
 
         // Build SEO meta tags to inject
@@ -102,7 +102,7 @@ function generateBlogPages() {
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": SITE_URL
+            "url": `${SITE_URL}/`
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -117,7 +117,7 @@ function generateBlogPages() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE_URL}/blog` },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE_URL}/blog/` },
             { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalUrl }
         ]
     })}
@@ -157,7 +157,7 @@ function generateBlogPages() {
             noscriptContent = `
     <noscript>
       <article style="max-width:800px;margin:2rem auto;padding:1rem;color:#fff;font-family:sans-serif;">
-        <nav><a href="/">Home</a> &gt; <a href="/blog">Blog</a> &gt; ${title}</nav>
+        <nav><a href="/">Home</a> &gt; <a href="/blog/">Blog</a> &gt; ${title}</nav>
         <h1>${title}</h1>
         <p><em>${description}</em></p>
         ${post.author ? `<p><strong>Written by:</strong> ${escapeHtml(post.author.name)} (${escapeHtml(post.author.credentials)})</p>` : ''}
@@ -169,7 +169,7 @@ function generateBlogPages() {
           <p>${escapeHtml(post.author.bio)}</p>
         </div>` : ''}
         <footer>
-          <p><a href="/blog">← More Articles</a> | <a href="/services">Our Services</a> | <a href="/contact">Contact Us</a></p>
+          <p><a href="/blog/">← More Articles</a> | <a href="/services/">Our Services</a> | <a href="/contact/">Contact Us</a></p>
         </footer>
       </article>
     </noscript>`;

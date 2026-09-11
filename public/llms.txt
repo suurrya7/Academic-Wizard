@@ -327,7 +327,7 @@
 
         ## Key Links
 
-        - Homepage: https://academicwizard.online
+        - Homepage: https://academicwizard.online/
         - Services: https://academicwizard.online/services/
         - Blog: https://academicwizard.online/blog/
         - FAQs: https://academicwizard.online/faq/

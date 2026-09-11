@@ -52,68 +52,44 @@ const Tools = () => {
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
                         "name": "Free Academic Writing Tools Suite",
-                        "url": "https://academicwizard.online/tools",
+                        "url": "https://academicwizard.online/tools/",
                         "description": "Unlock Academic Wizard's free suite of college tools, including Citation Generator, Grammar and Spell Checker, AI Content Detector, and AI Text Humanizer.",
                         "hasPart": [
                             {
                                 "@type": "WebApplication",
                                 "name": "Citation Generator",
-                                "url": "https://academicwizard.online/tools/citation-generator",
+                                "url": "https://academicwizard.online/tools/citation-generator/",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
                                 "browserRequirements": "Requires HTML5",
-                                "description": "Instantly generate accurate academic citations in APA 7th, MLA 9th, Harvard, Chicago, IEEE, and Vancouver formatting.",
-                                "aggregateRating": {
-                                    "@type": "AggregateRating",
-                                    "ratingValue": "4.8",
-                                    "reviewCount": "2150",
-                                    "bestRating": "5"
-                                }
+                                "description": "Instantly generate accurate academic citations in APA 7th, MLA 9th, Harvard, Chicago, IEEE, and Vancouver formatting."
                             },
                             {
                                 "@type": "WebApplication",
                                 "name": "Grammar & Spell Checker",
-                                "url": "https://academicwizard.online/tools/grammar-checker",
+                                "url": "https://academicwizard.online/tools/grammar-checker/",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
                                 "browserRequirements": "Requires HTML5",
-                                "description": "Submit your essays, articles, or reports to scan for grammatical errors, spelling slips, and stylistic improvements.",
-                                "aggregateRating": {
-                                    "@type": "AggregateRating",
-                                    "ratingValue": "4.9",
-                                    "reviewCount": "1420",
-                                    "bestRating": "5"
-                                }
+                                "description": "Submit your essays, articles, or reports to scan for grammatical errors, spelling slips, and stylistic improvements."
                             },
                             {
                                 "@type": "WebApplication",
                                 "name": "Linguistic AI Detector",
-                                "url": "https://academicwizard.online/tools/ai-detector",
+                                "url": "https://academicwizard.online/tools/ai-detector/",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
                                 "browserRequirements": "Requires HTML5",
-                                "description": "Identify AI footprints, uniform sentence structures, and predictable text patterns.",
-                                "aggregateRating": {
-                                    "@type": "AggregateRating",
-                                    "ratingValue": "4.7",
-                                    "reviewCount": "1180",
-                                    "bestRating": "5"
-                                }
+                                "description": "Identify AI footprints, uniform sentence structures, and predictable text patterns."
                             },
                             {
                                 "@type": "WebApplication",
                                 "name": "AI Text Humanizer",
-                                "url": "https://academicwizard.online/tools/ai-humanizer",
+                                "url": "https://academicwizard.online/tools/ai-humanizer/",
                                 "applicationCategory": "EducationalApplication",
                                 "operatingSystem": "All",
                                 "browserRequirements": "Requires HTML5",
-                                "description": "Humanize your AI-generated text to alter robotic syntax.",
-                                "aggregateRating": {
-                                    "@type": "AggregateRating",
-                                    "ratingValue": "4.6",
-                                    "reviewCount": "980",
-                                    "bestRating": "5"
-                                }
+                                "description": "Humanize your AI-generated text to alter robotic syntax."
                             }
                         ]
                     })}
@@ -158,7 +134,7 @@ const Tools = () => {
                 subtitle="High-utility, client-side academic tools designed to elevate your research, writing, and formatting."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Tools', url: '/tools' }
+                    { name: 'Tools', url: '/tools/' }
                 ]}
             />
 

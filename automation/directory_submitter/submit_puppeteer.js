@@ -44,15 +44,30 @@ function saveTracker(tracker) {
     fs.writeFileSync(TRACKER_PATH, JSON.stringify(tracker, null, 2), 'utf-8');
 }
 
+let globalRl = null;
+function getReadline() {
+    if (!globalRl) {
+        globalRl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+    }
+    return globalRl;
+}
+
 function askQuestion(query) {
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
+    return new Promise(resolve => {
+        getReadline().question(query, ans => {
+            resolve((ans || '').trim());
+        });
     });
-    return new Promise(resolve => rl.question(query, ans => {
-        rl.close();
-        resolve(ans);
-    }));
+}
+
+function closeReadline() {
+    if (globalRl) {
+        globalRl.close();
+        globalRl = null;
+    }
 }
 
 // Command Line Interface Parser
@@ -67,6 +82,273 @@ function getArg(flag, defaultValue = null) {
 }
 
 const hasFlag = flag => args.includes(flag);
+
+async function executeAutofillInPage(page, tool) {
+    try {
+        const report = await page.evaluate((toolData) => {
+            const actions = [];
+
+            // 1. Auto-dismiss modal popups
+            document.querySelectorAll('button, a, span, p').forEach(el => {
+                const txt = (el.innerText || '').toLowerCase().trim();
+                if (txt === 'no thanks' || txt === '✕' || txt === '×' || txt === 'close' || txt === 'reject all' || txt === 'dismiss') {
+                    if (el.offsetWidth > 0 && el.offsetHeight > 0) {
+                        try { el.click(); } catch (e) {}
+                    }
+                }
+            });
+
+            function setNativeValue(el, val) {
+                if (!el) return false;
+                try {
+                    el.focus();
+                    if (el._valueTracker) {
+                        el._valueTracker.setValue('');
+                    }
+                    const proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
+                    const setter = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
+                    if (setter) {
+                        setter.call(el, val);
+                    } else {
+                        el.value = val;
+                    }
+                    el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+                    el.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
+                    el.blur();
+                    return true;
+                } catch (e) {
+                    el.value = val;
+                    return true;
+                }
+            }
+
+            function getContext(el) {
+                const id = (el.id || '').toLowerCase();
+                const name = (el.name || '').toLowerCase();
+                const placeholder = (el.placeholder || '').toLowerCase();
+                const ariaLabel = (el.getAttribute('aria-label') || '').toLowerCase();
+                const title = (el.title || '').toLowerCase();
+
+                let labelsText = '';
+                if (el.labels && el.labels.length > 0) {
+                    for (let l of el.labels) labelsText += ' ' + (l.innerText || '');
+                }
+                if (el.id) {
+                    const explicitLabel = document.querySelector(`label[for="${el.id}"]`);
+                    if (explicitLabel) labelsText += ' ' + (explicitLabel.innerText || '');
+                }
+                const parentLabel = el.closest('label');
+                if (parentLabel) labelsText += ' ' + (parentLabel.innerText || '');
+
+                const prevSibling = el.previousElementSibling?.innerText || '';
+                const wrapper = el.closest('.field, .form-group, .control, label, div, tr, li, p');
+                const wrapperText = wrapper ? (wrapper.innerText || '').slice(0, 150) : '';
+
+                return `${id} ${name} ${placeholder} ${ariaLabel} ${title} ${labelsText} ${prevSibling} ${wrapperText}`.toLowerCase();
+            }
+
+            const filledSet = new Set();
+
+            // A. Fill text inputs and textareas
+            document.querySelectorAll('input, textarea').forEach(el => {
+                const type = (el.type || 'text').toLowerCase();
+                if (['hidden', 'submit', 'button', 'image', 'reset', 'password', 'file'].includes(type)) return;
+                if (filledSet.has(el)) return;
+
+                const ctx = getContext(el);
+
+                // 1. Math Captcha (e.g. "What is 2+3?", "2 + 5 =", "quick check")
+                const mathMatch = ctx.match(/(\d{1,2})\s*[\+\*x]\s*(\d{1,2})/i);
+                if (mathMatch && (ctx.includes('check') || ctx.includes('math') || ctx.includes('what') || ctx.includes('quick'))) {
+                    const num1 = parseInt(mathMatch[1], 10);
+                    const num2 = parseInt(mathMatch[2], 10);
+                    const sum = (ctx.includes('*') || ctx.includes('x')) ? (num1 * num2) : (num1 + num2);
+                    setNativeValue(el, sum.toString());
+                    filledSet.add(el);
+                    actions.push({ field: 'Math Captcha', value: `${sum} (solved: ${mathMatch[0]})` });
+                    return;
+                }
+
+                // 2. Submitter / Founder / Your Name
+                if (
+                    ctx.includes('your name') || ctx.includes('your_name') || ctx.includes('submitter_name') ||
+                    ctx.includes('founder') || ctx.includes('author name') || ctx.includes('first name') ||
+                    ctx.includes('contact name')
+                ) {
+                    setNativeValue(el, 'Academic Wizard');
+                    filledSet.add(el);
+                    actions.push({ field: 'Your Name', value: 'Academic Wizard' });
+                    return;
+                }
+
+                // 3. Submitter / Contact Email
+                if (type === 'email' || ctx.includes('email') || ctx.includes('your email') || ctx.includes('submitter email')) {
+                    setNativeValue(el, toolData.contact_email);
+                    filledSet.add(el);
+                    actions.push({ field: 'Contact Email', value: toolData.contact_email });
+                    return;
+                }
+
+                // 4. Tool / Startup Name
+                if (
+                    ctx.includes('startup name') || ctx.includes('tool name') || ctx.includes('product name') ||
+                    ctx.includes('app name') || ctx.includes('service name') || ctx.includes('project name') ||
+                    ctx.includes('software name') || ctx.includes('title') || ctx.includes('tool_name') ||
+                    ctx.includes('name of') || (ctx.includes('name') && !ctx.includes('user') && !ctx.includes('your'))
+                ) {
+                    setNativeValue(el, toolData.name);
+                    filledSet.add(el);
+                    actions.push({ field: 'Tool / Startup Name', value: toolData.name });
+                    return;
+                }
+
+                // 5. Website / Startup URL
+                if (
+                    ctx.includes('url') || ctx.includes('website') || ctx.includes('link') ||
+                    ctx.includes('domain') || ctx.includes('homepage') || ctx.includes('web address')
+                ) {
+                    if (!ctx.includes('twitter') && !ctx.includes('facebook') && !ctx.includes('linkedin') && !ctx.includes('github') && !ctx.includes('logo')) {
+                        setNativeValue(el, toolData.website_url);
+                        filledSet.add(el);
+                        actions.push({ field: 'Website URL', value: toolData.website_url });
+                        return;
+                    }
+                }
+
+                // 6. Headline / Tagline / Punchline / Short Pitch
+                if (
+                    ctx.includes('headline') || ctx.includes('tagline') || ctx.includes('punchline') ||
+                    ctx.includes('one liner') || ctx.includes('one-liner') || ctx.includes('5-8 words') ||
+                    ctx.includes('short_desc') || ctx.includes('short desc') || ctx.includes('summary') ||
+                    ctx.includes('subtitle')
+                ) {
+                    setNativeValue(el, toolData.tagline);
+                    filledSet.add(el);
+                    actions.push({ field: 'Headline / Tagline', value: toolData.tagline });
+                    return;
+                }
+
+                // 7. Tags / Keywords / Categories
+                if (ctx.includes('tag') || ctx.includes('keyword') || ctx.includes('topic') || ctx.includes('field_20743f6')) {
+                    const tagStr = Array.isArray(toolData.tags) ? toolData.tags.join(', ') : toolData.tags;
+                    setNativeValue(el, tagStr);
+                    filledSet.add(el);
+                    actions.push({ field: 'Tags / Keywords', value: tagStr });
+                    return;
+                }
+
+                // 8. Full Description / Pitch / About
+                if (
+                    el.tagName === 'TEXTAREA' || ctx.includes('description') || ctx.includes('about') ||
+                    ctx.includes('details') || ctx.includes('pitch') || ctx.includes('overview') ||
+                    ctx.includes('message') || ctx.includes('body')
+                ) {
+                    const max = el.getAttribute('maxlength') ? parseInt(el.getAttribute('maxlength'), 10) : 5000;
+                    const descText = (max < 300) ? toolData.tagline : (max < 1500) ? (toolData.short_description || toolData.full_description) : toolData.full_description;
+                    setNativeValue(el, descText);
+                    filledSet.add(el);
+                    actions.push({ field: 'Full Description', value: `${descText.slice(0, 45)}... (${descText.length} chars)` });
+                    return;
+                }
+            });
+
+            // B. Radio buttons & Checkboxes
+            document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => {
+                const ctx = getContext(el);
+
+                // Pricing: Free
+                if (ctx.includes('free') || ctx.includes('$0') || el.value?.toLowerCase() === 'free') {
+                    if (!el.checked) {
+                        try {
+                            el.click();
+                            el.checked = true;
+                            el.dispatchEvent(new Event('change', { bubbles: true }));
+                            actions.push({ field: 'Pricing Radio', value: 'Selected "Free / $0"' });
+                        } catch (e) {}
+                    }
+                }
+                // Submission Type (e.g. Launching Next: A side project / bootstrapped)
+                else if (ctx.includes('side project') || ctx.includes('bootstrapped')) {
+                    if (!el.checked) {
+                        try {
+                            el.click();
+                            el.checked = true;
+                            el.dispatchEvent(new Event('change', { bubbles: true }));
+                            actions.push({ field: 'Project Type Radio', value: 'Selected "Side project / Bootstrapped"' });
+                        } catch (e) {}
+                    }
+                }
+                // Marketing Budget: $0
+                else if (ctx.includes('marketing') && (ctx.includes('$0') || ctx.includes('0') || el.value === '0')) {
+                    if (!el.checked) {
+                        try {
+                            el.click();
+                            el.checked = true;
+                            el.dispatchEvent(new Event('change', { bubbles: true }));
+                            actions.push({ field: 'Marketing Budget Radio', value: 'Selected "$0"' });
+                        } catch (e) {}
+                    }
+                }
+            });
+
+            // C. Select dropdowns
+            document.querySelectorAll('select').forEach(el => {
+                const ctx = getContext(el);
+                if (ctx.includes('category') || ctx.includes('topic') || ctx.includes('type')) {
+                    for (let opt of el.options) {
+                        const optTxt = (opt.text || '').toLowerCase();
+                        if (optTxt.includes('education') || optTxt.includes('writing') || optTxt.includes('ai') || optTxt.includes('productivity') || optTxt.includes('side project') || optTxt.includes('free')) {
+                            el.value = opt.value;
+                            el.dispatchEvent(new Event('change', { bubbles: true }));
+                            actions.push({ field: 'Category Dropdown', value: opt.text });
+                            break;
+                        }
+                    }
+                }
+            });
+
+            // Expose a global runner on window for the floating button
+            window.__aw_executeAutofill = () => {
+                const rerun = executeAutofillInPage ? null : null;
+            };
+
+            // Update on-screen button state if present
+            const btn = document.getElementById('aw-autofill-btn');
+            if (btn) {
+                btn.innerHTML = `✅ <b>${actions.length} Fields Auto-Filled!</b>`;
+                btn.style.background = '#28a745';
+                btn.style.color = '#fff';
+                setTimeout(() => {
+                    btn.innerHTML = '🪄 <b>Re-Fill Form Details</b>';
+                    btn.style.background = '#D4AF37';
+                    btn.style.color = '#000';
+                }, 3000);
+            }
+
+            return actions;
+        }, tool);
+
+        return report || [];
+    } catch (err) {
+        return [{ field: 'Notice', value: `Autofill evaluated with notice: ${err.message}` }];
+    }
+}
+
+async function injectFloatingButton(page, tool) {
+    try {
+        await page.evaluate((toolData) => {
+            if (document.getElementById('aw-autofill-btn')) return;
+
+            const btn = document.createElement('button');
+            btn.id = 'aw-autofill-btn';
+            btn.innerHTML = '🪄 <b>Auto-Fill Academic Wizard</b>';
+            btn.style.cssText = 'position:fixed;bottom:25px;right:25px;z-index:999999999;background:#D4AF37;color:#000;padding:14px 22px;border-radius:30px;font-family:sans-serif;font-weight:bold;font-size:15px;box-shadow:0 8px 30px rgba(0,0,0,0.6);border:2px solid #fff;cursor:pointer;transition:transform 0.2s;';
+            btn.onmouseover = () => btn.style.transform = 'scale(1.05)';
+            btn.onmouseout = () => btn.style.transform = 'scale(1)';
+            document.body.appendChild(btn);
+        }, tool);
+    } catch (e) {}
+}
 
 async function main() {
     console.log('\n========================================================');
@@ -206,6 +488,17 @@ async function main() {
 
     // Launch browser with persistent profile so Google logins and cookies are preserved
     const profileDir = path.join(__dirname, '.browser_profile');
+
+    // Clean up any stale singleton locks from previous unexpected exits
+    ['SingletonLock', 'SingletonSocket', 'SingletonCookie'].forEach(lockFile => {
+        const lockPath = path.join(profileDir, lockFile);
+        try {
+            if (fs.existsSync(lockPath)) {
+                fs.unlinkSync(lockPath);
+            }
+        } catch (e) {}
+    });
+
     const browser = await puppeteer.launch({
         headless: false,
         userDataDir: profileDir,
@@ -256,127 +549,55 @@ async function main() {
                 await new Promise(r => setTimeout(r, 500));
             } catch (e) {}
 
-            // Inject floating on-screen autofill button and perform initial fill
-            await page.evaluate((toolData) => {
-                if (document.getElementById('aw-autofill-btn')) return;
+            // Inject on-screen floating gold button
+            await injectFloatingButton(page, tool);
 
-                function runFill() {
-                    let filled = 0;
+            // Automatically execute initial form autofill
+            console.log('🤖 Auto-detecting and filling submission form fields...');
+            const initialReport = await executeAutofillInPage(page, tool);
+            if (initialReport.length > 0) {
+                console.log(`✅ Form auto-filled (${initialReport.length} fields):`);
+                initialReport.forEach(r => console.log(`   ✔ ${r.field.padEnd(24)}: ${r.value}`));
+            } else {
+                console.log('ℹ️  No standard input fields found on this landing page (may require logging in or clicking "Submit").');
+            }
 
-                    // Automatically dismiss newsletter/cookie popups
-                    document.querySelectorAll('button, a, span, p').forEach(el => {
-                        const txt = (el.innerText || '').toLowerCase().trim();
-                        if (txt.includes('no thanks') || txt === '✕' || txt === '×' || txt === 'close') {
-                            el.click();
-                        }
-                    });
-
-                    // React/Next.js and native value setter
-                    function setVal(el, val) {
-                        if (!el) return false;
-                        el.focus();
-                        const proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
-                        const setter = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
-                        if (setter) {
-                            setter.call(el, val);
-                        } else {
-                            el.value = val;
-                        }
-                        el.dispatchEvent(new Event('input', { bubbles: true }));
-                        el.dispatchEvent(new Event('change', { bubbles: true }));
-                        el.blur();
-                        return true;
-                    }
-
-                    document.querySelectorAll('input, textarea, select').forEach(el => {
-                        const n = (el.name || '').toLowerCase();
-                        const id = (el.id || '').toLowerCase();
-                        const p = (el.placeholder || '').toLowerCase();
-                        const t = (el.type || '').toLowerCase();
-                        const combined = `${n} ${id} ${p}`;
-
-                        if (combined.includes('submitter_name') || combined.includes('your_name') || combined.includes('first_name')) {
-                            if (setVal(el, 'Academic Wizard')) filled++;
-                        } else if (combined.includes('submitter_email') || (t === 'email' && (combined.includes('your_email') || combined.includes('email')))) {
-                            if (setVal(el, toolData.contact_email)) filled++;
-                        } else if (combined.includes('tool_name') || combined.includes('app_name') || combined.includes('product_name') || combined.includes('form-field-name')) {
-                            if (setVal(el, toolData.name)) filled++;
-                        } else if (combined.includes('tagline') || combined.includes('headline') || combined.includes('short_desc') || combined.includes('summary') || combined.includes('punchline')) {
-                            if (setVal(el, toolData.tagline)) filled++;
-                        } else if (el.tagName === 'TEXTAREA' || combined.includes('description') || combined.includes('about') || combined.includes('details') || combined.includes('message')) {
-                            if (setVal(el, toolData.short_description || toolData.full_description)) filled++;
-                        } else if (combined.includes('url') || combined.includes('website') || combined.includes('link') || combined.includes('domain') || combined.includes('homepage') || combined.includes('form-field-email')) {
-                            if (setVal(el, toolData.website_url)) filled++;
-                        } else if (combined.includes('title') || (!combined.includes('user') && combined.includes('name'))) {
-                            if (setVal(el, toolData.name)) filled++;
-                        } else if (el.tagName === 'SELECT' && combined.includes('category')) {
-                            for (let opt of el.options) {
-                                if (opt.text.toLowerCase().includes('writing') || opt.text.toLowerCase().includes('education') || opt.text.toLowerCase().includes('productivity')) {
-                                    el.value = opt.value;
-                                    el.dispatchEvent(new Event('change', { bubbles: true }));
-                                    filled++;
-                                    break;
-                                }
-                            }
-                        } else if (t === 'radio' && (combined.includes('pricing') || combined.includes('price'))) {
-                            if (el.value.toLowerCase().includes('free') || el.parentElement?.textContent?.toLowerCase().includes('free')) {
-                                el.click();
-                                el.checked = true;
-                                el.dispatchEvent(new Event('change', { bubbles: true }));
-                                filled++;
-                            }
-                        } else if (combined.includes('tag') || combined.includes('keyword') || combined.includes('field_20743f6')) {
-                            if (setVal(el, toolData.tags.join(', '))) filled++;
-                        }
-                    });
-
-                    const btn = document.getElementById('aw-autofill-btn');
-                    if (btn) {
-                        btn.innerHTML = `✅ <b>${filled} Fields Filled!</b>`;
-                        btn.style.background = '#28a745';
-                        btn.style.color = '#fff';
-                        setTimeout(() => {
-                            btn.innerHTML = '🪄 <b>Re-Fill Form Details</b>';
-                            btn.style.background = '#D4AF37';
-                            btn.style.color = '#000';
-                        }, 3000);
-                    }
-                    return filled;
-                }
-
-                const btn = document.createElement('button');
-                btn.id = 'aw-autofill-btn';
-                btn.innerHTML = '🪄 <b>Auto-Fill Academic Wizard</b>';
-                btn.style.cssText = 'position:fixed;bottom:25px;right:25px;z-index:999999999;background:#D4AF37;color:#000;padding:14px 22px;border-radius:30px;font-family:sans-serif;font-weight:bold;font-size:15px;box-shadow:0 8px 30px rgba(0,0,0,0.6);border:2px solid #fff;cursor:pointer;transition:transform 0.2s;';
-                btn.onmouseover = () => btn.style.transform = 'scale(1.05)';
-                btn.onmouseout = () => btn.style.transform = 'scale(1)';
-                btn.onclick = runFill;
-                document.body.appendChild(btn);
-
-                // Initial fill attempt
-                runFill();
-            }, tool);
-
-            console.log('💡 Tip: An on-screen floating gold button [🪄 Auto-Fill Academic Wizard] has been added.');
-            console.log('   If a popup appeared, close it and click the gold button (or type "f" + Enter in terminal).\n');
+            console.log('\n💡 Tip: An on-screen floating gold button [🪄 Auto-Fill Academic Wizard] has been added.');
+            console.log('   You can click it on-screen, or type "f" + Enter in this terminal at ANY time to re-fill.\n');
 
             while (true) {
                 const answer = await askQuestion(
                     '👉 Action: [Enter] = Mark as Submitted & Next | [f] = Re-Fill Form | [s] = Skip | [q] = Quit: '
                 );
 
-                if (answer.toLowerCase() === 'f') {
-                    await page.evaluate((toolData) => {
-                        const btn = document.getElementById('aw-autofill-btn');
-                        if (btn) btn.click();
-                    }, tool);
-                    console.log('🔄 Re-executed form autofill on page.\n');
+                const cmd = answer.toLowerCase();
+
+                if (cmd === 'f' || cmd === 'refill' || cmd === 'fill') {
+                    console.log('\n🔄 Re-filling form fields on active browser tab...');
+                    const pages = await browser.pages();
+                    const activePage = pages[pages.length - 1]; // Current active tab
+                    try { await activePage.bringToFront(); } catch (e) {}
+
+                    // Re-inject floating button in case page refreshed/navigated
+                    await injectFloatingButton(activePage, tool);
+
+                    // Execute intelligent autofill
+                    const refillReport = await executeAutofillInPage(activePage, tool);
+                    if (refillReport.length > 0) {
+                        console.log(`\n✨ Successfully filled ${refillReport.length} field(s):`);
+                        refillReport.forEach(r => console.log(`   ✔ ${r.field.padEnd(24)}: ${r.value}`));
+                        console.log('');
+                    } else {
+                        console.log('\n⚠️ No standard form fields detected on the current active page.');
+                        console.log('   (If this page is a login or multi-step screen, complete the step first, then type "f" once the submission form appears).\n');
+                    }
                     continue;
-                } else if (answer.toLowerCase() === 'q') {
+                } else if (cmd === 'q' || cmd === 'quit' || cmd === 'exit') {
                     console.log('Stopping assistant.');
+                    closeReadline();
                     await browser.close();
                     return;
-                } else if (answer.toLowerCase() === 's') {
+                } else if (cmd === 's' || cmd === 'skip') {
                     console.log(`⏩ Skipped ${dir.name}.`);
                     break;
                 } else {
@@ -422,10 +643,12 @@ async function main() {
     console.log('✅ Session Complete. Tracker updated in submission_tracker.json');
     console.log('========================================================\n');
 
+    closeReadline();
     await browser.close();
 }
 
 main().catch(err => {
     console.error('Fatal execution error:', err);
+    closeReadline();
     process.exit(1);
 });

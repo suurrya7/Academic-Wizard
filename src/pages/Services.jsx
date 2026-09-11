@@ -56,7 +56,7 @@ const Services = () => {
                 subtitle="Comprehensive academic support tailored to your unique educational needs."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Services', url: '/services' }
+                    { name: 'Services', url: '/services/' }
                 ]}
             />
 

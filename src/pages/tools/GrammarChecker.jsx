@@ -99,7 +99,8 @@ const GrammarChecker = () => {
                             "@type": "AggregateRating",
                             "ratingValue": "4.9",
                             "reviewCount": "1420",
-                            "bestRating": "5"
+                            "bestRating": "5",
+                            "worstRating": "1"
                         }
                     })}
                 </script>
@@ -112,7 +113,7 @@ const GrammarChecker = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://academicwizard.online"
+                                "item": "https://academicwizard.online/"
                             },
                             {
                                 "@type": "ListItem",
@@ -137,8 +138,8 @@ const GrammarChecker = () => {
                 backgroundImage="/images/tools/grammar-checker.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Tools', url: '/tools' },
-                    { name: 'Grammar Checker', url: '/tools/grammar-checker' }
+                    { name: 'Tools', url: '/tools/' },
+                    { name: 'Grammar Checker', url: '/tools/grammar-checker/' }
                 ]}
             />
 

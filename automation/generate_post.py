@@ -457,10 +457,10 @@ def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> 
     country_slug = COUNTRY_TO_SLUG.get(country)
     
     if country_slug:
-        service_link = f"/services/{service_slug}/{country_slug}"
+        service_link = f"/services/{service_slug}/{country_slug}/"
         service_anchor_text = f"{CATEGORIES[category]} in {country}"
     else:
-        service_link = f"/services/{service_slug}"
+        service_link = f"/services/{service_slug}/"
         service_anchor_text = f"{CATEGORIES[category]}"
         
     specialized_links_prompt = ""
@@ -471,7 +471,7 @@ def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> 
                 specialized_data = json.load(f)
             if specialized_data:
                 chosen_specialized = random.sample(specialized_data, min(2, len(specialized_data)))
-                spec_json_str = json.dumps([{"title": s["title"], "slug": f"/services/{s['serviceSlug']}/{s['citySlug']}"} for s in chosen_specialized], ensure_ascii=False)
+                spec_json_str = json.dumps([{"title": s["title"], "slug": f"/services/{s['serviceSlug']}/{s['citySlug']}/"} for s in chosen_specialized], ensure_ascii=False)
                 specialized_links_prompt = f"\n4. You MUST organically include HTML anchor links to at least 1 of these localized/niche service pages where relevant:\n{spec_json_str}\n"
     except Exception:
         pass
@@ -485,7 +485,7 @@ Target Country/Region: {brief.get("targetCountry", "Global")}
 Adapt spelling and terminology appropriately for this region.
 
 Internal Linking Strategy:
-1. You must organically include HTML anchor links (<a href="/blog/their-slug">Their Title</a>) to at least 2 of these existing articles:
+1. You must organically include HTML anchor links (<a href="/blog/their-slug/">Their Title</a>) to at least 2 of these existing articles:
 {json.dumps(interlink_candidates, ensure_ascii=False)}
 
 2. You MUST organically include exactly one prominent link back to our commercial service page:
@@ -493,10 +493,10 @@ Link URL: {service_link}
 Anchor Text: Integrate this link naturally using keyword-rich anchor text related to "{service_anchor_text}". For example, "Looking for ethical {service_anchor_text.lower()}? Let our experts guide you..." or similar. Place this link near the end of the article, but before the FAQs.
 
 3. You MUST organically include at least one link to our free academic tools suite where contextually appropriate:
-<a href="/tools/citation-generator">Free Citation Generator</a>
-<a href="/tools/grammar-checker">Free Grammar Checker</a>
-<a href="/tools/ai-detector">Free AI Content Detector</a>
-<a href="/tools/ai-humanizer">Free AI Text Humanizer</a>
+<a href="/tools/citation-generator/">Free Citation Generator</a>
+<a href="/tools/grammar-checker/">Free Grammar Checker</a>
+<a href="/tools/ai-detector/">Free AI Content Detector</a>
+<a href="/tools/ai-humanizer/">Free AI Text Humanizer</a>
 Anchor Text: Integrate this link naturally using descriptive, keyword-rich anchor text.
 {specialized_links_prompt}
 Tone & Style:
@@ -645,7 +645,7 @@ def generate_json_ld(meta: dict, faqs: list) -> str:
             },
             "datePublished": meta["date"],
             "dateModified": meta["date"],
-            "mainEntityOfPage": {"@type": "WebPage", "@id": absolute_url(meta["url"])},
+            "mainEntityOfPage": {"@type": "WebPage", "@id": absolute_url(f"blog/{meta['slug']}")},
         }
     ]
     
@@ -701,7 +701,7 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
             related_blogs += '  <h2 class="premium-gradient-text" style="margin-top: 0; margin-bottom: 2rem; font-size: 1.5rem; font-family: \'Orbitron\', sans-serif; letter-spacing: 0.1em; text-transform: uppercase;">Related Articles</h2>\n'
             related_blogs += '  <div class="related-blogs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">\n'
             for rel in related_samples:
-                rel_url = f"/blog/{rel['slug']}"
+                rel_url = f"/blog/{rel['slug']}/"
                 related_blogs += f'    <a href="{rel_url}" class="glass-card" style="padding: 1.5rem; display: block; text-decoration: none; border-radius: 16px;">\n'
                 related_blogs += f'      <h3 style="font-size: 1.15rem; margin-top: 0; line-height: 1.4; color: #FFFFFF; font-weight: 600;">{rel["title"]}</h3>\n'
                 related_blogs += f'      <p style="font-size: 0.95rem; color: #A0A0A0; margin-bottom: 0; line-height: 1.5;">{rel.get("excerpt", "")[:100]}...</p>\n'

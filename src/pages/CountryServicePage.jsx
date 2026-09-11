@@ -39,13 +39,13 @@ const CountryServicePage = () => {
     }, [service]);
 
     if (!service) {
-        return <Navigate to="/services" replace />;
+        return <Navigate to="/services/" replace />;
     }
 
     const country = service.countries.find(c => c.slug === countrySlug);
     
     if (!country) {
-        return <Navigate to={`/services/${serviceSlug}`} replace />;
+        return <Navigate to={`/services/${serviceSlug}/`} replace />;
     }
 
     // Localized Overrides
@@ -75,20 +75,13 @@ const CountryServicePage = () => {
         "provider": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": "https://academicwizard.online"
+            "url": "https://academicwizard.online/",
+            "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
         },
         "areaServed": {
             "@type": "Country",
             "name": country.name
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "4",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
+        }
     };
 
     const faqSchema = {

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09T16:25:02.994Z",
+  "last_updated": "2026-09-09T17:14:46.983Z",
   "submissions": {
     "theresanaiforthat": {
       "name": "There's An AI For That (TAAFT)",
@@ -51,19 +51,27 @@
     },
     "saashub": {
       "name": "SaaSHub",
-      "status": "not_started",
+      "status": "submitted",
       "submitted_at": null,
-      "tool": null,
+      "tool": "ai-detector",
       "live_url": null,
-      "notes": ""
+      "notes": "",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "last_submitted_at": "2026-09-09T16:44:12.439Z"
     },
     "alternativeto": {
       "name": "AlternativeTo",
-      "status": "not_started",
+      "status": "submitted",
       "submitted_at": null,
-      "tool": null,
+      "tool": "ai-detector",
       "live_url": null,
-      "notes": ""
+      "notes": "",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "last_submitted_at": "2026-09-09T16:48:01.191Z"
     },
     "dang-ai": {
       "name": "Dang.ai",
@@ -179,11 +187,15 @@
     },
     "producthunt": {
       "name": "Product Hunt",
-      "status": "not_started",
+      "status": "submitted",
       "submitted_at": null,
-      "tool": null,
+      "tool": "ai-detector",
       "live_url": null,
-      "notes": ""
+      "notes": "",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "last_submitted_at": "2026-09-09T16:56:05.819Z"
     },
     "startupstash": {
       "name": "StartupStash",
@@ -228,6 +240,93 @@
       "tool_name": "Academic Wizard Linguistic AI Detector",
       "live_url": null,
       "notes": "Submitted by user via interactive assistant"
+    },
+    "launchingnext:ai-detector": {
+      "directory_id": "launchingnext",
+      "name": "Launching Next",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:41:47.904Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "launchingnext": {
+      "name": "Launching Next",
+      "status": "submitted",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "tool": "ai-detector",
+      "last_submitted_at": "2026-09-09T16:41:47.911Z"
+    },
+    "saashub:ai-detector": {
+      "directory_id": "saashub",
+      "name": "SaaSHub",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:44:12.438Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "alternativeto:ai-detector": {
+      "directory_id": "alternativeto",
+      "name": "AlternativeTo",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:48:01.188Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "producthunt:ai-detector": {
+      "directory_id": "producthunt",
+      "name": "Product Hunt",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T16:56:05.816Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "indiehackers:ai-detector": {
+      "directory_id": "indiehackers",
+      "name": "Indie Hackers",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T17:05:55.657Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "indiehackers": {
+      "name": "Indie Hackers",
+      "status": "submitted",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "tool": "ai-detector",
+      "last_submitted_at": "2026-09-09T17:05:55.660Z"
+    },
+    "devpost:ai-detector": {
+      "directory_id": "devpost",
+      "name": "Devpost Software Showcase",
+      "status": "submitted",
+      "submitted_at": "2026-09-09T17:14:46.981Z",
+      "tool": "ai-detector",
+      "tool_name": "Academic Wizard Linguistic AI Detector",
+      "live_url": null,
+      "notes": "Auto-filled via puppeteer assistant"
+    },
+    "devpost": {
+      "name": "Devpost Software Showcase",
+      "status": "submitted",
+      "tools_submitted": [
+        "ai-detector"
+      ],
+      "tool": "ai-detector",
+      "last_submitted_at": "2026-09-09T17:14:46.983Z"
     }
   }
 }

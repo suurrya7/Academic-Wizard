@@ -156,7 +156,7 @@ const FAQ = () => {
                 subtitle="Everything you need to know about our academic services."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'FAQ', url: '/faq' }
+                    { name: 'FAQ', url: '/faq/' }
                 ]}
             />
             
@@ -191,11 +191,11 @@ const FAQ = () => {
                 <div className="container px-6 max-w-4xl mx-auto text-center">
                     <h2 className="text-2xl font-bold font-heading text-white mb-6">Browse Our Services & Resources</h2>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Our Services</Link>
-                        <Link to="/services/essay-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Essay Help</Link>
-                        <Link to="/services/editing-proofreading" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Editing & Proofreading</Link>
-                        <Link to="/tools/citation-generator" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Citation Generator</Link>
-                        <Link to="/contact" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Contact Us</Link>
+                        <Link to="/services/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Our Services</Link>
+                        <Link to="/services/essay-help/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Essay Help</Link>
+                        <Link to="/services/editing-proofreading/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Editing & Proofreading</Link>
+                        <Link to="/tools/citation-generator/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Citation Generator</Link>
+                        <Link to="/contact/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Contact Us</Link>
                     </div>
                 </div>
             </section>

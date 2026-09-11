@@ -151,7 +151,8 @@ const AIDetector = () => {
                             "@type": "AggregateRating",
                             "ratingValue": "4.7",
                             "reviewCount": "1180",
-                            "bestRating": "5"
+                            "bestRating": "5",
+                            "worstRating": "1"
                         }
                     })}
                 </script>
@@ -164,7 +165,7 @@ const AIDetector = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://academicwizard.online"
+                                "item": "https://academicwizard.online/"
                             },
                             {
                                 "@type": "ListItem",
@@ -189,8 +190,8 @@ const AIDetector = () => {
                 backgroundImage="/images/tools/ai-detector.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Tools', url: '/tools' },
-                    { name: 'AI Detector', url: '/tools/ai-detector' }
+                    { name: 'Tools', url: '/tools/' },
+                    { name: 'AI Detector', url: '/tools/ai-detector/' }
                 ]}
             />
 
@@ -363,7 +364,7 @@ const AIDetector = () => {
                                             <p className="text-xs text-red-200 leading-relaxed">
                                                 Audited scores show robotically structured sentences and phrases. Bypass AI scanning by runnning our Text Humanizer.
                                             </p>
-                                            <Link to="/tools/ai-humanizer">
+                                            <Link to="/tools/ai-humanizer/">
                                                 <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white">
                                                     Humanize Text Now
                                                 </Button>

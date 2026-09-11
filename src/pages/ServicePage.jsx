@@ -52,7 +52,7 @@ const ServicePage = () => {
     }, [service]);
 
     if (!service) {
-        return <Navigate to="/services" replace />;
+        return <Navigate to="/services/" replace />;
     }
 
     const Icon = service.icon;
@@ -70,20 +70,13 @@ const ServicePage = () => {
         "provider": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": "https://academicwizard.online"
+            "url": "https://academicwizard.online/",
+            "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
         },
         "areaServed": service.countries.map(c => ({
             "@type": "Country",
             "name": c.name
-        })),
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "4",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
+        }))
     };
 
     const faqSchema = {

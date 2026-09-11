@@ -9,11 +9,11 @@ const Contact = () => {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contact Academic Wizard",
-        "url": "https://academicwizard.online/contact",
+        "url": "https://academicwizard.online/contact/",
         "mainEntity": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": "https://academicwizard.online",
+            "url": "https://academicwizard.online/",
             "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
             "contactPoint": {
                 "@type": "ContactPoint",
@@ -43,7 +43,7 @@ const Contact = () => {
                 subtitle="We're here to help you achieve academic success."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Contact', url: '/contact' }
+                    { name: 'Contact', url: '/contact/' }
                 ]}
             />
             
@@ -151,10 +151,10 @@ const Contact = () => {
                     <h2 className="text-2xl font-bold font-heading text-white mb-6">Need Immediate Assistance?</h2>
                     <p className="text-text-secondary mb-8" style={{ color: 'var(--text-secondary)' }}>Explore our services or get answers right away.</p>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">View Services</Link>
-                        <Link to="/faq" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Read FAQs</Link>
-                        <Link to="/about" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">About Us</Link>
-                        <Link to="/blog" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
+                        <Link to="/services/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">View Services</Link>
+                        <Link to="/faq/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Read FAQs</Link>
+                        <Link to="/about/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">About Us</Link>
+                        <Link to="/blog/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
                     </div>
                 </div>
             </section>

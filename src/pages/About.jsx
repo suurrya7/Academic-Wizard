@@ -10,7 +10,7 @@ const About = () => {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About Academic Wizard",
-        "url": "https://academicwizard.online/about",
+        "url": "https://academicwizard.online/about/",
         "description": "Learn about Academic Wizard, our mission, vision, and the core values that drive our expert academic assistance services.",
         "publisher": {
             "@type": "Organization",
@@ -38,7 +38,7 @@ const About = () => {
                 subtitle="Empowering students worldwide with expert academic guidance, ethical research support, and unwavering dedication to educational success since 2018."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'About', url: '/about' }
+                    { name: 'About', url: '/about/' }
                 ]}
             />
 
@@ -142,11 +142,11 @@ const About = () => {
                     <h2 className="text-2xl font-bold font-heading text-white mb-6">Explore Our Academic Services</h2>
                     <p className="text-text-secondary mb-8" style={{ color: 'var(--text-secondary)' }}>Discover how our experts can support your academic journey across assignments, essays, dissertations, and more.</p>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link to="/services" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">All Services</Link>
-                        <Link to="/services/assignment-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Assignment Help</Link>
-                        <Link to="/services/dissertation-help" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Dissertation Help</Link>
-                        <Link to="/tools" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Free Tools</Link>
-                        <Link to="/blog" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
+                        <Link to="/services/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">All Services</Link>
+                        <Link to="/services/assignment-help/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Assignment Help</Link>
+                        <Link to="/services/dissertation-help/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Dissertation Help</Link>
+                        <Link to="/tools/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Free Tools</Link>
+                        <Link to="/blog/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
                     </div>
                 </div>
             </section>

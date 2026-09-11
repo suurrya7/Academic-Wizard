@@ -53,7 +53,7 @@ const SubjectsGrid = () => {
                         className="px-8 py-10 bg-accent-gold/10 border border-accent-gold/30 rounded-xl text-center flex items-center justify-center"
                         style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', borderColor: 'rgba(212, 175, 55, 0.3)' }}
                     >
-                        <Link to="/services" className="text-xs font-heading tracking-widest uppercase text-accent-gold" style={{ color: 'var(--accent-gold)' }}>& Many More</Link>
+                        <Link to="/services/" className="text-xs font-heading tracking-widest uppercase text-accent-gold" style={{ color: 'var(--accent-gold)' }}>& Many More</Link>
                     </motion.div>
                 </div>
             </div>

@@ -31,7 +31,7 @@ const TermsOfService = () => {
                 subtitle="Please read these terms carefully before using our services."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Terms of Service', url: '/terms-of-service' }
+                    { name: 'Terms of Service', url: '/terms-of-service/' }
                 ]}
             />
 

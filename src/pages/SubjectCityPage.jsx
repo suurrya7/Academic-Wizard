@@ -293,7 +293,7 @@ const SubjectCityPage = () => {
                     return null;
                 })}
                 
-                {/* Service Schema with Aggregate Rating */}
+                {/* Service Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
@@ -304,19 +304,12 @@ const SubjectCityPage = () => {
                         "provider": {
                             "@type": "Organization",
                             "name": "Academic Wizard",
-                            "url": "https://academicwizard.online",
-                            "logo": "https://academicwizard.online/logo.png"
+                            "url": "https://academicwizard.online/",
+                            "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
+                            "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
                         },
                         "areaServed": country.name,
-                        "serviceType": service.title,
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "5.0",
-                            "reviewCount": "4",
-                            "bestRating": "5",
-                            "worstRating": "1"
-                        },
-                        "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
+                        "serviceType": service.title
                     })}
                 </script>
 
@@ -357,10 +350,10 @@ const SubjectCityPage = () => {
                 title={`${synthesizedTitle} ${country.flag}`}
                 description={pageDescription}
                 breadcrumbs={[
-                    { label: "Services", path: "/services" },
-                    { label: service.title, path: `/services/${service.slug}` },
-                    { label: country.name, path: `/services/${service.slug}/${country.slug}` },
-                    { label: cleanSubjectName, path: `/services/${service.slug}/${country.slug}/${specializedSlug}` }
+                    { name: "Services", url: "/services/" },
+                    { name: service.title, url: `/services/${service.slug}/` },
+                    { name: country.name, url: `/services/${service.slug}/${country.slug}/` },
+                    { name: cleanSubjectName, url: `/services/${service.slug}/${country.slug}/${specializedSlug}/` }
                 ]}
             />
 

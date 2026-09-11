@@ -17,7 +17,7 @@ const DissertationTopicPage = () => {
     const topicData = dissertationTopics.find(t => t.slug === topicSlug);
 
     if (!topicData) {
-        return <Navigate to="/blog" replace />;
+        return <Navigate to="/blog/" replace />;
     }
 
     const pageTitle = `100+ Free ${topicData.title} | Academic Wizard`;
@@ -43,12 +43,12 @@ const DissertationTopicPage = () => {
                         "publisher": {
                             "@type": "Organization",
                             "name": "Academic Wizard",
-                            "url": "https://academicwizard.online"
+                            "url": "https://academicwizard.online/"
                         },
                         "breadcrumb": {
                             "@type": "BreadcrumbList",
                             "itemListElement": [
-                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online" },
+                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
                                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog/" },
                                 { "@type": "ListItem", "position": 3, "name": topicData.category, "item": url }
                             ]
@@ -61,9 +61,10 @@ const DissertationTopicPage = () => {
                 title={topicData.title}
                 description={topicData.desc}
                 breadcrumbs={[
-                    { label: 'Blog', path: '/blog' },
-                    { label: 'Dissertation Topics', path: '#' },
-                    { label: topicData.category, path: `/blog/dissertation-topics/${topicSlug}` }
+                    { name: 'Home', url: '/' },
+                    { name: 'Blog', url: '/blog/' },
+                    { name: 'Dissertation Topics', url: '/blog/' },
+                    { name: topicData.category, url: `/blog/dissertation-topics/${topicSlug}/` }
                 ]}
             />
 
@@ -127,7 +128,7 @@ const DissertationTopicPage = () => {
                                 <li className="flex items-start gap-3"><ChevronRight className="text-accent-blue shrink-0 mt-1" size={18} /> Proposal Writing</li>
                                 <li className="flex items-start gap-3"><ChevronRight className="text-accent-blue shrink-0 mt-1" size={18} /> Editing & Proofreading</li>
                             </ul>
-                            <Link to="/services/dissertation-help" className="mt-6 inline-block text-accent-gold font-bold hover:underline">
+                            <Link to="/services/dissertation-help/" className="mt-6 inline-block text-accent-gold font-bold hover:underline">
                                 View Dissertation Services &rarr;
                             </Link>
                         </div>

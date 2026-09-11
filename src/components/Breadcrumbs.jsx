@@ -14,19 +14,26 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
 
     const alignClass = align === "center" ? "justify-center" : "justify-start";
 
+    // Normalize paths array to handle both { name, url } and { label, path }
+    const normalizedPaths = paths.map(p => {
+        const name = p.name || p.label || '';
+        const rawUrl = p.url || p.path || '/';
+        const cleanUrl = rawUrl === '/' 
+            ? '/' 
+            : (rawUrl.endsWith('/') ? rawUrl : `${rawUrl}/`);
+        return { name, url: cleanUrl };
+    });
+
     // Generate JSON-LD Schema
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": paths.map((path, index) => {
-            const cleanUrl = !path.url || path.url === '/' ? '' : (path.url.endsWith('/') ? path.url : `${path.url}/`);
-            return {
-                "@type": "ListItem",
-                "position": index + 1,
-                "name": path.name,
-                "item": `https://academicwizard.online${cleanUrl}`
-            };
-        })
+        "itemListElement": normalizedPaths.map((path, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": path.name,
+            "item": `https://academicwizard.online${path.url.startsWith('/') ? path.url : `/${path.url}`}`
+        }))
     };
 
     return (
@@ -38,8 +45,8 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
             </Helmet>
             
             <ol className="flex items-center gap-2 m-0 p-0 list-none">
-                {paths.map((path, index) => {
-                    const isLast = index === paths.length - 1;
+                {normalizedPaths.map((path, index) => {
+                    const isLast = index === normalizedPaths.length - 1;
                     
                     return (
                         <li key={index} className="flex items-center gap-2">

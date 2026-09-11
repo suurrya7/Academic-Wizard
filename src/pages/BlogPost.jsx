@@ -103,7 +103,7 @@ const BlogPost = () => {
     }
 
     if (status === 'notfound' || status === 'error') {
-        return <Navigate to="/blog" replace />;
+        return <Navigate to="/blog/" replace />;
     }
 
     const formattedDate = postData?.date
@@ -130,7 +130,7 @@ const BlogPost = () => {
     } : {
         "@type": "Organization",
         "name": "Academic Wizard",
-        "url": "https://academicwizard.online"
+        "url": "https://academicwizard.online/"
     };
 
     const articleSchema = {
@@ -145,7 +145,7 @@ const BlogPost = () => {
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": "https://academicwizard.online"
+            "url": "https://academicwizard.online/"
         },
         "mainEntityOfPage": {
             "@type": "WebPage",

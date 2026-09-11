@@ -339,7 +339,8 @@ const CitationGenerator = () => {
                             "@type": "AggregateRating",
                             "ratingValue": "4.8",
                             "reviewCount": "2150",
-                            "bestRating": "5"
+                            "bestRating": "5",
+                            "worstRating": "1"
                         }
                     })}
                 </script>
@@ -352,7 +353,7 @@ const CitationGenerator = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://academicwizard.online"
+                                "item": "https://academicwizard.online/"
                             },
                             {
                                 "@type": "ListItem",
@@ -377,8 +378,8 @@ const CitationGenerator = () => {
                 backgroundImage="/images/tools/citation-generator.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Tools', url: '/tools' },
-                    { name: 'Citation Generator', url: '/tools/citation-generator' }
+                    { name: 'Tools', url: '/tools/' },
+                    { name: 'Citation Generator', url: '/tools/citation-generator/' }
                 ]}
             />
 

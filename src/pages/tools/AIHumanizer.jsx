@@ -95,7 +95,8 @@ const AIHumanizer = () => {
                             "@type": "AggregateRating",
                             "ratingValue": "4.8",
                             "reviewCount": "950",
-                            "bestRating": "5"
+                            "bestRating": "5",
+                            "worstRating": "1"
                         }
                     })}
                 </script>
@@ -108,7 +109,7 @@ const AIHumanizer = () => {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://academicwizard.online"
+                                "item": "https://academicwizard.online/"
                             },
                             {
                                 "@type": "ListItem",
@@ -133,8 +134,8 @@ const AIHumanizer = () => {
                 backgroundImage="/images/tools/ai-humanizer.webp"
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Tools', url: '/tools' },
-                    { name: 'AI Humanizer', url: '/tools/ai-humanizer' }
+                    { name: 'Tools', url: '/tools/' },
+                    { name: 'AI Humanizer', url: '/tools/ai-humanizer/' }
                 ]}
             />
 

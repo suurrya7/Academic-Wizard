@@ -18,7 +18,7 @@ const Home = () => {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "Academic Wizard",
-        "url": "https://academicwizard.online",
+        "url": "https://academicwizard.online/",
         "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
         "description": "Expert academic assistance for essays, assignments, dissertations, theses, research papers, and academic editing.",
         "sameAs": [
@@ -44,10 +44,10 @@ const Home = () => {
             <Helmet>
                 <title>Academic Wizard | Expert Academic & Research Support</title>
                 <meta name="description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students in the UK, USA, Australia, and worldwide." />
-                <link rel="canonical" href="https://academicwizard.online" />
+                <link rel="canonical" href="https://academicwizard.online/" />
                 <meta property="og:title" content="Academic Wizard | Expert Academic Assistance" />
                 <meta property="og:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students." />
-                <meta property="og:url" content="https://academicwizard.online" />
+                <meta property="og:url" content="https://academicwizard.online/" />
                 <script type="application/ld+json">
                     {JSON.stringify(orgSchema)}
                 </script>
@@ -98,7 +98,7 @@ const Home = () => {
                                     Generate referencing citations in APA 7th, MLA 9th, Harvard, IEEE, and Chicago styles instantly.
                                 </p>
                             </div>
-                            <Link to="/tools/citation-generator" className="w-full mt-4 block">
+                            <Link to="/tools/citation-generator/" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Launch Builder
                                 </Button>
@@ -114,7 +114,7 @@ const Home = () => {
                                     Proofread your essays, edit spelling slips, and improve writing styles in real-time.
                                 </p>
                             </div>
-                            <Link to="/tools/grammar-checker" className="w-full mt-4 block">
+                            <Link to="/tools/grammar-checker/" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Launch Editor
                                 </Button>
@@ -130,7 +130,7 @@ const Home = () => {
                                     Scan drafts for perplexity metrics, sentence uniformity, and AI-typical buzzwords.
                                 </p>
                             </div>
-                            <Link to="/tools/ai-detector" className="w-full mt-4 block">
+                            <Link to="/tools/ai-detector/" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Scan Draft
                                 </Button>
@@ -146,7 +146,7 @@ const Home = () => {
                                     Transform robotic AI text into natural academic phrasing to bypass detectors like Turnitin.
                                 </p>
                             </div>
-                            <Link to="/tools/ai-humanizer" className="w-full mt-4 block">
+                            <Link to="/tools/ai-humanizer/" className="w-full mt-4 block">
                                 <Button type="outline" className="w-full py-2 text-[10px]">
                                     Humanize Text
                                 </Button>
@@ -177,7 +177,7 @@ const Home = () => {
                             <Button onClick={() => window.open(whatsappUrl, '_blank')} className="px-16 py-6 text-sm w-full sm:w-auto">
                                 Chat With Academic Expert
                             </Button>
-                            <Link to="/blog" className="w-full sm:w-auto">
+                            <Link to="/blog/" className="w-full sm:w-auto">
                                 <Button type="outline" className="px-16 py-6 text-sm w-full">
                                     Read Academic Resources
                                 </Button>
