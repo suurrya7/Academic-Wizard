@@ -11,7 +11,14 @@ const AIHumanizer = () => {
     const [sessionActive, setSessionActive] = useState(false);
     const [timeLeft, setTimeLeft] = useState(0);
 
+    const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000; // 259,200,000 ms (72 hours)
+
     useEffect(() => {
+        if (unlocked) {
+            setSessionActive(true);
+            return;
+        }
+
         // Check if there is an active running session saved in localStorage
         const sessionEnd = localStorage.getItem('academic_wizard_humanizer_session_end');
         if (sessionEnd) {
@@ -23,11 +30,11 @@ const AIHumanizer = () => {
                 localStorage.removeItem('academic_wizard_humanizer_session_end');
             }
         }
-    }, []);
+    }, [unlocked]);
 
     // Countdown timer for active session
     useEffect(() => {
-        if (!sessionActive || timeLeft <= 0) return;
+        if (unlocked || !sessionActive || timeLeft <= 0) return;
 
         const interval = setInterval(() => {
             const sessionEnd = localStorage.getItem('academic_wizard_humanizer_session_end');
@@ -46,7 +53,7 @@ const AIHumanizer = () => {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [sessionActive, timeLeft]);
+    }, [sessionActive, timeLeft, unlocked]);
 
     const startSession = () => {
         // Try to trigger a trial use
@@ -54,16 +61,24 @@ const AIHumanizer = () => {
             return; // Locked
         }
 
-        // Set 5 minute session window (300,000 ms)
-        const endTime = Date.now() + 300000;
+        // Set 3-day session window (72 hours)
+        const endTime = Date.now() + THREE_DAYS_MS;
         localStorage.setItem('academic_wizard_humanizer_session_end', endTime.toString());
         setSessionActive(true);
-        setTimeLeft(300);
+        setTimeLeft(Math.ceil(THREE_DAYS_MS / 1000));
     };
 
     const formatTime = (seconds) => {
-        const mins = Math.floor(seconds / 60);
+        const days = Math.floor(seconds / 86400);
+        const hours = Math.floor((seconds % 86400) / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
         const secs = seconds % 60;
+        if (days > 0) {
+            return `${days}d ${hours}h ${mins}m`;
+        }
+        if (hours > 0) {
+            return `${hours}h ${mins}m ${secs.toString().padStart(2, '0')}s`;
+        }
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     };
 
@@ -148,13 +163,13 @@ const AIHumanizer = () => {
                             </h3>
                             <div className="flex items-center gap-3">
                                 {sessionActive && (
-                                    <span className="text-xs px-3 py-1.5 bg-red-500/10 border border-red-500/20 text-red-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">
-                                        <Clock size={14} /> Session Time: {formatTime(timeLeft)}
+                                    <span className="text-xs px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">
+                                        <Clock size={14} /> Active Session: {formatTime(timeLeft)}
                                     </span>
                                 )}
                                 {!unlocked && (
                                     <span className="text-xs bg-accent-gold/10 border border-accent-gold/20 text-accent-gold px-3 py-1.5 rounded-full font-bold">
-                                        Free Sessions: {useCount} / {maxUses}
+                                        Free Sessions: {useCount} / {maxUses} (3 Days Each)
                                     </span>
                                 )}
                             </div>
@@ -183,16 +198,16 @@ const AIHumanizer = () => {
                                     <Sparkles size={32} />
                                 </div>
                                 <div className="max-w-md space-y-2">
-                                    <h4 className="text-xl font-bold">Start Free Trial Session</h4>
+                                    <h4 className="text-xl font-bold">Start 3-Day Free Session</h4>
                                     <p className="text-xs text-white/50 leading-relaxed">
-                                        Clicking below initializes a **5-minute free session** of our Streamlit humanizing engine. You can run unlimited rewrites during the session.
+                                        Clicking below activates a **3-day free session (72 hours)** of our Streamlit humanizing engine. You can run unlimited rewrites anytime during these 3 days.
                                     </p>
                                 </div>
                                 <Button 
                                     onClick={startSession}
                                     className="py-4 px-8 text-xs font-bold uppercase tracking-widest flex items-center gap-2"
                                 >
-                                    <Play size={14} fill="currentColor" /> Initialize Engine
+                                    <Play size={14} fill="currentColor" /> Activate 3-Day Session
                                 </Button>
                             </div>
                         )}
