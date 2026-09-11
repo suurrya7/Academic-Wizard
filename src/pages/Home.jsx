@@ -26,7 +26,9 @@ const Home = () => {
             "https://youtube.com/@academicwizard",
             "https://www.facebook.com/academics.wizard",
             "https://www.instagram.com/_academic.wizard_",
-            "https://www.linkedin.com/company/academic-wizard"
+            "https://www.linkedin.com/company/academic-wizard",
+            "https://share.google/gFYneo9HEwNeToTvN",
+            "https://www.google.com/search?kgmid=/g/11z93djzl9&q=Academic+Wizard"
         ],
         "address": {
             "@type": "PostalAddress",

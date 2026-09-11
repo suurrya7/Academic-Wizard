@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram, MapPin } from 'lucide-react';
 import academicWizardLogo from '../assets/academic-wizard-logo.webp';
 
 const Footer = () => {
@@ -62,6 +62,17 @@ const Footer = () => {
                         >
                             <Instagram size={18} />
                         </a>
+                        <a 
+                            href="https://share.google/gFYneo9HEwNeToTvN" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-10 h-10 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-gold transition-all duration-300"
+                            style={{ color: 'var(--text-secondary)' }}
+                            aria-label="Google Business Profile"
+                            title="Academic Wizard on Google"
+                        >
+                            <MapPin size={18} />
+                        </a>
                     </div>
                 </div>
 
@@ -103,7 +114,23 @@ const Footer = () => {
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Trust & Quality</h3>
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-4">
+                        <a 
+                            href="https://g.page/r/CTFgQ8nggIkfEAI/review" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-accent-gold/20 hover:border-accent-gold transition-all group"
+                        >
+                            <div className="flex flex-col">
+                                <div className="flex items-center gap-1.5 text-accent-gold text-xs font-bold">
+                                    <span>⭐⭐⭐⭐⭐</span>
+                                    <span className="text-white text-xs font-heading">5.0 / 5</span>
+                                </div>
+                                <span className="text-[11px] text-text-secondary group-hover:text-accent-gold transition-colors mt-0.5">
+                                    Google Verified Profile (4 Reviews)
+                                </span>
+                            </div>
+                        </a>
                         <div className="flex items-center gap-3">
                             <ShieldCheck className="text-accent-gold" style={{ color: 'var(--accent-gold)' }} size={24} />
                             <span className="text-xs uppercase tracking-widest font-heading text-text-primary">100% Confidential</span>

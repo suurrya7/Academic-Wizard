@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import { Link } from 'react-router-dom';
-import { Mail, MessageCircle, Clock, ShieldCheck } from 'lucide-react';
+import { Mail, MessageCircle, Clock, ShieldCheck, MapPin } from 'lucide-react';
 
 const Contact = () => {
     const contactSchema = {
@@ -15,6 +15,10 @@ const Contact = () => {
             "name": "Academic Wizard",
             "url": "https://academicwizard.online/",
             "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
+            "sameAs": [
+                "https://share.google/gFYneo9HEwNeToTvN",
+                "https://www.google.com/search?kgmid=/g/11z93djzl9&q=Academic+Wizard"
+            ],
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-95098-93638",
@@ -99,6 +103,41 @@ const Contact = () => {
                                     <p className="text-text-secondary" style={{ color: 'var(--text-secondary)' }}>
                                         Our academic writers work globally across different time zones. Our customer support desk is operational <strong>24 hours a day, 7 days a week, 365 days a year</strong> to ensure you never miss a deadline.
                                     </p>
+                                </div>
+                            </div>
+
+                            <div className="glass-card p-6 flex items-start gap-6 border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                                <div className="text-accent-gold shrink-0 mt-1" style={{ color: 'var(--accent-gold)' }}>
+                                    <MapPin size={32} />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <h3 className="text-xl font-bold text-white">Google Verified Business</h3>
+                                        <span className="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded-full">5.0 ★ (4 Reviews)</span>
+                                    </div>
+                                    <p className="text-text-secondary mb-4" style={{ color: 'var(--text-secondary)' }}>
+                                        Verified Google Business Profile. Read genuine feedback from university students worldwide or share your review.
+                                    </p>
+                                    <div className="flex flex-wrap gap-3">
+                                        <a 
+                                            href="https://share.google/gFYneo9HEwNeToTvN" 
+                                            target="_blank" 
+                                            rel="noreferrer" 
+                                            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent-gold hover:underline"
+                                            style={{ color: 'var(--accent-gold)' }}
+                                        >
+                                            View Google Profile →
+                                        </a>
+                                        <span className="text-white/20">•</span>
+                                        <a 
+                                            href="https://g.page/r/CTFgQ8nggIkfEAI/review" 
+                                            target="_blank" 
+                                            rel="noreferrer" 
+                                            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white hover:text-accent-gold transition-colors"
+                                        >
+                                            Write a Google Review ⭐
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
