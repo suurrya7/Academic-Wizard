@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import PageHeader from '../../components/PageHeader';
 import Button from '../../components/Button';
 import ToolHireExpertBanner from '../../components/ToolHireExpertBanner';
-import { Sparkles, Play, Clock } from 'lucide-react';
+import { Sparkles, Play, Clock, ShieldAlert, ShieldCheck, CheckCircle2, MessageCircle } from 'lucide-react';
 import { ActivationContext } from '../../components/ActivationGate';
 
 const AIHumanizer = () => {
@@ -198,6 +198,76 @@ const AIHumanizer = () => {
                         )}
                     </div>
 
+                    {/* Turnitin Defense & 20% Discount Lead Generation Card */}
+                    <div className="rounded-2xl border-2 border-accent-gold/40 bg-gradient-to-r from-red-950/40 via-bg-secondary to-amber-950/30 p-6 md:p-8 shadow-[0_10px_40px_rgba(212,175,55,0.18)] text-left relative overflow-hidden animate-fade-in">
+                        <div className="absolute top-0 right-0 transform translate-x-3 -translate-y-1 bg-gradient-to-l from-accent-gold to-amber-500 text-black text-[11px] font-black uppercase px-5 py-1 rounded-full shadow-lg tracking-wider hidden sm:block">
+                            ⚡ 20% Off Active
+                        </div>
+                        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                            <div className="space-y-3 max-w-2xl">
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-400 text-xs font-bold uppercase tracking-wider">
+                                        <ShieldAlert size={14} /> Turnitin AI Detection Alert
+                                    </span>
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                                        <ShieldCheck size={14} /> 100% Pass Guarantee
+                                    </span>
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-bold font-heading text-white leading-snug">
+                                    Worried Automated Rewrites Might Still Trigger Turnitin?
+                                </h3>
+                                <p className="text-sm text-text-secondary leading-relaxed">
+                                    Turnitin and GPTZero frequently flag AI-paraphrased text due to repetitive perplexity footprints. If this submission affects your final GPA or degree, don’t risk machine filters. Our Oxbridge & Ivy League PhD specialists will <strong className="text-white">manually rewrite, cite, and certify your draft</strong> with a <span className="text-accent-gold font-semibold">guaranteed 0% AI detection report</span>.
+                                </p>
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs text-white/80">
+                                    <div className="flex items-center gap-1.5">
+                                        <CheckCircle2 size={14} className="text-accent-gold shrink-0" />
+                                        <span>Certified 0% AI</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <CheckCircle2 size={14} className="text-accent-gold shrink-0" />
+                                        <span>Rush 2-Hr Available</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <CheckCircle2 size={14} className="text-accent-gold shrink-0" />
+                                        <span>PhD Subject Writers</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <CheckCircle2 size={14} className="text-accent-gold shrink-0" />
+                                        <span>100% Confidential</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full lg:w-auto flex flex-col items-center lg:items-end justify-center gap-2 shrink-0">
+                                <span className="text-[11px] text-emerald-400 font-semibold flex items-center justify-center lg:justify-end gap-1.5 mb-1">
+                                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping inline-block" />
+                                    4 PhD Specialists Online Now
+                                </span>
+                                <a
+                                    href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20used%20your%20AI%20Humanizer%20and%20need%20a%20PhD%20expert%20to%20manually%20rewrite/verify%20my%20paper%20with%200%25%20AI%20detection%20guarantee."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => {
+                                        if (typeof window !== 'undefined' && window.gtag) {
+                                            window.gtag('event', 'generate_lead', {
+                                                event_category: 'conversion',
+                                                event_label: 'whatsapp_ai_humanizer_defense_card',
+                                                value: 1
+                                            });
+                                        }
+                                    }}
+                                    className="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-accent-gold via-amber-400 to-accent-gold text-black font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all shadow-[0_0_25px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.7)] w-full sm:w-auto"
+                                >
+                                    <MessageCircle size={18} />
+                                    <span>Claim 20% Off on WhatsApp</span>
+                                </a>
+                                <span className="block text-[10px] text-accent-gold font-medium text-center lg:text-right">
+                                    Code: <strong className="font-bold">WIZARD20</strong> (Auto-Applied)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-white/70">
                         <div className="bg-white/5 border border-white/5 p-6 rounded-xl">
                             <h4 className="font-bold text-white mb-2">How it works</h4>
@@ -218,6 +288,9 @@ const AIHumanizer = () => {
                         toolName="AI Humanizer"
                         headline="Need Guaranteed 100% Human Writing with 0% AI Detection?"
                         subheadline="Don't risk academic penalties. Have an Oxbridge / Ivy League-educated subject specialist manually rewrite, refine, and polish your draft before submission."
+                        discountBadge="Claim 20% Student Discount on WhatsApp"
+                        whatsappMessage="Hello Academic Wizard, I used your AI Humanizer and need a PhD expert to manually rewrite/verify my paper with 0% AI detection guarantee."
+                        ctaText="Claim 20% Off on WhatsApp"
                     />
 
                     {/* FAQ and Content Section */}

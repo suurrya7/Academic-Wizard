@@ -381,6 +381,9 @@ const AIDetector = () => {
                             toolName="AI Detector"
                             headline="Concerned About Turnitin AI Detection or Academic Integrity Flags?"
                             subheadline="Ensure 100% human authenticity. Our PhD editors will manually review, rewrite, and verify your essay with a certified plagiarism & AI-free guarantee."
+                            discountBadge="Claim 20% Student Discount on WhatsApp"
+                            whatsappMessage="Hello Academic Wizard, I used your AI Detector and want a PhD specialist to review and verify my paper for 0% AI detection."
+                            ctaText="Claim 20% Off on WhatsApp"
                         />
                     </div>
 

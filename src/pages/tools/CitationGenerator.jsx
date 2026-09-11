@@ -663,6 +663,9 @@ const CitationGenerator = () => {
                             toolName="Citation Generator"
                             headline="Need Complex Multi-Volume or OSCOLA / Harvard Citations Formatted?"
                             subheadline="Don't lose marks on citation technicalities. Our academic researchers format your bibliography, verify every DOI, and align in-text references with university guidelines."
+                            discountBadge="Claim 20% Student Discount on WhatsApp"
+                            whatsappMessage="Hello Academic Wizard, I used your Citation Generator and need an expert to format and verify my citations and bibliography."
+                            ctaText="Claim 20% Off on WhatsApp"
                         />
                     </div>
 

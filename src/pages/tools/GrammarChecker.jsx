@@ -279,6 +279,9 @@ const GrammarChecker = () => {
                             toolName="Grammar & Proofreading Editor"
                             headline="Need Professional Academic Proofreading by Human PhD Editors?"
                             subheadline="Automated tools miss complex academic syntax, tone, and logical flow. Have our subject-matter editors meticulously polish your dissertation, thesis, or essay."
+                            discountBadge="Claim 20% Student Discount on WhatsApp"
+                            whatsappMessage="Hello Academic Wizard, I used your Grammar Checker and need a PhD editor to proofread and polish my academic paper."
+                            ctaText="Claim 20% Off on WhatsApp"
                         />
                     </div>
 
