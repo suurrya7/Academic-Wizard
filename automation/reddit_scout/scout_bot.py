@@ -34,14 +34,14 @@ HISTORY_PATH = os.path.join(SCRIPT_DIR, "scout_history.json")
 STREAMLIT_URL = "https://academic-wizard.streamlit.app/"
 
 def ping_streamlit_app(url: str = STREAMLIT_URL):
-    """Pings Streamlit app to prevent free-tier container sleep."""
+    """Lightweight ping for Streamlit app (full browser keep-awake handled by keep-streamlit-awake.yml)."""
     print(f"💓 [Keep-Alive] Checking Streamlit container at {url}...")
     try:
-        resp = requests.get(url, timeout=20, headers={"User-Agent": "AcademicWizardUptime/1.0"})
-        if resp.status_code in [200, 304]:
-            print(f"   ✅ Streamlit app is ACTIVE and warm (HTTP {resp.status_code})")
+        resp = requests.get(url, timeout=15, allow_redirects=False, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"})
+        if resp.status_code in [200, 302, 303, 304]:
+            print(f"   ✅ Streamlit edge proxy responded (HTTP {resp.status_code})")
         else:
-            print(f"   ⏳ Ping sent (HTTP {resp.status_code}) — container waking up.")
+            print(f"   ⏳ Ping sent (HTTP {resp.status_code})")
         return True
     except Exception as e:
         print(f"   ⚠️ Streamlit ping notice: {e}")

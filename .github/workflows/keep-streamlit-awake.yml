@@ -1,0 +1,86 @@
+name: Keep Streamlit Humanizer Awake
+
+on:
+  schedule:
+    # Runs every 2 hours to prevent Streamlit Community Cloud container sleep
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Allows 1-click manual trigger from GitHub Actions
+
+jobs:
+  keep-awake:
+    name: Wake & Ping Streamlit Container
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Launch Headless Browser & Wake Streamlit
+        run: |
+          node -e "
+            const puppeteer = require('puppeteer');
+
+            (async () => {
+              console.log('🚀 [Keep-Alive] Launching headless browser to ping Streamlit app...');
+              const browser = await puppeteer.launch({
+                headless: true,
+                args: [
+                  '--no-sandbox',
+                  '--disable-setuid-sandbox',
+                  '--disable-dev-shm-usage',
+                  '--disable-accelerated-2d-canvas',
+                  '--disable-gpu'
+                ]
+              });
+
+              try {
+                const page = await browser.newPage();
+                page.setDefaultNavigationTimeout(180000); // 3 minutes timeout for cold starts
+
+                console.log('1️⃣ Navigating to Streamlit root: https://academic-wizard.streamlit.app/ ...');
+                await page.goto('https://academic-wizard.streamlit.app/', { waitUntil: 'networkidle2' });
+                await new Promise(r => setTimeout(r, 6000));
+
+                // Detect and click any 'Yes, get this app back up!' wake button
+                const wakeClicked = await page.evaluate(() => {
+                  const buttons = Array.from(document.querySelectorAll('button'));
+                  const wakeBtn = buttons.find(b => b.innerText && b.innerText.toLowerCase().includes('get this app back up'));
+                  if (wakeBtn) {
+                    wakeBtn.click();
+                    return true;
+                  }
+                  return false;
+                });
+
+                if (wakeClicked) {
+                  console.log('⚡ Found sleeping app! Clicked \"Get this app back up!\" button. Waiting 20s for container initialization...');
+                  await new Promise(r => setTimeout(r, 20000));
+                } else {
+                  console.log('✅ Main URL reached without sleep modal.');
+                }
+
+                console.log('2️⃣ Navigating to iframe embed URL: https://academic-wizard.streamlit.app/~/+/?embed=true#academic-wizard ...');
+                await page.goto('https://academic-wizard.streamlit.app/~/+/?embed=true#academic-wizard', { waitUntil: 'networkidle2' });
+                await new Promise(r => setTimeout(r, 8000));
+
+                const pageText = await page.evaluate(() => document.body.innerText || '');
+                if (pageText.includes('Academic Wizard') || pageText.includes('Enter Your Text') || pageText.includes('Run Academic Wizard')) {
+                  console.log('🎉 SUCCESS: Streamlit Humanizer is FULLY AWAKE, RENDERED, and FUNCTIONAL!');
+                } else {
+                  console.log('ℹ️ Page loaded. First 150 chars of content: ' + pageText.substring(0, 150).replace(/\n/g, ' '));
+                }
+              } catch (err) {
+                console.error('❌ Keep-Alive Error:', err.message);
+                process.exit(1);
+              } finally {
+                await browser.close();
+                console.log('🏁 Browser closed. Streamlit container is warm and active.');
+              }
+            })();
+          "
