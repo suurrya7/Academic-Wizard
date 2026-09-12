@@ -170,19 +170,19 @@ const Footer = () => {
                     Popular Academic Specializations
                 </div>
                 <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-xs text-text-secondary leading-relaxed">
+                    <Link to="/services/assignment-help/uk/law/" className="hover:text-accent-gold transition-colors font-medium text-white/90">Business Law Assignment Help</Link>
+                    <Link to="/services/assignment-help/singapore/business/" className="hover:text-accent-gold transition-colors font-medium text-white/90">MBA Assignment Help Singapore</Link>
+                    <Link to="/services/editing-proofreading/" className="hover:text-accent-gold transition-colors font-medium text-white/90">Academic Editing Services</Link>
+                    <Link to="/services/assignment-help/usa/philadelphia/" className="hover:text-accent-gold transition-colors">Assignment Help Philadelphia</Link>
+                    <Link to="/services/assignment-help/ireland/dublin/" className="hover:text-accent-gold transition-colors">Assignment Help Dublin</Link>
+                    <Link to="/services/editing-proofreading/canada/" className="hover:text-accent-gold transition-colors">Academic Editing Canada</Link>
+                    <Link to="/services/assignment-help/usa/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help USA</Link>
                     <Link to="/services/assignment-help/uk/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help UK</Link>
-                    <Link to="/services/assignment-help/uk/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help UK</Link>
-                    <Link to="/services/assignment-help/uk/mba/" className="hover:text-accent-gold transition-colors">MBA Assignment Help UK</Link>
-                    <Link to="/services/assignment-help/uk/psychology/" className="hover:text-accent-gold transition-colors">Psychology Assignment Help UK</Link>
-                    <Link to="/services/assignment-help/uk/computer-science/" className="hover:text-accent-gold transition-colors">Computer Science Help UK</Link>
+                    <Link to="/services/assignment-help/uk/psychology/" className="hover:text-accent-gold transition-colors">Psychology Assignment Help</Link>
+                    <Link to="/services/assignment-help/usa/computer-science/" className="hover:text-accent-gold transition-colors">Computer Science Help USA</Link>
                     <Link to="/services/assignment-help/australia/accounting/" className="hover:text-accent-gold transition-colors">Accounting Assignment Help Australia</Link>
-                    <Link to="/services/assignment-help/australia/nursing/" className="hover:text-accent-gold transition-colors">Nursing Assignment Help Australia</Link>
-                    <Link to="/services/assignment-help/canada/law/" className="hover:text-accent-gold transition-colors">Law Assignment Help Canada</Link>
-                    <Link to="/services/assignment-help/canada/business/" className="hover:text-accent-gold transition-colors">Business Assignment Help Canada</Link>
-                    <Link to="/services/study-guidance/singapore/nursing/" className="hover:text-accent-gold transition-colors">Nursing Study Guidance Singapore</Link>
-                    <Link to="/services/assignment-help/uk/london/" className="hover:text-accent-gold transition-colors">Assignment Help London</Link>
-                    <Link to="/services/assignment-help/uk/manchester/" className="hover:text-accent-gold transition-colors">Assignment Help Manchester</Link>
                     <Link to="/services/assignment-help/australia/sydney/" className="hover:text-accent-gold transition-colors">Assignment Help Sydney</Link>
+                    <Link to="/services/assignment-help/uk/london/" className="hover:text-accent-gold transition-colors">Assignment Help London</Link>
                     <Link to="/services/assignment-help/canada/toronto/" className="hover:text-accent-gold transition-colors">Assignment Help Toronto</Link>
                 </div>
             </div>

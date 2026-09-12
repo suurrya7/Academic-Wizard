@@ -196,8 +196,8 @@ const SubjectCityPage = () => {
         : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name}`;
 
     const pageMetaTitle = pageType === "subject"
-        ? `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.badge} | Academic Wizard`
-        : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} | Top-Rated Academic Experts | Academic Wizard`;
+        ? `${cleanSubjectName} ${serviceVerb.action} ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
+        : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} (2026) | Verified Academic Experts`;
 
     const pageDescription = pageType === "subject"
         ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
@@ -215,7 +215,38 @@ const SubjectCityPage = () => {
     );
     const whatsappUrl = `https://wa.me/919509893638?text=${whatsappMessage}`;
     
+    // Subject-specific high-intent FAQ expansion (High-Intent Keywords)
+    const lowerSub = cleanSubjectName.toLowerCase();
+    const targetedQuestions = [];
+    if (lowerSub.includes("law")) {
+        targetedQuestions.push({
+            question: `Can your law writers handle legal problem questions using IRAC / CRAC and OSCOLA referencing?`,
+            answer: `Yes. Our legal specialists apply rigorous IRAC (Issue, Rule, Application, Conclusion) and CRAC frameworks to problem questions and case briefs, with precise primary and secondary source citations formatted to OSCOLA or Harvard standards.`
+        });
+    } else if (lowerSub.includes("nursing") || lowerSub.includes("health")) {
+        targetedQuestions.push({
+            question: `Do you provide evidence-based nursing case study and clinical assignment assistance?`,
+            answer: `Yes. Our healthcare and nursing specialists assist with evidence-based practice (EBP) papers, clinical care plans, reflective models (Gibbs, Rolfe, Johns), and PICO framework research adhering strictly to regional healthcare accreditation guidelines.`
+        });
+    } else if (lowerSub.includes("business") || lowerSub.includes("mba") || lowerSub.includes("management")) {
+        targetedQuestions.push({
+            question: `Do your business experts help with strategic frameworks (SWOT, PESTLE, Porter's Five Forces) and MBA reports?`,
+            answer: `Yes. Our business and management mentors assist with executive summaries, strategic framework applications (Porter's Five Forces, PESTLE, SWOT, BCG Matrix), financial analysis, and real-world company case studies structured to MBA standards.`
+        });
+    } else if (lowerSub.includes("computer") || lowerSub.includes("programming") || lowerSub.includes("engineering")) {
+        targetedQuestions.push({
+            question: `Is functional code, algorithm documentation, and plagiarism-free verification provided for technical projects?`,
+            answer: `Yes. Technical assignments include cleanly commented code, test cases, algorithmic complexity analysis (Big-O notation), and architecture documentation verified against Turnitin and code similarity checkers.`
+        });
+    } else if (lowerSub.includes("psychology")) {
+        targetedQuestions.push({
+            question: `Do your psychology specialists provide empirical literature synthesis and DSM-5 diagnostic case studies?`,
+            answer: `Yes. Our psychology mentors assist with empirical research reviews, qualitative and quantitative data analyses (SPSS, R), and clinical case formulations structured to APA 7th edition guidelines.`
+        });
+    }
+
     const synthesizedFaqs = pageType === "subject" ? [
+        ...targetedQuestions,
         {
             question: `How do your ${cleanSubjectName} specialists align papers with ${country.name} university standards?`,
             answer: `Our ${cleanSubjectName} academic faculty in ${country.name} hold advanced postgraduate degrees (Master's & PhD) from leading universities. Every paper is customized around local curriculum rubrics, departmental guidelines, and preferred citation standards (e.g. APA 7th, Harvard, OSCOLA, or IEEE).`
@@ -406,8 +437,11 @@ const SubjectCityPage = () => {
                             </p>
                             
                             <DefinitionBox 
-                                title={`${cleanSubjectName} Academic Standard`} 
-                                definition={specializedData.desc} 
+                                title={`What is ${cleanSubjectName} ${serviceVerb.action}?`} 
+                                definition={pageType === "subject"
+                                    ? `${cleanSubjectName} ${serviceVerb.action.toLowerCase()} provides university students with tailored research, structural guidance, and critical methodology aligned to ${country.name} departmental rubrics. Every paper is 100% Turnitin-safe and formatted to standard university citation rules.`
+                                    : `${serviceVerb.action} in ${cleanSubjectName} delivers personalized academic mentoring and proofreading designed for higher education students in ${cleanSubjectName}, ${country.name}. ${specializedData.desc}`
+                                } 
                             />
                             
                             <ExpertQuote 

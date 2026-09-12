@@ -50,6 +50,45 @@ const Home = () => {
         }
     };
 
+    const homeFaqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What services does Academic Wizard provide for university students?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Academic Wizard provides professional academic guidance, essay writing support, dissertation and thesis mentoring, literature reviews, research paper assistance, and academic proofreading tailored to university standards in the UK, USA, Australia, Canada, Singapore, and worldwide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are academic papers guaranteed to be 100% plagiarism-free and AI-safe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Every academic project undergoes rigorous originality verification and includes a complimentary Turnitin plagiarism and AI similarity scan report ensuring less than 5% similarity under a non-repository policy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I get urgent 12-hour or 24-hour academic assistance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Academic Wizard offers express turnaround options starting from 12 hours for urgent coursework, essays, and revisions with 24/7 dedicated support via WhatsApp."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which citation and academic referencing styles do your experts support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our Master's and PhD subject specialists support all standard university citation styles, including APA 7th, Harvard, OSCOLA (Law), MLA 9th, Chicago, IEEE, and Vancouver."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="page-home overflow-hidden">
             <Helmet>
@@ -61,6 +100,9 @@ const Home = () => {
                 <meta property="og:url" content="https://academicwizard.online/" />
                 <script type="application/ld+json">
                     {JSON.stringify(orgSchema)}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify(homeFaqSchema)}
                 </script>
             </Helmet>
 

@@ -51,9 +51,29 @@ const CountryServicePage = () => {
 
     // Localized Overrides
     const overviewText = country.overview || service.overview;
-    const featuresList = country.features || service.features;
-    const pricingText = country.pricing || service.pricing;
-    const faqsList = country.faqs || service.faqs || [];
+    // Dynamic Contextual FAQ Synthesizer for Country Hubs
+    const localizedCountryFaqs = [
+        {
+            question: `How do your academic specialists align ${service.title.toLowerCase()} with ${country.name} university rubrics?`,
+            answer: `Our dedicated academic specialists in ${country.name} possess postgraduate qualifications (Master's and PhD) from accredited institutions. Every paper is structured around regional curriculum criteria, localized grading scales, and specific university rubrics.`
+        },
+        {
+            question: `Which citation and formatting standards are supported for students in ${country.name}?`,
+            answer: `We provide complete formatting across all accepted standards in ${country.name}, including APA 7th edition, Harvard, OSCOLA (for Law in the UK), MLA 9th, Chicago, IEEE, and Vancouver with accurate primary and secondary source referencing.`
+        },
+        {
+            question: `Are papers guaranteed 100% plagiarism-free and verified against AI detection in ${country.name}?`,
+            answer: `Yes. Every project includes an official Turnitin similarity report and AI detection scan verifying <5% similarity under our strict non-repository policy, guaranteeing your paper is never stored or matched against public databases.`
+        },
+        {
+            question: `Can I request express 12-hour urgent delivery for ${service.title.toLowerCase()} in ${country.name}?`,
+            answer: `Yes, we offer 12-hour and 24-hour priority turnaround options across all university time zones in ${country.name}, supported by 24/7 direct communication via WhatsApp.`
+        }
+    ];
+
+    const faqsList = (country.faqs && country.faqs.length > 0) 
+        ? country.faqs 
+        : localizedCountryFaqs;
     const subjectsList = country.subjectsWeCover || [];
     const guaranteesList = country.guarantees || [];
     const universitiesList = country.universities || [];

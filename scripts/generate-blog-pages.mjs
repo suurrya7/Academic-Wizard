@@ -75,6 +75,51 @@ function generateBlogPages() {
             "url": `${SITE_URL}/`
         };
 
+        // Check if blog post HTML fragment exists to extract or synthesize FAQs
+        const postHtmlPath = join(distDir, 'blog', 'posts', `${slug}.html`);
+        const postFaqs = [];
+        if (existsSync(postHtmlPath)) {
+            const rawHtml = readFileSync(postHtmlPath, 'utf-8');
+            const faqMatches = [...rawHtml.matchAll(/<h3>(.*?)<\/h3>\s*<p>(.*?)<\/p>/gi)];
+            for (const match of faqMatches) {
+                const q = match[1].replace(/<[^>]*>/g, '').trim();
+                const a = match[2].replace(/<[^>]*>/g, '').trim();
+                if (q && a && (q.endsWith('?') || /^(how|what|why|can|is|which|where)/i.test(q))) {
+                    postFaqs.push({ question: q, answer: a });
+                }
+            }
+        }
+
+        if (postFaqs.length === 0) {
+            postFaqs.push(
+                {
+                    question: `What are the key academic takeaways from "${post.title}"?`,
+                    answer: post.excerpt || `This guide outlines key methodology, research structure, and writing standards for university students.`
+                },
+                {
+                    question: `How does Academic Wizard assist students with this topic?`,
+                    answer: `Academic Wizard offers 1-on-1 academic coaching, structural reviews, and proofreading tailored to UK, US, Australian, and global university criteria.`
+                },
+                {
+                    question: `Which citation and formatting standards apply?`,
+                    answer: `Our academic specialists format papers according to APA 7th, Harvard, OSCOLA, MLA 9th, Chicago, IEEE, and Vancouver guidelines.`
+                }
+            );
+        }
+
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": postFaqs.map(f => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": f.answer
+                }
+            }))
+        };
+
         // Build SEO meta tags to inject
         const seoTags = `
     <title>${title} | Academic Wizard Blog</title>
@@ -121,6 +166,9 @@ function generateBlogPages() {
             { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalUrl }
         ]
     })}
+    </script>
+    <script type="application/ld+json">
+    ${JSON.stringify(faqSchema)}
     </script>`;
 
         // Inject SEO tags right before </head> and replace the existing <title>
@@ -146,7 +194,6 @@ function generateBlogPages() {
 
         // Also inject a noscript block with the blog content for SEO fallback
         // Read the blog post HTML fragment if it exists
-        const postHtmlPath = join(distDir, 'blog', 'posts', `${slug}.html`);
         let noscriptContent = '';
         if (existsSync(postHtmlPath)) {
             const postContent = readFileSync(postHtmlPath, 'utf-8');
