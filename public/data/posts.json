@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Zotero Sync Lags: 2026 Dissertation Database Cleanup Guide",
+    "slug": "fixing-zotero-sync-lags-2026-dissertation-database-cleanup-guide",
+    "excerpt": "Struggling with Zotero sync errors? Learn how to clean your metadata and optimize your large-scale dissertation library for a smooth 2026 research flow.",
+    "keywords": [
+      "fixing Zotero sync conflicts in dissertation projects",
+      "Zotero library metadata management",
+      "syncing large Zotero libraries",
+      "Zotero 2026 performance tips",
+      "managing thesis bibliography"
+    ],
+    "primaryKeyword": "fixing Zotero sync conflicts in dissertation projects",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-12T06:44:38.161609+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-zotero-sync-lags-2026-dissertation-database-cleanup-guide.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Turnitin AI Logic: Decoding Why Your Own Academic Tone Gets Flagged",
+    "slug": "turnitin-ai-logic-decoding-why-your-own-academic-tone-gets-flagged",
+    "excerpt": "Did Turnitin flag your original work? Discover how to interpret similarity reports, audit your academic tone, and prove your genuine authorship process.",
+    "keywords": [
+      "why Turnitin flags genuine student writing as AI",
+      "Turnitin false positive audit",
+      "academic writing style analysis",
+      "Turnitin AI report interpretation",
+      "maintaining academic integrity"
+    ],
+    "primaryKeyword": "why Turnitin flags genuine student writing as AI",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-12T06:45:04.390623+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-logic-decoding-why-your-own-academic-tone-gets-flagged.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "NVivo Thematic Analysis: A Pro Strategy to Prevent Coding Bias",
+    "slug": "nvivo-thematic-analysis-a-pro-strategy-to-prevent-coding-bias",
+    "excerpt": "Master your qualitative data with confidence. Follow our professional workflow to reduce researcher bias and ensure rigorous coding in your NVivo 26 project.",
+    "keywords": [
+      "minimizing researcher bias in NVivo thematic coding",
+      "qualitative data analysis methodology",
+      "NVivo 26 thematic drift",
+      "coding reliability in PhD thesis",
+      "transparent qualitative research"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo thematic coding",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-12T06:45:31.343182+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-thematic-analysis-a-pro-strategy-to-prevent-coding-bias.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Mastering Complex APA 7 Citations for Multi-Volume Digital Research",
+    "slug": "mastering-complex-apa-7-citations-for-multi-volume-digital-research",
+    "excerpt": "Avoid formatting penalties. Learn the exact APA 7th edition rules for multi-volume digital research and keep your reference list clean and compliant.",
+    "keywords": [
+      "APA 7th edition complex multi-volume citation rules",
+      "APA 7 digital media citations",
+      "formatting graduate theses",
+      "APA 7 reference list accuracy",
+      "citing complex archival sources"
+    ],
+    "primaryKeyword": "APA 7th edition complex multi-volume citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-12T06:45:57.031179+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-complex-apa-7-citations-for-multi-volume-digital-research.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI False Positives: A 2026 Student Guide to Integrity Audits",
     "slug": "turnitin-ai-false-positives-a-2026-student-guide-to-integrity-audits-2",
     "excerpt": "Received an incorrect AI flag from Turnitin? Discover how to audit your draft for human tone and document your writing process to protect your integrity.",
