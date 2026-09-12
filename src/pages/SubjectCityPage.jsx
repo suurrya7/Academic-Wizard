@@ -15,6 +15,7 @@ import {
     MessageSquare, BookOpen, Star, Clock, Zap, Award, Sparkles, Check 
 } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
+import reviewsData from "../data/reviews.json";
 
 const SLUG_TO_HREFLANG = {
     uk: "en-GB",
@@ -366,7 +367,7 @@ const SubjectCityPage = () => {
                                 <Star key={i} size={14} className="fill-amber-400" />
                             ))}
                         </div>
-                        <span>5.0/5 Trustpilot Rating · 1,450+ Students Helped</span>
+                        <span>{reviewsData.summary.trustpilot.rating.toFixed(1)}/5 Trustpilot Rating · {reviewsData.summary.studentsHelped} Students Helped</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Shield className="text-emerald-400" size={16} />

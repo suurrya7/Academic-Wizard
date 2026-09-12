@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "overallRating": 5.0,
+    "totalReviews": 4,
+    "studentsHelped": "1,450+",
+    "google": {
+      "rating": 5.0,
+      "reviewCount": 4,
+      "badgeText": "Google Verified Profile",
+      "profileUrl": "https://share.google/gFYneo9HEwNeToTvN",
+      "reviewUrl": "https://g.page/r/CTFgQ8nggIkfEAI/review"
+    },
+    "trustpilot": {
+      "rating": 5.0,
+      "reviewCount": 1,
+      "badgeText": "Trustpilot Verified",
+      "profileUrl": "https://www.trustpilot.com/review/academicwizard.online",
+      "reviewUrl": "https://www.trustpilot.com/evaluate/academicwizard.online"
+    }
+  },
+  "testimonials": [
+    {
+      "id": "rev-1",
+      "name": "S***",
+      "location": "London, UK",
+      "source": "Google",
+      "rating": 5,
+      "date": "August 2026",
+      "text": "Academic Wizard helped me structure my dissertation research. The guidance was extremely helpful and professional.",
+      "verified": true
+    },
+    {
+      "id": "rev-2",
+      "name": "D***",
+      "location": "Sydney, AU",
+      "source": "Google",
+      "rating": 5,
+      "date": "July 2026",
+      "text": "Excellent academic editing service and very responsive support on WhatsApp. Saved me so much time with formatting.",
+      "verified": true
+    },
+    {
+      "id": "rev-3",
+      "name": "J***",
+      "location": "Dublin, IE",
+      "source": "Google",
+      "rating": 5,
+      "date": "July 2026",
+      "text": "Reliable academic assistance with great attention to research quality. The experts really know their subjects.",
+      "verified": true
+    },
+    {
+      "id": "rev-4",
+      "name": "M***",
+      "location": "Toronto, CA",
+      "source": "Trustpilot",
+      "rating": 5,
+      "date": "September 2026",
+      "text": "Outstanding support for my master's literature review. Delivered well ahead of deadline with rigorous citations and structure.",
+      "verified": true
+    }
+  ]
+}

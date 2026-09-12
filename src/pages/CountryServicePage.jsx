@@ -12,6 +12,7 @@ import PricingCalculator from '../components/PricingCalculator';
 import ContactForm from '../components/ContactForm';
 import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText, Star, Zap } from 'lucide-react';
 import { assetPath } from '../config/site';
+import reviewsData from '../data/reviews.json';
 
 const SLUG_TO_HREFLANG = {
     'uk': 'en-GB', 'usa': 'en-US', 'australia': 'en-AU', 'canada': 'en-CA',
@@ -147,7 +148,7 @@ const CountryServicePage = () => {
                                 <Star key={i} size={14} className="fill-amber-400" />
                             ))}
                         </div>
-                        <span>5.0/5 Trustpilot Rating · 1,450+ Students Helped</span>
+                        <span>{reviewsData.summary.trustpilot.rating.toFixed(1)}/5 Trustpilot Rating · {reviewsData.summary.studentsHelped} Students Helped</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Shield className="text-emerald-400" size={16} />

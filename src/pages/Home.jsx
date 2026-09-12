@@ -10,6 +10,7 @@ import Testimonials from '../components/Testimonials';
 import PricingCalculator from '../components/PricingCalculator';
 import Button from '../components/Button';
 import { motion } from 'framer-motion';
+import reviewsData from '../data/reviews.json';
 
 const Home = () => {
     const whatsappUrl = "https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20academic%20assistance";
@@ -28,8 +29,16 @@ const Home = () => {
             "https://www.instagram.com/_academic.wizard_",
             "https://www.linkedin.com/company/academic-wizard",
             "https://share.google/gFYneo9HEwNeToTvN",
-            "https://www.google.com/search?kgmid=/g/11z93djzl9&q=Academic+Wizard"
+            "https://www.google.com/search?kgmid=/g/11z93djzl9&q=Academic+Wizard",
+            "https://www.trustpilot.com/review/academicwizard.online"
         ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": reviewsData.summary.overallRating.toFixed(1),
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": reviewsData.summary.totalReviews
+        },
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "UK"

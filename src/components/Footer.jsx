@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Award, ThumbsUp, Linkedin, Facebook, Instagram, MapPin } from 'lucide-react';
 import academicWizardLogo from '../assets/academic-wizard-logo.webp';
+import reviewsData from '../data/reviews.json';
 
 const Footer = () => {
     return (
@@ -114,20 +115,36 @@ const Footer = () => {
 
                 <div>
                     <h3 className="font-heading text-sm mb-8 tracking-widest text-text-primary">Trust & Quality</h3>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-3">
                         <a 
-                            href="https://g.page/r/CTFgQ8nggIkfEAI/review" 
+                            href={reviewsData.summary.google.reviewUrl} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-accent-gold/20 hover:border-accent-gold transition-all group"
+                            className="flex items-center gap-3 p-2.5 rounded-xl bg-white/5 border border-accent-gold/20 hover:border-accent-gold transition-all group"
                         >
                             <div className="flex flex-col">
                                 <div className="flex items-center gap-1.5 text-accent-gold text-xs font-bold">
                                     <span>⭐⭐⭐⭐⭐</span>
-                                    <span className="text-white text-xs font-heading">5.0 / 5</span>
+                                    <span className="text-white text-xs font-heading">{reviewsData.summary.google.rating.toFixed(1)} / 5</span>
                                 </div>
                                 <span className="text-[11px] text-text-secondary group-hover:text-accent-gold transition-colors mt-0.5">
-                                    Google Verified Profile (4 Reviews)
+                                    Google Verified ({reviewsData.summary.google.reviewCount} Reviews)
+                                </span>
+                            </div>
+                        </a>
+                        <a 
+                            href={reviewsData.summary.trustpilot.profileUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500 transition-all group"
+                        >
+                            <div className="flex flex-col">
+                                <div className="flex items-center gap-1.5 text-emerald-400 text-xs font-bold">
+                                    <span>★★★★★</span>
+                                    <span className="text-white text-xs font-heading">{reviewsData.summary.trustpilot.rating.toFixed(1)} / 5</span>
+                                </div>
+                                <span className="text-[11px] text-text-secondary group-hover:text-emerald-400 transition-colors mt-0.5">
+                                    Trustpilot Verified ({reviewsData.summary.trustpilot.reviewCount} Review)
                                 </span>
                             </div>
                         </a>

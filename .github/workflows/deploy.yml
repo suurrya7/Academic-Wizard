@@ -55,16 +55,20 @@ jobs:
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: python automation/generate_seo.py
 
+      - name: Sync Live Reviews
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python automation/sync_reviews.py --sync
+
       - name: Commit generated content
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
-          git add public/blog/posts public/data/posts.json public/sitemap.xml public/robots.txt public/llms.txt public/llms-full.txt
+          git add public/blog/posts public/data/posts.json public/sitemap.xml public/robots.txt public/llms.txt public/llms-full.txt src/data/reviews.json
           if git diff --cached --quiet; then
             echo "No generated content changes to commit."
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git commit -m "Auto-generate daily blog posts and SEO assets"
+            git commit -m "Auto-generate daily blog posts, SEO assets, and sync reviews"
             git push
           fi
 

@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --open",
     "build": "node automation/dump_specialized.js && python3 automation/generate_seo.py && vite build && node scripts/generate-blog-pages.mjs && node scripts/prepare-pages.mjs",
+    "reviews:status": "python3 automation/sync_reviews.py --status",
+    "reviews:sync": "python3 automation/sync_reviews.py --sync",
     "lint": "eslint .",
     "preview": "vite preview"
   },
