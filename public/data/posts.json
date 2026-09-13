@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Why Your Synthesis Might Be Flagged in 2026",
+    "slug": "turnitin-ai-detection-why-your-synthesis-might-be-flagged-in-2026",
+    "excerpt": "Is Turnitin flagging your original work as AI? Learn why sophisticated synthesis often triggers false positives and how to prove your academic integrity.",
+    "keywords": [
+      "why is my writing flagged as AI on Turnitin",
+      "Turnitin false positive appeal process",
+      "academic integrity audit guide",
+      "how to humanize AI assisted writing",
+      "Turnitin similarity report interpretation"
+    ],
+    "primaryKeyword": "why is my writing flagged as AI on Turnitin",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-13T07:02:15.897157+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-why-your-synthesis-might-be-flagged-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Mastering NVivo Thematic Coding for Complex Qualitative PhD Theses",
+    "slug": "mastering-nvivo-thematic-coding-for-complex-qualitative-phd-theses",
+    "excerpt": "Struggling with qualitative data overload? Master the NVivo 26 workflow to code complex research themes accurately while minimizing researcher bias.",
+    "keywords": [
+      "NVivo thematic coding workflow for PhD",
+      "minimizing researcher bias in qualitative analysis",
+      "NVivo 26 coding framework",
+      "qualitative data organization strategies",
+      "thematic analysis step-by-step"
+    ],
+    "primaryKeyword": "NVivo thematic coding workflow for PhD",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-13T07:02:42.708564+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-thematic-coding-for-complex-qualitative-phd-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling In-Text Citations for Digital Media",
+    "slug": "apa-7th-edition-handling-in-text-citations-for-digital-media",
+    "excerpt": "Don't lose marks on digital citations. Learn the latest APA 7th edition rules for podcasts, social media, and multimedia to keep your thesis compliant.",
+    "keywords": [
+      "APA 7th edition in-text citation digital sources",
+      "APA 7 citing multimedia sources",
+      "avoiding citation penalties in thesis",
+      "formatting digital media references",
+      "complex multi-author citation rules"
+    ],
+    "primaryKeyword": "APA 7th edition in-text citation digital sources",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-13T07:03:09.970747+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-in-text-citations-for-digital-media.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Zotero for Massive Projects: Syncing Data Without Errors in 2026",
+    "slug": "zotero-for-massive-projects-syncing-data-without-errors-in-2026",
+    "excerpt": "Managing hundreds of sources? Prevent Zotero sync conflicts and metadata errors in your 2026 dissertation with this expert-level management guide.",
+    "keywords": [
+      "solving Zotero sync conflicts in large dissertations",
+      "managing 100+ sources in Zotero",
+      "Zotero library metadata cleanup",
+      "Zotero to Scrivener research workflow",
+      "fixing citation library errors"
+    ],
+    "primaryKeyword": "solving Zotero sync conflicts in large dissertations",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-13T07:03:36.744678+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-projects-syncing-data-without-errors-in-2026.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
     "title": "Fixing Zotero Sync Lags: 2026 Dissertation Database Cleanup Guide",
     "slug": "fixing-zotero-sync-lags-2026-dissertation-database-cleanup-guide",
     "excerpt": "Struggling with Zotero sync errors? Learn how to clean your metadata and optimize your large-scale dissertation library for a smooth 2026 research flow.",
