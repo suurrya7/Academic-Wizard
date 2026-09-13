@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-13T00:39:50.526398+00:00",
+  "last_run": "2026-09-13T05:43:05.618928+00:00",
   "daily_count": {
     "date": "2026-09-13",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -15,7 +15,8 @@
     "1we0pmr",
     "1we4vpj",
     "1wea10t",
-    "1weqm0p"
+    "1weqm0p",
+    "1wexi0i"
   ],
   "history": [
     {
@@ -105,7 +106,15 @@
       "title": "What is the biggest upset in the history of sports?",
       "posted_at": "2026-09-13T00:39:50.526394+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1weqm0p/what_is_the_biggest_upset_in_the_history_of_sports/"
+    },
+    {
+      "post_id": "1wexi0i",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Why can't we get rid of gender based washrooms and just have full/closed off rooms within the washroom where the only open area is a sink?",
+      "posted_at": "2026-09-13T05:43:05.618924+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1wexi0i/why_cant_we_get_rid_of_gender_based_washrooms_and/"
     }
   ],
-  "last_comment_posted_at": "2026-09-13T00:39:50.526378+00:00"
+  "last_comment_posted_at": "2026-09-13T05:43:05.618908+00:00"
 }
