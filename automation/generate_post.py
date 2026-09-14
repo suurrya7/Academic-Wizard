@@ -709,7 +709,13 @@ def generate_posts(count: int, dry_run: bool = False) -> list[dict]:
             related_blogs += '  </div>\n'
             related_blogs += '</section>\n'
             
-        final_html = content + "\n\n" + related_blogs + "\n\n" + generate_json_ld(meta, faqs)
+        canonical_target = f"/blog/{meta['slug']}/"
+        redirect_header = (
+            f'<script>window.location.replace("{canonical_target}");</script>\n'
+            f'<meta http-equiv="refresh" content="0; url={canonical_target}">\n'
+            f'<link rel="canonical" href="https://academicwizard.online{canonical_target}">\n'
+        )
+        final_html = redirect_header + "\n" + content + "\n\n" + related_blogs + "\n\n" + generate_json_ld(meta, faqs)
         
         post_path = POSTS_DIR / f"{meta['slug']}.html"
         post_path.write_text(final_html, encoding="utf-8")

@@ -94,6 +94,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
+          'vendor-framer': ['framer-motion'],
+          'vendor-router': ['react-router-dom', 'react-helmet-async'],
           'lucide': ['lucide-react']
         }
       }

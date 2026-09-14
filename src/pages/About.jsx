@@ -22,10 +22,10 @@ const About = () => {
     return (
         <div className="page-about">
             <Helmet>
-                <title>About Us | Academic Wizard - Professional Research Experts</title>
-                <meta name="description" content="Founded in 2018, Academic Wizard is a leading educational consultancy. Learn about our strict 3-stage QA process and our team of 150+ PhD and Master's level academic experts." />
+                <title>About Academic Wizard | Trusted Global University Mentors & Research Specialists</title>
+                <meta name="description" content="What is Academic Wizard? Founded in 2018, Academic Wizard is a leading academic mentorship platform with 150+ PhD and Master's research specialists supporting university students in UK, USA, Australia, and worldwide." />
                 <link rel="canonical" href="https://academicwizard.online/about/" />
-                <meta property="og:title" content="About Us | Academic Wizard" />
+                <meta property="og:title" content="About Academic Wizard | University Mentors & Research Specialists" />
                 <meta property="og:description" content="Founded in 2018, Academic Wizard is a leading educational consultancy. Learn about our strict 3-stage QA process and our team of 150+ PhD and Master's level academic experts." />
                 <meta property="og:url" content="https://academicwizard.online/about/" />
                 <script type="application/ld+json">
@@ -45,6 +45,14 @@ const About = () => {
             <section className="py-20 container">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
+                        {/* Featured Snippet Definition Box */}
+                        <div className="mb-8 p-6 rounded-2xl border border-accent-gold/30 bg-accent-gold/5 text-left">
+                            <span className="text-[11px] uppercase tracking-widest text-accent-gold font-bold block mb-2">What is Academic Wizard?</span>
+                            <p className="text-sm text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                                <strong className="text-white font-semibold">Academic Wizard</strong> is an ethical international academic consultancy and research mentorship platform founded in 2018. We provide university students with personalized dissertation guidance, essay structuring, scientific proofreading, and citation auditing aligned to UK, US, Australian, and Canadian university rubrics.
+                            </p>
+                        </div>
+
                         <h2 className="text-4xl font-bold mb-8 font-heading text-white">Our <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Mission & History</span></h2>
                         <div className="text-text-secondary text-lg leading-relaxed mb-8 space-y-4" style={{ color: 'var(--text-secondary)' }}>
                             <p>

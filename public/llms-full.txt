@@ -798,8 +798,8 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Target Region: UK
   - Published: 2026-08-12
 
-- **[APA 7 Tables & Figures: Avoiding Common Formatting Penalties in 2026](https://academicwizard.online/blog/apa-7-tables-figures-avoiding-common-formatting-penalties-in-2026/)**
-  - Excerpt: Don't let formatting mistakes lower your grade. Master the latest APA 7 table and figure standards to ensure your thesis meets strict academic criteria.
+- **[APA 7 Tables & Figures Checklist: Avoid Easy Grade Penalties [2026]](https://academicwizard.online/blog/apa-7-tables-figures-avoiding-common-formatting-penalties-in-2026/)**
+  - Excerpt: Master APA 7th edition table numbering, notes, italicization, and figure placement with visual examples to protect your GPA and pass thesis review.
   - Keywords: APA 7th edition table formatting rules, APA 7 figure caption standards, academic formatting pitfalls, thesis design guidelines, citation style compliance
   - Target Region: UK
   - Published: 2026-08-11
@@ -840,8 +840,8 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Target Region: USA
   - Published: 2026-08-05
 
-- **[Fixing In-Text Citation Errors: APA 7th Edition Common Pitfalls](https://academicwizard.online/blog/fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls/)**
-  - Excerpt: Are your APA 7 citations flagged for errors? Learn how to fix common multi-author and reference list mistakes to ensure your paper meets standards.
+- **[How to Fix APA 7th Citation Errors Fast [10 Common Pitfalls & Rules]](https://academicwizard.online/blog/fixing-in-text-citation-errors-apa-7th-edition-common-pitfalls/)**
+  - Excerpt: Fix confusing multi-author et al., parenthetical vs narrative, and secondary source errors in APA 7th edition with quick rules and verbatim examples.
   - Keywords: APA 7th edition in-text citation common errors, how to cite multiple authors in APA 7, fixing APA citation formatting loops, APA 7 manual formatting guide, avoiding citation errors in long papers
   - Target Region: Australia
   - Published: 2026-08-04
@@ -1506,8 +1506,8 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Target Region: UK
   - Published: 2026-08-03
 
-- **[Zotero PDF Metadata Errors: How to Fix Citations in Large Theses](https://academicwizard.online/blog/zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses/)**
-  - Excerpt: Struggling with messy Zotero metadata in your thesis? Learn how to automate cleanup, fix broken citations, and keep your references perfect for submission.
+- **[How to Fix Missing Zotero PDF Metadata in 30 Seconds [Thesis Guide]](https://academicwizard.online/blog/zotero-pdf-metadata-errors-how-to-fix-citations-in-large-theses/)**
+  - Excerpt: Fix missing DOIs, incorrect author names, and corrupt PDF metadata across large Zotero libraries before dissertation submission.
   - Keywords: fixing Zotero metadata errors in large documents, Zotero PDF attachment cleanup, automatic citation correction, thesis reference management, Zotero library organization
   - Target Region: USA
   - Published: 2026-08-02
@@ -1536,8 +1536,8 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Target Region: Canada
   - Published: 2026-07-29
 
-- **[Optimizing Obsidian and Zotero Workflows for Graduate Research](https://academicwizard.online/blog/optimizing-obsidian-and-zotero-workflows-for-graduate-research/)**
-  - Excerpt: Struggling to track your citations? Learn how to sync Zotero with Obsidian to build a powerful, searchable personal knowledge base for your 2026 research.
+- **[Obsidian + Zotero for Graduate Research: Complete 2026 Setup Guide](https://academicwizard.online/blog/optimizing-obsidian-and-zotero-workflows-for-graduate-research/)**
+  - Excerpt: Step-by-step tutorial: sync Zotero highlights, citations, and annotations into Obsidian Markdown notes for seamless literature reviews and PhD chapters.
   - Keywords: connecting Obsidian to Zotero for academic research, zotero research management, academic note taking strategies, obsidian for PhD students, managing academic citations 2026
   - Target Region: USA
   - Published: 2026-07-28
@@ -1724,8 +1724,8 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Target Region: USA
   - Published: 2026-07-25
 
-- **[Zotero 8 Integration Guide: Syncing PDFs and APA 7 Citations](https://academicwizard.online/blog/zotero-8-integration-guide-syncing-pdfs-and-apa-7-citations/)**
-  - Excerpt: Master Zotero 8 to manage your references effortlessly. Our guide covers syncing PDFs and ensuring perfect APA 7th edition formatting for your papers.
+- **[Zotero 8 PDF Sync & APA 7 Setup Guide [Step-by-Step Tutorial]](https://academicwizard.online/blog/zotero-8-integration-guide-syncing-pdfs-and-apa-7-citations/)**
+  - Excerpt: Master Zotero 8 PDF indexing, automated metadata extraction, and 1-click APA 7th bibliography generation with zero sync conflicts.
   - Keywords: using Zotero 8 for automated APA 7 citations, Zotero citation management, APA 7 bibliography formatting, academic reference software, syncing Zotero with Google Docs
   - Target Region: USA
   - Published: 2026-07-24

@@ -245,6 +245,13 @@ const SubjectCityPage = () => {
         });
     }
 
+    if (countrySlug === "australia") {
+        targetedQuestions.push({
+            question: `How do your Australian specialists ensure papers meet High Distinction (HD) rubrics at Go8 universities?`,
+            answer: `Our Australian academic team consists of Master's and PhD graduates from Group of Eight (Go8) and ATN universities (including Melbourne, Sydney, UNSW, Monash, and UQ). Every paper is crafted around Australian marking criteria (HD 85%+), incorporating peer-reviewed Australian scholarly literature and exact referencing including AGLC4 for law, APA 7th for nursing/psychology, and AGPS Harvard for business.`
+        });
+    }
+
     const synthesizedFaqs = pageType === "subject" ? [
         ...targetedQuestions,
         {
@@ -455,6 +462,38 @@ const SubjectCityPage = () => {
                                 author={selectedQuote.author}
                                 role={`${selectedQuote.role} (${country.name})`}
                             />
+
+                            {/* Australian Academic Standards Card (High Distinction & Go8 Calibrated) */}
+                            {countrySlug === "australia" && (
+                                <div className="glass-card p-6 border-emerald-500/30 bg-emerald-500/5 space-y-3">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-bold text-text-primary font-heading flex items-center gap-2">
+                                            <Award className="text-emerald-400" size={18} />
+                                            Targeting High Distinction (HD) & Distinction (D) Standards
+                                        </h3>
+                                        <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-bold border border-emerald-500/20">
+                                            Go8 & ATN Calibrated
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-text-secondary leading-relaxed">
+                                        Our Australian academic faculty hold advanced postgraduate degrees from Group of Eight (Go8) and Australian Technology Network (ATN) universities. Every project is crafted to rigorous Australian Higher Education criteria:
+                                    </p>
+                                    <div className="grid grid-cols-3 gap-3 pt-1">
+                                        <div className="p-2.5 rounded-lg bg-black/30 border border-white/5 text-center">
+                                            <div className="text-sm font-bold text-accent-gold font-mono">HD (85%+)</div>
+                                            <div className="text-[11px] text-text-secondary">High Distinction</div>
+                                        </div>
+                                        <div className="p-2.5 rounded-lg bg-black/30 border border-white/5 text-center">
+                                            <div className="text-sm font-bold text-emerald-400 font-mono">AGLC4 / AGPS</div>
+                                            <div className="text-[11px] text-text-secondary">AU Citations</div>
+                                        </div>
+                                        <div className="p-2.5 rounded-lg bg-black/30 border border-white/5 text-center">
+                                            <div className="text-sm font-bold text-sky-400 font-mono">TEQSA Safe</div>
+                                            <div className="text-[11px] text-text-secondary">Academic Integrity</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
 
                             {/* Service-Specific Deliverables Box — Differentiates the 7 Services for Google & Students */}
                             {serviceVerb.deliverables && (

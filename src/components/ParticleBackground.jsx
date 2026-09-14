@@ -81,6 +81,18 @@ import { useTheme } from '../context/ThemeContext';
 const ParticleBackground = () => {
     const { theme } = useTheme();
     const isLight = theme === 'light';
+    const [isMobile, setIsMobile] = React.useState(() => {
+        if (typeof window === 'undefined') return false;
+        return window.innerWidth < 768;
+    });
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <div className={`fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none transition-colors duration-700 overflow-hidden ${
@@ -207,12 +219,14 @@ const ParticleBackground = () => {
                 </svg>
             </div>
 
-            {/* GPU-Accelerated Golden Library Dust Particles */}
-            <ErrorBoundary>
-                <Canvas camera={{ position: [0, 0, 1] }}>
-                    <Particles isLight={isLight} />
-                </Canvas>
-            </ErrorBoundary>
+            {/* GPU-Accelerated Golden Library Dust Particles (Desktop only to maximize mobile Core Web Vitals) */}
+            {!isMobile && (
+                <ErrorBoundary>
+                    <Canvas camera={{ position: [0, 0, 1] }}>
+                        <Particles isLight={isLight} />
+                    </Canvas>
+                </ErrorBoundary>
+            )}
         </div>
     );
 };

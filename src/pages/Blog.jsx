@@ -44,8 +44,22 @@ const Blog = () => {
 
     useEffect(() => {
         let mounted = true;
+        const cacheKey = 'aw_posts_cache';
 
-        fetch(assetPath('data/posts.json'), { cache: 'no-store' })
+        try {
+            const cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                const parsed = JSON.parse(cached);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    setPosts(parsed);
+                    setStatus('ready');
+                }
+            }
+        } catch (e) {
+            // Ignore sessionStorage error
+        }
+
+        fetch(assetPath('data/posts.json'))
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Could not load posts: ${response.status}`);
@@ -59,10 +73,15 @@ const Blog = () => {
                     : [];
                 setPosts(normalized);
                 setStatus('ready');
+                try {
+                    sessionStorage.setItem(cacheKey, JSON.stringify(normalized));
+                } catch (e) {
+                    // SessionStorage quota exceeded or private browsing
+                }
             })
             .catch(() => {
                 if (!mounted) return;
-                setStatus('error');
+                setStatus((prev) => (prev === 'ready' ? 'ready' : 'error'));
             });
 
         return () => {

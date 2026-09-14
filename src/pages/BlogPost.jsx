@@ -30,41 +30,71 @@ const BlogPost = () => {
     const contentRef = useRef(null);
 
     useEffect(() => {
-        // Fetch post metadata from posts.json (prevent caching)
-        fetch(assetPath('data/posts.json'), { cache: 'no-store' })
+        const cacheKey = 'aw_posts_cache';
+        let cachedPosts = null;
+        try {
+            const raw = sessionStorage.getItem(cacheKey);
+            if (raw) cachedPosts = JSON.parse(raw);
+        } catch (e) {
+            // Ignore
+        }
+
+        const loadPostHtml = (post) => {
+            setPostData(post);
+            return fetch(assetPath(`blog/posts/${slug}.html`))
+                .then(res => {
+                    if (!res.ok) throw new Error('Failed to fetch post HTML');
+                    return res.text();
+                })
+                .then(html => {
+                    const schemas = [];
+                    let processedHtml = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi, (match, innerJson) => {
+                        try {
+                            schemas.push(JSON.parse(innerJson));
+                        } catch (e) {
+                            console.error('Failed to parse json-ld from blog post', e);
+                        }
+                        return '';
+                    });
+
+                    // Strip redirect scripts, meta/link tags, and any <h1> tags from the HTML content
+                    let cleanedHtml = processedHtml
+                        .replace(/<script[\s\S]*?<\/script>/gi, '')
+                        .replace(/<meta[^>]*>/gi, '')
+                        .replace(/<link[^>]*>/gi, '')
+                        .replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+                    setHtmlContent(cleanedHtml);
+                    setJsonLdSchemas(schemas);
+                    setStatus('ready');
+                });
+        };
+
+        if (cachedPosts && Array.isArray(cachedPosts)) {
+            const post = cachedPosts.find(p => p.slug === slug);
+            if (post) {
+                loadPostHtml(post).catch(err => {
+                    console.error("Error loading blog post HTML:", err);
+                    setStatus('error');
+                });
+                return;
+            }
+        }
+
+        // Fetch post metadata from posts.json if not in cache or post not found
+        fetch(assetPath('data/posts.json'))
             .then(res => res.json())
             .then(data => {
+                try {
+                    sessionStorage.setItem(cacheKey, JSON.stringify(data));
+                } catch (e) {
+                    // Quota exceeded or private browsing
+                }
                 const post = data.find(p => p.slug === slug);
                 if (!post) {
                     setStatus('notfound');
                     return;
                 }
-                setPostData(post);
-                
-                // Fetch the actual HTML fragment (prevent caching)
-                return fetch(assetPath(`blog/posts/${slug}.html`), { cache: 'no-store' })
-                    .then(res => {
-                        if (!res.ok) throw new Error('Failed to fetch post HTML');
-                        return res.text();
-                    })
-                    .then(html => {
-                        const schemas = [];
-                        let processedHtml = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi, (match, innerJson) => {
-                            try {
-                                schemas.push(JSON.parse(innerJson));
-                            } catch (e) {
-                                console.error('Failed to parse json-ld from blog post', e);
-                            }
-                            return '';
-                        });
-
-                        // Strip any <h1> tags from the HTML content since
-                        // the React component already renders the title as <h1>
-                        const cleanedHtml = processedHtml.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
-                        setHtmlContent(cleanedHtml);
-                        setJsonLdSchemas(schemas);
-                        setStatus('ready');
-                    });
+                return loadPostHtml(post);
             })
             .catch(err => {
                 console.error("Error loading blog post:", err);
