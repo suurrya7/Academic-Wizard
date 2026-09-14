@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-13
+        **Last updated**: 2026-09-14
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -249,6 +249,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero to Scrivener 2026: Mastering Your PhD Dissertation Workflow](https://academicwizard.online/blog/zotero-to-scrivener-2026-mastering-your-phd-dissertation-workflow/)**
+  - Excerpt: Struggling with 100+ sources? Learn the ultimate 2026 workflow for syncing Zotero with Scrivener to keep your dissertation organized and error-free.
+  - Keywords: Zotero to Scrivener thesis workflow, dissertation citation management, organizing large research projects, PhD writing productivity, automated bibliography setup
+  - Target Region: UK
+  - Published: 2026-09-14
 
 - **[Mastering NVivo Thematic Coding for Complex Qualitative PhD Theses](https://academicwizard.online/blog/mastering-nvivo-thematic-coding-for-complex-qualitative-phd-theses/)**
   - Excerpt: Struggling with qualitative data overload? Master the NVivo 26 workflow to code complex research themes accurately while minimizing researcher bias.
@@ -605,6 +611,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Fixing Turnitin Similarity Spikes: Auditing Your Academic Voice in 2026](https://academicwizard.online/blog/fixing-turnitin-similarity-spikes-auditing-your-academic-voice-in-2026/)**
+  - Excerpt: Flagged by Turnitin for AI? Learn how to audit your draft, provide evidence of your writing process, and protect your academic integrity in 2026.
+  - Keywords: Turnitin AI false positive audit guide, academic writing integrity check, Turnitin similarity report context, human-authored vs AI writing, student plagiarism defense
+  - Target Region: USA
+  - Published: 2026-09-14
 
 - **[APA 7th Edition: Handling In-Text Citations for Digital Media](https://academicwizard.online/blog/apa-7th-edition-handling-in-text-citations-for-digital-media/)**
   - Excerpt: Don't lose marks on digital citations. Learn the latest APA 7th edition rules for podcasts, social media, and multimedia to keep your thesis compliant.
@@ -1236,6 +1248,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Reducing Coding Bias in NVivo 26: A Practical Guide for Qualitative Theses](https://academicwizard.online/blog/reducing-coding-bias-in-nvivo-26-a-practical-guide-for-qualitative-theses/)**
+  - Excerpt: Ensure your qualitative data analysis holds up to scrutiny. Discover expert tips for minimizing researcher bias and coding drift using NVivo 26.
+  - Keywords: NVivo 26 thematic analysis bias reduction, qualitative research methodology, coding drift in NVivo, thematic mapping for PhDs, validating qualitative findings
+  - Target Region: Canada
+  - Published: 2026-09-14
+
 - **[Turnitin AI Detection: Why Your Synthesis Might Be Flagged in 2026](https://academicwizard.online/blog/turnitin-ai-detection-why-your-synthesis-might-be-flagged-in-2026/)**
   - Excerpt: Is Turnitin flagging your original work as AI? Learn why sophisticated synthesis often triggers false positives and how to prove your academic integrity.
   - Keywords: why is my writing flagged as AI on Turnitin, Turnitin false positive appeal process, academic integrity audit guide, how to humanize AI assisted writing, Turnitin similarity report interpretation
@@ -1597,6 +1615,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[APA 7th Edition: Navigating New Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-navigating-new-citation-rules-for-complex-digital-media-2/)**
+  - Excerpt: Stuck on APA 7 citations for digital media? Master the latest rules for multi-author sources and avoid common formatting penalties in your assignments.
+  - Keywords: APA 7th edition digital media citation rules, citing social media in APA, complex multi-author references, APA 7 formatting guide, academic citation pitfalls
+  - Target Region: Australia
+  - Published: 2026-09-14
 
 - **[Zotero for Massive Projects: Syncing Data Without Errors in 2026](https://academicwizard.online/blog/zotero-for-massive-projects-syncing-data-without-errors-in-2026/)**
   - Excerpt: Managing hundreds of sources? Prevent Zotero sync conflicts and metadata errors in your 2026 dissertation with this expert-level management guide.

@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Turnitin Similarity Spikes: Auditing Your Academic Voice in 2026",
+    "slug": "fixing-turnitin-similarity-spikes-auditing-your-academic-voice-in-2026",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, provide evidence of your writing process, and protect your academic integrity in 2026.",
+    "keywords": [
+      "Turnitin AI false positive audit guide",
+      "academic writing integrity check",
+      "Turnitin similarity report context",
+      "human-authored vs AI writing",
+      "student plagiarism defense"
+    ],
+    "primaryKeyword": "Turnitin AI false positive audit guide",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-14T07:25:25.491221+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-turnitin-similarity-spikes-auditing-your-academic-voice-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener 2026: Mastering Your PhD Dissertation Workflow",
+    "slug": "zotero-to-scrivener-2026-mastering-your-phd-dissertation-workflow",
+    "excerpt": "Struggling with 100+ sources? Learn the ultimate 2026 workflow for syncing Zotero with Scrivener to keep your dissertation organized and error-free.",
+    "keywords": [
+      "Zotero to Scrivener thesis workflow",
+      "dissertation citation management",
+      "organizing large research projects",
+      "PhD writing productivity",
+      "automated bibliography setup"
+    ],
+    "primaryKeyword": "Zotero to Scrivener thesis workflow",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-14T07:25:52.821160+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-2026-mastering-your-phd-dissertation-workflow.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Reducing Coding Bias in NVivo 26: A Practical Guide for Qualitative Theses",
+    "slug": "reducing-coding-bias-in-nvivo-26-a-practical-guide-for-qualitative-theses",
+    "excerpt": "Ensure your qualitative data analysis holds up to scrutiny. Discover expert tips for minimizing researcher bias and coding drift using NVivo 26.",
+    "keywords": [
+      "NVivo 26 thematic analysis bias reduction",
+      "qualitative research methodology",
+      "coding drift in NVivo",
+      "thematic mapping for PhDs",
+      "validating qualitative findings"
+    ],
+    "primaryKeyword": "NVivo 26 thematic analysis bias reduction",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-14T07:26:20.083269+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/reducing-coding-bias-in-nvivo-26-a-practical-guide-for-qualitative-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating New Citation Rules for Complex Digital Media",
+    "slug": "apa-7th-edition-navigating-new-citation-rules-for-complex-digital-media-2",
+    "excerpt": "Stuck on APA 7 citations for digital media? Master the latest rules for multi-author sources and avoid common formatting penalties in your assignments.",
+    "keywords": [
+      "APA 7th edition digital media citation rules",
+      "citing social media in APA",
+      "complex multi-author references",
+      "APA 7 formatting guide",
+      "academic citation pitfalls"
+    ],
+    "primaryKeyword": "APA 7th edition digital media citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-14T07:26:45.927217+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-new-citation-rules-for-complex-digital-media-2.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Why Your Synthesis Might Be Flagged in 2026",
     "slug": "turnitin-ai-detection-why-your-synthesis-might-be-flagged-in-2026",
     "excerpt": "Is Turnitin flagging your original work as AI? Learn why sophisticated synthesis often triggers false positives and how to prove your academic integrity.",
