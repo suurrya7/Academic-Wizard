@@ -1,0 +1,695 @@
+{
+  "generated_at": "2026-09-14T21:17:13.787721+00:00",
+  "week_start": "2026-09-21",
+  "insights_summary": {
+    "core_finding": "Maintained priority on citation tools and dissertation emergency triage.",
+    "top_performing_topics": [
+      "Turnitin Deconstructed: What The Colors Mean",
+      "Law Problem Questions: The IRAC Masterclass"
+    ],
+    "underperforming_topics": [
+      "Substantive Academic Editing vs. Surface Proofreading",
+      "Midnight Panic? The 12-Hour Urgent Rescue Protocol"
+    ],
+    "strategic_shift": "Prioritizing high-CTR topics for mid-week student deadlines."
+  },
+  "audit_totals": {
+    "reach": 37620,
+    "clicks": 678,
+    "engagements": 729
+  },
+  "schedule": {
+    "Monday": {
+      "morning": {
+        "day": "Monday",
+        "topic": "In-Text Citations: APA 7th vs Harvard vs OSCOLA",
+        "badge": "ACADEMIC WEAPON: CITATION MATRIX",
+        "hook_headline": "Never Lose Marks on In-Text Citations Again",
+        "hook_sub": "Up to 15% of university marks are penalized purely for inconsistent referencing, missing page pinpoints, and improper author syntax.",
+        "hook_bullets": [
+          "Direct quotes always require exact page numbers; paraphrasing does not.",
+          "UK Law dissertations penalize full stops inside OSCOLA footnotes."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Using (Smith, 2020) everywhere without page numbers, mixing Harvard colon formats with APA comma rules, and putting full stops inside OSCOLA abbreviations.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "APA 7th: (Smith, 2020, p. 45) for quotes. Harvard: (Smith 2020: 45). OSCOLA: Put citation in numerical footnotes without brackets or punctuation."
+        },
+        "formula": {
+          "title": "The Exact Referencing Architecture",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Direct Quotes",
+              "desc": "Author (Year, p. 45) + verbatim quotation enclosed in speech marks."
+            },
+            {
+              "num": "02",
+              "label": "Paraphrase",
+              "desc": "(Author, Year) — zero page number needed unless pinpointing a concept."
+            },
+            {
+              "num": "03",
+              "label": "3+ Authors",
+              "desc": "Use (FirstAuthor et al., Year) right from the first citation in APA 7th."
+            }
+          ],
+          "exemplar": "Example: According to Davis (2024, p. 112), 'empirical rigor requires precise attribution.'"
+        },
+        "checklist": [
+          "Every in-text citation has a corresponding match in your bibliography.",
+          "Direct quotations include specific page (p. 45) or paragraph pinpoints.",
+          "OSCOLA footnotes are numbered consecutively without parentheses.",
+          "Sources published in the last 5 years account for 70%+ of citations."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Generate accurate APA, Harvard, and OSCOLA citations instantly with our free tools.",
+        "whatsapp_msg": "Hi Academic Wizard, I need help formatting my citations and references for my paper."
+      },
+      "evening": {
+        "day": "Monday",
+        "topic": "Law Problem Questions: The IRAC Masterclass",
+        "badge": "CORE SERVICE: LAW ASSIGNMENT HELP",
+        "hook_headline": "Score a First Class in Contract, Tort & Criminal Law",
+        "hook_sub": "Law tutors grade problem questions with mathematical precision. If you skip a single step in the IRAC formula, your mark drops from a First to a 2:2.",
+        "hook_bullets": [
+          "Citing cases without stating the ratio decidendi loses judicial analysis marks.",
+          "OSCOLA requires precise pinpointing to law reports (e.g. [1893] 1 QB 256)."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Writing long essays telling the story of the parties without isolating the specific legal cause of action, and failing to raise obvious legal defenses.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Systematic IRAC execution: Isolate legal dispute, cite statutory provisions and landmark precedents, apply principles to facts, and deliver a decisive conclusion."
+        },
+        "formula": {
+          "title": "The IRAC Legal Analysis Architecture",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Issue (10%)",
+              "desc": "Identify whether a valid contract formed or duty of care was breached."
+            },
+            {
+              "num": "02",
+              "label": "Rule (25%)",
+              "desc": "Cite governing statutes (e.g. CRA 2015) and binding precedents (Donoghue)."
+            },
+            {
+              "num": "03",
+              "label": "Application (50%)",
+              "desc": "Weigh facts against legal tests with counter-arguments and defenses."
+            }
+          ],
+          "exemplar": "Conclusion: Advise client on likelihood of summary judgment or damages under OSCOLA."
+        },
+        "checklist": [
+          "Every legal proposition is supported by a primary statute or case precedent.",
+          "OSCOLA footnote citations include exact paragraph and page pinpoints.",
+          "Both claimant and defendant arguments have been rigorously evaluated.",
+          "Delivered clear legal advice on remedies and judicial likelihood."
+        ],
+        "tool_url": "https://academicwizard.online/services/law-assignment-help/",
+        "cta_text": "Get custom law essays, problem questions, and OSCOLA citations written by qualified LLB/LLM experts.",
+        "whatsapp_msg": "Hi Academic Wizard, I need urgent Law assignment help with IRAC methodology and OSCOLA."
+      }
+    },
+    "Tuesday": {
+      "morning": {
+        "day": "Tuesday",
+        "topic": "5 Free Academic Search Engines & Boolean Strings",
+        "badge": "RESEARCH STRATEGY: LITERATURE SEARCH",
+        "hook_headline": "Stop Relying Solely on Google Scholar",
+        "hook_sub": "Most students search with single keywords and hit paywalls. First-Class researchers use specialized open-access databases and Boolean operators.",
+        "hook_bullets": [
+          "Google Scholar indexes low-quality predatory journals alongside reputable papers.",
+          "Boolean search strings instantly filter 10,000 irrelevant results down to 20 peer-reviewed gems."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Typing 'nursing care elderly' into Google Scholar and citing blogs, outdated 2011 textbooks, or paywalled abstracts without reading the methodology.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Using CORE, BASE, and Semantic Scholar with precise Boolean strings: (\"nursing care\" OR \"geriatric\") AND (\"interventions\") AND (\"2022\"..\"2026\")."
+        },
+        "formula": {
+          "title": "The Boolean Search Operator Blueprint",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Quotation Marks",
+              "desc": "Use \"nursing interventions\" to search exact multi-word phrases."
+            },
+            {
+              "num": "02",
+              "label": "OR Operator",
+              "desc": "Group synonyms: (dementia OR Alzheimer's) to capture all related literature."
+            },
+            {
+              "num": "03",
+              "label": "AND Operator",
+              "desc": "Connect core themes: (\"clinical trial\" AND \"outcomes\") to filter results."
+            }
+          ],
+          "exemplar": "Query: (\"digital marketing\" OR \"e-commerce\") AND (\"consumer behavior\") AND (\"SMEs\")"
+        },
+        "checklist": [
+          "Searched CORE or Semantic Scholar for unpaywalled full-text PDFs.",
+          "Filtered publication date to the last 3-5 years (2021-2026).",
+          "Verified journals are indexed in Scopus, Web of Science, or PubMed.",
+          "Saved DOIs and persistent URLs for reference management."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Explore free research guides, topic databases, and word count calculators at Academic Wizard.",
+        "whatsapp_msg": "Hi Academic Wizard, I need help finding peer-reviewed sources for my literature review."
+      },
+      "evening": {
+        "day": "Tuesday",
+        "topic": "Nursing Care Plans & Gibbs Reflective Cycle",
+        "badge": "CORE SERVICE: NURSING & HEALTHCARE",
+        "hook_headline": "Evidence-Based Practice & Gibbs Reflective Mastery",
+        "hook_sub": "Nursing case studies require balancing empathetic reflection with rigorous clinical evidence. Gibbs reflective cycle without Level 1 evidence fails the rubric.",
+        "hook_bullets": [
+          "Examiners mark heavily for adherence to UK NMC and Australian NMBA codes.",
+          "Every nursing intervention must link to peer-reviewed RCTs or clinical guidelines (NICE)."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Writing purely emotional diary entries (\"I felt sad for the patient\") without clinical analysis or theoretical grounding in nursing models.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Structured Gibbs progression with PICO frameworks: Linking clinical interventions directly to Cochrane reviews, NICE guidelines, and NMC standards."
+        },
+        "formula": {
+          "title": "The Gibbs 6-Stage Reflective Framework",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Description & Feelings",
+              "desc": "Objective clinical overview followed by emotional self-awareness."
+            },
+            {
+              "num": "02",
+              "label": "Evaluation & Analysis",
+              "desc": "Critique what went well vs challenges using evidence-based literature."
+            },
+            {
+              "num": "03",
+              "label": "Conclusion & Action",
+              "desc": "Concrete SMART clinical action plan for future clinical practice."
+            }
+          ],
+          "exemplar": "Evidence Standard: Cite CINAHL, PubMed, and NICE guidelines published within 5 years."
+        },
+        "checklist": [
+          "Follows all 6 stages of Gibbs Reflective Cycle with clear subheadings.",
+          "Patient confidentiality preserved in strict compliance with NMC Code.",
+          "Clinical interventions justified with Level 1 systematic reviews.",
+          "PICO question formulated for evidence-based practice sections."
+        ],
+        "tool_url": "https://academicwizard.online/services/nursing-assignment-help/",
+        "cta_text": "Connect directly with practicing healthcare & clinical nursing writers on WhatsApp.",
+        "whatsapp_msg": "Hi Academic Wizard, I need assistance with a Nursing reflective case study and care plan."
+      }
+    },
+    "Wednesday": {
+      "morning": {
+        "day": "Wednesday",
+        "topic": "The 10-80-10 Rule & P-E-E-L+E Essay Blueprint",
+        "badge": "ESSAY ARCHITECTURE: FIRST CLASS FORMULA",
+        "hook_headline": "Structure Any 2,500-Word Essay Without Fluff",
+        "hook_sub": "Tutors grade essay structure in the first 60 seconds. A meandering introduction or descriptive body paragraphs will lock your paper at 58%.",
+        "hook_bullets": [
+          "Descriptive writing tells the marker WHAT happened (capped at 2:2).",
+          "Critical writing analyzes WHY it matters and HOW evidence conflicts (70%+)."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Writing long storytelling paragraphs with no clear topic sentence, quoting huge blocks of text, and introducing new arguments in the conclusion.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Apply the 10-80-10 distribution: 250w Intro + 4 thematic sections of 500w using P-E-E-L+E + 250w synthesis Conclusion with zero new evidence."
+        },
+        "formula": {
+          "title": "The P-E-E-L+E First-Class Paragraph Engine",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Point & Evidence",
+              "desc": "Bold claim linked to thesis statement + empirical citation."
+            },
+            {
+              "num": "02",
+              "label": "Explanation",
+              "desc": "Critical breakdown of theoretical mechanisms and methodology."
+            },
+            {
+              "num": "03",
+              "label": "Link & Evaluation",
+              "desc": "Contrast with counter-arguments and link directly to the assignment prompt."
+            }
+          ],
+          "exemplar": "Formula: Point (20%) + Evidence (25%) + Analysis (35%) + Evaluation/Link (20%)."
+        },
+        "checklist": [
+          "Introduction contains a definitive thesis statement and signposting.",
+          "Each body paragraph begins with a clear analytical topic sentence.",
+          "Every major paragraph includes critical evaluation of limitations.",
+          "Conclusion answers the assignment question without adding new citations."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Plan your essay word counts, paragraph targets, and margins with our free calculators.",
+        "whatsapp_msg": "Hi Academic Wizard, I need help structuring and outlining my university essay."
+      },
+      "evening": {
+        "day": "Wednesday",
+        "topic": "MBA Reports: Porter's, SWOT & Financial Ratios",
+        "badge": "CORE SERVICE: MBA & MANAGEMENT",
+        "hook_headline": "Mastering Executive Reports & Strategic Frameworks",
+        "hook_sub": "MBA professors penalize students who simply define textbooks frameworks. Executive reports require analyzing strategic friction and budgeting recommendations.",
+        "hook_bullets": [
+          "Describing Porter's Five Forces is undergraduate level; analyzing margin erosion is MBA level.",
+          "Executive summaries must provide actionable, budgeted solutions with timelines."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Listing bullet points in a SWOT table without cross-analyzing internal capabilities against external threats, and giving vague non-budgeted advice.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Integrating VRIO core competencies with PESTLE macro-risks, supported by financial ratio analysis (ROIC, EBITDA) and a budgeted implementation roadmap."
+        },
+        "formula": {
+          "title": "The Strategic MBA Analysis Blueprint",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Internal & External",
+              "desc": "Cross-reference internal VRIO moats against Porter's competitive forces."
+            },
+            {
+              "num": "02",
+              "label": "Financial Modeling",
+              "desc": "Quantify strategic claims with profitability and liquidity metrics."
+            },
+            {
+              "num": "03",
+              "label": "Actionable Roadmap",
+              "desc": "Deliver 3 prioritized recommendations with CAPEX budget and KPI metrics."
+            }
+          ],
+          "exemplar": "Executive standard: Recommendations must state estimated ROI and implementation risk."
+        },
+        "checklist": [
+          "Executive summary functions as a standalone decision-making document.",
+          "Strategic frameworks analyze tension rather than textbook definitions.",
+          "Financial statements and ratios accurately calculated and interpreted.",
+          "Recommendations include risk mitigation matrices and timelines."
+        ],
+        "tool_url": "https://academicwizard.online/services/assignment-help/",
+        "cta_text": "Get high-distinction MBA case studies, business proposals, and financial analysis drafted by postgrads.",
+        "whatsapp_msg": "Hi Academic Wizard, I need expert help with my MBA Strategic Management assignment."
+      }
+    },
+    "Thursday": {
+      "morning": {
+        "day": "Thursday",
+        "topic": "Turning Broad Topics into First-Class Hypotheses",
+        "badge": "DISSERTATION TOOLKIT: RESEARCH QUESTIONS",
+        "hook_headline": "How to Formulate a Bulletproof Thesis Statement",
+        "hook_sub": "A weak thesis is the #1 reason dissertation proposals get rejected. Your thesis cannot be an obvious fact — it must be an arguable empirical claim.",
+        "hook_bullets": [
+          "A topic is just a subject area; a thesis is a debatable stance on that subject.",
+          "High-scoring questions focus on specific cohorts, jurisdictions, or datasets."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "\"This paper will discuss the impact of social media on mental health.\" (Descriptive, broad, unmeasurable, and lacks an arguable academic stance).",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "\"While passive social media use correlates with depressive symptoms in adolescents, algorithmic recommendation feeds act as the primary moderating variable.\""
+        },
+        "formula": {
+          "title": "The 3-Part Thesis Formulation Formula",
+          "steps": [
+            {
+              "num": "01",
+              "label": "The Concession",
+              "desc": "Acknowledge the existing consensus: \"While [counter-perspective]...\""
+            },
+            {
+              "num": "02",
+              "label": "The Core Claim",
+              "desc": "Deliver your specific argument: \"...this study demonstrates that [X]...\""
+            },
+            {
+              "num": "03",
+              "label": "The Mechanism",
+              "desc": "State the empirical reason: \"...due to the mediating role of [Y and Z].\""
+            }
+          ],
+          "exemplar": "Formula: Although [X is widely assumed], this dissertation proves [Y], because [Z]."
+        },
+        "checklist": [
+          "Thesis is debatable and could be challenged by another scholar.",
+          "Variables and target demographic are tightly defined.",
+          "Feasible within your word count (10,000 - 15,000 words).",
+          "Ethical approval considerations have been mapped out."
+        ],
+        "tool_url": "https://academicwizard.online/dissertation-help/",
+        "cta_text": "Refine your dissertation proposal or research methodology with our PhD consulting team.",
+        "whatsapp_msg": "Hi Academic Wizard, can you review my dissertation thesis topic and research question?"
+      },
+      "evening": {
+        "day": "Thursday",
+        "topic": "Dissertation Literature Review: The Synthesis Matrix",
+        "badge": "CORE SERVICE: PH.D. & MASTER'S THESIS",
+        "hook_headline": "Synthesize 40+ Papers into a First-Class Literature Review",
+        "hook_sub": "Chronological literature reviews ('Author A said X, Author B said Y') guarantee a 2:2 mark. A Master's thesis must construct a thematic synthesis matrix.",
+        "hook_bullets": [
+          "Tutors look for methodological divides: qualitative vs quantitative conflicts.",
+          "Your literature review exists solely to justify why your study must be conducted."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Writing chapter sections organized by individual authors or years, providing descriptive book reports with zero critical comparison of methodologies.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Thematic coding: Organizing chapters by theoretical debates, comparing sampling limitations across studies, and clearly highlighting the empirical knowledge gap."
+        },
+        "formula": {
+          "title": "The Literature Review Synthesis Matrix",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Thematic Coding",
+              "desc": "Group papers by core arguments, theoretical schools, and debates."
+            },
+            {
+              "num": "02",
+              "label": "Methodological Audit",
+              "desc": "Expose sampling biases, regional limitations, and statistical weaknesses."
+            },
+            {
+              "num": "03",
+              "label": "The Knowledge Gap",
+              "desc": "Formally demonstrate how your dissertation addresses the unstudied gap."
+            }
+          ],
+          "exemplar": "Syntax: 'While Jones (2022) established X, their qualitative sample (n=12) failed to account for Y.'"
+        },
+        "checklist": [
+          "Literature review organized by thematic headings, not author by author.",
+          "Identified at least 2 major theoretical or methodological disagreements.",
+          "Explicitly stated how the literature gap justifies your methodology.",
+          "Includes recent empirical studies from 2022-2026 across top journals."
+        ],
+        "tool_url": "https://academicwizard.online/dissertation-help/",
+        "cta_text": "From chapter drafting to SPSS data analysis, our PhD supervisors guide your entire thesis.",
+        "whatsapp_msg": "Hi Academic Wizard, I need help with my Master's Dissertation literature review & methodology."
+      }
+    },
+    "Friday": {
+      "morning": {
+        "day": "Friday",
+        "topic": "Turnitin Deconstructed: What The Colors Mean",
+        "badge": "ACADEMIC INTEGRITY: TURNITIN GUIDE",
+        "hook_headline": "What Your Turnitin Score Actually Means",
+        "hook_sub": "Many students panic when they see a 18% similarity score, while others get flagged with 8%. Here is how university examiners evaluate Turnitin reports.",
+        "hook_bullets": [
+          "Turnitin does NOT detect plagiarism; it detects matching text strings.",
+          "A paper can have 5% similarity and still fail for contract cheating or bad paraphrasing."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Using automated synonym swappers or spinners (which ruins academic register) and testing papers on free online tools that save your work into public repositories.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Substantive paraphrasing by grasping theoretical concepts, using non-repository portals, and configuring reference and template exclusions."
+        },
+        "formula": {
+          "title": "Turnitin Percentage Band Protocol",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Blue / Green (0-24%)",
+              "desc": "Healthy baseline: citations, bibliography, and standard course terminology."
+            },
+            {
+              "num": "02",
+              "label": "Yellow (25-49%)",
+              "desc": "Warning zone: excessive direct quoting, needs aggressive paraphrasing."
+            },
+            {
+              "num": "03",
+              "label": "Orange / Red (50%+)",
+              "desc": "Academic misconduct audit: requires complete structural overhaul."
+            }
+          ],
+          "exemplar": "Rule: Exclude bibliographies and quotes < 5 words to see your real core similarity."
+        },
+        "checklist": [
+          "Examine the similarity breakdown source list, not just the total %.",
+          "Ensure no single external source accounts for more than 3% match.",
+          "Verify common assignment templates have been filtered out.",
+          "Always check via non-repository accounts before final university upload."
+        ],
+        "tool_url": "https://academicwizard.online",
+        "cta_text": "Get an official Turnitin similarity report with non-repository guarantee before submission.",
+        "whatsapp_msg": "Hi Academic Wizard, I want to scan my assignment through non-repository Turnitin."
+      },
+      "evening": {
+        "day": "Friday",
+        "topic": "Midnight Panic? The 12-Hour Urgent Rescue Protocol",
+        "badge": "CORE SERVICE: 12-HOUR URGENT RESCUE",
+        "hook_headline": "Assignment Due Tomorrow Morning and Haven't Started?",
+        "hook_sub": "Midnight panic is real. University penalties can cost you an entire grade boundary per day. Our specialized emergency writers work around the clock.",
+        "hook_bullets": [
+          "100% human-written academic work drafted by subject-matter postgraduates.",
+          "Every urgent project includes a complimentary Turnitin non-repository report."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Copy-pasting AI summaries at 3 AM that hallucinate citations, or hiring unverified freelancers who miss deadlines and leave you empty-handed.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Allocating your rubric to verified master's/PhD writers on WhatsApp, delivering fully referenced drafts with verified peer-reviewed sources in 12 hours."
+        },
+        "formula": {
+          "title": "The 12-Hour Express Allocation Protocol",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Brief Audit (15 min)",
+              "desc": "Share your assignment prompt, rubric, and word count on WhatsApp."
+            },
+            {
+              "num": "02",
+              "label": "Writer Mobilization",
+              "desc": "Dedicated subject specialist assigned immediately to draft your paper."
+            },
+            {
+              "num": "03",
+              "label": "Quality & Turnitin",
+              "desc": "Senior editor review + Turnitin similarity scan before delivery."
+            }
+          ],
+          "exemplar": "Speed Guarantee: Complete human-written essays delivered in as little as 12 hours."
+        },
+        "checklist": [
+          "Full adherence to university prompt, word count, and citation style.",
+          "Verified peer-reviewed sources from 2021-2026.",
+          "Complimentary Turnitin non-repository similarity report included.",
+          "Direct communication with academic coordinators on WhatsApp."
+        ],
+        "tool_url": "https://academicwizard.online",
+        "cta_text": "Midnight deadline panic? Our night-shift writers are online right now on WhatsApp.",
+        "whatsapp_msg": "Hi Academic Wizard, I have an URGENT assignment due in 12-24 hours. Can you help?"
+      }
+    },
+    "Saturday": {
+      "morning": {
+        "day": "Saturday",
+        "topic": "UK First Class (70%+) vs US 4.0 vs Australian HD",
+        "badge": "GRADING STANDARDS: GLOBAL RUBRICS",
+        "hook_headline": "How University Marks Translate Across UK, US & Aus",
+        "hook_sub": "International students often panic when receiving a 65% in the UK, not realizing it is a strong 2:1 Upper Second. Here is how grading rubrics actually work.",
+        "hook_bullets": [
+          "In the UK, marks above 75% are exceptionally rare and denote publishable quality.",
+          "US GPA systems reward volume and exams; UK systems reward critical evaluation."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Expecting an 85% by writing a comprehensive summary. UK markers penalize descriptive writing heavily, capping uncritical papers at 55-58%.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Targeting 70%+ by interrogating theoretical assumptions, demonstrating methodological limitations, and comparing conflicting peer-reviewed viewpoints."
+        },
+        "formula": {
+          "title": "International Grade Conversion Matrix",
+          "steps": [
+            {
+              "num": "01",
+              "label": "UK 70%+ (1st Class)",
+              "desc": "Equivalent to US 4.0 GPA (Grade A) & Australian High Distinction (85%+)."
+            },
+            {
+              "num": "02",
+              "label": "UK 60-69% (2:1)",
+              "desc": "Equivalent to US 3.3-3.7 GPA (Grade B+) & Australian Distinction (75-84%)."
+            },
+            {
+              "num": "03",
+              "label": "UK 50-59% (2:2)",
+              "desc": "Equivalent to US 2.7-3.0 GPA (Grade B/C) & Australian Credit (65-74%)."
+            }
+          ],
+          "exemplar": "Rubric standard for First Class: Synthesis of opposing literature + critical insight."
+        },
+        "checklist": [
+          "Downloaded and annotated your module's specific assessment rubric.",
+          "Included counter-arguments in at least 3 body paragraphs.",
+          "Checked if your department uses anonymous double-blind grading.",
+          "Ensured formatting strictly adheres to font, spacing, and margin rules."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Convert your grades and check assessment rubrics with our free international grade calculator.",
+        "whatsapp_msg": "Hi Academic Wizard, I want expert tutoring to score a First Class on my next paper."
+      },
+      "evening": {
+        "day": "Saturday",
+        "topic": "Substantive Academic Editing vs. Surface Proofreading",
+        "badge": "CORE SERVICE: ACADEMIC POLISHING",
+        "hook_headline": "Turn a 2:2 into a First Class: Elevate Academic Register",
+        "hook_sub": "Grammarly and spellcheckers only fix superficial typos. Tutors grade for scholarly tone, argument flow, signposting, and assessment rubric alignment.",
+        "hook_bullets": [
+          "Informal colloquialisms and passive voice confusion drop grades from a 2:1 to a 2:2.",
+          "Substantive editing restructures arguments so your thesis flows seamlessly."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Relying purely on basic grammar checkers that overlook weak topic sentences, contradictory claims, and unformatted citation pinpoints.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Substantive developmental editing: Line-by-line academic register refinement, restructuring weak paragraphs, and aligning with university rubrics."
+        },
+        "formula": {
+          "title": "The 3-Tier Academic Editing Protocol",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Surface Level",
+              "desc": "Grammar, syntax, punctuation, spelling, and tense consistency."
+            },
+            {
+              "num": "02",
+              "label": "Scholarly Register",
+              "desc": "Eliminating colloquialisms, passive voice, and weak signposting."
+            },
+            {
+              "num": "03",
+              "label": "Structural Polish",
+              "desc": "Ensuring logical transitions, argument coherence, and rubric compliance."
+            }
+          ],
+          "exemplar": "Transform: 'People think X is bad' ➔ 'Empirical scholars argue X exerts adverse effects.'"
+        },
+        "checklist": [
+          "Academic tone is formal, objective, and scholarly throughout.",
+          "Topic sentences and transitional signposting connect all sections.",
+          "In-text citations cross-checked against bibliography for 100% match.",
+          "Word count precisely aligned with university +/- 10% margins."
+        ],
+        "tool_url": "https://academicwizard.online/services/academic-editing/",
+        "cta_text": "Send your draft via WhatsApp for substantive academic editing and rubric alignment.",
+        "whatsapp_msg": "Hi Academic Wizard, I want to get my paper proofread and substantively edited."
+      }
+    },
+    "Sunday": {
+      "morning": {
+        "day": "Sunday",
+        "topic": "The 3-Deadline Sunday Triage Protocol",
+        "badge": "STUDY STRATEGY: DEADLINE TRIAGE",
+        "hook_headline": "Have 3 Assignments Due This Week? Here's the Protocol",
+        "hook_sub": "When multiple deadlines hit at once, working chronologically leads to burnout and missed submissions. You must triage by credit weighting.",
+        "hook_bullets": [
+          "A 5% late penalty on a 40-credit module damages your degree 4x more than a 10-credit coursework.",
+          "Writing a zero draft fast beats spending 5 hours perfecting an introduction."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Spending all weekend tweaking citations on a 10% quiz while a 50% weighted research project sits unwritten.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Triage by module weighting: lock in 90-minute Pomodoro sprints for raw drafts, and delegate formatting and proofreading to save 8+ hours."
+        },
+        "formula": {
+          "title": "The 3-Step Sunday Emergency Protocol",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Credit Weight Sort",
+              "desc": "Prioritize projects by academic degree weighting, not deadline order."
+            },
+            {
+              "num": "02",
+              "label": "90-Min Zero Drafts",
+              "desc": "Write continuous unedited drafts to establish complete structure."
+            },
+            {
+              "num": "03",
+              "label": "Outsource Polishing",
+              "desc": "Delegate referencing formatting, Turnitin checks, and final edits."
+            }
+          ],
+          "exemplar": "Rule: A completed 62% paper submitted on time beats a perfect 75% paper with a late penalty."
+        },
+        "checklist": [
+          "Calculated exact grade weightings for all pending assignments.",
+          "Scheduled 3 uninterrupted 90-minute writing blocks for tomorrow.",
+          "Verified extension and extenuating circumstances deadlines.",
+          "Connected with 24/7 academic support for urgent emergency turnaround."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Overwhelmed by back-to-back university deadlines? Our academic writers are online 24/7.",
+        "whatsapp_msg": "Hi Academic Wizard, I have multiple assignments due this week and need urgent assistance."
+      },
+      "evening": {
+        "day": "Sunday",
+        "topic": "Computer Science & Quantitative Stats (Python, R, SPSS)",
+        "badge": "CORE SERVICE: TECH & STATISTICS HELP",
+        "hook_headline": "Clean Code, Algorithmic Analysis & Statistical Reports",
+        "hook_sub": "Writing functional code is only 50% of your grade. Computer science and data modules require formal Big-O proofs, documentation, and APA reporting.",
+        "hook_bullets": [
+          "Uncommented code and unhandled edge cases immediately cost 20% of marks.",
+          "SPSS and R outputs must be translated into APA 7th statistical narratives."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON 2:2 TRAP",
+          "trap_text": "Submitting raw code with zero comments, or pasting raw SPSS output tables into a dissertation without reporting degrees of freedom, p-values, or effect sizes.",
+          "fix_title": "THE 1ST CLASS BLUEPRINT",
+          "fix_text": "Production-grade code with modular architecture and Big-O proofs, combined with professional APA 7th statistical write-ups of regression models."
+        },
+        "formula": {
+          "title": "The Quantitative Reporting Standard (APA 7th)",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Statistical Output",
+              "desc": "Report test statistic: F(df1, df2) = X.XX, p = .XXX, ηp² = .XX."
+            },
+            {
+              "num": "02",
+              "label": "Plain Narrative",
+              "desc": "Translate statistics into meaningful real-world business/clinical findings."
+            },
+            {
+              "num": "03",
+              "label": "Algorithmic Complexity",
+              "desc": "Provide formal time and space Big-O bounds: O(n log n)."
+            }
+          ],
+          "exemplar": "Syntax: 'A multiple regression revealed a significant model, F(3, 142) = 14.28, p < .001, R² = .23.'"
+        },
+        "checklist": [
+          "Code files include comprehensive docstrings and unit test cases.",
+          "Time and space complexity rigorously proven with Big-O notation.",
+          "Regression and ANOVA models report effect sizes (Cohen's d / R²).",
+          "Visual charts (histograms, scatterplots) formatted with clean labels."
+        ],
+        "tool_url": "https://academicwizard.online/services/assignment-help/",
+        "cta_text": "Message our computer science and quantitative analysis specialists on WhatsApp now.",
+        "whatsapp_msg": "Hi Academic Wizard, I need help with my Coding / Statistics assignment."
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+name: Weekly Social Media Insights & Adaptive Planner
+
+on:
+  schedule:
+    # Runs every Sunday at 20:00 UTC (1:30 AM Monday IST) before the Monday cycle begins
+    - cron: '0 20 * * 0'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry Run (simulate metrics without calling Buffer)'
+        required: false
+        default: false
+        type: boolean
+      days_back:
+        description: 'Days of historical metrics to harvest'
+        required: false
+        default: 7
+        type: number
+      force_plan:
+        description: 'Force plan generation even if Buffer post count is 0'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  harvest-and-plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r automation/requirements.txt
+
+      - name: Run Weekly Social Insights Harvester & Planner
+        env:
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN || secrets.BUFFER_API_KEY || secrets.BUFFER_API || secrets.BUFFER_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          SITE_URL: https://academicwizard.online
+        run: |
+          DRY_FLAG=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_FLAG="--dry-run"
+          fi
+          
+          DAYS_ARG="--days-back 7"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.days_back }}" ]; then
+            DAYS_ARG="--days-back ${{ github.event.inputs.days_back }}"
+          fi
+
+          FORCE_FLAG="--force-plan"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.force_plan }}" = "false" ]; then
+            FORCE_FLAG=""
+          fi
+
+          python automation/social_insights.py $DRY_FLAG $DAYS_ARG $FORCE_FLAG
+
+      - name: Commit & Push Weekly Plan & Insights Report
+        run: |
+          git config --global user.name 'Academic Wizard Social Intelligence'
+          git config --global user.email 'bot@academicwizard.online'
+          git add automation/weekly_social_plan.json automation/social_reports/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore(social): update weekly social intelligence report & adaptive plan [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No changes detected in social intelligence plan."
+          fi

@@ -981,7 +981,8 @@ def render_slide_4_checklist_cta(recipe: Dict[str, Any], output_path: Path) -> P
     font_cta_lbl = get_system_font(21, bold=True)
     draw.text((cta1_x1 + 25, cta1_y1 + 18), "[100% FREE TOOLS]  CITATION GENERATORS & ESSAY CALCULATORS", fill=(212, 175, 55, 255), font=font_cta_lbl)
     font_cta_url = get_system_font(24, bold=True)
-    draw.text((cta1_x1 + 25, cta1_y1 + 55), f"Visit: {recipe['tool_url']}", fill=(255, 255, 255, 255), font=font_cta_url)
+    target_url = recipe.get('tool_url') or recipe.get('service_url') or f"{SITE_URL}/tools/"
+    draw.text((cta1_x1 + 25, cta1_y1 + 55), f"Visit: {target_url}", fill=(255, 255, 255, 255), font=font_cta_url)
 
     # Box B: WhatsApp Urgent Triage
     cta2_x1, cta2_y1 = 65, 775
@@ -1029,8 +1030,9 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
 # ==============================================================================
 def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
     """Synthesize 3 platform-tailored copy variations with slide cues and hashtags."""
-    wa_url = generate_whatsapp_link(recipe["whatsapp_msg"])
-    tool_url = recipe["tool_url"]
+    wa_msg = recipe.get("whatsapp_msg") or f"Hi Academic Wizard, I need help with {recipe.get('topic', 'my academic coursework')}."
+    wa_url = generate_whatsapp_link(wa_msg)
+    tool_url = recipe.get("tool_url") or recipe.get("service_url") or f"{SITE_URL}/tools/"
 
     # Pre-crafted high-converting fallback
     fallback_copy = {
@@ -1331,14 +1333,42 @@ class BufferClient:
 # Main Orchestrator
 # ==============================================================================
 def pick_daily_recipe(slot: str, topic_idx: Optional[int] = None) -> Dict[str, Any]:
-    """Select the appropriate content recipe based on day of week or manual index."""
+    """Select the appropriate content recipe based on dynamic weekly plan or default rotation."""
     slot_recipes = ROTATION_MATRIX.get(slot, ROTATION_MATRIX["morning"])
+
+    # 1. Manual override index takes precedence
     if topic_idx is not None and 0 <= topic_idx < len(slot_recipes):
-        recipe = slot_recipes[topic_idx]
-    else:
-        day_idx = dt.datetime.now(dt.timezone.utc).weekday()
-        recipe = slot_recipes[day_idx % len(slot_recipes)]
-    return recipe
+        return slot_recipes[topic_idx]
+
+    now_utc = dt.datetime.now(dt.timezone.utc)
+    day_name = now_utc.strftime("%A")  # "Monday", "Tuesday", etc.
+    date_str = now_utc.strftime("%Y-%m-%d")
+
+    # 2. Check for AI-optimized weekly plan
+    plan_file = SCRIPT_DIR / "weekly_social_plan.json"
+    if plan_file.exists():
+        try:
+            with open(plan_file, "r", encoding="utf-8") as f:
+                plan_data = json.load(f)
+
+            schedule = plan_data.get("schedule", {})
+            day_plan = schedule.get(date_str) or schedule.get(day_name)
+            if day_plan and slot in day_plan:
+                planned_recipe = day_plan[slot]
+                required_keys = {"topic", "badge", "hook_headline", "hook_sub", "comparison", "formula", "checklist"}
+                if required_keys.issubset(planned_recipe.keys()):
+                    print(f"  🧠 [Adaptive AI Planner] Found active weekly plan for {day_name} ({slot.upper()})!")
+                    if "tool_url" not in planned_recipe and "service_url" not in planned_recipe:
+                        planned_recipe["tool_url"] = f"{SITE_URL}/tools/" if slot == "morning" else f"{SITE_URL}/services/assignment-help/"
+                    if "whatsapp_msg" not in planned_recipe:
+                        planned_recipe["whatsapp_msg"] = f"Hi Academic Wizard, I saw your post on {planned_recipe['topic']} and need assistance."
+                    return planned_recipe
+        except Exception as e:
+            print(f"  ⚠️ Could not load weekly_social_plan.json: {e}")
+
+    # 3. Fallback to standard weekly rotation matrix
+    day_idx = now_utc.weekday()
+    return slot_recipes[day_idx % len(slot_recipes)]
 
 
 def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int], skip_image: bool):
