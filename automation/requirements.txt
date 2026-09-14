@@ -3,3 +3,4 @@ google-genai>=0.2.0
 beautifulsoup4
 lxml
 requests
+pillow>=10.0.0
