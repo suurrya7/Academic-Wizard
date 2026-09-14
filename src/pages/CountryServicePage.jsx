@@ -97,7 +97,13 @@ const CountryServicePage = () => {
             "@type": "Organization",
             "name": "Academic Wizard",
             "url": "https://academicwizard.online/",
-            "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
+            "sameAs": [
+                "https://x.com/academic_wizz",
+                "https://www.instagram.com/_academic.wizard_",
+                "https://www.facebook.com/academics.wizard",
+                "https://www.linkedin.com/company/academic-wizard",
+                "https://www.trustpilot.com/review/academicwizard.online"
+            ]
         },
         "areaServed": {
             "@type": "Country",

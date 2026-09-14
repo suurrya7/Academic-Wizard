@@ -23,7 +23,7 @@ const Home = () => {
         "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
         "description": "Expert academic assistance for essays, assignments, dissertations, theses, research papers, and academic editing.",
         "sameAs": [
-            "https://twitter.com/academicwizard",
+            "https://x.com/academic_wizz",
             "https://youtube.com/@academicwizard",
             "https://www.facebook.com/academics.wizard",
             "https://www.instagram.com/_academic.wizard_",

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageHeader from '../components/PageHeader';
 import { Link } from 'react-router-dom';
-import { Mail, MessageCircle, Clock, ShieldCheck, MapPin } from 'lucide-react';
+import { Mail, MessageCircle, Clock, ShieldCheck, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 import reviewsData from '../data/reviews.json';
 
 const Contact = () => {
@@ -17,6 +17,10 @@ const Contact = () => {
             "url": "https://academicwizard.online/",
             "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
             "sameAs": [
+                "https://x.com/academic_wizz",
+                "https://www.instagram.com/_academic.wizard_",
+                "https://www.facebook.com/academics.wizard",
+                "https://www.linkedin.com/company/academic-wizard",
                 "https://share.google/gFYneo9HEwNeToTvN",
                 "https://www.google.com/search?kgmid=/g/11z93djzl9&q=Academic+Wizard",
                 "https://www.trustpilot.com/review/academicwizard.online"
@@ -152,6 +156,61 @@ const Contact = () => {
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div className="glass-card p-6 border-white/5">
+                            <h3 className="text-xl font-bold text-white mb-2">Official Social Channels</h3>
+                            <p className="text-text-secondary mb-4 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                                Connect with us on social media for academic guides, writing tips, citation breakdowns, and official announcements.
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                                <a 
+                                    href="https://x.com/academic_wizz" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Follow Academic Wizard on X"
+                                >
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                    <span className="font-medium text-xs">@academic_wizz</span>
+                                </a>
+                                <a 
+                                    href="https://www.instagram.com/_academic.wizard_" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Follow Academic Wizard on Instagram"
+                                >
+                                    <Instagram size={16} />
+                                    <span className="font-medium text-xs">Instagram</span>
+                                </a>
+                                <a 
+                                    href="https://www.linkedin.com/company/academic-wizard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Follow Academic Wizard on LinkedIn"
+                                >
+                                    <Linkedin size={16} />
+                                    <span className="font-medium text-xs">LinkedIn</span>
+                                </a>
+                                <a 
+                                    href="https://www.facebook.com/academics.wizard" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 hover:border-accent-gold rounded-lg text-text-secondary hover:text-accent-gold transition-all duration-300"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    aria-label="Follow Academic Wizard on Facebook"
+                                >
+                                    <Facebook size={16} />
+                                    <span className="font-medium text-xs">Facebook</span>
+                                </a>
                             </div>
                         </div>
                     </div>

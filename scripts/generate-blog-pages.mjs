@@ -131,6 +131,8 @@ function generateBlogPages() {
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Academic Wizard" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@academic_wizz" />
+    <meta name="twitter:creator" content="@academic_wizz" />
     <meta name="twitter:title" content="${title} | Academic Wizard Blog" />
     <meta name="twitter:description" content="${description}" />
     ${keywords ? `<meta name="keywords" content="${escapeHtml(keywords)}" />` : ''}
@@ -147,7 +149,14 @@ function generateBlogPages() {
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": `${SITE_URL}/`
+            "url": `${SITE_URL}/`,
+            "logo": `${SITE_URL}/academic-wizard-favicon.webp`,
+            "sameAs": [
+                "https://x.com/academic_wizz",
+                "https://www.instagram.com/_academic.wizard_",
+                "https://www.facebook.com/academics.wizard",
+                "https://www.linkedin.com/company/academic-wizard"
+            ]
         },
         "mainEntityOfPage": {
             "@type": "WebPage",

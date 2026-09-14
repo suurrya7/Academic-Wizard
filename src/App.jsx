@@ -47,7 +47,8 @@ function App() {
       <Helmet>
         {/* Global Twitter Card Defaults */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@academicwizard" />
+        <meta name="twitter:site" content="@academic_wizz" />
+        <meta name="twitter:creator" content="@academic_wizz" />
         <meta name="twitter:title" content="Academic Wizard | Expert Academic Assistance" />
         <meta name="twitter:description" content="Top-rated academic writing, essay help, and dissertation support tailored for university students worldwide." />
       </Helmet>

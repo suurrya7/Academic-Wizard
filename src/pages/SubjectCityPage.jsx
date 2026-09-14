@@ -338,7 +338,13 @@ const SubjectCityPage = () => {
                             "name": "Academic Wizard",
                             "url": "https://academicwizard.online/",
                             "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
-                            "sameAs": "https://www.trustpilot.com/review/academicwizard.online"
+                            "sameAs": [
+                                "https://x.com/academic_wizz",
+                                "https://www.instagram.com/_academic.wizard_",
+                                "https://www.facebook.com/academics.wizard",
+                                "https://www.linkedin.com/company/academic-wizard",
+                                "https://www.trustpilot.com/review/academicwizard.online"
+                            ]
                         },
                         "areaServed": country.name,
                         "serviceType": service.title

@@ -145,7 +145,14 @@ const BlogPost = () => {
         "publisher": {
             "@type": "Organization",
             "name": "Academic Wizard",
-            "url": "https://academicwizard.online/"
+            "url": "https://academicwizard.online/",
+            "logo": "https://academicwizard.online/academic-wizard-favicon.webp",
+            "sameAs": [
+                "https://x.com/academic_wizz",
+                "https://www.instagram.com/_academic.wizard_",
+                "https://www.facebook.com/academics.wizard",
+                "https://www.linkedin.com/company/academic-wizard"
+            ]
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -171,6 +178,8 @@ const BlogPost = () => {
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content="Academic Wizard" />
                 <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:creator" content="@academic_wizz" />
                 <meta name="twitter:title" content={postTitle} />
                 <meta name="twitter:description" content={postDescription} />
                 <script type="application/ld+json">
