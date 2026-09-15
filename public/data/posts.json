@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Zotero PDF Import Errors: A 2026 Troubleshooting Manual",
+    "slug": "fixing-zotero-pdf-import-errors-a-2026-troubleshooting-manual",
+    "excerpt": "Struggling with Zotero PDF import errors? Learn how to fix metadata sync issues and automate your bibliography correctly in this 2026 expert guide.",
+    "keywords": [
+      "fix Zotero PDF metadata sync errors",
+      "Zotero bibliography troubleshooting",
+      "Zotero DOI lookup failed",
+      "importing PDFs to Zotero 2026",
+      "Zotero library organization tips"
+    ],
+    "primaryKeyword": "fix Zotero PDF metadata sync errors",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-15T07:01:54.508505+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-zotero-pdf-import-errors-a-2026-troubleshooting-manual.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Navigating Turnitin Similarity Reports: A Student’s Guide to Context",
+    "slug": "navigating-turnitin-similarity-reports-a-student-s-guide-to-context",
+    "excerpt": "Don't panic over high Turnitin scores. Learn how to contextualize your similarity report, manage direct quotes, and prove your work is original.",
+    "keywords": [
+      "contextualizing Turnitin similarity report results",
+      "Turnitin similarity report interpretation",
+      "high similarity score for quotes",
+      "understanding plagiarism reports",
+      "Turnitin student dashboard tips"
+    ],
+    "primaryKeyword": "contextualizing Turnitin similarity report results",
+    "category": "assignment-help",
+    "categoryLabel": "Assignment Help",
+    "date": "2026-09-15T07:02:22.631212+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/navigating-turnitin-similarity-reports-a-student-s-guide-to-context.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling Complex Digital Media Citation Rules",
+    "slug": "apa-7th-edition-handling-complex-digital-media-citation-rules",
+    "excerpt": "Master the latest APA 7 citation rules for podcasts, videos, and social media. Avoid common reference list errors with our simple 2026 formatting guide.",
+    "keywords": [
+      "APA 7 citation rules for digital media",
+      "citing social media APA 7",
+      "APA 7 audiovisual source formatting",
+      "APA 7 online video citations",
+      "digital media reference list examples"
+    ],
+    "primaryKeyword": "APA 7 citation rules for digital media",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-15T07:02:50.291910+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-complex-digital-media-citation-rules.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Dissertation Workflow: Integrating NVivo 26 for Coding Clarity",
+    "slug": "dissertation-workflow-integrating-nvivo-26-for-coding-clarity",
+    "excerpt": "Streamline your qualitative data analysis. Discover how to use NVivo 26 to manage thematic coding effectively and maintain research integrity in your thesis.",
+    "keywords": [
+      "using NVivo 26 for qualitative coding",
+      "NVivo 26 thematic analysis guide",
+      "qualitative coding workflow thesis",
+      "reducing research bias in NVivo",
+      "NVivo 26 setup for PhD students"
+    ],
+    "primaryKeyword": "using NVivo 26 for qualitative coding",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-15T07:03:17.938762+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dissertation-workflow-integrating-nvivo-26-for-coding-clarity.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Fixing Turnitin Similarity Spikes: Auditing Your Academic Voice in 2026",
     "slug": "fixing-turnitin-similarity-spikes-auditing-your-academic-voice-in-2026",
     "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, provide evidence of your writing process, and protect your academic integrity in 2026.",
