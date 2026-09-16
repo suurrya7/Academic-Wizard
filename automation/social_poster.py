@@ -1028,6 +1028,56 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
 # ==============================================================================
 # Platform-Specific Copy Generator (Gemini Pro + Fallback)
 # ==============================================================================
+def format_copy_to_string(val: Any) -> str:
+    """Ensure copy is a flat, clean single string ready for social publishing."""
+    if isinstance(val, str):
+        return val.strip()
+
+    if isinstance(val, dict):
+        # Case 1: Simple wrapper like {"post": "..."} or {"caption": "..."} or {"text": "..."}
+        for k in ("post", "caption", "text", "content"):
+            if k in val and isinstance(val[k], str):
+                return val[k].strip()
+
+        # Case 2: Structured object {hook, story, slides, takeaways, cta, hashtags}
+        parts = []
+        if "hook" in val and val["hook"]:
+            parts.append(str(val["hook"]).strip())
+        if "story" in val and val["story"]:
+            parts.append(str(val["story"]).strip())
+        if "slides" in val and val["slides"]:
+            slides = val["slides"]
+            if isinstance(slides, dict):
+                parts.append("\n".join(f"• {v}" for v in slides.values() if v))
+            elif isinstance(slides, list):
+                parts.append("\n".join(f"• {v}" for v in slides if v))
+        if "takeaways" in val and val["takeaways"]:
+            takeaways = val["takeaways"]
+            if isinstance(takeaways, list):
+                parts.append("\n".join(f"✔ {t}" for t in takeaways if t))
+            elif isinstance(takeaways, str):
+                parts.append(takeaways.strip())
+        if "cta" in val and val["cta"]:
+            parts.append(str(val["cta"]).strip())
+        if "hashtags" in val and val["hashtags"]:
+            ht = val["hashtags"]
+            if isinstance(ht, list):
+                parts.append(" ".join(str(h) for h in ht))
+            else:
+                parts.append(str(ht).strip())
+
+        if parts:
+            return "\n\n".join(p for p in parts if p)
+
+        # Fallback for unexpected dictionary keys
+        return "\n\n".join(f"{k.capitalize()}: {v}" for k, v in val.items() if v)
+
+    if isinstance(val, list):
+        return "\n\n".join(str(item) for item in val if item)
+
+    return str(val).strip() if val is not None else ""
+
+
 def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
     """Synthesize 3 platform-tailored copy variations with slide cues and hashtags."""
     wa_msg = recipe.get("whatsapp_msg") or f"Hi Academic Wizard, I need help with {recipe.get('topic', 'my academic coursework')}."
@@ -1081,11 +1131,17 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
         "You are an elite academic social media marketing copywriter for Academic Wizard (academicwizard.online). "
         "Your audience consists of international university students in the UK, USA, Australia, Canada, and Singapore. "
         "Your tone is empowering, authoritative, practical, and highly engaging (dark-academia student vibe).\n\n"
-        "Generate 3 distinct copy variations in strict JSON format:\n"
-        "1. 'instagram': High-engagement carousel post. Engaging opening hook line, outline of what is inside Slides 1 to 4, "
+        "Generate 3 distinct copy variations in strict JSON format where values for 'instagram', 'twitter', and 'facebook' are SINGLE READY-TO-POST STRINGS (not nested objects):\n"
+        "1. 'instagram': Single string containing engaging opening hook line, outline of what is inside Slides 1 to 4, "
         "clear call-to-action mentioning free tools and WhatsApp consultation, and exactly 18 targeted hashtags.\n"
-        "2. 'twitter': Punchy thread-starter post under 270 characters including tool URL and 2-3 hashtags.\n"
-        "3. 'facebook': Community post format with story/context, formatted takeaways matching the slides, clear links to tools and WhatsApp.\n\n"
+        "2. 'twitter': Single string under 270 characters including tool URL and 2-3 hashtags.\n"
+        "3. 'facebook': Single string with story/context, formatted takeaways matching the slides, clear links to tools and WhatsApp.\n\n"
+        "Example JSON output format:\n"
+        "{\n"
+        '  "instagram": "📌 Hook line\\n\\nSlide overview...\\n\\n#hashtags",\n'
+        '  "twitter": "🎯 Hook line\\n\\nShort copy... https://... #tags",\n'
+        '  "facebook": "🎓 Context\\n\\nTakeaways... https://..."\n'
+        "}\n\n"
         "Output ONLY valid JSON."
     )
 
@@ -1119,7 +1175,11 @@ WhatsApp Number: {WHATSAPP_DISPLAY}
             parsed = json.loads(raw_text.strip())
             if "instagram" in parsed and "twitter" in parsed and "facebook" in parsed:
                 print("  ✨ Gemini Pro successfully synthesized platform copy!")
-                return parsed
+                return {
+                    "instagram": format_copy_to_string(parsed["instagram"]),
+                    "twitter": format_copy_to_string(parsed["twitter"]),
+                    "facebook": format_copy_to_string(parsed["facebook"]),
+                }
     except Exception as exc:
         print(f"  ⚠️ Gemini copy generation fallback: {exc}")
 
@@ -1327,10 +1387,11 @@ class BufferClient:
     def create_post_graphql(self, channel_id: str, text: str, image_urls: List[str], force_publish: bool, service: str) -> bool:
         """Publish or schedule multi-asset carousel via Buffer GraphQL API."""
         initial_mode = "shareNow" if force_publish else "addToQueue"
+        clean_text = format_copy_to_string(text)
 
         input_payload: Dict[str, Any] = {
             "channelId": channel_id,
-            "text": text,
+            "text": clean_text,
             "schedulingType": "automatic",
             "mode": initial_mode,
         }
@@ -1511,14 +1572,14 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
         print(f"\n  📤 Dispatching carousel to channel: {channel.get('name')} ({service})...")
 
         if "twitter" in service or "x" in service:
-            text = copy_dict.get("twitter", copy_dict.get("facebook"))
+            text = format_copy_to_string(copy_dict.get("twitter") or copy_dict.get("facebook", ""))
             if len(text) > 280:
                 print(f"    ℹ️ Truncating Twitter text ({len(text)} chars) to stay safely within 280-char limit.")
                 text = text[:275].rstrip() + "..."
         elif "instagram" in service:
-            text = copy_dict.get("instagram", copy_dict.get("facebook"))
+            text = format_copy_to_string(copy_dict.get("instagram") or copy_dict.get("facebook", ""))
         else:
-            text = copy_dict.get("facebook", copy_dict.get("instagram"))
+            text = format_copy_to_string(copy_dict.get("facebook") or copy_dict.get("instagram", ""))
 
         buffer_client.dispatch(
             channel=channel,
