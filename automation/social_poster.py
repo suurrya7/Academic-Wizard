@@ -1340,6 +1340,21 @@ class BufferClient:
             limit = 4 if ("twitter" in service or "x" in service) else len(image_urls)
             input_payload["assets"] = [{"image": {"url": u}} for u in image_urls[:limit]]
 
+        # Buffer GraphQL strictly requires channel-specific metadata for Facebook and Instagram
+        if "facebook" in service:
+            input_payload["metadata"] = {
+                "facebook": {
+                    "type": "post",
+                }
+            }
+        elif "instagram" in service:
+            input_payload["metadata"] = {
+                "instagram": {
+                    "type": "post",
+                    "shouldShareToFeed": True,
+                }
+            }
+
         success, result_msg, err_type = self._execute_create_post(input_payload)
         if success:
             print(f"    🎉 Success! Buffer Carousel Post ID: {result_msg} (mode={initial_mode})")
