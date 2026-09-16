@@ -73,7 +73,7 @@ class BufferAnalyticsClient:
         }
 
     def fetch_profiles(self) -> List[Dict[str, Any]]:
-        """Retrieve list of connected social profiles."""
+        """Retrieve list of connected social channels via GraphQL with REST fallback."""
         if self.dry_run or not self.token:
             return [
                 {"id": "sim_ig", "service": "instagram", "formatted_username": "academic_wizard"},
@@ -81,12 +81,59 @@ class BufferAnalyticsClient:
                 {"id": "sim_fb", "service": "facebook", "formatted_username": "Academic Wizard"},
             ]
 
+        # 1. Primary: Buffer GraphQL Channels API (works with modern Public API tokens)
+        query_orgs = """
+        query GetOrgs {
+          account {
+            organizations {
+              id
+              name
+            }
+          }
+        }
+        """
         try:
-            res = requests.get(f"{self.rest_base}/profiles.json?access_token={self.token}", timeout=15)
+            res = requests.post(self.graphql_url, headers=self.headers, json={"query": query_orgs}, timeout=15)
             if res.status_code == 200:
-                return res.json()
+                data = res.json()
+                orgs = data.get("data", {}).get("account", {}).get("organizations", [])
+                channels = []
+                for org in orgs:
+                    org_id = org.get("id")
+                    query_ch = f"""
+                    query {{
+                      channels(input: {{ organizationId: "{org_id}" }}) {{
+                        id
+                        name
+                        service
+                        displayName
+                      }}
+                    }}
+                    """
+                    c_res = requests.post(self.graphql_url, headers=self.headers, json={"query": query_ch}, timeout=15)
+                    if c_res.status_code == 200:
+                        c_data = c_res.json()
+                        for ch in c_data.get("data", {}).get("channels", []):
+                            channels.append({
+                                "id": ch.get("id"),
+                                "service": ch.get("service"),
+                                "formatted_username": ch.get("displayName") or ch.get("name") or ch.get("service"),
+                                "organizationId": org_id,
+                            })
+                if channels:
+                    return channels
         except Exception as e:
-            print(f"  ⚠️ Failed to fetch Buffer profiles: {e}")
+            print(f"  ⚠️ Buffer GraphQL profiles query failed: {e}")
+
+        # 2. Fallback: REST API (only works with OAuth tokens starting with '1/')
+        if self.token.startswith("1/"):
+            try:
+                res = requests.get(f"{self.rest_base}/profiles.json?access_token={self.token}", timeout=15)
+                if res.status_code == 200:
+                    return res.json()
+            except Exception as e:
+                print(f"  ⚠️ Failed to fetch Buffer REST profiles: {e}")
+
         return []
 
     def fetch_sent_updates(self, profile_id: str, days_back: int = 7) -> List[Dict[str, Any]]:
@@ -542,8 +589,8 @@ def main():
         print(f"  • Profile [{p_service.upper()}] {p_name}: fetched {len(updates)} recent updates.")
         all_recent_posts.extend(updates)
 
-    if not all_recent_posts and not args.force_plan:
-        print("  ⚠️ No recent post updates found in Buffer. Using mock/seed updates to ensure schedule continuity.")
+    if not all_recent_posts:
+        print("  ℹ️ No recent post updates found in Buffer yet. Using seed curriculum baseline to ensure schedule continuity.")
         all_recent_posts = client._get_mock_updates()
 
     # 2. Score and attribute topics
