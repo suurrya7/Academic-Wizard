@@ -1276,10 +1276,8 @@ class BufferClient:
 
         return []
 
-    def create_post_graphql(self, channel_id: str, text: str, image_urls: List[str], force_publish: bool, service: str) -> bool:
-        """Publish or schedule multi-asset carousel via Buffer GraphQL API."""
-        mode = "now" if force_publish else "addToQueue"
-
+    def _execute_create_post(self, input_payload: Dict[str, Any]) -> Tuple[bool, Optional[str], Optional[str]]:
+        """Helper to send createPost GraphQL mutation and return (success, post_id_or_err, error_type)."""
         mutation = """
         mutation CreatePost($input: CreatePostInput!) {
           createPost(input: $input) {
@@ -1287,6 +1285,7 @@ class BufferClient:
               post {
                 id
                 text
+                status
               }
             }
             ... on MutationError {
@@ -1295,19 +1294,6 @@ class BufferClient:
           }
         }
         """
-
-        input_payload: Dict[str, Any] = {
-            "channelId": channel_id,
-            "text": text,
-            "schedulingType": "automatic",
-            "mode": mode,
-        }
-
-        if image_urls:
-            # Respect platform limits: Twitter max 4 images
-            limit = 4 if ("twitter" in service or "x" in service) else len(image_urls)
-            input_payload["assets"] = [{"image": {"url": u}} for u in image_urls[:limit]]
-
         try:
             res = requests.post(
                 self.graphql_url,
@@ -1315,18 +1301,62 @@ class BufferClient:
                 json={"query": mutation, "variables": {"input": input_payload}},
                 timeout=25,
             )
-            if res.status_code == 200:
-                data = res.json().get("data", {}).get("createPost", {})
-                if "post" in data:
-                    post_id = data["post"].get("id")
-                    print(f"    🎉 Success! Buffer Carousel Post ID: {post_id} (mode={mode})")
-                    return True
-                elif "message" in data:
-                    print(f"    ⚠️ Buffer GraphQL MutationError: {data['message']}")
+            if res.status_code != 200:
+                print(f"    ❌ Buffer GraphQL HTTP {res.status_code}: {res.text[:300]}")
+                return False, f"HTTP {res.status_code}", "http_error"
+
+            raw = res.json()
+            if "errors" in raw and raw["errors"]:
+                error_msgs = [e.get("message", str(e)) for e in raw["errors"]]
+                joined_err = "; ".join(error_msgs)
+                print(f"    ❌ Buffer GraphQL Top-Level Error: {joined_err}")
+                return False, joined_err, "graphql_error"
+
+            data = (raw.get("data") or {}).get("createPost") or {}
+            if "post" in data and data["post"]:
+                post_id = data["post"].get("id")
+                return True, post_id, None
+            elif "message" in data:
+                return False, data["message"], "mutation_error"
             else:
-                print(f"    ⚠️ Buffer GraphQL HTTP {res.status_code}: {res.text}")
+                return False, f"Unexpected response structure: {raw}", "unknown_error"
         except Exception as e:
-            print(f"    ⚠️ Buffer GraphQL request error: {e}")
+            print(f"    ⚠️ Buffer GraphQL request exception: {e}")
+            return False, str(e), "exception"
+
+    def create_post_graphql(self, channel_id: str, text: str, image_urls: List[str], force_publish: bool, service: str) -> bool:
+        """Publish or schedule multi-asset carousel via Buffer GraphQL API."""
+        initial_mode = "shareNow" if force_publish else "addToQueue"
+
+        input_payload: Dict[str, Any] = {
+            "channelId": channel_id,
+            "text": text,
+            "schedulingType": "automatic",
+            "mode": initial_mode,
+        }
+
+        if image_urls:
+            # Respect platform limits: Twitter max 4 images
+            limit = 4 if ("twitter" in service or "x" in service) else len(image_urls)
+            input_payload["assets"] = [{"image": {"url": u}} for u in image_urls[:limit]]
+
+        success, result_msg, err_type = self._execute_create_post(input_payload)
+        if success:
+            print(f"    🎉 Success! Buffer Carousel Post ID: {result_msg} (mode={initial_mode})")
+            return True
+
+        # If shareNow fails (e.g. channel doesn't support immediate direct publish), retry with addToQueue
+        if initial_mode == "shareNow":
+            print(f"    ⚠️ 'shareNow' returned: {result_msg}. Retrying with 'addToQueue'...")
+            input_payload["mode"] = "addToQueue"
+            q_success, q_result, _ = self._execute_create_post(input_payload)
+            if q_success:
+                print(f"    🎉 Success! Queued Buffer Post ID: {q_result} (mode=addToQueue)")
+                return True
+            else:
+                print(f"    ❌ 'addToQueue' also failed: {q_result}")
+        else:
+            print(f"    ❌ Buffer GraphQL creation failed: {result_msg}")
 
         return False
 
@@ -1371,8 +1401,10 @@ class BufferClient:
             return True
 
         success = self.create_post_graphql(ch_id, text, image_urls, force_publish, ch_service)
-        if not success:
-            print(f"    Attempting REST fallback for profile {ch_name}...")
+        # Buffer Public API tokens cannot use legacy REST API (which returns HTTP 401).
+        # Only attempt REST fallback if token is an OAuth token (starts with '1/').
+        if not success and self.token.startswith("1/"):
+            print(f"    Attempting legacy REST fallback for profile {ch_name}...")
             success = self.create_post_rest(ch_id, text, image_urls, force_publish)
 
         return success
@@ -1465,6 +1497,9 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
 
         if "twitter" in service or "x" in service:
             text = copy_dict.get("twitter", copy_dict.get("facebook"))
+            if len(text) > 280:
+                print(f"    ℹ️ Truncating Twitter text ({len(text)} chars) to stay safely within 280-char limit.")
+                text = text[:275].rstrip() + "..."
         elif "instagram" in service:
             text = copy_dict.get("instagram", copy_dict.get("facebook"))
         else:
