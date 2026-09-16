@@ -1133,7 +1133,10 @@ class BufferClient:
     """Client for publishing multi-image carousels via Buffer (GraphQL + REST)."""
 
     def __init__(self, access_token: str, dry_run: bool = False):
-        self.token = access_token
+        clean_token = (access_token or "").strip().strip('"').strip("'")
+        if clean_token.startswith("Bearer "):
+            clean_token = clean_token[7:].strip()
+        self.token = clean_token
         self.dry_run = dry_run
         self.graphql_url = "https://api.buffer.com"
         self.rest_base = "https://api.bufferapp.com/1"
@@ -1144,10 +1147,15 @@ class BufferClient:
 
     def get_channels_graphql(self) -> List[Dict[str, Any]]:
         """Fetch connected channels using GraphQL."""
+        if not self.token:
+            return []
+
         query_orgs = """
         query GetOrgs {
           account {
             id
+            email
+            name
             organizations {
               id
               name
@@ -1158,78 +1166,119 @@ class BufferClient:
         try:
             res = requests.post(self.graphql_url, headers=self.headers, json={"query": query_orgs}, timeout=15)
             if res.status_code != 200:
+                print(f"  ❌ Buffer GraphQL HTTP {res.status_code}: {res.text[:300]}")
                 return []
 
-            data = res.json().get("data", {})
-            orgs = data.get("account", {}).get("organizations", [])
+            data = res.json()
+            if "errors" in data and not data.get("data"):
+                print(f"  ❌ Buffer GraphQL Auth/Schema Error: {json.dumps(data.get('errors'))}")
+                return []
+
+            account = data.get("data", {}).get("account")
+            if not account:
+                print(f"  ❌ Buffer GraphQL: 'account' object missing in response: {data}")
+                return []
+
+            account_name = account.get("name") or account.get("email") or account.get("id")
+            print(f"  👤 Buffer Authenticated Account: {account_name} (ID: {account.get('id')})")
+
+            orgs = account.get("organizations", [])
             if not orgs:
+                print(f"  ⚠️ Buffer account authenticated, but found 0 organizations.")
                 return []
 
-            org_id = orgs[0]["id"]
+            all_channels = []
+            for org in orgs:
+                org_id = org.get("id")
+                org_name = org.get("name", "Default Workspace")
+                # Direct interpolation avoids GraphQL type scalar mismatch
+                query_channels = f"""
+                query {{
+                  channels(input: {{ organizationId: "{org_id}" }}) {{
+                    id
+                    name
+                    service
+                    displayName
+                  }}
+                }}
+                """
+                c_res = requests.post(self.graphql_url, headers=self.headers, json={"query": query_channels}, timeout=15)
+                if c_res.status_code != 200:
+                    print(f"  ⚠️ Channels query failed for org '{org_name}' ({org_id}): HTTP {c_res.status_code} - {c_res.text[:200]}")
+                    continue
 
-            query_channels = """
-            query GetChannels($orgId: ID!) {
-              channels(input: { organizationId: $orgId }) {
-                id
-                name
-                service
-              }
-            }
-            """
-            res = requests.post(
-                self.graphql_url,
-                headers=self.headers,
-                json={"query": query_channels, "variables": {"orgId": org_id}},
-                timeout=15,
-            )
-            if res.status_code != 200:
-                return []
+                c_data = c_res.json()
+                if "errors" in c_data and not c_data.get("data"):
+                    print(f"  ⚠️ Buffer GraphQL channels error for org '{org_name}': {c_data['errors']}")
+                    continue
 
-            channels = res.json().get("data", {}).get("channels", [])
-            return channels
+                channels = c_data.get("data", {}).get("channels", [])
+                if channels:
+                    print(f"  ✅ Retrieved {len(channels)} channel(s) from organization '{org_name}': {[c.get('service') for c in channels]}")
+                    for ch in channels:
+                        ch["organizationId"] = org_id
+                        ch["name"] = ch.get("displayName") or ch.get("name") or ch.get("service")
+                    all_channels.extend(channels)
+                else:
+                    print(f"  ℹ️ Organization '{org_name}' ({org_id}) currently has 0 connected social channels.")
+
+            return all_channels
         except Exception as e:
-            print(f"  ⚠️ Buffer GraphQL channel query error: {e}")
+            print(f"  ⚠️ Buffer GraphQL query exception: {e}")
             return []
 
     def get_profiles_rest(self) -> List[Dict[str, Any]]:
         """Fetch profiles via legacy REST API as fallback."""
+        if not self.token:
+            return []
         url = f"{self.rest_base}/profiles.json?access_token={self.token}"
         try:
             res = requests.get(url, timeout=15)
             if res.status_code == 200:
                 profiles = res.json()
-                return [
-                    {"id": p.get("id"), "name": p.get("formatted_username", p.get("service_username", "")), "service": p.get("service")}
-                    for p in profiles
-                ]
+                if isinstance(profiles, list):
+                    return [
+                        {"id": p.get("id"), "name": p.get("formatted_username", p.get("service_username", "")), "service": p.get("service")}
+                        for p in profiles
+                    ]
+            else:
+                print(f"  ⚠️ Buffer REST profiles query returned HTTP {res.status_code}: {res.text[:200]}")
         except Exception as e:
             print(f"  ⚠️ Buffer REST profiles query failed: {e}")
         return []
 
     def get_all_profiles(self) -> List[Dict[str, Any]]:
         """Discover all connected profiles through GraphQL, with REST fallback."""
-        if self.dry_run or not self.token:
-            return [
-                {"id": "simulated_ig_1", "name": "academicwizard (IG)", "service": "instagram"},
-                {"id": "simulated_fb_1", "name": "Academic Wizard (FB)", "service": "facebook"},
-                {"id": "simulated_tw_1", "name": "AcademicWizardX (Twitter)", "service": "twitter"},
-            ]
+        if not self.token:
+            if self.dry_run:
+                print("  ℹ️ No BUFFER_ACCESS_TOKEN provided in dry-run mode; using simulated channels.")
+                return [
+                    {"id": "simulated_ig_1", "name": "academicwizard (IG)", "service": "instagram"},
+                    {"id": "simulated_fb_1", "name": "Academic Wizard (FB)", "service": "facebook"},
+                    {"id": "simulated_tw_1", "name": "AcademicWizardX (Twitter)", "service": "twitter"},
+                ]
+            else:
+                print("  ❌ BUFFER_ACCESS_TOKEN environment variable is EMPTY. Please check your GitHub Secrets.")
+                return []
+
+        masked_token = f"{self.token[:4]}...{self.token[-4:]}" if len(self.token) >= 10 else "***"
+        print(f"  🔑 Connecting with Buffer Token: {masked_token} (length: {len(self.token)})")
 
         channels = self.get_channels_graphql()
         if channels:
-            print(f"  ✅ Retrieved {len(channels)} channels via Buffer GraphQL API.")
+            print(f"  ✅ Retrieved total {len(channels)} channel(s) via Buffer GraphQL API.")
             return channels
 
         profiles = self.get_profiles_rest()
         if profiles:
-            print(f"  ✅ Retrieved {len(profiles)} profiles via Buffer REST API.")
+            print(f"  ✅ Retrieved total {len(profiles)} profile(s) via Buffer REST API fallback.")
             return profiles
 
         return []
 
     def create_post_graphql(self, channel_id: str, text: str, image_urls: List[str], force_publish: bool, service: str) -> bool:
         """Publish or schedule multi-asset carousel via Buffer GraphQL API."""
-        mode = "shareNow" if force_publish else "addToQueue"
+        mode = "now" if force_publish else "addToQueue"
 
         mutation = """
         mutation CreatePost($input: CreatePostInput!) {
@@ -1433,6 +1482,36 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
     print("=" * 75)
 
 
+def check_buffer_connection():
+    print("=" * 75)
+    print("🔍 Buffer API Diagnostic & Connectivity Check")
+    print("=" * 75)
+    if not BUFFER_ACCESS_TOKEN:
+        print("❌ BUFFER_ACCESS_TOKEN is not set or empty in environment.")
+        print("👉 Please add BUFFER_ACCESS_TOKEN in GitHub Repository Settings -> Secrets -> Actions.")
+        return False
+
+    masked = f"{BUFFER_ACCESS_TOKEN[:4]}...{BUFFER_ACCESS_TOKEN[-4:]}" if len(BUFFER_ACCESS_TOKEN) >= 10 else "***"
+    print(f"🔑 Loaded Token: {masked} (length: {len(BUFFER_ACCESS_TOKEN)})")
+
+    client = BufferClient(access_token=BUFFER_ACCESS_TOKEN, dry_run=False)
+    channels = client.get_all_profiles()
+    print("\n" + "=" * 75)
+    if channels:
+        print(f"🎉 SUCCESS: Found {len(channels)} connected channel(s):")
+        for ch in channels:
+            print(f"  • [{ch.get('service', '').upper()}] {ch.get('name')} (ID: {ch.get('id')})")
+        print("=" * 75)
+        return True
+    else:
+        print("⚠️ DIAGNOSIS SUMMARY:")
+        print("1. If HTTP 401/403 appeared above: Your token is invalid, expired, or lacks permission.")
+        print("2. If '0 connected social channels' appeared above: Your Buffer token is valid, but no channels are connected.")
+        print("   👉 Go to https://publish.buffer.com, click 'Manage Channels', and connect your Twitter/X, Instagram, or Facebook account.")
+        print("=" * 75)
+        return False
+
+
 def main():
     parser = argparse.ArgumentParser(description="Academic Wizard Autonomous Social Media Poster")
     parser.add_argument(
@@ -1445,8 +1524,13 @@ def main():
     parser.add_argument("--force-publish", action="store_true", help="Publish immediately rather than adding to queue")
     parser.add_argument("--topic-idx", type=int, default=None, help="Override recipe index (0-6)")
     parser.add_argument("--skip-image", action="store_true", help="Skip image generation for quick text tests")
+    parser.add_argument("--check-buffer", action="store_true", help="Run Buffer diagnostic connection check and exit")
 
     args = parser.parse_args()
+
+    if args.check_buffer:
+        check_buffer_connection()
+        return
 
     if args.slot == "auto":
         curr_utc_hour = dt.datetime.now(dt.timezone.utc).hour
@@ -1465,3 +1549,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
