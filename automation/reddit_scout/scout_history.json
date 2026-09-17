@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-16T12:44:20.007419+00:00",
+  "last_run": "2026-09-17T01:37:58.261116+00:00",
   "daily_count": {
-    "date": "2026-09-16",
-    "count": 3
+    "date": "2026-09-17",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -26,7 +26,8 @@
     "1wh44mg",
     "1whhtop",
     "1whp698",
-    "1whrx5b"
+    "1whrx5b",
+    "1widn4s"
   ],
   "history": [
     {
@@ -204,7 +205,15 @@
       "title": "People who have gone deaf permanently, what was the last thing you heard?",
       "posted_at": "2026-09-16T12:44:20.007415+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1whrx5b/people_who_have_gone_deaf_permanently_what_was/"
+    },
+    {
+      "post_id": "1widn4s",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Am i vulnerable adult or regular adult?",
+      "posted_at": "2026-09-17T01:37:58.261112+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1widn4s/am_i_vulnerable_adult_or_regular_adult/"
     }
   ],
-  "last_comment_posted_at": "2026-09-16T12:44:20.007400+00:00"
+  "last_comment_posted_at": "2026-09-17T01:37:58.261099+00:00"
 }
