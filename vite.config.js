@@ -11,34 +11,35 @@ const projectRoot = fileURLToPath(new URL('.', import.meta.url))
 // (Puppeteer prerenderer can't handle async-fetched blog content)
 
 const serviceRoutes = [
-  '/services/assignment-help',
-  '/services/essay-help',
-  '/services/dissertation-help',
-  '/services/literature-review',
-  '/services/research-paper-help',
-  '/services/editing-proofreading',
-  '/services/study-guidance',
+  '/services/assignment-help/',
+  '/services/essay-help/',
+  '/services/dissertation-help/',
+  '/services/literature-review/',
+  '/services/research-paper-help/',
+  '/services/editing-proofreading/',
+  '/services/study-guidance/',
 ];
 
 const countries = ['uk', 'usa', 'australia', 'canada', 'india', 'ireland', 'singapore', 'germany'];
 const countryServiceRoutes = [];
 const specializedRoutes = [];
 
-serviceRoutes.forEach(service => {
+serviceRoutes.forEach(serviceWithSlash => {
+    const service = serviceWithSlash.replace(/\/$/, '');
     countries.forEach(country => {
-        countryServiceRoutes.push(`${service}/${country}`);
+        countryServiceRoutes.push(`${service}/${country}/`);
         
         // Add subject routes for this country
         if (countrySubjects[country]) {
             countrySubjects[country].forEach(subject => {
-                specializedRoutes.push(`${service}/${country}/${subject.slug}`);
+                specializedRoutes.push(`${service}/${country}/${subject.slug}/`);
             });
         }
         
         // Add city routes for this country
         if (countryCities[country]) {
             countryCities[country].forEach(city => {
-                specializedRoutes.push(`${service}/${country}/${city.slug}`);
+                specializedRoutes.push(`${service}/${country}/${city.slug}/`);
             });
         }
     });
@@ -52,18 +53,18 @@ export default defineConfig({
     prerenderer({
       routes: [
         '/', 
-        '/services', 
-        '/about', 
-        '/faq', 
-        '/contact', 
-        '/blog',
-        '/privacy-policy',
-        '/terms-of-service',
-        '/tools',
-        '/tools/citation-generator',
-        '/tools/grammar-checker',
-        '/tools/ai-detector',
-        '/tools/ai-humanizer',
+        '/services/', 
+        '/about/', 
+        '/faq/', 
+        '/contact/', 
+        '/blog/',
+        '/privacy-policy/',
+        '/terms-of-service/',
+        '/tools/',
+        '/tools/citation-generator/',
+        '/tools/grammar-checker/',
+        '/tools/ai-detector/',
+        '/tools/ai-humanizer/',
         ...serviceRoutes,
         ...countryServiceRoutes,
         ...specializedRoutes

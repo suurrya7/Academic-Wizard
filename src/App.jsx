@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ActivationGate from './components/ActivationGate';
 import ActiveSpecialistsTicker from './components/ActiveSpecialistsTicker';
+import TrailingSlashEnforcer from './components/TrailingSlashEnforcer';
 
 const CustomCursor = React.lazy(() => import('./components/CustomCursor'));
 const ParticleBackground = React.lazy(() => import('./components/ParticleBackground'));
@@ -54,6 +55,7 @@ function App() {
       </Helmet>
       <ThemeProvider>
         <Router basename={import.meta.env.BASE_URL}>
+          <TrailingSlashEnforcer />
           <Suspense fallback={null}>
             <CustomCursor />
             <ParticleBackground />

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
 import { assetPath } from '../config/site';
 import Breadcrumbs from '../components/Breadcrumbs';
+import UrgentTriageBanner from '../components/UrgentTriageBanner';
 
 const SERVICE_MAPPING = {
     'assignment-help': { slug: 'assignment-help', name: 'Assignment Help', verb: 'Assignments & Coursework' },
@@ -272,6 +273,8 @@ const BlogPost = () => {
                     </div>
                 </header>
 
+                <UrgentTriageBanner articleTitle={postData?.title} variant="compact" />
+
                 <div 
                     ref={contentRef}
                     onClick={handleContentClick}
@@ -280,6 +283,8 @@ const BlogPost = () => {
                                prose-strong:text-white prose-ul:list-disc prose-ol:list-decimal"
                     dangerouslySetInnerHTML={{ __html: htmlContent }} 
                 />
+
+                <UrgentTriageBanner articleTitle={postData?.title} variant="full" />
 
                 {postData?.author && (
                     <div className="mt-12 p-8 glass-card flex flex-col sm:flex-row gap-6 items-center sm:items-start text-left border-white/10">

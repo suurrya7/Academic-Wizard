@@ -51,7 +51,7 @@ const ServiceOverview = () => {
                                 {service.overview}
                             </p>
                             <Link 
-                                to={`/services/${service.slug}`} 
+                                to={`/services/${service.slug}/`} 
                                 className="text-accent-gold text-xs uppercase tracking-[3px] font-heading mt-4 flex items-center gap-3 group/link" 
                                 style={{ color: 'var(--accent-gold)' }}
                                 aria-label={`Learn more about our ${service.title} services`}

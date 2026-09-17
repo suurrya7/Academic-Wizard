@@ -12,7 +12,8 @@ import TrustStats from "../components/TrustStats";
 import PricingCalculator from "../components/PricingCalculator";
 import { 
     CheckCircle, Shield, ShieldCheck, GraduationCap, FileText, ChevronDown, 
-    MessageSquare, BookOpen, Star, Clock, Zap, Award, Sparkles, Check 
+    MessageSquare, BookOpen, Star, Clock, Zap, Award, Sparkles, Check,
+    ArrowRight, Layers, Search, Edit3
 } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import reviewsData from "../data/reviews.json";
@@ -196,7 +197,9 @@ const SubjectCityPage = () => {
         : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name}`;
 
     const pageMetaTitle = pageType === "subject"
-        ? `${cleanSubjectName} ${serviceVerb.action} ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
+        ? (serviceSlug === "assignment-help"
+            ? `${cleanSubjectName} Assignment Help ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
+            : `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.suffix}`)
         : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} (2026) | Verified Academic Experts`;
 
     const pageDescription = pageType === "subject"
@@ -516,6 +519,64 @@ const SubjectCityPage = () => {
                                                 <Check className="text-emerald-400 shrink-0 mt-0.5" size={16} />
                                                 <span>{item}</span>
                                             </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* De-Cannibalization Silo: Secondary Service Pillar Referral Card */}
+                            {serviceSlug !== "assignment-help" && (
+                                <div className="glass-card p-5 border-accent-gold/30 bg-accent-gold/5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                    <div className="space-y-1">
+                                        <div className="text-xs font-semibold uppercase tracking-wider text-accent-gold font-heading">
+                                            Looking for Comprehensive Coursework or Assignment Writing?
+                                        </div>
+                                        <p className="text-xs text-text-secondary">
+                                            Need full problem questions, essay development, or coursework solutions in {cleanSubjectName}? Visit our dedicated {country.name} hub.
+                                        </p>
+                                    </div>
+                                    <Link 
+                                        to={`/services/assignment-help/${countrySlug}/${specializedSlug}/`}
+                                        className="shrink-0 px-4 py-2 rounded-xl bg-accent-gold text-black font-semibold text-xs hover:bg-accent-gold/90 transition-colors shadow-sm inline-flex items-center gap-1.5"
+                                    >
+                                        <span>{cleanSubjectName} Assignment Help {country.name}</span>
+                                        <ArrowRight size={13} />
+                                    </Link>
+                                </div>
+                            )}
+
+                            {/* De-Cannibalization Silo: Master Pillar Cluster Services Matrix */}
+                            {serviceSlug === "assignment-help" && (
+                                <div className="glass-card p-6 border-white/10 space-y-4 rounded-2xl">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-bold text-text-primary font-heading flex items-center gap-2">
+                                            <Layers className="text-accent-gold" size={18} />
+                                            Specialized Academic Services for {cleanSubjectName} Students ({country.name})
+                                        </h3>
+                                        <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-white/10 text-white/70 font-semibold">
+                                            Cluster Network
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-text-secondary leading-relaxed">
+                                        In addition to core assignment help, our verified faculty specialists provide dedicated support across advanced academic formats:
+                                    </p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
+                                        {[
+                                            { slug: "dissertation-help", title: `${cleanSubjectName} Dissertation & Thesis Support`, icon: BookOpen },
+                                            { slug: "research-paper-help", title: `${cleanSubjectName} Research Paper Assistance`, icon: FileText },
+                                            { slug: "editing-proofreading", title: `${cleanSubjectName} Academic Proofreading & Editing`, icon: CheckCircle },
+                                            { slug: "literature-review", title: `${cleanSubjectName} Systematic Literature Review`, icon: Search },
+                                            { slug: "study-guidance", title: `${cleanSubjectName} 1-on-1 Tutoring & Defense Prep`, icon: GraduationCap },
+                                            { slug: "essay-help", title: `${cleanSubjectName} Essay Writing & Critical Analysis`, icon: Edit3 }
+                                        ].map((subService) => (
+                                            <Link 
+                                                key={subService.slug}
+                                                to={`/services/${subService.slug}/${countrySlug}/${specializedSlug}/`}
+                                                className="p-3 rounded-xl bg-white/5 hover:bg-accent-gold/10 border border-white/5 hover:border-accent-gold/30 transition-all flex items-center gap-2.5 text-xs text-text-primary group"
+                                            >
+                                                <subService.icon size={15} className="text-accent-gold shrink-0 group-hover:scale-110 transition-transform" />
+                                                <span className="font-medium group-hover:text-accent-gold transition-colors">{subService.title}</span>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>

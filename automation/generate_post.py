@@ -469,12 +469,39 @@ def generate_article_content(model, brief: dict, existing_posts: list[dict]) -> 
         if SPECIALIZED_JSON.exists():
             with open(SPECIALIZED_JSON, "r", encoding="utf-8") as f:
                 specialized_data = json.load(f)
-            if specialized_data:
-                chosen_specialized = random.sample(specialized_data, min(2, len(specialized_data)))
-                spec_json_str = json.dumps([{"title": s["title"], "slug": f"/services/{s['serviceSlug']}/{s['citySlug']}/"} for s in chosen_specialized], ensure_ascii=False)
-                specialized_links_prompt = f"\n4. You MUST organically include HTML anchor links to at least 1 of these localized/niche service pages where relevant:\n{spec_json_str}\n"
-    except Exception:
-        pass
+            
+            # Extract subjects for the target country (or fallback to uk/singapore/usa)
+            c_slug = country_slug if country_slug else "uk"
+            pool = []
+            
+            # Prioritize high-commercial target subjects
+            priority_slugs = ["mba", "law", "nursing", "computer-science", "psychology", "engineering", "business"]
+            
+            subjects = specialized_data.get("countrySubjects", {}).get(c_slug, [])
+            if not subjects:
+                subjects = specialized_data.get("countrySubjects", {}).get("uk", [])
+                
+            priority_items = [s for s in subjects if s.get("slug") in priority_slugs]
+            other_items = [s for s in subjects if s.get("slug") not in priority_slugs]
+            
+            chosen_items = []
+            if priority_items:
+                chosen_items.extend(random.sample(priority_items, min(2, len(priority_items))))
+            if other_items and len(chosen_items) < 2:
+                chosen_items.extend(random.sample(other_items, min(2 - len(chosen_items), len(other_items))))
+                
+            if chosen_items:
+                formatted_links = [
+                    {
+                        "targetKeyword": item.get("targetKeyword", item["title"]),
+                        "url": f"/services/assignment-help/{c_slug}/{item['slug']}/"
+                    }
+                    for item in chosen_items
+                ]
+                spec_json_str = json.dumps(formatted_links, ensure_ascii=False)
+                specialized_links_prompt = f"\n4. You MUST organically include HTML anchor links to at least 1 of these localized commercial service pages where relevant, using exact or natural anchor text:\n{spec_json_str}\n"
+    except Exception as e:
+        logger.warning("Could not build specialized links prompt: %s", e)
         
     prompt = f"""
 You are an expert academic writing coach and SEO editor for {SITE_NAME}.
