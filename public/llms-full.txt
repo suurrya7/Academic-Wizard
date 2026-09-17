@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-16
+        **Last updated**: 2026-09-17
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -255,6 +255,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Mastering NVivo 26: Preventing Coding Drift in Qualitative PhD Theses](https://academicwizard.online/blog/mastering-nvivo-26-preventing-coding-drift-in-qualitative-phd-theses/)**
+  - Excerpt: Struggling with consistency in your thematic analysis? Master NVivo 26 strategies to prevent coding drift and ensure valid results in your PhD thesis.
+  - Keywords: preventing thematic coding drift NVivo, qualitative data analysis tips, NVivo thematic consistency, PhD thesis methodology, reducing researcher bias
+  - Target Region: Australia
+  - Published: 2026-09-17
 
 - **[NVivo 26: Building a Reliable Coding Frame for Qualitative Data](https://academicwizard.online/blog/nvivo-26-building-a-reliable-coding-frame-for-qualitative-data/)**
   - Excerpt: Struggling to organize your qualitative data? Learn how to build a robust NVivo 26 coding frame that minimizes researcher bias and enhances thesis rigor.
@@ -629,6 +635,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Detection: Why Personal Anecdotes Are Flagged as Synthetic](https://academicwizard.online/blog/turnitin-ai-detection-why-personal-anecdotes-are-flagged-as-synthetic/)**
+  - Excerpt: Struggling with Turnitin AI flags on your original work? Discover why personal anecdotes trigger false positives and how to audit your writing tone today.
+  - Keywords: Turnitin AI detection flagging personal writing, AI false positive analysis, academic integrity audit, Turnitin similarity report tips, human writing style vs AI
+  - Target Region: USA
+  - Published: 2026-09-17
 
 - **[Turnitin AI Detection: Why Your Paraphrasing Could Trigger Alerts](https://academicwizard.online/blog/turnitin-ai-detection-why-your-paraphrasing-could-trigger-alerts/)**
   - Excerpt: Turnitin flagged your original writing? Discover why high-level paraphrasing triggers AI detection and learn how to audit your work for academic integrity.
@@ -1278,6 +1290,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[APA 7th Edition: Managing In-Text Citations for Complex AI-Generated Data](https://academicwizard.online/blog/apa-7th-edition-managing-in-text-citations-for-complex-ai-generated-data/)**
+  - Excerpt: Unsure how to cite AI in your latest paper? Learn the evolving APA 7th edition rules for referencing AI-generated outputs while maintaining integrity.
+  - Keywords: APA 7 citation for AI generated output, citing LLM in APA 7, academic referencing 2026, APA style digital sources, ethics of AI in research
+  - Target Region: UK
+  - Published: 2026-09-17
+
 - **[Zotero Citation Fixes: Managing Duplicate Metadata in 2026](https://academicwizard.online/blog/zotero-citation-fixes-managing-duplicate-metadata-in-2026/)**
   - Excerpt: Are duplicate citations ruining your thesis bibliography? Master these Zotero database cleanup techniques to ensure your 2026 research remains accurate.
   - Keywords: fixing zotero duplicate metadata errors, zotero citation management tips, organizing large research libraries, zotero database cleanup for phd, fixing missing bibliography metadata
@@ -1657,6 +1675,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[Zotero 11 Workflow: Organizing Multi-Language Research for Your Thesis](https://academicwizard.online/blog/zotero-11-workflow-organizing-multi-language-research-for-your-thesis/)**
+  - Excerpt: Managing hundreds of sources for your thesis? Optimize your Zotero 11 workflow to handle multi-language metadata and streamline your bibliography effortlessly.
+  - Keywords: Zotero for complex multilingual thesis, Zotero library organization, research management software, thesis source management, multilingual bibliography tips
+  - Target Region: Canada
+  - Published: 2026-09-17
 
 - **[APA 7th Edition: Mastering Complex In-Text Citations for Data](https://academicwizard.online/blog/apa-7th-edition-mastering-complex-in-text-citations-for-data/)**
   - Excerpt: Stop losing marks on formatting! Get the definitive guide to APA 7th edition in-text citations for complex datasets and figures in your final thesis.

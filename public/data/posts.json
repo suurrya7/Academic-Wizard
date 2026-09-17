@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Why Personal Anecdotes Are Flagged as Synthetic",
+    "slug": "turnitin-ai-detection-why-personal-anecdotes-are-flagged-as-synthetic",
+    "excerpt": "Struggling with Turnitin AI flags on your original work? Discover why personal anecdotes trigger false positives and how to audit your writing tone today.",
+    "keywords": [
+      "Turnitin AI detection flagging personal writing",
+      "AI false positive analysis",
+      "academic integrity audit",
+      "Turnitin similarity report tips",
+      "human writing style vs AI"
+    ],
+    "primaryKeyword": "Turnitin AI detection flagging personal writing",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-17T06:58:39.318147+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-why-personal-anecdotes-are-flagged-as-synthetic.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Managing In-Text Citations for Complex AI-Generated Data",
+    "slug": "apa-7th-edition-managing-in-text-citations-for-complex-ai-generated-data",
+    "excerpt": "Unsure how to cite AI in your latest paper? Learn the evolving APA 7th edition rules for referencing AI-generated outputs while maintaining integrity.",
+    "keywords": [
+      "APA 7 citation for AI generated output",
+      "citing LLM in APA 7",
+      "academic referencing 2026",
+      "APA style digital sources",
+      "ethics of AI in research"
+    ],
+    "primaryKeyword": "APA 7 citation for AI generated output",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-17T06:59:05.830765+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-managing-in-text-citations-for-complex-ai-generated-data.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "Mastering NVivo 26: Preventing Coding Drift in Qualitative PhD Theses",
+    "slug": "mastering-nvivo-26-preventing-coding-drift-in-qualitative-phd-theses",
+    "excerpt": "Struggling with consistency in your thematic analysis? Master NVivo 26 strategies to prevent coding drift and ensure valid results in your PhD thesis.",
+    "keywords": [
+      "preventing thematic coding drift NVivo",
+      "qualitative data analysis tips",
+      "NVivo thematic consistency",
+      "PhD thesis methodology",
+      "reducing researcher bias"
+    ],
+    "primaryKeyword": "preventing thematic coding drift NVivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-17T06:59:32.278224+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-nvivo-26-preventing-coding-drift-in-qualitative-phd-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "Zotero 11 Workflow: Organizing Multi-Language Research for Your Thesis",
+    "slug": "zotero-11-workflow-organizing-multi-language-research-for-your-thesis",
+    "excerpt": "Managing hundreds of sources for your thesis? Optimize your Zotero 11 workflow to handle multi-language metadata and streamline your bibliography effortlessly.",
+    "keywords": [
+      "Zotero for complex multilingual thesis",
+      "Zotero library organization",
+      "research management software",
+      "thesis source management",
+      "multilingual bibliography tips"
+    ],
+    "primaryKeyword": "Zotero for complex multilingual thesis",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-17T06:59:58.726900+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-11-workflow-organizing-multi-language-research-for-your-thesis.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Why Your Paraphrasing Could Trigger Alerts",
     "slug": "turnitin-ai-detection-why-your-paraphrasing-could-trigger-alerts",
     "excerpt": "Turnitin flagged your original writing? Discover why high-level paraphrasing triggers AI detection and learn how to audit your work for academic integrity.",
