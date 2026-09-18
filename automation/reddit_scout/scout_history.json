@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-18T01:24:05.465118+00:00",
+  "last_run": "2026-09-18T06:23:00.278940+00:00",
   "daily_count": {
     "date": "2026-09-18",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -30,7 +30,8 @@
     "1widn4s",
     "1wilwt6",
     "1wiqbkd",
-    "1wjat2u"
+    "1wjat2u",
+    "1wjgu0h"
   ],
   "history": [
     {
@@ -240,7 +241,15 @@
       "title": "How do you feel about Joe Rogan calling Trump supporters f## nuts?",
       "posted_at": "2026-09-18T01:24:05.465115+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1wjat2u/how_do_you_feel_about_joe_rogan_calling_trump/"
+    },
+    {
+      "post_id": "1wjgu0h",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Is sex as good as people make it out to be?",
+      "posted_at": "2026-09-18T06:23:00.278935+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1wjgu0h/is_sex_as_good_as_people_make_it_out_to_be/"
     }
   ],
-  "last_comment_posted_at": "2026-09-18T01:24:05.465098+00:00"
+  "last_comment_posted_at": "2026-09-18T06:23:00.278922+00:00"
 }
