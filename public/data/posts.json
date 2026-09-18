@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Strategy to Verify Human Writing",
+    "slug": "turnitin-ai-false-positives-a-2026-strategy-to-verify-human-writing",
+    "excerpt": "Turnitin flagged your human-authored work? Learn how to audit your draft, gather evidence, and protect your academic integrity from AI detection errors.",
+    "keywords": [
+      "resolving Turnitin AI false positives",
+      "academic integrity audit",
+      "Turnitin similarity score issues",
+      "human-written vs AI detection",
+      "proving authorship of academic work"
+    ],
+    "primaryKeyword": "resolving Turnitin AI false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-18T06:57:48.253033+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-strategy-to-verify-human-writing.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Zotero Workflow: Syncing 500+ Dissertation Sources Without Errors",
+    "slug": "zotero-workflow-syncing-500-dissertation-sources-without-errors",
+    "excerpt": "Struggling with Zotero sync errors? Master your 500+ source library for your 2026 dissertation with this expert guide to metadata and storage efficiency.",
+    "keywords": [
+      "Zotero for massive dissertation projects",
+      "managing citation metadata",
+      "Zotero library sync conflicts",
+      "academic reference management",
+      "dissertation research organization"
+    ],
+    "primaryKeyword": "Zotero for massive dissertation projects",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-18T06:58:14.193882+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-workflow-syncing-500-dissertation-sources-without-errors.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "NVivo Thematic Coding: Reducing Researcher Bias in 2026 Qualitative Theses",
+    "slug": "nvivo-thematic-coding-reducing-researcher-bias-in-2026-qualitative-theses",
+    "excerpt": "Ensure research rigor. Learn how to maintain objective thematic coding in NVivo for your qualitative thesis while minimizing software-induced bias.",
+    "keywords": [
+      "minimizing researcher bias in NVivo",
+      "NVivo qualitative data analysis",
+      "thematic analysis workflow",
+      "PhD thesis research methodology",
+      "qualitative coding consistency"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-18T06:58:40.195615+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-thematic-coding-reducing-researcher-bias-in-2026-qualitative-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Navigating New Citation Rules for Digital Media",
+    "slug": "apa-7th-edition-navigating-new-citation-rules-for-digital-media",
+    "excerpt": "Don't lose marks on formatting. Master the latest APA 7th edition citation rules for complex digital media, including podcasts, videos, and datasets.",
+    "keywords": [
+      "APA 7 digital media citation rules",
+      "citing online content in APA 7",
+      "complex citation formatting",
+      "academic writing style guides",
+      "APA 7 bibliography updates"
+    ],
+    "primaryKeyword": "APA 7 digital media citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-18T07:00:31.742035+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-navigating-new-citation-rules-for-digital-media.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Detection: Why Personal Anecdotes Are Flagged as Synthetic",
     "slug": "turnitin-ai-detection-why-personal-anecdotes-are-flagged-as-synthetic",
     "excerpt": "Struggling with Turnitin AI flags on your original work? Discover why personal anecdotes trigger false positives and how to audit your writing tone today.",
