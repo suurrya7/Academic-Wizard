@@ -33,7 +33,7 @@ if str(SCRIPT_DIR) not in sys.path:
 try:
     from social_poster import ROTATION_MATRIX
 except ImportError:
-    ROTATION_MATRIX = {"morning": [], "evening": []}
+    ROTATION_MATRIX = {"morning": [], "afternoon": [], "evening": []}
 
 REPORTS_DIR = SCRIPT_DIR / "social_reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -222,7 +222,7 @@ class BufferAnalyticsClient:
 def attribute_and_score_posts(posts: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Matches harvested posts against curriculum topics and computes ranking scores."""
     all_recipes = []
-    for slot in ["morning", "evening"]:
+    for slot in ["morning", "afternoon", "evening"]:
         for r in ROTATION_MATRIX.get(slot, []):
             all_recipes.append({**r, "_slot": slot})
 
@@ -372,7 +372,7 @@ You MUST return ONLY valid JSON with no markdown wrapping and following this EXA
         "cta_text": "...",
         "whatsapp_msg": "..."
       },
-      "evening": {
+       "evening": {
         "topic": "...",
         "badge": "...",
         "hook_headline": "...",
@@ -397,14 +397,40 @@ You MUST return ONLY valid JSON with no markdown wrapping and following this EXA
         "service_url": "https://academicwizard.online/services/assignment-help/",
         "cta_text": "...",
         "whatsapp_msg": "..."
+      },
+      "afternoon": {
+        "topic": "...",
+        "badge": "...",
+        "hook_headline": "...",
+        "hook_sub": "...",
+        "hook_bullets": ["...", "..."],
+        "comparison": {
+          "trap_title": "THE COMMON MISTAKE",
+          "trap_text": "...",
+          "fix_title": "THE EXPERT APPROACH",
+          "fix_text": "..."
+        },
+        "formula": {
+          "title": "...",
+          "steps": [
+            {"num": "01", "label": "...", "desc": "..."},
+            {"num": "02", "label": "...", "desc": "..."},
+            {"num": "03", "label": "...", "desc": "..."}
+          ],
+          "exemplar": "..."
+        },
+        "checklist": ["...", "...", "...", "..."],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "...",
+        "whatsapp_msg": "..."
       }
     },
-    "Tuesday": { "morning": {...}, "evening": {...} },
-    "Wednesday": { "morning": {...}, "evening": {...} },
-    "Thursday": { "morning": {...}, "evening": {...} },
-    "Friday": { "morning": {...}, "evening": {...} },
-    "Saturday": { "morning": {...}, "evening": {...} },
-    "Sunday": { "morning": {...}, "evening": {...} }
+    "Tuesday": { "morning": {...}, "afternoon": {...}, "evening": {...} },
+    "Wednesday": { "morning": {...}, "afternoon": {...}, "evening": {...} },
+    "Thursday": { "morning": {...}, "afternoon": {...}, "evening": {...} },
+    "Friday": { "morning": {...}, "afternoon": {...}, "evening": {...} },
+    "Saturday": { "morning": {...}, "afternoon": {...}, "evening": {...} },
+    "Sunday": { "morning": {...}, "afternoon": {...}, "evening": {...} }
   }
 }
 """
@@ -467,9 +493,10 @@ Generate the complete, high-converting 7-day schedule (all 7 days, morning and e
     schedule_fallback = {}
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     for i, day in enumerate(days):
-        m_recipe = ROTATION_MATRIX["morning"][i % len(ROTATION_MATRIX["morning"])]
-        e_recipe = ROTATION_MATRIX["evening"][i % len(ROTATION_MATRIX["evening"])]
-        schedule_fallback[day] = {"morning": m_recipe, "evening": e_recipe}
+        m_recipe = ROTATION_MATRIX["morning"][i % len(ROTATION_MATRIX["morning"])] if ROTATION_MATRIX.get("morning") else {}
+        a_recipe = ROTATION_MATRIX["afternoon"][i % len(ROTATION_MATRIX["afternoon"])] if ROTATION_MATRIX.get("afternoon") else {}
+        e_recipe = ROTATION_MATRIX["evening"][i % len(ROTATION_MATRIX["evening"])] if ROTATION_MATRIX.get("evening") else {}
+        schedule_fallback[day] = {"morning": m_recipe, "afternoon": a_recipe, "evening": e_recipe}
 
     return {
         "generated_at": now.isoformat(),
@@ -537,19 +564,21 @@ Topics ranked by weighted student engagement ($Reach + 10 \\times Clicks + 5 \\t
 
 ---
 
-## 4. Next Week's 14-Slot Publishing Schedule
+## 4. Next Week's 21-Slot Publishing Schedule
 
-The autonomous poster (`automation/social_poster.py`) will automatically execute this plan starting Monday morning:
+The autonomous poster (`automation/social_poster.py`) will automatically execute this plan with 3 daily posts:
 
-| Day | Morning Slot (09:00 UTC) — Free Tools & Formulas | Evening Slot (18:00 UTC) — Services & Triage |
-|---|---|---|
+| Day | Morning (08:00 UTC) — Study Hacks | Afternoon (13:00 UTC) — Deep Guides | Evening (17:00 UTC) — Services & CTAs |
+|---|---|---|---|
 """
     for day, slots in plan.get("schedule", {}).items():
         m_topic = slots.get("morning", {}).get("topic", "N/A")
         m_hook = slots.get("morning", {}).get("hook_headline", "")
+        a_topic = slots.get("afternoon", {}).get("topic", "N/A")
+        a_hook = slots.get("afternoon", {}).get("hook_headline", "")
         e_topic = slots.get("evening", {}).get("topic", "N/A")
         e_hook = slots.get("evening", {}).get("hook_headline", "")
-        report += f"| **{day}** | **{m_topic}**<br>_{m_hook}_ | **{e_topic}**<br>_{e_hook}_ |\n"
+        report += f"| **{day}** | **{m_topic}**<br>_{m_hook}_ | **{a_topic}**<br>_{a_hook}_ | **{e_topic}**<br>_{e_hook}_ |\n"
 
     report += f"""
 ---

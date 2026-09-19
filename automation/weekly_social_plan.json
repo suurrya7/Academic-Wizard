@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T15:47:27.337685+00:00",
+  "generated_at": "2026-09-19T23:00:21.228307+00:00",
   "week_start": "2026-09-21",
   "insights_summary": {
     "core_finding": "Maintained priority on citation tools and dissertation emergency triage.",
@@ -22,6 +22,7 @@
     "Monday": {
       "morning": {
         "day": "Monday",
+        "format": "comparison",
         "topic": "In-Text Citations: APA 7th vs Harvard vs OSCOLA",
         "badge": "ACADEMIC WEAPON: CITATION MATRIX",
         "hook_headline": "Never Lose Marks on In-Text Citations Again",
@@ -67,8 +68,56 @@
         "cta_text": "Generate accurate APA, Harvard, and OSCOLA citations instantly with our free tools.",
         "whatsapp_msg": "Hi Academic Wizard, I need help formatting my citations and references for my paper."
       },
+      "afternoon": {
+        "day": "Monday",
+        "format": "cheatsheet",
+        "topic": "Sentence Starters",
+        "badge": "ACADEMIC CHEAT-SHEET",
+        "hook_headline": "10 Critical Analysis Sentence Starters You Can Copy-Paste",
+        "hook_sub": "Stop writing 'This shows that...'. Use these exact sentence frames to instantly elevate your critical analysis and hit top marks.",
+        "hook_bullets": [
+          "Boost your critical evaluation score.",
+          "Demonstrate deep engagement with literature."
+        ],
+        "comparison": {
+          "trap_title": "THE COMMON TRAP",
+          "trap_text": "Using basic descriptive phrases that just summarize the source.",
+          "fix_title": "THE UPGRADE",
+          "fix_text": "Using analytical phrases that evaluate methodology and implications."
+        },
+        "formula": {
+          "title": "The Analysis Framework",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Identify",
+              "desc": "Identify the author's core argument."
+            },
+            {
+              "num": "02",
+              "label": "Critique",
+              "desc": "Highlight a limitation or counter-perspective."
+            },
+            {
+              "num": "03",
+              "label": "Synthesize",
+              "desc": "Merge with your own overarching thesis."
+            }
+          ],
+          "exemplar": "While Smith (2020) argues X, this fails to account for Y, suggesting..."
+        },
+        "checklist": [
+          "Used analytical verbs (e.g., contradicts, illuminates).",
+          "Avoided mere summary.",
+          "Explicitly linked source to assignment question."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Need more sentence frames? Try our free paraphraser.",
+        "whatsapp_msg": "Hi, I need help writing critically."
+      },
       "evening": {
         "day": "Monday",
+        "format": "comparison",
         "topic": "Law Problem Questions: The IRAC Masterclass",
         "badge": "CORE SERVICE: LAW ASSIGNMENT HELP",
         "hook_headline": "Score a First Class in Contract, Tort & Criminal Law",
@@ -118,6 +167,7 @@
     "Tuesday": {
       "morning": {
         "day": "Tuesday",
+        "format": "comparison",
         "topic": "5 Free Academic Search Engines & Boolean Strings",
         "badge": "RESEARCH STRATEGY: LITERATURE SEARCH",
         "hook_headline": "Stop Relying Solely on Google Scholar",
@@ -163,8 +213,56 @@
         "cta_text": "Explore free research guides, topic databases, and word count calculators at Academic Wizard.",
         "whatsapp_msg": "Hi Academic Wizard, I need help finding peer-reviewed sources for my literature review."
       },
+      "afternoon": {
+        "day": "Tuesday",
+        "format": "mythbuster",
+        "topic": "Academic Writing Myths",
+        "badge": "MYTH-BUSTER",
+        "hook_headline": "5 Academic Writing Myths Your Professor Wishes You'd Stop Believing",
+        "hook_sub": "You are losing marks by following outdated high school writing advice. Here is what university graders actually look for.",
+        "hook_bullets": [
+          "Complex vocabulary does NOT equal better grades.",
+          "First-person pronouns are sometimes required."
+        ],
+        "comparison": {
+          "trap_title": "THE MYTH",
+          "trap_text": "Using a thesaurus to replace every simple word with a complicated one.",
+          "fix_title": "THE REALITY",
+          "fix_text": "Clarity and precision outscore complex but misused vocabulary every time."
+        },
+        "formula": {
+          "title": "The Clarity Protocol",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Simplicity",
+              "desc": "Choose the clearest word, not the longest."
+            },
+            {
+              "num": "02",
+              "label": "Signposting",
+              "desc": "Use clear transition words to guide the reader."
+            },
+            {
+              "num": "03",
+              "label": "Precision",
+              "desc": "Define key terms early and use them consistently."
+            }
+          ],
+          "exemplar": "Instead of 'utilize', just use 'use'. Keep it direct."
+        },
+        "checklist": [
+          "Removed unnecessary jargon.",
+          "Sentences are under 25 words on average.",
+          "Argument flows logically."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Check your essay's readability with our free tools.",
+        "whatsapp_msg": "Hi, I want someone to review my essay for clarity."
+      },
       "evening": {
         "day": "Tuesday",
+        "format": "comparison",
         "topic": "Nursing Care Plans & Gibbs Reflective Cycle",
         "badge": "CORE SERVICE: NURSING & HEALTHCARE",
         "hook_headline": "Evidence-Based Practice & Gibbs Reflective Mastery",
@@ -214,6 +312,7 @@
     "Wednesday": {
       "morning": {
         "day": "Wednesday",
+        "format": "comparison",
         "topic": "The 10-80-10 Rule & P-E-E-L+E Essay Blueprint",
         "badge": "ESSAY ARCHITECTURE: FIRST CLASS FORMULA",
         "hook_headline": "Structure Any 2,500-Word Essay Without Fluff",
@@ -259,8 +358,61 @@
         "cta_text": "Plan your essay word counts, paragraph targets, and margins with our free calculators.",
         "whatsapp_msg": "Hi Academic Wizard, I need help structuring and outlining my university essay."
       },
+      "afternoon": {
+        "day": "Wednesday",
+        "format": "cheatsheet",
+        "topic": "Paraphrasing Toolkit",
+        "badge": "ACADEMIC CHEAT-SHEET",
+        "hook_headline": "The Complete Paraphrasing Toolkit: 8 Formulas That Avoid Turnitin Flags",
+        "hook_sub": "Just changing a few words is plagiarism. Learn how to genuinely restructure ideas to pass Turnitin and show true understanding.",
+        "hook_bullets": [
+          "Avoid accidental plagiarism.",
+          "Integrate sources seamlessly."
+        ],
+        "comparison": {
+          "trap_title": "POOR PARAPHRASING",
+          "trap_text": "Swapping synonyms while keeping the exact same sentence structure (patchwriting).",
+          "fix_title": "PROPER PARAPHRASING",
+          "fix_text": "Reading the source, hiding it, and writing the concept from scratch in your own voice."
+        },
+        "formula": {
+          "title": "The 4-Step Paraphrase",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Read",
+              "desc": "Understand the full meaning of the passage."
+            },
+            {
+              "num": "02",
+              "label": "Hide",
+              "desc": "Put the original text out of sight."
+            },
+            {
+              "num": "03",
+              "label": "Draft",
+              "desc": "Write the idea from memory."
+            },
+            {
+              "num": "04",
+              "label": "Check",
+              "desc": "Compare with original and add citation."
+            }
+          ],
+          "exemplar": "Original: 'The data indicates...' -> Paraphrase: 'Based on the findings, it is evident...'"
+        },
+        "checklist": [
+          "Sentence structure is fundamentally different.",
+          "Meaning remains entirely accurate.",
+          "In-text citation is included."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Try our AI paraphraser to get past writer's block.",
+        "whatsapp_msg": "Hi, I need help reducing my Turnitin similarity score."
+      },
       "evening": {
         "day": "Wednesday",
+        "format": "comparison",
         "topic": "MBA Reports: Porter's, SWOT & Financial Ratios",
         "badge": "CORE SERVICE: MBA & MANAGEMENT",
         "hook_headline": "Mastering Executive Reports & Strategic Frameworks",
@@ -310,6 +462,7 @@
     "Thursday": {
       "morning": {
         "day": "Thursday",
+        "format": "comparison",
         "topic": "Turning Broad Topics into First-Class Hypotheses",
         "badge": "DISSERTATION TOOLKIT: RESEARCH QUESTIONS",
         "hook_headline": "How to Formulate a Bulletproof Thesis Statement",
@@ -355,8 +508,56 @@
         "cta_text": "Refine your dissertation proposal or research methodology with our PhD consulting team.",
         "whatsapp_msg": "Hi Academic Wizard, can you review my dissertation thesis topic and research question?"
       },
+      "afternoon": {
+        "day": "Thursday",
+        "format": "scenario",
+        "topic": "Case Study Transformation",
+        "badge": "STUDENT STORY",
+        "hook_headline": "From 42% to 78%: How a Singapore MBA Student Transformed Their Case Study Grade",
+        "hook_sub": "See the exact structural changes that turned a failing business case study into a distinction-level analysis.",
+        "hook_bullets": [
+          "Stop summarizing the case facts.",
+          "Start applying frameworks correctly."
+        ],
+        "comparison": {
+          "trap_title": "THE 42% DRAFT",
+          "trap_text": "Repeating the background information given in the case brief.",
+          "fix_title": "THE 78% REVISION",
+          "fix_text": "Applying PESTLE and SWOT to evaluate strategic options."
+        },
+        "formula": {
+          "title": "Case Study Framework",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Diagnose",
+              "desc": "Identify the core problem, not just symptoms."
+            },
+            {
+              "num": "02",
+              "label": "Analyze",
+              "desc": "Apply theoretical frameworks to the evidence."
+            },
+            {
+              "num": "03",
+              "label": "Recommend",
+              "desc": "Propose actionable, justified solutions."
+            }
+          ],
+          "exemplar": "Instead of 'The company lost money', write 'Due to X (Theory Y), revenue declined by Z%'."
+        },
+        "checklist": [
+          "No space wasted on case summary.",
+          "Theories applied directly to evidence.",
+          "Recommendations are realistic and supported."
+        ],
+        "tool_url": "https://academicwizard.online/services/assignment-help/",
+        "cta_text": "Struggling with a case study? Get expert help on WhatsApp.",
+        "whatsapp_msg": "Hi, I need assistance with a business case study."
+      },
       "evening": {
         "day": "Thursday",
+        "format": "comparison",
         "topic": "Dissertation Literature Review: The Synthesis Matrix",
         "badge": "CORE SERVICE: PH.D. & MASTER'S THESIS",
         "hook_headline": "Synthesize 40+ Papers into a First-Class Literature Review",
@@ -406,6 +607,7 @@
     "Friday": {
       "morning": {
         "day": "Friday",
+        "format": "comparison",
         "topic": "Turnitin Deconstructed: What The Colors Mean",
         "badge": "ACADEMIC INTEGRITY: TURNITIN GUIDE",
         "hook_headline": "What Your Turnitin Score Actually Means",
@@ -451,8 +653,56 @@
         "cta_text": "Get an official Turnitin similarity report with non-repository guarantee before submission.",
         "whatsapp_msg": "Hi Academic Wizard, I want to scan my assignment through non-repository Turnitin."
       },
+      "afternoon": {
+        "day": "Friday",
+        "format": "cheatsheet",
+        "topic": "Literature Review Matrix",
+        "badge": "ACADEMIC CHEAT-SHEET",
+        "hook_headline": "The Literature Review Matrix: Copy This Exact Template for 40+ Sources",
+        "hook_sub": "Overwhelmed by reading? Use this spreadsheet framework to organize themes, methods, and gaps before you write a single word.",
+        "hook_bullets": [
+          "Never lose track of a citation again.",
+          "Easily spot research gaps."
+        ],
+        "comparison": {
+          "trap_title": "THE CHAOTIC METHOD",
+          "trap_text": "Writing linear summaries of one paper after another.",
+          "fix_title": "THE MATRIX METHOD",
+          "fix_text": "Synthesizing literature by theme across multiple papers simultaneously."
+        },
+        "formula": {
+          "title": "Matrix Construction",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Columns",
+              "desc": "Set up: Author/Year, Methodology, Key Findings, Limitations."
+            },
+            {
+              "num": "02",
+              "label": "Themes",
+              "desc": "Add custom columns for specific themes relevant to your RQ."
+            },
+            {
+              "num": "03",
+              "label": "Synthesize",
+              "desc": "Read down the columns to write thematic paragraphs."
+            }
+          ],
+          "exemplar": "Authors A, B, and C all utilized qualitative methods, but found different results regarding X."
+        },
+        "checklist": [
+          "Every source logged in the matrix.",
+          "Themes identified before drafting.",
+          "Paragraphs grouped by concept, not by author."
+        ],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "Need help organizing your literature review? Message us.",
+        "whatsapp_msg": "Hi, I am stuck on my literature review chapter."
+      },
       "evening": {
         "day": "Friday",
+        "format": "comparison",
         "topic": "Midnight Panic? The 12-Hour Urgent Rescue Protocol",
         "badge": "CORE SERVICE: 12-HOUR URGENT RESCUE",
         "hook_headline": "Assignment Due Tomorrow Morning and Haven't Started?",
@@ -502,6 +752,7 @@
     "Saturday": {
       "morning": {
         "day": "Saturday",
+        "format": "comparison",
         "topic": "UK First Class (70%+) vs US 4.0 vs Australian HD",
         "badge": "GRADING STANDARDS: GLOBAL RUBRICS",
         "hook_headline": "How University Marks Translate Across UK, US & Aus",
@@ -547,8 +798,56 @@
         "cta_text": "Convert your grades and check assessment rubrics with our free international grade calculator.",
         "whatsapp_msg": "Hi Academic Wizard, I want expert tutoring to score a First Class on my next paper."
       },
+      "afternoon": {
+        "day": "Saturday",
+        "format": "mythbuster",
+        "topic": "Original Ideas Myth",
+        "badge": "MYTH-BUSTER",
+        "hook_headline": "Your Professor Doesn't Want 'Original Ideas' — Here's What They Actually Mark",
+        "hook_sub": "Stop trying to invent a new theory in your undergrad essay. Here is what 'critical thinking' actually means to a grader.",
+        "hook_bullets": [
+          "Synthesis beats invention.",
+          "Evidence-backed evaluation is key."
+        ],
+        "comparison": {
+          "trap_title": "THE STRESS TRAP",
+          "trap_text": "Struggling to come up with completely novel theories for a standard essay.",
+          "fix_title": "THE GRADE WINNER",
+          "fix_text": "Evaluating and synthesizing existing literature in a logical, structured way."
+        },
+        "formula": {
+          "title": "Critical Synthesis",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Compare",
+              "desc": "How do different authors agree or disagree?"
+            },
+            {
+              "num": "02",
+              "label": "Evaluate",
+              "desc": "Which methodology is stronger?"
+            },
+            {
+              "num": "03",
+              "label": "Position",
+              "desc": "Where does your argument sit within this debate?"
+            }
+          ],
+          "exemplar": "While Smith (2021) provides robust quantitative data, Jones (2022) offers crucial qualitative context."
+        },
+        "checklist": [
+          "Claims are supported by evidence.",
+          "Alternative viewpoints are acknowledged.",
+          "Conclusion logically follows the analysis."
+        ],
+        "tool_url": "https://academicwizard.online/services/academic-editing/",
+        "cta_text": "Want us to check your essay's argument structure? WhatsApp us.",
+        "whatsapp_msg": "Hi, can you review my essay's structure?"
+      },
       "evening": {
         "day": "Saturday",
+        "format": "comparison",
         "topic": "Substantive Academic Editing vs. Surface Proofreading",
         "badge": "CORE SERVICE: ACADEMIC POLISHING",
         "hook_headline": "Turn a 2:2 into a First Class: Elevate Academic Register",
@@ -598,6 +897,7 @@
     "Sunday": {
       "morning": {
         "day": "Sunday",
+        "format": "comparison",
         "topic": "The 3-Deadline Sunday Triage Protocol",
         "badge": "STUDY STRATEGY: DEADLINE TRIAGE",
         "hook_headline": "Have 3 Assignments Due This Week? Here's the Protocol",
@@ -643,8 +943,56 @@
         "cta_text": "Overwhelmed by back-to-back university deadlines? Our academic writers are online 24/7.",
         "whatsapp_msg": "Hi Academic Wizard, I have multiple assignments due this week and need urgent assistance."
       },
+      "afternoon": {
+        "day": "Sunday",
+        "format": "urgentcta",
+        "topic": "Live Delivery Proof",
+        "badge": "LIVE DELIVERY PROOF",
+        "hook_headline": "Just Delivered: 3,500-Word Nursing Care Plan for NUS Student in 14 Hours",
+        "hook_sub": "When deadlines are impossible, our specialized academic writers step in. See how we handled an overnight nursing crisis.",
+        "hook_bullets": [
+          "Fully referenced APA 7th.",
+          "Zero AI, passing Turnitin perfectly."
+        ],
+        "comparison": {
+          "trap_title": "PANIC MODE",
+          "trap_text": "Using ChatGPT and risking academic misconduct when time runs out.",
+          "fix_title": "EXPERT HELP",
+          "fix_text": "Hiring a subject-matter expert to deliver a model answer overnight."
+        },
+        "formula": {
+          "title": "Our Urgent Process",
+          "steps": [
+            {
+              "num": "01",
+              "label": "Brief",
+              "desc": "Send us your prompt, rubric, and deadline."
+            },
+            {
+              "num": "02",
+              "label": "Match",
+              "desc": "We assign a specialized expert in your field."
+            },
+            {
+              "num": "03",
+              "label": "Deliver",
+              "desc": "Receive a high-quality, plagiarism-free paper on time."
+            }
+          ],
+          "exemplar": "Delivered: A complete, evidence-based care plan scored at Distinction level."
+        },
+        "checklist": [
+          "Requirements fully met.",
+          "Quality assured by an editor.",
+          "Delivered before the deadline."
+        ],
+        "tool_url": "https://academicwizard.online/services/assignment-help/",
+        "cta_text": "Got an impossible deadline? Message our emergency team now.",
+        "whatsapp_msg": "URGENT: I need help with an assignment due very soon!"
+      },
       "evening": {
         "day": "Sunday",
+        "format": "comparison",
         "topic": "Computer Science & Quantitative Stats (Python, R, SPSS)",
         "badge": "CORE SERVICE: TECH & STATISTICS HELP",
         "hook_headline": "Clean Code, Algorithmic Analysis & Statistical Reports",

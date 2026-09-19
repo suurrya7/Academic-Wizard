@@ -24,6 +24,7 @@ import io
 import json
 import os
 import re
+import random
 import sys
 import time
 import urllib.parse
@@ -72,6 +73,7 @@ ROTATION_MATRIX = {
         # Monday (Day 0): In-Text Citations
         {
             "day": "Monday",
+            "format": "comparison",
             "topic": "In-Text Citations: APA 7th vs Harvard vs OSCOLA",
             "badge": "ACADEMIC WEAPON: CITATION MATRIX",
             "hook_headline": "Never Lose Marks on In-Text Citations Again",
@@ -108,6 +110,7 @@ ROTATION_MATRIX = {
         # Tuesday (Day 1): Academic Research & Boolean Search
         {
             "day": "Tuesday",
+            "format": "comparison",
             "topic": "5 Free Academic Search Engines & Boolean Strings",
             "badge": "RESEARCH STRATEGY: LITERATURE SEARCH",
             "hook_headline": "Stop Relying Solely on Google Scholar",
@@ -144,6 +147,7 @@ ROTATION_MATRIX = {
         # Wednesday (Day 2): Essay Structure & The P-E-E-L+E Formula
         {
             "day": "Wednesday",
+            "format": "comparison",
             "topic": "The 10-80-10 Rule & P-E-E-L+E Essay Blueprint",
             "badge": "ESSAY ARCHITECTURE: FIRST CLASS FORMULA",
             "hook_headline": "Structure Any 2,500-Word Essay Without Fluff",
@@ -180,6 +184,7 @@ ROTATION_MATRIX = {
         # Thursday (Day 3): Dissertation Thesis & Hypotheses
         {
             "day": "Thursday",
+            "format": "comparison",
             "topic": "Turning Broad Topics into First-Class Hypotheses",
             "badge": "DISSERTATION TOOLKIT: RESEARCH QUESTIONS",
             "hook_headline": "How to Formulate a Bulletproof Thesis Statement",
@@ -216,6 +221,7 @@ ROTATION_MATRIX = {
         # Friday (Day 4): Turnitin & Similarity Survival
         {
             "day": "Friday",
+            "format": "comparison",
             "topic": "Turnitin Deconstructed: What The Colors Mean",
             "badge": "ACADEMIC INTEGRITY: TURNITIN GUIDE",
             "hook_headline": "What Your Turnitin Score Actually Means",
@@ -252,6 +258,7 @@ ROTATION_MATRIX = {
         # Saturday (Day 5): Global Grading & Rubric Conversion
         {
             "day": "Saturday",
+            "format": "comparison",
             "topic": "UK First Class (70%+) vs US 4.0 vs Australian HD",
             "badge": "GRADING STANDARDS: GLOBAL RUBRICS",
             "hook_headline": "How University Marks Translate Across UK, US & Aus",
@@ -288,6 +295,7 @@ ROTATION_MATRIX = {
         # Sunday (Day 6): Weekly Deadline Survival
         {
             "day": "Sunday",
+            "format": "comparison",
             "topic": "The 3-Deadline Sunday Triage Protocol",
             "badge": "STUDY STRATEGY: DEADLINE TRIAGE",
             "hook_headline": "Have 3 Assignments Due This Week? Here's the Protocol",
@@ -326,6 +334,7 @@ ROTATION_MATRIX = {
         # Monday (Day 0): Law Assignment Help
         {
             "day": "Monday",
+            "format": "comparison",
             "topic": "Law Problem Questions: The IRAC Masterclass",
             "badge": "CORE SERVICE: LAW ASSIGNMENT HELP",
             "hook_headline": "Score a First Class in Contract, Tort & Criminal Law",
@@ -362,6 +371,7 @@ ROTATION_MATRIX = {
         # Tuesday (Day 1): Nursing & Healthcare Case Studies
         {
             "day": "Tuesday",
+            "format": "comparison",
             "topic": "Nursing Care Plans & Gibbs Reflective Cycle",
             "badge": "CORE SERVICE: NURSING & HEALTHCARE",
             "hook_headline": "Evidence-Based Practice & Gibbs Reflective Mastery",
@@ -398,6 +408,7 @@ ROTATION_MATRIX = {
         # Wednesday (Day 2): MBA & Business Management
         {
             "day": "Wednesday",
+            "format": "comparison",
             "topic": "MBA Reports: Porter's, SWOT & Financial Ratios",
             "badge": "CORE SERVICE: MBA & MANAGEMENT",
             "hook_headline": "Mastering Executive Reports & Strategic Frameworks",
@@ -434,6 +445,7 @@ ROTATION_MATRIX = {
         # Thursday (Day 3): Master's Dissertation Support
         {
             "day": "Thursday",
+            "format": "comparison",
             "topic": "Dissertation Literature Review: The Synthesis Matrix",
             "badge": "CORE SERVICE: PH.D. & MASTER'S THESIS",
             "hook_headline": "Synthesize 40+ Papers into a First-Class Literature Review",
@@ -470,6 +482,7 @@ ROTATION_MATRIX = {
         # Friday (Day 4): 12-Hour Urgent Emergency Help
         {
             "day": "Friday",
+            "format": "comparison",
             "topic": "Midnight Panic? The 12-Hour Urgent Rescue Protocol",
             "badge": "CORE SERVICE: 12-HOUR URGENT RESCUE",
             "hook_headline": "Assignment Due Tomorrow Morning and Haven't Started?",
@@ -506,6 +519,7 @@ ROTATION_MATRIX = {
         # Saturday (Day 5): Substantive Academic Proofreading & Editing
         {
             "day": "Saturday",
+            "format": "comparison",
             "topic": "Substantive Academic Editing vs. Surface Proofreading",
             "badge": "CORE SERVICE: ACADEMIC POLISHING",
             "hook_headline": "Turn a 2:2 into a First Class: Elevate Academic Register",
@@ -542,6 +556,7 @@ ROTATION_MATRIX = {
         # Sunday (Day 6): Computer Science, Tech & Statistics Help
         {
             "day": "Sunday",
+            "format": "comparison",
             "topic": "Computer Science & Quantitative Stats (Python, R, SPSS)",
             "badge": "CORE SERVICE: TECH & STATISTICS HELP",
             "hook_headline": "Clean Code, Algorithmic Analysis & Statistical Reports",
@@ -576,6 +591,254 @@ ROTATION_MATRIX = {
             "whatsapp_msg": "Hi Academic Wizard, I need help with my Coding / Statistics assignment.",
         },
     ],
+    "afternoon": [
+        {
+            "day": "Monday",
+            "format": "cheatsheet",
+            "topic": "Sentence Starters",
+            "badge": "ACADEMIC CHEAT-SHEET",
+            "hook_headline": "10 Critical Analysis Sentence Starters You Can Copy-Paste",
+            "hook_sub": "Stop writing 'This shows that...'. Use these exact sentence frames to instantly elevate your critical analysis and hit top marks.",
+            "hook_bullets": [
+                "Boost your critical evaluation score.",
+                "Demonstrate deep engagement with literature."
+            ],
+            "comparison": {
+                "trap_title": "THE COMMON TRAP",
+                "trap_text": "Using basic descriptive phrases that just summarize the source.",
+                "fix_title": "THE UPGRADE",
+                "fix_text": "Using analytical phrases that evaluate methodology and implications."
+            },
+            "formula": {
+                "title": "The Analysis Framework",
+                "steps": [
+                    {"num": "01", "label": "Identify", "desc": "Identify the author's core argument."},
+                    {"num": "02", "label": "Critique", "desc": "Highlight a limitation or counter-perspective."},
+                    {"num": "03", "label": "Synthesize", "desc": "Merge with your own overarching thesis."}
+                ],
+                "exemplar": "While Smith (2020) argues X, this fails to account for Y, suggesting..."
+            },
+            "checklist": [
+                "Used analytical verbs (e.g., contradicts, illuminates).",
+                "Avoided mere summary.",
+                "Explicitly linked source to assignment question."
+            ],
+            "tool_url": f"{SITE_URL}/tools/",
+            "cta_text": "Need more sentence frames? Try our free paraphraser.",
+            "whatsapp_msg": "Hi, I need help writing critically."
+        },
+        {
+            "day": "Tuesday",
+            "format": "mythbuster",
+            "topic": "Academic Writing Myths",
+            "badge": "MYTH-BUSTER",
+            "hook_headline": "5 Academic Writing Myths Your Professor Wishes You'd Stop Believing",
+            "hook_sub": "You are losing marks by following outdated high school writing advice. Here is what university graders actually look for.",
+            "hook_bullets": [
+                "Complex vocabulary does NOT equal better grades.",
+                "First-person pronouns are sometimes required."
+            ],
+            "comparison": {
+                "trap_title": "THE MYTH",
+                "trap_text": "Using a thesaurus to replace every simple word with a complicated one.",
+                "fix_title": "THE REALITY",
+                "fix_text": "Clarity and precision outscore complex but misused vocabulary every time."
+            },
+            "formula": {
+                "title": "The Clarity Protocol",
+                "steps": [
+                    {"num": "01", "label": "Simplicity", "desc": "Choose the clearest word, not the longest."},
+                    {"num": "02", "label": "Signposting", "desc": "Use clear transition words to guide the reader."},
+                    {"num": "03", "label": "Precision", "desc": "Define key terms early and use them consistently."}
+                ],
+                "exemplar": "Instead of 'utilize', just use 'use'. Keep it direct."
+            },
+            "checklist": [
+                "Removed unnecessary jargon.",
+                "Sentences are under 25 words on average.",
+                "Argument flows logically."
+            ],
+            "tool_url": f"{SITE_URL}/tools/",
+            "cta_text": "Check your essay's readability with our free tools.",
+            "whatsapp_msg": "Hi, I want someone to review my essay for clarity."
+        },
+        {
+            "day": "Wednesday",
+            "format": "cheatsheet",
+            "topic": "Paraphrasing Toolkit",
+            "badge": "ACADEMIC CHEAT-SHEET",
+            "hook_headline": "The Complete Paraphrasing Toolkit: 8 Formulas That Avoid Turnitin Flags",
+            "hook_sub": "Just changing a few words is plagiarism. Learn how to genuinely restructure ideas to pass Turnitin and show true understanding.",
+            "hook_bullets": [
+                "Avoid accidental plagiarism.",
+                "Integrate sources seamlessly."
+            ],
+            "comparison": {
+                "trap_title": "POOR PARAPHRASING",
+                "trap_text": "Swapping synonyms while keeping the exact same sentence structure (patchwriting).",
+                "fix_title": "PROPER PARAPHRASING",
+                "fix_text": "Reading the source, hiding it, and writing the concept from scratch in your own voice."
+            },
+            "formula": {
+                "title": "The 4-Step Paraphrase",
+                "steps": [
+                    {"num": "01", "label": "Read", "desc": "Understand the full meaning of the passage."},
+                    {"num": "02", "label": "Hide", "desc": "Put the original text out of sight."},
+                    {"num": "03", "label": "Draft", "desc": "Write the idea from memory."},
+                    {"num": "04", "label": "Check", "desc": "Compare with original and add citation."}
+                ],
+                "exemplar": "Original: 'The data indicates...' -> Paraphrase: 'Based on the findings, it is evident...'"
+            },
+            "checklist": [
+                "Sentence structure is fundamentally different.",
+                "Meaning remains entirely accurate.",
+                "In-text citation is included."
+            ],
+            "tool_url": f"{SITE_URL}/tools/",
+            "cta_text": "Try our AI paraphraser to get past writer's block.",
+            "whatsapp_msg": "Hi, I need help reducing my Turnitin similarity score."
+        },
+        {
+            "day": "Thursday",
+            "format": "scenario",
+            "topic": "Case Study Transformation",
+            "badge": "STUDENT STORY",
+            "hook_headline": "From 42% to 78%: How a Singapore MBA Student Transformed Their Case Study Grade",
+            "hook_sub": "See the exact structural changes that turned a failing business case study into a distinction-level analysis.",
+            "hook_bullets": [
+                "Stop summarizing the case facts.",
+                "Start applying frameworks correctly."
+            ],
+            "comparison": {
+                "trap_title": "THE 42% DRAFT",
+                "trap_text": "Repeating the background information given in the case brief.",
+                "fix_title": "THE 78% REVISION",
+                "fix_text": "Applying PESTLE and SWOT to evaluate strategic options."
+            },
+            "formula": {
+                "title": "Case Study Framework",
+                "steps": [
+                    {"num": "01", "label": "Diagnose", "desc": "Identify the core problem, not just symptoms."},
+                    {"num": "02", "label": "Analyze", "desc": "Apply theoretical frameworks to the evidence."},
+                    {"num": "03", "label": "Recommend", "desc": "Propose actionable, justified solutions."}
+                ],
+                "exemplar": "Instead of 'The company lost money', write 'Due to X (Theory Y), revenue declined by Z%'."
+            },
+            "checklist": [
+                "No space wasted on case summary.",
+                "Theories applied directly to evidence.",
+                "Recommendations are realistic and supported."
+            ],
+            "tool_url": f"{SITE_URL}/services/assignment-help/",
+            "cta_text": "Struggling with a case study? Get expert help on WhatsApp.",
+            "whatsapp_msg": "Hi, I need assistance with a business case study."
+        },
+        {
+            "day": "Friday",
+            "format": "cheatsheet",
+            "topic": "Literature Review Matrix",
+            "badge": "ACADEMIC CHEAT-SHEET",
+            "hook_headline": "The Literature Review Matrix: Copy This Exact Template for 40+ Sources",
+            "hook_sub": "Overwhelmed by reading? Use this spreadsheet framework to organize themes, methods, and gaps before you write a single word.",
+            "hook_bullets": [
+                "Never lose track of a citation again.",
+                "Easily spot research gaps."
+            ],
+            "comparison": {
+                "trap_title": "THE CHAOTIC METHOD",
+                "trap_text": "Writing linear summaries of one paper after another.",
+                "fix_title": "THE MATRIX METHOD",
+                "fix_text": "Synthesizing literature by theme across multiple papers simultaneously."
+            },
+            "formula": {
+                "title": "Matrix Construction",
+                "steps": [
+                    {"num": "01", "label": "Columns", "desc": "Set up: Author/Year, Methodology, Key Findings, Limitations."},
+                    {"num": "02", "label": "Themes", "desc": "Add custom columns for specific themes relevant to your RQ."},
+                    {"num": "03", "label": "Synthesize", "desc": "Read down the columns to write thematic paragraphs."}
+                ],
+                "exemplar": "Authors A, B, and C all utilized qualitative methods, but found different results regarding X."
+            },
+            "checklist": [
+                "Every source logged in the matrix.",
+                "Themes identified before drafting.",
+                "Paragraphs grouped by concept, not by author."
+            ],
+            "tool_url": f"{SITE_URL}/tools/",
+            "cta_text": "Need help organizing your literature review? Message us.",
+            "whatsapp_msg": "Hi, I am stuck on my literature review chapter."
+        },
+        {
+            "day": "Saturday",
+            "format": "mythbuster",
+            "topic": "Original Ideas Myth",
+            "badge": "MYTH-BUSTER",
+            "hook_headline": "Your Professor Doesn't Want 'Original Ideas' — Here's What They Actually Mark",
+            "hook_sub": "Stop trying to invent a new theory in your undergrad essay. Here is what 'critical thinking' actually means to a grader.",
+            "hook_bullets": [
+                "Synthesis beats invention.",
+                "Evidence-backed evaluation is key."
+            ],
+            "comparison": {
+                "trap_title": "THE STRESS TRAP",
+                "trap_text": "Struggling to come up with completely novel theories for a standard essay.",
+                "fix_title": "THE GRADE WINNER",
+                "fix_text": "Evaluating and synthesizing existing literature in a logical, structured way."
+            },
+            "formula": {
+                "title": "Critical Synthesis",
+                "steps": [
+                    {"num": "01", "label": "Compare", "desc": "How do different authors agree or disagree?"},
+                    {"num": "02", "label": "Evaluate", "desc": "Which methodology is stronger?"},
+                    {"num": "03", "label": "Position", "desc": "Where does your argument sit within this debate?"}
+                ],
+                "exemplar": "While Smith (2021) provides robust quantitative data, Jones (2022) offers crucial qualitative context."
+            },
+            "checklist": [
+                "Claims are supported by evidence.",
+                "Alternative viewpoints are acknowledged.",
+                "Conclusion logically follows the analysis."
+            ],
+            "tool_url": f"{SITE_URL}/services/academic-editing/",
+            "cta_text": "Want us to check your essay's argument structure? WhatsApp us.",
+            "whatsapp_msg": "Hi, can you review my essay's structure?"
+        },
+        {
+            "day": "Sunday",
+            "format": "urgentcta",
+            "topic": "Live Delivery Proof",
+            "badge": "LIVE DELIVERY PROOF",
+            "hook_headline": "Just Delivered: 3,500-Word Nursing Care Plan for NUS Student in 14 Hours",
+            "hook_sub": "When deadlines are impossible, our specialized academic writers step in. See how we handled an overnight nursing crisis.",
+            "hook_bullets": [
+                "Fully referenced APA 7th.",
+                "Zero AI, passing Turnitin perfectly."
+            ],
+            "comparison": {
+                "trap_title": "PANIC MODE",
+                "trap_text": "Using ChatGPT and risking academic misconduct when time runs out.",
+                "fix_title": "EXPERT HELP",
+                "fix_text": "Hiring a subject-matter expert to deliver a model answer overnight."
+            },
+            "formula": {
+                "title": "Our Urgent Process",
+                "steps": [
+                    {"num": "01", "label": "Brief", "desc": "Send us your prompt, rubric, and deadline."},
+                    {"num": "02", "label": "Match", "desc": "We assign a specialized expert in your field."},
+                    {"num": "03", "label": "Deliver", "desc": "Receive a high-quality, plagiarism-free paper on time."}
+                ],
+                "exemplar": "Delivered: A complete, evidence-based care plan scored at Distinction level."
+            },
+            "checklist": [
+                "Requirements fully met.",
+                "Quality assured by an editor.",
+                "Delivered before the deadline."
+            ],
+            "tool_url": f"{SITE_URL}/services/assignment-help/",
+            "cta_text": "Got an impossible deadline? Message our emergency team now.",
+            "whatsapp_msg": "URGENT: I need help with an assignment due very soon!"
+        }
+    ]
 }
 
 
@@ -1025,6 +1288,76 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
     return slides
 
 
+def generate_video_reel(slide_paths: List[Path], slot: str) -> Optional[Path]:
+    """Convert 4 carousel slides into an MP4 video reel with lo-fi background audio."""
+    try:
+        import subprocess
+        
+        LOFI_DIR = SCRIPT_DIR / "lofi_beats"
+        output_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel.mp4"
+        
+        # Pick a random lo-fi beat
+        beats = list(LOFI_DIR.glob("*.wav"))
+        if not beats:
+            print("  ⚠️ No lo-fi beats found in automation/lofi_beats/ — generating reel without audio.")
+            audio_path = None
+        else:
+            audio_path = random.choice(beats)
+            print(f"  🎵 Selected lo-fi beat: {audio_path.name}")
+        
+        # Create a concat file for ffmpeg
+        concat_file = PUBLIC_SOCIAL_DIR / f"_concat_{slot}.txt"
+        with open(concat_file, "w") as f:
+            for sp in slide_paths:
+                # Each slide shown for 3.5 seconds
+                f.write(f"file '{sp.resolve()}'\n")
+                f.write(f"duration 3.5\n")
+            # Repeat last frame to avoid ffmpeg cutting it short
+            f.write(f"file '{slide_paths[-1].resolve()}'\n")
+        
+        # Build ffmpeg command
+        cmd = [
+            "ffmpeg", "-y",
+            "-f", "concat", "-safe", "0", "-i", str(concat_file),
+            "-vf", "scale=1080:1080:force_original_aspect_ratio=decrease,pad=1080:1080:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
+            "-r", "30",
+            "-c:v", "libx264",
+            "-preset", "fast",
+            "-crf", "23",
+            "-pix_fmt", "yuv420p",
+        ]
+        
+        if audio_path:
+            cmd.extend(["-i", str(audio_path), "-c:a", "aac", "-b:a", "128k", "-shortest"])
+        else:
+            cmd.extend(["-an"])  # No audio
+        
+        cmd.append(str(output_path))
+        
+        print(f"  🎬 Rendering video reel with ffmpeg...")
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        
+        if result.returncode == 0:
+            size_mb = os.path.getsize(output_path) / (1024 * 1024)
+            print(f"  ✅ Video reel generated: {output_path.name} ({size_mb:.1f} MB)")
+            return output_path
+        else:
+            print(f"  ⚠️ ffmpeg failed (exit {result.returncode}): {result.stderr[-500:]}")
+            print(f"  ℹ️ Falling back to static carousel (no video).")
+            return None
+    except FileNotFoundError:
+        print("  ⚠️ ffmpeg not found — falling back to static carousel.")
+        return None
+    except Exception as e:
+        print(f"  ⚠️ Video reel generation error: {e}")
+        return None
+    finally:
+        if 'concat_file' in locals() and concat_file.exists():
+            try:
+                concat_file.unlink()
+            except Exception:
+                pass
+
 # ==============================================================================
 # Platform-Specific Copy Generator (Gemini Pro + Fallback)
 # ==============================================================================
@@ -1128,20 +1461,24 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
         return fallback_copy
 
     system_prompt = (
-        "You are an elite academic social media marketing copywriter for Academic Wizard (academicwizard.online). "
-        "Your audience consists of international university students in the UK, USA, Australia, Canada, and Singapore. "
-        "Your tone is empowering, authoritative, practical, and highly engaging (dark-academia student vibe).\n\n"
-        "Generate 3 distinct copy variations in strict JSON format where values for 'instagram', 'twitter', and 'facebook' are SINGLE READY-TO-POST STRINGS (not nested objects):\n"
-        "1. 'instagram': Single string containing engaging opening hook line, outline of what is inside Slides 1 to 4, "
-        "clear call-to-action mentioning free tools and WhatsApp consultation, and exactly 18 targeted hashtags.\n"
-        "2. 'twitter': Single string under 270 characters including tool URL and 2-3 hashtags.\n"
-        "3. 'facebook': Single string with story/context, formatted takeaways matching the slides, clear links to tools and WhatsApp.\n\n"
-        "Example JSON output format:\n"
-        "{\n"
-        '  "instagram": "📌 Hook line\\n\\nSlide overview...\\n\\n#hashtags",\n'
-        '  "twitter": "🎯 Hook line\\n\\nShort copy... https://... #tags",\n'
-        '  "facebook": "🎓 Context\\n\\nTakeaways... https://..."\n'
-        "}\n\n"
+        "You are an elite academic social media copywriter for Academic Wizard (academicwizard.online). "
+        "Your audience: international university students (UK, US, Australia, Canada, Singapore) who are "
+        "stressed about deadlines, confused by rubrics, and desperate for actionable academic shortcuts.\n\n"
+        "CRITICAL RULES:\n"
+        "1. NEVER use the phrases '2:2 trap', 'First Class blueprint', 'academic weapon', or 'stop settling'. "
+        "Every post must have a UNIQUE hook that feels fresh and surprising.\n"
+        "2. Write LONG, VALUE-DENSE captions. Instagram captions should be 150-250 words minimum with "
+        "concrete examples, exact sentence templates, or specific mark-saving formulas students can screenshot.\n"
+        "3. Use conversational, empathetic tone — like a supportive PhD mentor texting a friend, not a corporate ad.\n"
+        "4. Include at least ONE specific real-world example (e.g., an exact citation format, a before/after paragraph, "
+        "or a rubric criterion with specific percentage breakdowns).\n\n"
+        "Generate 3 platform-tailored copy variations as a strict JSON object with keys 'instagram', 'twitter', 'facebook'. "
+        "Each value must be a SINGLE ready-to-post string (not nested objects):\n"
+        "1. 'instagram': 150-250 word caption with engaging hook, valuable content students want to save, "
+        "clear CTA mentioning free tools and WhatsApp, and exactly 18 targeted hashtags at the end.\n"
+        "2. 'twitter': Punchy thread-starter under 270 chars including the tool URL and 3 hashtags.\n"
+        "3. 'facebook': Full community study guide (200+ words) with story context, formatted takeaways, "
+        "and clear links to tools and WhatsApp.\n\n"
         "Output ONLY valid JSON."
     )
 
@@ -1159,7 +1496,7 @@ WhatsApp Number: {WHATSAPP_DISPLAY}
         api_url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
         payload = {
             "contents": [{"parts": [{"text": f"{system_prompt}\n\n{user_prompt}"}]}],
-            "generationConfig": {"temperature": 0.7, "maxOutputTokens": 1200},
+            "generationConfig": {"temperature": 0.7, "maxOutputTokens": 2500},
         }
         res = requests.post(api_url, json=payload, timeout=25)
         if res.status_code == 200:
@@ -1396,22 +1733,27 @@ class BufferClient:
             "mode": initial_mode,
         }
 
+        is_video = bool(image_urls and any(u.lower().endswith((".mp4", ".mov")) for u in image_urls))
         if image_urls:
-            # Respect platform limits: Twitter max 4 images
-            limit = 4 if ("twitter" in service or "x" in service) else len(image_urls)
-            input_payload["assets"] = [{"image": {"url": u}} for u in image_urls[:limit]]
+            if is_video:
+                video_url = next(u for u in image_urls if u.lower().endswith((".mp4", ".mov")))
+                input_payload["assets"] = [{"video": {"url": video_url}}]
+            else:
+                # Respect platform limits: Twitter max 4 images
+                limit = 4 if ("twitter" in service or "x" in service) else len(image_urls)
+                input_payload["assets"] = [{"image": {"url": u}} for u in image_urls[:limit]]
 
         # Buffer GraphQL strictly requires channel-specific metadata for Facebook and Instagram
         if "facebook" in service:
             input_payload["metadata"] = {
                 "facebook": {
-                    "type": "post",
+                    "type": "video" if is_video else "post",
                 }
             }
         elif "instagram" in service:
             input_payload["metadata"] = {
                 "instagram": {
-                    "type": "post",
+                    "type": "reel" if is_video else "post",
                     "shouldShareToFeed": True,
                 }
             }
@@ -1541,6 +1883,7 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
 
     # 1. Generate 4-Slide Infographic Carousel
     image_urls = []
+    reel_url = None
     if not skip_image:
         print("\n🎨 Generating 4-Slide Editorial Infographic Carousel...")
         slides = generate_carousel_slides(recipe, slot)
@@ -1548,7 +1891,15 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
             f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png"
             for i in range(1, 5)
         ]
-        print(f"\n🌐 Public URLs for Buffer ({len(image_urls)} assets):")
+        
+        # Generate video reel with lo-fi audio
+        print("\n🎬 Generating Video Reel with Lo-Fi Study Beat...")
+        reel_path = generate_video_reel(slides, slot)
+        if reel_path:
+            reel_url = f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel.mp4"
+            print(f"\n🌐 Video Reel URL for Buffer: {reel_url}")
+        
+        print(f"\n🌐 Public URLs for Buffer ({len(image_urls)} slide assets):")
         for u in image_urls:
             print(f"   • {u}")
 
@@ -1581,12 +1932,26 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
         else:
             text = format_copy_to_string(copy_dict.get("facebook") or copy_dict.get("instagram", ""))
 
-        buffer_client.dispatch(
-            channel=channel,
-            text=text,
-            image_urls=image_urls,
-            force_publish=force_publish,
-        )
+        # Prefer video reel if available; if video dispatch fails, fallback to carousel images
+        dispatched = False
+        if reel_url:
+            print(f"    🎬 Attempting Video Reel dispatch to {channel.get('name')}...")
+            dispatched = buffer_client.dispatch(
+                channel=channel,
+                text=text,
+                image_urls=[reel_url],
+                force_publish=force_publish,
+            )
+            if not dispatched:
+                print(f"    ⚠️ Video reel dispatch failed for {channel.get('name')}. Retrying with 4-slide carousel...")
+
+        if not dispatched:
+            buffer_client.dispatch(
+                channel=channel,
+                text=text,
+                image_urls=image_urls,
+                force_publish=force_publish,
+            )
 
     print("\n" + "=" * 75)
     print("✅ Multi-Slide Carousel Social Cycle Finished Successfully!")
@@ -1627,9 +1992,9 @@ def main():
     parser = argparse.ArgumentParser(description="Academic Wizard Autonomous Social Media Poster")
     parser.add_argument(
         "--slot",
-        choices=["morning", "evening", "auto"],
+        choices=["morning", "afternoon", "evening", "auto"],
         default="auto",
-        help="Posting slot: morning (tools) or evening (services). 'auto' detects from current UTC hour.",
+        help="Posting slot: morning (tools), afternoon (deep guides), or evening (services). 'auto' detects from UTC hour.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Simulate posting without calling Buffer API")
     parser.add_argument("--force-publish", action="store_true", help="Publish immediately rather than adding to queue")
@@ -1645,7 +2010,12 @@ def main():
 
     if args.slot == "auto":
         curr_utc_hour = dt.datetime.now(dt.timezone.utc).hour
-        slot = "morning" if 6 <= curr_utc_hour < 14 else "evening"
+        if 6 <= curr_utc_hour < 11:
+            slot = "morning"
+        elif 11 <= curr_utc_hour < 15:
+            slot = "afternoon"
+        else:
+            slot = "evening"
     else:
         slot = args.slot
 

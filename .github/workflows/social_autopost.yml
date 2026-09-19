@@ -2,10 +2,12 @@ name: Autonomous Social Media Poster (Instagram, FB, Twitter)
 
 on:
   schedule:
-    # Slot 1: Morning (09:00 UTC = 2:30 PM IST = 10:00 AM London) - Free Tools & Academic Weapon
-    - cron: '0 9 * * *'
-    # Slot 2: Evening (18:00 UTC = 11:30 PM IST = 7:00 PM London) - Core Services & Night Owl Triage
-    - cron: '0 18 * * *'
+    # Slot 1: Morning (08:00 UTC = 1:30 PM IST = 9:00 AM London) - Study Hacks & Quick Tips
+    - cron: '0 8 * * *'
+    # Slot 2: Afternoon (13:00 UTC = 6:30 PM IST = 2:00 PM London) - Deep Academic Guides
+    - cron: '0 13 * * *'
+    # Slot 3: Evening (17:00 UTC = 10:30 PM IST = 6:00 PM London) - Core Services & Urgent CTAs
+    - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
       slot:
@@ -15,11 +17,12 @@ on:
         type: choice
         options:
           - morning
+          - afternoon
           - evening
       force_publish:
         description: 'Publish immediately instead of queuing in Buffer'
         required: false
-        default: false
+        default: true
         type: boolean
       dry_run:
         description: 'Dry Run (simulate generation without calling Buffer)'
@@ -52,6 +55,11 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
 
+      - name: Install System Dependencies (ffmpeg)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -67,12 +75,15 @@ jobs:
             echo "check_flag=$([ "${{ github.event.inputs.check_buffer }}" = "true" ] && echo "--check-buffer" || echo "")" >> $GITHUB_OUTPUT
           else
             UTC_HOUR=$(date -u +%H)
-            if [ "$UTC_HOUR" -lt 14 ]; then
+            if [ "$UTC_HOUR" -lt 11 ]; then
               echo "slot=morning" >> $GITHUB_OUTPUT
+            elif [ "$UTC_HOUR" -lt 15 ]; then
+              echo "slot=afternoon" >> $GITHUB_OUTPUT
             else
               echo "slot=evening" >> $GITHUB_OUTPUT
             fi
-            echo "force_flag=" >> $GITHUB_OUTPUT
+            # Free Buffer plan: always force-publish (no queue)
+            echo "force_flag=--force-publish" >> $GITHUB_OUTPUT
             echo "dry_flag=" >> $GITHUB_OUTPUT
             echo "check_flag=" >> $GITHUB_OUTPUT
           fi
