@@ -95,6 +95,7 @@ const Footer = () => {
                     <ul className="flex flex-col gap-4 text-text-secondary text-sm" style={{ color: 'var(--text-secondary)' }}>
                         <li><Link to="/" className="hover:text-accent-gold transition-colors">Home</Link></li>
                         <li><Link to="/services/" className="hover:text-accent-gold transition-colors">Services</Link></li>
+                        <li><Link to="/services/directory/" className="hover:text-accent-gold transition-colors">Services Directory</Link></li>
                         <li><Link to="/tools/" className="hover:text-accent-gold transition-colors">Free Tools</Link></li>
                         <li><Link to="/about/" className="hover:text-accent-gold transition-colors">About Us</Link></li>
                         <li><Link to="/faq/" className="hover:text-accent-gold transition-colors">FAQs</Link></li>
@@ -113,6 +114,7 @@ const Footer = () => {
                         <li><Link to="/services/editing-proofreading/" className="hover:text-accent-gold transition-colors">Editing & Proofreading</Link></li>
                         <li><Link to="/services/research-paper-help/" className="hover:text-accent-gold transition-colors">Research Paper Help</Link></li>
                         <li><Link to="/services/study-guidance/" className="hover:text-accent-gold transition-colors">Study Guidance</Link></li>
+                        <li><Link to="/services/directory/" className="hover:text-accent-gold transition-colors font-semibold text-accent-gold">All Services Directory →</Link></li>
                     </ul>
                 </div>
 

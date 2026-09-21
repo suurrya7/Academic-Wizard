@@ -17,6 +17,7 @@ const FloatingWhatsApp = React.lazy(() => import('./components/FloatingWhatsApp'
 // Pages loaded lazily (Code Splitting)
 const Home = React.lazy(() => import('./pages/Home'));
 const Services = React.lazy(() => import('./pages/Services'));
+const ServicesDirectory = React.lazy(() => import('./pages/ServicesDirectory'));
 const ServicePage = React.lazy(() => import('./pages/ServicePage'));
 const CountryServicePage = React.lazy(() => import('./pages/CountryServicePage'));
 const SubjectCityPage = React.lazy(() => import('./pages/SubjectCityPage'));
@@ -66,6 +67,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/directory" element={<ServicesDirectory />} />
                 <Route path="/services/:slug" element={<ServicePage />} />
                 <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
                 <Route path="/services/:serviceSlug/:countrySlug/:specializedSlug" element={<SubjectCityPage />} />

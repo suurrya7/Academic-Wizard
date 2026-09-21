@@ -81,6 +81,16 @@ const Services = () => {
                             <p className="text-sm text-text-secondary leading-relaxed">PhD thesis editing, methodological framework defense, and publication-ready formatting.</p>
                         </div>
                     </div>
+
+                    <div className="mt-8 text-center">
+                        <Link 
+                            to="/services/directory/" 
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-gold/15 text-accent-gold hover:bg-accent-gold hover:text-black border border-accent-gold/30 font-semibold text-sm transition-all shadow-lg shadow-accent-gold/10"
+                        >
+                            <span>Browse Full Directory by Country & Subject (1,400+ Pages)</span>
+                            <span aria-hidden="true">→</span>
+                        </Link>
+                    </div>
                 </div>
             </section>
 

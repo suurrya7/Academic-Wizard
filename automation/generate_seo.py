@@ -33,6 +33,7 @@ STATIC_PAGES_DYNAMIC = [
     {"path": "", "changefreq": "weekly", "priority": "1.0"},          # Homepage — shows latest posts
     {"path": "blog", "changefreq": "daily", "priority": "0.9"},       # Blog index — changes every new post
     {"path": "services", "changefreq": "weekly", "priority": "0.9"},  # Services hub — may show new services
+    {"path": "services/directory", "changefreq": "weekly", "priority": "0.9"},  # Services Directory
 ]
 
 # Last manually updated: 2026-06-20. Change this date when you edit these pages.

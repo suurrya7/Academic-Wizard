@@ -54,6 +54,7 @@ export default defineConfig({
       routes: [
         '/', 
         '/services/', 
+        '/services/directory/',
         '/about/', 
         '/faq/', 
         '/contact/', 

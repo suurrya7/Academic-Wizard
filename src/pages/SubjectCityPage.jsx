@@ -196,15 +196,35 @@ const SubjectCityPage = () => {
         ? `${cleanSubjectName} ${serviceVerb.action} ${country.name}`
         : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name}`;
 
-    const pageMetaTitle = pageType === "subject"
-        ? (serviceSlug === "assignment-help"
-            ? `${cleanSubjectName} Assignment Help ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
-            : `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.suffix}`)
-        : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} (2026) | Verified Academic Experts`;
+    // Priority High-CTR Title & Description Overrides for Top GSC Opportunities
+    const META_OVERRIDES = {
+        "australia-nursing": {
+            title: "Nursing Assignment Help Australia | AHPRA & NMBA",
+            desc: "Struggling with clinical care plans or Gibbs reflective essays? Get 100% human-written Australian nursing help aligned with NMBA/AHPRA codes. Free Turnitin report."
+        },
+        "singapore-mba": {
+            title: "MBA Assignment Help Singapore | NUS · NTU · SMU",
+            desc: "Singapore MBA case studies, strategic management & finance reports tailored for NUS, NTU, SMU & SIM-UOL modules. 100% confidential. WhatsApp 24/7."
+        },
+        "uk-law": {
+            title: "Law Assignment Help UK | OSCOLA · IRAC · 1st Class",
+            desc: "Stuck on contract, tort, or criminal law problem questions? UK LLM writers draft IRAC analysis with pinpoint OSCOLA citations. 12h urgent delivery."
+        }
+    };
+    const overrideKey = `${countrySlug}-${specializedData.slug}`;
+    const metaOverride = serviceSlug === "assignment-help" ? META_OVERRIDES[overrideKey] : null;
 
-    const pageDescription = pageType === "subject"
-        ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
-        : `Get professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`;
+    const pageMetaTitle = metaOverride?.title
+        || (pageType === "subject"
+            ? (serviceSlug === "assignment-help"
+                ? `${cleanSubjectName} Assignment Help ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
+                : `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.suffix}`)
+            : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} (2026) | Verified Academic Experts`);
+
+    const pageDescription = metaOverride?.desc
+        || (pageType === "subject"
+            ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
+            : `Get professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`);
     
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
