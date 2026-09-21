@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-20
+        **Last updated**: 2026-09-21
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -255,6 +255,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[APA 7th Edition: Navigating Multi-Author Citation Rules for Theses](https://academicwizard.online/blog/apa-7th-edition-navigating-multi-author-citation-rules-for-theses/)**
+  - Excerpt: Avoid grade-lowering citation mistakes. Our 2026 guide breaks down complex APA 7th edition rules for multi-author sources in your master's thesis.
+  - Keywords: APA 7th edition multi-author citation rules, APA 7 in-text citation guide, thesis formatting tips, academic citation management, fixing citation errors
+  - Target Region: Australia
+  - Published: 2026-09-21
 
 - **[Fixing Zotero Metadata Conflicts: A 2026 Guide for Massive Theses](https://academicwizard.online/blog/fixing-zotero-metadata-conflicts-a-2026-guide-for-massive-theses/)**
   - Excerpt: Metadata errors slowing your thesis? Learn how to clean your library and fix Zotero sync conflicts to manage 100+ sources without losing your progress.
@@ -647,6 +653,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Fixing Turnitin Similarity Scores: Identifying Contextual False Positives](https://academicwizard.online/blog/fixing-turnitin-similarity-scores-identifying-contextual-false-positives/)**
+  - Excerpt: Is your original research incorrectly flagged by Turnitin? Learn how to audit your writing, contextualize your similarity report, and defend your work.
+  - Keywords: fixing Turnitin similarity score false positives, Turnitin AI detector accuracy, academic integrity audit, how to explain high similarity reports, student writing authenticity check
+  - Target Region: USA
+  - Published: 2026-09-21
 
 - **[Preventing Turnitin AI False Flags: A 2026 Student Integrity Protocol](https://academicwizard.online/blog/preventing-turnitin-ai-false-flags-a-2026-student-integrity-protocol/)**
   - Excerpt: Flagged by Turnitin for AI? Learn how to audit your writing process and gather evidence to support your genuine academic voice and integrity.
@@ -1102,6 +1114,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Zotero Workflow: Managing 100+ Sources for Literature Reviews](https://academicwizard.online/blog/zotero-workflow-managing-100-sources-for-literature-reviews/)**
+  - Excerpt: Drowning in research papers? Learn a professional Zotero workflow to manage 100+ sources, fix metadata errors, and streamline your literature review.
+  - Keywords: managing large Zotero library for literature reviews, Zotero metadata management, organizing research sources, literature review software workflow, dissertation source synthesis
+  - Target Region: Canada
+  - Published: 2026-09-21
+
 - **[Ethical AI Scaffolding: Building a Robust Dissertation Literature Review](https://academicwizard.online/blog/ethical-ai-scaffolding-building-a-robust-dissertation-literature-review/)**
   - Excerpt: Master the art of literature review outlining. Use ethical AI scaffolding to synthesize your research while maintaining your unique academic voice.
   - Keywords: ethical ai literature review outlining, academic research tools, dissertation synthesis framework, ai assisted outlining, literature review structure
@@ -1325,6 +1343,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[NVivo 26: Debugging Thematic Coding Drift in Qualitative PhD Research](https://academicwizard.online/blog/nvivo-26-debugging-thematic-coding-drift-in-qualitative-phd-research/)**
+  - Excerpt: Struggling with coding drift in your qualitative thesis? Master NVivo 26 techniques to maintain consistency, reduce bias, and refine your thematic analysis.
+  - Keywords: debugging thematic coding drift in NVivo, NVivo 26 qualitative analysis, reducing researcher bias, thematic coding methodology, qualitative thesis organization
+  - Target Region: UK
+  - Published: 2026-09-21
 
 - **[NVivo 26 Coding Hacks: Reducing Researcher Bias in Thematic Analysis](https://academicwizard.online/blog/nvivo-26-coding-hacks-reducing-researcher-bias-in-thematic-analysis/)**
   - Excerpt: Ensure your thesis results hold up to scrutiny. Discover advanced NVivo 26 workflows designed to minimize bias and improve thematic coding reliability.
