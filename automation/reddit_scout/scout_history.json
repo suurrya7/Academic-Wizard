@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-21T01:23:26.214711+00:00",
+  "last_run": "2026-09-21T06:50:59.781710+00:00",
   "daily_count": {
     "date": "2026-09-21",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -39,7 +39,8 @@
     "1wl1d6v",
     "1wl6gs1",
     "1wl95cn",
-    "1wlvruw"
+    "1wlvruw",
+    "1wm45w6"
   ],
   "history": [
     {
@@ -321,7 +322,15 @@
       "title": "Should I apologize for telling my parents I wished I had other parents?",
       "posted_at": "2026-09-21T01:23:26.214708+00:00",
       "url": "https://reddit.com/r/Advice/comments/1wlvruw/should_i_apologize_for_telling_my_parents_i/"
+    },
+    {
+      "post_id": "1wm45w6",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Committed men, how common is it for your girl to initiate sex but you are not in the mood?",
+      "posted_at": "2026-09-21T06:50:59.781706+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1wm45w6/committed_men_how_common_is_it_for_your_girl_to/"
     }
   ],
-  "last_comment_posted_at": "2026-09-21T01:23:26.214690+00:00"
+  "last_comment_posted_at": "2026-09-21T06:50:59.781691+00:00"
 }
