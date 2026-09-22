@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Flags: How to Verify Your Original Voice and Intent",
+    "slug": "turnitin-ai-flags-how-to-verify-your-original-voice-and-intent",
+    "excerpt": "Received a high AI similarity score? Learn how to audit your draft, gather evidence of your writing process, and defend your original work with confidence.",
+    "keywords": [
+      "disputing Turnitin AI similarity score false positives",
+      "academic integrity audit",
+      "Turnitin student support",
+      "proving original writing",
+      "AI detector reliability"
+    ],
+    "primaryKeyword": "disputing Turnitin AI similarity score false positives",
+    "category": "assignment-help",
+    "categoryLabel": "Assignment Help",
+    "date": "2026-09-22T07:08:10.489142+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-flags-how-to-verify-your-original-voice-and-intent.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Handling Complex Multi-Author In-Text Citations",
+    "slug": "apa-7th-edition-handling-complex-multi-author-in-text-citations-2",
+    "excerpt": "Tired of citation errors? Master the APA 7th edition rules for multi-author in-text citations and keep your research paper formatting perfectly compliant.",
+    "keywords": [
+      "APA 7th edition multi-author in-text citation rules",
+      "APA citation guide 2026",
+      "cite 3+ authors APA",
+      "academic formatting tips",
+      "citation manager best practices"
+    ],
+    "primaryKeyword": "APA 7th edition multi-author in-text citation rules",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-22T07:08:37.154761+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-handling-complex-multi-author-in-text-citations-2.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-fiona-gallagher",
+      "name": "Dr. Fiona Gallagher",
+      "credentials": "PhD in Sociology, Trinity College Dublin",
+      "bio": "Dr. Fiona Gallagher is a social scientist who provides thesis support and essay writing coaching with a focus on Irish and European university grading systems."
+    }
+  },
+  {
+    "title": "NVivo 26: A Workflow to Reduce Researcher Bias in Thematic Coding",
+    "slug": "nvivo-26-a-workflow-to-reduce-researcher-bias-in-thematic-coding",
+    "excerpt": "Improve the rigour of your qualitative thesis. Discover our proven NVivo 26 workflow to minimize researcher bias and streamline your thematic coding process.",
+    "keywords": [
+      "reducing researcher bias in NVivo thematic analysis",
+      "qualitative research methodology",
+      "NVivo 26 tutorial",
+      "coding drift troubleshooting",
+      "thesis data analysis"
+    ],
+    "primaryKeyword": "reducing researcher bias in NVivo thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-22T07:09:05.535662+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-a-workflow-to-reduce-researcher-bias-in-thematic-coding.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Sustainable PhD Habits: Managing Dissertation Writing Fatigue",
+    "slug": "sustainable-phd-habits-managing-dissertation-writing-fatigue",
+    "excerpt": "Struggling with dissertation fatigue? Implement these sustainable writing habits to manage your mental health and stay productive throughout your PhD journey.",
+    "keywords": [
+      "sustainable dissertation writing habits for mental health",
+      "PhD burnout prevention",
+      "academic productivity tips",
+      "thesis writing schedule",
+      "managing research stress"
+    ],
+    "primaryKeyword": "sustainable dissertation writing habits for mental health",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-22T07:09:32.812698+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/sustainable-phd-habits-managing-dissertation-writing-fatigue.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Fixing Turnitin Similarity Scores: Identifying Contextual False Positives",
     "slug": "fixing-turnitin-similarity-scores-identifying-contextual-false-positives",
     "excerpt": "Is your original research incorrectly flagged by Turnitin? Learn how to audit your writing, contextualize your similarity report, and defend your work.",
