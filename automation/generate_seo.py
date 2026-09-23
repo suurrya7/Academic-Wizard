@@ -36,8 +36,8 @@ STATIC_PAGES_DYNAMIC = [
     {"path": "services/directory", "changefreq": "weekly", "priority": "0.9"},  # Services Directory
 ]
 
-# Last manually updated: 2026-06-20. Change this date when you edit these pages.
-STATIC_CONTENT_DATE = "2026-06-20"
+# Last manually updated: 2026-09-23. Change this date when you edit these pages.
+STATIC_CONTENT_DATE = "2026-09-23"
 
 STATIC_PAGES_FIXED = [
     {"path": "services/assignment-help", "changefreq": "monthly", "priority": "0.9"},

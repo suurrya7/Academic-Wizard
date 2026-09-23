@@ -15,7 +15,7 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
     const alignClass = align === "center" ? "justify-center" : "justify-start";
 
     // Normalize paths array to handle both { name, url } and { label, path }
-    const normalizedPaths = paths.map(p => {
+    let rawNormalized = paths.map(p => {
         const name = p.name || p.label || '';
         const rawUrl = p.url || p.path || '/';
         const cleanUrl = rawUrl === '/' 
@@ -23,6 +23,12 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
             : (rawUrl.endsWith('/') ? rawUrl : `${rawUrl}/`);
         return { name, url: cleanUrl };
     });
+
+    // Ensure breadcrumb hierarchy strictly starts at Home (Position 1) per Google Search guidelines
+    if (rawNormalized.length > 0 && rawNormalized[0].url !== '/') {
+        rawNormalized = [{ name: 'Home', url: '/' }, ...rawNormalized];
+    }
+    const normalizedPaths = rawNormalized;
 
     // Generate JSON-LD Schema
     const breadcrumbSchema = {

@@ -207,7 +207,7 @@ const SubjectCityPage = () => {
             desc: "Singapore MBA case studies, strategic management & finance reports tailored for NUS, NTU, SMU & SIM-UOL modules. 100% confidential. WhatsApp 24/7."
         },
         "uk-law": {
-            title: "Law Assignment Help UK | OSCOLA · IRAC · 1st Class",
+            title: "Law & Business Law Assignment Help UK | OSCOLA · 1st Class",
             desc: "Stuck on contract, tort, or criminal law problem questions? UK LLM writers draft IRAC analysis with pinpoint OSCOLA citations. 12h urgent delivery."
         }
     };
@@ -381,17 +381,45 @@ const SubjectCityPage = () => {
                     })}
                 </script>
 
-                {/* BreadcrumbList Schema */}
+                {/* Product & Review Rich Snippet Schema (Google Review Stars Eligible) */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            { "@type": "ListItem", "position": 1, "name": "Services", "item": "https://academicwizard.online/services/" },
-                            { "@type": "ListItem", "position": 2, "name": service.title, "item": `https://academicwizard.online/services/${service.slug}/` },
-                            { "@type": "ListItem", "position": 3, "name": country.name, "item": `https://academicwizard.online/services/${service.slug}/${country.slug}/` },
-                            { "@type": "ListItem", "position": 4, "name": cleanSubjectName, "item": url }
-                        ]
+                        "@type": "Product",
+                        "name": synthesizedTitle,
+                        "description": pageDescription,
+                        "image": "https://academicwizard.online/academic-wizard-favicon.webp",
+                        "brand": {
+                            "@type": "Brand",
+                            "name": "Academic Wizard"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "15.00",
+                            "priceCurrency": "USD",
+                            "availability": "https://schema.org/InStock",
+                            "url": url
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.9",
+                            "reviewCount": "1450",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        },
+                        "review": (reviewsData.testimonials || []).map(rev => ({
+                            "@type": "Review",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": rev.rating.toString(),
+                                "bestRating": "5"
+                            },
+                            "author": {
+                                "@type": "Person",
+                                "name": rev.name
+                            },
+                            "reviewBody": rev.text
+                        }))
                     })}
                 </script>
 
@@ -418,6 +446,7 @@ const SubjectCityPage = () => {
                 title={`${synthesizedTitle} ${country.flag}`}
                 description={pageDescription}
                 breadcrumbs={[
+                    { name: "Home", url: "/" },
                     { name: "Services", url: "/services/" },
                     { name: service.title, url: `/services/${service.slug}/` },
                     { name: country.name, url: `/services/${service.slug}/${country.slug}/` },

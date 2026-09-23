@@ -17,6 +17,7 @@ import PricingCalculator from '../components/PricingCalculator';
 import ContactForm from '../components/ContactForm';
 import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText, Star, StarHalf } from 'lucide-react';
 import { assetPath } from '../config/site';
+import reviewsData from '../data/reviews.json';
 
 const EXPERT_QUOTES = [
     { author: "Dr. Sarah Jenkins", role: "Head of Academic Excellence" },
@@ -98,6 +99,45 @@ const ServicePage = () => {
         }))
     };
 
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": service.title,
+        "description": service.metaDescription,
+        "image": "https://academicwizard.online/academic-wizard-favicon.webp",
+        "brand": {
+            "@type": "Brand",
+            "name": "Academic Wizard"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "15.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": `https://academicwizard.online/services/${service.slug}/`
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1450",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": (reviewsData.testimonials || []).map(rev => ({
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": rev.rating.toString(),
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": rev.name
+            },
+            "reviewBody": rev.text
+        }))
+    };
+
     return (
         <div className="page-service-details">
             <Helmet>
@@ -122,6 +162,9 @@ const ServicePage = () => {
 
                 <script type="application/ld+json">
                     {JSON.stringify(serviceSchema)}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify(productSchema)}
                 </script>
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}

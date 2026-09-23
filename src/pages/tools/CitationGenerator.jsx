@@ -314,12 +314,44 @@ const CitationGenerator = () => {
     return (
         <div className="page-citation-generator">
             <Helmet>
-                <title>Free APA, MLA, Harvard, Chicago Citation Generator | Academic Wizard</title>
+                <title>Free Citation Generator (APA 7, Harvard, OSCOLA, MLA 9)</title>
                 <meta name="description" content="Generate accurate bibliography listings and in-text citations instantly. Online referencing generator supporting APA 7th, MLA 9th, Harvard, Chicago, and Vancouver." />
                 <link rel="canonical" href="https://academicwizard.online/tools/citation-generator/" />
-                <meta property="og:title" content="Free APA, MLA, Harvard Citation Generator | Academic Wizard" />
+                <meta property="og:title" content="Free Citation Generator (APA 7, Harvard, OSCOLA, MLA 9)" />
                 <meta property="og:description" content="Instantly format website, book, and journal references with our free bibliography builder." />
                 <meta property="og:url" content="https://academicwizard.online/tools/citation-generator/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "Which citation formats does this citation generator support?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Academic Wizard supports APA 7th Edition, Harvard, OSCOLA (4th Ed), MLA 9th Edition, Chicago 17th, and Vancouver styles with full in-text and bibliography output."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Can I cite websites, journal articles, and books automatically?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes. Simply choose your source type (Website, Book, Journal, or Case Law), input the metadata, and the generator builds an error-free citation ready to copy."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Is there a limit on how many citations I can generate?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Students can generate individual citations for free without creating an account or providing payment details."
+                                }
+                            }
+                        ]
+                    })}
+                </script>
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

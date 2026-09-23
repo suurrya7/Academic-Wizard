@@ -25,13 +25,23 @@ for (const file of files) {
     const filePath = join(postsDir, file);
     let content = readFileSync(filePath, 'utf-8');
 
-    // Check if redirect is already present
+    const canonicalTarget = `/blog/${slug}/`;
+    const noindexTag = '<meta name="robots" content="noindex, follow">';
+
+    // If redirect header exists but lacks noindex, inject noindex
     if (content.includes('window.location.replace') && content.includes('/blog/')) {
+        if (!content.includes('name="robots" content="noindex')) {
+            content = content.replace(
+                /<link rel="canonical"[^>]*>/i,
+                `$&\n${noindexTag}`
+            );
+            writeFileSync(filePath, content, 'utf-8');
+            updatedCount++;
+        }
         continue;
     }
 
-    const canonicalTarget = `/blog/${slug}/`;
-    const redirectHeader = `<script>window.location.replace("${canonicalTarget}");</script>\n<meta http-equiv="refresh" content="0; url=${canonicalTarget}">\n<link rel="canonical" href="https://academicwizard.online${canonicalTarget}">\n\n`;
+    const redirectHeader = `<script>window.location.replace("${canonicalTarget}");</script>\n<meta http-equiv="refresh" content="0; url=${canonicalTarget}">\n<link rel="canonical" href="https://academicwizard.online${canonicalTarget}">\n${noindexTag}\n\n`;
 
     content = redirectHeader + content;
     writeFileSync(filePath, content, 'utf-8');

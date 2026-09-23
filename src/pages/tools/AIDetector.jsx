@@ -126,12 +126,44 @@ const AIDetector = () => {
     return (
         <div className="page-ai-detector">
             <Helmet>
-                <title>Accurate AI Content Detector & Essay Scanner | Academic Wizard</title>
+                <title>Free AI Content Detector for Essays & Dissertations [2026]</title>
                 <meta name="description" content="Check your essays and academic papers for AI content. Scan sentence-level perplexity, predictability, and AI buzzwords to detect ChatGPT, Claude, and Gemini." />
                 <link rel="canonical" href="https://academicwizard.online/tools/ai-detector/" />
-                <meta property="og:title" content="Accurate AI Content Detector & Essay Scanner | Academic Wizard" />
+                <meta property="og:title" content="Free AI Content Detector for Essays & Dissertations [2026]" />
                 <meta property="og:description" content="Audit essay authenticity. Scan texts for AI-generated patterns and robotic vocabulary." />
                 <meta property="og:url" content="https://academicwizard.online/tools/ai-detector/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "Can this AI detector detect Turnitin AI and ChatGPT 4?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes. Our multi-engine scanner measures burstiness, sentence perplexity, and predictable lexical patterns used by Turnitin AI, GPT-4o, Claude 3.5, and Gemini."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What AI percentage score is safe for university submission?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Most universities in the UK, USA, and Australia flag papers with > 10–15% AI probability. Aim for an AI score under 5% to guarantee a clean academic submission."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Is my scanned essay submitted to any database?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Never. Academic Wizard uses non-repository scans. Your paper is analyzed ephemerally in RAM and never stored in any institution or plagiarism database."
+                                }
+                            }
+                        ]
+                    })}
+                </script>
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

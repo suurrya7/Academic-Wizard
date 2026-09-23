@@ -74,12 +74,44 @@ const GrammarChecker = () => {
     return (
         <div className="page-grammar-checker">
             <Helmet>
-                <title>Free AI Grammar Checker & Essay Editor | Academic Wizard</title>
+                <title>Free AI Grammar Checker & Essay Proofreader [No Sign-Up]</title>
                 <meta name="description" content="Check your essays, thesis papers, and university assignments for spelling, punctuation, and syntax errors. Real-time proofreading with one-click suggestions." />
                 <link rel="canonical" href="https://academicwizard.online/tools/grammar-checker/" />
-                <meta property="og:title" content="Free AI Grammar Checker & Essay Editor | Academic Wizard" />
+                <meta property="og:title" content="Free AI Grammar Checker & Essay Proofreader [No Sign-Up]" />
                 <meta property="og:description" content="Polish your academic papers with our free spelling, syntax, and punctuation editor." />
                 <meta property="og:url" content="https://academicwizard.online/tools/grammar-checker/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "Is the Academic Wizard Grammar Checker completely free to use?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, our grammar checker and essay editor is 100% free with no sign-up or credit card required. Students can paste their coursework and get instant proofreading feedback."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Does this essay editor check for academic tone and vocabulary?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes. Beyond basic spelling and punctuation, our AI identifies informal wording, passive voice overload, repetitive phrasing, and suggests elevated academic vocabulary."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Is my text saved or stored in a public repository?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "No. We operate under a strict non-repository privacy policy. Your text is processed in real time and never stored, shared, or indexed in Turnitin or external databases."
+                                }
+                            }
+                        ]
+                    })}
+                </script>
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

@@ -6,6 +6,11 @@
   <link rel="icon" type="image/webp" href="/academic-wizard-favicon.webp?v=2" />
   <link rel="apple-touch-icon" href="/academic-wizard-favicon.webp?v=2" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.pathname !== '/' && !location.pathname.endsWith('/') && !location.pathname.split('/').pop().includes('.')) {
+      location.replace(location.pathname + '/' + location.search + location.hash);
+    }
+  </script>
   <!-- All SEO tags (title, meta description, canonical, OG, Twitter, JSON-LD) are injected per-page by react-helmet-async -->
 </head>
 
