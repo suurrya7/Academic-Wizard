@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-22T12:24:52.567240+00:00",
+  "last_run": "2026-09-23T07:27:05.854321+00:00",
   "daily_count": {
-    "date": "2026-09-22",
-    "count": 3
+    "date": "2026-09-23",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -44,7 +44,8 @@
     "1wmau9t",
     "1wmv0tl",
     "1wn0evq",
-    "1wn6w5x"
+    "1wn6w5x",
+    "1wnxii5"
   ],
   "history": [
     {
@@ -366,7 +367,15 @@
       "title": "Why do so many houses now have one giant room instead of separate ones?",
       "posted_at": "2026-09-22T12:24:52.567236+00:00",
       "url": "https://reddit.com/r/NoStupidQuestions/comments/1wn6w5x/why_do_so_many_houses_now_have_one_giant_room/"
+    },
+    {
+      "post_id": "1wnxii5",
+      "subreddit": "CasualConversation",
+      "mode": "karma",
+      "title": "What's the creepiest thing you've ever seen that you still can't explain?",
+      "posted_at": "2026-09-23T07:27:05.854318+00:00",
+      "url": "https://reddit.com/r/CasualConversation/comments/1wnxii5/whats_the_creepiest_thing_youve_ever_seen_that/"
     }
   ],
-  "last_comment_posted_at": "2026-09-22T12:24:52.567220+00:00"
+  "last_comment_posted_at": "2026-09-23T07:27:05.854301+00:00"
 }
