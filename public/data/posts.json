@@ -1,5 +1,105 @@
 [
   {
+    "title": "Why Turnitin Flags Student Writing: Decoding False Positives in 2026",
+    "slug": "why-turnitin-flags-student-writing-decoding-false-positives-in-2026-2",
+    "excerpt": "Turnitin flagging your original work? Learn how to identify and dispute AI detection false positives while maintaining academic integrity in 2026.",
+    "keywords": [
+      "why turnitin flags student writing as ai",
+      "turnitin ai detection accuracy",
+      "reducing ai similarity score",
+      "academic integrity audit",
+      "human writing vs ai patterns"
+    ],
+    "primaryKeyword": "why turnitin flags student writing as ai",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-23T07:06:02.037491+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/why-turnitin-flags-student-writing-decoding-false-positives-in-2026-2.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "NVivo 27 Coding Protocols: Minimizing Subjectivity in PhD Analysis",
+    "slug": "nvivo-27-coding-protocols-minimizing-subjectivity-in-phd-analysis",
+    "excerpt": "Master NVivo 27 with these expert protocols designed to reduce researcher bias and ensure your qualitative analysis remains objective and defensible.",
+    "keywords": [
+      "how to reduce researcher bias in nvivo coding",
+      "nvivo 27 thematic analysis guide",
+      "qualitative research coding workflows",
+      "minimizing bias in qualitative data",
+      "coding reliability for dissertations"
+    ],
+    "primaryKeyword": "how to reduce researcher bias in nvivo coding",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-23T07:06:30.529799+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-27-coding-protocols-minimizing-subjectivity-in-phd-analysis.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Zotero Library Clean-up: Solving Duplicate Metadata in 2026",
+    "slug": "zotero-library-clean-up-solving-duplicate-metadata-in-2026",
+    "excerpt": "Tired of broken citations? Learn the 2026 best practices for cleaning Zotero metadata and managing large-scale research libraries with ease.",
+    "keywords": [
+      "how to fix zotero duplicate metadata issues",
+      "zotero citation management hacks",
+      "syncing large research libraries",
+      "zotero pdf metadata automation",
+      "organizing 500+ research sources"
+    ],
+    "primaryKeyword": "how to fix zotero duplicate metadata issues",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-09-23T07:09:03.614948+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-library-clean-up-solving-duplicate-metadata-in-2026.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Advanced Multi-Author In-Text Citation Rules",
+    "slug": "apa-7th-edition-advanced-multi-author-in-text-citation-rules",
+    "excerpt": "Struggling with complex APA 7 in-text citations? Master the rules for multi-author sources and avoid common penalties in your final thesis.",
+    "keywords": [
+      "apa 7th edition multi-author in-text citation rules",
+      "apa 7 formatting complex sources",
+      "cite multiple authors correctly",
+      "avoiding citation errors in thesis",
+      "apa 7 bibliography updates"
+    ],
+    "primaryKeyword": "apa 7th edition multi-author in-text citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-23T07:10:31.083415+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-advanced-multi-author-in-text-citation-rules.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Flags: How to Verify Your Original Voice and Intent",
     "slug": "turnitin-ai-flags-how-to-verify-your-original-voice-and-intent",
     "excerpt": "Received a high AI similarity score? Learn how to audit your draft, gather evidence of your writing process, and defend your original work with confidence.",

@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-22
+        **Last updated**: 2026-09-23
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -261,6 +261,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo 27 Coding Protocols: Minimizing Subjectivity in PhD Analysis](https://academicwizard.online/blog/nvivo-27-coding-protocols-minimizing-subjectivity-in-phd-analysis/)**
+  - Excerpt: Master NVivo 27 with these expert protocols designed to reduce researcher bias and ensure your qualitative analysis remains objective and defensible.
+  - Keywords: how to reduce researcher bias in nvivo coding, nvivo 27 thematic analysis guide, qualitative research coding workflows, minimizing bias in qualitative data, coding reliability for dissertations
+  - Target Region: UK
+  - Published: 2026-09-23
 
 - **[NVivo 26: A Workflow to Reduce Researcher Bias in Thematic Coding](https://academicwizard.online/blog/nvivo-26-a-workflow-to-reduce-researcher-bias-in-thematic-coding/)**
   - Excerpt: Improve the rigour of your qualitative thesis. Discover our proven NVivo 26 workflow to minimize researcher bias and streamline your thematic coding process.
@@ -665,6 +671,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: Advanced Multi-Author In-Text Citation Rules](https://academicwizard.online/blog/apa-7th-edition-advanced-multi-author-in-text-citation-rules/)**
+  - Excerpt: Struggling with complex APA 7 in-text citations? Master the rules for multi-author sources and avoid common penalties in your final thesis.
+  - Keywords: apa 7th edition multi-author in-text citation rules, apa 7 formatting complex sources, cite multiple authors correctly, avoiding citation errors in thesis, apa 7 bibliography updates
+  - Target Region: Australia
+  - Published: 2026-09-23
 
 - **[Fixing Turnitin Similarity Scores: Identifying Contextual False Positives](https://academicwizard.online/blog/fixing-turnitin-similarity-scores-identifying-contextual-false-positives/)**
   - Excerpt: Is your original research incorrectly flagged by Turnitin? Learn how to audit your writing, contextualize your similarity report, and defend your work.
@@ -1356,6 +1368,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Why Turnitin Flags Student Writing: Decoding False Positives in 2026](https://academicwizard.online/blog/why-turnitin-flags-student-writing-decoding-false-positives-in-2026-2/)**
+  - Excerpt: Turnitin flagging your original work? Learn how to identify and dispute AI detection false positives while maintaining academic integrity in 2026.
+  - Keywords: why turnitin flags student writing as ai, turnitin ai detection accuracy, reducing ai similarity score, academic integrity audit, human writing vs ai patterns
+  - Target Region: USA
+  - Published: 2026-09-23
+
 - **[APA 7th Edition: Handling Complex Multi-Author In-Text Citations](https://academicwizard.online/blog/apa-7th-edition-handling-complex-multi-author-in-text-citations-2/)**
   - Excerpt: Tired of citation errors? Master the APA 7th edition rules for multi-author in-text citations and keep your research paper formatting perfectly compliant.
   - Keywords: APA 7th edition multi-author in-text citation rules, APA citation guide 2026, cite 3+ authors APA, academic formatting tips, citation manager best practices
@@ -1771,6 +1789,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[Zotero Library Clean-up: Solving Duplicate Metadata in 2026](https://academicwizard.online/blog/zotero-library-clean-up-solving-duplicate-metadata-in-2026/)**
+  - Excerpt: Tired of broken citations? Learn the 2026 best practices for cleaning Zotero metadata and managing large-scale research libraries with ease.
+  - Keywords: how to fix zotero duplicate metadata issues, zotero citation management hacks, syncing large research libraries, zotero pdf metadata automation, organizing 500+ research sources
+  - Target Region: Canada
+  - Published: 2026-09-23
 
 - **[Sustainable PhD Habits: Managing Dissertation Writing Fatigue](https://academicwizard.online/blog/sustainable-phd-habits-managing-dissertation-writing-fatigue/)**
   - Excerpt: Struggling with dissertation fatigue? Implement these sustainable writing habits to manage your mental health and stay productive throughout your PhD journey.
