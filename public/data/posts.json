@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Student's Guide to Evidence",
+    "slug": "turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence",
+    "excerpt": "Received an unfair AI flag? Learn how to audit your writing history and gather evidence to dispute Turnitin false positives with confidence in 2026.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "AI detection audit",
+      "academic integrity appeal",
+      "Turnitin similarity report analysis",
+      "student rights in academic misconduct"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-24T07:00:58.555897+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-marcus-vance",
+      "name": "Dr. Marcus Vance",
+      "credentials": "PhD in Political Science, Yale University",
+      "bio": "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy analysis papers, and legal research support for college students in the USA."
+    }
+  },
+  {
+    "title": "Fixing APA 7 Citation Loops: Multi-Author & Digital Source Hacks",
+    "slug": "fixing-apa-7-citation-loops-multi-author-digital-source-hacks",
+    "excerpt": "Tired of citation errors? Master the trickiest APA 7th edition rules for multi-author and digital sources to keep your bibliography clean and penalty-free.",
+    "keywords": [
+      "APA 7th edition formatting complex citations",
+      "APA 7 reference list rules",
+      "citing multi-author digital sources",
+      "APA 7 in-text citation guide",
+      "academic bibliography troubleshooting"
+    ],
+    "primaryKeyword": "APA 7th edition formatting complex citations",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-24T07:01:26.636881+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-apa-7-citation-loops-multi-author-digital-source-hacks.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "NVivo 26: Debugging Thematic Coding Drift for Qualitative Success",
+    "slug": "nvivo-26-debugging-thematic-coding-drift-for-qualitative-success",
+    "excerpt": "Struggling with inconsistent themes? Learn to debug coding drift and eliminate researcher bias using advanced NVivo 26 analytical workflows today.",
+    "keywords": [
+      "NVivo 26 thematic coding workflow",
+      "qualitative research data analysis",
+      "reducing researcher bias in NVivo",
+      "dissertation qualitative coding tips",
+      "coding drift in PhD theses"
+    ],
+    "primaryKeyword": "NVivo 26 thematic coding workflow",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-24T07:01:55.063227+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-debugging-thematic-coding-drift-for-qualitative-success.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Ethical AI Scaffolding: Building Your Lit Review Outline Faster",
+    "slug": "ethical-ai-scaffolding-building-your-lit-review-outline-faster",
+    "excerpt": "Learn how to use AI to scaffold your literature review outline ethically. Boost your synthesis speed without losing your original academic voice.",
+    "keywords": [
+      "how to use AI ethically for literature review",
+      "AI for academic literature synthesis",
+      "research methodology scaffolding",
+      "ethical AI prompt engineering for students",
+      "literature review structure guide"
+    ],
+    "primaryKeyword": "how to use AI ethically for literature review",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-24T07:02:23.452495+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-scaffolding-building-your-lit-review-outline-faster.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
     "title": "Why Turnitin Flags Student Writing: Decoding False Positives in 2026",
     "slug": "why-turnitin-flags-student-writing-decoding-false-positives-in-2026-2",
     "excerpt": "Turnitin flagging your original work? Learn how to identify and dispute AI detection false positives while maintaining academic integrity in 2026.",
