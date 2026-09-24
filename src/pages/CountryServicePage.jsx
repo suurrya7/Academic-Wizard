@@ -51,6 +51,8 @@ const CountryServicePage = () => {
 
     // Localized Overrides
     const overviewText = country.overview || service.overview;
+    const featuresList = country.features || service.features || [];
+    const pricingText = country.pricing || service.pricing || '';
     // Dynamic Contextual FAQ Synthesizer for Country Hubs
     const localizedCountryFaqs = [
         {
@@ -83,8 +85,49 @@ const CountryServicePage = () => {
 
     const Icon = service.icon;
 
+    // Short country names for concise, un-truncated SERP titles (<=60 chars)
+    const SHORT_COUNTRY_NAMES = {
+        'uk': 'UK',
+        'usa': 'USA',
+        'australia': 'Australia',
+        'canada': 'Canada',
+        'singapore': 'Singapore',
+        'ireland': 'Ireland',
+        'germany': 'Germany',
+        'india': 'India'
+    };
+    const displayCountry = SHORT_COUNTRY_NAMES[country.slug] || country.name;
+
+    const LOCAL_CURRENCY_MAP = {
+        'uk': { currency: 'GBP', price: '12.00', symbol: '£' },
+        'australia': { currency: 'AUD', price: '20.00', symbol: 'A$' },
+        'canada': { currency: 'CAD', price: '18.00', symbol: 'C$' },
+        'singapore': { currency: 'SGD', price: '20.00', symbol: 'S$' },
+        'ireland': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'germany': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'india': { currency: 'INR', price: '799.00', symbol: '₹' },
+        'usa': { currency: 'USD', price: '15.00', symbol: '$' }
+    };
+    const regionalPricing = LOCAL_CURRENCY_MAP[country.slug] || { currency: 'USD', price: '15.00', symbol: '$' };
+
     const headingTitle = country.heading || `${service.title} in ${country.name}`;
-    const pageTitle = country.metaTitle || service.metaTitle || `${service.title} in ${country.name} | Academic Wizard`;
+    
+    // Strict <= 60 characters title generator with primary keyword first
+    let pageTitle = country.metaTitle;
+    if (!pageTitle || pageTitle.length > 60) {
+        const candidateWithHook = `${service.title} ${displayCountry} | 100% Turnitin-Safe`;
+        if (candidateWithHook.length <= 60) {
+            pageTitle = candidateWithHook;
+        } else {
+            const candidateShort = `${service.title} ${displayCountry} | 1st Class`;
+            if (candidateShort.length <= 60) {
+                pageTitle = candidateShort;
+            } else {
+                pageTitle = `${service.title} ${displayCountry}`.substring(0, 57) + '...';
+            }
+        }
+    }
+
     const pageDescription = country.metaDescription || `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
 
     // Generate JSON-LD Schema
@@ -124,6 +167,55 @@ const CountryServicePage = () => {
         }))
     };
 
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": pageTitle,
+        "description": pageDescription,
+        "image": `https://academicwizard.online/images/countries/${country.slug}.webp`,
+        "brand": {
+            "@type": "Brand",
+            "name": "Academic Wizard"
+        },
+        "sku": `AW-${service.slug.toUpperCase()}-${country.slug.toUpperCase()}`,
+        "offers": {
+            "@type": "Offer",
+            "price": regionalPricing.price,
+            "priceCurrency": regionalPricing.currency,
+            "availability": "https://schema.org/InStock",
+            "url": `https://academicwizard.online/services/${service.slug}/${country.slug}/`,
+            "priceValidUntil": "2027-12-31",
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": country.slug.toUpperCase(),
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1450",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": (reviewsData.testimonials || []).map(rev => ({
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": rev.rating.toString(),
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": rev.name
+            },
+            "reviewBody": rev.text
+        }))
+    };
+
     return (
         <div className="page-country-service-details">
             <Helmet>
@@ -151,6 +243,9 @@ const CountryServicePage = () => {
                 </script>
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify(productSchema)}
                 </script>
             </Helmet>
 

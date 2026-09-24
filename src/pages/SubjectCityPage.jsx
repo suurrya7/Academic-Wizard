@@ -196,6 +196,49 @@ const SubjectCityPage = () => {
         ? `${cleanSubjectName} ${serviceVerb.action} ${country.name}`
         : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name}`;
 
+    // Short country names for concise, un-truncated SERP titles
+    const SHORT_COUNTRY_NAMES = {
+        'uk': 'UK',
+        'usa': 'USA',
+        'australia': 'Australia',
+        'canada': 'Canada',
+        'singapore': 'Singapore',
+        'ireland': 'Ireland',
+        'germany': 'Germany',
+        'india': 'India'
+    };
+    const displayCountry = SHORT_COUNTRY_NAMES[countrySlug] || country.name;
+
+    const LOCAL_CURRENCY_MAP = {
+        'uk': { currency: 'GBP', price: '12.00', symbol: '£' },
+        'australia': { currency: 'AUD', price: '20.00', symbol: 'A$' },
+        'canada': { currency: 'CAD', price: '18.00', symbol: 'C$' },
+        'singapore': { currency: 'SGD', price: '20.00', symbol: 'S$' },
+        'ireland': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'germany': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'india': { currency: 'INR', price: '799.00', symbol: '₹' },
+        'usa': { currency: 'USD', price: '15.00', symbol: '$' }
+    };
+
+    const getDisciplineHook = (subLower, cSlug) => {
+        if (subLower.includes('law')) {
+            return cSlug === 'uk' ? 'OSCOLA · 1st Class' : 'IRAC · 1st Class';
+        }
+        if (subLower.includes('nursing') || subLower.includes('health')) {
+            return cSlug === 'australia' ? 'AHPRA · Care Plans' : 'Care Plans · 1st Class';
+        }
+        if (subLower.includes('mba') || subLower.includes('business') || subLower.includes('management')) {
+            return cSlug === 'singapore' ? 'NUS & NTU · Top Grades' : 'Case Studies · 1st Class';
+        }
+        if (subLower.includes('computer') || subLower.includes('engineering') || subLower.includes('data')) {
+            return 'Code & Reports · Experts';
+        }
+        if (subLower.includes('accounting') || subLower.includes('finance') || subLower.includes('economics')) {
+            return 'CPA · Accurate Solutions';
+        }
+        return '1st Class Guaranteed';
+    };
+
     // Priority High-CTR Title & Description Overrides for Top GSC Opportunities
     const META_OVERRIDES = {
         "australia-nursing": {
@@ -214,12 +257,26 @@ const SubjectCityPage = () => {
     const overrideKey = `${countrySlug}-${specializedData.slug}`;
     const metaOverride = serviceSlug === "assignment-help" ? META_OVERRIDES[overrideKey] : null;
 
-    const pageMetaTitle = metaOverride?.title
-        || (pageType === "subject"
-            ? (serviceSlug === "assignment-help"
-                ? `${cleanSubjectName} Assignment Help ${country.name} | 100% Turnitin-Safe · Top PhD Writers`
-                : `${cleanSubjectName} ${serviceVerb.action} ${country.name} | ${serviceVerb.suffix}`)
-            : `${serviceVerb.action} in ${cleanSubjectName}, ${country.name} (2026) | Verified Academic Experts`);
+    const primaryKeyword = pageType === "subject"
+        ? `${cleanSubjectName} ${serviceVerb.action} ${displayCountry}`
+        : `${serviceVerb.action} in ${cleanSubjectName} ${displayCountry}`;
+
+    let dynamicTitle = metaOverride?.title;
+    if (!dynamicTitle) {
+        const disciplineHook = getDisciplineHook(cleanSubjectName.toLowerCase(), countrySlug);
+        const candidateWithHook = `${primaryKeyword} | ${disciplineHook}`;
+        if (candidateWithHook.length <= 60) {
+            dynamicTitle = candidateWithHook;
+        } else {
+            const candidateShorter = `${primaryKeyword} | 1st Class`;
+            if (candidateShorter.length <= 60) {
+                dynamicTitle = candidateShorter;
+            } else {
+                dynamicTitle = primaryKeyword.length <= 60 ? primaryKeyword : primaryKeyword.substring(0, 57) + '...';
+            }
+        }
+    }
+    const pageMetaTitle = dynamicTitle;
 
     const pageDescription = metaOverride?.desc
         || (pageType === "subject"
@@ -381,24 +438,34 @@ const SubjectCityPage = () => {
                     })}
                 </script>
 
-                {/* Product & Review Rich Snippet Schema (Google Review Stars Eligible) */}
+                {/* Product & Review Rich Snippet Schema (Google Review Stars & Merchant Listings Eligible) */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Product",
-                        "name": synthesizedTitle,
+                        "name": pageMetaTitle,
                         "description": pageDescription,
-                        "image": "https://academicwizard.online/academic-wizard-favicon.webp",
+                        "image": `https://academicwizard.online/images/countries/${countrySlug}.webp`,
                         "brand": {
                             "@type": "Brand",
                             "name": "Academic Wizard"
                         },
+                        "sku": `AW-${serviceSlug.toUpperCase()}-${countrySlug.toUpperCase()}-${specializedSlug.toUpperCase()}`,
                         "offers": {
                             "@type": "Offer",
-                            "price": "15.00",
-                            "priceCurrency": "USD",
+                            "price": (LOCAL_CURRENCY_MAP[countrySlug] || { price: "15.00" }).price,
+                            "priceCurrency": (LOCAL_CURRENCY_MAP[countrySlug] || { currency: "USD" }).currency,
                             "availability": "https://schema.org/InStock",
-                            "url": url
+                            "url": url,
+                            "priceValidUntil": "2027-12-31",
+                            "hasMerchantReturnPolicy": {
+                                "@type": "MerchantReturnPolicy",
+                                "applicableCountry": countrySlug.toUpperCase(),
+                                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                                "merchantReturnDays": 30,
+                                "returnMethod": "https://schema.org/ReturnByMail",
+                                "returnFees": "https://schema.org/FreeReturn"
+                            }
                         },
                         "aggregateRating": {
                             "@type": "AggregateRating",

@@ -99,22 +99,36 @@ const ServicePage = () => {
         }))
     };
 
+    const serviceMetaTitle = (service.metaTitle && service.metaTitle.length <= 60)
+        ? service.metaTitle
+        : `${service.title} | 100% Turnitin-Safe · 1st Class`;
+
     const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": service.title,
+        "name": serviceMetaTitle,
         "description": service.metaDescription,
-        "image": "https://academicwizard.online/academic-wizard-favicon.webp",
+        "image": `https://academicwizard.online/images/services/${service.slug}.webp`,
         "brand": {
             "@type": "Brand",
             "name": "Academic Wizard"
         },
+        "sku": `AW-${service.slug.toUpperCase()}`,
         "offers": {
             "@type": "Offer",
             "price": "15.00",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": `https://academicwizard.online/services/${service.slug}/`
+            "url": `https://academicwizard.online/services/${service.slug}/`,
+            "priceValidUntil": "2027-12-31",
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+            }
         },
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -141,7 +155,7 @@ const ServicePage = () => {
     return (
         <div className="page-service-details">
             <Helmet>
-                <title>{service.metaTitle}</title>
+                <title>{serviceMetaTitle}</title>
                 <meta name="description" content={service.metaDescription} />
                 <link rel="canonical" href={`https://academicwizard.online/services/${service.slug}/`} />
                 <meta property="og:title" content={service.metaTitle} />

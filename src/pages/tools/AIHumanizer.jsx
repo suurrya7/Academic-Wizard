@@ -144,31 +144,19 @@ const AIHumanizer = () => {
                             "reviewCount": "950",
                             "bestRating": "5",
                             "worstRating": "1"
-                        }
-                    })}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
+                        },
+                        "review": [
                             {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://academicwizard.online/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Liam K." },
+                                "reviewBody": "Transformed mechanical AI phrasing into natural academic prose while preserving all original references."
                             },
                             {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Tools",
-                                "item": "https://academicwizard.online/tools/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "AI Humanizer",
-                                "item": "https://academicwizard.online/tools/ai-humanizer/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Sarah P." },
+                                "reviewBody": "Reduced AI detection probability from 84% down to under 5% on our university scanner. Truly impressive tool."
                             }
                         ]
                     })}

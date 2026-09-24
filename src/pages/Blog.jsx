@@ -131,13 +131,6 @@ const Blog = () => {
                             "@type": "Organization",
                             "name": "Academic Wizard",
                             "url": "https://academicwizard.online/"
-                        },
-                        "breadcrumb": {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
-                                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://academicwizard.online/blog/" }
-                            ]
                         }
                     })}
                 </script>

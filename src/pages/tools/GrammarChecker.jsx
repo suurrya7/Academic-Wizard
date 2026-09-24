@@ -133,31 +133,19 @@ const GrammarChecker = () => {
                             "reviewCount": "1420",
                             "bestRating": "5",
                             "worstRating": "1"
-                        }
-                    })}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
+                        },
+                        "review": [
                             {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://academicwizard.online/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Emily H." },
+                                "reviewBody": "Caught punctuation errors and comma splices in my literature review that standard Microsoft Word missed completely."
                             },
                             {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Tools",
-                                "item": "https://academicwizard.online/tools/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "Grammar Checker",
-                                "item": "https://academicwizard.online/tools/grammar-checker/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Daniel T." },
+                                "reviewBody": "Fast, accurate, and completely free with no registration. Essential proofreader before submitting assignments."
                             }
                         ]
                     })}

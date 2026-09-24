@@ -48,15 +48,7 @@ const ServicesDirectory = () => {
                         "@type": "CollectionPage",
                         "name": "Academic Services Directory",
                         "description": "Comprehensive index of academic guidance, assignment consulting, and dissertation support services categorized by country and discipline.",
-                        "url": canonicalUrl,
-                        "breadcrumb": {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://academicwizard.online/" },
-                                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://academicwizard.online/services/" },
-                                { "@type": "ListItem", "position": 3, "name": "Directory", "item": canonicalUrl }
-                            ]
-                        }
+                        "url": canonicalUrl
                     })}
                 </script>
             </Helmet>

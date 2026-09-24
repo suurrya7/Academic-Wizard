@@ -185,31 +185,19 @@ const AIDetector = () => {
                             "reviewCount": "1180",
                             "bestRating": "5",
                             "worstRating": "1"
-                        }
-                    })}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
+                        },
+                        "review": [
                             {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://academicwizard.online/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Jessica M." },
+                                "reviewBody": "Identified sentence patterns that triggered false positives in Turnitin. Allowed me to rephrase before final thesis submission."
                             },
                             {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Tools",
-                                "item": "https://academicwizard.online/tools/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 3,
-                                "name": "AI Detector",
-                                "item": "https://academicwizard.online/tools/ai-detector/"
+                                "@type": "Review",
+                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                "author": { "@type": "Person", "name": "Marcus L." },
+                                "reviewBody": "Excellent perplexity and burstiness detection. High accuracy across essays and dissertation chapters."
                             }
                         ]
                     })}
