@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-25T11:19:52.233272+00:00",
+  "last_run": "2026-09-25T23:08:36.314197+00:00",
   "daily_count": {
     "date": "2026-09-25",
-    "count": 2
+    "count": 3
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -52,7 +52,8 @@
     "1woqzok",
     "1wp8920",
     "1wpgveg",
-    "1wprtvk"
+    "1wprtvk",
+    "1wq84yr"
   ],
   "history": [
     {
@@ -438,7 +439,15 @@
       "title": "What have you been hiding from people?",
       "posted_at": "2026-09-25T11:19:52.233267+00:00",
       "url": "https://reddit.com/r/CasualConversation/comments/1wprtvk/what_have_you_been_hiding_from_people/"
+    },
+    {
+      "post_id": "1wq84yr",
+      "subreddit": "AskReddit",
+      "mode": "karma",
+      "title": "What\u2019s a dead giveaway someone\u2019s never been poor?",
+      "posted_at": "2026-09-25T23:08:36.314193+00:00",
+      "url": "https://reddit.com/r/AskReddit/comments/1wq84yr/whats_a_dead_giveaway_someones_never_been_poor/"
     }
   ],
-  "last_comment_posted_at": "2026-09-25T11:19:52.233250+00:00"
+  "last_comment_posted_at": "2026-09-25T23:08:36.314179+00:00"
 }
