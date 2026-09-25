@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-24T18:35:08.571160+00:00",
+  "last_run": "2026-09-25T00:41:22.963781+00:00",
   "daily_count": {
-    "date": "2026-09-24",
-    "count": 3
+    "date": "2026-09-25",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -50,7 +50,8 @@
     "1wogvzi",
     "1wopp70",
     "1woqzok",
-    "1wp8920"
+    "1wp8920",
+    "1wpgveg"
   ],
   "history": [
     {
@@ -420,7 +421,15 @@
       "title": "Advice on how to get your family to stop focusing on and critiquing your weight?",
       "posted_at": "2026-09-24T18:35:08.571157+00:00",
       "url": "https://reddit.com/r/Advice/comments/1wp8920/advice_on_how_to_get_your_family_to_stop_focusing/"
+    },
+    {
+      "post_id": "1wpgveg",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "i just found out car insurance companies charge men a higher rate than women. how is that legal? how isn\u2019t that discrimination?",
+      "posted_at": "2026-09-25T00:41:22.963778+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1wpgveg/i_just_found_out_car_insurance_companies_charge/"
     }
   ],
-  "last_comment_posted_at": "2026-09-24T18:35:08.571141+00:00"
+  "last_comment_posted_at": "2026-09-25T00:41:22.963762+00:00"
 }
