@@ -2041,7 +2041,7 @@ class BufferClient:
         if "facebook" in service:
             input_payload["metadata"] = {
                 "facebook": {
-                    "type": "video" if is_video else "post",
+                    "type": "reel" if is_video else "post",
                 }
             }
         elif "instagram" in service:
