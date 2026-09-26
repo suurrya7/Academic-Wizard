@@ -626,37 +626,45 @@ ROTATION_MATRIX = {
         {
             "day": "Monday",
             "format": "cheatsheet",
-            "topic": "Sentence Starters",
+            "topic": "Critical Sentence Starters",
             "badge": "ACADEMIC CHEAT-SHEET",
             "hook_headline": "10 Critical Analysis Sentence Starters You Can Copy-Paste",
             "hook_sub": "Stop writing 'This shows that...'. Use these exact sentence frames to instantly elevate your critical analysis and hit top marks.",
             "hook_bullets": [
-                "Boost your critical evaluation score.",
-                "Demonstrate deep engagement with literature."
+                "Boost your critical evaluation score from 54% to 78%+.",
+                "Demonstrate deep methodological critique, not just basic summary."
             ],
             "comparison": {
-                "trap_title": "THE COMMON TRAP",
-                "trap_text": "Using basic descriptive phrases that just summarize the source.",
-                "fix_title": "THE UPGRADE",
-                "fix_text": "Using analytical phrases that evaluate methodology and implications."
+                "trap_title": "THE COMMON TRAP (54%)",
+                "trap_text": "Smith (2021) asserts that key variables are correlated. Jones (2022) also agrees. This proves that the intervention works well.",
+                "fix_title": "THE 78%+ REWRITE",
+                "fix_text": "Whilst Smith (2021) attributes outcomes to environmental factors, their qualitative sample (n=18) overlooks institutional constraints.",
             },
             "formula": {
                 "title": "The Analysis Framework",
                 "steps": [
-                    {"num": "01", "label": "Identify", "desc": "Identify the author's core argument."},
-                    {"num": "02", "label": "Critique", "desc": "Highlight a limitation or counter-perspective."},
-                    {"num": "03", "label": "Synthesize", "desc": "Merge with your own overarching thesis."}
+                    {"num": "01", "label": "Identify", "desc": "Identify the author's core premise."},
+                    {"num": "02", "label": "Critique", "desc": "Scrutinize methodology, sample cohorts, or context."},
+                    {"num": "03", "label": "Synthesize", "desc": "Deliver your justified synthesis answering the prompt."}
                 ],
                 "exemplar": "While Smith (2020) argues X, this fails to account for Y, suggesting..."
             },
             "checklist": [
                 "Used analytical verbs (e.g., contradicts, illuminates).",
-                "Avoided mere summary.",
-                "Explicitly linked source to assignment question."
+                "Avoided mere summary of facts.",
+                "Explicitly linked source to assignment rubric."
             ],
+            "spoken_script": (
+                "Stop losing marks on your essays for weak critical analysis. "
+                "If your supervisor wrote that your draft reads like a descriptive book report, here is the secret. "
+                "Most students just summarize what authors said, capping their grade at fifty-four percent. "
+                "The first-class fix: Never just summarize. Critique the author's methodology, highlight the limitation, "
+                "and state your own academic verdict. "
+                "Save this reel for your next deadline, and WhatsApp Academic Wizard for one-on-one postgraduate mentoring."
+            ),
             "tool_url": f"{SITE_URL}/tools/",
             "cta_text": "Need more sentence frames? Try our free paraphraser.",
-            "whatsapp_msg": "Hi, I need help writing critically."
+            "whatsapp_msg": "Hi Academic Wizard, I need help writing critically."
         },
         {
             "day": "Tuesday",
@@ -666,32 +674,38 @@ ROTATION_MATRIX = {
             "hook_headline": "5 Academic Writing Myths Your Professor Wishes You'd Stop Believing",
             "hook_sub": "You are losing marks by following outdated high school writing advice. Here is what university graders actually look for.",
             "hook_bullets": [
-                "Complex vocabulary does NOT equal better grades.",
-                "First-person pronouns are sometimes required."
+                "Complex thesaurus vocabulary does NOT equal better grades.",
+                "First-person reflexivity is required in modern health and education degrees."
             ],
             "comparison": {
-                "trap_title": "THE MYTH",
-                "trap_text": "Using a thesaurus to replace every simple word with a complicated one.",
-                "fix_title": "THE REALITY",
-                "fix_text": "Clarity and precision outscore complex but misused vocabulary every time."
+                "trap_title": "THE MYTH (54%)",
+                "trap_text": "Utilizing convoluted polysyllabic terminology in an endeavor to obfuscate cognitive superficiality and sound scholarly.",
+                "fix_title": "THE REALITY (78%+)",
+                "fix_text": "Clarity, conceptual precision, and empirical evidence synthesis consistently outscore complex but misused jargon.",
             },
             "formula": {
                 "title": "The Clarity Protocol",
                 "steps": [
                     {"num": "01", "label": "Simplicity", "desc": "Choose the clearest word, not the longest."},
-                    {"num": "02", "label": "Signposting", "desc": "Use clear transition words to guide the reader."},
+                    {"num": "02", "label": "Signposting", "desc": "Use clear transition words to guide the marker."},
                     {"num": "03", "label": "Precision", "desc": "Define key terms early and use them consistently."}
                 ],
-                "exemplar": "Instead of 'utilize', just use 'use'. Keep it direct."
+                "exemplar": "Instead of 'utilize', just use 'use'. Keep your argument direct."
             },
             "checklist": [
-                "Removed unnecessary jargon.",
+                "Removed unnecessary decorative jargon.",
                 "Sentences are under 25 words on average.",
-                "Argument flows logically."
+                "Argument flows logically from premise to proof."
             ],
+            "spoken_script": (
+                "Five academic writing myths your professor wishes you would stop believing. "
+                "Myth number one: using complex thesaurus words makes your essay sound smarter. "
+                "In reality, markers penalize convoluted sentences. What they reward is clarity, precision, and rigorous evidence synthesis. "
+                "Save this reel to protect your grades, and message Academic Wizard on WhatsApp for professional essay reviews."
+            ),
             "tool_url": f"{SITE_URL}/tools/",
             "cta_text": "Check your essay's readability with our free tools.",
-            "whatsapp_msg": "Hi, I want someone to review my essay for clarity."
+            "whatsapp_msg": "Hi Academic Wizard, I want someone to review my essay for clarity."
         },
         {
             "day": "Wednesday",
@@ -701,68 +715,81 @@ ROTATION_MATRIX = {
             "hook_headline": "The Complete Paraphrasing Toolkit: 8 Formulas That Avoid Turnitin Flags",
             "hook_sub": "Just changing a few words is plagiarism. Learn how to genuinely restructure ideas to pass Turnitin and show true understanding.",
             "hook_bullets": [
-                "Avoid accidental plagiarism.",
-                "Integrate sources seamlessly."
+                "Eliminate accidental plagiarism and patchwriting.",
+                "Integrate source theories seamlessly into your narrative."
             ],
             "comparison": {
-                "trap_title": "POOR PARAPHRASING",
-                "trap_text": "Swapping synonyms while keeping the exact same sentence structure (patchwriting).",
-                "fix_title": "PROPER PARAPHRASING",
-                "fix_text": "Reading the source, hiding it, and writing the concept from scratch in your own voice."
+                "trap_title": "POOR PARAPHRASING (54%)",
+                "trap_text": "Swapping three random words with synonyms while copying the author's exact grammatical structure and argument order.",
+                "fix_title": "PROPER PARAPHRASING (78%+)",
+                "fix_text": "Distilling the underlying theoretical principle, closing the source, and reconstructing the argument from first principles.",
             },
             "formula": {
                 "title": "The 4-Step Paraphrase",
                 "steps": [
-                    {"num": "01", "label": "Read", "desc": "Understand the full meaning of the passage."},
-                    {"num": "02", "label": "Hide", "desc": "Put the original text out of sight."},
-                    {"num": "03", "label": "Draft", "desc": "Write the idea from memory."},
-                    {"num": "04", "label": "Check", "desc": "Compare with original and add citation."}
+                    {"num": "01", "label": "Read", "desc": "Grasp the complete theoretical meaning of the text."},
+                    {"num": "02", "label": "Hide", "desc": "Close the tab or hide the text from sight."},
+                    {"num": "03", "label": "Draft", "desc": "Explain the concept out loud and write from memory."},
+                    {"num": "04", "label": "Cite", "desc": "Add exact author, year, and pinpoint attribution."}
                 ],
-                "exemplar": "Original: 'The data indicates...' -> Paraphrase: 'Based on the findings, it is evident...'"
+                "exemplar": "Original: 'The data indicates...' -> Rebuilt: 'Empirical testing reveals that...'"
             },
             "checklist": [
-                "Sentence structure is fundamentally different.",
-                "Meaning remains entirely accurate.",
-                "In-text citation is included."
+                "Sentence structure is fundamentally rebuilt.",
+                "Core meaning remains 100% accurate.",
+                "Complete in-text citation is attached."
             ],
+            "spoken_script": (
+                "The biggest mistake students make when paraphrasing? "
+                "Swapping three words with synonyms and keeping the exact same sentence structure. "
+                "That flags Turnitin immediately. The first-class method: read the research, close the tab, "
+                "and explain the core insight in your own words with proper citation. "
+                "Save this reel, and WhatsApp Academic Wizard to scan and polish your papers before submission."
+            ),
             "tool_url": f"{SITE_URL}/tools/",
             "cta_text": "Try our AI paraphraser to get past writer's block.",
-            "whatsapp_msg": "Hi, I need help reducing my Turnitin similarity score."
+            "whatsapp_msg": "Hi Academic Wizard, I need help reducing my Turnitin similarity score."
         },
         {
             "day": "Thursday",
             "format": "scenario",
             "topic": "Case Study Transformation",
             "badge": "STUDENT STORY",
-            "hook_headline": "From 42% to 78%: How a Singapore MBA Student Transformed Their Case Study Grade",
+            "hook_headline": "From 42% to 78%: How an MBA Student Transformed Their Case Study",
             "hook_sub": "See the exact structural changes that turned a failing business case study into a distinction-level analysis.",
             "hook_bullets": [
-                "Stop summarizing the case facts.",
-                "Start applying frameworks correctly."
+                "Stop summarizing the obvious company facts.",
+                "Apply diagnostic frameworks to uncover root operational causes."
             ],
             "comparison": {
-                "trap_title": "THE 42% DRAFT",
-                "trap_text": "Repeating the background information given in the case brief.",
-                "fix_title": "THE 78% REVISION",
-                "fix_text": "Applying PESTLE and SWOT to evaluate strategic options."
+                "trap_title": "THE 42% FAIL",
+                "trap_text": "Spending 1,200 words retelling the company's background history that the examiner already wrote in the case brief.",
+                "fix_title": "THE 78% DISTINCTION",
+                "fix_text": "Applying VRIO and PESTLE frameworks directly to financial ratios, diagnosing margin collapse, and proposing a budgeted roadmap.",
             },
             "formula": {
                 "title": "Case Study Framework",
                 "steps": [
-                    {"num": "01", "label": "Diagnose", "desc": "Identify the core problem, not just symptoms."},
-                    {"num": "02", "label": "Analyze", "desc": "Apply theoretical frameworks to the evidence."},
-                    {"num": "03", "label": "Recommend", "desc": "Propose actionable, justified solutions."}
+                    {"num": "01", "label": "Diagnose", "desc": "Isolate the root operational failure, not just symptoms."},
+                    {"num": "02", "label": "Analyze", "desc": "Apply theoretical frameworks to empirical balance sheet figures."},
+                    {"num": "03", "label": "Recommend", "desc": "Propose actionable, budgeted solutions with clear timelines."}
                 ],
-                "exemplar": "Instead of 'The company lost money', write 'Due to X (Theory Y), revenue declined by Z%'."
+                "exemplar": "Instead of 'Sales dropped', write 'Operating margins contracted by 14% due to supplier leverage.'"
             },
             "checklist": [
-                "No space wasted on case summary.",
-                "Theories applied directly to evidence.",
-                "Recommendations are realistic and supported."
+                "Zero word count wasted on basic company biography.",
+                "Theories applied directly to numerical balance sheet data.",
+                "Recommendations include risk mitigation and budget."
             ],
+            "spoken_script": (
+                "How to take a business case study from a forty-two percent fail to a seventy-eight percent distinction. "
+                "Stop wasting half your word count retelling the company background. Your examiner already knows the case. "
+                "Spend eighty percent of your paper applying theoretical models, diagnosing the root failure, and proposing budgeted recommendations. "
+                "Save this reel, and WhatsApp Academic Wizard for expert case study help."
+            ),
             "tool_url": f"{SITE_URL}/services/assignment-help/",
             "cta_text": "Struggling with a case study? Get expert help on WhatsApp.",
-            "whatsapp_msg": "Hi, I need assistance with a business case study."
+            "whatsapp_msg": "Hi Academic Wizard, I need assistance with a business case study."
         },
         {
             "day": "Friday",
@@ -772,67 +799,82 @@ ROTATION_MATRIX = {
             "hook_headline": "The Literature Review Matrix: Copy This Exact Template for 40+ Sources",
             "hook_sub": "Overwhelmed by reading? Use this spreadsheet framework to organize themes, methods, and gaps before you write a single word.",
             "hook_bullets": [
-                "Never lose track of a citation again.",
-                "Easily spot research gaps."
+                "Never lose track of a crucial research citation again.",
+                "Instantly spot verifiable gaps in contemporary literature."
             ],
             "comparison": {
-                "trap_title": "THE CHAOTIC METHOD",
-                "trap_text": "Writing linear summaries of one paper after another.",
-                "fix_title": "THE MATRIX METHOD",
-                "fix_text": "Synthesizing literature by theme across multiple papers simultaneously."
+                "trap_title": "THE CHAOTIC METHOD (54%)",
+                "trap_text": "Writing linear summaries of one paper after another without ever connecting themes or comparing methodological differences.",
+                "fix_title": "THE MATRIX METHOD (78%+)",
+                "fix_text": "Synthesizing literature across thematic debates, contrasting quantitative cohorts with qualitative findings to establish research gaps.",
             },
             "formula": {
                 "title": "Matrix Construction",
                 "steps": [
-                    {"num": "01", "label": "Columns", "desc": "Set up: Author/Year, Methodology, Key Findings, Limitations."},
-                    {"num": "02", "label": "Themes", "desc": "Add custom columns for specific themes relevant to your RQ."},
-                    {"num": "03", "label": "Synthesize", "desc": "Read down the columns to write thematic paragraphs."}
+                    {"num": "01", "label": "Columns", "desc": "Set up: Author/Year, Sample Size, Methodology, Key Findings, Limitations."},
+                    {"num": "02", "label": "Themes", "desc": "Create custom thematic columns linked to your research questions."},
+                    {"num": "03", "label": "Synthesize", "desc": "Read down the columns to draft integrated critical paragraphs."}
                 ],
-                "exemplar": "Authors A, B, and C all utilized qualitative methods, but found different results regarding X."
+                "exemplar": "Authors A, B, and C all investigated clinical outcomes, but diverged on protocol efficacy."
             },
             "checklist": [
-                "Every source logged in the matrix.",
-                "Themes identified before drafting.",
-                "Paragraphs grouped by concept, not by author."
+                "Every source logged in the matrix with DOI.",
+                "Themes mapped prior to drafting.",
+                "Paragraphs grouped by theoretical concept, not author."
             ],
+            "spoken_script": (
+                "If you have forty academic papers to read and zero idea how to start your literature review, "
+                "do not write a linear summary. Use a literature review matrix. "
+                "Group your sources by methodology, sample size, and thematic debate. "
+                "That is how you spot genuine research gaps and hit top marks. "
+                "Save this reel, and WhatsApp Academic Wizard for one-on-one dissertation mentoring."
+            ),
             "tool_url": f"{SITE_URL}/tools/",
             "cta_text": "Need help organizing your literature review? Message us.",
-            "whatsapp_msg": "Hi, I am stuck on my literature review chapter."
+            "whatsapp_msg": "Hi Academic Wizard, I am stuck on my literature review chapter."
         },
         {
             "day": "Saturday",
             "format": "mythbuster",
-            "topic": "Original Ideas Myth",
+            "topic": "The Original Ideas Myth",
             "badge": "MYTH-BUSTER",
             "hook_headline": "Your Professor Doesn't Want 'Original Ideas' — Here's What They Actually Mark",
             "hook_sub": "Stop trying to invent a new theory in your undergrad essay. Here is what 'critical thinking' actually means to a grader.",
             "hook_bullets": [
-                "Synthesis beats invention.",
-                "Evidence-backed evaluation is key."
+                "Rigorous synthesis consistently beats ungrounded personal opinion.",
+                "Evidence-backed methodological critique is what scores top marks."
             ],
             "comparison": {
-                "trap_title": "THE STRESS TRAP",
-                "trap_text": "Struggling to come up with completely novel theories for a standard essay.",
-                "fix_title": "THE GRADE WINNER",
-                "fix_text": "Evaluating and synthesizing existing literature in a logical, structured way."
+                "trap_title": "THE STRESS TRAP (54%)",
+                "trap_text": "Trying to invent an entirely novel theoretical model from scratch, but only ending up with an unsubstantiated opinion piece.",
+                "fix_title": "THE 78%+ REWRITE",
+                "fix_text": "Contrasting opposing empirical studies, critiquing their sampling limitations, and synthesizing a justified academic position.",
             },
             "formula": {
                 "title": "Critical Synthesis",
                 "steps": [
-                    {"num": "01", "label": "Compare", "desc": "How do different authors agree or disagree?"},
-                    {"num": "02", "label": "Evaluate", "desc": "Which methodology is stronger?"},
-                    {"num": "03", "label": "Position", "desc": "Where does your argument sit within this debate?"}
+                    {"num": "01", "label": "Compare", "desc": "Examine where primary authorities agree or diverge on key premises."},
+                    {"num": "02", "label": "Evaluate", "desc": "Scrutinize methodology, sample sizes, and institutional context."},
+                    {"num": "03", "label": "Position", "desc": "State where your justified conclusion sits within the debate."}
                 ],
-                "exemplar": "While Smith (2021) provides robust quantitative data, Jones (2022) offers crucial qualitative context."
+                "exemplar": "While Smith (2021) provides robust quantitative data, Jones (2022) highlights qualitative context."
             },
             "checklist": [
-                "Claims are supported by evidence.",
-                "Alternative viewpoints are acknowledged.",
-                "Conclusion logically follows the analysis."
+                "Every argument is substantiated by peer-reviewed evidence.",
+                "Alternative scholarly perspectives are rigorously evaluated.",
+                "Conclusion directly answers the assignment marking rubric."
             ],
+            "spoken_script": (
+                "Your professor does not want you to invent a brand new theory in an undergraduate essay. "
+                "That is the number one myth holding students back. "
+                "What markers actually grade is synthesis: contrasting opposing studies, critiquing their research methods, "
+                "and defending your own verdict with empirical evidence. "
+                "That is how you turn a fifty-four percent into a First Class. "
+                "Save this reel, and WhatsApp Academic Wizard for 24/7 academic guidance."
+            ),
             "tool_url": f"{SITE_URL}/services/academic-editing/",
             "cta_text": "Want us to check your essay's argument structure? WhatsApp us.",
-            "whatsapp_msg": "Hi, can you review my essay's structure?"
+            "whatsapp_msg": "Hi Academic Wizard, can you review my essay's argument structure?"
         },
         {
             "day": "Sunday",
@@ -842,29 +884,36 @@ ROTATION_MATRIX = {
             "hook_headline": "Just Delivered: 3,500-Word Nursing Care Plan for NUS Student in 14 Hours",
             "hook_sub": "When deadlines are impossible, our specialized academic writers step in. See how we handled an overnight nursing crisis.",
             "hook_bullets": [
-                "Fully referenced APA 7th.",
-                "Zero AI, passing Turnitin perfectly."
+                "Fully referenced in APA 7th with primary clinical evidence.",
+                "Zero AI, Turnitin verified with official originality report."
             ],
             "comparison": {
-                "trap_title": "PANIC MODE",
-                "trap_text": "Using ChatGPT and risking academic misconduct when time runs out.",
-                "fix_title": "EXPERT HELP",
-                "fix_text": "Hiring a subject-matter expert to deliver a model answer overnight."
+                "trap_title": "PANIC MODE (54%)",
+                "trap_text": "Using ChatGPT at 3 AM and risking academic misconduct with hallucinated citations and robotic phrasing.",
+                "fix_title": "POSTGRADUATE EXPERT (78%+)",
+                "fix_text": "Pairing with a qualified clinical specialist to draft an evidence-based care plan adhering to NMC/NMBA standards.",
             },
             "formula": {
                 "title": "Our Urgent Process",
                 "steps": [
-                    {"num": "01", "label": "Brief", "desc": "Send us your prompt, rubric, and deadline."},
-                    {"num": "02", "label": "Match", "desc": "We assign a specialized expert in your field."},
-                    {"num": "03", "label": "Deliver", "desc": "Receive a high-quality, plagiarism-free paper on time."}
+                    {"num": "01", "label": "Brief", "desc": "Send us your prompt, rubric, and urgent deadline."},
+                    {"num": "02", "label": "Match", "desc": "We assign a postgraduate subject specialist in your discipline."},
+                    {"num": "03", "label": "Deliver", "desc": "Receive a fully referenced, Turnitin-verified paper on time."}
                 ],
                 "exemplar": "Delivered: A complete, evidence-based care plan scored at Distinction level."
             },
             "checklist": [
-                "Requirements fully met.",
-                "Quality assured by an editor.",
-                "Delivered before the deadline."
+                "Assessment rubric requirements 100% satisfied.",
+                "Quality verified by senior academic editor.",
+                "Delivered hours before the university submission deadline."
             ],
+            "spoken_script": (
+                "Facing an impossible university deadline with assignments due back to back? "
+                "Do not panic, and do not risk academic integrity with generic AI tools. "
+                "Our network of specialized postgraduate writers and mentors can assist with model answers, "
+                "referencing, and Turnitin proofing overnight. "
+                "Save this reel, and message Academic Wizard on WhatsApp right now."
+            ),
             "tool_url": f"{SITE_URL}/services/assignment-help/",
             "cta_text": "Got an impossible deadline? Message our emergency team now.",
             "whatsapp_msg": "URGENT: I need help with an assignment due very soon!"
@@ -1426,7 +1475,7 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
 # True 9:16 Vertical Video Reel Engine (Neural Voiceover + Lo-Fi + FFmpeg)
 # ==============================================================================
 def render_reel_frame(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Render the high-retention 9:16 vertical video reel keyframe (1080x1920)."""
+    """Render the high-retention 9:16 vertical video reel keyframe (1080x1920) with large mobile-optimized typography."""
     recipe = ensure_rich_academic_content(recipe)
     W, H = 1080, 1920
     img = Image.new("RGBA", (W, H), BG_WARM + (255,))
@@ -1435,123 +1484,138 @@ def render_reel_frame(recipe: Dict[str, Any], output_path: Path) -> Path:
     # Top gold accent strip
     draw.rectangle([0, 0, W, 5], fill=GOLD + (255,))
 
-    # Top Header safe zone
-    top_y = 80
+    # Top Header safe zone (y = 65)
+    top_y = 65
     logo = get_cropped_logo()
-    logo_size = 56
-    logo_x = 55
-    draw.ellipse([logo_x - 4, top_y - 4, logo_x + logo_size + 4, top_y + logo_size + 4],
+    logo_size = 64
+    logo_x = 50
+    draw.ellipse([logo_x - 3, top_y - 3, logo_x + logo_size + 3, top_y + logo_size + 3],
                  fill=GOLD_LIGHT + (255,), outline=GOLD + (160,), width=2)
     if logo:
         thumb = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
         img.paste(thumb, (logo_x, top_y), thumb)
 
-    f_brand = get_system_font(24, bold=True)
-    f_sub_brand = get_system_font(16, bold=False)
-    draw.text((logo_x + logo_size + 16, top_y + 4), "Academic Wizard", fill=CHARCOAL, font=f_brand)
-    draw.text((logo_x + logo_size + 16, top_y + 30), "Your Academic Mentor", fill=MUTED, font=f_sub_brand)
+    f_brand = get_system_font(28, bold=True)
+    f_sub_brand = get_system_font(18, bold=False)
+    draw.text((logo_x + logo_size + 18, top_y + 4), "Academic Wizard", fill=CHARCOAL, font=f_brand)
+    draw.text((logo_x + logo_size + 18, top_y + 36), "Your Academic Mentor • academicwizard.online", fill=MUTED, font=f_sub_brand)
 
     # Right: Study Tip pill
-    f_pill = get_system_font(14, bold=True)
-    draw.rounded_rectangle([W - 185, top_y + 10, W - 55, top_y + 42], radius=16, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (100,), width=1)
-    draw.text((W - 168, top_y + 16), "Study Tip", fill=EMERALD, font=f_pill)
+    f_pill = get_system_font(16, bold=True)
+    draw.rounded_rectangle([W - 200, top_y + 12, W - 50, top_y + 52], radius=18, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (120,), width=1)
+    draw.text((W - 180, top_y + 19), "Study Tip", fill=EMERALD, font=f_pill)
 
-    # 3-Second Pattern Interrupt Hook Card
-    hook_y = 180
-    draw = draw_rounded_shadow_card(img, draw, 45, hook_y, W - 45, hook_y + 200, radius=24, bg=CHARCOAL, shadow_offset=8, shadow_blur=16)
+    # 3-Second Pattern Interrupt Hook Card (y = 155 to 370)
+    hook_y = 155
+    hook_h = 215
+    draw = draw_rounded_shadow_card(img, draw, 45, hook_y, W - 45, hook_y + hook_h, radius=24, bg=CHARCOAL, shadow_offset=8, shadow_blur=16)
     draw = ImageDraw.Draw(img)
 
-    f_pov = get_system_font(18, bold=True)
-    f_hook_big = get_system_font(36, bold=True)
-    draw.text((80, hook_y + 25), "POV: It's 2 AM. Your supervisor's email says:", fill=MUTED, font=f_pov)
+    f_pov = get_system_font(22, bold=True)
+    f_hook_big = get_system_font(44, bold=True)
+    draw.text((75, hook_y + 24), "POV: It's 2 AM. Your supervisor's email says:", fill=MUTED, font=f_pov)
 
-    hook_quote = f"\"{recipe.get('hook_headline', 'This reads like a book report. Where is your critical voice?')}\""
-    hook_lines = wrap_text(draw, hook_quote, f_hook_big, W - 160)
+    raw_hook = recipe.get("hook_headline", "This reads like a book report. Where is your critical voice?")
+    hook_quote = f'"{raw_hook}"'
+    hook_lines = wrap_text(draw, hook_quote, f_hook_big, W - 150)
     for i, line in enumerate(hook_lines[:2]):
-        draw.text((80, hook_y + 68 + i * 48), line, fill=BG_WHITE, font=f_hook_big)
+        draw.text((75, hook_y + 68 + i * 56), line, fill=BG_WHITE, font=f_hook_big)
 
-    # Word Doc Simulation Card
-    doc_y = 420
-    doc_h = 720
-    draw = draw_rounded_shadow_card(img, draw, 45, doc_y, W - 45, doc_y + doc_h, radius=20, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
+    # Word Doc Simulation Card (y = 395 to 1350)
+    doc_y = 395
+    doc_h = 955
+    draw = draw_rounded_shadow_card(img, draw, 45, doc_y, W - 45, doc_y + doc_h, radius=24, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
     draw = ImageDraw.Draw(img)
 
     # Mac window bar
-    draw.rounded_rectangle([45, doc_y, W - 45, doc_y + 48], radius=20, fill=(245, 245, 248, 255))
-    draw.rectangle([45, doc_y + 28, W - 45, doc_y + 48], fill=(245, 245, 248, 255))
-    draw.ellipse([68, doc_y + 14, 82, doc_y + 28], fill=CORAL + (255,))
-    draw.ellipse([92, doc_y + 14, 106, doc_y + 28], fill=AMBER + (255,))
-    draw.ellipse([116, doc_y + 14, 130, doc_y + 28], fill=EMERALD + (255,))
-    f_doc = get_system_font(13, bold=False)
-    draw.text((142, doc_y + 14), "Coursework_Draft_Chapter.docx", fill=MUTED, font=f_doc)
+    draw.rounded_rectangle([45, doc_y, W - 45, doc_y + 58], radius=24, fill=(245, 245, 248, 255))
+    draw.rectangle([45, doc_y + 36, W - 45, doc_y + 58], fill=(245, 245, 248, 255))
+    draw.ellipse([72, doc_y + 20, 90, doc_y + 38], fill=CORAL + (255,))
+    draw.ellipse([100, doc_y + 20, 118, doc_y + 38], fill=AMBER + (255,))
+    draw.ellipse([128, doc_y + 20, 146, doc_y + 38], fill=EMERALD + (255,))
+    f_doc = get_system_font(18, bold=False)
+    draw.text((160, doc_y + 19), "Coursework_Draft_Chapter.docx", fill=MUTED, font=f_doc)
 
-    # Section A: What you wrote (54%) with strikethrough
-    f_sect = get_system_font(16, bold=True)
-    f_body = get_system_font(18, bold=False)
-    draw.rounded_rectangle([70, doc_y + 65, 310, doc_y + 92], radius=10, fill=CORAL_LIGHT + (255,))
-    draw.text((85, doc_y + 69), "What you wrote (54%)", fill=CORAL, font=f_sect)
+    f_doc_badge = get_system_font(15, bold=True)
+    draw.rounded_rectangle([W - 245, doc_y + 14, W - 65, doc_y + 44], radius=12, fill=(235, 237, 242, 255))
+    draw.text((W - 230, doc_y + 20), "MARKER FEEDBACK", fill=SLATE, font=f_doc_badge)
+
+    # Section A: What you wrote (54%)
+    f_sect = get_system_font(22, bold=True)
+    f_bad = get_system_font(27, bold=False)
+    badge_w = 340
+    draw.rounded_rectangle([75, doc_y + 80, 75 + badge_w, doc_y + 118], radius=12, fill=CORAL_LIGHT + (255,))
+    draw.text((92, doc_y + 87), "What you wrote (54%)", fill=CORAL, font=f_sect)
 
     trap_text = recipe.get("comparison", {}).get("trap_text", "")
-    bad_lines = wrap_text(draw, trap_text, f_body, W - 200)
-    for i, line in enumerate(bad_lines[:4]):
-        ly = doc_y + 110 + i * 32
-        draw.text((70, ly), line, fill=(*SLATE, 160), font=f_body)
-        draw.line([(70, ly + 14), (min(70 + len(line) * 9, W - 80), ly + 14)], fill=CORAL + (150,), width=2)
+    bad_lines = wrap_text(draw, trap_text, f_bad, W - 150)
+    for i, line in enumerate(bad_lines[:3]):
+        ly = doc_y + 138 + i * 42
+        draw.text((75, ly), line, fill=(*SLATE, 175), font=f_bad)
+        line_bbox = draw.textbbox((75, ly), line, font=f_bad)
+        draw.line([(75, ly + 18), (line_bbox[2], ly + 18)], fill=CORAL + (160,), width=3)
 
-    draw.line([(70, doc_y + 260), (W - 70, doc_y + 260)], fill=(*MUTED, 60), width=1)
+    # Divider line
+    div_y = doc_y + 285
+    draw.line([(75, div_y), (W - 75, div_y)], fill=(*MUTED, 80), width=1)
 
     # Section B: The 78%+ Rewrite
-    draw.rounded_rectangle([70, doc_y + 280, 310, doc_y + 307], radius=10, fill=EMERALD_LIGHT + (255,))
-    draw.text((85, doc_y + 284), "The 78%+ rewrite", fill=EMERALD, font=f_sect)
+    f_good = get_system_font(29, bold=True)
+    draw.rounded_rectangle([75, div_y + 25, 75 + badge_w + 40, div_y + 63], radius=12, fill=EMERALD_LIGHT + (255,))
+    draw.text((92, div_y + 32), "The 78%+ Rewrite (1st Class)", fill=EMERALD, font=f_sect)
 
     fix_text = recipe.get("comparison", {}).get("fix_text", "")
-    good_lines = wrap_text(draw, fix_text, f_body, W - 200)
-    for i, line in enumerate(good_lines[:6]):
-        ly = doc_y + 325 + i * 32
-        draw.text((70, ly), line, fill=CHARCOAL, font=f_body)
+    good_lines = wrap_text(draw, fix_text, f_good, W - 150)
+    for i, line in enumerate(good_lines[:4]):
+        ly = div_y + 82 + i * 44
+        draw.text((75, ly), line, fill=CHARCOAL, font=f_good)
 
     # Golden Rule Box
-    draw.rounded_rectangle([70, doc_y + 535, W - 70, doc_y + 610], radius=14, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (80,), width=1)
-    f_rule = get_system_font(17, bold=True)
-    f_rule_sub = get_system_font(16, bold=False)
-    draw.text((90, doc_y + 545), "The Golden Rule:", fill=EMERALD, font=f_rule)
-    draw.text((90, doc_y + 575), "Compare → Critique the method → State YOUR verdict.", fill=CHARCOAL, font=f_rule_sub)
+    rule_y = doc_y + 665
+    draw.rounded_rectangle([75, rule_y, W - 75, rule_y + 115], radius=16, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (120,), width=2)
+    f_rule_h = get_system_font(24, bold=True)
+    f_rule_b = get_system_font(24, bold=False)
+    draw.text((95, rule_y + 18), "The Golden Rule:", fill=EMERALD, font=f_rule_h)
+    draw.text((95, rule_y + 58), "Compare sources  ->  Critique methodology  ->  State YOUR verdict.", fill=CHARCOAL, font=f_rule_b)
 
     # Grade jump pill
-    draw.rounded_rectangle([70, doc_y + 635, W - 70, doc_y + 700], radius=14, fill=GOLD_LIGHT + (255,))
-    f_grade = get_system_font(20, bold=True)
-    draw.text((95, doc_y + 652), "Grade jump: 54%  →  78%+ (First Class)", fill=GOLD, font=f_grade)
+    grade_y = rule_y + 135
+    draw.rounded_rectangle([75, grade_y, W - 75, grade_y + 85], radius=16, fill=GOLD_LIGHT + (255,), outline=GOLD + (140,), width=1)
+    f_grade = get_system_font(28, bold=True)
+    draw.text((105, grade_y + 26), "Grade Jump: 54% (2:2)  ->  78%+ (First Class)", fill=GOLD, font=f_grade)
 
-    # Kinetic Subtitle Bar
-    sub_y = 1185
-    draw = draw_rounded_shadow_card(img, draw, 70, sub_y, W - 70, sub_y + 85, radius=16, bg=CHARCOAL, shadow_offset=4, shadow_blur=10)
+    # Kinetic Subtitle Bar (y = 1380 to 1490)
+    sub_y = 1380
+    draw = draw_rounded_shadow_card(img, draw, 55, sub_y, W - 55, sub_y + 110, radius=20, bg=CHARCOAL, shadow_offset=6, shadow_blur=14)
+    draw = ImageDraw.Draw(img)
+    f_sub1 = get_system_font(34, bold=True)
+    f_sub2 = get_system_font(34, bold=True)
+    draw.text((85, sub_y + 18), "Never just summarize what authors said.", fill=BG_WHITE, font=f_sub1)
+    draw.text((85, sub_y + 60), "Always critique the methodology and sample.", fill=AMBER + (255,), font=f_sub2)
+
+    # Bottom WhatsApp CTA Card (y = 1515 to 1840)
+    cta_y = 1515
+    cta_h = 325
+    draw = draw_rounded_shadow_card(img, draw, 45, cta_y, W - 45, cta_y + cta_h, radius=24, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
     draw = ImageDraw.Draw(img)
 
-    f_sub_spoken = get_system_font(25, bold=True)
-    draw.text((100, sub_y + 14), "Never just summarize.", fill=BG_WHITE, font=f_sub_spoken)
-    draw.text((100, sub_y + 46), "Always critique the method.", fill=AMBER + (255,), font=f_sub_spoken)
-
-    # Bottom CTA card
-    cta_y = 1310
-    draw = draw_rounded_shadow_card(img, draw, 45, cta_y, W - 45, cta_y + 220, radius=24, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
-    draw = ImageDraw.Draw(img)
-
-    f_cta_h = get_system_font(26, bold=True)
-    f_cta_s = get_system_font(18, bold=False)
-    draw.text((80, cta_y + 28), "Stuck on your coursework or dissertation?", fill=CHARCOAL, font=f_cta_h)
-    draw.text((80, cta_y + 68), "Get 1-on-1 expert help from real postgraduate mentors.", fill=SLATE, font=f_cta_s)
-    draw.text((80, cta_y + 96), "Nursing • Law • MBA • CS • Engineering • Psychology", fill=MUTED, font=f_cta_s)
+    f_cta_h = get_system_font(34, bold=True)
+    f_cta_s = get_system_font(24, bold=False)
+    f_tags = get_system_font(20, bold=True)
+    draw.text((75, cta_y + 26), "Stuck on your coursework or dissertation?", fill=CHARCOAL, font=f_cta_h)
+    draw.text((75, cta_y + 72), "Get 1-on-1 expert help from real postgraduate mentors.", fill=SLATE, font=f_cta_s)
+    draw.text((75, cta_y + 108), "Nursing • Law • MBA • CS • Engineering • Psychology", fill=MUTED, font=f_tags)
 
     # WhatsApp green button
-    draw.rounded_rectangle([80, cta_y + 140, W - 80, cta_y + 195], radius=16, fill=WA_GREEN + (255,))
-    f_btn_wa = get_system_font(22, bold=True)
-    draw.text((120, cta_y + 152), f"WhatsApp: {WHATSAPP_DISPLAY}", fill=BG_WHITE, font=f_btn_wa)
+    draw.rounded_rectangle([75, cta_y + 155, W - 75, cta_y + 235], radius=18, fill=WA_GREEN + (255,))
+    f_btn_wa = get_system_font(30, bold=True)
+    draw.text((120, cta_y + 175), f"WhatsApp: {WHATSAPP_DISPLAY} (Online 24/7)", fill=BG_WHITE, font=f_btn_wa)
 
-    # Domain watermark
-    f_wm = get_system_font(16, bold=False)
-    wm_bbox = draw.textbbox((0, 0), "academicwizard.online", font=f_wm)
-    wm_w = wm_bbox[2] - wm_bbox[0]
-    draw.text((W // 2 - wm_w // 2, 1580), "academicwizard.online", fill=MUTED, font=f_wm)
+    # Domain & Trust Watermark
+    f_wm = get_system_font(20, bold=False)
+    wm_text = "academicwizard.online • 100% Plagiarism-Free • Turnitin Verified"
+    wm_bbox = draw.textbbox((0, 0), wm_text, font=f_wm)
+    draw.text((W // 2 - (wm_bbox[2] - wm_bbox[0]) // 2, cta_y + 265), wm_text, fill=MUTED, font=f_wm)
 
     # Bottom gold strip
     draw.rectangle([0, H - 5, W, H], fill=GOLD + (255,))
@@ -1560,26 +1624,104 @@ def render_reel_frame(recipe: Dict[str, Any], output_path: Path) -> Path:
     return output_path
 
 
-def synthesize_voiceover(script_text: str, output_audio: Path) -> bool:
-    """Generate neural British voiceover audio using edge-tts."""
+def build_human_spoken_script(recipe: Dict[str, Any]) -> str:
+    """Craft an articulate, high-retention British mentor script matching the visual frame."""
+    topic = recipe.get("topic", "Academic Coursework")
+    hook = recipe.get("hook_headline", "Score a First Class on your paper")
+    clean_hook = hook.replace("“", "").replace("”", "").replace('"', '').strip()
+
+    fmt = recipe.get("format", "comparison")
+    if fmt == "mythbuster":
+        return (
+            f"Here is the truth about {clean_hook.lower()}. "
+            "Most students lose marks by following outdated writing advice. "
+            "Markers do not want descriptive summaries. They reward methodological critique and empirical evidence. "
+            "When you synthesize opposing studies, your grade jumps from a fifty-four percent to a First Class. "
+            "Save this reel, and WhatsApp Academic Wizard for one-on-one postgraduate mentoring."
+        )
+    elif fmt == "cheatsheet":
+        return (
+            f"Stop losing marks on your essays for {topic.lower()}. "
+            "If your marker wrote that your draft lacks critical analysis, here is the secret. "
+            "Never just summarize what authors said. Critique their research methodology and state your own justified verdict. "
+            "Save this reel for your next deadline, and WhatsApp Academic Wizard for one-on-one postgraduate mentoring."
+        )
+    else:
+        return (
+            f"Struggling with {topic.lower()}? Here is what your supervisor actually marks. "
+            "Descriptive summaries cap your grade at fifty-four percent. "
+            "The first-class fix: Compare sources, critique the methodology, and deliver your own academic verdict. "
+            "Save this reel for your next submission, and WhatsApp Academic Wizard for one-on-one postgraduate mentoring."
+        )
+
+
+def get_audio_duration_seconds(audio_path: Path) -> float:
+    """Query ffprobe or mutagen for exact audio duration, or fallback to bitrate estimation."""
+    import subprocess
+    try:
+        cmd = [
+            "ffprobe", "-v", "error",
+            "-show_entries", "format=duration",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            str(audio_path)
+        ]
+        res = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+        if res.returncode == 0 and res.stdout.strip():
+            return float(res.stdout.strip())
+    except Exception:
+        pass
+
+    try:
+        import mutagen.mp3
+        m = mutagen.mp3.MP3(str(audio_path))
+        if m.info and m.info.length:
+            return float(m.info.length)
+    except Exception:
+        pass
+
+    try:
+        size_bytes = audio_path.stat().st_size
+        # edge-tts default mp3 format is ~48 kbps = 6,000 bytes/sec
+        return max(15.0, size_bytes / 6000.0)
+    except Exception:
+        return 20.0
+
+
+def synthesize_voiceover(script_text: str, output_audio: Path) -> Tuple[bool, float]:
+    """Generate neural British voiceover audio using edge-tts and calculate exact duration."""
     try:
         import asyncio
         import edge_tts
 
         voice = "en-GB-RyanNeural"
-        print(f"  🎙️ Synthesizing voiceover with {voice}...")
+        print(f"  🎙️ Synthesizing voiceover with {voice} (rate: -3%)...")
+
+        total_duration = 0.0
 
         async def _speak():
-            comm = edge_tts.Communicate(script_text, voice)
-            await comm.save(str(output_audio))
+            nonlocal total_duration
+            comm = edge_tts.Communicate(script_text, voice, rate="-3%")
+            with open(output_audio, "wb") as f_out:
+                async for chunk in comm.stream():
+                    if chunk["type"] == "audio":
+                        f_out.write(chunk["data"])
+                    elif chunk["type"] == "SentenceBoundary":
+                        end_t = (chunk["offset"] + chunk["duration"]) / 10_000_000.0
+                        if end_t > total_duration:
+                            total_duration = end_t
 
         asyncio.run(_speak())
+
+        # If SentenceBoundary didn't record duration, fallback to ffprobe or file size estimation
+        if total_duration <= 0.0 and output_audio.exists():
+            total_duration = get_audio_duration_seconds(output_audio)
+
         if output_audio.exists() and output_audio.stat().st_size > 500:
-            print(f"  ✅ Voiceover audio generated: {output_audio.name} ({output_audio.stat().st_size // 1024} KB)")
-            return True
+            print(f"  ✅ Voiceover audio generated: {output_audio.name} ({output_audio.stat().st_size // 1024} KB, duration: {total_duration:.2f}s)")
+            return True, total_duration
     except Exception as e:
         print(f"  ⚠️ Voiceover synthesis error: {e}")
-    return False
+    return False, 0.0
 
 
 def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
@@ -1591,55 +1733,63 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
     frame_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_frame.png"
     audio_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_audio.mp3"
 
-    # 1. Render high-res 9:16 frame
+    # 1. Render high-res 9:16 frame with large mobile-optimized typography
     render_reel_frame(recipe, frame_path)
     print(f"  ✅ 9:16 Reel frame generated: {frame_path.name}")
 
-    # 2. Synthesize voiceover audio
-    spoken_script = (
-        f"Your supervisor wrote: {recipe.get('hook_headline', 'lacks critical depth')}? "
-        "Here is why. When you only summarize what authors said without evaluating methodology, "
-        "markers cap your grade at 54 percent. "
-        "The first-class fix: Compare, critique the methodology, and state your own verdict. "
-        "Save this reel and WhatsApp Academic Wizard for 1-on-1 mentor help."
-    )
-    voice_ok = synthesize_voiceover(spoken_script, audio_path)
+    # 2. Build high-retention articulate human spoken script
+    spoken_script = recipe.get("spoken_script")
+    if not spoken_script:
+        spoken_script = build_human_spoken_script(recipe)
 
-    # 3. Check for FFmpeg
+    # 3. Synthesize voiceover audio with exact duration measurement
+    voice_ok, audio_dur = synthesize_voiceover(spoken_script, audio_path)
+
+    # 4. Check for FFmpeg
     if not shutil.which("ffmpeg"):
         print("  ℹ️ FFmpeg not installed on local host — reel frame and audio ready for GitHub runner compilation.")
         return None
 
     try:
+        # Determine total video duration: exact audio length + 1.8s trailing buffer (minimum 15s)
+        total_duration = max(15.0, round(audio_dur + 1.8, 1)) if audio_dur > 0 else 18.0
+        print(f"  🎬 Target reel video duration: {total_duration:.1f}s (audio: {audio_dur:.1f}s + 1.8s pad)")
+
         # Lo-fi background beat
         LOFI_DIR = SCRIPT_DIR / "lofi_beats"
         beats = list(LOFI_DIR.glob("*.wav")) + list(LOFI_DIR.glob("*.mp3"))
         lofi_path = random.choice(beats) if beats else None
 
-        # FFmpeg assembly command (15-second 1080x1920 video at 30fps)
+        # FFmpeg assembly command
         cmd = [
             "ffmpeg", "-y",
             "-loop", "1", "-i", str(frame_path),
         ]
 
         if voice_ok and lofi_path:
-            # Mix voiceover with soft lo-fi background music ducked at -18dB
+            # Loop background music with -stream_loop -1, mix with voiceover padded by 2s
             cmd.extend([
                 "-i", str(audio_path),
-                "-i", str(lofi_path),
+                "-stream_loop", "-1", "-i", str(lofi_path),
                 "-filter_complex",
-                "[2:a]volume=0.15[bg];[1:a][bg]amix=inputs=2:duration=first[a]",
+                "[1:a]apad=pad_dur=2[v_pad];[2:a]volume=0.10[bg];[v_pad][bg]amix=inputs=2:duration=first[a]",
                 "-map", "0:v",
                 "-map", "[a]",
             ])
         elif voice_ok:
-            cmd.extend(["-i", str(audio_path), "-map", "0:v", "-map", "1:a"])
+            # Voice only padded by 2s so it never abruptly stops
+            cmd.extend([
+                "-i", str(audio_path),
+                "-filter_complex", "[1:a]apad=pad_dur=2[a]",
+                "-map", "0:v",
+                "-map", "[a]",
+            ])
         else:
-            cmd.extend(["-t", "15", "-an"])
+            cmd.extend(["-t", str(total_duration), "-an"])
 
         cmd.extend([
             "-c:v", "libx264",
-            "-t", "16",
+            "-t", str(total_duration),
             "-preset", "fast",
             "-crf", "22",
             "-pix_fmt", "yuv420p",
@@ -1647,11 +1797,11 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
             str(output_path),
         ])
 
-        print("  🎬 Compiling 9:16 vertical reel with FFmpeg...")
-        res = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
+        print(f"  🎬 Compiling 9:16 vertical reel ({total_duration:.1f}s) with FFmpeg...")
+        res = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
         if res.returncode == 0 and output_path.exists():
             size_mb = output_path.stat().st_size / (1024 * 1024)
-            print(f"  ✅ Broadcast 9:16 Video Reel generated: {output_path.name} ({size_mb:.1f} MB)")
+            print(f"  ✅ Broadcast 9:16 Video Reel generated: {output_path.name} ({size_mb:.1f} MB, {total_duration:.1f}s)")
             return output_path
         else:
             print(f"  ⚠️ FFmpeg failed (exit {res.returncode}): {res.stderr[-300:]}")
@@ -1659,6 +1809,7 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
         print(f"  ⚠️ Reel video compilation error: {e}")
 
     return None
+
 
 # ==============================================================================
 # Platform-Specific Copy Generator (Gemini Pro + Fallback)
