@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detectors: How to Verify Your Originality and Tone",
+    "slug": "turnitin-ai-detectors-how-to-verify-your-originality-and-tone",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to audit your writing for human tone, verify your own integrity, and prepare a professional case for your professors.",
+    "keywords": [
+      "Turnitin AI detection false positive audit",
+      "AI writing software detection",
+      "academic integrity audit",
+      "human-authored content validation",
+      "Turnitin similarity report guide"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positive audit",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-26T06:56:00.241355+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detectors-how-to-verify-your-originality-and-tone.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Mastering Chicago 17: Archival Citation Hacks for History Theses",
+    "slug": "mastering-chicago-17-archival-citation-hacks-for-history-theses",
+    "excerpt": "Stop guessing your footnotes. Master the nuances of Chicago 17 archival citations and ensure your thesis formatting meets the highest academic standards.",
+    "keywords": [
+      "Chicago 17 archival source citations",
+      "Chicago style footnote guide",
+      "primary source citation rules",
+      "thesis formatting tips",
+      "archival document references"
+    ],
+    "primaryKeyword": "Chicago 17 archival source citations",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-26T06:56:26.717262+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-chicago-17-archival-citation-hacks-for-history-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "Zotero vs ZoteroBib: Which Fits Your 2026 Dissertation Needs?",
+    "slug": "zotero-vs-zoterobib-which-fits-your-2026-dissertation-needs",
+    "excerpt": "Managing hundreds of sources? Discover whether Zotero's desktop client or the web-based ZoteroBib is the better choice for your massive thesis project.",
+    "keywords": [
+      "Zotero vs ZoteroBib for large projects",
+      "citation manager comparison",
+      "dissertation bibliography tools",
+      "Zotero library management",
+      "reference automation guide"
+    ],
+    "primaryKeyword": "Zotero vs ZoteroBib for large projects",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-26T06:56:53.650019+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-vs-zoterobib-which-fits-your-2026-dissertation-needs.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
+    "title": "NVivo 26 Coding Drift: How to Fix Qualitative Data Inconsistencies",
+    "slug": "nvivo-26-coding-drift-how-to-fix-qualitative-data-inconsistencies",
+    "excerpt": "Is your thematic coding becoming inconsistent? Learn how to detect and fix 'coding drift' in NVivo 26 to ensure your qualitative thesis remains rigorous.",
+    "keywords": [
+      "NVivo 26 qualitative coding drift",
+      "thematic analysis consistency",
+      "qualitative research methodology",
+      "NVivo coding software tips",
+      "research bias mitigation"
+    ],
+    "primaryKeyword": "NVivo 26 qualitative coding drift",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-26T06:57:23.509403+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-coding-drift-how-to-fix-qualitative-data-inconsistencies.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Fixing NVivo Thematic Drift: Accuracy Tips for 2026 Qualitative Theses",
     "slug": "fixing-nvivo-thematic-drift-accuracy-tips-for-2026-qualitative-theses",
     "excerpt": "Struggling with inconsistent qualitative data? Learn how to fix NVivo thematic drift and maintain high research integrity in your 2026 thesis project.",
