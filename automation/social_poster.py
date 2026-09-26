@@ -32,7 +32,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 # ==============================================================================
 # Configuration & Constants
@@ -42,9 +42,25 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 PUBLIC_SOCIAL_DIR = PROJECT_ROOT / "public" / "social"
 PUBLIC_SOCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
+LOGO_HIGHRES_PATH = PROJECT_ROOT / "src" / "assets" / "academic-wizard-logo.webp"
 LOGO_NAV_PATH = PROJECT_ROOT / "public" / "academic-wizard-logo-nav.webp"
-if not LOGO_NAV_PATH.exists():
-    LOGO_NAV_PATH = PROJECT_ROOT / "src" / "assets" / "academic-wizard-logo-nav.webp"
+
+# Modern Minimal Light Theme Palette
+BG_LIGHT      = (248, 249, 250)       # Clean off-white background
+BG_WHITE      = (255, 255, 255)       # Pure white card background
+BG_WARM       = (254, 252, 248)       # Warm cream background for reels
+CHARCOAL      = (26, 26, 46)          # Primary dark typography
+SLATE         = (71, 85, 105)         # Secondary body text
+MUTED         = (148, 163, 184)       # Captions & subtitles
+GOLD          = (212, 175, 55)        # Brand gold accent
+GOLD_LIGHT    = (251, 243, 219)       # Soft gold tint
+EMERALD       = (16, 185, 129)        # Success / 1st-class checkmarks
+EMERALD_LIGHT = (236, 253, 245)       # Soft emerald tint
+CORAL         = (239, 68, 68)         # Common trap / mistake coral
+CORAL_LIGHT   = (254, 242, 242)       # Soft coral tint
+AMBER         = (245, 158, 11)        # Kinetic subtitle active highlight
+BRAND_NAVY    = (15, 23, 42)          # Deep contrast navy
+WA_GREEN      = (37, 211, 102)        # WhatsApp official green
 
 BUFFER_ACCESS_TOKEN = os.getenv("BUFFER_ACCESS_TOKEN", "").strip()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip() or os.getenv("BACKLINK_GEMINI_API_KEY", "").strip()
@@ -57,6 +73,21 @@ RAW_GITHUB_BASE = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRAN
 
 WHATSAPP_NUMBER = "919509893638"
 WHATSAPP_DISPLAY = "+91 95098 93638"
+
+
+def get_cropped_logo() -> Optional[Image.Image]:
+    """Load authentic Academic Wizard logo and crop to bounding box."""
+    target = LOGO_HIGHRES_PATH if LOGO_HIGHRES_PATH.exists() else LOGO_NAV_PATH
+    if not target.exists():
+        return None
+    try:
+        with Image.open(target) as raw:
+            rgba = raw.convert("RGBA")
+            bbox = rgba.getbbox()
+            return rgba.crop(bbox) if bbox else rgba
+    except Exception as e:
+        print(f"  ⚠️ Logo loading error: {e}")
+        return None
 
 
 def generate_whatsapp_link(message: str) -> str:
@@ -843,7 +874,7 @@ ROTATION_MATRIX = {
 
 
 # ==============================================================================
-# Pillow Typography & Multi-Slide Layout Engine
+# Pillow Typography & Modern Minimal Layout Engine
 # ==============================================================================
 def get_system_font(size: int, bold: bool = False) -> ImageFont.ImageFont:
     """Load system font with robust cross-platform fallbacks."""
@@ -868,118 +899,10 @@ def get_system_font(size: int, bold: bool = False) -> ImageFont.ImageFont:
         return ImageFont.load_default()
 
 
-def create_base_canvas(slide_num: int, total_slides: int, badge_text: str) -> Tuple[Image.Image, ImageDraw.Draw]:
-    """Create a 1080x1080 base canvas with luxury borders, badge, and slide counter."""
-    width, height = 1080, 1080
-    image = Image.new("RGBA", (width, height), (10, 17, 40, 255))
-    draw = ImageDraw.Draw(image)
-
-    # 1. Gradient Background (Rich Navy to Midnight Slate)
-    for y in range(height):
-        ratio = y / height
-        r = int(10 + (16 - 10) * ratio)
-        g = int(17 + (26 - 17) * ratio)
-        b = int(40 + (62 - 40) * ratio)
-        draw.line([(0, y), (width, y)], fill=(r, g, b, 255))
-
-    # 2. Gold Luxury Double Border
-    gold = (212, 175, 55, 255)
-    light_gold = (245, 230, 170, 255)
-    draw.rectangle([25, 25, width - 25, height - 25], outline=gold, width=3)
-    draw.rectangle([33, 33, width - 33, height - 33], outline=light_gold, width=1)
-
-    # 3. Top Category Badge (Pill button with vector gold diamonds)
-    clean_badge = badge_text.replace("✦", "").replace("★", "").strip()
-    font_badge = get_system_font(20, bold=True)
-    bbox = draw.textbbox((0, 0), clean_badge, font=font_badge)
-    badge_w = bbox[2] - bbox[0]
-    badge_h = bbox[3] - bbox[1]
-
-    pill_x1 = 55
-    pill_y1 = 55
-    pill_x2 = pill_x1 + badge_w + 70
-    pill_y2 = pill_y1 + badge_h + 18
-    draw.rounded_rectangle([pill_x1, pill_y1, pill_x2, pill_y2], radius=12, fill=(20, 35, 75, 230), outline=gold, width=2)
-
-    # Vector gold diamonds on badge
-    mid_y = pill_y1 + (pill_y2 - pill_y1) // 2
-    d_size = 5
-    draw.polygon([(pill_x1 + 18, mid_y - d_size), (pill_x1 + 18 + d_size, mid_y), (pill_x1 + 18, mid_y + d_size), (pill_x1 + 18 - d_size, mid_y)], fill=gold)
-    draw.text((pill_x1 + 32, pill_y1 + 8), clean_badge, fill=light_gold, font=font_badge)
-
-    # 4. Slide Pagination Indicator (Top Right)
-    font_slide = get_system_font(20, bold=True)
-    slide_text = f"SLIDE {slide_num} OF {total_slides}"
-    tb_slide = draw.textbbox((0, 0), slide_text, font=font_slide)
-    slide_w = tb_slide[2] - tb_slide[0]
-    slide_x1 = width - slide_w - 75
-    slide_y1 = 55
-    draw.rounded_rectangle([slide_x1, slide_y1, width - 55, slide_y1 + badge_h + 18], radius=12, fill=(15, 25, 55, 200), outline=(60, 85, 140, 200), width=1)
-    draw.text((slide_x1 + 10, slide_y1 + 8), slide_text, fill=(200, 215, 245, 255), font=font_slide)
-
-    return image, draw
-
-
-def draw_vector_checkmark(draw: ImageDraw.Draw, cx: int, cy: int, size: int = 8, color=(255, 255, 255, 255), width: int = 3):
-    """Draw a clean, crisp vector checkmark."""
-    draw.line([(cx - size, cy), (cx - size // 3, cy + size), (cx + size, cy - size)], fill=color, width=width)
-
-
-def draw_vector_cross(draw: ImageDraw.Draw, cx: int, cy: int, size: int = 7, color=(255, 255, 255, 255), width: int = 3):
-    """Draw a clean, crisp vector X / cross."""
-    draw.line([(cx - size, cy - size), (cx + size, cy + size)], fill=color, width=width)
-    draw.line([(cx - size, cy + size), (cx + size, cy - size)], fill=color, width=width)
-
-
-def stamp_bottom_bar(image: Image.Image, draw: ImageDraw.Draw, slide_num: int, total_slides: int):
-    """Draw the standardized bottom branding and navigation bar."""
-    width, height = 1080, 1080
-    bottom_y = height - 120
-    draw.line([(50, bottom_y), (width - 50, bottom_y)], fill=(50, 75, 120, 180), width=1)
-
-    # Logo
-    logo_w = 0
-    if LOGO_NAV_PATH.exists():
-        try:
-            with Image.open(LOGO_NAV_PATH) as logo_img:
-                logo_resized = logo_img.convert("RGBA").resize((60, 60), Image.Resampling.LANCZOS)
-                image.paste(logo_resized, (60, bottom_y + 16), logo_resized)
-                logo_w = 75
-        except Exception as e:
-            print(f"  ⚠️ Logo overlay skipped: {e}")
-
-    # Brand text
-    font_brand = get_system_font(26, bold=True)
-    draw.text((60 + logo_w, bottom_y + 30), "academicwizard.online", fill=(255, 255, 255, 255), font=font_brand)
-
-    # Right action indicator
-    if slide_num < total_slides:
-        # Swipe Cue Button
-        font_swipe = get_system_font(22, bold=True)
-        swipe_text = f"SWIPE NEXT >>  [{slide_num}/{total_slides}]"
-        tb_swipe = draw.textbbox((0, 0), swipe_text, font=font_swipe)
-        sw_w = tb_swipe[2] - tb_swipe[0]
-        sw_x1 = width - sw_w - 90
-        sw_y1 = bottom_y + 18
-        draw.rounded_rectangle([sw_x1, sw_y1, width - 55, sw_y1 + 50], radius=12, fill=(212, 175, 55, 230))
-        draw.text((sw_x1 + 18, sw_y1 + 12), swipe_text, fill=(10, 15, 30, 255), font=font_swipe)
-    else:
-        # Final Slide: WhatsApp Green Button
-        font_wa = get_system_font(22, bold=True)
-        wa_text = f"WhatsApp: {WHATSAPP_DISPLAY}"
-        tb_wa = draw.textbbox((0, 0), wa_text, font=font_wa)
-        wa_w = tb_wa[2] - tb_wa[0]
-        wa_x1 = width - wa_w - 90
-        wa_y1 = bottom_y + 18
-        draw.rounded_rectangle([wa_x1, wa_y1, width - 55, sw_y1 if 'sw_y1' in locals() else wa_y1 + 50], radius=12, fill=(37, 211, 102, 240))
-        draw.text((wa_x1 + 18, wa_y1 + 12), wa_text, fill=(255, 255, 255, 255), font=font_wa)
-
-
 def wrap_text(draw: ImageDraw.Draw, text: str, font: ImageFont.ImageFont, max_width: int) -> List[str]:
-    """Word-wrap text to fit inside max_width."""
+    """Word-wrap text cleanly to fit inside max_width."""
     words = text.split()
-    lines = []
-    curr = []
+    lines, curr = [], []
     for w in words:
         test = " ".join(curr + [w])
         bbox = draw.textbbox((0, 0), test, font=font)
@@ -994,273 +917,485 @@ def wrap_text(draw: ImageDraw.Draw, text: str, font: ImageFont.ImageFont, max_wi
     return lines
 
 
+def draw_rounded_shadow_card(
+    img: Image.Image,
+    draw: ImageDraw.Draw,
+    x1: int,
+    y1: int,
+    x2: int,
+    y2: int,
+    radius: int = 20,
+    bg: Tuple[int, int, int] = BG_WHITE,
+    shadow_offset: int = 6,
+    shadow_blur: int = 12,
+    border_color: Optional[Tuple[int, int, int]] = None,
+    border_width: int = 0,
+) -> ImageDraw.Draw:
+    """Draw a modern rounded card with a subtle gaussian drop shadow."""
+    shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    sdraw = ImageDraw.Draw(shadow)
+    sdraw.rounded_rectangle(
+        [x1 + shadow_offset, y1 + shadow_offset, x2 + shadow_offset, y2 + shadow_offset],
+        radius=radius,
+        fill=(0, 0, 0, 32),
+    )
+    shadow = shadow.filter(ImageFilter.GaussianBlur(shadow_blur))
+    img.paste(Image.alpha_composite(Image.new("RGBA", img.size, (0, 0, 0, 0)), shadow), (0, 0), shadow)
+
+    draw_fresh = ImageDraw.Draw(img)
+    draw_fresh.rounded_rectangle([x1, y1, x2, y2], radius=radius, fill=bg + (255,))
+    if border_color and border_width:
+        draw_fresh.rounded_rectangle([x1, y1, x2, y2], radius=radius, outline=border_color + (255,), width=border_width)
+    return draw_fresh
+
+
+def stamp_header(
+    img: Image.Image,
+    draw: ImageDraw.Draw,
+    slide_num: Optional[int] = None,
+    total_slides: Optional[int] = None,
+    category: str = "Academic Strategy",
+):
+    """Render modern minimal header: top gold accent strip, logo medallion, brand name, and category pill."""
+    w = img.width
+    # Top 5px gold brand accent strip
+    draw.rectangle([0, 0, w, 5], fill=GOLD + (255,))
+
+    # Logo medallion
+    logo = get_cropped_logo()
+    logo_size = 52
+    logo_x, logo_y = 60, 26
+    draw.ellipse(
+        [logo_x - 4, logo_y - 4, logo_x + logo_size + 4, logo_y + logo_size + 4],
+        fill=GOLD_LIGHT + (255,),
+        outline=GOLD + (180,),
+        width=2,
+    )
+    if logo:
+        thumb = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
+        img.paste(thumb, (logo_x, logo_y), thumb)
+
+    # Brand typography
+    f_brand = get_system_font(22, bold=True)
+    f_sub = get_system_font(15, bold=False)
+    draw.text((logo_x + logo_size + 16, logo_y + 4), "Academic Wizard", fill=CHARCOAL, font=f_brand)
+    draw.text((logo_x + logo_size + 16, logo_y + 28), "Your Academic Mentor", fill=MUTED, font=f_sub)
+
+    # Category pill
+    clean_cat = category.replace("✦", "").replace("★", "").replace("🎓", "").replace("⚡", "").strip()
+    f_cat = get_system_font(14, bold=True)
+    cat_bbox = draw.textbbox((0, 0), clean_cat, font=f_cat)
+    cat_w = cat_bbox[2] - cat_bbox[0]
+    cat_x = w - cat_w - 90
+    cat_y = 36
+    draw.rounded_rectangle([cat_x, cat_y, w - 60, cat_y + 32], radius=16, fill=GOLD_LIGHT + (255,), outline=GOLD + (120,), width=1)
+    draw.text((cat_x + 14, cat_y + 7), clean_cat, fill=GOLD, font=f_cat)
+
+    if slide_num and total_slides:
+        f_cnt = get_system_font(13, bold=False)
+        draw.text((w - 85, 78), f"{slide_num}/{total_slides}", fill=MUTED, font=f_cnt)
+
+
+def stamp_footer(img: Image.Image, draw: ImageDraw.Draw, cta_type: str = "swipe"):
+    """Render modern minimal footer: subtle separator, domain, WhatsApp number, and contextual button."""
+    w, h = img.size
+    footer_y = h - 95
+
+    # Subtle separator line
+    draw.line([(60, footer_y), (w - 60, footer_y)], fill=(*MUTED[:3], 60), width=1)
+
+    # Brand domain & support
+    f_dom = get_system_font(18, bold=True)
+    f_wa = get_system_font(14, bold=False)
+    draw.text((60, footer_y + 18), "academicwizard.online", fill=CHARCOAL, font=f_dom)
+    draw.text((60, footer_y + 46), f"WhatsApp: {WHATSAPP_DISPLAY}", fill=MUTED, font=f_wa)
+
+    # Contextual button
+    if cta_type == "swipe":
+        f_btn = get_system_font(16, bold=True)
+        t = "Swipe for the fix  →"
+        tb = draw.textbbox((0, 0), t, font=f_btn)
+        bw = tb[2] - tb[0]
+        bx = w - bw - 80
+        draw.rounded_rectangle([bx, footer_y + 16, w - 60, footer_y + 54], radius=18, fill=CHARCOAL + (255,))
+        draw.text((bx + 16, footer_y + 23), t, fill=BG_WHITE, font=f_btn)
+    elif cta_type == "save":
+        f_btn = get_system_font(16, bold=True)
+        t = "Save this for later"
+        tb = draw.textbbox((0, 0), t, font=f_btn)
+        bw = tb[2] - tb[0]
+        bx = w - bw - 80
+        draw.rounded_rectangle([bx, footer_y + 16, w - 60, footer_y + 54], radius=18, fill=EMERALD + (255,))
+        draw.text((bx + 18, footer_y + 23), t, fill=BG_WHITE, font=f_btn)
+    elif cta_type == "whatsapp":
+        f_btn = get_system_font(15, bold=True)
+        t = "WhatsApp Expert Help"
+        tb = draw.textbbox((0, 0), t, font=f_btn)
+        bw = tb[2] - tb[0]
+        bx = w - bw - 80
+        draw.rounded_rectangle([bx, footer_y + 16, w - 60, footer_y + 54], radius=18, fill=WA_GREEN + (255,))
+        draw.text((bx + 16, footer_y + 24), t, fill=BG_WHITE, font=f_btn)
+
+
 # ==============================================================================
-# Slide 1: Cover / Hook Card
+# Slide 1: Modern Minimal Hook & Feedback Cover
 # ==============================================================================
 def render_slide_1_cover(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Generate Slide 1: High-impact editorial cover with hook problem card."""
-    image, draw = create_base_canvas(1, 4, recipe["badge"])
-    gold = (212, 175, 55, 255)
+    """Generate Slide 1: High-impact hook with supervisor feedback card & stats bar."""
+    W, H = 1080, 1080
+    img = Image.new("RGBA", (W, H), BG_LIGHT + (255,))
+    draw = ImageDraw.Draw(img)
 
-    # 1. Main Headline
-    headline = recipe["hook_headline"]
-    font_head = get_system_font(44, bold=True)
-    head_lines = wrap_text(draw, headline, font_head, 950)
+    category = recipe.get("badge", "Study Hack")
+    stamp_header(img, draw, slide_num=1, total_slides=4, category=category)
 
-    y_head = 140
-    for line in head_lines[:2]:
-        tb = draw.textbbox((0, 0), line, font=font_head)
-        lx = (1080 - (tb[2] - tb[0])) // 2
-        draw.text((lx + 2, y_head + 2), line, fill=(0, 0, 0, 180), font=font_head)
-        draw.text((lx, y_head), line, fill=(255, 255, 255, 255), font=font_head)
-        y_head += 56
+    # Big bold hook headline
+    headline = recipe.get("hook_headline", "Supervisor Wrote 'Lacks Critical Depth'?")
+    f_hook = get_system_font(46, bold=True)
+    f_sub = get_system_font(23, bold=False)
 
-    # 2. Problem/Hook Container Box
-    box_x1, box_y1 = 65, y_head + 30
-    box_x2, box_y2 = 1080 - 65, 800
-    draw.rounded_rectangle([box_x1, box_y1, box_x2, box_y2], radius=20, fill=(15, 25, 55, 235), outline=(60, 90, 150, 200), width=2)
-    # Gold vertical accent ribbon
-    draw.line([(box_x1 + 7, box_y1 + 12), (box_x1 + 7, box_y2 - 12)], fill=gold, width=4)
+    head_lines = wrap_text(draw, headline, f_hook, W - 140)
+    y_h = 135
+    for idx, hl in enumerate(head_lines[:2]):
+        color = CORAL if idx == len(head_lines[:2]) - 1 else CHARCOAL
+        draw.text((60, y_h), hl, fill=color, font=f_hook)
+        y_h += 56
 
-    # Subtitle / Pain Point
-    font_sub = get_system_font(26, bold=False)
-    sub_lines = wrap_text(draw, recipe["hook_sub"], font_sub, box_x2 - box_x1 - 80)
-    y_sub = box_y1 + 40
-    for s_line in sub_lines[:3]:
-        draw.text((box_x1 + 40, y_sub), s_line, fill=(245, 230, 170, 255), font=font_sub)
-        y_sub += 36
-
-    # Divider line inside box
-    draw.line([(box_x1 + 35, y_sub + 15), (box_x2 - 35, y_sub + 15)], fill=(50, 75, 120, 150), width=1)
-    y_sub += 35
-
-    # Bullet questions / Hook points
-    font_b = get_system_font(25, bold=False)
-    for b_item in recipe.get("hook_bullets", [])[:2]:
-        # Vector Diamond
-        d_cx = box_x1 + 50
-        d_cy = y_sub + 14
-        draw.polygon([(d_cx, d_cy - 6), (d_cx + 6, d_cy), (d_cx, d_cy + 6), (d_cx - 6, d_cy)], fill=gold)
-
-        b_lines = wrap_text(draw, b_item, font_b, box_x2 - box_x1 - 100)
-        draw.text((box_x1 + 70, y_sub), b_lines[0], fill=(230, 238, 250, 255), font=font_b)
+    # Subtext
+    sub = recipe.get("hook_sub", "Here's why — and the 3-sentence formula to fix it before resubmission.")
+    sub_lines = wrap_text(draw, sub, f_sub, W - 140)
+    y_sub = y_h + 15
+    for sl in sub_lines[:2]:
+        draw.text((60, y_sub), sl, fill=SLATE, font=f_sub)
         y_sub += 34
-        for sub_l in b_lines[1:2]:
-            draw.text((box_x1 + 70, y_sub), sub_l, fill=(230, 238, 250, 255), font=font_b)
-            y_sub += 34
-        y_sub += 15
 
-    # Big Glowing Swipe Button
-    btn_x1, btn_y1 = (1080 - 680) // 2, 830
-    btn_x2, btn_y2 = btn_x1 + 680, btn_y1 + 75
-    draw.rounded_rectangle([btn_x1, btn_y1, btn_x2, btn_y2], radius=20, fill=(20, 40, 85, 240), outline=gold, width=2)
-    font_cta = get_system_font(24, bold=True)
-    btn_text = "SWIPE TO UNLOCK THE 1ST CLASS FORMULA  >>"
-    tb_btn = draw.textbbox((0, 0), btn_text, font=font_cta)
-    btn_w = tb_btn[2] - tb_btn[0]
-    draw.text((btn_x1 + (680 - btn_w) // 2, btn_y1 + 22), btn_text, fill=(255, 235, 150, 255), font=font_cta)
+    # Simulated supervisor feedback card
+    card_y1 = max(y_sub + 25, 370)
+    card_y2 = card_y1 + 310
+    draw = draw_rounded_shadow_card(img, draw, 60, card_y1, W - 60, card_y2, radius=20, bg=BG_WHITE, border_color=CORAL, border_width=2)
+    draw = ImageDraw.Draw(img)
 
-    stamp_bottom_bar(image, draw, 1, 4)
-    image.convert("RGB").save(output_path, "PNG", quality=95)
+    f_lbl = get_system_font(14, bold=True)
+    draw.rounded_rectangle([85, card_y1 + 18, 260, card_y1 + 46], radius=10, fill=CORAL_LIGHT + (255,))
+    draw.text((100, card_y1 + 23), "Supervisor Feedback", fill=CORAL, font=f_lbl)
+
+    f_fb = get_system_font(20, bold=False)
+    fb_text = recipe.get("comparison", {}).get("trap_text") or (
+        "\"This section reads as a descriptive summary. You've listed what authors say, "
+        "without evaluating their methodology. Where is YOUR critical voice?\""
+    )
+    fb_lines = wrap_text(draw, fb_text, f_fb, W - 180)
+    for i, l in enumerate(fb_lines[:4]):
+        draw.text((85, card_y1 + 68 + i * 32), l, fill=SLATE, font=f_fb)
+
+    # Red underline annotation & tip
+    f_annot = get_system_font(16, bold=True)
+    draw.line([(85, card_y1 + 215), (W - 85, card_y1 + 215)], fill=CORAL + (180,), width=2)
+    draw.text((85, card_y1 + 230), "This is the #1 reason students get capped at 54%.", fill=CORAL, font=f_annot)
+    draw.text((85, card_y1 + 260), "Swipe right — I'll show you exactly how to fix it.", fill=EMERALD, font=f_annot)
+
+    # High-contrast stats bar
+    stat_y1 = card_y2 + 25
+    stat_y2 = stat_y1 + 130
+    draw = draw_rounded_shadow_card(img, draw, 60, stat_y1, W - 60, stat_y2, radius=20, bg=BRAND_NAVY)
+    draw = ImageDraw.Draw(img)
+
+    stats = [("54%", "Without this fix", CORAL), ("78%+", "With this fix", EMERALD), ("3", "Sentences needed", GOLD)]
+    col_w = (W - 120) // 3
+    f_num = get_system_font(40, bold=True)
+    f_l = get_system_font(14, bold=False)
+    for idx, (num, lbl, clr) in enumerate(stats):
+        cx = 60 + col_w * idx + col_w // 2
+        nb = draw.textbbox((0, 0), num, font=f_num)
+        nw = nb[2] - nb[0]
+        draw.text((cx - nw // 2, stat_y1 + 18), num, fill=clr + (255,), font=f_num)
+        lb = draw.textbbox((0, 0), lbl, font=f_l)
+        lw = lb[2] - lb[0]
+        draw.text((cx - lw // 2, stat_y1 + 75), lbl, fill=(200, 210, 225, 255), font=f_l)
+        if idx > 0:
+            x_div = 60 + col_w * idx
+            draw.line([(x_div, stat_y1 + 25), (x_div, stat_y1 + 105)], fill=(50, 65, 90, 200), width=1)
+
+    stamp_footer(img, draw, cta_type="swipe")
+    img.convert("RGB").save(output_path, "PNG", quality=95)
     return output_path
 
 
 # ==============================================================================
-# Slide 2: The Core Comparison (❌ 2:2 Trap vs. ✅ 1st Class Blueprint)
+# Slide 2: The Mistake (Word Doc Mockup + Annotations)
 # ==============================================================================
 def render_slide_2_comparison(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Generate Slide 2: Side-by-side / stacked visual contrast cards."""
-    image, draw = create_base_canvas(2, 4, recipe["badge"])
-    cmp_data = recipe["comparison"]
+    """Generate Slide 2: Word doc simulation showing the common mistake and why it fails."""
+    W, H = 1080, 1080
+    img = Image.new("RGBA", (W, H), BG_LIGHT + (255,))
+    draw = ImageDraw.Draw(img)
 
-    # Headline
-    font_head = get_system_font(40, bold=True)
-    head_text = "The Core Difference in Marking Criteria"
-    tb = draw.textbbox((0, 0), head_text, font=font_head)
-    lx = (1080 - (tb[2] - tb[0])) // 2
-    draw.text((lx, 140), head_text, fill=(255, 255, 255, 255), font=font_head)
+    category = recipe.get("badge", "Study Hack")
+    stamp_header(img, draw, slide_num=2, total_slides=4, category=category)
 
-    # Sub-caption
-    font_sub = get_system_font(24, bold=False)
-    sub_text = "Why uncritical descriptive writing caps at 58% while critical evaluation scores 70%+"
-    tb_s = draw.textbbox((0, 0), sub_text, font=font_sub)
-    lx_s = (1080 - (tb_s[2] - tb_s[0])) // 2
-    draw.text((lx_s, 195), sub_text, fill=(200, 215, 240, 255), font=font_sub)
+    # Section title
+    f_sec = get_system_font(15, bold=True)
+    draw.rounded_rectangle([60, 115, 230, 145], radius=12, fill=CORAL_LIGHT + (255,))
+    draw.text((76, 120), "THE MISTAKE", fill=CORAL, font=f_sec)
 
-    # --- CARD 1: THE COMMON 2:2 TRAP (Crimson Tint) ---
-    c1_x1, c1_y1 = 65, 260
-    c1_x2, c1_y2 = 1080 - 65, 530
-    draw.rounded_rectangle([c1_x1, c1_y1, c1_x2, c1_y2], radius=16, fill=(45, 20, 28, 235), outline=(220, 53, 69, 200), width=2)
-    # Header banner
-    draw.rounded_rectangle([c1_x1, c1_y1, c1_x2, c1_y1 + 60], radius=16, fill=(80, 25, 38, 255))
-    draw_vector_cross(draw, c1_x1 + 40, c1_y1 + 30, size=8, color=(255, 120, 130, 255), width=3)
-    font_card_head = get_system_font(24, bold=True)
-    draw.text((c1_x1 + 60, c1_y1 + 16), cmp_data["trap_title"], fill=(255, 180, 190, 255), font=font_card_head)
+    f_title = get_system_font(36, bold=True)
+    draw.text((60, 160), "What 90% of students write", fill=CHARCOAL, font=f_title)
+    f_sub = get_system_font(21, bold=False)
+    draw.text((60, 208), "(and why markers cap it at 54%)", fill=SLATE, font=f_sub)
 
-    font_body = get_system_font(25, bold=False)
-    trap_lines = wrap_text(draw, cmp_data["trap_text"], font_body, c1_x2 - c1_x1 - 60)
-    y_body = c1_y1 + 80
-    for line in trap_lines[:4]:
-        draw.text((c1_x1 + 30, y_body), line, fill=(245, 225, 230, 255), font=font_body)
-        y_body += 38
+    # Word doc simulation card
+    doc_y1, doc_y2 = 255, 610
+    draw = draw_rounded_shadow_card(img, draw, 60, doc_y1, W - 60, doc_y2, radius=20, bg=BG_WHITE, border_color=(230, 230, 230), border_width=1)
+    draw = ImageDraw.Draw(img)
 
-    # --- CARD 2: THE 1ST CLASS BLUEPRINT (Emerald / Gold Tint) ---
-    c2_x1, c2_y1 = 65, 570
-    c2_x2, c2_y2 = 1080 - 65, 870
-    draw.rounded_rectangle([c2_x1, c2_y1, c2_x2, c2_y2], radius=16, fill=(15, 42, 38, 235), outline=(42, 157, 143, 220), width=2)
-    # Header banner
-    draw.rounded_rectangle([c2_x1, c2_y1, c2_x2, c2_y1 + 60], radius=16, fill=(20, 65, 58, 255))
-    draw_vector_checkmark(draw, c2_x1 + 40, c2_y1 + 28, size=8, color=(140, 255, 200, 255), width=3)
-    draw.text((c2_x1 + 60, c2_y1 + 16), cmp_data["fix_title"], fill=(180, 250, 220, 255), font=font_card_head)
+    # Mac window titlebar
+    draw.rounded_rectangle([60, doc_y1, W - 60, doc_y1 + 45], radius=20, fill=(245, 245, 248, 255))
+    draw.rectangle([60, doc_y1 + 25, W - 60, doc_y1 + 45], fill=(245, 245, 248, 255))
+    draw.ellipse([82, doc_y1 + 16, 96, doc_y1 + 30], fill=CORAL + (255,))
+    draw.ellipse([106, doc_y1 + 16, 120, doc_y1 + 30], fill=AMBER + (255,))
+    draw.ellipse([130, doc_y1 + 16, 144, doc_y1 + 30], fill=EMERALD + (255,))
+    f_doc = get_system_font(13, bold=False)
+    draw.text((156, doc_y1 + 16), "Coursework_Draft_Chapter.docx", fill=MUTED, font=f_doc)
 
-    fix_lines = wrap_text(draw, cmp_data["fix_text"], font_body, c2_x2 - c2_x1 - 60)
-    y_body2 = c2_y1 + 80
-    for line in fix_lines[:5]:
-        draw.text((c2_x1 + 30, y_body2), line, fill=(225, 248, 240, 255), font=font_body)
-        y_body2 += 38
+    # Bad paragraph
+    f_body = get_system_font(19, bold=False)
+    trap_text = recipe.get("comparison", {}).get("trap_text", "")
+    bad_lines = wrap_text(draw, trap_text, f_body, W - 220)
+    for i, line in enumerate(bad_lines[:5]):
+        draw.text((85, doc_y1 + 65 + i * 32), line, fill=SLATE, font=f_body)
 
-    stamp_bottom_bar(image, draw, 2, 4)
-    image.convert("RGB").save(output_path, "PNG", quality=95)
+    # Annotation box inside card
+    draw.rounded_rectangle([W - 380, doc_y2 - 110, W - 80, doc_y2 - 20], radius=12, fill=CORAL_LIGHT + (255,), outline=CORAL + (100,), width=1)
+    f_ann = get_system_font(14, bold=True)
+    draw.text((W - 365, doc_y2 - 95), "• No evaluation.", fill=CORAL, font=f_ann)
+    draw.text((W - 365, doc_y2 - 70), "• No method critique.", fill=CORAL, font=f_ann)
+    draw.text((W - 365, doc_y2 - 45), "• Just passive summary.", fill=CORAL, font=f_ann)
+
+    # Bottom verdict card
+    verd_y1, verd_y2 = 645, 875
+    draw = draw_rounded_shadow_card(img, draw, 60, verd_y1, W - 60, verd_y2, radius=20, bg=CORAL_LIGHT)
+    draw = ImageDraw.Draw(img)
+
+    f_vt = get_system_font(22, bold=True)
+    f_vb = get_system_font(18, bold=False)
+    draw.text((85, verd_y1 + 22), "Why this gets capped at 54%", fill=CORAL, font=f_vt)
+
+    mistake_bullets = [
+        "Lists what authors say — doesn't evaluate HOW they found it",
+        "No comparison of sample sizes, methods, or regional scope",
+        "Jumps to a conclusion without justified academic analysis",
+    ]
+    for i, p in enumerate(mistake_bullets):
+        draw.ellipse([85, verd_y1 + 65 + i * 42, 95, verd_y1 + 75 + i * 42], fill=CORAL + (255,))
+        draw.text((108, verd_y1 + 60 + i * 42), p, fill=SLATE, font=f_vb)
+
+    stamp_footer(img, draw, cta_type="swipe")
+    img.convert("RGB").save(output_path, "PNG", quality=95)
     return output_path
 
 
 # ==============================================================================
-# Slide 3: The Exact Step-by-Step Formula & Real Academic Example
+# Slide 3: The Fix (Numbered 1-2-3 Step Cards)
 # ==============================================================================
 def render_slide_3_formula(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Generate Slide 3: Sequential step cards (01, 02, 03) and academic exemplar box."""
-    image, draw = create_base_canvas(3, 4, recipe["badge"])
-    gold = (212, 175, 55, 255)
-    formula_data = recipe["formula"]
+    """Generate Slide 3: Numbered step cards (Compare -> Critique -> Conclude) + result."""
+    W, H = 1080, 1080
+    img = Image.new("RGBA", (W, H), BG_LIGHT + (255,))
+    draw = ImageDraw.Draw(img)
 
-    # Headline
-    font_head = get_system_font(40, bold=True)
-    head_text = formula_data["title"]
-    head_lines = wrap_text(draw, head_text, font_head, 950)
-    y_head = 140
-    for h_l in head_lines[:1]:
-        tb = draw.textbbox((0, 0), h_l, font=font_head)
-        lx = (1080 - (tb[2] - tb[0])) // 2
-        draw.text((lx, y_head), h_l, fill=(255, 255, 255, 255), font=font_head)
-        y_head += 50
+    category = recipe.get("badge", "Study Hack")
+    stamp_header(img, draw, slide_num=3, total_slides=4, category=category)
+
+    # Section title
+    f_sec = get_system_font(15, bold=True)
+    draw.rounded_rectangle([60, 115, 200, 145], radius=12, fill=EMERALD_LIGHT + (255,))
+    draw.text((76, 120), "THE FIX", fill=EMERALD, font=f_sec)
+
+    f_title = get_system_font(36, bold=True)
+    draw.text((60, 160), "The 3-sentence formula", fill=CHARCOAL, font=f_title)
+    f_sub = get_system_font(21, bold=False)
+    draw.text((60, 208), "that gets you 78%+ (every single time)", fill=SLATE, font=f_sub)
 
     # 3 Sequential Step Cards
-    y_step = 215
-    font_num = get_system_font(26, bold=True)
-    font_lbl = get_system_font(26, bold=True)
-    font_desc = get_system_font(24, bold=False)
+    steps_data = recipe.get("formula", {}).get("steps", [])
+    if len(steps_data) < 3:
+        steps_data = [
+            {"num": "1", "label": "Compare", "desc": "Start by acknowledging what author A posits."},
+            {"num": "2", "label": "Critique", "desc": "Expose sample size, methodology, or jurisdiction limits."},
+            {"num": "3", "label": "Conclude", "desc": "Deliver your justified verdict on the evidence."},
+        ]
 
-    for step in formula_data["steps"][:3]:
-        s_x1, s_y1 = 65, y_step
-        s_x2, s_y2 = 1080 - 65, y_step + 125
-        draw.rounded_rectangle([s_x1, s_y1, s_x2, s_y2], radius=15, fill=(15, 26, 56, 230), outline=(55, 80, 140, 200), width=2)
+    step_colors = [GOLD, CORAL, EMERALD]
+    y_start = 265
+    card_h = 160
 
-        # Number Badge (Gold circle/pill)
-        draw.rounded_rectangle([s_x1 + 20, s_y1 + 25, s_x1 + 85, s_y1 + 100], radius=12, fill=(212, 175, 55, 240))
-        draw.text((s_x1 + 32, s_y1 + 45), step["num"], fill=(10, 15, 30, 255), font=font_num)
+    f_num = get_system_font(24, bold=True)
+    f_lbl = get_system_font(24, bold=True)
+    f_desc = get_system_font(18, bold=False)
+    f_sub_step = get_system_font(15, bold=False)
 
-        # Label
-        draw.text((s_x1 + 110, s_y1 + 25), step["label"], fill=(245, 230, 170, 255), font=font_lbl)
+    for idx, step in enumerate(steps_data[:3]):
+        cy = y_start + idx * (card_h + 16)
+        color = step_colors[idx]
+        draw = draw_rounded_shadow_card(img, draw, 60, cy, W - 60, cy + card_h, radius=18, bg=BG_WHITE, border_color=color, border_width=2)
+        draw = ImageDraw.Draw(img)
 
-        # Description wrapped
-        desc_lines = wrap_text(draw, step["desc"], font_desc, s_x2 - s_x1 - 140)
-        draw.text((s_x1 + 110, s_y1 + 65), desc_lines[0], fill=(230, 238, 250, 255), font=font_desc)
-        if len(desc_lines) > 1:
-            draw.text((s_x1 + 110, s_y1 + 95), desc_lines[1], fill=(230, 238, 250, 255), font=font_desc)
+        # Number circle
+        draw.ellipse([82, cy + 18, 122, cy + 58], fill=color + (255,))
+        nb = draw.textbbox((0, 0), str(step.get("num", idx + 1)), font=f_num)
+        nw = nb[2] - nb[0]
+        draw.text((102 - nw // 2, cy + 24), str(step.get("num", idx + 1)), fill=BG_WHITE, font=f_num)
 
-        y_step += 140
+        # Step label
+        draw.text((140, cy + 22), step.get("label", ""), fill=CHARCOAL, font=f_lbl)
 
-    # Exemplar Quote Box
-    ex_x1, ex_y1 = 65, 680
-    ex_x2, ex_y2 = 1080 - 65, 875
-    draw.rounded_rectangle([ex_x1, ex_y1, ex_x2, ex_y2], radius=15, fill=(25, 35, 65, 240), outline=gold, width=2)
+        # Step description wrapped
+        d_lines = wrap_text(draw, step.get("desc", ""), f_desc, W - 220)
+        for i, dl in enumerate(d_lines[:2]):
+            draw.text((140, cy + 62 + i * 26), dl, fill=SLATE, font=f_desc)
 
-    # Exemplar header with vector gold diamonds
-    font_ex_head = get_system_font(21, bold=True)
-    ex_lbl = "ACADEMIC EXEMPLAR APPLIED"
-    tb_ex = draw.textbbox((0, 0), ex_lbl, font=font_ex_head)
-    lbl_w = tb_ex[2] - tb_ex[0]
-    mid_ex_x = (1080 - lbl_w) // 2
-    draw.polygon([(mid_ex_x - 20, ex_y1 + 28 - 5), (mid_ex_x - 15, ex_y1 + 28), (mid_ex_x - 20, ex_y1 + 28 + 5), (mid_ex_x - 25, ex_y1 + 28)], fill=gold)
-    draw.text((mid_ex_x, ex_y1 + 18), ex_lbl, fill=(212, 175, 55, 255), font=font_ex_head)
-    draw.polygon([(mid_ex_x + lbl_w + 20, ex_y1 + 28 - 5), (mid_ex_x + lbl_w + 25, ex_y1 + 28), (mid_ex_x + lbl_w + 20, ex_y1 + 28 + 5), (mid_ex_x + lbl_w + 15, ex_y1 + 28)], fill=gold)
+        # Extra prompt hint
+        hint = "Formula applied directly to your university rubric"
+        draw.text((140, cy + card_h - 32), hint, fill=MUTED, font=f_sub_step)
 
-    font_ex = get_system_font(24, bold=False)
-    ex_lines = wrap_text(draw, formula_data["exemplar"], font_ex, ex_x2 - ex_x1 - 60)
-    y_ex = ex_y1 + 60
-    for ex_l in ex_lines[:4]:
-        draw.text((ex_x1 + 30, y_ex), ex_l, fill=(245, 248, 255, 255), font=font_ex)
-        y_ex += 35
+    # Result banner
+    res_y1 = y_start + 3 * (card_h + 16) + 5
+    draw = draw_rounded_shadow_card(img, draw, 60, res_y1, W - 60, res_y1 + 75, radius=16, bg=EMERALD_LIGHT)
+    draw = ImageDraw.Draw(img)
+    f_res = get_system_font(20, bold=True)
+    draw.text((85, res_y1 + 25), "Result: 78% — 82% (High First Class / Distinction)", fill=EMERALD, font=f_res)
 
-    stamp_bottom_bar(image, draw, 3, 4)
-    image.convert("RGB").save(output_path, "PNG", quality=95)
+    stamp_footer(img, draw, cta_type="save")
+    img.convert("RGB").save(output_path, "PNG", quality=95)
     return output_path
 
 
 # ==============================================================================
-# Slide 4: Rubric Pre-Submission Checklist & Dual CTA
+# Slide 4: The Cheat Sheet (Save-Worthy Checklist + WhatsApp CTA)
 # ==============================================================================
 def render_slide_4_checklist_cta(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Generate Slide 4: 4-item rubric checklist and dual Tool/WhatsApp CTA."""
-    image, draw = create_base_canvas(4, 4, recipe["badge"])
-    gold = (212, 175, 55, 255)
+    """Generate Slide 4: 8-item pre-submission checklist & WhatsApp triage."""
+    W, H = 1080, 1080
+    img = Image.new("RGBA", (W, H), BG_LIGHT + (255,))
+    draw = ImageDraw.Draw(img)
 
-    # Headline
-    font_head = get_system_font(40, bold=True)
-    head_text = "Pre-Submission Rubric Checklist"
-    tb = draw.textbbox((0, 0), head_text, font=font_head)
-    lx = (1080 - (tb[2] - tb[0])) // 2
-    draw.text((lx, 140), head_text, fill=(255, 255, 255, 255), font=font_head)
+    category = "Save This"
+    stamp_header(img, draw, slide_num=4, total_slides=4, category=category)
 
-    # Checklist Container Box
-    chk_x1, chk_y1 = 65, 210
-    chk_x2, chk_y2 = 1080 - 65, 620
-    draw.rounded_rectangle([chk_x1, chk_y1, chk_x2, chk_y2], radius=18, fill=(15, 26, 56, 235), outline=(55, 80, 140, 200), width=2)
-    draw.line([(chk_x1 + 7, chk_y1 + 12), (chk_x1 + 7, chk_y2 - 12)], fill=gold, width=4)
+    # Section title
+    f_sec = get_system_font(15, bold=True)
+    draw.rounded_rectangle([60, 115, 215, 145], radius=12, fill=GOLD_LIGHT + (255,))
+    draw.text((76, 120), "CHEAT SHEET", fill=GOLD, font=f_sec)
 
-    font_chk = get_system_font(24, bold=False)
-    y_chk = chk_y1 + 30
+    f_title = get_system_font(34, bold=True)
+    draw.text((60, 160), "Critical Writing Pre-Submit Checklist", fill=CHARCOAL, font=f_title)
+    f_sub = get_system_font(19, bold=False)
+    draw.text((60, 206), "Screenshot this before your next deadline", fill=MUTED, font=f_sub)
 
-    for item in recipe.get("checklist", [])[:4]:
-        # Clean green checkbox with vector white checkmark
-        box_cx = chk_x1 + 52
-        box_cy = y_chk + 18
-        draw.rounded_rectangle([chk_x1 + 35, y_chk + 2, chk_x1 + 70, y_chk + 37], radius=8, fill=(37, 211, 102, 230))
-        draw_vector_checkmark(draw, box_cx, box_cy, size=6, color=(10, 25, 15, 255), width=3)
+    # Checklist container card
+    chk_y1, chk_y2 = 245, 815
+    draw = draw_rounded_shadow_card(img, draw, 60, chk_y1, W - 60, chk_y2, radius=20, bg=BG_WHITE)
+    draw = ImageDraw.Draw(img)
 
-        lines = wrap_text(draw, item, font_chk, chk_x2 - chk_x1 - 120)
-        draw.text((chk_x1 + 85, y_chk + 5), lines[0], fill=(240, 245, 255, 255), font=font_chk)
-        y_chk += 36
-        for sub_l in lines[1:2]:
-            draw.text((chk_x1 + 85, y_chk + 5), sub_l, fill=(240, 245, 255, 255), font=font_chk)
-            y_chk += 36
-        y_chk += 22
+    checklist_items = recipe.get("checklist", [])
+    if len(checklist_items) < 8:
+        checklist_items = [
+            "Every paragraph evaluates, not just describes",
+            "You've critiqued at least one author's methodology",
+            "Direct quotes include exact page pinpoints (p. 45)",
+            "70%+ of your sources are published in the last 5 years",
+            "Your conclusion answers the prompt with zero new citations",
+            "You've used \"however\", \"crucially\", \"whilst\" — not \"also\"",
+            "In-text citations match your reference bibliography 100%",
+            "You've scanned the draft for AI and similarity flags",
+        ]
 
-    # --- DUAL CALL TO ACTION CONTAINERS ---
-    # Box A: Free Tools
-    cta1_x1, cta1_y1 = 65, 650
-    cta1_x2, cta1_y2 = 1080 - 65, 755
-    draw.rounded_rectangle([cta1_x1, cta1_y1, cta1_x2, cta1_y2], radius=15, fill=(20, 38, 75, 240), outline=(70, 105, 170, 200), width=2)
-    font_cta_lbl = get_system_font(21, bold=True)
-    draw.text((cta1_x1 + 25, cta1_y1 + 18), "[100% FREE TOOLS]  CITATION GENERATORS & ESSAY CALCULATORS", fill=(212, 175, 55, 255), font=font_cta_lbl)
-    font_cta_url = get_system_font(24, bold=True)
-    target_url = recipe.get('tool_url') or recipe.get('service_url') or f"{SITE_URL}/tools/"
-    draw.text((cta1_x1 + 25, cta1_y1 + 55), f"Visit: {target_url}", fill=(255, 255, 255, 255), font=font_cta_url)
+    f_chk = get_system_font(18, bold=False)
+    y_step = 68
+    for i, item in enumerate(checklist_items[:8]):
+        cy = chk_y1 + 25 + i * y_step
+        box_x, box_y = 90, cy + 2
 
-    # Box B: WhatsApp Urgent Triage
-    cta2_x1, cta2_y1 = 65, 775
-    cta2_x2, cta2_y2 = 1080 - 65, 880
-    draw.rounded_rectangle([cta2_x1, cta2_y1, cta2_x2, cta2_y2], radius=15, fill=(18, 48, 38, 240), outline=(37, 211, 102, 220), width=2)
-    draw.text((cta2_x1 + 25, cta2_y1 + 18), "[URGENT DEADLINE?]  12-HOUR ASSIGNMENT RESCUE & TURNITIN SCAN", fill=(180, 250, 220, 255), font=font_cta_lbl)
-    draw.text((cta2_x1 + 25, cta2_y1 + 55), f"WhatsApp 24/7: {WHATSAPP_DISPLAY}", fill=(255, 255, 255, 255), font=font_cta_url)
+        # Emerald checkmark box
+        draw.rounded_rectangle([box_x, box_y, box_x + 26, box_y + 26], radius=6, fill=EMERALD + (255,))
+        draw.line([(box_x + 5, box_y + 13), (box_x + 10, box_y + 19), (box_x + 20, box_y + 7)], fill=BG_WHITE, width=3)
 
-    stamp_bottom_bar(image, draw, 4, 4)
-    image.convert("RGB").save(output_path, "PNG", quality=95)
+        lines = wrap_text(draw, item, f_chk, W - 210)
+        draw.text((130, cy + 3), lines[0], fill=CHARCOAL, font=f_chk)
+        if len(lines) > 1:
+            draw.text((130, cy + 24), lines[1], fill=SLATE, font=f_chk)
+
+        if i < len(checklist_items[:8]) - 1:
+            draw.line([(90, cy + 48), (W - 90, cy + 48)], fill=(*MUTED[:3], 40), width=1)
+
+    # Share nudge card
+    draw = draw_rounded_shadow_card(img, draw, 60, 835, W - 60, 880, radius=12, bg=GOLD_LIGHT)
+    draw = ImageDraw.Draw(img)
+    f_nudge = get_system_font(16, bold=True)
+    draw.text((85, 848), "Save this post  •  Share it with a friend who needs it", fill=GOLD, font=f_nudge)
+
+    stamp_footer(img, draw, cta_type="whatsapp")
+    img.convert("RGB").save(output_path, "PNG", quality=95)
     return output_path
+
+
+def ensure_rich_academic_content(recipe: Dict[str, Any]) -> Dict[str, Any]:
+    """Guarantees deep, realistic academic content on every slide with zero empty voids."""
+    r = dict(recipe)
+    topic = r.get("topic", "Academic Coursework")
+    cmp = dict(r.get("comparison", {}))
+
+    # 1. Ensure trap text is at least 2 full sentences of a realistic student draft
+    trap = cmp.get("trap_text", "").strip()
+    if len(trap) < 65:
+        cmp["trap_text"] = (
+            f"Smith (2021) asserts that key variables in {topic.lower()} are correlated. "
+            f"Jones (2022) also observes similar patterns in recent evaluations. "
+            f"Therefore, findings indicate that this intervention is generally effective."
+        )
+
+    # 2. Ensure fix text is a realistic 3-4 sentence First Class synthesis
+    fix = cmp.get("fix_text", "").strip()
+    if len(fix) < 85:
+        cmp["fix_text"] = (
+            f"Whilst Smith (2021) attributes outcomes in {topic.lower()} to broad environmental factors, "
+            f"their qualitative sample (n=18) overlooks systemic institutional constraints. "
+            f"Crucially, Jones' (2022) longitudinal cohort proves that intervention protocols directly moderate "
+            f"efficacy — demonstrating that procedural rigor, not external context, governs total outcomes."
+        )
+    r["comparison"] = cmp
+
+    # 3. Ensure checklist has 8 high-utility rubric checks
+    chk = list(r.get("checklist", []))
+    if len(chk) < 8:
+        r["checklist"] = [
+            "Every paragraph evaluates, not just describes",
+            "You've critiqued at least one author's methodology",
+            "Direct quotes include exact page pinpoints (p. 45)",
+            "70%+ of your sources are published in the last 5 years",
+            "Your conclusion answers the prompt with zero new citations",
+            "You've used \"however\", \"crucially\", \"whilst\" — not \"also\"",
+            "In-text citations match your reference bibliography 100%",
+            "You've scanned the draft for AI and similarity flags",
+        ]
+
+    # 4. Ensure formula steps have rich labels and descriptions
+    formula = dict(r.get("formula", {}))
+    steps = formula.get("steps", [])
+    if len(steps) < 3 or any(len(s.get("desc", "")) < 20 for s in steps):
+        formula["steps"] = [
+            {"num": "1", "label": "Compare", "desc": f"Acknowledge the core premise of primary authors in {topic.lower()}."},
+            {"num": "2", "label": "Critique", "desc": "Scrutinize methodology, sample cohorts, or contextual limitations."},
+            {"num": "3", "label": "Conclude", "desc": "Deliver your justified synthesis answering the marking criteria."},
+        ]
+    r["formula"] = formula
+
+    return r
 
 
 def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
-    """Generate the full 4-slide editorial infographic carousel."""
+    """Generate the full 4-slide modern minimal editorial carousel."""
+    recipe = ensure_rich_academic_content(recipe)
     date_str = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d")
     slides = []
 
@@ -1278,7 +1413,6 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
         archive_path = PUBLIC_SOCIAL_DIR / archive_filename
 
         renderer(recipe, daily_path)
-        # Duplicate to archive
         with open(daily_path, "rb") as f_in, open(archive_path, "wb") as f_out:
             f_out.write(f_in.read())
 
@@ -1288,75 +1422,243 @@ def generate_carousel_slides(recipe: Dict[str, Any], slot: str) -> List[Path]:
     return slides
 
 
-def generate_video_reel(slide_paths: List[Path], slot: str) -> Optional[Path]:
-    """Convert 4 carousel slides into an MP4 video reel with lo-fi background audio."""
+# ==============================================================================
+# True 9:16 Vertical Video Reel Engine (Neural Voiceover + Lo-Fi + FFmpeg)
+# ==============================================================================
+def render_reel_frame(recipe: Dict[str, Any], output_path: Path) -> Path:
+    """Render the high-retention 9:16 vertical video reel keyframe (1080x1920)."""
+    recipe = ensure_rich_academic_content(recipe)
+    W, H = 1080, 1920
+    img = Image.new("RGBA", (W, H), BG_WARM + (255,))
+    draw = ImageDraw.Draw(img)
+
+    # Top gold accent strip
+    draw.rectangle([0, 0, W, 5], fill=GOLD + (255,))
+
+    # Top Header safe zone
+    top_y = 80
+    logo = get_cropped_logo()
+    logo_size = 56
+    logo_x = 55
+    draw.ellipse([logo_x - 4, top_y - 4, logo_x + logo_size + 4, top_y + logo_size + 4],
+                 fill=GOLD_LIGHT + (255,), outline=GOLD + (160,), width=2)
+    if logo:
+        thumb = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
+        img.paste(thumb, (logo_x, top_y), thumb)
+
+    f_brand = get_system_font(24, bold=True)
+    f_sub_brand = get_system_font(16, bold=False)
+    draw.text((logo_x + logo_size + 16, top_y + 4), "Academic Wizard", fill=CHARCOAL, font=f_brand)
+    draw.text((logo_x + logo_size + 16, top_y + 30), "Your Academic Mentor", fill=MUTED, font=f_sub_brand)
+
+    # Right: Study Tip pill
+    f_pill = get_system_font(14, bold=True)
+    draw.rounded_rectangle([W - 185, top_y + 10, W - 55, top_y + 42], radius=16, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (100,), width=1)
+    draw.text((W - 168, top_y + 16), "Study Tip", fill=EMERALD, font=f_pill)
+
+    # 3-Second Pattern Interrupt Hook Card
+    hook_y = 180
+    draw = draw_rounded_shadow_card(img, draw, 45, hook_y, W - 45, hook_y + 200, radius=24, bg=CHARCOAL, shadow_offset=8, shadow_blur=16)
+    draw = ImageDraw.Draw(img)
+
+    f_pov = get_system_font(18, bold=True)
+    f_hook_big = get_system_font(36, bold=True)
+    draw.text((80, hook_y + 25), "POV: It's 2 AM. Your supervisor's email says:", fill=MUTED, font=f_pov)
+
+    hook_quote = f"\"{recipe.get('hook_headline', 'This reads like a book report. Where is your critical voice?')}\""
+    hook_lines = wrap_text(draw, hook_quote, f_hook_big, W - 160)
+    for i, line in enumerate(hook_lines[:2]):
+        draw.text((80, hook_y + 68 + i * 48), line, fill=BG_WHITE, font=f_hook_big)
+
+    # Word Doc Simulation Card
+    doc_y = 420
+    doc_h = 720
+    draw = draw_rounded_shadow_card(img, draw, 45, doc_y, W - 45, doc_y + doc_h, radius=20, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
+    draw = ImageDraw.Draw(img)
+
+    # Mac window bar
+    draw.rounded_rectangle([45, doc_y, W - 45, doc_y + 48], radius=20, fill=(245, 245, 248, 255))
+    draw.rectangle([45, doc_y + 28, W - 45, doc_y + 48], fill=(245, 245, 248, 255))
+    draw.ellipse([68, doc_y + 14, 82, doc_y + 28], fill=CORAL + (255,))
+    draw.ellipse([92, doc_y + 14, 106, doc_y + 28], fill=AMBER + (255,))
+    draw.ellipse([116, doc_y + 14, 130, doc_y + 28], fill=EMERALD + (255,))
+    f_doc = get_system_font(13, bold=False)
+    draw.text((142, doc_y + 14), "Coursework_Draft_Chapter.docx", fill=MUTED, font=f_doc)
+
+    # Section A: What you wrote (54%) with strikethrough
+    f_sect = get_system_font(16, bold=True)
+    f_body = get_system_font(18, bold=False)
+    draw.rounded_rectangle([70, doc_y + 65, 310, doc_y + 92], radius=10, fill=CORAL_LIGHT + (255,))
+    draw.text((85, doc_y + 69), "What you wrote (54%)", fill=CORAL, font=f_sect)
+
+    trap_text = recipe.get("comparison", {}).get("trap_text", "")
+    bad_lines = wrap_text(draw, trap_text, f_body, W - 200)
+    for i, line in enumerate(bad_lines[:4]):
+        ly = doc_y + 110 + i * 32
+        draw.text((70, ly), line, fill=(*SLATE, 160), font=f_body)
+        draw.line([(70, ly + 14), (min(70 + len(line) * 9, W - 80), ly + 14)], fill=CORAL + (150,), width=2)
+
+    draw.line([(70, doc_y + 260), (W - 70, doc_y + 260)], fill=(*MUTED, 60), width=1)
+
+    # Section B: The 78%+ Rewrite
+    draw.rounded_rectangle([70, doc_y + 280, 310, doc_y + 307], radius=10, fill=EMERALD_LIGHT + (255,))
+    draw.text((85, doc_y + 284), "The 78%+ rewrite", fill=EMERALD, font=f_sect)
+
+    fix_text = recipe.get("comparison", {}).get("fix_text", "")
+    good_lines = wrap_text(draw, fix_text, f_body, W - 200)
+    for i, line in enumerate(good_lines[:6]):
+        ly = doc_y + 325 + i * 32
+        draw.text((70, ly), line, fill=CHARCOAL, font=f_body)
+
+    # Golden Rule Box
+    draw.rounded_rectangle([70, doc_y + 535, W - 70, doc_y + 610], radius=14, fill=EMERALD_LIGHT + (255,), outline=EMERALD + (80,), width=1)
+    f_rule = get_system_font(17, bold=True)
+    f_rule_sub = get_system_font(16, bold=False)
+    draw.text((90, doc_y + 545), "The Golden Rule:", fill=EMERALD, font=f_rule)
+    draw.text((90, doc_y + 575), "Compare → Critique the method → State YOUR verdict.", fill=CHARCOAL, font=f_rule_sub)
+
+    # Grade jump pill
+    draw.rounded_rectangle([70, doc_y + 635, W - 70, doc_y + 700], radius=14, fill=GOLD_LIGHT + (255,))
+    f_grade = get_system_font(20, bold=True)
+    draw.text((95, doc_y + 652), "Grade jump: 54%  →  78%+ (First Class)", fill=GOLD, font=f_grade)
+
+    # Kinetic Subtitle Bar
+    sub_y = 1185
+    draw = draw_rounded_shadow_card(img, draw, 70, sub_y, W - 70, sub_y + 85, radius=16, bg=CHARCOAL, shadow_offset=4, shadow_blur=10)
+    draw = ImageDraw.Draw(img)
+
+    f_sub_spoken = get_system_font(25, bold=True)
+    draw.text((100, sub_y + 14), "Never just summarize.", fill=BG_WHITE, font=f_sub_spoken)
+    draw.text((100, sub_y + 46), "Always critique the method.", fill=AMBER + (255,), font=f_sub_spoken)
+
+    # Bottom CTA card
+    cta_y = 1310
+    draw = draw_rounded_shadow_card(img, draw, 45, cta_y, W - 45, cta_y + 220, radius=24, bg=BG_WHITE, shadow_offset=8, shadow_blur=16)
+    draw = ImageDraw.Draw(img)
+
+    f_cta_h = get_system_font(26, bold=True)
+    f_cta_s = get_system_font(18, bold=False)
+    draw.text((80, cta_y + 28), "Stuck on your coursework or dissertation?", fill=CHARCOAL, font=f_cta_h)
+    draw.text((80, cta_y + 68), "Get 1-on-1 expert help from real postgraduate mentors.", fill=SLATE, font=f_cta_s)
+    draw.text((80, cta_y + 96), "Nursing • Law • MBA • CS • Engineering • Psychology", fill=MUTED, font=f_cta_s)
+
+    # WhatsApp green button
+    draw.rounded_rectangle([80, cta_y + 140, W - 80, cta_y + 195], radius=16, fill=WA_GREEN + (255,))
+    f_btn_wa = get_system_font(22, bold=True)
+    draw.text((120, cta_y + 152), f"WhatsApp: {WHATSAPP_DISPLAY}", fill=BG_WHITE, font=f_btn_wa)
+
+    # Domain watermark
+    f_wm = get_system_font(16, bold=False)
+    wm_bbox = draw.textbbox((0, 0), "academicwizard.online", font=f_wm)
+    wm_w = wm_bbox[2] - wm_bbox[0]
+    draw.text((W // 2 - wm_w // 2, 1580), "academicwizard.online", fill=MUTED, font=f_wm)
+
+    # Bottom gold strip
+    draw.rectangle([0, H - 5, W, H], fill=GOLD + (255,))
+
+    img.convert("RGB").save(output_path, "PNG", quality=95)
+    return output_path
+
+
+def synthesize_voiceover(script_text: str, output_audio: Path) -> bool:
+    """Generate neural British voiceover audio using edge-tts."""
     try:
-        import subprocess
-        
+        import asyncio
+        import edge_tts
+
+        voice = "en-GB-RyanNeural"
+        print(f"  🎙️ Synthesizing voiceover with {voice}...")
+
+        async def _speak():
+            comm = edge_tts.Communicate(script_text, voice)
+            await comm.save(str(output_audio))
+
+        asyncio.run(_speak())
+        if output_audio.exists() and output_audio.stat().st_size > 500:
+            print(f"  ✅ Voiceover audio generated: {output_audio.name} ({output_audio.stat().st_size // 1024} KB)")
+            return True
+    except Exception as e:
+        print(f"  ⚠️ Voiceover synthesis error: {e}")
+    return False
+
+
+def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
+    """Convert recipe into an engaging 9:16 vertical MP4 video reel with neural audio & lo-fi beat."""
+    import shutil
+    import subprocess
+
+    output_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel.mp4"
+    frame_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_frame.png"
+    audio_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_audio.mp3"
+
+    # 1. Render high-res 9:16 frame
+    render_reel_frame(recipe, frame_path)
+    print(f"  ✅ 9:16 Reel frame generated: {frame_path.name}")
+
+    # 2. Synthesize voiceover audio
+    spoken_script = (
+        f"Your supervisor wrote: {recipe.get('hook_headline', 'lacks critical depth')}? "
+        "Here is why. When you only summarize what authors said without evaluating methodology, "
+        "markers cap your grade at 54 percent. "
+        "The first-class fix: Compare, critique the methodology, and state your own verdict. "
+        "Save this reel and WhatsApp Academic Wizard for 1-on-1 mentor help."
+    )
+    voice_ok = synthesize_voiceover(spoken_script, audio_path)
+
+    # 3. Check for FFmpeg
+    if not shutil.which("ffmpeg"):
+        print("  ℹ️ FFmpeg not installed on local host — reel frame and audio ready for GitHub runner compilation.")
+        return None
+
+    try:
+        # Lo-fi background beat
         LOFI_DIR = SCRIPT_DIR / "lofi_beats"
-        output_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel.mp4"
-        
-        # Pick a random lo-fi beat
-        beats = list(LOFI_DIR.glob("*.wav"))
-        if not beats:
-            print("  ⚠️ No lo-fi beats found in automation/lofi_beats/ — generating reel without audio.")
-            audio_path = None
-        else:
-            audio_path = random.choice(beats)
-            print(f"  🎵 Selected lo-fi beat: {audio_path.name}")
-        
-        # Create a concat file for ffmpeg
-        concat_file = PUBLIC_SOCIAL_DIR / f"_concat_{slot}.txt"
-        with open(concat_file, "w") as f:
-            for sp in slide_paths:
-                # Each slide shown for 3.5 seconds
-                f.write(f"file '{sp.resolve()}'\n")
-                f.write(f"duration 3.5\n")
-            # Repeat last frame to avoid ffmpeg cutting it short
-            f.write(f"file '{slide_paths[-1].resolve()}'\n")
-        
-        # Build ffmpeg command
+        beats = list(LOFI_DIR.glob("*.wav")) + list(LOFI_DIR.glob("*.mp3"))
+        lofi_path = random.choice(beats) if beats else None
+
+        # FFmpeg assembly command (15-second 1080x1920 video at 30fps)
         cmd = [
             "ffmpeg", "-y",
-            "-f", "concat", "-safe", "0", "-i", str(concat_file),
-            "-vf", "scale=1080:1080:force_original_aspect_ratio=decrease,pad=1080:1080:(ow-iw)/2:(oh-ih)/2,format=yuv420p",
-            "-r", "30",
-            "-c:v", "libx264",
-            "-preset", "fast",
-            "-crf", "23",
-            "-pix_fmt", "yuv420p",
+            "-loop", "1", "-i", str(frame_path),
         ]
-        
-        if audio_path:
-            cmd.extend(["-i", str(audio_path), "-c:a", "aac", "-b:a", "128k", "-shortest"])
+
+        if voice_ok and lofi_path:
+            # Mix voiceover with soft lo-fi background music ducked at -18dB
+            cmd.extend([
+                "-i", str(audio_path),
+                "-i", str(lofi_path),
+                "-filter_complex",
+                "[2:a]volume=0.15[bg];[1:a][bg]amix=inputs=2:duration=first[a]",
+                "-map", "0:v",
+                "-map", "[a]",
+            ])
+        elif voice_ok:
+            cmd.extend(["-i", str(audio_path), "-map", "0:v", "-map", "1:a"])
         else:
-            cmd.extend(["-an"])  # No audio
-        
-        cmd.append(str(output_path))
-        
-        print(f"  🎬 Rendering video reel with ffmpeg...")
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-        
-        if result.returncode == 0:
-            size_mb = os.path.getsize(output_path) / (1024 * 1024)
-            print(f"  ✅ Video reel generated: {output_path.name} ({size_mb:.1f} MB)")
+            cmd.extend(["-t", "15", "-an"])
+
+        cmd.extend([
+            "-c:v", "libx264",
+            "-t", "16",
+            "-preset", "fast",
+            "-crf", "22",
+            "-pix_fmt", "yuv420p",
+            "-r", "30",
+            str(output_path),
+        ])
+
+        print("  🎬 Compiling 9:16 vertical reel with FFmpeg...")
+        res = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
+        if res.returncode == 0 and output_path.exists():
+            size_mb = output_path.stat().st_size / (1024 * 1024)
+            print(f"  ✅ Broadcast 9:16 Video Reel generated: {output_path.name} ({size_mb:.1f} MB)")
             return output_path
         else:
-            print(f"  ⚠️ ffmpeg failed (exit {result.returncode}): {result.stderr[-500:]}")
-            print(f"  ℹ️ Falling back to static carousel (no video).")
-            return None
-    except FileNotFoundError:
-        print("  ⚠️ ffmpeg not found — falling back to static carousel.")
-        return None
+            print(f"  ⚠️ FFmpeg failed (exit {res.returncode}): {res.stderr[-300:]}")
     except Exception as e:
-        print(f"  ⚠️ Video reel generation error: {e}")
-        return None
-    finally:
-        if 'concat_file' in locals() and concat_file.exists():
-            try:
-                concat_file.unlink()
-            except Exception:
-                pass
+        print(f"  ⚠️ Reel video compilation error: {e}")
+
+    return None
 
 # ==============================================================================
 # Platform-Specific Copy Generator (Gemini Pro + Fallback)
@@ -1421,39 +1723,37 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
     fallback_copy = {
         "instagram": (
             f"📌 {recipe['hook_headline']}\n\n"
-            f"Up to 15% of university marks are lost not on knowledge, but on uncritical writing, bad citation syntax, and avoidable rubric errors.\n\n"
-            f"👉 SWIPE THROUGH THE 4 SLIDES:\n"
-            f"• Slide 1: The #1 grading trap causing 2:2 marks\n"
-            f"• Slide 2: ❌ The 2:2 Trap vs ✅ The 1st Class Blueprint\n"
-            f"• Slide 3: The exact step-by-step formula & exemplar\n"
-            f"• Slide 4: Pre-submission rubric inspection checklist\n\n"
-            f"🛠 Use our 100% Free Tools & Citation Generators: {tool_url}\n"
-            f"💬 Need 1:1 human expert assignment triage? WhatsApp {WHATSAPP_DISPLAY} (Link in bio)\n\n"
-            f"📌 Bookmark and save this post for your next assignment deadline!\n\n"
-            f"#academicwizard #universitylife #assignmenthelp #studygram #collegelife "
-            f"#studentlife #dissertationtips #academicwriting #essayhelp #ukuniversities "
-            f"#nursingstudent #lawstudent #mbastudent #firstclassdegree #academicweapon "
-            f"#studycommunity #graduateschool #collegetips"
+            f"Here is a brutal truth from university markers: up to 15% of your grade is lost purely on descriptive phrasing, missing page numbers, and avoidable rubric traps.\n\n"
+            f"👉 SWIPE THROUGH TO SAVE YOUR GRADE:\n"
+            f"• Slide 1: The supervisor comment that caps you at 54%\n"
+            f"• Slide 2: The exact bad paragraph vs what examiners want\n"
+            f"• Slide 3: The 3-sentence formula (Compare → Critique → Conclude)\n"
+            f"• Slide 4: Screenshot-worthy pre-submission rubric checklist\n\n"
+            f"🛠 100% Free academic tools & citation generators: link in bio\n"
+            f"💬 Stuck at 2 AM? Our academic mentors are live 24/7 on WhatsApp: {WHATSAPP_DISPLAY}\n\n"
+            f"📌 Save this post so you have the checklist ready for your next deadline!\n\n"
+            f"#ukstudents #dissertationtips #academicwriting #essayhelp #studygram"
         ),
         "twitter": (
-            f"🎯 {recipe['hook_headline']}\n\n"
-            f"Why uncritical writing caps at 58% (2:2) while critical synthesis hits 70%+ (First Class).\n\n"
-            f"Swipe through the 4-slide blueprint attached 👇\n\n"
-            f"🛠 100% Free Academic Tools: {tool_url}\n"
-            f"🚨 12h Urgent Help WhatsApp: {WHATSAPP_DISPLAY}\n"
-            f"#AssignmentHelp #AcademicWeapon #StudyTips"
+            f"Your marker circled your paragraph and wrote 'Where is YOUR critical voice?'\n\n"
+            f"Here is why: You summarized what authors said without evaluating methodology. That caps your grade at 54%.\n\n"
+            f"The 3-step fix:\n"
+            f"1. Compare 2 authors\n"
+            f"2. Critique sample size / method\n"
+            f"3. State your justified verdict\n\n"
+            f"Full guide & free tools linked in bio 👇"
         ),
         "facebook": (
             f"🎓 {recipe['hook_headline']}\n\n"
-            f"Whether you are writing an undergraduate coursework essay, case study, or master's dissertation, tutors mark against strict analytical criteria:\n\n"
-            f"❌ The Common Mistake:\n{recipe['comparison']['trap_text']}\n\n"
-            f"✅ The First-Class Blueprint:\n{recipe['comparison']['fix_text']}\n\n"
-            f"📋 Pre-Submission Checklist:\n"
+            f"Whether you are writing an undergraduate coursework essay, nursing care plan, law brief, or master's dissertation, tutors mark against strict analytical criteria:\n\n"
+            f"❌ The Common Mistake (54% 2:2):\n{recipe['comparison']['trap_text']}\n\n"
+            f"✅ The First-Class Blueprint (78%+):\n{recipe['comparison']['fix_text']}\n\n"
+            f"📋 Pre-Submission Rubric Checklist:\n"
             + "\n".join(f"✔ {chk}" for chk in recipe.get("checklist", []))
-            + f"\n\n🛠 Access our free academic tools, citation makers, and grade calculators:\n{tool_url}\n\n"
-            f"🚨 Under a tight deadline? Our qualified academic team provides 12-hour urgent assignment support with Turnitin similarity reports included.\n"
-            f"💬 Connect directly with our coordinators on WhatsApp: {wa_url}\n\n"
-            f"Save this guide and share it with your study group!"
+            + f"\n\n🛠 Access our free academic tools, citation makers, and grade calculators at academicwizard.online\n\n"
+            f"🚨 Under a tight deadline? Our postgraduate team provides 1-on-1 human guidance and Turnitin similarity checks.\n"
+            f"💬 Connect directly with our coordinators on WhatsApp: {WHATSAPP_DISPLAY}\n\n"
+            f"Save this guide and share it with a friend who is working on an assignment!"
         ),
     }
 
@@ -1461,25 +1761,19 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
         return fallback_copy
 
     system_prompt = (
-        "You are an elite academic social media copywriter for Academic Wizard (academicwizard.online). "
-        "Your audience: international university students (UK, US, Australia, Canada, Singapore) who are "
-        "stressed about deadlines, confused by rubrics, and desperate for actionable academic shortcuts.\n\n"
+        "You are an elite academic mentor for Academic Wizard (academicwizard.online). "
+        "Your voice: warm, friendly, authoritative, and deeply practical — like an older sibling who graduated "
+        "with a First Class and is sharing real secrets with university students (UK, US, Australia, Canada, Singapore).\n\n"
         "CRITICAL RULES:\n"
-        "1. NEVER use the phrases '2:2 trap', 'First Class blueprint', 'academic weapon', or 'stop settling'. "
-        "Every post must have a UNIQUE hook that feels fresh and surprising.\n"
-        "2. Write LONG, VALUE-DENSE captions. Instagram captions should be 150-250 words minimum with "
-        "concrete examples, exact sentence templates, or specific mark-saving formulas students can screenshot.\n"
-        "3. Use conversational, empathetic tone — like a supportive PhD mentor texting a friend, not a corporate ad.\n"
-        "4. Include at least ONE specific real-world example (e.g., an exact citation format, a before/after paragraph, "
-        "or a rubric criterion with specific percentage breakdowns).\n\n"
-        "Generate 3 platform-tailored copy variations as a strict JSON object with keys 'instagram', 'twitter', 'facebook'. "
-        "Each value must be a SINGLE ready-to-post string (not nested objects):\n"
-        "1. 'instagram': 150-250 word caption with engaging hook, valuable content students want to save, "
-        "clear CTA mentioning free tools and WhatsApp, and exactly 18 targeted hashtags at the end.\n"
-        "2. 'twitter': Punchy thread-starter under 270 chars including the tool URL and 3 hashtags.\n"
-        "3. 'facebook': Full community study guide (200+ words) with story context, formatted takeaways, "
-        "and clear links to tools and WhatsApp.\n\n"
-        "Output ONLY valid JSON."
+        "1. NEVER sound like a corporate advertisement or an AI generator. Avoid generic phrases like 'academic weapon', "
+        "'elevate your studies', or 'stop settling'.\n"
+        "2. Write CONVERSATIONAL, HUMANIZED copy. Relate to real student pain points (late nights, cryptic feedback, Turnitin panic).\n"
+        "3. INSTAGRAM: 120-180 words, engaging hook, slide-by-slide guide, save reminder, and EXACTLY 3 TO 5 TARGETED HASHTAGS "
+        "(e.g., #ukstudents #dissertationtips #lawstudent #nursingstudent #essayhelp). NEVER use more than 5 hashtags.\n"
+        "4. TWITTER: Punchy conversational thread hook under 250 characters. DO NOT include outbound URLs or links in the tweet "
+        "(X algorithm heavily penalizes external links). Tell them 'Details in bio 👇' or ask an engaging question.\n"
+        "5. FACEBOOK: Friendly community study guide (150-200 words) with clear bullet points and WhatsApp consultation CTA.\n\n"
+        "Output ONLY valid JSON with keys 'instagram', 'twitter', 'facebook'."
     )
 
     user_prompt = f"""
@@ -1870,45 +2164,92 @@ def pick_daily_recipe(slot: str, topic_idx: Optional[int] = None) -> Dict[str, A
     return slot_recipes[day_idx % len(slot_recipes)]
 
 
-def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int], skip_image: bool):
+def run(
+    slot: str,
+    dry_run: bool = False,
+    force_publish: bool = True,
+    topic_idx: Optional[int] = None,
+    skip_image: bool = False,
+    generate_only: bool = False,
+    dispatch_only: bool = False,
+):
     print("=" * 75)
-    print(f"🚀 Academic Wizard Multi-Slide Carousel & Social Engine")
+    print(f"🚀 Academic Wizard Modern Social & Reel Automation Engine")
     print(f"📅 Slot: {slot.upper()} | UTC Time: {dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"⚙️  Dry Run: {dry_run} | Force Publish: {force_publish}")
+    print(f"⚙️  Generate Only: {generate_only} | Dispatch Only: {dispatch_only} | Dry Run: {dry_run}")
     print("=" * 75)
 
+    pending_file = PUBLIC_SOCIAL_DIR / f"pending_post_{slot}.json"
     recipe = pick_daily_recipe(slot, topic_idx)
-    print(f"\n📋 Selected Topic: {recipe['topic']}")
-    print(f"📌 Hook Headline: {recipe['hook_headline']}")
 
-    # 1. Generate 4-Slide Infographic Carousel
-    image_urls = []
-    reel_url = None
-    if not skip_image:
-        print("\n🎨 Generating 4-Slide Editorial Infographic Carousel...")
-        slides = generate_carousel_slides(recipe, slot)
-        image_urls = [
-            f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png"
-            for i in range(1, 5)
-        ]
-        
-        # Generate video reel with lo-fi audio
-        print("\n🎬 Generating Video Reel with Lo-Fi Study Beat...")
-        reel_path = generate_video_reel(slides, slot)
-        if reel_path:
-            reel_url = f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel.mp4"
-            print(f"\n🌐 Video Reel URL for Buffer: {reel_url}")
-        
-        print(f"\n🌐 Public URLs for Buffer ({len(image_urls)} slide assets):")
-        for u in image_urls:
-            print(f"   • {u}")
+    # -------------------------------------------------------------------------
+    # STAGE 1: ASSET & COPY GENERATION
+    # -------------------------------------------------------------------------
+    if not dispatch_only:
+        print(f"\n📋 Selected Curriculum Topic: {recipe.get('topic')}")
+        print(f"📌 Hook Headline: {recipe.get('hook_headline')}")
 
-    # 2. Generate Platform-Specific Copy
-    print("\n✍️ Generating Platform Copy (Instagram, Twitter, Facebook)...")
-    copy_dict = generate_platform_copy(recipe, slot)
+        image_urls = []
+        reel_url = None
 
-    # 3. Dispatch to Buffer
-    print("\n📡 Connecting to Buffer...")
+        if not skip_image:
+            if slot == "afternoon":
+                print("\n🎬 Slot is AFTERNOON: Generating 9:16 Vertical Video Reel...")
+                reel_path = generate_video_reel(recipe, slot)
+                reel_url = f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel.mp4"
+                print(f"🌐 Public Reel URL: {reel_url}")
+                # Also generate frame fallback
+                image_urls = [f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel_frame.png"]
+            else:
+                print(f"\n🎨 Slot is {slot.upper()}: Generating 4-Slide Modern Minimal Carousel...")
+                slides = generate_carousel_slides(recipe, slot)
+                image_urls = [
+                    f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png"
+                    for i in range(1, 5)
+                ]
+                print(f"🌐 Generated {len(image_urls)} Carousel Slide URLs:")
+                for u in image_urls:
+                    print(f"   • {u}")
+
+        print("\n✍️ Generating Platform Copy (Instagram, Twitter, Facebook)...")
+        copy_dict = generate_platform_copy(recipe, slot)
+
+        payload = {
+            "slot": slot,
+            "topic": recipe.get("topic"),
+            "image_urls": image_urls,
+            "reel_url": reel_url if slot == "afternoon" else None,
+            "copy": copy_dict,
+            "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+        }
+
+        with open(pending_file, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+        print(f"💾 Saved pending post metadata to {pending_file.name}")
+
+        if generate_only:
+            print("\n✅ Generation stage complete (--generate-only). Exiting before Buffer dispatch.")
+            return
+
+    # -------------------------------------------------------------------------
+    # STAGE 2: BUFFER DISPATCH
+    # -------------------------------------------------------------------------
+    if pending_file.exists():
+        try:
+            with open(pending_file, "r", encoding="utf-8") as f:
+                saved = json.load(f)
+            image_urls = saved.get("image_urls", [])
+            reel_url = saved.get("reel_url")
+            copy_dict = saved.get("copy", {})
+        except Exception as e:
+            print(f"  ⚠️ Error loading {pending_file.name}: {e}")
+            copy_dict = generate_platform_copy(recipe, slot)
+    else:
+        copy_dict = generate_platform_copy(recipe, slot)
+        image_urls = [f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png" for i in range(1, 5)]
+        reel_url = f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel.mp4" if slot == "afternoon" else None
+
+    print("\n📡 Connecting to Buffer for Dispatch...")
     buffer_client = BufferClient(access_token=BUFFER_ACCESS_TOKEN, dry_run=dry_run)
     channels = buffer_client.get_all_profiles()
 
@@ -1920,22 +2261,22 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
 
     for channel in channels:
         service = channel.get("service", "").lower()
-        print(f"\n  📤 Dispatching carousel to channel: {channel.get('name')} ({service})...")
+        print(f"\n  📤 Dispatching to channel: {channel.get('name')} ({service})...")
 
         if "twitter" in service or "x" in service:
             text = format_copy_to_string(copy_dict.get("twitter") or copy_dict.get("facebook", ""))
             if len(text) > 280:
-                print(f"    ℹ️ Truncating Twitter text ({len(text)} chars) to stay safely within 280-char limit.")
+                print(f"    ℹ️ Truncating Twitter text ({len(text)} chars) to fit 280-char limit.")
                 text = text[:275].rstrip() + "..."
         elif "instagram" in service:
             text = format_copy_to_string(copy_dict.get("instagram") or copy_dict.get("facebook", ""))
         else:
             text = format_copy_to_string(copy_dict.get("facebook") or copy_dict.get("instagram", ""))
 
-        # Prefer video reel if available; if video dispatch fails, fallback to carousel images
         dispatched = False
-        if reel_url:
-            print(f"    🎬 Attempting Video Reel dispatch to {channel.get('name')}...")
+        # If afternoon slot and reel is present, dispatch video reel
+        if slot == "afternoon" and reel_url:
+            print(f"    🎬 Dispatching 9:16 Video Reel to {channel.get('name')}...")
             dispatched = buffer_client.dispatch(
                 channel=channel,
                 text=text,
@@ -1943,9 +2284,9 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
                 force_publish=force_publish,
             )
             if not dispatched:
-                print(f"    ⚠️ Video reel dispatch failed for {channel.get('name')}. Retrying with 4-slide carousel...")
+                print(f"    ⚠️ Reel video dispatch failed for {channel.get('name')}. Falling back to frame image...")
 
-        if not dispatched:
+        if not dispatched and image_urls:
             buffer_client.dispatch(
                 channel=channel,
                 text=text,
@@ -1954,7 +2295,7 @@ def run(slot: str, dry_run: bool, force_publish: bool, topic_idx: Optional[int],
             )
 
     print("\n" + "=" * 75)
-    print("✅ Multi-Slide Carousel Social Cycle Finished Successfully!")
+    print("✅ Social Media Cycle Finished Successfully!")
     print("=" * 75)
 
 
@@ -1989,18 +2330,20 @@ def check_buffer_connection():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Academic Wizard Autonomous Social Media Poster")
+    parser = argparse.ArgumentParser(description="Academic Wizard Autonomous Social Media & Reel Poster")
     parser.add_argument(
         "--slot",
         choices=["morning", "afternoon", "evening", "auto"],
         default="auto",
-        help="Posting slot: morning (tools), afternoon (deep guides), or evening (services). 'auto' detects from UTC hour.",
+        help="Posting slot: morning (carousel), afternoon (9:16 reel), or evening (carousel). 'auto' detects from UTC hour.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Simulate posting without calling Buffer API")
     parser.add_argument("--force-publish", action="store_true", help="Publish immediately rather than adding to queue")
     parser.add_argument("--topic-idx", type=int, default=None, help="Override recipe index (0-6)")
     parser.add_argument("--skip-image", action="store_true", help="Skip image generation for quick text tests")
     parser.add_argument("--check-buffer", action="store_true", help="Run Buffer diagnostic connection check and exit")
+    parser.add_argument("--generate-only", action="store_true", help="Only generate visual and audio assets (stage 1)")
+    parser.add_argument("--dispatch-only", action="store_true", help="Only dispatch pending assets to Buffer (stage 2)")
 
     args = parser.parse_args()
 
@@ -2025,6 +2368,8 @@ def main():
         force_publish=args.force_publish,
         topic_idx=args.topic_idx,
         skip_image=args.skip_image,
+        generate_only=args.generate_only,
+        dispatch_only=args.dispatch_only,
     )
 
 

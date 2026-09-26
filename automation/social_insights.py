@@ -321,20 +321,26 @@ def synthesize_adaptive_plan(audit_data: Dict[str, Any]) -> Dict[str, Any]:
         days_ahead = 7
     next_monday = (now + dt.timedelta(days=days_ahead)).date()
 
-    system_prompt = """You are the Chief Social Growth Officer and Senior Academic Marketing Director for Academic Wizard (https://academicwizard.online).
-Academic Wizard provides academic writing assistance, coursework triage, and free academic tools (Citation Generator, AI Detector, Grammar Checker) for university students across UK, USA, Australia, and Canada.
+    system_prompt = """You are the Senior Academic Strategy Director and Social Growth Officer for Academic Wizard (https://academicwizard.online).
+Academic Wizard provides 1-on-1 human postgraduate academic guidance, dissertation consulting, and free academic tools across 14 subjects:
+Nursing & Healthcare, Law, MBA & Business Management, Computer Science & IT, Engineering, Psychology, Education & PGCE, Accounting & Finance, Marketing, Economics, Sociology, History, English Literature, Data Science & Analytics.
 
 Your mission:
-Analyze last week's social media performance and generate an aggressive, high-engagement 7-day social media plan (14 posts: Morning Tool + Evening Service) designed to maximize:
+Analyze last week's social media performance and generate an aggressive, high-engagement 7-day social media plan (Morning Carousel + Afternoon Reel + Evening Carousel) designed to maximize:
 1. Algorithmic Reach on X (Twitter), Instagram, and Facebook.
-2. Carousel Saves and Retweets (students save actionable templates & formulas).
+2. Carousel Saves and Shares (students save actionable checklists, templates, and formulas).
 3. Outbound click-throughs to Academic Wizard free tools and urgent WhatsApp consultations (+91 95098 93638).
 
-Rules for next week's plan:
-- DOUBLE DOWN on topics similar to last week's winners. Create more provocative, punchy hook headlines and higher-stakes pain points.
-- PIVOT away from underperforming themes. Replace them with high-urgency student pain points (e.g., Turnitin AI False Positive disputes, Nursing clinical Gibbs cycles, Law IRAC problem questions, Dissertation methodology defenses).
-- Morning slots (09:00 UTC): High-utility "Academic Weapon" cheat sheets, formulas, citation rules, and search strings.
-- Evening slots (18:00 UTC): High-intent commercial triage, 12-hour urgent delivery, supervisor review fixes, and dissertation support.
+CRITICAL CONTENT DEPTH RULES:
+- NEVER output short 3-word placeholders like "Narrative reflection" or "Check score". Every post must have real academic depth!
+- trap_text: MUST be 2-3 full sentences representing an actual student draft paragraph containing the uncritical error.
+- fix_text: MUST be 3-4 full sentences showing the First-Class 78%+ rewrite with proper critical synthesis (Compare -> Critique -> Conclude).
+- checklist: MUST contain exactly 8 complete, actionable pre-submission rubric checks.
+- formula steps: 3 numbered steps with rich, instructive descriptions (15-25 words each).
+- Afternoon slot: SPECIFICALLY tailored for a 15-20s Vertical 9:16 Video Reel with:
+    * "reel_hook": 3-second pattern interrupt (e.g. "POV: It's 2 AM and your supervisor writes...")
+    * "reel_voiceover_script": 40-50 words of spoken voiceover text in a supportive older-sibling mentor tone.
+    * "reel_type": "screen_sim" (Mon/Wed/Fri) or "kinetic_text" (Tue/Thu/Sat).
 
 You MUST return ONLY valid JSON with no markdown wrapping and following this EXACT schema:
 {
@@ -353,74 +359,76 @@ You MUST return ONLY valid JSON with no markdown wrapping and following this EXA
         "hook_sub": "...",
         "hook_bullets": ["...", "..."],
         "comparison": {
-          "trap_title": "THE COMMON 2:2 TRAP",
-          "trap_text": "...",
-          "fix_title": "THE 1ST CLASS BLUEPRINT",
-          "fix_text": "..."
+          "trap_title": "THE 54% 2:2 TRAP",
+          "trap_text": "2-3 full sentences of realistic student coursework with the mistake...",
+          "fix_title": "THE 78% 1ST CLASS BLUEPRINT",
+          "fix_text": "3-4 full sentences showing the First Class rewrite with critical synthesis..."
         },
         "formula": {
           "title": "...",
           "steps": [
-            {"num": "01", "label": "...", "desc": "..."},
-            {"num": "02", "label": "...", "desc": "..."},
-            {"num": "03", "label": "...", "desc": "..."}
+            {"num": "1", "label": "Compare", "desc": "15-25 words instruction..."},
+            {"num": "2", "label": "Critique", "desc": "15-25 words instruction..."},
+            {"num": "3", "label": "Conclude", "desc": "15-25 words instruction..."}
           ],
           "exemplar": "..."
         },
-        "checklist": ["...", "...", "...", "..."],
+        "checklist": ["item 1", "item 2", "item 3", "item 4", "item 5", "item 6", "item 7", "item 8"],
         "tool_url": "https://academicwizard.online/tools/",
-        "cta_text": "...",
-        "whatsapp_msg": "..."
-      },
-       "evening": {
-        "topic": "...",
-        "badge": "...",
-        "hook_headline": "...",
-        "hook_sub": "...",
-        "hook_bullets": ["...", "..."],
-        "comparison": {
-          "trap_title": "THE COMMON 2:2 TRAP",
-          "trap_text": "...",
-          "fix_title": "THE 1ST CLASS BLUEPRINT",
-          "fix_text": "..."
-        },
-        "formula": {
-          "title": "...",
-          "steps": [
-            {"num": "01", "label": "...", "desc": "..."},
-            {"num": "02", "label": "...", "desc": "..."},
-            {"num": "03", "label": "...", "desc": "..."}
-          ],
-          "exemplar": "..."
-        },
-        "checklist": ["...", "...", "...", "..."],
-        "service_url": "https://academicwizard.online/services/assignment-help/",
         "cta_text": "...",
         "whatsapp_msg": "..."
       },
       "afternoon": {
         "topic": "...",
+        "badge": "STUDY TIP",
+        "hook_headline": "...",
+        "hook_sub": "...",
+        "reel_hook": "POV: It's 2 AM and your supervisor writes...",
+        "reel_voiceover_script": "40-50 words of spoken conversational script...",
+        "reel_type": "screen_sim",
+        "comparison": {
+          "trap_title": "WHAT YOU WROTE (54%)",
+          "trap_text": "2-3 full sentences...",
+          "fix_title": "THE 78%+ REWRITE",
+          "fix_text": "3-4 full sentences..."
+        },
+        "formula": {
+          "title": "...",
+          "steps": [
+            {"num": "1", "label": "Compare", "desc": "..."},
+            {"num": "2", "label": "Critique", "desc": "..."},
+            {"num": "3", "label": "Conclude", "desc": "..."}
+          ],
+          "exemplar": "..."
+        },
+        "checklist": ["item 1", "item 2", "item 3", "item 4", "item 5", "item 6", "item 7", "item 8"],
+        "tool_url": "https://academicwizard.online/tools/",
+        "cta_text": "...",
+        "whatsapp_msg": "..."
+      },
+      "evening": {
+        "topic": "...",
         "badge": "...",
         "hook_headline": "...",
         "hook_sub": "...",
         "hook_bullets": ["...", "..."],
         "comparison": {
-          "trap_title": "THE COMMON MISTAKE",
-          "trap_text": "...",
-          "fix_title": "THE EXPERT APPROACH",
-          "fix_text": "..."
+          "trap_title": "THE 54% 2:2 TRAP",
+          "trap_text": "2-3 full sentences of realistic student coursework...",
+          "fix_title": "THE 78% 1ST CLASS BLUEPRINT",
+          "fix_text": "3-4 full sentences showing the First Class rewrite..."
         },
         "formula": {
           "title": "...",
           "steps": [
-            {"num": "01", "label": "...", "desc": "..."},
-            {"num": "02", "label": "...", "desc": "..."},
-            {"num": "03", "label": "...", "desc": "..."}
+            {"num": "1", "label": "Compare", "desc": "..."},
+            {"num": "2", "label": "Critique", "desc": "..."},
+            {"num": "3", "label": "Conclude", "desc": "..."}
           ],
           "exemplar": "..."
         },
-        "checklist": ["...", "...", "...", "..."],
-        "tool_url": "https://academicwizard.online/tools/",
+        "checklist": ["item 1", "item 2", "item 3", "item 4", "item 5", "item 6", "item 7", "item 8"],
+        "service_url": "https://academicwizard.online/services/assignment-help/",
         "cta_text": "...",
         "whatsapp_msg": "..."
       }
