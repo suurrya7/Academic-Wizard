@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-26
+        **Last updated**: 2026-09-27
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo 26: Practical Steps to Reduce Subjective Coding Bias in Theses](https://academicwizard.online/blog/nvivo-26-practical-steps-to-reduce-subjective-coding-bias-in-theses/)**
+  - Excerpt: Learn how to use NVivo 26 features to identify and eliminate coding bias. Master systematic thematic analysis for a more robust PhD thesis today.
+  - Keywords: minimizing bias in thematic qualitative analysis, NVivo thematic coding workflow, qualitative research reliability, PhD thesis data analysis, coding drift in qualitative research
+  - Target Region: USA
+  - Published: 2026-09-27
 
 - **[Zotero vs ZoteroBib: Which Fits Your 2026 Dissertation Needs?](https://academicwizard.online/blog/zotero-vs-zoterobib-which-fits-your-2026-dissertation-needs/)**
   - Excerpt: Managing hundreds of sources? Discover whether Zotero's desktop client or the web-based ZoteroBib is the better choice for your massive thesis project.
@@ -689,6 +695,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Beyond APA 7: Managing Complex Multi-Volume Source Citations in 2026](https://academicwizard.online/blog/beyond-apa-7-managing-complex-multi-volume-source-citations-in-2026/)**
+  - Excerpt: Don't lose marks on formatting. Master the tricky rules for citing multi-volume works in APA 7th edition with our clear, 2026-updated guide.
+  - Keywords: APA 7 multi-volume citation rules, APA 7 reference formatting, complex thesis citation guide, academic writing style guides, APA 7th edition pitfalls
+  - Target Region: Canada
+  - Published: 2026-09-27
 
 - **[Turnitin AI Detectors: How to Verify Your Originality and Tone](https://academicwizard.online/blog/turnitin-ai-detectors-how-to-verify-your-originality-and-tone/)**
   - Excerpt: Flagged by Turnitin for AI? Learn how to audit your writing for human tone, verify your own integrity, and prepare a professional case for your professors.
@@ -1174,6 +1186,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI for Qualitative Frameworks: Building Your Research Outline](https://academicwizard.online/blog/ethical-ai-for-qualitative-frameworks-building-your-research-outline/)**
+  - Excerpt: Learn how to use AI ethically to scaffold your qualitative research outline. Keep your unique voice while streamlining your dissertation planning.
+  - Keywords: ethical AI use for qualitative research design, AI scaffolding for research, qualitative analysis framework, AI in academic writing ethics, structured dissertation planning
+  - Target Region: Australia
+  - Published: 2026-09-27
+
 - **[Ethical AI Scaffolding: Building Your Lit Review Outline Faster](https://academicwizard.online/blog/ethical-ai-scaffolding-building-your-lit-review-outline-faster/)**
   - Excerpt: Learn how to use AI to scaffold your literature review outline ethically. Boost your synthesis speed without losing your original academic voice.
   - Keywords: how to use AI ethically for literature review, AI for academic literature synthesis, research methodology scaffolding, ethical AI prompt engineering for students, literature review structure guide
@@ -1409,6 +1427,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Fixing Zotero Metadata Mismatches: A 2026 Guide for Thesis Students](https://academicwizard.online/blog/fixing-zotero-metadata-mismatches-a-2026-guide-for-thesis-students/)**
+  - Excerpt: Struggling with messy citations? Learn how to fix missing PDF metadata in Zotero fast so your 2026 thesis bibliography is accurate and stress-free.
+  - Keywords: fixing missing Zotero PDF metadata, Zotero citation troubleshooting, automated bibliography management, thesis reference organization, Zotero PDF import issues
+  - Target Region: UK
+  - Published: 2026-09-27
 
 - **[Mastering Chicago 17: Archival Citation Hacks for History Theses](https://academicwizard.online/blog/mastering-chicago-17-archival-citation-hacks-for-history-theses/)**
   - Excerpt: Stop guessing your footnotes. Master the nuances of Chicago 17 archival citations and ensure your thesis formatting meets the highest academic standards.

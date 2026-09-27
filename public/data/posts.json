@@ -1,5 +1,105 @@
 [
   {
+    "title": "Fixing Zotero Metadata Mismatches: A 2026 Guide for Thesis Students",
+    "slug": "fixing-zotero-metadata-mismatches-a-2026-guide-for-thesis-students",
+    "excerpt": "Struggling with messy citations? Learn how to fix missing PDF metadata in Zotero fast so your 2026 thesis bibliography is accurate and stress-free.",
+    "keywords": [
+      "fixing missing Zotero PDF metadata",
+      "Zotero citation troubleshooting",
+      "automated bibliography management",
+      "thesis reference organization",
+      "Zotero PDF import issues"
+    ],
+    "primaryKeyword": "fixing missing Zotero PDF metadata",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-27T07:25:27.816500+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-zotero-metadata-mismatches-a-2026-guide-for-thesis-students.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "NVivo 26: Practical Steps to Reduce Subjective Coding Bias in Theses",
+    "slug": "nvivo-26-practical-steps-to-reduce-subjective-coding-bias-in-theses",
+    "excerpt": "Learn how to use NVivo 26 features to identify and eliminate coding bias. Master systematic thematic analysis for a more robust PhD thesis today.",
+    "keywords": [
+      "minimizing bias in thematic qualitative analysis",
+      "NVivo thematic coding workflow",
+      "qualitative research reliability",
+      "PhD thesis data analysis",
+      "coding drift in qualitative research"
+    ],
+    "primaryKeyword": "minimizing bias in thematic qualitative analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-27T07:25:55.277022+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-practical-steps-to-reduce-subjective-coding-bias-in-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Complex Multi-Volume Source Citations in 2026",
+    "slug": "beyond-apa-7-managing-complex-multi-volume-source-citations-in-2026",
+    "excerpt": "Don't lose marks on formatting. Master the tricky rules for citing multi-volume works in APA 7th edition with our clear, 2026-updated guide.",
+    "keywords": [
+      "APA 7 multi-volume citation rules",
+      "APA 7 reference formatting",
+      "complex thesis citation guide",
+      "academic writing style guides",
+      "APA 7th edition pitfalls"
+    ],
+    "primaryKeyword": "APA 7 multi-volume citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-27T07:26:21.937258+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-complex-multi-volume-source-citations-in-2026.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Ethical AI for Qualitative Frameworks: Building Your Research Outline",
+    "slug": "ethical-ai-for-qualitative-frameworks-building-your-research-outline",
+    "excerpt": "Learn how to use AI ethically to scaffold your qualitative research outline. Keep your unique voice while streamlining your dissertation planning.",
+    "keywords": [
+      "ethical AI use for qualitative research design",
+      "AI scaffolding for research",
+      "qualitative analysis framework",
+      "AI in academic writing ethics",
+      "structured dissertation planning"
+    ],
+    "primaryKeyword": "ethical AI use for qualitative research design",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-27T07:26:55.770177+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-for-qualitative-frameworks-building-your-research-outline.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Turnitin AI Detectors: How to Verify Your Originality and Tone",
     "slug": "turnitin-ai-detectors-how-to-verify-your-originality-and-tone",
     "excerpt": "Flagged by Turnitin for AI? Learn how to audit your writing for human tone, verify your own integrity, and prepare a professional case for your professors.",
