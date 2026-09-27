@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Button from '../components/Button';
+import ToolHireExpertBanner from '../components/ToolHireExpertBanner';
 import { BookOpen, SpellCheck, ShieldAlert, Sparkles } from 'lucide-react';
 
 const toolsData = [
@@ -203,6 +204,17 @@ const Tools = () => {
                             </div>
                         </div>
                     ))}
+
+                    <div className="pt-10">
+                        <ToolHireExpertBanner 
+                            toolName="Academic Tools Suite"
+                            headline="Need More Than an Automated Tool?"
+                            subheadline="Our Master's and PhD subject specialists provide bespoke research, drafting, and comprehensive proofreading tailored to your exact grading rubric."
+                            defaultService="Full Academic Writing & Research Support"
+                            discountBadge="Save 20% on Your First Order"
+                            ctaText="Chat with an Academic Advisor"
+                        />
+                    </div>
 
                     {/* Detailed Content & FAQ Section (GEO/AEO optimized) */}
                     <div className="border-t border-white/10 pt-20 max-w-4xl mx-auto space-y-12">

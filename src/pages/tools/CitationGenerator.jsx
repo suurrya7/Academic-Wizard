@@ -71,6 +71,34 @@ const CitationGenerator = () => {
         // Determine Index for numeric styles
         const bibIndex = bibliography.length + 1;
 
+        const getInTextAPA = () => {
+            if (authorList.length === 0) return `(Anonymous, ${year})`;
+            if (authorList.length === 1) return `(${getLastName(authorList[0])}, ${year})`;
+            if (authorList.length === 2) return `(${getLastName(authorList[0])} & ${getLastName(authorList[1])}, ${year})`;
+            return `(${getLastName(authorList[0])} et al., ${year})`;
+        };
+
+        const getInTextMLA = () => {
+            if (authorList.length === 0) return `("${title ? title.substring(0, 15) + '...' : 'Untitled'}")`;
+            if (authorList.length === 1) return `(${getLastName(authorList[0])})`;
+            if (authorList.length === 2) return `(${getLastName(authorList[0])} and ${getLastName(authorList[1])})`;
+            return `(${getLastName(authorList[0])} et al.)`;
+        };
+
+        const getInTextHarvard = () => {
+            if (authorList.length === 0) return `(Anonymous, ${year})`;
+            if (authorList.length === 1) return `(${getLastName(authorList[0])}, ${year})`;
+            if (authorList.length === 2) return `(${getLastName(authorList[0])} & ${getLastName(authorList[1])}, ${year})`;
+            return `(${getLastName(authorList[0])} et al., ${year})`;
+        };
+
+        const getInTextChicago = () => {
+            if (authorList.length === 0) return `(Anonymous ${year})`;
+            if (authorList.length === 1) return `(${getLastName(authorList[0])} ${year})`;
+            if (authorList.length === 2) return `(${getLastName(authorList[0])} and ${getLastName(authorList[1])} ${year})`;
+            return `(${getLastName(authorList[0])} et al. ${year})`;
+        };
+
         if (style === 'apa') {
             // APA 7th Edition
             let authorFormatted = '';
@@ -91,7 +119,7 @@ const CitationGenerator = () => {
             if (sourceType === 'website') {
                 const formattedDate = pubDate ? pubDate : 'n.d.';
                 bibHTML = `${authorFormatted} (${formattedDate}). <em>${title || 'Untitled Page'}</em>. ${containerTitle || 'Website'}. <a href="${url}" target="_blank" class="text-accent-gold underline">${url || 'URL'}</a>`;
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextAPA();
             } else if (sourceType === 'journal') {
                 bibHTML = `${authorFormatted} (${year}). ${title || 'Untitled Article'}. <em>${containerTitle || 'Journal Name'}</em>`;
                 if (volume) bibHTML += `, <em>${volume}</em>`;
@@ -100,13 +128,13 @@ const CitationGenerator = () => {
                 if (doi) bibHTML += `. https://doi.org/${doi}`;
                 else if (url) bibHTML += `. <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>`;
                 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextAPA();
             } else if (sourceType === 'book') {
                 bibHTML = `${authorFormatted} (${year}). <em>${title || 'Untitled Book'}</em>`;
                 if (edition) bibHTML += ` (${edition} ed.)`;
                 if (publisher) bibHTML += `. ${publisher}`;
                 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextAPA();
             }
         } 
         else if (style === 'mla') {
@@ -127,7 +155,7 @@ const CitationGenerator = () => {
                 if (url) bibHTML += `, <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>`;
                 if (accessDate) bibHTML += `. Accessed ${accessDate}`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])})` : `("${title ? title.substring(0, 15) + '...' : 'Untitled'}")`;
+                intextText = getInTextMLA();
             } else if (sourceType === 'journal') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}"${title || 'Untitled Article'}." <em>${containerTitle || 'Journal Name'}</em>`;
                 if (volume) bibHTML += `, vol. ${volume}`;
@@ -137,14 +165,14 @@ const CitationGenerator = () => {
                 if (doi) bibHTML += `, https://doi.org/${doi}`;
                 else if (url) bibHTML += `, <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])})` : `("${title ? title.substring(0, 15) + '...' : 'Untitled'}")`;
+                intextText = getInTextMLA();
             } else if (sourceType === 'book') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}<em>${title || 'Untitled Book'}</em>`;
                 if (edition) bibHTML += `, ${edition} ed.`;
                 if (publisher) bibHTML += `, ${publisher}`;
                 if (year) bibHTML += `, ${year}`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])})` : `(Anonymous)`;
+                intextText = getInTextMLA();
             }
         }
         else if (style === 'harvard') {
@@ -160,18 +188,18 @@ const CitationGenerator = () => {
 
             if (sourceType === 'website') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. <em>${title || 'Untitled Page'}</em>. ${containerTitle || 'Website Name'}. Available at: <a href="${url}" target="_blank" class="text-accent-gold underline">${url || 'URL'}</a> [Accessed ${accessDate}].`;
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextHarvard();
             } else if (sourceType === 'journal') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. '${title || 'Untitled Article'}'. <em>${containerTitle || 'Journal Name'}</em>, ${volume || 'Vol'}(${issue || 'Issue'})`;
                 if (pages) bibHTML += `, pp. ${pages}`;
                 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextHarvard();
             } else if (sourceType === 'book') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. <em>${title || 'Untitled Book'}</em>.`;
                 if (edition) bibHTML += ` ${edition} ed.`;
                 if (publisher) bibHTML += ` ${publisher}`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])}, ${year})` : `(Anonymous, ${year})`;
+                intextText = getInTextHarvard();
             }
         }
         else if (style === 'chicago') {
@@ -187,20 +215,20 @@ const CitationGenerator = () => {
 
             if (sourceType === 'website') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. "${title || 'Untitled Page'}." ${containerTitle || 'Website Name'}. ${pubDate || ''}. <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>.`;
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])} ${year})` : `(Anonymous ${year})`;
+                intextText = getInTextChicago();
             } else if (sourceType === 'journal') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. "${title || 'Untitled Article'}." <em>${containerTitle || 'Journal Name'}</em> ${volume || ''}`;
                 if (issue) bibHTML += `, no. ${issue}`;
                 if (pages) bibHTML += `: ${pages}`;
                 if (doi) bibHTML += `. https://doi.org/${doi}`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])} ${year})` : `(Anonymous ${year})`;
+                intextText = getInTextChicago();
             } else if (sourceType === 'book') {
                 bibHTML = `${authorFormatted ? authorFormatted + ' ' : ''}${year}. <em>${title || 'Untitled Book'}</em>.`;
                 if (edition) bibHTML += ` ${edition} ed.`;
                 if (publisher) bibHTML += ` ${publisher}.`;
 
-                intextText = authorList.length > 0 ? `(${getLastName(authorList[0])} ${year})` : `(Anonymous ${year})`;
+                intextText = getInTextChicago();
             }
         }
         else if (style === 'ieee') {
@@ -215,17 +243,17 @@ const CitationGenerator = () => {
             }
 
             if (sourceType === 'website') {
-                bibHTML = `[${bibIndex}] ${authorFormatted}, "${title || 'Untitled Page'}," *${containerTitle || 'Website Name'}*, ${year}. [Online]. Available: <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>. [Accessed: ${accessDate}].`;
+                bibHTML = `[${bibIndex}] ${authorFormatted}, "${title || 'Untitled Page'}," <em>${containerTitle || 'Website Name'}</em>, ${year}. [Online]. Available: <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>. [Accessed: ${accessDate}].`;
                 intextText = `[${bibIndex}]`;
             } else if (sourceType === 'journal') {
-                bibHTML = `[${bibIndex}] ${authorFormatted}, "${title || 'Untitled Article'}," *${containerTitle || 'Journal'}*, vol. ${volume || 'X'}, no. ${issue || 'Y'}`;
+                bibHTML = `[${bibIndex}] ${authorFormatted}, "${title || 'Untitled Article'}," <em>${containerTitle || 'Journal'}</em>, vol. ${volume || 'X'}, no. ${issue || 'Y'}`;
                 if (pages) bibHTML += `, pp. ${pages}`;
                 if (year) bibHTML += `, ${year}`;
                 if (doi) bibHTML += `, doi: ${doi}`;
 
                 intextText = `[${bibIndex}]`;
             } else if (sourceType === 'book') {
-                bibHTML = `[${bibIndex}] ${authorFormatted}, *${title || 'Untitled Book'}*`;
+                bibHTML = `[${bibIndex}] ${authorFormatted}, <em>${title || 'Untitled Book'}</em>`;
                 if (edition) bibHTML += `, ${edition} ed.`;
                 if (publisher) bibHTML += `, ${publisher}`;
                 if (year) bibHTML += `, ${year}`;
@@ -248,7 +276,7 @@ const CitationGenerator = () => {
                 bibHTML = `(${bibIndex}) ${authorFormatted ? authorFormatted + '. ' : ''}${title || 'Untitled Page'} [Internet]. ${containerTitle || 'Website Name'}; ${year} [cited ${accessDate}]. Available from: <a href="${url}" target="_blank" class="text-accent-gold underline">${url}</a>`;
                 intextText = `(${bibIndex})`;
             } else if (sourceType === 'journal') {
-                bibHTML = `(${bibIndex}) ${authorFormatted ? authorFormatted + '. ' : ''}${title || 'Untitled Article'}. *${containerTitle || 'Journal'}*. ${year};${volume || 'Vol'}(${issue || 'Issue'}):${pages || 'Pages'}.`;
+                bibHTML = `(${bibIndex}) ${authorFormatted ? authorFormatted + '. ' : ''}${title || 'Untitled Article'}. <em>${containerTitle || 'Journal'}</em>. ${year};${volume || 'Vol'}(${issue || 'Issue'}):${pages || 'Pages'}.`;
                 intextText = `(${bibIndex})`;
             } else if (sourceType === 'book') {
                 bibHTML = `(${bibIndex}) ${authorFormatted ? authorFormatted + '. ' : ''}${title || 'Untitled Book'}.`;

@@ -49,10 +49,47 @@ const CountryServicePage = () => {
         return <Navigate to={`/services/${serviceSlug}/`} replace />;
     }
 
+    // Short country names for concise, un-truncated SERP titles (<=60 chars)
+    const SHORT_COUNTRY_NAMES = {
+        'uk': 'UK',
+        'usa': 'USA',
+        'australia': 'Australia',
+        'canada': 'Canada',
+        'singapore': 'Singapore',
+        'ireland': 'Ireland',
+        'germany': 'Germany',
+        'india': 'India'
+    };
+    const displayCountry = SHORT_COUNTRY_NAMES[country.slug] || country.name;
+
+    const LOCAL_CURRENCY_MAP = {
+        'uk': { currency: 'GBP', price: '12.00', symbol: '£' },
+        'australia': { currency: 'AUD', price: '20.00', symbol: 'A$' },
+        'canada': { currency: 'CAD', price: '18.00', symbol: 'C$' },
+        'singapore': { currency: 'SGD', price: '20.00', symbol: 'S$' },
+        'ireland': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'germany': { currency: 'EUR', price: '14.00', symbol: '€' },
+        'india': { currency: 'INR', price: '799.00', symbol: '₹' },
+        'usa': { currency: 'USD', price: '15.00', symbol: '$' }
+    };
+    const regionalPricing = LOCAL_CURRENCY_MAP[country.slug] || { currency: 'USD', price: '15.00', symbol: '$' };
+
     // Localized Overrides
     const overviewText = country.overview || service.overview;
     const featuresList = country.features || service.features || [];
-    const pricingText = country.pricing || service.pricing || '';
+
+    const getLocalizedPricing = (rawText) => {
+        const defaultText = `Transparent pricing starts from just ${regionalPricing.symbol}${regionalPricing.price} per page (250 words) with full Turnitin similarity report, unlimited revisions, and complete confidentiality included.`;
+        if (!rawText) return defaultText;
+        return rawText
+            .replace(/\$6 per page/gi, `${regionalPricing.symbol}${regionalPricing.price} per page`)
+            .replace(/from just \$6/gi, `from just ${regionalPricing.symbol}${regionalPricing.price}`)
+            .replace(/from \$6\/page/gi, `from ${regionalPricing.symbol}${regionalPricing.price}/page`)
+            .replace(/\$5[–-]\$10 per page/gi, `from ${regionalPricing.symbol}${regionalPricing.price} per page`)
+            .replace(/\$20[–-]\$30 per 1000 words/gi, `from ${regionalPricing.symbol}${Number(regionalPricing.price) * 4} per 1000 words`);
+    };
+    const pricingText = getLocalizedPricing(country.pricing || service.pricing);
+
     // Dynamic Contextual FAQ Synthesizer for Country Hubs
     const localizedCountryFaqs = [
         {
@@ -84,31 +121,6 @@ const CountryServicePage = () => {
     const whatsappUrl = `https://wa.me/919509893638?text=Hello%20Academic%20Wizard,%20I%20need%20${encodeURIComponent(service.title)}%20for%20${encodeURIComponent(country.name)}`;
 
     const Icon = service.icon;
-
-    // Short country names for concise, un-truncated SERP titles (<=60 chars)
-    const SHORT_COUNTRY_NAMES = {
-        'uk': 'UK',
-        'usa': 'USA',
-        'australia': 'Australia',
-        'canada': 'Canada',
-        'singapore': 'Singapore',
-        'ireland': 'Ireland',
-        'germany': 'Germany',
-        'india': 'India'
-    };
-    const displayCountry = SHORT_COUNTRY_NAMES[country.slug] || country.name;
-
-    const LOCAL_CURRENCY_MAP = {
-        'uk': { currency: 'GBP', price: '12.00', symbol: '£' },
-        'australia': { currency: 'AUD', price: '20.00', symbol: 'A$' },
-        'canada': { currency: 'CAD', price: '18.00', symbol: 'C$' },
-        'singapore': { currency: 'SGD', price: '20.00', symbol: 'S$' },
-        'ireland': { currency: 'EUR', price: '14.00', symbol: '€' },
-        'germany': { currency: 'EUR', price: '14.00', symbol: '€' },
-        'india': { currency: 'INR', price: '799.00', symbol: '₹' },
-        'usa': { currency: 'USD', price: '15.00', symbol: '$' }
-    };
-    const regionalPricing = LOCAL_CURRENCY_MAP[country.slug] || { currency: 'USD', price: '15.00', symbol: '$' };
 
     const headingTitle = country.heading || `${service.title} in ${country.name}`;
     

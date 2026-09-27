@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
 
             <section className="py-20 container max-w-4xl">
                 <div className="glass-card p-10 space-y-8 text-text-secondary leading-relaxed">
-                    <p>Last Updated: {new Date().toLocaleDateString()}</p>
+                    <p>Last Updated: September 2026</p>
                     
                     <h2 className="text-2xl font-bold text-white font-heading">1. Introduction</h2>
                     <p>At Academic Wizard ("we", "our", or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (academicwizard.online) and use our academic assistance services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>

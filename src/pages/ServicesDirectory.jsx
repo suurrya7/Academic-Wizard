@@ -216,7 +216,7 @@ const ServicesDirectory = () => {
                                                                     {cleanName}
                                                                 </div>
                                                                 <div className="text-xs text-text-muted truncate">
-                                                                    {s.targetKeyword}
+                                                                    {s.targetKeyword.replace(/assignment help/i, activeServiceObj.title)}
                                                                 </div>
                                                             </div>
                                                             <ChevronRight className="w-4 h-4 text-text-muted group-hover:text-accent-gold group-hover:translate-x-0.5 transition-all shrink-0" />

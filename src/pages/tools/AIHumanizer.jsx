@@ -198,16 +198,16 @@ const AIHumanizer = () => {
                         {sessionActive ? (
                             /* Streamlit clean embed iframe */
                             <div 
-                                className="w-full bg-black/40 rounded-xl overflow-hidden relative"
-                                style={{ height: '900px' }}
+                                className="w-full bg-black/40 rounded-xl overflow-hidden relative shadow-inner"
+                                style={{ minHeight: '750px', height: '80vh' }}
                             >
                                 <iframe
                                     src="https://academic-wizard.streamlit.app/~/+/?embed=true#academic-wizard"
                                     title="Academic Wizard Text Humanizer"
                                     width="100%"
                                     height="100%"
-                                    style={{ border: 'none', background: 'transparent' }}
-                                    scrolling="no"
+                                    style={{ border: 'none', background: 'transparent', width: '100%', height: '100%' }}
+                                    scrolling="auto"
                                     allow="clipboard-read; clipboard-write"
                                 />
                             </div>

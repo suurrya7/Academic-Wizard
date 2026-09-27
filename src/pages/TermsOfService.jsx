@@ -37,7 +37,7 @@ const TermsOfService = () => {
 
             <section className="py-20 container max-w-4xl">
                 <div className="glass-card p-10 space-y-8 text-text-secondary leading-relaxed">
-                    <p>Last Updated: {new Date().toLocaleDateString()}</p>
+                    <p>Last Updated: September 2026</p>
 
                     <h2 className="text-2xl font-bold text-white font-heading">1. Agreement to Terms</h2>
                     <p>These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Academic Wizard ("we," "us" or "our"), concerning your access to and use of the academicwizard.online website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").</p>
