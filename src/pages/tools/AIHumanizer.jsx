@@ -178,9 +178,9 @@ const AIHumanizer = () => {
                 <div className="container max-w-6xl space-y-8">
                     <div className="glass-card p-6 border-accent-gold/20 rounded-2xl animate-fade-in" style={{ borderColor: 'rgba(212, 175, 55, 0.15)' }}>
                         <div className="flex justify-between items-center mb-4 border-b border-white/10 pb-4">
-                            <h3 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
+                            <h2 className="text-xl font-bold font-heading text-accent-gold" style={{ color: 'var(--accent-gold)' }}>
                                 Humanizer Engine
-                            </h3>
+                            </h2>
                             <div className="flex items-center gap-3">
                                 {sessionActive && (
                                     <span className="text-xs px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold uppercase rounded-full flex items-center gap-1.5">

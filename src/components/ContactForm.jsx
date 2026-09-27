@@ -20,21 +20,25 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label className="block text-white/80 font-medium mb-2">Name</label>
+                        <label htmlFor="contact-name" className="block text-white/80 font-medium mb-2">Name</label>
                         <input 
+                            id="contact-name"
                             type="text" 
                             name="name" 
                             required 
+                            aria-label="Your Name"
                             className="w-full bg-bg-secondary/50 border border-glass-border text-white p-3 rounded focus:outline-none focus:border-accent-gold transition-colors"
                             placeholder="Your Name"
                         />
                     </div>
                     <div>
-                        <label className="block text-white/80 font-medium mb-2">Email</label>
+                        <label htmlFor="contact-email" className="block text-white/80 font-medium mb-2">Email</label>
                         <input 
+                            id="contact-email"
                             type="email" 
                             name="email" 
                             required 
+                            aria-label="Your Email Address"
                             className="w-full bg-bg-secondary/50 border border-glass-border text-white p-3 rounded focus:outline-none focus:border-accent-gold transition-colors"
                             placeholder="your@email.com"
                         />
@@ -42,9 +46,11 @@ const ContactForm = () => {
                 </div>
                 
                 <div>
-                    <label className="block text-white/80 font-medium mb-2">Service Required</label>
+                    <label htmlFor="contact-service" className="block text-white/80 font-medium mb-2">Service Required</label>
                     <select 
+                        id="contact-service"
                         name="service"
+                        aria-label="Service Required"
                         className="w-full bg-bg-secondary/50 border border-glass-border text-white p-3 rounded focus:outline-none focus:border-accent-gold transition-colors"
                     >
                         <option value="Assignment Help">Assignment Help</option>
@@ -59,11 +65,13 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                    <label className="block text-white/80 font-medium mb-2">Message & Requirements</label>
+                    <label htmlFor="contact-message" className="block text-white/80 font-medium mb-2">Message & Requirements</label>
                     <textarea 
+                        id="contact-message"
                         name="message" 
                         required 
                         rows="4" 
+                        aria-label="Message and Requirements"
                         className="w-full bg-bg-secondary/50 border border-glass-border text-white p-3 rounded focus:outline-none focus:border-accent-gold transition-colors"
                         placeholder="Tell us about your assignment requirements, word count, and deadline..."
                     ></textarea>

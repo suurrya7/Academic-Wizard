@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CalendarDays, Clock, ArrowLeft, Tags } from 'lucide-react';
+import { CalendarDays, Clock, ArrowLeft, Tags, Share2, Link2, Check } from 'lucide-react';
 import { assetPath } from '../config/site';
 import Breadcrumbs from '../components/Breadcrumbs';
 import UrgentTriageBanner from '../components/UrgentTriageBanner';
@@ -27,6 +27,7 @@ const BlogPost = () => {
     const [postData, setPostData] = useState(null);
     const [htmlContent, setHtmlContent] = useState('');
     const [jsonLdSchemas, setJsonLdSchemas] = useState([]);
+    const [copied, setCopied] = useState(false);
     const [status, setStatus] = useState('loading'); // loading, ready, error, notfound
     const contentRef = useRef(null);
 
@@ -58,12 +59,13 @@ const BlogPost = () => {
                         return '';
                     });
 
-                    // Strip redirect scripts, meta/link tags, and any <h1> tags from the HTML content
+                    // Strip redirect scripts, meta/link tags, any <h1> tags, and nested <p> within headings from HTML content
                     let cleanedHtml = processedHtml
                         .replace(/<script[\s\S]*?<\/script>/gi, '')
                         .replace(/<meta[^>]*>/gi, '')
                         .replace(/<link[^>]*>/gi, '')
-                        .replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+                        .replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '')
+                        .replace(/<h2([^>]*)>([\s\S]*?)<p>([\s\S]*?)<\/p>\s*<\/h2>/gi, '<h2$1>$2</h2>\n<p class="academic-reference-note text-sm text-text-secondary italic mb-4">$3</p>');
                     setHtmlContent(cleanedHtml);
                     setJsonLdSchemas(schemas);
                     setStatus('ready');
@@ -216,11 +218,13 @@ const BlogPost = () => {
                 <script type="application/ld+json">
                     {JSON.stringify(articleSchema)}
                 </script>
-                {jsonLdSchemas.map((schema, index) => (
-                    <script key={`schema-${index}`} type="application/ld+json">
-                        {JSON.stringify(schema)}
-                    </script>
-                ))}
+                {jsonLdSchemas
+                    .filter(schema => schema && schema['@type'] !== 'Article' && schema['@type'] !== 'BreadcrumbList')
+                    .map((schema, index) => (
+                        <script key={`schema-${index}`} type="application/ld+json">
+                            {JSON.stringify(schema)}
+                        </script>
+                    ))}
             </Helmet>
 
             <article className="container px-6 max-w-4xl mx-auto">
@@ -263,13 +267,60 @@ const BlogPost = () => {
                         </p>
                     )}
 
-                    <div className="flex flex-wrap gap-2 pb-8 border-b border-white/10">
+                    <div className="flex flex-wrap gap-2 pb-6 border-b border-white/10">
                         {(postData?.keywords || []).map((keyword) => (
                             <span key={keyword} className="inline-flex items-center gap-1 rounded-md bg-white/5 px-3 py-2 text-xs text-white/60">
                                 <Tags size={12} />
                                 {keyword}
                             </span>
                         ))}
+                    </div>
+
+                    {/* Social Share Bar */}
+                    <div className="flex flex-wrap items-center gap-3 pt-6 text-xs text-white/70">
+                        <span className="font-heading uppercase tracking-wider flex items-center gap-1.5 text-accent-gold font-bold">
+                            <Share2 size={14} /> Share Guide:
+                        </span>
+                        <a 
+                            href={`https://wa.me/?text=${encodeURIComponent(`${postData?.title || 'Academic Guide'} - Read more: ${canonicalUrl}`)}`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Share on WhatsApp"
+                            className="px-3.5 py-1.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 transition-colors"
+                        >
+                            WhatsApp
+                        </a>
+                        <a 
+                            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonicalUrl)}`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Share on LinkedIn"
+                            className="px-3.5 py-1.5 rounded-full bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 transition-colors"
+                        >
+                            LinkedIn
+                        </a>
+                        <a 
+                            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(postData?.title || '')}&url=${encodeURIComponent(canonicalUrl)}&via=academic_wizz`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Share on X"
+                            className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-white/90 border border-white/10 transition-colors"
+                        >
+                            X (Twitter)
+                        </a>
+                        <button 
+                            type="button"
+                            onClick={() => {
+                                navigator.clipboard.writeText(canonicalUrl);
+                                setCopied(true);
+                                setTimeout(() => setCopied(false), 2000);
+                            }}
+                            aria-label="Copy link to clipboard"
+                            className="px-3.5 py-1.5 rounded-full bg-accent-gold/10 hover:bg-accent-gold/20 text-accent-gold border border-accent-gold/20 transition-colors flex items-center gap-1.5"
+                        >
+                            {copied ? <Check size={13} /> : <Link2 size={13} />}
+                            {copied ? 'Copied Link!' : 'Copy Link'}
+                        </button>
                     </div>
                 </header>
 

@@ -208,13 +208,14 @@ const ServicePage = () => {
                     </h2>
 
                     <div className="w-full h-64 md:h-80 mb-10 rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
-                        <img src={service.image || "/images/dark-office.webp"} alt={`${service.title} professional workspace`} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal" />
+                        <img src={service.image || "/images/dark-office.webp"} alt={`${service.title} professional workspace`} width="800" height="533" loading="lazy" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal" />
                         <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent pointer-events-none" />
                     </div>
                     
                     <DefinitionBox 
                         title={service.title} 
                         definition={service.overview} 
+                        showHeading={false}
                     />
                     
                     <ExpertQuote 
@@ -345,9 +346,15 @@ const ServicePage = () => {
                         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-bg-primary to-transparent z-10 pointer-events-none"></div>
                         
                         <div className="animate-marquee flex gap-8 py-4">
-                            {[...caseStudiesList, ...caseStudiesList].map((study, idx) => (
-                                <div key={idx} className="glass-card p-8 border-l-4 border-l-accent-gold w-[400px] shrink-0 flex flex-col justify-between">
-                                    <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
+                            {[...caseStudiesList, ...caseStudiesList].map((study, idx) => {
+                                const isClone = idx >= caseStudiesList.length;
+                                return (
+                                <div key={idx} aria-hidden={isClone ? "true" : undefined} className="glass-card p-8 border-l-4 border-l-accent-gold w-[400px] shrink-0 flex flex-col justify-between">
+                                    {!isClone ? (
+                                        <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
+                                    ) : (
+                                        <div className="text-xl font-bold text-white mb-4 font-heading">{study.title}</div>
+                                    )}
                                     <div className="text-text-secondary leading-relaxed flex-grow">
                                         <p className="italic">"{study.content}"</p>
                                     </div>
@@ -367,7 +374,8 @@ const ServicePage = () => {
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </section>

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, CalendarDays, Clock, ArrowUpRight, Tags } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { assetPath, staticPostUrl } from '../config/site';
 import { dissertationTopics } from '../data/specializedPages';
@@ -36,11 +36,32 @@ function normalizePost(post) {
 }
 
 const Blog = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
     const [posts, setPosts] = useState([]);
     const [status, setStatus] = useState('loading');
     const [query, setQuery] = useState('');
     const [category, setCategory] = useState('all');
-    const [page, setPage] = useState(1);
+    const pageFromUrl = parseInt(searchParams.get('page') || '1', 10);
+    const [page, setPage] = useState(pageFromUrl > 0 ? pageFromUrl : 1);
+
+    useEffect(() => {
+        const p = parseInt(searchParams.get('page') || '1', 10);
+        if (p > 0 && p !== page) {
+            setPage(p);
+        }
+    }, [searchParams]);
+
+    const handlePageChange = (newPage) => {
+        setPage(newPage);
+        const params = new URLSearchParams(searchParams);
+        if (newPage === 1) {
+            params.delete('page');
+        } else {
+            params.set('page', String(newPage));
+        }
+        setSearchParams(params);
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+    };
 
     useEffect(() => {
         let mounted = true;
@@ -299,17 +320,22 @@ const Blog = () => {
                         {totalPages > 1 && (
                             <div className="flex justify-center gap-3 mt-12">
                                 {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
-                                    <button
+                                    <Link
                                         key={pageNumber}
-                                        onClick={() => setPage(pageNumber)}
-                                        className={`w-11 h-11 rounded-lg border font-heading text-sm transition-all ${page === pageNumber
-                                            ? 'border-accent-gold bg-accent-gold text-black'
+                                        to={`/blog/${pageNumber === 1 ? '' : `?page=${pageNumber}`}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(pageNumber);
+                                        }}
+                                        className={`w-11 h-11 rounded-lg border font-heading text-sm transition-all flex items-center justify-center ${page === pageNumber
+                                            ? 'border-accent-gold bg-accent-gold text-black font-bold'
                                             : 'border-white/10 bg-white/5 text-white hover:border-accent-gold'
                                             }`}
-                                        type="button"
+                                        aria-label={`Go to blog page ${pageNumber}`}
+                                        aria-current={page === pageNumber ? 'page' : undefined}
                                     >
                                         {pageNumber}
-                                    </button>
+                                    </Link>
                                 ))}
                             </div>
                         )}
