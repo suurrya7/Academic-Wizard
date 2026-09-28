@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Flags: How to Verify Your Original Voice in 2026",
+    "slug": "turnitin-ai-flags-how-to-verify-your-original-voice-in-2026",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, verify your writing process, and prepare a factual response to maintain your academic record.",
+    "keywords": [
+      "resolving false positive turnitin ai detection",
+      "academic integrity audit",
+      "turnitin AI hallucination",
+      "student writing verification",
+      "preventing AI flagging"
+    ],
+    "primaryKeyword": "resolving false positive turnitin ai detection",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-28T08:03:49.640119+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-flags-how-to-verify-your-original-voice-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Dissertation Data Management: Syncing NVivo with Zotero Seamlessly",
+    "slug": "dissertation-data-management-syncing-nvivo-with-zotero-seamlessly",
+    "excerpt": "Struggling to organize your PhD thesis? Discover a professional workflow to sync your Zotero library with NVivo for error-free thematic data analysis.",
+    "keywords": [
+      "nvivo zotero research workflow",
+      "qualitative thesis organization",
+      "thesis data management",
+      "academic software integration",
+      "research efficiency tools"
+    ],
+    "primaryKeyword": "nvivo zotero research workflow",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-28T08:04:35.855697+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dissertation-data-management-syncing-nvivo-with-zotero-seamlessly.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7 Citation Nuances: Handling Multi-Author Digital Media",
+    "slug": "apa-7-citation-nuances-handling-multi-author-digital-media",
+    "excerpt": "Master the latest APA 7 rules for multi-author digital sources. Avoid common citation penalties with our clear guide to complex attribution formatting.",
+    "keywords": [
+      "apa 7 citation multi-author digital media",
+      "APA 7 reference formatting",
+      "complex citation rules",
+      "academic writing standards",
+      "digital source attribution"
+    ],
+    "primaryKeyword": "apa 7 citation multi-author digital media",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-28T08:05:06.007244+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-citation-nuances-handling-multi-author-digital-media.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Building a Research Framework for Your Thesis",
+    "slug": "ethical-ai-use-building-a-research-framework-for-your-thesis",
+    "excerpt": "Learn how to ethically use AI to scaffold your dissertation literature review, maintain your unique voice, and build a solid research foundation.",
+    "keywords": [
+      "ethical ai research framework",
+      "academic research integrity",
+      "scaffolding literature reviews",
+      "responsible AI for students",
+      "dissertation support tools"
+    ],
+    "primaryKeyword": "ethical ai research framework",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-09-28T08:05:33.771836+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-building-a-research-framework-for-your-thesis.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
     "title": "Fixing Zotero Metadata Mismatches: A 2026 Guide for Thesis Students",
     "slug": "fixing-zotero-metadata-mismatches-a-2026-guide-for-thesis-students",
     "excerpt": "Struggling with messy citations? Learn how to fix missing PDF metadata in Zotero fast so your 2026 thesis bibliography is accurate and stress-free.",
