@@ -134,9 +134,8 @@ const DissertationTopicPage = () => {
                 description={`Peer-reviewed, publication-grade research topics and thesis ideas for 2026/2027 ${topicData.category} dissertations.`}
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
-                    { name: 'Blog', url: '/blog/' },
-                    { name: 'Dissertation Topics', url: '/blog/' },
-                    { name: topicData.category, url: `/blog/dissertation-topics/${topicSlug}/` }
+                    { name: 'Dissertation Services', url: '/services/dissertation-help/' },
+                    { name: topicData.title, url: `/blog/dissertation-topics/${topicSlug}/` }
                 ]}
             />
 

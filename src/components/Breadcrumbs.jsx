@@ -14,21 +14,36 @@ const Breadcrumbs = ({ paths, align = "left" }) => {
 
     const alignClass = align === "center" ? "justify-center" : "justify-start";
 
+    // Filter out items without a valid label or name
+    const validPaths = (paths || []).filter(p => p && (p.name || p.label));
+    if (validPaths.length === 0) return null;
+
     // Normalize paths array to handle both { name, url } and { label, path }
-    let rawNormalized = paths.map(p => {
-        const name = p.name || p.label || '';
+    let rawNormalized = validPaths.map(p => {
+        const name = (p.name || p.label || '').trim();
         const rawUrl = p.url || p.path || '/';
         const cleanUrl = rawUrl === '/' 
             ? '/' 
             : (rawUrl.endsWith('/') ? rawUrl : `${rawUrl}/`);
         return { name, url: cleanUrl };
-    });
+    }).filter(p => p.name.length > 0);
 
     // Ensure breadcrumb hierarchy strictly starts at Home (Position 1) per Google Search guidelines
     if (rawNormalized.length > 0 && rawNormalized[0].url !== '/') {
         rawNormalized = [{ name: 'Home', url: '/' }, ...rawNormalized];
     }
-    const normalizedPaths = rawNormalized;
+
+    // De-duplicate any consecutive or duplicate URLs to guarantee valid Google BreadcrumbList Schema
+    const seenUrls = new Set();
+    const normalizedPaths = [];
+    for (const p of rawNormalized) {
+        if (!seenUrls.has(p.url)) {
+            seenUrls.add(p.url);
+            normalizedPaths.push(p);
+        }
+    }
+
+    if (normalizedPaths.length === 0) return null;
 
     // Generate JSON-LD Schema
     const breadcrumbSchema = {
