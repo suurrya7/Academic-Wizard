@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-28T08:19:46.396901+00:00",
+  "last_run": "2026-09-28T16:55:36.932217+00:00",
   "daily_count": {
     "date": "2026-09-28",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -60,7 +60,8 @@
     "1wr4tr3",
     "1wrbcrw",
     "1wrh0m5",
-    "1ws8mrv"
+    "1ws8mrv",
+    "1wsii4v"
   ],
   "history": [
     {
@@ -510,7 +511,15 @@
       "title": "How do I stop thinking of my deceased brother all the time?",
       "posted_at": "2026-09-28T08:19:46.396897+00:00",
       "url": "https://reddit.com/r/Advice/comments/1ws8mrv/how_do_i_stop_thinking_of_my_deceased_brother_all/"
+    },
+    {
+      "post_id": "1wsii4v",
+      "subreddit": "college",
+      "mode": "karma",
+      "title": "Lab meets on Monday morning. Professor says we have a Saturday field trip. Am I required to go?",
+      "posted_at": "2026-09-28T16:55:36.932211+00:00",
+      "url": "https://reddit.com/r/college/comments/1wsii4v/lab_meets_on_monday_morning_professor_says_we/"
     }
   ],
-  "last_comment_posted_at": "2026-09-28T08:19:46.396882+00:00"
+  "last_comment_posted_at": "2026-09-28T16:55:36.932197+00:00"
 }
