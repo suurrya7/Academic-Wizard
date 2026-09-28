@@ -233,11 +233,11 @@ const Contact = () => {
                             }}>
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">Full Name</label>
-                                    <input type="text" id="name" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="John Doe" required />
+                                    <input type="text" id="name" aria-required="true" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="John Doe" required />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-2">Email Address</label>
-                                    <input type="email" id="email" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="john@university.edu" required />
+                                    <input type="email" id="email" aria-required="true" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="john@university.edu" required />
                                 </div>
                                 <div>
                                     <label htmlFor="subject" className="block text-sm font-medium text-text-secondary mb-2">Subject (Service Type)</label>
@@ -245,7 +245,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-2">Message & Instructions</label>
-                                    <textarea id="message" rows="4" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Please provide your word count, deadline, and topic..." required></textarea>
+                                    <textarea id="message" rows="4" aria-required="true" className="w-full bg-bg-secondary/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Please provide your word count, deadline, and topic..." required></textarea>
                                 </div>
                                 <button type="submit" className="w-full bg-accent-gold text-bg-primary font-bold py-4 rounded-lg hover:bg-white transition-colors duration-300">
                                     Send via WhatsApp

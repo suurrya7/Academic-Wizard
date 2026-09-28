@@ -308,7 +308,7 @@ const CountryServicePage = () => {
                     
                     {country.image && (
                         <div className="w-full h-64 md:h-80 mb-10 rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
-                            <img src={country.image} alt={`${service.title} in ${country.name}`} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal" />
+                            <img src={country.image} alt={`${service.title} in ${country.name}`} width="1200" height="320" loading="lazy" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal" />
                             <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary via-transparent to-transparent pointer-events-none" />
                         </div>
                     )}
@@ -510,9 +510,9 @@ const CountryServicePage = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold font-heading text-white mb-4">How It Works</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 list-none m-0 p-0">
                         {service.process.map((step, idx) => (
-                            <div key={idx} className="relative group">
+                            <li key={idx} className="relative group">
                                 <div className="text-accent-gold text-6xl font-heading font-bold opacity-10 absolute -top-8 -left-4">
                                     0{idx + 1}
                                 </div>
@@ -520,9 +520,9 @@ const CountryServicePage = () => {
                                     <h3 className="text-xl text-white font-bold mb-4">{step.title}</h3>
                                     <p className="text-text-secondary text-sm leading-relaxed">{step.desc}</p>
                                 </div>
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ol>
                 </div>
             </section>
 

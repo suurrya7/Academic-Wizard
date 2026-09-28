@@ -144,7 +144,7 @@ const Home = () => {
                         <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
                                 <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
-                                    <img src="/images/tools/citation-generator.webp" alt="Citation Maker" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                    <img src="/images/tools/citation-generator.webp" alt="Citation Maker" width="320" height="128" loading="lazy" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">Citation Maker</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
@@ -160,7 +160,7 @@ const Home = () => {
                         <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
                                 <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
-                                    <img src="/images/tools/grammar-checker.webp" alt="Grammar Checker" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                    <img src="/images/tools/grammar-checker.webp" alt="Grammar Checker" width="320" height="128" loading="lazy" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">Grammar Checker</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
@@ -176,7 +176,7 @@ const Home = () => {
                         <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
                                 <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
-                                    <img src="/images/tools/ai-detector.webp" alt="AI Detector" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                    <img src="/images/tools/ai-detector.webp" alt="AI Detector" width="320" height="128" loading="lazy" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">AI Detector</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
@@ -192,7 +192,7 @@ const Home = () => {
                         <div className="glass-card p-6 border-white/5 hover:border-accent-gold/45 rounded-xl flex flex-col justify-between space-y-4 transition-all duration-300 group">
                             <div>
                                 <div className="mb-4 h-32 w-full rounded-lg overflow-hidden relative bg-bg-secondary">
-                                    <img src="/images/tools/ai-humanizer.webp" alt="AI Humanizer" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                                    <img src="/images/tools/ai-humanizer.webp" alt="AI Humanizer" width="320" height="128" loading="lazy" className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-gold transition-colors">AI Humanizer</h3>
                                 <p className="text-xs text-text-secondary leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
