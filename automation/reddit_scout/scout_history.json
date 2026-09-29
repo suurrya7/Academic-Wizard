@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-29T02:12:27.989621+00:00",
+  "last_run": "2026-09-29T08:54:00.978889+00:00",
   "daily_count": {
     "date": "2026-09-29",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -62,7 +62,8 @@
     "1wrh0m5",
     "1ws8mrv",
     "1wsii4v",
-    "1wswby8"
+    "1wswby8",
+    "1wt3k4t"
   ],
   "history": [
     {
@@ -528,7 +529,15 @@
       "title": "How many vacuum cleaners does a house need? Apparently, all of them.",
       "posted_at": "2026-09-29T02:12:27.989596+00:00",
       "url": "https://reddit.com/r/CasualConversation/comments/1wswby8/how_many_vacuum_cleaners_does_a_house_need/"
+    },
+    {
+      "post_id": "1wt3k4t",
+      "subreddit": "Advice",
+      "mode": "karma",
+      "title": "I'm constantly using my phone because I'm scared to be alone with my thoughts or become sad. How do I stop ?",
+      "posted_at": "2026-09-29T08:54:00.978883+00:00",
+      "url": "https://reddit.com/r/Advice/comments/1wt3k4t/im_constantly_using_my_phone_because_im_scared_to/"
     }
   ],
-  "last_comment_posted_at": "2026-09-29T02:12:27.989581+00:00"
+  "last_comment_posted_at": "2026-09-29T08:54:00.978871+00:00"
 }
