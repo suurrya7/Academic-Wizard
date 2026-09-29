@@ -135,18 +135,26 @@ const Blog = () => {
     return (
         <div className="page-blog">
             <Helmet>
-                <title>Academic Blog & Research Guides | Academic Wizard</title>
-                <meta name="description" content="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy." />
+                <title>Assignment Help Guides & Academic Writing Tips | Academic Wizard</title>
+                <meta name="description" content="Expert guides on assignment help, essay writing, dissertation tips, literature reviews, and study strategies. Updated weekly by PhD academics." />
                 <link rel="canonical" href="https://academicwizard.online/blog/" />
-                <meta property="og:title" content="Academic Blog & Research Guides | Academic Wizard" />
-                <meta property="og:description" content="Daily guides on academic writing, research, and study strategies." />
+                <meta property="og:title" content="Assignment Help Guides & Academic Writing Tips | Academic Wizard" />
+                <meta property="og:description" content="Expert guides on assignment help, essay writing, dissertation tips, and study strategies." />
                 <meta property="og:url" content="https://academicwizard.online/blog/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Assignment Help Guides & Academic Writing Tips" />
+                <meta name="twitter:description" content="Expert guides on assignment help, essay writing, dissertation tips, and study strategies." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
-                        "name": "Academic Blog & Research Guides",
-                        "description": "Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy.",
+                        "name": "Assignment Help Guides & Academic Writing Tips",
+                        "description": "Expert guides on assignment help, essay writing, dissertation tips, literature reviews, and study strategies.",
                         "url": "https://academicwizard.online/blog/",
                         "publisher": {
                             "@type": "Organization",
@@ -158,8 +166,8 @@ const Blog = () => {
             </Helmet>
 
             <PageHeader
-                title="Academic Blog"
-                subtitle="Daily guides on assignment help, academic writing, literature reviews, research support, editing, and study strategy."
+                title="Academic Writing Guides & Study Resources"
+                subtitle="Expert guides on assignment help, essay writing, literature reviews, research support, editing, and study strategy."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
                     { name: 'Blog', url: '/blog/' }

@@ -22,12 +22,20 @@ const About = () => {
     return (
         <div className="page-about">
             <Helmet>
-                <title>About Academic Wizard | Trusted Global University Mentors & Research Specialists</title>
-                <meta name="description" content="What is Academic Wizard? Founded in 2018, Academic Wizard is a leading academic mentorship platform with 150+ PhD and Master's research specialists supporting university students in UK, USA, Australia, and worldwide." />
+                <title>About Us | Academic Wizard Writing Service</title>
+                <meta name="description" content="Learn about Academic Wizard — founded in 2018, trusted by 50,000+ students. 150+ PhD specialists offering assignment help, essay writing, and dissertation support worldwide." />
                 <link rel="canonical" href="https://academicwizard.online/about/" />
-                <meta property="og:title" content="About Academic Wizard | University Mentors & Research Specialists" />
-                <meta property="og:description" content="Founded in 2018, Academic Wizard is a leading educational consultancy. Learn about our strict 3-stage QA process and our team of 150+ PhD and Master's level academic experts." />
+                <meta property="og:title" content="About Academic Wizard | Trusted Writing Service" />
+                <meta property="og:description" content="Founded in 2018, trusted by 50,000+ students. 150+ PhD specialists offering assignment help worldwide." />
                 <meta property="og:url" content="https://academicwizard.online/about/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="About Academic Wizard | Trusted Writing Service" />
+                <meta name="twitter:description" content="Founded in 2018, trusted by 50,000+ students. 150+ PhD specialists." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(aboutSchema)}
                 </script>

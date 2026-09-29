@@ -37,19 +37,27 @@ const Contact = () => {
     return (
         <div className="page-contact">
             <Helmet>
-                <title>Contact Us | Academic Wizard Support</title>
-                <meta name="description" content="Get in touch with Academic Wizard's support team via WhatsApp or email. We offer 24/7 assistance for all your academic writing and research needs." />
+                <title>Contact Academic Wizard | Get a Free Quote Today</title>
+                <meta name="description" content="Contact Academic Wizard for assignment help, essay writing, and dissertation support. Get a free quote via WhatsApp or email. 24/7 academic assistance." />
                 <link rel="canonical" href="https://academicwizard.online/contact/" />
-                <meta property="og:title" content="Contact Us | Academic Wizard" />
-                <meta property="og:description" content="Get in touch with Academic Wizard's support team for 24/7 academic assistance." />
+                <meta property="og:title" content="Contact Academic Wizard | Get a Free Quote" />
+                <meta property="og:description" content="Contact Academic Wizard for assignment help and dissertation support. Get a free quote via WhatsApp." />
                 <meta property="og:url" content="https://academicwizard.online/contact/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Contact Academic Wizard | Get a Free Quote" />
+                <meta name="twitter:description" content="Contact Academic Wizard for assignment help and dissertation support. 24/7 WhatsApp support." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(contactSchema)}
                 </script>
             </Helmet>
 
             <PageHeader
-                title="Get in Touch"
+                title="Contact Academic Wizard"
                 subtitle="We're here to help you achieve academic success."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },

@@ -32,30 +32,38 @@ const ServicesDirectory = () => {
     return (
         <div className="page-services-directory">
             <Helmet>
-                <title>Academic Services Directory | All Subjects, Cities & Countries | Academic Wizard</title>
+                <title>Academic Writing Services | All Subjects & Countries | Academic Wizard</title>
                 <meta 
                     name="description" 
-                    content="Browse our comprehensive directory of 1,400+ academic consulting, assignment help, essay writing, and dissertation services across the UK, USA, Australia, Canada, Singapore, and worldwide." 
+                    content="Browse 1,400+ academic writing services: assignment help, essay writing, and dissertation support across UK, USA, Australia, Canada, and 200+ subjects." 
                 />
                 <link rel="canonical" href={canonicalUrl} />
-                <meta property="og:title" content="Academic Services Directory | Academic Wizard" />
-                <meta property="og:description" content="Complete directory of specialized academic consulting services across 8 countries and 200+ academic disciplines." />
+                <meta property="og:title" content="Academic Writing Services | Academic Wizard" />
+                <meta property="og:description" content="Browse 1,400+ academic writing services across 8 countries and 200+ subjects." />
                 <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Academic Writing Services | Academic Wizard" />
+                <meta name="twitter:description" content="Browse 1,400+ academic writing services across 8 countries and 200+ subjects." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
 
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
-                        "name": "Academic Services Directory",
-                        "description": "Comprehensive index of academic guidance, assignment consulting, and dissertation support services categorized by country and discipline.",
+                        "name": "Academic Writing Services Directory",
+                        "description": "Comprehensive directory of academic writing, assignment help, and dissertation support services across 8 countries and 200+ subjects.",
                         "url": canonicalUrl
                     })}
                 </script>
             </Helmet>
 
             <PageHeader
-                title="Academic Services Directory"
-                subtitle="Explore our comprehensive directory of specialized academic consulting, subject guidance, and regional university support."
+                title="Academic Writing Services Directory"
+                subtitle="Browse our comprehensive directory of assignment help, essay writing, and dissertation support across 8 countries and 200+ academic disciplines."
                 breadcrumbs={[
                     { name: "Home", url: "/" },
                     { name: "Services", url: "/services/" },

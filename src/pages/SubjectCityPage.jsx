@@ -5,6 +5,7 @@ import { servicesData } from "../data/services";
 import { countrySubjects, countryCities } from "../data/specializedPages";
 import specializedContent from "../data/specializedContent.json";
 import PageHeader from "../components/PageHeader";
+import { assembleUniqueContent } from "../data/contentModules";
 import DefinitionBox from "../components/DefinitionBox";
 import ExpertQuote from "../components/ExpertQuote";
 import Button from "../components/Button";
@@ -13,7 +14,7 @@ import PricingCalculator from "../components/PricingCalculator";
 import { 
     CheckCircle, Shield, ShieldCheck, GraduationCap, FileText, ChevronDown, 
     MessageSquare, BookOpen, Star, Clock, Zap, Award, Sparkles, Check,
-    ArrowRight, Layers, Search, Edit3
+    ArrowRight, Layers, Search, Edit3, MapPin
 } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import reviewsData from "../data/reviews.json";
@@ -280,8 +281,8 @@ const SubjectCityPage = () => {
 
     const pageDescription = metaOverride?.desc
         || (pageType === "subject"
-            ? `Professional ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. ${serviceVerb.usp} 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround.`
-            : `Get professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. 100% Turnitin-safe, verified PhD specialists, and urgent 12-hour turnaround. ${specializedData.desc}`);
+            ? `Expert ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express delivery.`
+            : `Professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express.`);
     
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
@@ -391,10 +392,18 @@ const SubjectCityPage = () => {
                 <meta property="og:title" content={pageMetaTitle} />
                 <meta property="og:description" content={pageDescription} />
                 <meta property="og:url" content={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content={pageMetaTitle} />
+                <meta name="twitter:description" content={pageDescription} />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 
                 {/* Hreflang alternates */}
-                <link rel="alternate" hreflang="x-default" href={url} />
-                <link rel="alternate" hreflang="en" href={url} />
+                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${serviceSlug}/`} />
+                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${serviceSlug}/`} />
                 {service.countries?.map(c => {
                     const cSubjects = countrySubjects[c.slug] || [];
                     const cCities = countryCities[c.slug] || [];
@@ -469,10 +478,10 @@ const SubjectCityPage = () => {
                         },
                         "aggregateRating": {
                             "@type": "AggregateRating",
-                            "ratingValue": "4.9",
-                            "reviewCount": "1450",
+                            "ratingValue": reviewsData.summary.overallRating.toFixed(1),
                             "bestRating": "5",
-                            "worstRating": "1"
+                            "worstRating": "1",
+                            "ratingCount": reviewsData.summary.totalReviews
                         },
                         "review": (reviewsData.testimonials || []).map(rev => ({
                             "@type": "Review",
@@ -705,6 +714,34 @@ const SubjectCityPage = () => {
                                     dangerouslySetInnerHTML={{ __html: processedHtml }}
                                 />
                             )}
+
+                            {/* Programmatic Content Modules: 800-1200 words of unique academic content */}
+                            {(() => {
+                                const ICON_MAP = { BookOpen, FileText, GraduationCap, Zap, ShieldCheck, Layers, MapPin, Award };
+                                const contentSections = assembleUniqueContent(
+                                    pageType === 'subject' ? specializedSlug : null,
+                                    serviceSlug,
+                                    countrySlug,
+                                    pageType === 'city' ? specializedSlug : null,
+                                    pageType,
+                                    cleanSubjectName
+                                );
+                                if (!contentSections || contentSections.length === 0) return null;
+                                return contentSections.map((section, idx) => {
+                                    const SectionIcon = ICON_MAP[section.icon] || BookOpen;
+                                    return (
+                                        <div key={idx} className="glass-card p-6 border-white/10 space-y-3">
+                                            <h3 className="text-lg font-bold text-text-primary font-heading flex items-center gap-2">
+                                                <SectionIcon className="text-accent-gold" size={20} />
+                                                {section.heading}
+                                            </h3>
+                                            <div className="text-sm text-text-secondary leading-relaxed whitespace-pre-line">
+                                                {section.content}
+                                            </div>
+                                        </div>
+                                    );
+                                });
+                            })()}
                             
                             {/* Guarantees Box */}
                             <div className="glass-card p-6 border-accent-gold/20 space-y-3">

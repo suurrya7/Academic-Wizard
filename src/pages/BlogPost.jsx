@@ -147,7 +147,22 @@ const BlogPost = () => {
         })
         : 'Latest';
 
-    const canonicalUrl = `https://academicwizard.online/blog/${postData?.slug}/`;
+    // Canonical overrides: blog posts that cannibalize service pages point to the service page
+    const CANONICAL_OVERRIDES = {
+        'mastering-assignment-help-a-guide-for-usa-university-students': '/services/assignment-help/usa/',
+        'assignment-help-in-the-uk-what-every-student-should-know': '/services/assignment-help/uk/',
+        'the-complete-guide-to-essay-help-for-university-students': '/services/essay-help/',
+        'how-to-get-reliable-assignment-help-in-australia': '/services/assignment-help/australia/',
+        'the-ultimate-guide-to-dissertation-writing-services': '/services/dissertation-help/',
+        'literature-review-writing-guide-for-graduate-students': '/services/literature-review/',
+        'professional-editing-and-proofreading-for-academic-papers': '/services/editing-proofreading/',
+        'research-paper-writing-tips-for-college-students': '/services/research-paper-help/',
+    };
+
+    const overrideCanonical = CANONICAL_OVERRIDES[postData?.slug];
+    const canonicalUrl = overrideCanonical
+        ? `https://academicwizard.online${overrideCanonical}`
+        : `https://academicwizard.online/blog/${postData?.slug}/`;
     const postTitle = `${postData?.title} | Academic Wizard Blog`;
     const postDescription = postData?.excerpt || postData?.title || '';
 

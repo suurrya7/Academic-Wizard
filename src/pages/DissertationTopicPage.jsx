@@ -107,6 +107,14 @@ const DissertationTopicPage = () => {
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:url" content={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={metaDescription} />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

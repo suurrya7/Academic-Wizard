@@ -132,10 +132,10 @@ const ServicePage = () => {
         },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "1450",
+            "ratingValue": reviewsData.summary.overallRating.toFixed(1),
             "bestRating": "5",
-            "worstRating": "1"
+            "worstRating": "1",
+            "ratingCount": reviewsData.summary.totalReviews
         },
         "review": (reviewsData.testimonials || []).map(rev => ({
             "@type": "Review",
@@ -162,6 +162,15 @@ const ServicePage = () => {
                 <meta property="og:description" content={service.metaDescription} />
                 <meta property="og:url" content={`https://academicwizard.online/services/${service.slug}/`} />
                 
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={service.metaDescription} />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+
                 {/* Hreflang alternate tags linking parent to regional alternate variations */}
                 <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}/`} />
                 <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}/`} />

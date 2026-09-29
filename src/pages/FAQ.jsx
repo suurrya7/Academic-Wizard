@@ -140,19 +140,27 @@ const FAQ = () => {
     return (
         <div className="page-faq">
             <Helmet>
-                <title>Frequently Asked Questions | Academic Wizard</title>
-                <meta name="description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
+                <title>Assignment Help & Essay Writing FAQ | Academic Wizard</title>
+                <meta name="description" content="Answers to common questions about Academic Wizard's assignment help, essay writing, dissertation support, pricing, revisions, and confidentiality." />
                 <link rel="canonical" href="https://academicwizard.online/faq/" />
-                <meta property="og:title" content="Frequently Asked Questions | Academic Wizard" />
-                <meta property="og:description" content="Find quick answers to common questions about Academic Wizard's professional academic assistance and research support services." />
+                <meta property="og:title" content="Assignment Help FAQ | Academic Wizard" />
+                <meta property="og:description" content="Answers to common questions about assignment help, essay writing, pricing, and confidentiality." />
                 <meta property="og:url" content="https://academicwizard.online/faq/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Assignment Help & Essay Writing FAQ" />
+                <meta name="twitter:description" content="Answers to common questions about assignment help, essay writing, pricing, and confidentiality." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
                 </script>
             </Helmet>
 
             <PageHeader
-                title="Frequently Asked Questions"
+                title="Assignment Help & Essay Writing FAQ"
                 subtitle="Everything you need to know about our academic services."
                 breadcrumbs={[
                     { name: 'Home', url: '/' },
