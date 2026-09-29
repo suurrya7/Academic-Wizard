@@ -21,6 +21,13 @@ const TermsOfService = () => {
                 <meta property="og:description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
                 <meta property="og:url" content="https://academicwizard.online/terms-of-service/" />
                 <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Terms of Service | Academic Wizard" />
+                <meta name="twitter:description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(termsSchema)}
                 </script>

@@ -13,9 +13,17 @@ const Services = () => {
                 <title>Academic Writing Services & Consulting | Academic Wizard</title>
                 <meta name="description" content="Explore our comprehensive range of academic services including essay help, dissertation consulting, and research support." />
                 <link rel="canonical" href="https://academicwizard.online/services/" />
-                <meta property="og:title" content="Our Academic Services | Academic Wizard" />
+                <meta property="og:title" content="Academic Writing Services & Consulting | Academic Wizard" />
                 <meta property="og:description" content="Explore Academic Wizard's comprehensive range of academic services." />
                 <meta property="og:url" content="https://academicwizard.online/services/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Academic Writing Services & Consulting | Academic Wizard" />
+                <meta name="twitter:description" content="Explore Academic Wizard's comprehensive range of academic services." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
             
                 <script type="application/ld+json">
                     {JSON.stringify({

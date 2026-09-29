@@ -21,6 +21,13 @@ const PrivacyPolicy = () => {
                 <meta property="og:description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
                 <meta property="og:url" content="https://academicwizard.online/privacy-policy/" />
                 <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
+                <meta property="og:site_name" content="Academic Wizard" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@academic_wizz" />
+                <meta name="twitter:title" content="Privacy Policy | Academic Wizard" />
+                <meta name="twitter:description" content="Read our privacy policy to understand how Academic Wizard protects your personal and academic data." />
+                <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(policySchema)}
                 </script>
