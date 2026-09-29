@@ -2,11 +2,11 @@
 // Combines all subject, country, city, and service content modules
 // Used by SubjectCityPage.jsx to render 800-1200 words of unique content per page
 
-import { nursing, law, psychology, education, sociology, history } from './contentModules_subjects_group1';
-import { mba, business, accounting, finance, marketing, economics } from './contentModules_subjects_group2';
-import { computerScience, engineering, dataScience, englishLiterature, healthcare } from './contentModules_subjects_group3';
-import { countryModules, serviceModules } from './contentModules_countries';
-import { cityModules } from './contentModules_cities';
+import { nursing, law, psychology, education, sociology, history } from './contentModules_subjects_group1.js';
+import { mba, business, accounting, finance, marketing, economics } from './contentModules_subjects_group2.js';
+import { computerScience, engineering, dataScience, englishLiterature, healthcare } from './contentModules_subjects_group3.js';
+import { countryModules, serviceModules } from './contentModules_countries.js';
+import { cityModules } from './contentModules_cities.js';
 
 // Map subject slugs (from URL) to their content modules
 export const subjectModules = {

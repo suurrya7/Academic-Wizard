@@ -32,7 +32,7 @@ const ServicesDirectory = () => {
     return (
         <div className="page-services-directory">
             <Helmet>
-                <title>Academic Writing Services | All Subjects & Countries | Academic Wizard</title>
+                <title>Academic Writing Services Directory | Academic Wizard</title>
                 <meta 
                     name="description" 
                     content="Browse 1,400+ academic writing services: assignment help, essay writing, and dissertation support across UK, USA, Australia, Canada, and 200+ subjects." 

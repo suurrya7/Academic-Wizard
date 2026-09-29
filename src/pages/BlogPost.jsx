@@ -224,12 +224,14 @@ const BlogPost = () => {
                 <meta property="og:description" content={postDescription} />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:type" content="article" />
+                <meta property="og:image" content={postData?.image || "https://academicwizard.online/academic-wizard-favicon.webp"} />
                 <meta property="og:site_name" content="Academic Wizard" />
-                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@academic_wizz" />
                 <meta name="twitter:creator" content="@academic_wizz" />
                 <meta name="twitter:title" content={postTitle} />
                 <meta name="twitter:description" content={postDescription} />
+                <meta name="twitter:image" content={postData?.image || "https://academicwizard.online/academic-wizard-favicon.webp"} />
                 <script type="application/ld+json">
                     {JSON.stringify(articleSchema)}
                 </script>

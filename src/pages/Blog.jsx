@@ -135,7 +135,7 @@ const Blog = () => {
     return (
         <div className="page-blog">
             <Helmet>
-                <title>Assignment Help Guides & Academic Writing Tips | Academic Wizard</title>
+                <title>Assignment Help Guides & Writing Tips | Academic Wizard</title>
                 <meta name="description" content="Expert guides on assignment help, essay writing, dissertation tips, literature reviews, and study strategies. Updated weekly by PhD academics." />
                 <link rel="canonical" href="https://academicwizard.online/blog/" />
                 <meta property="og:title" content="Assignment Help Guides & Academic Writing Tips | Academic Wizard" />
