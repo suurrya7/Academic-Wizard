@@ -167,7 +167,7 @@ const ServicePage = () => {
                 <meta property="og:site_name" content="Academic Wizard" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@academic_wizz" />
-                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:title" content={serviceMetaTitle} />
                 <meta name="twitter:description" content={service.metaDescription} />
                 <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
 
