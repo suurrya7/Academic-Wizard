@@ -1,5 +1,105 @@
 [
   {
+    "title": "Managing Qualitative Coding Drift in NVivo: A 2026 Troubleshooting Guide",
+    "slug": "managing-qualitative-coding-drift-in-nvivo-a-2026-troubleshooting-guide",
+    "excerpt": "Is your coding drifting? Discover expert techniques to ensure consistency and minimize researcher bias in your NVivo qualitative analysis for 2026.",
+    "keywords": [
+      "qualitative coding drift in NVivo",
+      "NVivo thematic analysis reliability",
+      "qualitative research data consistency",
+      "minimizing researcher bias NVivo",
+      "qualitative coding audit trail"
+    ],
+    "primaryKeyword": "qualitative coding drift in NVivo",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-09-30T07:47:44.247414+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/managing-qualitative-coding-drift-in-nvivo-a-2026-troubleshooting-guide.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Zotero PDF Metadata Cleanup: Fixing Broken Citations for Your Thesis",
+    "slug": "zotero-pdf-metadata-cleanup-fixing-broken-citations-for-your-thesis",
+    "excerpt": "Stop manually fixing your references. Learn the most efficient workflows to clean up messy Zotero PDF metadata and perfect your dissertation citations.",
+    "keywords": [
+      "fixing Zotero PDF metadata errors",
+      "Zotero citation management for dissertations",
+      "organizing Zotero library metadata",
+      "Zotero PDF renaming best practices",
+      "automated citation cleanup tools"
+    ],
+    "primaryKeyword": "fixing Zotero PDF metadata errors",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-09-30T07:48:13.740860+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-pdf-metadata-cleanup-fixing-broken-citations-for-your-thesis.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Ethical AI Citation: Proper Attribution for Modern Academic Research",
+    "slug": "ethical-ai-citation-proper-attribution-for-modern-academic-research-2",
+    "excerpt": "Don't get flagged for accidental plagiarism. Learn the gold standard for citing generative AI tools ethically in your university research papers today.",
+    "keywords": [
+      "ethical AI citation guidelines",
+      "citing AI tools in research papers",
+      "APA 7 citation for generative AI",
+      "academic integrity and AI usage",
+      "transparent AI research methods"
+    ],
+    "primaryKeyword": "ethical AI citation guidelines",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-09-30T07:48:40.896203+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-citation-proper-attribution-for-modern-academic-research-2.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Mastering Chicago 17: Handling Complex Multi-Volume Archival Citations",
+    "slug": "mastering-chicago-17-handling-complex-multi-volume-archival-citations",
+    "excerpt": "Struggling with multi-volume footnotes? Master the Chicago 17 style for archival sources and ensure your thesis citations are perfectly formatted.",
+    "keywords": [
+      "Chicago 17 multi-volume citation",
+      "Chicago 17 archival footnote format",
+      "formatting archival research papers",
+      "complex Chicago style citation rules",
+      "citing rare archival collections"
+    ],
+    "primaryKeyword": "Chicago 17 multi-volume citation",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-09-30T07:49:14.186131+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/mastering-chicago-17-handling-complex-multi-volume-archival-citations.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
     "title": "Turnitin AI Flags: How to Verify Your Original Voice in 2026",
     "slug": "turnitin-ai-flags-how-to-verify-your-original-voice-in-2026",
     "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, verify your writing process, and prepare a factual response to maintain your academic record.",

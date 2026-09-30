@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-29
+        **Last updated**: 2026-09-30
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero PDF Metadata Cleanup: Fixing Broken Citations for Your Thesis](https://academicwizard.online/blog/zotero-pdf-metadata-cleanup-fixing-broken-citations-for-your-thesis/)**
+  - Excerpt: Stop manually fixing your references. Learn the most efficient workflows to clean up messy Zotero PDF metadata and perfect your dissertation citations.
+  - Keywords: fixing Zotero PDF metadata errors, Zotero citation management for dissertations, organizing Zotero library metadata, Zotero PDF renaming best practices, automated citation cleanup tools
+  - Target Region: USA
+  - Published: 2026-09-30
 
 - **[Dissertation Data Management: Syncing NVivo with Zotero Seamlessly](https://academicwizard.online/blog/dissertation-data-management-syncing-nvivo-with-zotero-seamlessly/)**
   - Excerpt: Struggling to organize your PhD thesis? Discover a professional workflow to sync your Zotero library with NVivo for error-free thematic data analysis.
@@ -702,6 +708,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Editing and Proofreading
 
+- **[Mastering Chicago 17: Handling Complex Multi-Volume Archival Citations](https://academicwizard.online/blog/mastering-chicago-17-handling-complex-multi-volume-archival-citations/)**
+  - Excerpt: Struggling with multi-volume footnotes? Master the Chicago 17 style for archival sources and ensure your thesis citations are perfectly formatted.
+  - Keywords: Chicago 17 multi-volume citation, Chicago 17 archival footnote format, formatting archival research papers, complex Chicago style citation rules, citing rare archival collections
+  - Target Region: Australia
+  - Published: 2026-09-30
+
 - **[APA 7 Citation Nuances: Handling Multi-Author Digital Media](https://academicwizard.online/blog/apa-7-citation-nuances-handling-multi-author-digital-media/)**
   - Excerpt: Master the latest APA 7 rules for multi-author digital sources. Avoid common citation penalties with our clear guide to complex attribution formatting.
   - Keywords: apa 7 citation multi-author digital media, APA 7 reference formatting, complex citation rules, academic writing standards, digital source attribution
@@ -1100,6 +1112,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Essay Writing
 
+- **[Ethical AI Citation: Proper Attribution for Modern Academic Research](https://academicwizard.online/blog/ethical-ai-citation-proper-attribution-for-modern-academic-research-2/)**
+  - Excerpt: Don't get flagged for accidental plagiarism. Learn the gold standard for citing generative AI tools ethically in your university research papers today.
+  - Keywords: ethical AI citation guidelines, citing AI tools in research papers, APA 7 citation for generative AI, academic integrity and AI usage, transparent AI research methods
+  - Target Region: Canada
+  - Published: 2026-09-30
+
 - **[Ethical AI Citation: Proper Attribution for Modern Academic Research](https://academicwizard.online/blog/ethical-ai-citation-proper-attribution-for-modern-academic-research/)**
   - Excerpt: Unsure how to reference AI? Get the definitive guide on ethical AI citation and proper attribution to protect your academic reputation this semester.
   - Keywords: how to cite AI in academic research, APA 7 citation for AI tools, ethical AI attribution in essays, avoiding plagiarism with AI, academic integrity guidelines 2026
@@ -1445,6 +1463,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Managing Qualitative Coding Drift in NVivo: A 2026 Troubleshooting Guide](https://academicwizard.online/blog/managing-qualitative-coding-drift-in-nvivo-a-2026-troubleshooting-guide/)**
+  - Excerpt: Is your coding drifting? Discover expert techniques to ensure consistency and minimize researcher bias in your NVivo qualitative analysis for 2026.
+  - Keywords: qualitative coding drift in NVivo, NVivo thematic analysis reliability, qualitative research data consistency, minimizing researcher bias NVivo, qualitative coding audit trail
+  - Target Region: UK
+  - Published: 2026-09-30
 
 - **[Turnitin AI Flags: How to Verify Your Original Voice in 2026](https://academicwizard.online/blog/turnitin-ai-flags-how-to-verify-your-original-voice-in-2026/)**
   - Excerpt: Flagged by Turnitin for AI? Learn how to audit your draft, verify your writing process, and prepare a factual response to maintain your academic record.
