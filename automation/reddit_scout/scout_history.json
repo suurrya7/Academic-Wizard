@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-30T04:21:51.790773+00:00",
+  "last_run": "2026-09-30T10:41:15.663240+00:00",
   "daily_count": {
     "date": "2026-09-30",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -65,7 +65,8 @@
     "1wswby8",
     "1wt3k4t",
     "1wtbfbz",
-    "1wtsshs"
+    "1wtsshs",
+    "1wu0o8d"
   ],
   "history": [
     {
@@ -555,7 +556,15 @@
       "title": "Redditors who have been stabbed, how badly does it actually hurt?",
       "posted_at": "2026-09-30T04:21:51.790769+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1wtsshs/redditors_who_have_been_stabbed_how_badly_does_it/"
+    },
+    {
+      "post_id": "1wu0o8d",
+      "subreddit": "Advice",
+      "mode": "karma",
+      "title": "Women , what helped you be more confident in your body?",
+      "posted_at": "2026-09-30T10:41:15.663234+00:00",
+      "url": "https://reddit.com/r/Advice/comments/1wu0o8d/women_what_helped_you_be_more_confident_in_your/"
     }
   ],
-  "last_comment_posted_at": "2026-09-30T04:21:51.790753+00:00"
+  "last_comment_posted_at": "2026-09-30T10:41:15.663218+00:00"
 }
