@@ -237,7 +237,15 @@ const Contact = () => {
                                 const subject = document.getElementById('subject').value;
                                 const message = document.getElementById('message').value;
                                 const text = `*New Contact Form Lead*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
-                                window.open(`https://wa.me/919509893638?text=${text}`, '_blank');
+                                const waWindow = window.open(`https://wa.me/919509893638?text=${text}`, '_blank');
+                                // Fallback: if popup is blocked or user is on desktop without WhatsApp Web
+                                setTimeout(() => {
+                                    if (!waWindow || waWindow.closed) {
+                                        const mailSubject = encodeURIComponent(`Academic Wizard Inquiry: ${subject}`);
+                                        const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`);
+                                        window.location.href = `mailto:hello@academicwizard.online?subject=${mailSubject}&body=${mailBody}`;
+                                    }
+                                }, 2500);
                             }}>
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">Full Name</label>

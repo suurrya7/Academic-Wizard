@@ -51,11 +51,27 @@ function generateBlogPages() {
 
     let generated = 0;
 
+    // Canonical overrides: blog posts that cannibalize service pages
+    // MUST match the exact same map in src/pages/BlogPost.jsx (lines 151-160)
+    const CANONICAL_OVERRIDES = {
+        'mastering-assignment-help-a-guide-for-usa-university-students': '/services/assignment-help/usa/',
+        'assignment-help-in-the-uk-what-every-student-should-know': '/services/assignment-help/uk/',
+        'the-complete-guide-to-essay-help-for-university-students': '/services/essay-help/',
+        'how-to-get-reliable-assignment-help-in-australia': '/services/assignment-help/australia/',
+        'the-ultimate-guide-to-dissertation-writing-services': '/services/dissertation-help/',
+        'literature-review-writing-guide-for-graduate-students': '/services/literature-review/',
+        'professional-editing-and-proofreading-for-academic-papers': '/services/editing-proofreading/',
+        'research-paper-writing-tips-for-college-students': '/services/research-paper-help/',
+    };
+
     for (const post of posts) {
         const slug = post.slug;
         if (!slug) continue;
 
-        const canonicalUrl = `${SITE_URL}/blog/${slug}/`;
+        const overrideCanonical = CANONICAL_OVERRIDES[slug];
+        const canonicalUrl = overrideCanonical
+            ? `${SITE_URL}${overrideCanonical}`
+            : `${SITE_URL}/blog/${slug}/`;
         const title = escapeHtml(post.title || slug.replace(/-/g, ' '));
         const description = escapeHtml(post.excerpt || post.title || '');
         const publishDate = post.date || new Date().toISOString();
@@ -206,9 +222,11 @@ function generateBlogPages() {
         let noscriptContent = '';
         if (existsSync(postHtmlPath)) {
             const postContent = readFileSync(postHtmlPath, 'utf-8');
-            // Extract just the text content (strip script tags for safety)
+            // Extract just the text content (strip script, meta, and link tags for clean SEO fallback)
             const cleanContent = postContent
                 .replace(/<script[\s\S]*?<\/script>/gi, '')
+                .replace(/<meta[^>]*>/gi, '')
+                .replace(/<link[^>]*>/gi, '')
                 .slice(0, 5000); // First 5KB is enough for SEO
             noscriptContent = `
     <noscript>

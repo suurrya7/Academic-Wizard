@@ -22,8 +22,10 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Services', path: '/services/' },
+        { name: 'Faculty', path: '/experts/' },
+        { name: 'Samples', path: '/samples/' },
         { name: 'Free Tools', path: '/tools/' },
-        { name: 'About Us', path: '/about/' },
+        { name: 'About', path: '/about/' },
         { name: 'FAQs', path: '/faq/' },
         { name: 'Blog', path: '/blog/' },
         { name: 'Contact', path: '/contact/' },
@@ -49,7 +51,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
+                <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
                     {navLinks && navLinks.map((link) => {
                         const isActive = link.path === '/' 
                             ? location?.pathname === '/' 

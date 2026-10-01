@@ -666,6 +666,24 @@ const CitationGenerator = () => {
                                         {citation.intext || 'Fill in the fields to generate...'}
                                     </div>
                                 </div>
+
+                                {/* Dynamic Post-Action CTA */}
+                                <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-accent-gold/15 to-bg-primary border border-accent-gold/30 text-left">
+                                    <p className="text-white font-heading text-xs font-bold mb-1">
+                                        Need 30+ Citations or a Complete Literature Review?
+                                    </p>
+                                    <p className="text-white/70 text-[11px] mb-3 leading-relaxed">
+                                        Our academic research specialists compile, format, and cross-reference entire bibliographies in APA 7, OSCOLA, Harvard, and Chicago.
+                                    </p>
+                                    <a
+                                        href={`https://wa.me/919509893638?text=${encodeURIComponent(`Hello Academic Wizard! I'm using your Citation Generator (${style.toUpperCase()}) and need help compiling a full bibliography/literature review.`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn-primary inline-flex items-center gap-1.5 py-2 px-3 text-[11px] font-bold uppercase tracking-wider w-full justify-center shadow-md hover:shadow-accent-gold/20"
+                                    >
+                                        💬 Chat With Reference Specialist
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

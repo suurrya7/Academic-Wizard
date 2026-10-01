@@ -163,7 +163,10 @@ const BlogPost = () => {
     const canonicalUrl = overrideCanonical
         ? `https://academicwizard.online${overrideCanonical}`
         : `https://academicwizard.online/blog/${postData?.slug}/`;
-    const postTitle = `${postData?.title} | Academic Wizard Blog`;
+    let postTitle = `${postData?.title} | Academic Wizard Blog`;
+    if (postTitle.length > 60) {
+        postTitle = postTitle.substring(0, 57) + '...';
+    }
     const postDescription = postData?.excerpt || postData?.title || '';
 
     // Article JSON-LD Schema for Google
@@ -394,6 +397,23 @@ const BlogPost = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
+
+                {/* Sticky Mobile CTA Bar */}
+                <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-bg-primary/95 backdrop-blur-md border-t border-accent-gold/20 p-3 flex items-center justify-between gap-3 shadow-2xl">
+                    <div className="flex-1 min-w-0">
+                        <p className="text-white text-xs font-heading font-bold truncate">Need Expert Assistance?</p>
+                        <p className="text-white/60 text-[10px] truncate">PhD specialists · 12-hour delivery</p>
+                    </div>
+                    <a
+                        href={`https://wa.me/919509893638?text=${encodeURIComponent(`Hello Academic Wizard! I am reading "${postData?.title || 'your blog guide'}" and need coursework help.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 bg-accent-gold text-black px-4 py-2.5 rounded-lg text-xs font-bold font-heading uppercase tracking-wider shadow-md"
+                        style={{ backgroundColor: 'var(--accent-gold)' }}
+                    >
+                        WhatsApp Us
+                    </a>
                 </div>
             </article>
 

@@ -11,11 +11,8 @@
   <meta name="robots" content="max-image-preview:large" />
   <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
   <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
-  <script>
-    if (location.pathname !== '/' && !location.pathname.endsWith('/') && !location.pathname.split('/').pop().includes('.')) {
-      location.replace(location.pathname + '/' + location.search + location.hash);
-    }
-  </script>
+  <link rel="preload" as="image" type="image/webp" href="/academic-wizard-favicon.webp" />
+  <!-- Trailing slash enforcement handled by server-side 301 redirect in .htaccess (better for SEO crawl budget) -->
   <!-- All SEO tags (title, meta description, canonical, OG, Twitter, JSON-LD) are injected per-page by react-helmet-async -->
 </head>
 

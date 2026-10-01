@@ -378,17 +378,27 @@ const AIDetector = () => {
                                         </div>
                                     )}
 
-                                    {/* Premium Call to action (Humanizer Streamlit hook) */}
-                                    {result.aiProbability > 45 && (
+                                    {/* Premium Call to action (Humanizer & Expert PhD Humanization hook) */}
+                                    {result.aiProbability > 30 && (
                                         <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 space-y-3">
                                             <p className="text-xs text-red-200 leading-relaxed">
-                                                Audited scores show robotically structured sentences and phrases. Bypass AI scanning by runnning our Text Humanizer.
+                                                Audited scores show {result.aiProbability}% AI patterns. Universities flag papers with &gt;10% AI. Have our PhD editors rewrite your draft to guarantee 0% Turnitin AI detection.
                                             </p>
-                                            <Link to="/tools/ai-humanizer/">
-                                                <Button type="outline" className="w-full py-2.5 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white">
-                                                    Humanize Text Now
-                                                </Button>
-                                            </Link>
+                                            <div className="flex flex-col gap-2">
+                                                <a
+                                                    href={`https://wa.me/919509893638?text=${encodeURIComponent(`Hello Academic Wizard! My essay showed ${result.aiProbability}% AI detection on your scanner. I need an expert human rewrite to get 0% AI on Turnitin.`)}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="btn-primary inline-flex items-center justify-center py-2.5 px-4 text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-accent-gold/20"
+                                                >
+                                                    💬 Get 0% AI Guarantee via WhatsApp
+                                                </a>
+                                                <Link to="/tools/ai-humanizer/">
+                                                    <Button type="outline" className="w-full py-2 text-[10px] border-red-500/50 hover:bg-red-500 text-red-200 hover:text-white">
+                                                        Or Try Free AI Humanizer Tool →
+                                                    </Button>
+                                                </Link>
+                                            </div>
                                         </div>
                                     )}
                                 </div>

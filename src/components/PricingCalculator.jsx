@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle, ShieldCheck, Clock, Award, CheckCircle2, Sparkles } from 'lucide-react';
 import Button from './Button';
 
@@ -7,7 +7,9 @@ const CURRENCIES = {
     GBP: { symbol: '£', rate: 0.78, label: 'GBP (£)' },
     AUD: { symbol: 'A$', rate: 1.52, label: 'AUD (A$)' },
     CAD: { symbol: 'C$', rate: 1.36, label: 'CAD (C$)' },
-    EUR: { symbol: '€', rate: 0.92, label: 'EUR (€)' }
+    EUR: { symbol: '€', rate: 0.92, label: 'EUR (€)' },
+    INR: { symbol: '₹', rate: 83.5, label: 'INR (₹)' },
+    SGD: { symbol: 'S$', rate: 1.34, label: 'SGD (S$)' }
 };
 
 const SUBJECTS = [
@@ -22,8 +24,15 @@ const SUBJECTS = [
     'Dissertation & PhD Thesis'
 ];
 
-const PricingCalculator = () => {
-    const [currency, setCurrency] = useState('USD');
+const PricingCalculator = ({ defaultCurrency = 'USD' }) => {
+    const initialCurrency = CURRENCIES[defaultCurrency] ? defaultCurrency : 'USD';
+    const [currency, setCurrency] = useState(initialCurrency);
+
+    useEffect(() => {
+        if (defaultCurrency && CURRENCIES[defaultCurrency]) {
+            setCurrency(defaultCurrency);
+        }
+    }, [defaultCurrency]);
     const [subject, setSubject] = useState('Nursing & Healthcare');
     const [academicLevel, setAcademicLevel] = useState('undergraduate');
     const [wordCount, setWordCount] = useState(1500);

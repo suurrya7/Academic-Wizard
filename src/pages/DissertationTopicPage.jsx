@@ -47,7 +47,10 @@ const DissertationTopicPage = () => {
         setTimeout(() => setCopiedId(null), 2500);
     };
 
-    const pageTitle = `Curated ${topicData.title} (2026/2027) | Academic Wizard`;
+    let pageTitle = `Curated ${topicData.title} (2026/2027) | Academic Wizard`;
+    if (pageTitle.length > 60) {
+        pageTitle = pageTitle.substring(0, 57) + '...';
+    }
     const metaDescription = `Explore authentic 2026/2027 ${topicData.category.toLowerCase()} dissertation and thesis topics with research questions, recommended methodologies, and proposal frameworks.`;
     const url = `https://academicwizard.online/blog/dissertation-topics/${topicSlug}/`;
     const baseWhatsappUrl = `https://wa.me/919509893638?text=`;

@@ -405,6 +405,8 @@
 
         - Homepage: https://academicwizard.online/
         - Services: https://academicwizard.online/services/
+        - Faculty & Experts: https://academicwizard.online/experts/
+        - Writing Samples: https://academicwizard.online/samples/
         - Blog: https://academicwizard.online/blog/
         - FAQs: https://academicwizard.online/faq/
         - Contact: https://academicwizard.online/contact/

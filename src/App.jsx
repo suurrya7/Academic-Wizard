@@ -29,6 +29,8 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const DissertationTopicPage = React.lazy(() => import('./pages/DissertationTopicPage'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
+const Experts = React.lazy(() => import('./pages/Experts'));
+const Samples = React.lazy(() => import('./pages/Samples'));
 
 // Tools Pages (Lazy Loaded)
 const Tools = React.lazy(() => import('./pages/Tools'));
@@ -72,6 +74,8 @@ function App() {
                 <Route path="/services/:serviceSlug/:countrySlug" element={<CountryServicePage />} />
                 <Route path="/services/:serviceSlug/:countrySlug/:specializedSlug" element={<SubjectCityPage />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/experts" element={<Experts />} />
+                <Route path="/samples" element={<Samples />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/dissertation-topics/:topicSlug" element={<DissertationTopicPage />} />

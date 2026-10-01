@@ -291,6 +291,26 @@ const GrammarChecker = () => {
                                     ))}
                                 </div>
                             )}
+
+                            {/* Dynamic Post-Action CTA inside Audit Report */}
+                            {checked && !loading && matches.length > 0 && (
+                                <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-accent-gold/15 to-bg-primary border border-accent-gold/30 text-left">
+                                    <p className="text-white font-heading text-xs font-bold mb-1">
+                                        Found {matches.length} issue{matches.length > 1 ? 's' : ''}? Our editors catch everything.
+                                    </p>
+                                    <p className="text-white/70 text-[11px] mb-3 leading-relaxed">
+                                        Professional academic editing from £8/page — grammar, tone, OSCOLA/APA citations, and formatting included.
+                                    </p>
+                                    <a
+                                        href={`https://wa.me/919509893638?text=${encodeURIComponent(`Hello Academic Wizard! I used your Grammar Checker and found ${matches.length} issues. I'd like a quote for professional proofreading.`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn-primary inline-flex items-center gap-1.5 py-2 px-3 text-[11px] font-bold uppercase tracking-wider w-full justify-center shadow-md hover:shadow-accent-gold/20"
+                                    >
+                                        💬 Get Expert Editing on WhatsApp
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
 

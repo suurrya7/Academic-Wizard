@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Breadcrumbs from './Breadcrumbs';
 
-const PageHeader = ({ title, subtitle, breadcrumbs, backgroundImage }) => {
+const PageHeader = ({ title, subtitle, breadcrumbs, backgroundImage, ctaText, ctaLink, ctaSecondaryText, ctaSecondaryLink }) => {
     return (
         <section className="pt-40 pb-20 relative overflow-hidden">
             {backgroundImage && (
@@ -40,6 +40,31 @@ const PageHeader = ({ title, subtitle, breadcrumbs, backgroundImage }) => {
                     >
                         {subtitle}
                     </motion.p>
+                )}
+                {ctaText && ctaLink && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="flex flex-wrap justify-center gap-4 mt-8 relative z-10"
+                    >
+                        <a
+                            href={ctaLink}
+                            target={ctaLink.startsWith('http') ? '_blank' : undefined}
+                            rel={ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-base font-bold shadow-lg hover:shadow-accent-gold/20 transition-all"
+                        >
+                            {ctaText}
+                        </a>
+                        {ctaSecondaryText && ctaSecondaryLink && (
+                            <a
+                                href={ctaSecondaryLink}
+                                className="btn-secondary inline-flex items-center gap-2 px-8 py-4 text-base transition-all"
+                            >
+                                {ctaSecondaryText}
+                            </a>
+                        )}
+                    </motion.div>
                 )}
             </div>
             {!backgroundImage && (

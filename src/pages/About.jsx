@@ -23,10 +23,10 @@ const About = () => {
         <div className="page-about">
             <Helmet>
                 <title>About Us | Academic Wizard Writing Service</title>
-                <meta name="description" content="Learn about Academic Wizard — founded in 2018, trusted by 50,000+ students. 150+ PhD specialists offering assignment help, essay writing, and dissertation support worldwide." />
+                <meta name="description" content="Learn about Academic Wizard — founded in 2018, supporting university students across 8 countries. 150+ PhD specialists offering assignment help, essay writing, and dissertation support worldwide." />
                 <link rel="canonical" href="https://academicwizard.online/about/" />
                 <meta property="og:title" content="About Academic Wizard | Trusted Writing Service" />
-                <meta property="og:description" content="Founded in 2018, trusted by 50,000+ students. 150+ PhD specialists offering assignment help worldwide." />
+                <meta property="og:description" content="Founded in 2018, supporting university students across 8 countries. 150+ PhD specialists offering academic guidance worldwide." />
                 <meta property="og:url" content="https://academicwizard.online/about/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
@@ -34,7 +34,7 @@ const About = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@academic_wizz" />
                 <meta name="twitter:title" content="About Academic Wizard | Trusted Writing Service" />
-                <meta name="twitter:description" content="Founded in 2018, trusted by 50,000+ students. 150+ PhD specialists." />
+                <meta name="twitter:description" content="Founded in 2018, supporting university students across 8 countries. 150+ PhD specialists." />
                 <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 <script type="application/ld+json">
                     {JSON.stringify(aboutSchema)}

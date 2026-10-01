@@ -18,7 +18,13 @@
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
   RewriteRule ^ %1/ [R=301,L]
 
-  # 4. Standard SPA & Static File Fallbacks
+  # 4. Force Trailing Slash (Server-Side 301 — replaces client-side JS redirect)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteCond %{REQUEST_URI} !\.(html|js|css|png|jpg|jpeg|gif|ico|svg|webp|woff2?|ttf|eot|map|json|xml|txt)$
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+  # 5. Standard SPA & Static File Fallbacks
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

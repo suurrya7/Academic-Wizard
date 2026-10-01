@@ -281,8 +281,8 @@ const SubjectCityPage = () => {
 
     const pageDescription = metaOverride?.desc
         || (pageType === "subject"
-            ? `Expert ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express delivery.`
-            : `Professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express.`);
+            ? `Expert ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express. Get a free quote today!`
+            : `Professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. PhD specialists, 100% Turnitin-safe. Order now!`);
     
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 
@@ -352,16 +352,25 @@ const SubjectCityPage = () => {
             answer: `We provide free, unlimited revisions within your initial project scope. Your dedicated ${cleanSubjectName} specialist will fine-tune arguments, integrate tutor feedback, or adjust formatting until you are completely satisfied.`
         },
         ...(country.faqs || [])
-    ] : (country.faqs && country.faqs.length > 0 ? country.faqs : [
+    ] : [
         {
-            question: `How does Academic Wizard provide localized ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}?`,
-            answer: `Our academic mentors in ${country.name} deliver personalized 1-on-1 support calibrated to higher education institutions and specific university guidelines in ${cleanSubjectName}.`
+            question: `How do your academic mentors support university students in ${cleanSubjectName}?`,
+            answer: `Our faculty specialists are deeply familiar with syllabus rubrics, grading standards, and referencing conventions of universities in ${cleanSubjectName}. Every assignment is calibrated to local departmental marking benchmarks.`
         },
         {
-            question: `How fast can I connect with an academic specialist in ${cleanSubjectName}?`,
-            answer: `Our specialists are available 24/7. When you submit your assignment details via WhatsApp or live chat, an expert matching your faculty requirements reviews your brief within 3 minutes.`
-        }
-    ]);
+            question: `Can I get urgent 12-hour or 24-hour delivery in ${cleanSubjectName}?`,
+            answer: `Yes. We provide 24/7 express academic triage with turnaround windows as fast as 12 to 24 hours for urgent assignments, essays, and lab reports across ${country.name} universities.`
+        },
+        {
+            question: `Is every paper guaranteed Turnitin-safe and AI-free in ${cleanSubjectName}?`,
+            answer: `Every deliverable is written from scratch using peer-reviewed scholarly literature and includes a complimentary Turnitin similarity and AI detection report verifying 100% human authorship.`
+        },
+        {
+            question: `What referencing standards do your ${cleanSubjectName} specialists cover?`,
+            answer: `We cover all major university referencing conventions used across ${country.name}, including APA 7th, Harvard, OSCOLA, IEEE, Chicago, MLA 9th, and Vancouver formatting.`
+        },
+        ...(country.faqs || [])
+    ];
 
     const guaranteesList = country.guarantees || [
         "100% Plagiarism-Free & Turnitin AI Report Included",
@@ -402,8 +411,8 @@ const SubjectCityPage = () => {
                 <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 
                 {/* Hreflang alternates */}
-                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${serviceSlug}/`} />
-                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${serviceSlug}/`} />
+                <link rel="alternate" hreflang="x-default" href={url} />
+                <link rel="alternate" hreflang="en" href={url} />
                 {service.countries?.map(c => {
                     const cSubjects = countrySubjects[c.slug] || [];
                     const cCities = countryCities[c.slug] || [];
@@ -907,9 +916,78 @@ const SubjectCityPage = () => {
                     <p className="text-text-secondary max-w-2xl mx-auto mb-10 text-sm">
                         Select your academic level, deadline, and word count for an instant, transparent quote.
                     </p>
-                    <PricingCalculator />
+                    <PricingCalculator defaultCurrency={
+                        { uk: 'GBP', usa: 'USD', australia: 'AUD', canada: 'CAD', 
+                          india: 'INR', singapore: 'SGD', ireland: 'EUR', germany: 'EUR' 
+                        }[countrySlug] || 'USD'
+                    } />
                 </div>
             </section>
+
+            {/* Sibling Cross-Links — strengthens horizontal cluster architecture */}
+            {pageType === "subject" && (
+                <section className="py-16 bg-bg-primary border-t border-glass-border">
+                    <div className="container px-6 max-w-6xl mx-auto">
+                        <div className="text-center mb-10">
+                            <h2 className="text-2xl md:text-3xl font-bold font-heading text-text-primary mb-3">
+                                Related Disciplines in {country.name}
+                            </h2>
+                            <p className="text-text-secondary text-sm">
+                                Explore specialized academic assistance across other university faculties in {country.name}.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            {(countrySubjects[countrySlug] || [])
+                                .filter(s => s.slug !== specializedSlug)
+                                .slice(0, 8)
+                                .map(s => (
+                                    <Link
+                                        key={s.slug}
+                                        to={`/services/${serviceSlug}/${countrySlug}/${s.slug}/`}
+                                        className="glass-card p-4 rounded-xl text-center hover:border-accent-gold/40 transition-all block group"
+                                    >
+                                        <span className="text-sm text-text-primary font-medium group-hover:text-accent-gold transition-colors">
+                                            {s.name}
+                                        </span>
+                                    </Link>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {pageType === "city" && (
+                <section className="py-16 bg-bg-primary border-t border-glass-border">
+                    <div className="container px-6 max-w-6xl mx-auto">
+                        <div className="text-center mb-10">
+                            <h2 className="text-2xl md:text-3xl font-bold font-heading text-text-primary mb-3">
+                                Other Student Hubs in {country.name}
+                            </h2>
+                            <p className="text-text-secondary text-sm">
+                                Access university coursework support across major academic centers in {country.name}.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            {(countryCities[countrySlug] || [])
+                                .filter(c => c.slug !== specializedSlug)
+                                .slice(0, 8)
+                                .map(c => (
+                                    <Link
+                                        key={c.slug}
+                                        to={`/services/${serviceSlug}/${countrySlug}/${c.slug}/`}
+                                        className="glass-card p-4 rounded-xl text-center hover:border-accent-gold/40 transition-all block group"
+                                    >
+                                        <span className="text-sm text-text-primary font-medium group-hover:text-accent-gold transition-colors">
+                                            {c.name}
+                                        </span>
+                                    </Link>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Frequently Asked Questions */}
             {synthesizedFaqs.length > 0 && (

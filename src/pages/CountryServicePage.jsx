@@ -247,8 +247,8 @@ const CountryServicePage = () => {
                 <meta name="twitter:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
                 
                 {/* Hreflang alternates to tell Google this is location-specific content */}
-                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}/`} />
-                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}/`} />
+                <link rel="alternate" hreflang="x-default" href={`https://academicwizard.online/services/${service.slug}/${country.slug}/`} />
+                <link rel="alternate" hreflang="en" href={`https://academicwizard.online/services/${service.slug}/${country.slug}/`} />
                 {service.countries.map(c => (
                     <link 
                         key={c.slug} 
@@ -278,6 +278,10 @@ const CountryServicePage = () => {
                     { name: service.title, url: `/services/${service.slug}/` },
                     { name: country.name, url: `/services/${service.slug}/${country.slug}/` }
                 ]}
+                ctaText={`💬 Get ${country.name} Quote on WhatsApp`}
+                ctaLink={`https://wa.me/919509893638?text=Hello%20Academic%20Wizard!%20I%20need%20${encodeURIComponent(service.title)}%20help%20in%20${encodeURIComponent(country.name)}.`}
+                ctaSecondaryText="View Pricing Calculator ↓"
+                ctaSecondaryLink="#pricing"
             />
 
             {/* Social Proof Trust Bar */}
@@ -535,7 +539,7 @@ const CountryServicePage = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-20 bg-bg-secondary border-t border-glass-border">
+            <section id="pricing" className="py-20 bg-bg-secondary border-t border-glass-border">
                 <div className="container px-6 text-center">
                     <h2 className="text-3xl font-bold font-heading text-white mb-8">Transparent Pricing</h2>
                     <div className="max-w-4xl mx-auto mb-12">
@@ -543,7 +547,11 @@ const CountryServicePage = () => {
                             {pricingText}
                         </p>
                     </div>
-                    <PricingCalculator />
+                    <PricingCalculator defaultCurrency={
+                        { uk: 'GBP', usa: 'USD', australia: 'AUD', canada: 'CAD', 
+                          india: 'INR', singapore: 'SGD', ireland: 'EUR', germany: 'EUR' 
+                        }[countrySlug] || 'USD'
+                    } />
                 </div>
             </section>
 

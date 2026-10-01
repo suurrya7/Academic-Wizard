@@ -236,6 +236,34 @@ const Blog = () => {
                     </div>
                 </div>
 
+                {/* Commercial Bridge Service Promotion */}
+                <div className="glass-card p-6 sm:p-8 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-accent-gold/25 rounded-2xl bg-gradient-to-r from-accent-gold/10 via-bg-secondary to-bg-primary">
+                    <div className="space-y-2 max-w-2xl">
+                        <span className="text-[10px] uppercase tracking-[3px] font-heading text-accent-gold font-bold block">
+                            Direct Faculty Mentorship
+                        </span>
+                        <h2 className="text-xl sm:text-2xl font-bold font-heading text-white">
+                            Need Professional Assistance With Your Coursework?
+                        </h2>
+                        <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                            Our team of 150+ verified PhD specialists provides 100% Turnitin-safe assignment writing, dissertation guidance, and literature reviews tailored to UK, US, Australian, and global university rubrics.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-3 shrink-0 w-full md:w-auto">
+                        <Link to="/services/assignment-help/" className="btn-primary text-xs font-bold uppercase tracking-wider px-6 py-3">
+                            Explore Services →
+                        </Link>
+                        <a 
+                            href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard!%20I%20am%20browsing%20your%20blog%20and%20need%20urgent%20coursework%20help."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary text-xs font-bold uppercase tracking-wider px-6 py-3"
+                        >
+                            💬 Quick Quote
+                        </a>
+                    </div>
+                </div>
+
                 {status === 'loading' && (
                     <div className="glass-card p-12 text-center text-text-secondary" style={{ color: 'var(--text-secondary)' }}>
                         Loading latest academic guides...

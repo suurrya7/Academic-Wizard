@@ -56,6 +56,8 @@ export default defineConfig({
         '/services/', 
         '/services/directory/',
         '/about/', 
+        '/experts/',
+        '/samples/',
         '/faq/', 
         '/contact/', 
         '/blog/',

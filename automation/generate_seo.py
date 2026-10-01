@@ -36,8 +36,8 @@ STATIC_PAGES_DYNAMIC = [
     {"path": "services/directory", "changefreq": "weekly", "priority": "0.9"},  # Services Directory
 ]
 
-# Last manually updated: 2026-09-23. Change this date when you edit these pages.
-STATIC_CONTENT_DATE = "2026-09-23"
+# Last manually updated: 2026-10-01. Change this date when you edit these pages.
+STATIC_CONTENT_DATE = "2026-10-01"
 
 STATIC_PAGES_FIXED = [
     {"path": "services/assignment-help", "changefreq": "monthly", "priority": "0.9"},
@@ -48,6 +48,8 @@ STATIC_PAGES_FIXED = [
     {"path": "services/editing-proofreading", "changefreq": "monthly", "priority": "0.9"},
     {"path": "services/study-guidance", "changefreq": "monthly", "priority": "0.9"},
     {"path": "about", "changefreq": "monthly", "priority": "0.8"},
+    {"path": "experts", "changefreq": "monthly", "priority": "0.8"},
+    {"path": "samples", "changefreq": "monthly", "priority": "0.8"},
     {"path": "faq", "changefreq": "monthly", "priority": "0.7"},
     {"path": "contact", "changefreq": "monthly", "priority": "0.8"},
     {"path": "privacy-policy", "changefreq": "yearly", "priority": "0.3"},
@@ -377,6 +379,8 @@ def generate_llms_txt() -> None:
 
         - Homepage: {absolute_url('')}
         - Services: {absolute_url('services')}
+        - Faculty & Experts: {absolute_url('experts')}
+        - Writing Samples: {absolute_url('samples')}
         - Blog: {absolute_url('blog')}
         - FAQs: {absolute_url('faq')}
         - Contact: {absolute_url('contact')}

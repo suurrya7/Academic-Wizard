@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageSquare, Zap, Clock, ShieldCheck, ArrowRight } from 'lucide-react';
 
 const UrgentTriageBanner = ({ articleTitle = "Academic Guidance", variant = "top" }) => {
-    const defaultWhatsAppNumber = "447476840612";
+    const defaultWhatsAppNumber = "919509893638";
     const prefilledMessage = encodeURIComponent(
         `Hello Academic Wizard!\n\n` +
         `I am reading your article on "${articleTitle}" and need urgent assistance with my university coursework.\n\n` +

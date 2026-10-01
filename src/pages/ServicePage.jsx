@@ -116,8 +116,8 @@ const ServicePage = () => {
         "sku": `AW-${service.slug.toUpperCase()}`,
         "offers": {
             "@type": "Offer",
-            "price": "15.00",
-            "priceCurrency": "USD",
+            "price": service.startingPrice || "6.00",
+            "priceCurrency": service.defaultCurrency || "USD",
             "availability": "https://schema.org/InStock",
             "url": `https://academicwizard.online/services/${service.slug}/`,
             "priceValidUntil": "2027-12-31",
@@ -202,6 +202,10 @@ const ServicePage = () => {
                     { name: 'Services', url: '/services/' },
                     { name: service.title, url: `/services/${service.slug}/` }
                 ]}
+                ctaText="💬 Get a Free Quote on WhatsApp"
+                ctaLink="https://wa.me/919509893638?text=Hello%20Academic%20Wizard!%20I%20need%20help%20with%20my%20coursework."
+                ctaSecondaryText="View Pricing Calculator ↓"
+                ctaSecondaryLink="#pricing"
             />
 
             <TrustStats />
@@ -451,7 +455,7 @@ const ServicePage = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-20 bg-bg-secondary border-t border-glass-border">
+            <section id="pricing" className="py-20 bg-bg-secondary border-t border-glass-border">
                 <div className="container px-6 text-center">
                     <h2 className="text-3xl font-bold font-heading text-white mb-8">Transparent Pricing</h2>
                     <div className="max-w-4xl mx-auto mb-12">
@@ -514,7 +518,7 @@ const ServicePage = () => {
                             {posts.map((post, index) => (
                                 <Link 
                                     key={index} 
-                                    to={`/blog/${post.slug}`}
+                                    to={`/blog/${post.slug}/`}
                                     className="glass-card group hover:border-accent-gold/30 transition-all block"
                                 >
                                     <div className="p-8">
