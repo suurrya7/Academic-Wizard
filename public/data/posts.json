@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Flags: Why Your Own Academic Tone Gets Triggered in 2026",
+    "slug": "turnitin-ai-flags-why-your-own-academic-tone-gets-triggered-in-2026",
+    "excerpt": "Is Turnitin flagging your original work as AI-generated? Learn why your writing style may trigger false positives and how to audit your draft for integrity.",
+    "keywords": [
+      "why turnitin flags student writing as ai",
+      "turnitin false positive guide",
+      "avoiding ai detection in essays",
+      "academic integrity audit",
+      "humanizing academic drafts"
+    ],
+    "primaryKeyword": "why turnitin flags student writing as ai",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-10-01T08:06:42.074785+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-flags-why-your-own-academic-tone-gets-triggered-in-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener: A 2026 Power Workflow for Massive Thesis Projects",
+    "slug": "zotero-to-scrivener-a-2026-power-workflow-for-massive-thesis-projects",
+    "excerpt": "Struggling to track 100+ sources in your dissertation? Learn how to integrate Zotero with Scrivener for a seamless, error-free research writing workflow.",
+    "keywords": [
+      "integrating zotero with scrivener for dissertation",
+      "zotero citation management",
+      "scrivener research workflow",
+      "organizing large thesis documents",
+      "dissertation bibliography automation"
+    ],
+    "primaryKeyword": "integrating zotero with scrivener for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-01T08:07:09.626555+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-a-2026-power-workflow-for-massive-thesis-projects.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-eleanor-wright",
+      "name": "Dr. Eleanor Wright",
+      "credentials": "PhD in English, King's College London",
+      "bio": "Dr. Eleanor Wright is a professional editor with expertise in structural proofreading, citation correction, and academic tone adjustment for UK essays."
+    }
+  },
+  {
+    "title": "NVivo 26 Data Mapping: How to Minimize Researcher Bias in Theses",
+    "slug": "nvivo-26-data-mapping-how-to-minimize-researcher-bias-in-theses",
+    "excerpt": "Is your qualitative data showing bias? Discover how to use NVivo 26’s advanced coding features to maintain rigor and objectivity throughout your thesis project.",
+    "keywords": [
+      "minimizing bias in qualitative analysis nvivo",
+      "nvivo thematic coding guide",
+      "qualitative research methodology",
+      "thematic analysis tips",
+      "avoiding coding drift"
+    ],
+    "primaryKeyword": "minimizing bias in qualitative analysis nvivo",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-01T08:07:37.343495+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-data-mapping-how-to-minimize-researcher-bias-in-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "The 2026 Guide to Ethical Prompt Engineering for Lit Review Outlines",
+    "slug": "the-2026-guide-to-ethical-prompt-engineering-for-lit-review-outlines",
+    "excerpt": "Stop getting stuck on your outline. Learn how to use AI ethically to scaffold your literature review structure while keeping your unique academic voice.",
+    "keywords": [
+      "ethical ai prompts for literature review structure",
+      "ai in academic research",
+      "scaffolding literature reviews",
+      "research synthesis techniques",
+      "academic outlining tools"
+    ],
+    "primaryKeyword": "ethical ai prompts for literature review structure",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-10-01T08:08:04.752778+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/the-2026-guide-to-ethical-prompt-engineering-for-lit-review-outlines.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
     "title": "Managing Qualitative Coding Drift in NVivo: A 2026 Troubleshooting Guide",
     "slug": "managing-qualitative-coding-drift-in-nvivo-a-2026-troubleshooting-guide",
     "excerpt": "Is your coding drifting? Discover expert techniques to ensure consistency and minimize researcher bias in your NVivo qualitative analysis for 2026.",

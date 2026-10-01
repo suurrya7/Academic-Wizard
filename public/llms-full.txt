@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-09-30
+        **Last updated**: 2026-10-01
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero to Scrivener: A 2026 Power Workflow for Massive Thesis Projects](https://academicwizard.online/blog/zotero-to-scrivener-a-2026-power-workflow-for-massive-thesis-projects/)**
+  - Excerpt: Struggling to track 100+ sources in your dissertation? Learn how to integrate Zotero with Scrivener for a seamless, error-free research writing workflow.
+  - Keywords: integrating zotero with scrivener for dissertation, zotero citation management, scrivener research workflow, organizing large thesis documents, dissertation bibliography automation
+  - Target Region: UK
+  - Published: 2026-10-01
 
 - **[Zotero PDF Metadata Cleanup: Fixing Broken Citations for Your Thesis](https://academicwizard.online/blog/zotero-pdf-metadata-cleanup-fixing-broken-citations-for-your-thesis/)**
   - Excerpt: Stop manually fixing your references. Learn the most efficient workflows to clean up messy Zotero PDF metadata and perfect your dissertation citations.
@@ -1112,6 +1118,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Essay Writing
 
+- **[Turnitin AI Flags: Why Your Own Academic Tone Gets Triggered in 2026](https://academicwizard.online/blog/turnitin-ai-flags-why-your-own-academic-tone-gets-triggered-in-2026/)**
+  - Excerpt: Is Turnitin flagging your original work as AI-generated? Learn why your writing style may trigger false positives and how to audit your draft for integrity.
+  - Keywords: why turnitin flags student writing as ai, turnitin false positive guide, avoiding ai detection in essays, academic integrity audit, humanizing academic drafts
+  - Target Region: USA
+  - Published: 2026-10-01
+
 - **[Ethical AI Citation: Proper Attribution for Modern Academic Research](https://academicwizard.online/blog/ethical-ai-citation-proper-attribution-for-modern-academic-research-2/)**
   - Excerpt: Don't get flagged for accidental plagiarism. Learn the gold standard for citing generative AI tools ethically in your university research papers today.
   - Keywords: ethical AI citation guidelines, citing AI tools in research papers, APA 7 citation for generative AI, academic integrity and AI usage, transparent AI research methods
@@ -1215,6 +1227,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Literature Review
+
+- **[The 2026 Guide to Ethical Prompt Engineering for Lit Review Outlines](https://academicwizard.online/blog/the-2026-guide-to-ethical-prompt-engineering-for-lit-review-outlines/)**
+  - Excerpt: Stop getting stuck on your outline. Learn how to use AI ethically to scaffold your literature review structure while keeping your unique academic voice.
+  - Keywords: ethical ai prompts for literature review structure, ai in academic research, scaffolding literature reviews, research synthesis techniques, academic outlining tools
+  - Target Region: Canada
+  - Published: 2026-10-01
 
 - **[Ethical AI Use: Building a Research Framework for Your Thesis](https://academicwizard.online/blog/ethical-ai-use-building-a-research-framework-for-your-thesis/)**
   - Excerpt: Learn how to ethically use AI to scaffold your dissertation literature review, maintain your unique voice, and build a solid research foundation.
@@ -1463,6 +1481,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[NVivo 26 Data Mapping: How to Minimize Researcher Bias in Theses](https://academicwizard.online/blog/nvivo-26-data-mapping-how-to-minimize-researcher-bias-in-theses/)**
+  - Excerpt: Is your qualitative data showing bias? Discover how to use NVivo 26’s advanced coding features to maintain rigor and objectivity throughout your thesis project.
+  - Keywords: minimizing bias in qualitative analysis nvivo, nvivo thematic coding guide, qualitative research methodology, thematic analysis tips, avoiding coding drift
+  - Target Region: Australia
+  - Published: 2026-10-01
 
 - **[Managing Qualitative Coding Drift in NVivo: A 2026 Troubleshooting Guide](https://academicwizard.online/blog/managing-qualitative-coding-drift-in-nvivo-a-2026-troubleshooting-guide/)**
   - Excerpt: Is your coding drifting? Discover expert techniques to ensure consistency and minimize researcher bias in your NVivo qualitative analysis for 2026.
