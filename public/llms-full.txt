@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-01
+        **Last updated**: 2026-10-02
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Reducing Qualitative Coding Bias: Essential NVivo 26 Workflows](https://academicwizard.online/blog/reducing-qualitative-coding-bias-essential-nvivo-26-workflows/)**
+  - Excerpt: Master your qualitative analysis with NVivo 26. Learn proven workflows to eliminate researcher bias and maintain deep academic rigor in your PhD thesis.
+  - Keywords: reducing researcher bias in NVivo thematic analysis, NVivo 26 qualitative data coding, PhD thesis methodology tips, Thematic analysis best practices, Managing qualitative data overload
+  - Target Region: Australia
+  - Published: 2026-10-02
 
 - **[Zotero to Scrivener: A 2026 Power Workflow for Massive Thesis Projects](https://academicwizard.online/blog/zotero-to-scrivener-a-2026-power-workflow-for-massive-thesis-projects/)**
   - Excerpt: Struggling to track 100+ sources in your dissertation? Learn how to integrate Zotero with Scrivener for a seamless, error-free research writing workflow.
@@ -713,6 +719,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Flags: How to Audit Your Own Academic Tone and Integrity](https://academicwizard.online/blog/turnitin-ai-flags-how-to-audit-your-own-academic-tone-and-integrity/)**
+  - Excerpt: Getting flagged by Turnitin? Learn how to audit your writing for AI detection and prove your original academic voice with our ethical, step-by-step guide.
+  - Keywords: how to audit my own writing for AI detection, Turnitin false positive appeal guide, Academic writing tone analysis, Turnitin AI similarity percentage, Authentic student voice in essays
+  - Target Region: USA
+  - Published: 2026-10-02
 
 - **[Mastering Chicago 17: Handling Complex Multi-Volume Archival Citations](https://academicwizard.online/blog/mastering-chicago-17-handling-complex-multi-volume-archival-citations/)**
   - Excerpt: Struggling with multi-volume footnotes? Master the Chicago 17 style for archival sources and ensure your thesis citations are perfectly formatted.
@@ -1482,6 +1494,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Research Support
 
+- **[Zotero Metadata Fixes: Solving Sync Conflicts in Long-Form Theses](https://academicwizard.online/blog/zotero-metadata-fixes-solving-sync-conflicts-in-long-form-theses/)**
+  - Excerpt: Tired of Zotero sync errors? Discover advanced techniques to fix metadata mismatches and keep your dissertation citations organized and error-free in 2026.
+  - Keywords: fixing Zotero sync conflicts in dissertation, Zotero PDF metadata management, Large scale citation organization, Zotero library sync errors, Academic research workflow tools
+  - Target Region: UK
+  - Published: 2026-10-02
+
 - **[NVivo 26 Data Mapping: How to Minimize Researcher Bias in Theses](https://academicwizard.online/blog/nvivo-26-data-mapping-how-to-minimize-researcher-bias-in-theses/)**
   - Excerpt: Is your qualitative data showing bias? Discover how to use NVivo 26’s advanced coding features to maintain rigor and objectivity throughout your thesis project.
   - Keywords: minimizing bias in qualitative analysis nvivo, nvivo thematic coding guide, qualitative research methodology, thematic analysis tips, avoiding coding drift
@@ -1951,6 +1969,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[APA 7th Edition In-Text Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-in-text-citation-rules-for-complex-digital-media/)**
+  - Excerpt: Avoid citation penalties. Master the latest APA 7 rules for complex digital media and multi-author sources with this easy-to-use 2026 formatting guide.
+  - Keywords: APA 7 citation rules for complex digital media, APA 7 formatting guide 2026, Citing social media in APA 7, APA 7 multi-author citation guide, Reference list formatting tips
+  - Target Region: Canada
+  - Published: 2026-10-02
 
 - **[Beyond Zotero: Solving Metadata Conflicts in Large Thesis Libraries](https://academicwizard.online/blog/beyond-zotero-solving-metadata-conflicts-in-large-thesis-libraries/)**
   - Excerpt: Don't let broken citations derail your progress. Master the steps to resolve Zotero metadata conflicts and keep your dissertation references error-free.
