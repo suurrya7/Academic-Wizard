@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-02T16:32:35.418131+00:00",
+  "last_run": "2026-10-03T00:38:19.228635+00:00",
   "daily_count": {
-    "date": "2026-10-02",
-    "count": 3
+    "date": "2026-10-03",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -73,7 +73,8 @@
     "1wv7e49",
     "1wvj6os",
     "1wvoxl3",
-    "1wvwtas"
+    "1wvwtas",
+    "1ww8qyp"
   ],
   "history": [
     {
@@ -627,7 +628,15 @@
       "title": "Which company has lost you as a customer forever?",
       "posted_at": "2026-10-02T16:32:35.418127+00:00",
       "url": "https://reddit.com/r/AskReddit/comments/1wvwtas/which_company_has_lost_you_as_a_customer_forever/"
+    },
+    {
+      "post_id": "1ww8qyp",
+      "subreddit": "Advice",
+      "mode": "karma",
+      "title": "Im no longer see a future with my gf, how do I tell her?",
+      "posted_at": "2026-10-03T00:38:19.228631+00:00",
+      "url": "https://reddit.com/r/Advice/comments/1ww8qyp/im_no_longer_see_a_future_with_my_gf_how_do_i/"
     }
   ],
-  "last_comment_posted_at": "2026-10-02T16:32:35.418111+00:00"
+  "last_comment_posted_at": "2026-10-03T00:38:19.228612+00:00"
 }
