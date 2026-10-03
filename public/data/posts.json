@@ -1,5 +1,105 @@
 [
   {
+    "title": "Managing Qualitative Coding Drift: Advanced NVivo 27 Setup Tips",
+    "slug": "managing-qualitative-coding-drift-advanced-nvivo-27-setup-tips",
+    "excerpt": "Struggling with coding drift in your qualitative research? Discover how to maintain data consistency and minimize bias in your NVivo 27 project today.",
+    "keywords": [
+      "qualitative coding drift in NVivo 27",
+      "NVivo thematic analysis reliability",
+      "qualitative data consistency",
+      "reducing researcher bias in NVivo",
+      "coding framework maintenance"
+    ],
+    "primaryKeyword": "qualitative coding drift in NVivo 27",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-03T07:24:22.211926+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/managing-qualitative-coding-drift-advanced-nvivo-27-setup-tips.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-sarah-evans",
+      "name": "Dr. Sarah Evans",
+      "credentials": "PhD in Education, University of Oxford",
+      "bio": "Dr. Sarah Evans is an academic writing coach with over 10 years of experience guiding undergraduate and postgraduate students through complex UK university essays and assignments."
+    }
+  },
+  {
+    "title": "Fixing APA 7th Edition In-Text Citation Errors in Long Theses",
+    "slug": "fixing-apa-7th-edition-in-text-citation-errors-in-long-theses",
+    "excerpt": "Are APA 7 citation errors plaguing your dissertation? Learn how to systematically audit and fix complex in-text references in your long-form thesis.",
+    "keywords": [
+      "fixing APA 7 in-text citation errors in large theses",
+      "APA 7 multi-author citation rules",
+      "correcting reference list errors",
+      "automated citation management tips",
+      "APA 7 style formatting pitfalls"
+    ],
+    "primaryKeyword": "fixing APA 7 in-text citation errors in large theses",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-03T07:24:49.744748+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-apa-7th-edition-in-text-citation-errors-in-long-theses.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
+    "title": "Ethical AI Use: Scaffolding Your Literature Review Structure",
+    "slug": "ethical-ai-use-scaffolding-your-literature-review-structure",
+    "excerpt": "Learn how to use AI ethically to structure your literature review outline. Build a framework that supports your voice while staying academically honest.",
+    "keywords": [
+      "ethical AI scaffolding for literature review",
+      "AI for research organization",
+      "literature review synthesis methods",
+      "academic integrity in research",
+      "structuring a thematic lit review"
+    ],
+    "primaryKeyword": "ethical AI scaffolding for literature review",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-10-03T07:25:16.132093+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-use-scaffolding-your-literature-review-structure.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener: A Pro Workflow for 2026 Dissertation Writing",
+    "slug": "zotero-to-scrivener-a-pro-workflow-for-2026-dissertation-writing",
+    "excerpt": "Boost your dissertation productivity in 2026. Master the seamless integration between Zotero and Scrivener to streamline your research-to-writing process.",
+    "keywords": [
+      "integrating Zotero with Scrivener for dissertation",
+      "citation management for long documents",
+      "Scrivener research organization",
+      "academic writing software workflow",
+      "syncing citations for thesis writing"
+    ],
+    "primaryKeyword": "integrating Zotero with Scrivener for dissertation",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-03T07:25:45.889671+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-a-pro-workflow-for-2026-dissertation-writing.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
     "title": "Turnitin AI Flags: How to Audit Your Own Academic Tone and Integrity",
     "slug": "turnitin-ai-flags-how-to-audit-your-own-academic-tone-and-integrity",
     "excerpt": "Getting flagged by Turnitin? Learn how to audit your writing for AI detection and prove your original academic voice with our ethical, step-by-step guide.",

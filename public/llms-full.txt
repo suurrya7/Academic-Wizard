@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-02
+        **Last updated**: 2026-10-03
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero to Scrivener: A Pro Workflow for 2026 Dissertation Writing](https://academicwizard.online/blog/zotero-to-scrivener-a-pro-workflow-for-2026-dissertation-writing/)**
+  - Excerpt: Boost your dissertation productivity in 2026. Master the seamless integration between Zotero and Scrivener to streamline your research-to-writing process.
+  - Keywords: integrating Zotero with Scrivener for dissertation, citation management for long documents, Scrivener research organization, academic writing software workflow, syncing citations for thesis writing
+  - Target Region: Australia
+  - Published: 2026-10-03
 
 - **[Reducing Qualitative Coding Bias: Essential NVivo 26 Workflows](https://academicwizard.online/blog/reducing-qualitative-coding-bias-essential-nvivo-26-workflows/)**
   - Excerpt: Master your qualitative analysis with NVivo 26. Learn proven workflows to eliminate researcher bias and maintain deep academic rigor in your PhD thesis.
@@ -719,6 +725,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Fixing APA 7th Edition In-Text Citation Errors in Long Theses](https://academicwizard.online/blog/fixing-apa-7th-edition-in-text-citation-errors-in-long-theses/)**
+  - Excerpt: Are APA 7 citation errors plaguing your dissertation? Learn how to systematically audit and fix complex in-text references in your long-form thesis.
+  - Keywords: fixing APA 7 in-text citation errors in large theses, APA 7 multi-author citation rules, correcting reference list errors, automated citation management tips, APA 7 style formatting pitfalls
+  - Target Region: USA
+  - Published: 2026-10-03
 
 - **[Turnitin AI Flags: How to Audit Your Own Academic Tone and Integrity](https://academicwizard.online/blog/turnitin-ai-flags-how-to-audit-your-own-academic-tone-and-integrity/)**
   - Excerpt: Getting flagged by Turnitin? Learn how to audit your writing for AI detection and prove your original academic voice with our ethical, step-by-step guide.
@@ -1240,6 +1252,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Use: Scaffolding Your Literature Review Structure](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-structure/)**
+  - Excerpt: Learn how to use AI ethically to structure your literature review outline. Build a framework that supports your voice while staying academically honest.
+  - Keywords: ethical AI scaffolding for literature review, AI for research organization, literature review synthesis methods, academic integrity in research, structuring a thematic lit review
+  - Target Region: Canada
+  - Published: 2026-10-03
+
 - **[The 2026 Guide to Ethical Prompt Engineering for Lit Review Outlines](https://academicwizard.online/blog/the-2026-guide-to-ethical-prompt-engineering-for-lit-review-outlines/)**
   - Excerpt: Stop getting stuck on your outline. Learn how to use AI ethically to scaffold your literature review structure while keeping your unique academic voice.
   - Keywords: ethical ai prompts for literature review structure, ai in academic research, scaffolding literature reviews, research synthesis techniques, academic outlining tools
@@ -1493,6 +1511,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Managing Qualitative Coding Drift: Advanced NVivo 27 Setup Tips](https://academicwizard.online/blog/managing-qualitative-coding-drift-advanced-nvivo-27-setup-tips/)**
+  - Excerpt: Struggling with coding drift in your qualitative research? Discover how to maintain data consistency and minimize bias in your NVivo 27 project today.
+  - Keywords: qualitative coding drift in NVivo 27, NVivo thematic analysis reliability, qualitative data consistency, reducing researcher bias in NVivo, coding framework maintenance
+  - Target Region: UK
+  - Published: 2026-10-03
 
 - **[Zotero Metadata Fixes: Solving Sync Conflicts in Long-Form Theses](https://academicwizard.online/blog/zotero-metadata-fixes-solving-sync-conflicts-in-long-form-theses/)**
   - Excerpt: Tired of Zotero sync errors? Discover advanced techniques to fix metadata mismatches and keep your dissertation citations organized and error-free in 2026.
