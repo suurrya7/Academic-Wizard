@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI False Positives: A 2026 Student's Guide to Evidence",
+    "slug": "turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence-2",
+    "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, gather evidence of your writing process, and professionally dispute unfair AI similarity scores.",
+    "keywords": [
+      "dispute Turnitin AI false positive",
+      "academic integrity audit",
+      "AI detection accuracy",
+      "Turnitin similarity report",
+      "human writing validation"
+    ],
+    "primaryKeyword": "dispute Turnitin AI false positive",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-04T07:38:00.962661+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence-2.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "Zotero for Massive Projects: Metadata Cleanup for 2026 Theses",
+    "slug": "zotero-for-massive-projects-metadata-cleanup-for-2026-theses",
+    "excerpt": "Is your Zotero library a mess? Master the art of fixing PDF metadata, syncing large datasets, and ensuring your thesis bibliography is 100% accurate.",
+    "keywords": [
+      "fixing Zotero metadata errors",
+      "Zotero library management",
+      "dissertation bibliography",
+      "citation manager troubleshooting",
+      "Zotero PDF import fixes"
+    ],
+    "primaryKeyword": "fixing Zotero metadata errors",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-04T07:38:27.688724+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-projects-metadata-cleanup-for-2026-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "NVivo 26 Coding: Strategies to Prevent Researcher Bias in PhDs",
+    "slug": "nvivo-26-coding-strategies-to-prevent-researcher-bias-in-phds",
+    "excerpt": "Boost the rigour of your qualitative research. Discover actionable workflows to reduce researcher bias and maintain objectivity while coding in NVivo 26.",
+    "keywords": [
+      "minimizing researcher bias in NVivo",
+      "qualitative data analysis",
+      "thematic coding workflow",
+      "PhD thesis methodology",
+      "NVivo 26 coding tips"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-10-04T07:38:53.266004+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-coding-strategies-to-prevent-researcher-bias-in-phds.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-fiona-gallagher",
+      "name": "Dr. Fiona Gallagher",
+      "credentials": "PhD in Sociology, Trinity College Dublin",
+      "bio": "Dr. Fiona Gallagher is a social scientist who provides thesis support and essay writing coaching with a focus on Irish and European university grading systems."
+    }
+  },
+  {
+    "title": "APA 7 Tables & Figures: Avoiding Common Formatting Penalties",
+    "slug": "apa-7-tables-figures-avoiding-common-formatting-penalties",
+    "excerpt": "Stop losing marks on visual data. Master the APA 7th edition rules for tables and figures to ensure your thesis meets strict academic formatting standards.",
+    "keywords": [
+      "APA 7 formatting for figures and tables",
+      "APA style guidelines",
+      "academic formatting traps",
+      "thesis visual aids",
+      "APA 7 citation rules"
+    ],
+    "primaryKeyword": "APA 7 formatting for figures and tables",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-04T07:39:20.140587+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-tables-figures-avoiding-common-formatting-penalties.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Managing Qualitative Coding Drift: Advanced NVivo 27 Setup Tips",
     "slug": "managing-qualitative-coding-drift-advanced-nvivo-27-setup-tips",
     "excerpt": "Struggling with coding drift in your qualitative research? Discover how to maintain data consistency and minimize bias in your NVivo 27 project today.",

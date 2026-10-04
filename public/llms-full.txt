@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-03
+        **Last updated**: 2026-10-04
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero for Massive Projects: Metadata Cleanup for 2026 Theses](https://academicwizard.online/blog/zotero-for-massive-projects-metadata-cleanup-for-2026-theses/)**
+  - Excerpt: Is your Zotero library a mess? Master the art of fixing PDF metadata, syncing large datasets, and ensuring your thesis bibliography is 100% accurate.
+  - Keywords: fixing Zotero metadata errors, Zotero library management, dissertation bibliography, citation manager troubleshooting, Zotero PDF import fixes
+  - Target Region: Canada
+  - Published: 2026-10-04
 
 - **[Zotero to Scrivener: A Pro Workflow for 2026 Dissertation Writing](https://academicwizard.online/blog/zotero-to-scrivener-a-pro-workflow-for-2026-dissertation-writing/)**
   - Excerpt: Boost your dissertation productivity in 2026. Master the seamless integration between Zotero and Scrivener to streamline your research-to-writing process.
@@ -725,6 +731,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7 Tables & Figures: Avoiding Common Formatting Penalties](https://academicwizard.online/blog/apa-7-tables-figures-avoiding-common-formatting-penalties/)**
+  - Excerpt: Stop losing marks on visual data. Master the APA 7th edition rules for tables and figures to ensure your thesis meets strict academic formatting standards.
+  - Keywords: APA 7 formatting for figures and tables, APA style guidelines, academic formatting traps, thesis visual aids, APA 7 citation rules
+  - Target Region: Australia
+  - Published: 2026-10-04
 
 - **[Fixing APA 7th Edition In-Text Citation Errors in Long Theses](https://academicwizard.online/blog/fixing-apa-7th-edition-in-text-citation-errors-in-long-theses/)**
   - Excerpt: Are APA 7 citation errors plaguing your dissertation? Learn how to systematically audit and fix complex in-text references in your long-form thesis.
@@ -1252,6 +1264,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[NVivo 26 Coding: Strategies to Prevent Researcher Bias in PhDs](https://academicwizard.online/blog/nvivo-26-coding-strategies-to-prevent-researcher-bias-in-phds/)**
+  - Excerpt: Boost the rigour of your qualitative research. Discover actionable workflows to reduce researcher bias and maintain objectivity while coding in NVivo 26.
+  - Keywords: minimizing researcher bias in NVivo, qualitative data analysis, thematic coding workflow, PhD thesis methodology, NVivo 26 coding tips
+  - Target Region: UK
+  - Published: 2026-10-04
+
 - **[Ethical AI Use: Scaffolding Your Literature Review Structure](https://academicwizard.online/blog/ethical-ai-use-scaffolding-your-literature-review-structure/)**
   - Excerpt: Learn how to use AI ethically to structure your literature review outline. Build a framework that supports your voice while staying academically honest.
   - Keywords: ethical AI scaffolding for literature review, AI for research organization, literature review synthesis methods, academic integrity in research, structuring a thematic lit review
@@ -1511,6 +1529,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI False Positives: A 2026 Student's Guide to Evidence](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence-2/)**
+  - Excerpt: Flagged by Turnitin for AI? Learn how to audit your draft, gather evidence of your writing process, and professionally dispute unfair AI similarity scores.
+  - Keywords: dispute Turnitin AI false positive, academic integrity audit, AI detection accuracy, Turnitin similarity report, human writing validation
+  - Target Region: USA
+  - Published: 2026-10-04
 
 - **[Managing Qualitative Coding Drift: Advanced NVivo 27 Setup Tips](https://academicwizard.online/blog/managing-qualitative-coding-drift-advanced-nvivo-27-setup-tips/)**
   - Excerpt: Struggling with coding drift in your qualitative research? Discover how to maintain data consistency and minimize bias in your NVivo 27 project today.
