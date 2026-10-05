@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Score Spikes: Protecting Your Original Research Voice",
+    "slug": "turnitin-ai-score-spikes-protecting-your-original-research-voice",
+    "excerpt": "Struggling with Turnitin AI flags on original work? Learn how to audit your writing, document your process, and effectively advocate for your academic voice.",
+    "keywords": [
+      "Turnitin AI detection false positives mitigation",
+      "AI writing detection accuracy",
+      "academic integrity audit",
+      "human authorship verification",
+      "turnitin similarity report context"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives mitigation",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-05T08:02:51.339694+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-protecting-your-original-research-voice.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Zotero Citation Fixes: Managing 100+ Sources for PhD Projects",
+    "slug": "zotero-citation-fixes-managing-100-sources-for-phd-projects",
+    "excerpt": "Master your massive thesis library. Discover advanced Zotero workflows to resolve metadata errors and sync 100+ sources for a seamless dissertation draft.",
+    "keywords": [
+      "solving Zotero metadata conflicts in large theses",
+      "zotero citation management for phd",
+      "fixing zotero pdf metadata",
+      "organizing 100 plus research sources",
+      "zotero bibliography synchronization"
+    ],
+    "primaryKeyword": "solving Zotero metadata conflicts in large theses",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-05T08:03:19.621885+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-citation-fixes-managing-100-sources-for-phd-projects.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "NVivo Qualitative Coding: Preventing Researcher Bias in Theses",
+    "slug": "nvivo-qualitative-coding-preventing-researcher-bias-in-theses",
+    "excerpt": "Is your qualitative data analysis objective? Learn how to structure your NVivo workflow to eliminate researcher bias and maintain high academic rigor.",
+    "keywords": [
+      "minimizing researcher bias in NVivo thematic analysis",
+      "nvivo 26 qualitative workflow",
+      "thematic coding methodology",
+      "qualitative research rigor",
+      "nvivo manual coding vs automation"
+    ],
+    "primaryKeyword": "minimizing researcher bias in NVivo thematic analysis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-05T08:05:58.178394+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-qualitative-coding-preventing-researcher-bias-in-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Avoiding Citation Penalties in Complex Papers",
+    "slug": "apa-7th-edition-avoiding-citation-penalties-in-complex-papers",
+    "excerpt": "Avoid costly marks on your thesis. Master complex APA 7 multi-author citations, digital source rules, and table formatting with this essential 2026 guide.",
+    "keywords": [
+      "APA 7 multi-author in-text citation rules",
+      "apa 7 formatting traps",
+      "complex digital source citation",
+      "apa 7 tables and figures guide",
+      "academic citation standards"
+    ],
+    "primaryKeyword": "APA 7 multi-author in-text citation rules",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-05T08:07:13.611323+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-avoiding-citation-penalties-in-complex-papers.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Turnitin AI False Positives: A 2026 Student's Guide to Evidence",
     "slug": "turnitin-ai-false-positives-a-2026-student-s-guide-to-evidence-2",
     "excerpt": "Flagged by Turnitin for AI? Learn how to audit your draft, gather evidence of your writing process, and professionally dispute unfair AI similarity scores.",
