@@ -124,23 +124,63 @@ const CountryServicePage = () => {
 
     const headingTitle = country.heading || `${service.title} in ${country.name}`;
     
+    const COUNTRY_SEO_ENGINE = {
+        uk: {
+            symbol: '£', price: '8.00', standard: 'QAA & Russell Group', grade: '1st Class',
+            universities: 'Oxford, Cambridge, UCL & Russell Group'
+        },
+        australia: {
+            symbol: 'A$', price: '18.00', standard: 'AQF & Go8', grade: 'High Distinction',
+            universities: 'UniMelb, USyd, UNSW & Monash'
+        },
+        usa: {
+            symbol: '$', price: '12.00', standard: 'APA 7th & MLA 9th', grade: 'GPA Boost',
+            universities: 'Ivy League & Top State Colleges'
+        },
+        singapore: {
+            symbol: 'S$', price: '18.00', standard: 'Bell-Curve Defense', grade: 'CAP 5.0 Standard',
+            universities: 'NUS, NTU & SMU'
+        },
+        canada: {
+            symbol: 'C$', price: '16.00', standard: 'U15 Academic Standards', grade: 'A-Grade',
+            universities: 'U of T, UBC & McGill'
+        },
+        ireland: {
+            symbol: '€', price: '12.00', standard: 'QQI / NFQ Framework', grade: '1st Class Honours',
+            universities: 'Trinity College Dublin & UCD'
+        },
+        germany: {
+            symbol: '€', price: '12.00', standard: 'ECTS & Prüfungsordnung', grade: 'Sehr Gut',
+            universities: 'TUM, LMU & TU9 Universities'
+        },
+        india: {
+            symbol: '₹', price: '599.00', standard: 'UGC & AICTE Standards', grade: 'Top Percentile',
+            universities: 'IITs, IIMs & Top Central Universities'
+        }
+    };
+
+    const cData = COUNTRY_SEO_ENGINE[countrySlug] || {
+        symbol: '$', price: '12.00', standard: 'University Rubrics', grade: '1st Class',
+        universities: 'Top Universities'
+    };
+
     // Strict <= 60 characters title generator with primary keyword first
-    let pageTitle = country.metaTitle;
-    if (!pageTitle || pageTitle.length > 60) {
-        const candidateWithHook = `${service.title} ${displayCountry} | 100% Turnitin-Safe`;
-        if (candidateWithHook.length <= 60) {
-            pageTitle = candidateWithHook;
+    let pageTitle = country.metaTitle && country.metaTitle.length <= 60 ? country.metaTitle : null;
+    if (!pageTitle) {
+        const candidateWithPrice = `${service.title} ${displayCountry} | ${cData.grade} · From ${cData.symbol}${cData.price}`;
+        if (candidateWithPrice.length <= 60) {
+            pageTitle = candidateWithPrice;
         } else {
-            const candidateShort = `${service.title} ${displayCountry} | 1st Class`;
-            if (candidateShort.length <= 60) {
-                pageTitle = candidateShort;
+            const candidateWithHook = `${service.title} ${displayCountry} | ${cData.grade}`;
+            if (candidateWithHook.length <= 60) {
+                pageTitle = candidateWithHook;
             } else {
                 pageTitle = `${service.title} ${displayCountry}`.substring(0, 57) + '...';
             }
         }
     }
 
-    const pageDescription = country.metaDescription || `Expert ${service.title.toLowerCase()} tailored for university students in ${country.name}. ${country.desc}`;
+    const pageDescription = country.metaDescription || `Leading ${service.title.toLowerCase()} in ${country.name} tailored for ${cData.universities} students. 100% Turnitin-safe from ${cData.symbol}${cData.price}/page. WhatsApp 24/7!`;
 
     // Generate JSON-LD Schema
     const serviceSchema = {

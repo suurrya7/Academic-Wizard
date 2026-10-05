@@ -5,7 +5,7 @@ import { servicesData } from "../data/services";
 import { countrySubjects, countryCities } from "../data/specializedPages";
 import specializedContent from "../data/specializedContent.json";
 import PageHeader from "../components/PageHeader";
-import { assembleUniqueContent } from "../data/contentModules";
+import { assembleUniqueContent, subjectModules, cityModules } from "../data/contentModules";
 import DefinitionBox from "../components/DefinitionBox";
 import ExpertQuote from "../components/ExpertQuote";
 import Button from "../components/Button";
@@ -220,6 +220,7 @@ const SubjectCityPage = () => {
         'india': { currency: 'INR', price: '799.00', symbol: '₹' },
         'usa': { currency: 'USD', price: '15.00', symbol: '$' }
     };
+    const regionalPricing = LOCAL_CURRENCY_MAP[countrySlug] || { currency: 'USD', price: '15.00', symbol: '$' };
 
     const getDisciplineHook = (subLower, cSlug) => {
         if (subLower.includes('law')) {
@@ -242,17 +243,59 @@ const SubjectCityPage = () => {
 
     // Priority High-CTR Title & Description Overrides for Top GSC Opportunities
     const META_OVERRIDES = {
+        // Accounting & Finance (Capture Page 1 Position 8.4)
+        "australia-accounting": {
+            title: "Accounting Assignment Help Australia | CPA Experts · From A$18",
+            desc: "Need urgent accounting assignment help? Certified CPAs solve IFRS, DCF valuation, tax & balance sheet coursework with 100% accuracy. Turnitin safe. WhatsApp now!"
+        },
+        "uk-accounting": {
+            title: "Accounting Assignment Help UK | CPA & ACCA Experts · From £8",
+            desc: "1st-class accounting coursework help for UK students. Management accounting, IFRS, tax & Excel modeling solved by ACCA/CPA tutors. 100% Turnitin safe. WhatsApp 24/7!"
+        },
+        // Nursing & Healthcare (Push Page 2 Pos 16.0 to Top 5)
         "australia-nursing": {
-            title: "Nursing Assignment Help Australia | AHPRA & NMBA",
-            desc: "Struggling with clinical care plans or Gibbs reflective essays? Get 100% human-written Australian nursing help aligned with NMBA/AHPRA codes. Free Turnitin report."
+            title: "Nursing Assignment Help Australia | High Distinction · Care Plans",
+            desc: "Expert nursing assignment help across Australia (AHPRA & ANMAC aligned). Reflective cycles, clinical case studies & care plans from A$18/page. WhatsApp quote in 2 mins!"
+        },
+        "uk-nursing": {
+            title: "Nursing Assignment Help UK | Care Plans & Gibbs Reflective",
+            desc: "Struggling with nursing coursework? Qualified NHS & PhD nurses craft NMC-compliant care plans, Gibbs reflections & OSCE papers from £8/page. Turnitin-safe!"
+        },
+        // Law (Push Page 2 Pos 15.7 to Top 5)
+        "uk-law": {
+            title: "Law Assignment Help UK | OSCOLA & IRAC Problem Writers · 1st",
+            desc: "Stuck on contract, tort or criminal law problem questions? UK LLM & Bar graduates draft rigorous IRAC analysis with pinpoint OSCOLA citations. 12h urgent delivery!"
+        },
+        "australia-law": {
+            title: "Law Assignment Help Australia | AGLC4 & Legal Problem Solvers",
+            desc: "High Distinction law assignment help in Australia. Commercial, contract & constitutional law problem questions formatted to AGLC4 standards. Confidential 24/7 support."
+        },
+        // Computer Science & Engineering
+        "usa-computer-science": {
+            title: "Computer Science Assignment Help | Clean Code · IEEE Format",
+            desc: "Stuck on coding assignments? CS graduates deliver clean, commented code (Python, Java, C++, SQL) + algorithmic Big-O reports. 100% bug-free. Get a quote on WhatsApp!"
+        },
+        "uk-computer-science": {
+            title: "Computer Science Assignment Help UK | Python, Java & Big-O",
+            desc: "Expert programming & software engineering assignment help. Verified working code, unit tests & IEEE technical reports. 100% plagiarism-free. Chat on WhatsApp!"
+        },
+        "uk-engineering": {
+            title: "Engineering Assignment Help UK | FEA, CAD & MATLAB · 1st",
+            desc: "UK engineering coursework guidance across mechanical, civil & electrical degrees. FEA structural analysis, CAD models & MATLAB reports. WhatsApp 24/7!"
+        },
+        // MBA & Business
+        "uk-mba": {
+            title: "MBA Assignment Help UK | Harvard Case Studies · Distinction",
+            desc: "Executive MBA assignment help for UK & global students. Strategic frameworks (Porter's, PESTEL, SWOT), finance models & Harvard case studies. WhatsApp 24/7!"
         },
         "singapore-mba": {
-            title: "MBA Assignment Help Singapore | NUS · NTU · SMU",
-            desc: "Singapore MBA case studies, strategic management & finance reports tailored for NUS, NTU, SMU & SIM-UOL modules. 100% confidential. WhatsApp 24/7."
+            title: "MBA Assignment Help Singapore | NUS · NTU · SMU Modules",
+            desc: "Singapore MBA case studies, strategic management & finance reports tailored for NUS, NTU, SMU & SIM-UOL modules. 100% confidential. WhatsApp 24/7!"
         },
-        "uk-law": {
-            title: "Law & Business Law Assignment Help UK | OSCOLA · 1st Class",
-            desc: "Stuck on contract, tort, or criminal law problem questions? UK LLM writers draft IRAC analysis with pinpoint OSCOLA citations. 12h urgent delivery."
+        // Psychology
+        "usa-psychology": {
+            title: "Psychology Assignment Help USA | APA 7th & SPSS Analysis",
+            desc: "PhD psychology tutors assist with empirical research papers, SPSS/R statistics & APA 7th literature reviews. 100% original & Turnitin-safe. Order now!"
         }
     };
     const overrideKey = `${countrySlug}-${specializedData.slug}`;
@@ -262,27 +305,46 @@ const SubjectCityPage = () => {
         ? `${cleanSubjectName} ${serviceVerb.action} ${displayCountry}`
         : `${serviceVerb.action} in ${cleanSubjectName} ${displayCountry}`;
 
+    // Dynamic Title Generation
     let dynamicTitle = metaOverride?.title;
     if (!dynamicTitle) {
-        const disciplineHook = getDisciplineHook(cleanSubjectName.toLowerCase(), countrySlug);
-        const candidateWithHook = `${primaryKeyword} | ${disciplineHook}`;
-        if (candidateWithHook.length <= 60) {
-            dynamicTitle = candidateWithHook;
+        if (pageType === "city") {
+            const cityObj = cityModules[specializedSlug] || {};
+            const topUni = (cityObj.universities && cityObj.universities[0]) ? cityObj.universities[0].split(' ')[0] : cleanSubjectName;
+            const cityTitleCandidate = `${serviceVerb.action} ${cleanSubjectName} | ${topUni} Tutors · 1st`;
+            dynamicTitle = cityTitleCandidate.length <= 60 ? cityTitleCandidate : `${serviceVerb.action} in ${cleanSubjectName} | 1st Class`;
         } else {
-            const candidateShorter = `${primaryKeyword} | 1st Class`;
-            if (candidateShorter.length <= 60) {
-                dynamicTitle = candidateShorter;
+            const disciplineHook = getDisciplineHook(cleanSubjectName.toLowerCase(), countrySlug);
+            const candidateWithHook = `${primaryKeyword} | ${disciplineHook}`;
+            if (candidateWithHook.length <= 60) {
+                dynamicTitle = candidateWithHook;
             } else {
-                dynamicTitle = primaryKeyword.length <= 60 ? primaryKeyword : primaryKeyword.substring(0, 57) + '...';
+                const candidateShorter = `${primaryKeyword} | 1st Class`;
+                if (candidateShorter.length <= 60) {
+                    dynamicTitle = candidateShorter;
+                } else {
+                    dynamicTitle = primaryKeyword.length <= 60 ? primaryKeyword : primaryKeyword.substring(0, 57) + '...';
+                }
             }
         }
     }
     const pageMetaTitle = dynamicTitle;
 
-    const pageDescription = metaOverride?.desc
-        || (pageType === "subject"
-            ? `Expert ${cleanSubjectName} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD specialists, 100% Turnitin-safe, 12-hour express. Get a free quote today!`
-            : `Professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. PhD specialists, 100% Turnitin-safe. Order now!`);
+    // Dynamic Meta Description Generation (Zero Generic Doorway Boilerplate)
+    let pageDescription = metaOverride?.desc;
+    if (!pageDescription) {
+        if (pageType === "city") {
+            const cityObj = cityModules[specializedSlug] || {};
+            const campusList = (cityObj.universities || []).slice(0, 3).join(', ');
+            pageDescription = campusList
+                ? `Trusted ${serviceVerb.action.toLowerCase()} for ${cleanSubjectName} students at ${campusList}. Turnitin-safe coursework from ${regionalPricing.symbol}${regionalPricing.price}/page. WhatsApp 24/7!`
+                : `Trusted ${serviceVerb.action.toLowerCase()} for students in ${cleanSubjectName}, ${country.name}. Turnitin-safe coursework from ${regionalPricing.symbol}${regionalPricing.price}/page. WhatsApp 24/7!`;
+        } else {
+            const subObj = subjectModules[specializedSlug] || {};
+            const keyFramework = (subObj.frameworks && subObj.frameworks[0]) || (subObj.keyTheories && subObj.keyTheories[0]) || 'academic rubrics';
+            pageDescription = `Get 1st-class ${cleanSubjectName.toLowerCase()} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD experts assist with ${keyFramework} from ${regionalPricing.symbol}${regionalPricing.price}/page. 100% Turnitin-safe!`;
+        }
+    }
     
     const url = `https://academicwizard.online/services/${serviceSlug}/${countrySlug}/${specializedSlug}/`;
 

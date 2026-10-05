@@ -8,6 +8,7 @@ const SLUG_TO_HREFLANG = {
 };
 
 import { servicesData } from '../data/services';
+import { dissertationTopics } from '../data/specializedPages';
 import PageHeader from '../components/PageHeader';
 import DefinitionBox from '../components/DefinitionBox';
 import ExpertQuote from '../components/ExpertQuote';
@@ -305,6 +306,31 @@ const ServicePage = () => {
                                 <div key={idx} className="glass-card px-6 py-3 text-white/80 font-medium">
                                     {uni}
                                 </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Dissertation Topics Silo Links */}
+            {service.slug === 'dissertation-help' && (
+                <section className="py-20 bg-bg-secondary border-t border-glass-border">
+                    <div className="container px-6 max-w-6xl mx-auto">
+                        <div className="text-center mb-12">
+                            <span className="text-accent-gold text-xs uppercase tracking-widest font-heading font-bold">2026/2027 Research Hub</span>
+                            <h2 className="text-3xl font-bold font-heading text-white mt-2 mb-4">Curated Dissertation & Thesis Topics by Discipline</h2>
+                            <p className="text-text-secondary max-w-2xl mx-auto text-sm">Need topic inspiration? Browse our vetted empirical and theoretical dissertation topics with research questions and methodologies.</p>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                            {dissertationTopics.map((topic) => (
+                                <Link
+                                    key={topic.slug}
+                                    to={`/blog/dissertation-topics/${topic.slug}/`}
+                                    className="glass-card p-5 block hover:border-accent-gold/40 transition-all group text-center"
+                                >
+                                    <h3 className="text-white font-bold text-sm mb-1 group-hover:text-accent-gold transition-colors">{topic.category}</h3>
+                                    <p className="text-[11px] text-accent-gold/80 font-medium">Explore Topics →</p>
+                                </Link>
                             ))}
                         </div>
                     </div>

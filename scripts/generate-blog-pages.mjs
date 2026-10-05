@@ -217,41 +217,48 @@ function generateBlogPages() {
         // Inject our SEO tags before </head>
         pageHtml = pageHtml.replace('</head>', `${seoTags}\n  </head>`);
 
-        // Also inject a noscript block with the blog content for SEO fallback
-        // Read the blog post HTML fragment if it exists
-        let noscriptContent = '';
+        // Inject static blog article content directly inside <div id="root">
+        // This ensures Googlebot renders the complete article without ignoring noscript tags
+        let staticArticleContent = '';
         if (existsSync(postHtmlPath)) {
             const postContent = readFileSync(postHtmlPath, 'utf-8');
-            // Extract just the text content (strip script, meta, and link tags for clean SEO fallback)
+            // Extract clean content (strip script, meta, and link tags)
             const cleanContent = postContent
                 .replace(/<script[\s\S]*?<\/script>/gi, '')
                 .replace(/<meta[^>]*>/gi, '')
                 .replace(/<link[^>]*>/gi, '')
-                .slice(0, 5000); // First 5KB is enough for SEO
-            noscriptContent = `
-    <noscript>
-      <article style="max-width:800px;margin:2rem auto;padding:1rem;color:#fff;font-family:sans-serif;">
-        <nav><a href="/">Home</a> &gt; <a href="/blog/">Blog</a> &gt; ${title}</nav>
-        <h1>${title}</h1>
-        <p><em>${description}</em></p>
-        ${post.author ? `<p><strong>Written by:</strong> ${escapeHtml(post.author.name)} (${escapeHtml(post.author.credentials)})</p>` : ''}
-        ${cleanContent}
+                .trim();
+            staticArticleContent = `
+      <article class="prerendered-blog-article" style="max-width:860px;margin:2rem auto;padding:1.5rem;color:#e2e8f0;font-family:system-ui,-apple-system,sans-serif;line-height:1.75;">
+        <nav aria-label="Breadcrumb" style="font-size:0.875rem;margin-bottom:1.5rem;color:#94a3b8;"><a href="/" style="color:#60a5fa;text-decoration:none;">Home</a> &gt; <a href="/blog/" style="color:#60a5fa;text-decoration:none;">Blog</a> &gt; <span style="color:#cbd5e1;">${title}</span></nav>
+        <header style="margin-bottom:2rem;">
+          <h1 style="font-size:2.25rem;font-weight:700;line-height:1.25;color:#f8fafc;margin-bottom:1rem;">${title}</h1>
+          <p style="font-size:1.125rem;color:#94a3b8;font-style:italic;margin-bottom:1rem;">${description}</p>
+          ${post.author ? `<div style="display:flex;gap:0.75rem;align-items:center;padding:0.75rem 0;border-top:1px solid #334155;border-bottom:1px solid #334155;color:#cbd5e1;font-size:0.875rem;"><strong>By ${escapeHtml(post.author.name)}</strong> · ${escapeHtml(post.author.credentials)} · Published: ${new Date(publishDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</div>` : ''}
+        </header>
+        <div class="article-body">
+          ${cleanContent}
+        </div>
         ${post.author ? `
-        <div style="margin-top:2rem;padding:1rem;border:1px solid #333;background:#111;border-radius:8px;">
-          <h3>About the Author</h3>
-          <p><strong>${escapeHtml(post.author.name)}</strong> - ${escapeHtml(post.author.credentials)}</p>
-          <p>${escapeHtml(post.author.bio)}</p>
+        <div style="margin-top:2.5rem;padding:1.5rem;border:1px solid #334155;background:#0f172a;border-radius:12px;">
+          <h3 style="font-size:1.125rem;color:#f8fafc;margin-bottom:0.5rem;">About the Author</h3>
+          <p style="font-weight:600;color:#60a5fa;margin-bottom:0.25rem;">${escapeHtml(post.author.name)} <span style="font-size:0.875rem;color:#94a3b8;">(${escapeHtml(post.author.credentials)})</span></p>
+          <p style="font-size:0.875rem;color:#94a3b8;line-height:1.6;">${escapeHtml(post.author.bio)}</p>
         </div>` : ''}
-        <footer>
-          <p><a href="/blog/">← More Articles</a> | <a href="/services/">Our Services</a> | <a href="/contact/">Contact Us</a></p>
+        <footer style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid #334155;font-size:0.875rem;color:#94a3b8;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <a href="/blog/" style="color:#60a5fa;text-decoration:none;">← Return to All Articles</a>
+          <a href="/services/assignment-help/" style="color:#60a5fa;text-decoration:none;">University Assignment Help →</a>
+          <a href="https://wa.me/919509893638" style="color:#34d399;text-decoration:none;font-weight:600;">Chat on WhatsApp 24/7</a>
         </footer>
-      </article>
-    </noscript>`;
+      </article>`;
         }
 
-        // Inject noscript content after the opening <body> or the root div
-        if (noscriptContent) {
-            pageHtml = pageHtml.replace('<div id="root">', `${noscriptContent}\n    <div id="root">`);
+        // Inject content directly inside <div id="root"> for full Googlebot DOM rendering
+        if (staticArticleContent) {
+            pageHtml = pageHtml.replace('<div id="root"></div>', `<div id="root">${staticArticleContent}\n</div>`);
+            if (!pageHtml.includes('class="prerendered-blog-article"')) {
+                pageHtml = pageHtml.replace('<div id="root">', `<div id="root">\n${staticArticleContent}`);
+            }
         }
 
         // Write to dist/blog/[slug]/index.html
