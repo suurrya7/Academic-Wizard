@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Detection: Why Your Personal Writing Gets Flagged (2026)",
+    "slug": "turnitin-ai-detection-why-your-personal-writing-gets-flagged-2026",
+    "excerpt": "Struggling with Turnitin AI flags on original work? Learn why your writing is being misidentified and how to conduct a formal academic integrity audit.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity audit",
+      "preventing AI writing flags",
+      "Turnitin similarity report explanation",
+      "human authorship verification"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-06T08:24:19.611377+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-detection-why-your-personal-writing-gets-flagged-2026.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Fixing APA 7 Citations for Multi-Author Digital Sources in 2026",
+    "slug": "fixing-apa-7-citations-for-multi-author-digital-sources-in-2026",
+    "excerpt": "Master complex APA 7 citations for digital media. Our 2026 guide covers multi-author formatting traps to keep your thesis bibliography error-free.",
+    "keywords": [
+      "APA 7th Edition multi-author digital citations",
+      "APA 7 reference formatting",
+      "citing complex digital media",
+      "academic citation guide",
+      "APA 7 manual for graduate students"
+    ],
+    "primaryKeyword": "APA 7th Edition multi-author digital citations",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-06T08:24:45.967942+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/fixing-apa-7-citations-for-multi-author-digital-sources-in-2026.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "NVivo Thematic Coding: Reducing Researcher Bias in PhD Theses",
+    "slug": "nvivo-thematic-coding-reducing-researcher-bias-in-phd-theses",
+    "excerpt": "Don't let bias compromise your PhD thesis. Discover an NVivo workflow designed to streamline thematic coding while maintaining strict research integrity.",
+    "keywords": [
+      "reducing researcher bias in NVivo",
+      "NVivo qualitative analysis workflow",
+      "thematic coding methodology",
+      "thesis data analysis tips",
+      "minimizing qualitative coding drift"
+    ],
+    "primaryKeyword": "reducing researcher bias in NVivo",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-06T08:26:10.473106+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-thematic-coding-reducing-researcher-bias-in-phd-theses.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Zotero Workflow: Managing 100+ Sources for Literature Reviews",
+    "slug": "zotero-workflow-managing-100-sources-for-literature-reviews-2",
+    "excerpt": "Taming a massive literature review? Learn advanced Zotero workflows to manage 100+ sources, fix metadata conflicts, and organize your dissertation data.",
+    "keywords": [
+      "managing 100+ sources in Zotero",
+      "Zotero for massive dissertations",
+      "organizing literature review sources",
+      "fixing Zotero metadata errors",
+      "advanced Zotero library management"
+    ],
+    "primaryKeyword": "managing 100+ sources in Zotero",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-10-06T08:26:43.108982+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-workflow-managing-100-sources-for-literature-reviews-2.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-sarah-lim",
+      "name": "Dr. Sarah Lim",
+      "credentials": "PhD in Business Administration, Nanyang Technological University (NTU)",
+      "bio": "Dr. Sarah Lim is a business strategist who helps university students in Singapore and Australia with case analysis, marketing plans, and MBA research guidance."
+    }
+  },
+  {
     "title": "Turnitin AI Score Spikes: Protecting Your Original Research Voice",
     "slug": "turnitin-ai-score-spikes-protecting-your-original-research-voice",
     "excerpt": "Struggling with Turnitin AI flags on original work? Learn how to audit your writing, document your process, and effectively advocate for your academic voice.",

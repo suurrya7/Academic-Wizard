@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-05
+        **Last updated**: 2026-10-06
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[NVivo Thematic Coding: Reducing Researcher Bias in PhD Theses](https://academicwizard.online/blog/nvivo-thematic-coding-reducing-researcher-bias-in-phd-theses/)**
+  - Excerpt: Don't let bias compromise your PhD thesis. Discover an NVivo workflow designed to streamline thematic coding while maintaining strict research integrity.
+  - Keywords: reducing researcher bias in NVivo, NVivo qualitative analysis workflow, thematic coding methodology, thesis data analysis tips, minimizing qualitative coding drift
+  - Target Region: Canada
+  - Published: 2026-10-06
 
 - **[Zotero Citation Fixes: Managing 100+ Sources for PhD Projects](https://academicwizard.online/blog/zotero-citation-fixes-managing-100-sources-for-phd-projects/)**
   - Excerpt: Master your massive thesis library. Discover advanced Zotero workflows to resolve metadata errors and sync 100+ sources for a seamless dissertation draft.
@@ -737,6 +743,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Detection: Why Your Personal Writing Gets Flagged (2026)](https://academicwizard.online/blog/turnitin-ai-detection-why-your-personal-writing-gets-flagged-2026/)**
+  - Excerpt: Struggling with Turnitin AI flags on original work? Learn why your writing is being misidentified and how to conduct a formal academic integrity audit.
+  - Keywords: Turnitin AI detection false positives, academic integrity audit, preventing AI writing flags, Turnitin similarity report explanation, human authorship verification
+  - Target Region: USA
+  - Published: 2026-10-06
 
 - **[APA 7th Edition: Avoiding Citation Penalties in Complex Papers](https://academicwizard.online/blog/apa-7th-edition-avoiding-citation-penalties-in-complex-papers/)**
   - Excerpt: Avoid costly marks on your thesis. Master complex APA 7 multi-author citations, digital source rules, and table formatting with this essential 2026 guide.
@@ -1276,6 +1288,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Zotero Workflow: Managing 100+ Sources for Literature Reviews](https://academicwizard.online/blog/zotero-workflow-managing-100-sources-for-literature-reviews-2/)**
+  - Excerpt: Taming a massive literature review? Learn advanced Zotero workflows to manage 100+ sources, fix metadata conflicts, and organize your dissertation data.
+  - Keywords: managing 100+ sources in Zotero, Zotero for massive dissertations, organizing literature review sources, fixing Zotero metadata errors, advanced Zotero library management
+  - Target Region: Australia
+  - Published: 2026-10-06
+
 - **[NVivo 26 Coding: Strategies to Prevent Researcher Bias in PhDs](https://academicwizard.online/blog/nvivo-26-coding-strategies-to-prevent-researcher-bias-in-phds/)**
   - Excerpt: Boost the rigour of your qualitative research. Discover actionable workflows to reduce researcher bias and maintain objectivity while coding in NVivo 26.
   - Keywords: minimizing researcher bias in NVivo, qualitative data analysis, thematic coding workflow, PhD thesis methodology, NVivo 26 coding tips
@@ -1541,6 +1559,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Fixing APA 7 Citations for Multi-Author Digital Sources in 2026](https://academicwizard.online/blog/fixing-apa-7-citations-for-multi-author-digital-sources-in-2026/)**
+  - Excerpt: Master complex APA 7 citations for digital media. Our 2026 guide covers multi-author formatting traps to keep your thesis bibliography error-free.
+  - Keywords: APA 7th Edition multi-author digital citations, APA 7 reference formatting, citing complex digital media, academic citation guide, APA 7 manual for graduate students
+  - Target Region: UK
+  - Published: 2026-10-06
 
 - **[Turnitin AI Score Spikes: Protecting Your Original Research Voice](https://academicwizard.online/blog/turnitin-ai-score-spikes-protecting-your-original-research-voice/)**
   - Excerpt: Struggling with Turnitin AI flags on original work? Learn how to audit your writing, document your process, and effectively advocate for your academic voice.
