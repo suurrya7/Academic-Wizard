@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Score Spikes: Auditing Your Draft for Human Tone Accuracy",
+    "slug": "turnitin-ai-score-spikes-auditing-your-draft-for-human-tone-accuracy",
+    "excerpt": "Is your original academic work being flagged as AI? Learn how to audit your writing for tone, structure, and evidence to resolve Turnitin false positives.",
+    "keywords": [
+      "Turnitin AI detection false positive audit",
+      "AI detector accuracy issues",
+      "human writing vs AI detection",
+      "Turnitin similarity report interpretation",
+      "verifying academic integrity"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positive audit",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-08T08:14:26.469701+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-auditing-your-draft-for-human-tone-accuracy.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "NVivo 26: Building a Thematic Coding Framework That Reduces Bias",
+    "slug": "nvivo-26-building-a-thematic-coding-framework-that-reduces-bias",
+    "excerpt": "Struggling with coding drift? Discover our step-by-step 2026 guide to building a robust, bias-free thematic coding framework in NVivo for your PhD thesis.",
+    "keywords": [
+      "NVivo 26 thematic analysis bias reduction",
+      "qualitative data analysis workflow",
+      "coding drift in PhD theses",
+      "improving qualitative research reliability",
+      "NVivo coding best practices"
+    ],
+    "primaryKeyword": "NVivo 26 thematic analysis bias reduction",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-08T08:15:01.363403+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-building-a-thematic-coding-framework-that-reduces-bias.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-jessica-carter",
+      "name": "Dr. Jessica Carter",
+      "credentials": "PhD in Chemistry, Columbia University",
+      "bio": "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting STEM students in the USA and UK with complex thesis structuring and citations."
+    }
+  },
+  {
+    "title": "APA 7 Multi-Volume Citations: Eliminating Common Reference Errors",
+    "slug": "apa-7-multi-volume-citations-eliminating-common-reference-errors",
+    "excerpt": "Don't lose marks on formatting. Master the nuances of APA 7 multi-volume citations and clean up your reference list with these simple, actionable steps.",
+    "keywords": [
+      "APA 7 multi-volume thesis citation guide",
+      "APA 7 reference formatting rules",
+      "complex citation management",
+      "fixing bibliography errors",
+      "graduate research formatting"
+    ],
+    "primaryKeyword": "APA 7 multi-volume thesis citation guide",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-08T08:15:28.484777+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7-multi-volume-citations-eliminating-common-reference-errors.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener: A 2026 Workflow for Large-Scale Research Docs",
+    "slug": "zotero-to-scrivener-a-2026-workflow-for-large-scale-research-docs",
+    "excerpt": "Streamline your research writing. Learn how to integrate Zotero with Scrivener to manage hundreds of sources for your dissertation without losing metadata.",
+    "keywords": [
+      "syncing Zotero with Scrivener for dissertation",
+      "dissertation writing tools",
+      "managing 100+ research sources",
+      "Zotero library metadata management",
+      "academic research writing workflow"
+    ],
+    "primaryKeyword": "syncing Zotero with Scrivener for dissertation",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-10-08T08:15:56.216598+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-a-2026-workflow-for-large-scale-research-docs.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
     "title": "Why Turnitin Flags Student Writing: Decoding False Positives in 2026",
     "slug": "why-turnitin-flags-student-writing-decoding-false-positives-in-2026-3",
     "excerpt": "Struggling with a high Turnitin AI score? Learn why your original academic writing might be flagged and how to contextually audit your draft for integrity.",
