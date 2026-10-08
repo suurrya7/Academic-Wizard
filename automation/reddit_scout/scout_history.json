@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-07T20:05:27.183145+00:00",
+  "last_run": "2026-10-08T00:20:45.804290+00:00",
   "daily_count": {
-    "date": "2026-10-07",
-    "count": 3
+    "date": "2026-10-08",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -87,7 +87,8 @@
     "1wzch6m",
     "1wzigy5",
     "1wzo5b8",
-    "1x04s65"
+    "1x04s65",
+    "1x0blxt"
   ],
   "history": [
     {
@@ -753,7 +754,15 @@
       "title": "Did I do the wrong thing?",
       "posted_at": "2026-10-07T20:05:27.183141+00:00",
       "url": "https://reddit.com/r/CasualConversation/comments/1x04s65/did_i_do_the_wrong_thing/"
+    },
+    {
+      "post_id": "1x0blxt",
+      "subreddit": "Advice",
+      "mode": "karma",
+      "title": "How to tell parents of my child\u2019s friend only one of their children can stay the night with us?",
+      "posted_at": "2026-10-08T00:20:45.804286+00:00",
+      "url": "https://reddit.com/r/Advice/comments/1x0blxt/how_to_tell_parents_of_my_childs_friend_only_one/"
     }
   ],
-  "last_comment_posted_at": "2026-10-07T20:05:27.183125+00:00"
+  "last_comment_posted_at": "2026-10-08T00:20:45.804271+00:00"
 }
