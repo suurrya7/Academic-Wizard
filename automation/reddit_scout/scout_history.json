@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-08T00:20:45.804290+00:00",
+  "last_run": "2026-10-08T06:29:40.358031+00:00",
   "daily_count": {
     "date": "2026-10-08",
-    "count": 1
+    "count": 2
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -88,7 +88,8 @@
     "1wzigy5",
     "1wzo5b8",
     "1x04s65",
-    "1x0blxt"
+    "1x0blxt",
+    "1x0hw7l"
   ],
   "history": [
     {
@@ -762,7 +763,15 @@
       "title": "How to tell parents of my child\u2019s friend only one of their children can stay the night with us?",
       "posted_at": "2026-10-08T00:20:45.804286+00:00",
       "url": "https://reddit.com/r/Advice/comments/1x0blxt/how_to_tell_parents_of_my_childs_friend_only_one/"
+    },
+    {
+      "post_id": "1x0hw7l",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "How do working adults actually find the energy to cook dinner every single night?",
+      "posted_at": "2026-10-08T06:29:40.358027+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1x0hw7l/how_do_working_adults_actually_find_the_energy_to/"
     }
   ],
-  "last_comment_posted_at": "2026-10-08T00:20:45.804271+00:00"
+  "last_comment_posted_at": "2026-10-08T06:29:40.358014+00:00"
 }
