@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Score Spikes: How to Audit Your Draft for Human Tone",
+    "slug": "turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone-2",
+    "excerpt": "Got a high AI score in Turnitin? Learn how to audit your writing for human tone and properly document your original research process to clear your work.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity check",
+      "Turnitin similarity report",
+      "human-written AI flagged",
+      "writing authenticity audit"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-09T08:16:05.543747+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone-2.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Zotero to Scrivener: A 2026 Workflow for Large-Scale Dissertation Docs",
+    "slug": "zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs-2",
+    "excerpt": "Struggling to keep your dissertation sources organized? Master the power-workflow of integrating Zotero with Scrivener for seamless, large-scale writing.",
+    "keywords": [
+      "Zotero for large research projects",
+      "dissertation citation manager",
+      "integrating Zotero and Scrivener",
+      "organizing research sources",
+      "academic writing software"
+    ],
+    "primaryKeyword": "Zotero for large research projects",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-09T08:16:33.432335+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-to-scrivener-a-2026-workflow-for-large-scale-dissertation-docs-2.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Fixing In-Text Citations for Multi-Author Sources",
+    "slug": "apa-7th-edition-fixing-in-text-citations-for-multi-author-sources",
+    "excerpt": "Struggling with APA 7 multi-author citations? Avoid common grading penalties with our step-by-step guide to formatting complex source references today.",
+    "keywords": [
+      "APA 7 multi-author citation rules",
+      "APA style guide 2026",
+      "in-text citation examples",
+      "academic formatting tips",
+      "citing multiple authors"
+    ],
+    "primaryKeyword": "APA 7 multi-author citation rules",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-10-09T08:17:00.047634+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-fixing-in-text-citations-for-multi-author-sources.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "NVivo 26: Practical Workflow to Minimize Coding Bias in Theses",
+    "slug": "nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses-2",
+    "excerpt": "Ensure your qualitative analysis remains objective. Discover a practical NVivo 26 workflow to minimize research bias and strengthen your thesis findings.",
+    "keywords": [
+      "NVivo thematic coding bias reduction",
+      "qualitative research methodology",
+      "NVivo data analysis guide",
+      "thematic analysis thesis",
+      "improving qualitative rigour"
+    ],
+    "primaryKeyword": "NVivo thematic coding bias reduction",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-09T08:17:26.548947+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses-2.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI Score Spikes: Auditing Your Draft for Human Tone Accuracy",
     "slug": "turnitin-ai-score-spikes-auditing-your-draft-for-human-tone-accuracy",
     "excerpt": "Is your original academic work being flagged as AI? Learn how to audit your writing for tone, structure, and evidence to resolve Turnitin false positives.",
