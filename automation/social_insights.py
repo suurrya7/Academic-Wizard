@@ -41,6 +41,12 @@ REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 PLAN_FILE = SCRIPT_DIR / "weekly_social_plan.json"
 LATEST_REPORT_FILE = REPORTS_DIR / "latest_insights.md"
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(PROJECT_ROOT / ".env")
+except Exception:
+    pass
+
 BUFFER_ACCESS_TOKEN = (
     os.getenv("BUFFER_ACCESS_TOKEN", "").strip()
     or os.getenv("BUFFER_API_KEY", "").strip()

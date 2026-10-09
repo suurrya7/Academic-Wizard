@@ -62,6 +62,12 @@ AMBER         = (245, 158, 11)        # Kinetic subtitle active highlight
 BRAND_NAVY    = (15, 23, 42)          # Deep contrast navy
 WA_GREEN      = (37, 211, 102)        # WhatsApp official green
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(PROJECT_ROOT / ".env")
+except Exception:
+    pass
+
 BUFFER_ACCESS_TOKEN = os.getenv("BUFFER_ACCESS_TOKEN", "").strip()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip() or os.getenv("BACKLINK_GEMINI_API_KEY", "").strip()
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
