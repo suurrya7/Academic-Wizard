@@ -1871,46 +1871,74 @@ def format_copy_to_string(val: Any) -> str:
 
 
 def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
-    """Synthesize 3 platform-tailored copy variations with slide cues and hashtags."""
-    wa_msg = recipe.get("whatsapp_msg") or f"Hi Academic Wizard, I need help with {recipe.get('topic', 'my academic coursework')}."
-    wa_url = generate_whatsapp_link(wa_msg)
-    tool_url = recipe.get("tool_url") or recipe.get("service_url") or f"{SITE_URL}/tools/"
+    """Synthesize 3 platform-tailored copy variations with slide cues, Comment-to-DM trigger, and hashtags."""
+    topic = recipe.get("topic", "Academic Coursework")
+    topic_lower = topic.lower()
+    headline = recipe.get("hook_headline", "How to Elevate Your Academic Coursework")
+    sub = recipe.get("hook_sub", "The essential framework to turn a 2:2 into a First Class.")
+    comparison = recipe.get("comparison", {})
+    trap_text = comparison.get("trap_text", "")
+    fix_text = comparison.get("fix_text", "")
 
-    # Pre-crafted high-converting fallback
+    # Pick dynamic Lead Magnet keyword for Comment-to-DM conversion
+    if "turnitin" in topic_lower or "similarity" in topic_lower:
+        lead_keyword = "TURNITIN"
+        subject_tags = "#turnitintips #plagiarismcheck #academicintegrity"
+    elif "irac" in topic_lower or "law" in topic_lower:
+        lead_keyword = "IRAC"
+        subject_tags = "#lawstudent #uklaw #lawessay"
+    elif "nursing" in topic_lower or "gibbs" in topic_lower:
+        lead_keyword = "NURSING"
+        subject_tags = "#nursingstudent #nursingcoursework #evidencebasedpractice"
+    elif "mba" in topic_lower or "management" in topic_lower or "swot" in topic_lower:
+        lead_keyword = "MBA"
+        subject_tags = "#mbastudent #businessmanagement #casestudy"
+    elif "literature" in topic_lower or "matrix" in topic_lower or "synthesis" in topic_lower:
+        lead_keyword = "MATRIX"
+        subject_tags = "#dissertationtips #literaturereview #phdlife"
+    elif "citation" in topic_lower or "referencing" in topic_lower or "apa" in topic_lower or "oscola" in topic_lower:
+        lead_keyword = "CITE"
+        subject_tags = "#referencing #apacitation #oscola"
+    elif "panic" in topic_lower or "deadline" in topic_lower or "urgent" in topic_lower:
+        lead_keyword = "RESCUE"
+        subject_tags = "#assignmentdeadline #studentstress #deadlineweek"
+    else:
+        lead_keyword = "RUBRIC"
+        subject_tags = "#essaywriting #firstclassdegree #academicwriting"
+
+    # Pre-crafted dynamic, high-converting fallback (never uses static canned boilerplate)
     fallback_copy = {
         "instagram": (
-            f"📌 {recipe['hook_headline']}\n\n"
-            f"Here is a brutal truth from university markers: up to 15% of your grade is lost purely on descriptive phrasing, missing page numbers, and avoidable rubric traps.\n\n"
-            f"👉 SWIPE THROUGH TO SAVE YOUR GRADE:\n"
-            f"• Slide 1: The supervisor comment that caps you at 54%\n"
-            f"• Slide 2: The exact bad paragraph vs what examiners want\n"
-            f"• Slide 3: The 3-sentence formula (Compare → Critique → Conclude)\n"
-            f"• Slide 4: Screenshot-worthy pre-submission rubric checklist\n\n"
-            f"🛠 100% Free academic tools & citation generators: link in bio\n"
-            f"💬 Stuck at 2 AM? Our academic mentors are live 24/7 on WhatsApp: {WHATSAPP_DISPLAY}\n\n"
-            f"📌 Save this post so you have the checklist ready for your next deadline!\n\n"
-            f"#ukstudents #dissertationtips #academicwriting #essayhelp #studygram"
+            f"📌 {headline}\n\n"
+            f"{sub}\n\n"
+            f"👉 SWIPE THROUGH THE BLUEPRINT:\n"
+            f"• Slide 1: The supervisor feedback that keeps you capped at 54%\n"
+            f"• Slide 2: The exact student draft vs what examiners actually mark\n"
+            f"• Slide 3: The 3-sentence First-Class rewrite formula\n"
+            f"• Slide 4: Screenshot-ready pre-submission rubric checklist\n\n"
+            f"📥 Want this exact 1-page template & pre-submission checklist?\n"
+            f"Comment \"{lead_keyword}\" below and we'll DM you the direct download link!\n\n"
+            f"📲 Under a tight deadline? Tap the link in our bio for instant 24/7 WhatsApp consultation with our postgraduate mentors.\n\n"
+            f"📌 Save this post for your next deadline session!\n\n"
+            f"#ukstudents #universitylife #studygram {subject_tags}"
         ),
         "twitter": (
-            f"Your marker circled your paragraph and wrote 'Where is YOUR critical voice?'\n\n"
-            f"Here is why: You summarized what authors said without evaluating methodology. That caps your grade at 54%.\n\n"
-            f"The 3-step fix:\n"
-            f"1. Compare 2 authors\n"
-            f"2. Critique sample size / method\n"
-            f"3. State your justified verdict\n\n"
-            f"Full guide & free tools linked in bio 👇"
+            f"Your marker circled your paragraph and wrote 'Needs deeper critical evaluation.'\n\n"
+            f"Here's why: Describing 3 studies without contrasting methodology caps you at 54%.\n\n"
+            f"The First-Class fix: Compare authors, critique data limits, state your verdict.\n\n"
+            f"What's your most stressful deadline this week? Drop your subject below 👇"
         ),
         "facebook": (
-            f"🎓 {recipe['hook_headline']}\n\n"
-            f"Whether you are writing an undergraduate coursework essay, nursing care plan, law brief, or master's dissertation, tutors mark against strict analytical criteria:\n\n"
-            f"❌ The Common Mistake (54% 2:2):\n{recipe['comparison']['trap_text']}\n\n"
-            f"✅ The First-Class Blueprint (78%+):\n{recipe['comparison']['fix_text']}\n\n"
+            f"🎓 {headline}\n\n"
+            f"If you've ever stared at a draft wondering why your tutor marked it as 'too descriptive', you're not alone. "
+            f"Most university marks are lost not on effort, but on failing to show critical synthesis.\n\n"
+            f"❌ The Common 54% Trap:\n{trap_text}\n\n"
+            f"✅ The First-Class Blueprint (78%+):\n{fix_text}\n\n"
             f"📋 Pre-Submission Rubric Checklist:\n"
             + "\n".join(f"✔ {chk}" for chk in recipe.get("checklist", []))
-            + f"\n\n🛠 Access our free academic tools, citation makers, and grade calculators at academicwizard.online\n\n"
-            f"🚨 Under a tight deadline? Our postgraduate team provides 1-on-1 human guidance and Turnitin similarity checks.\n"
-            f"💬 Connect directly with our coordinators on WhatsApp: {WHATSAPP_DISPLAY}\n\n"
-            f"Save this guide and share it with a friend who is working on an assignment!"
+            + f"\n\n🛠 Free tools & citation makers: academicwizard.online\n"
+            f"💬 Working on a tight deadline? Our postgraduate team is online 24/7 on WhatsApp for 1-on-1 guidance: {WHATSAPP_DISPLAY}\n\n"
+            f"Save this post and share it with a classmate who is currently working on an assignment!"
         ),
     }
 
@@ -1918,28 +1946,33 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
         return fallback_copy
 
     system_prompt = (
-        "You are an elite academic mentor for Academic Wizard (academicwizard.online). "
-        "Your voice: warm, friendly, authoritative, and deeply practical — like an older sibling who graduated "
-        "with a First Class and is sharing real secrets with university students (UK, US, Australia, Canada, Singapore).\n\n"
+        "You are the Senior Academic Social Strategy Director for Academic Wizard (academicwizard.online). "
+        "Your voice: warm, empathetic, authoritative, and deeply practical — like an older sibling who graduated "
+        "with a First Class and is sharing real university marking secrets with students (UK, US, Australia, Canada, Singapore).\n\n"
         "CRITICAL RULES:\n"
-        "1. NEVER sound like a corporate advertisement or an AI generator. Avoid generic phrases like 'academic weapon', "
-        "'elevate your studies', or 'stop settling'.\n"
-        "2. Write CONVERSATIONAL, HUMANIZED copy. Relate to real student pain points (late nights, cryptic feedback, Turnitin panic).\n"
-        "3. INSTAGRAM: 120-180 words, engaging hook, slide-by-slide guide, save reminder, and EXACTLY 3 TO 5 TARGETED HASHTAGS "
-        "(e.g., #ukstudents #dissertationtips #lawstudent #nursingstudent #essayhelp). NEVER use more than 5 hashtags.\n"
-        "4. TWITTER: Punchy conversational thread hook under 250 characters. DO NOT include outbound URLs or links in the tweet "
-        "(X algorithm heavily penalizes external links). Tell them 'Details in bio 👇' or ask an engaging question.\n"
-        "5. FACEBOOK: Friendly community study guide (150-200 words) with clear bullet points and WhatsApp consultation CTA.\n\n"
+        "1. NEVER sound like a generic AI or corporate advertisement. Absolutely NO repetitive phrases like "
+        "'Here is a brutal truth from university markers' or 'academic weapon'.\n"
+        "2. Write CONVERSATIONAL, HUMANIZED copy addressing real student anxieties (late-night panic, supervisor feedback, Turnitin red bands).\n"
+        f"3. INSTAGRAM: 130-180 words. MUST include:\n"
+        f"   - An empathetic pattern-interrupt hook.\n"
+        f"   - Slide-by-slide swipe outline.\n"
+        f"   - COMMENT-TO-DM TRIGGER: 'Comment \"{lead_keyword}\" below and we will DM you the exact 1-page template and checklist!'\n"
+        f"   - BIO CTA: 'Tap the link in our bio for 24/7 WhatsApp consultation with our postgraduate writing team.'\n"
+        f"   - Save reminder.\n"
+        f"   - Exactly 3 to 5 hyper-relevant student hashtags.\n"
+        "4. TWITTER: Punchy conversational take under 250 characters. DO NOT include outbound URLs or links in the tweet "
+        "(X heavily penalizes external links). Ask an engaging question at the end to drive replies.\n"
+        "5. FACEBOOK: Friendly community study guide (150-200 words) with clear contrast (The 54% Trap vs The 78% Blueprint), "
+        "bullet points, and WhatsApp consultation CTA.\n\n"
         "Output ONLY valid JSON with keys 'instagram', 'twitter', 'facebook'."
     )
 
     user_prompt = f"""
 Slot: {slot.upper()}
-Topic: {recipe['topic']}
-Headline: {recipe['hook_headline']}
-Comparison: {json.dumps(recipe['comparison'])}
-Tool URL: {tool_url}
-WhatsApp CTA URL: {wa_url}
+Topic: {topic}
+Headline: {headline}
+Comparison: {json.dumps(comparison)}
+Lead Keyword: {lead_keyword}
 WhatsApp Number: {WHATSAPP_DISPLAY}
 """
 

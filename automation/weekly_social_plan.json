@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-04T22:39:29.701547+00:00",
-  "week_start": "2026-10-05",
+  "generated_at": "2026-10-09T15:37:51.868053+00:00",
+  "week_start": "2026-10-12",
   "insights_summary": {
     "core_finding": "Maintained priority on citation tools and dissertation emergency triage.",
     "top_performing_topics": [
-      "Turnitin Deconstructed: What The Colors Mean",
-      "Law Problem Questions: The IRAC Masterclass"
+      "Academic Writing Myths",
+      "Turnitin Deconstructed: What The Colors Mean"
     ],
     "underperforming_topics": [
-      "Substantive Academic Editing vs. Surface Proofreading",
-      "Midnight Panic? The 12-Hour Urgent Rescue Protocol"
+      "Live Delivery Proof",
+      "The Original Ideas Myth"
     ],
     "strategic_shift": "Prioritizing high-CTR topics for mid-week student deadlines."
   },
   "audit_totals": {
-    "reach": 12540,
-    "clicks": 226,
-    "engagements": 243
+    "reach": 1109,
+    "clicks": 1,
+    "engagements": 15
   },
   "schedule": {
     "Monday": {

@@ -142,6 +142,93 @@ class BufferAnalyticsClient:
 
         return []
 
+    def fetch_all_sent_updates_graphql(self, days_back: int = 14) -> List[Dict[str, Any]]:
+        """Fetch real post analytics directly from Buffer GraphQL API."""
+        if self.dry_run or not self.token:
+            return []
+
+        cutoff_dt = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days_back)
+        query_orgs = """
+        query GetOrgs {
+          account {
+            organizations {
+              id
+            }
+          }
+        }
+        """
+        try:
+            res = requests.post(self.graphql_url, headers=self.headers, json={"query": query_orgs}, timeout=15)
+            if res.status_code != 200:
+                return []
+            orgs = res.json().get("data", {}).get("account", {}).get("organizations", [])
+            all_posts = []
+            for org in orgs:
+                org_id = org.get("id")
+                posts_q = f"""
+                query {{
+                  posts(input: {{ organizationId: "{org_id}" }}, first: 100) {{
+                    edges {{
+                      node {{
+                        id
+                        status
+                        channelService
+                        createdAt
+                        sentAt
+                        text
+                        metrics {{
+                          name
+                          value
+                          type
+                        }}
+                      }}
+                    }}
+                  }}
+                }}
+                """
+                p_res = requests.post(self.graphql_url, headers=self.headers, json={"query": posts_q}, timeout=20)
+                if p_res.status_code == 200:
+                    edges = p_res.json().get("data", {}).get("posts", {}).get("edges", [])
+                    for e in edges:
+                        node = e.get("node", {})
+                        sent_str = node.get("sentAt") or node.get("createdAt")
+                        if sent_str:
+                            try:
+                                sent_time = dt.datetime.fromisoformat(sent_str.replace("Z", "+00:00"))
+                                if sent_time < cutoff_dt:
+                                    continue
+                            except Exception:
+                                pass
+
+                        stats = {"reach": 0, "impressions": 0, "clicks": 0, "favorites": 0, "retweets": 0, "comments": 0, "saves": 0}
+                        for m in (node.get("metrics") or []):
+                            m_name = (m.get("name") or "").lower()
+                            val = int(float(m.get("value", 0) or 0))
+                            if m_name in ["reach", "views", "impressions"]:
+                                stats["reach"] = max(stats["reach"], val)
+                            if m_name == "clicks":
+                                stats["clicks"] = val
+                            if m_name in ["reactions", "likes"]:
+                                stats["favorites"] = val
+                            if m_name in ["reposts", "shares"]:
+                                stats["retweets"] = val
+                            if m_name == "comments":
+                                stats["comments"] = val
+                            if m_name == "saves":
+                                stats["saves"] = val
+
+                        all_posts.append({
+                            "id": node.get("id"),
+                            "text": node.get("text", ""),
+                            "service": node.get("channelService", ""),
+                            "sent_at": sent_str,
+                            "statistics": stats,
+                        })
+            return all_posts
+        except Exception as e:
+            print(f"  ⚠️ Error fetching GraphQL sent updates: {e}")
+            return []
+
     def fetch_sent_updates(self, profile_id: str, days_back: int = 7) -> List[Dict[str, Any]]:
         """Fetch sent updates for a profile over the last N days."""
         if self.dry_run or not self.token:
@@ -623,14 +710,19 @@ def main():
     profiles = client.fetch_profiles()
     print(f"  ✅ Connected to {len(profiles)} social profiles.")
 
-    all_recent_posts = []
-    for p in profiles:
-        p_id = p.get("id")
-        p_service = p.get("service")
-        p_name = p.get("formatted_username") or p.get("service_username") or p_id
-        updates = client.fetch_sent_updates(profile_id=p_id, days_back=args.days_back)
-        print(f"  • Profile [{p_service.upper()}] {p_name}: fetched {len(updates)} recent updates.")
-        all_recent_posts.extend(updates)
+    # Fetch via GraphQL first (supports modern Buffer tokens)
+    all_recent_posts = client.fetch_all_sent_updates_graphql(days_back=args.days_back)
+    if all_recent_posts:
+        print(f"  🎯 Successfully harvested {len(all_recent_posts)} live post updates via Buffer GraphQL API!")
+    else:
+        all_recent_posts = []
+        for p in profiles:
+            p_id = p.get("id")
+            p_service = p.get("service")
+            p_name = p.get("formatted_username") or p.get("service_username") or p_id
+            updates = client.fetch_sent_updates(profile_id=p_id, days_back=args.days_back)
+            print(f"  • Profile [{p_service.upper()}] {p_name}: fetched {len(updates)} recent updates.")
+            all_recent_posts.extend(updates)
 
     if not all_recent_posts:
         print("  ℹ️ No recent post updates found in Buffer yet. Using seed curriculum baseline to ensure schedule continuity.")
