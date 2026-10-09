@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-09T06:30:58.195629+00:00",
+  "last_run": "2026-10-09T13:41:20.617447+00:00",
   "daily_count": {
     "date": "2026-10-09",
-    "count": 2
+    "count": 3
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -92,7 +92,8 @@
     "1x0hw7l",
     "1x0z1ou",
     "1x13w46",
-    "1x1dq3e"
+    "1x1dq3e",
+    "1x1jop7"
   ],
   "history": [
     {
@@ -798,7 +799,15 @@
       "title": "What do I do!? Please help it\u2019s bad",
       "posted_at": "2026-10-09T06:30:58.195624+00:00",
       "url": "https://reddit.com/r/Advice/comments/1x1dq3e/what_do_i_do_please_help_its_bad/"
+    },
+    {
+      "post_id": "1x1jop7",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "How do people actually fall asleep in under 20 minutes instead of lying awake staring at the ceiling for hours?",
+      "posted_at": "2026-10-09T13:41:20.617442+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1x1jop7/how_do_people_actually_fall_asleep_in_under_20/"
     }
   ],
-  "last_comment_posted_at": "2026-10-09T06:30:58.195609+00:00"
+  "last_comment_posted_at": "2026-10-09T13:41:20.617429+00:00"
 }
