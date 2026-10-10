@@ -419,11 +419,18 @@ def synthesize_narration(script_text: str, output_mp3: Path, voice: str = "en-GB
 
 def render_dynamic_video_reel(recipe: Dict[str, Any], output_mp4: Path) -> Path:
     """
-    Renders a complete, professional MP4 video reel with:
-    - 4 distinct animated scenes
-    - Synchronized voiceover narration
-    - Lo-fi background music mix
+    Renders a complete, professional MP4 video reel.
+    Delegates to the Master Pixabay B-Roll & kinetic subtitle engine.
     """
+    try:
+        try:
+            from automation.broll_engine import render_broll_master_reel
+        except ImportError:
+            from broll_engine import render_broll_master_reel
+        return render_broll_master_reel(recipe, output_mp4)
+    except Exception as e:
+        print(f"  ⚠️ Master B-Roll engine fallback ({e}), generating dynamic multi-scene fallback...")
+
     work_dir = output_mp4.parent / "reel_render_temp"
     work_dir.mkdir(parents=True, exist_ok=True)
 

@@ -2011,7 +2011,19 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
         render_reel_frame(recipe, frame_path)
         print(f"  ✅ 9:16 Reel frame generated: {frame_path.name}")
 
-    # Try dynamic multi-scene video reel engine first
+    # 1. Try Master Pixabay B-Roll Video Reel engine first (real stock footage + large typography + kinetic subtitles)
+    try:
+        try:
+            from automation.broll_engine import render_broll_master_reel
+        except ImportError:
+            from broll_engine import render_broll_master_reel
+        rendered_mp4 = render_broll_master_reel(recipe, output_path)
+        if rendered_mp4 and rendered_mp4.exists():
+            return rendered_mp4
+    except Exception as e:
+        print(f"  ⚠️ Master B-Roll reel engine note ({e}), trying dynamic scene renderer...")
+
+    # 2. Try dynamic multi-scene video reel engine fallback
     try:
         try:
             from automation.render_dynamic_video_reel import render_dynamic_video_reel
