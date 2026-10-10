@@ -7,3 +7,7 @@ __pycache__/
 automation/directory_submitter/.browser_profile/
 automation/directory_submitter/*.png
 scratch/
+public/social/*_render_temp/
+automation/broll_cache/
+automation/broll_bank/*.mp4
+automation/assets/templates_preview/

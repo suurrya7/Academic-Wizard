@@ -92,6 +92,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.BACKLINK_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           SITE_URL: https://academicwizard.online
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF_NAME: ${{ github.ref_name }}

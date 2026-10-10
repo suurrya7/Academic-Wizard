@@ -1093,10 +1093,246 @@ def stamp_footer(img: Image.Image, draw: ImageDraw.Draw, cta_type: str = "swipe"
 
 
 # ==============================================================================
-# Slide 1: Modern Minimal Hook & Feedback Cover
+# Slide 1: Modern Minimal Hook & Feedback Cover (Infographic Engine Integration)
 # ==============================================================================
+def extract_infographic_content(recipe: Dict[str, Any]) -> Dict[str, Any]:
+    """Dynamically derives high-impact, topic-tailored in-graphic text (title 1, title 2, and 5 distinct items) from any recipe or article."""
+    topic = recipe.get("topic") or recipe.get("title") or "Academic Writing Excellence"
+    headline = recipe.get("hook_headline") or recipe.get("title") or topic
+    headline = str(headline).strip()
+
+    words = headline.split()
+    badge = recipe.get("badge", "")
+    if "CORE SERVICE:" in badge:
+        s = badge.replace("CORE SERVICE:", "").strip().upper()
+        if "NURSING" in s and "HELP" not in s:
+            s += " HELP"
+        elif "MBA" in s and "HELP" not in s:
+            s = "MBA ASSIGNMENT HELP"
+        elif "PH.D." in s:
+            s = "DISSERTATION & THESIS HELP"
+        elif "ACADEMIC POLISHING" in s:
+            s = "ACADEMIC EDITING & PROOF"
+        title_2 = s[:28]
+        if len(words) > 4:
+            title_1 = " ".join(words[:4]).upper()[:28]
+        else:
+            title_1 = headline.upper()[:28]
+    elif len(words) <= 4:
+        title_1 = headline.upper()[:30]
+        title_2 = "ACADEMIC WIZARD BLUEPRINT"
+    else:
+        half = len(words) // 2
+        t1 = " ".join(words[:half]).upper()
+        t2 = " ".join(words[half:]).upper()
+        if len(t1) > 30:
+            t1 = t1[:28] + "..."
+        if len(t2) > 30:
+            t2 = t2[:28] + "..."
+        title_1 = t1
+        title_2 = t2
+
+    def clean_card_string(text: str, max_len: int = 34) -> str:
+        text = str(text).replace("\n", " ").strip()
+        text = re.sub(r'^\d+[\.\)]\s*', '', text).strip()
+        if len(text) <= max_len:
+            return text
+        cut = text[:max_len]
+        sp = cut.rfind(" ")
+        if sp > 16:
+            return cut[:sp].rstrip(",;:-( ")
+        return cut.rstrip(",;:-( ")
+
+    items: List[Tuple[str, str]] = []
+
+    # Priority 1: Formula steps
+    formula = recipe.get("formula")
+    if isinstance(formula, dict):
+        steps = formula.get("steps", [])
+        if isinstance(steps, list):
+            for idx, stp in enumerate(steps, 1):
+                if isinstance(stp, dict):
+                    lbl = stp.get("label", f"Step {idx}").strip()
+                    desc = stp.get("desc", "").strip()
+                    if desc:
+                        first_clause = desc.split(".")[0].split(";")[0].split("—")[0].strip()
+                        combined = f"{lbl}: {first_clause}"
+                        items.append((f"{idx}.", clean_card_string(combined, 34)))
+                    else:
+                        items.append((f"{idx}.", clean_card_string(lbl, 34)))
+
+    # Priority 2: Checklist
+    checklist = recipe.get("checklist")
+    chk_items = []
+    if isinstance(checklist, dict):
+        chk_items = checklist.get("items", [])
+    elif isinstance(checklist, list):
+        chk_items = checklist
+
+    if len(items) < 5 and chk_items:
+        for chk in chk_items:
+            if isinstance(chk, str):
+                c_str = clean_card_string(chk, 34)
+                if c_str and not any(c_str in itm[1] for itm in items):
+                    idx = len(items) + 1
+                    items.append((f"{idx}.", c_str))
+            if len(items) >= 5:
+                break
+
+    # Priority 3: Hook bullets
+    hook_bullets = recipe.get("hook_bullets", [])
+    if len(items) < 5 and isinstance(hook_bullets, list):
+        for hb in hook_bullets:
+            if isinstance(hb, str):
+                c_str = clean_card_string(hb, 34)
+                if c_str and not any(c_str in itm[1] for itm in items):
+                    idx = len(items) + 1
+                    items.append((f"{idx}.", c_str))
+            if len(items) >= 5:
+                break
+
+    # Priority 4: Subject/Keyword fallbacks
+    if len(items) < 5:
+        t_low = (topic + " " + headline).lower()
+        if any(k in t_low for k in ["law", "irac", "legal", "oscola", "statute", "court"]):
+            candidates = [
+                "Issue: Pinpoint Material Facts",
+                "Rule: Primary Statutes & Precedent",
+                "Application: Judicial Tests (50%)",
+                "Counter-Arguments & Defenses",
+                "Justified Practical Remedy"
+            ]
+        elif any(k in t_low for k in ["nursing", "health", "gibbs", "nmc", "clinical", "patient"]):
+            candidates = [
+                "NMC Code & Ethical Frameworks",
+                "Gibbs Reflective Cycle Stages",
+                "Level 1 Clinical Evidence (NICE)",
+                "Drug Calculations & Dosages",
+                "Holistic Patient Care Plan"
+            ]
+        elif any(k in t_low for k in ["cite", "referenc", "apa", "harvard", "oscola", "bibliography"]):
+            candidates = [
+                "In-Text Citation Syntax Rules",
+                "Direct Quotes vs Paraphrasing",
+                "Et Al. Rules for 3+ Authors",
+                "Journal DOI & Pinpoint Pages",
+                "Zero Plagiarism Reference List"
+            ]
+        elif any(k in t_low for k in ["turnitin", "ai", "detector", "chatgpt", "plagiarism"]):
+            candidates = [
+                "AI Detection Threshold Audit",
+                "Burstiness & Perplexity Check",
+                "Original Literature Synthesis",
+                "Remove Generative Echoes",
+                "Official Verified Turnitin Pass"
+            ]
+        elif any(k in t_low for k in ["mba", "business", "porter", "swot", "pestel", "strategy"]):
+            candidates = [
+                "Porter 5 Forces Competitive Scan",
+                "PESTEL Macro-Environmental Audit",
+                "VRIO Internal Capability Analysis",
+                "Financial Ratio Performance",
+                "Executive C-Suite Recommendations"
+            ]
+        elif any(k in t_low for k in ["lit", "literature review", "matrix", "prisma", "search"]):
+            candidates = [
+                "Boolean Search Query Strings",
+                "PRISMA Screening & Filtering",
+                "Synthesis Matrix (Themes vs Gaps)",
+                "Methodological Critique & Bias",
+                "Formulation of Research Gap"
+            ]
+        elif any(k in t_low for k in ["code", "python", "algorithm", "software", "data science", "cs"]):
+            candidates = [
+                "Algorithm Time Complexity (Big-O)",
+                "Modular OOP & Clean Code Standards",
+                "Comprehensive Unit Test Suite",
+                "IEEE Style Code Documentation",
+                "Reproducible Execution Pipeline"
+            ]
+        else:
+            candidates = [
+                "Rubric Learning Outcomes Met",
+                "Peer-Reviewed High-Impact Sources",
+                "Critical Analysis (No Mere Summary)",
+                "Flawless Academic Register & Flow",
+                "100% Original Turnitin Certificate"
+            ]
+
+        for cand in candidates:
+            if not any(cand in itm[1] for itm in items):
+                idx = len(items) + 1
+                items.append((f"{idx}.", cand))
+            if len(items) >= 5:
+                break
+
+    final_items = []
+    for i, itm in enumerate(items[:5], 1):
+        clean_val = re.sub(r'^\d+[\.\)]\s*', '', itm[1]).strip()
+        final_items.append((f"{i}.", clean_val))
+
+    return {
+        "title_1": title_1,
+        "title_2": title_2,
+        "items": final_items,
+        "topic": topic
+    }
+
+
 def render_slide_1_cover(recipe: Dict[str, Any], output_path: Path) -> Path:
-    """Generate Slide 1: High-impact hook with supervisor feedback card & stats bar."""
+    """Generate Slide 1: High-converting infographic cover powered by the 15-template x 20-student engine."""
+    try:
+        try:
+            from automation.infographic_engine import generate_random_infographic
+        except ImportError:
+            from infographic_engine import generate_random_infographic
+        content = extract_infographic_content(recipe)
+        
+        # Load posting archive to avoid repeating recently used templates and students
+        archive_path = SCRIPT_DIR / "posted_archive.json"
+        recent_templates = set()
+        recent_students = set()
+        archive_records = []
+        if archive_path.exists():
+            try:
+                archive_records = json.loads(archive_path.read_text(encoding="utf-8"))
+                for rec in archive_records[-10:]:
+                    if "template_id" in rec:
+                        recent_templates.add(rec["template_id"])
+                    if "student_id" in rec:
+                        recent_students.add(rec["student_id"])
+            except Exception:
+                pass
+                
+        # Pick template and student avoiding recent duplicates
+        available_templates = [t for t in range(1, 16) if t not in recent_templates] or list(range(1, 16))
+        available_students = [s for s in range(1, 21) if s not in recent_students] or list(range(1, 21))
+        chosen_template = random.choice(available_templates)
+        chosen_student = random.choice(available_students)
+        
+        res = generate_random_infographic(
+            template_id=chosen_template,
+            student_id=chosen_student,
+            content=content,
+            output_path=str(output_path)
+        )
+        
+        # Log to archive
+        archive_records.append({
+            "timestamp": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "topic": content.get("topic"),
+            "title_1": content.get("title_1"),
+            "title_2": content.get("title_2"),
+            "template_id": res["template_id"],
+            "student_id": res["student_id"]
+        })
+        archive_path.write_text(json.dumps(archive_records[-500:], indent=2), encoding="utf-8")
+        
+        print(f"  🎨 Generated Master Infographic Cover (Template {res['template_id']}, Student {res['student_id']}): {output_path.name}")
+        return output_path
+    except Exception as e:
+        print(f"  ⚠️ Infographic engine fallback ({e}), rendering classic cover...")
+
     W, H = 1080, 1080
     img = Image.new("RGBA", (W, H), BG_LIGHT + (255,))
     draw = ImageDraw.Draw(img)
@@ -1698,9 +1934,12 @@ def synthesize_voiceover(script_text: str, output_audio: Path) -> Tuple[bool, fl
     try:
         import asyncio
         import edge_tts
+        import certifi
+        import os
+        os.environ["SSL_CERT_FILE"] = certifi.where()
 
         voice = "en-GB-RyanNeural"
-        print(f"  🎙️ Synthesizing voiceover with {voice} (rate: -3%)...")
+        print(f"  🎙️ Synthesizing voiceover with {voice} (rate: -2%)...")
 
         total_duration = 0.0
 
@@ -1739,9 +1978,50 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
     frame_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_frame.png"
     audio_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_reel_audio.mp3"
 
-    # 1. Render high-res 9:16 frame with large mobile-optimized typography
-    render_reel_frame(recipe, frame_path)
-    print(f"  ✅ 9:16 Reel frame generated: {frame_path.name}")
+    # 1. Render high-res 9:16 frame powered by the 6-template x 20-student reel engine
+    try:
+        try:
+            from automation.reel_templates import generate_random_reel_frame
+        except ImportError:
+            from reel_templates import generate_random_reel_frame
+            
+        archive_path = SCRIPT_DIR / "posted_archive.json"
+        recent_reel_templates = set()
+        recent_reel_students = set()
+        if archive_path.exists():
+            try:
+                archive_records = json.loads(archive_path.read_text(encoding="utf-8"))
+                for rec in archive_records[-8:]:
+                    if "reel_template_id" in rec:
+                        recent_reel_templates.add(rec["reel_template_id"])
+                    if "student_id" in rec:
+                        recent_reel_students.add(rec["student_id"])
+            except Exception:
+                pass
+                
+        available_t = [t for t in range(1, 7) if t not in recent_reel_templates] or list(range(1, 7))
+        available_s = [s for s in range(1, 21) if s not in recent_reel_students] or list(range(1, 21))
+        chosen_t = random.choice(available_t)
+        chosen_s = random.choice(available_s)
+        
+        res = generate_random_reel_frame(recipe, template_id=chosen_t, student_id=chosen_s, output_path=str(frame_path))
+        print(f"  🎬 Generated Master 9:16 Reel Frame (Template {res['template_id']}, Student {res['student_id']}): {frame_path.name}")
+    except Exception as e:
+        print(f"  ⚠️ Reel template engine fallback ({e}), rendering classic frame...")
+        render_reel_frame(recipe, frame_path)
+        print(f"  ✅ 9:16 Reel frame generated: {frame_path.name}")
+
+    # Try dynamic multi-scene video reel engine first
+    try:
+        try:
+            from automation.render_dynamic_video_reel import render_dynamic_video_reel
+        except ImportError:
+            from render_dynamic_video_reel import render_dynamic_video_reel
+        rendered_mp4 = render_dynamic_video_reel(recipe, output_path)
+        if rendered_mp4 and rendered_mp4.exists():
+            return rendered_mp4
+    except Exception as e:
+        print(f"  ⚠️ Dynamic multi-scene reel renderer fallback ({e}), attempting standard compilation...")
 
     # 2. Build high-retention articulate human spoken script
     spoken_script = recipe.get("spoken_script")
@@ -1751,10 +2031,30 @@ def generate_video_reel(recipe: Dict[str, Any], slot: str) -> Optional[Path]:
     # 3. Synthesize voiceover audio with exact duration measurement
     voice_ok, audio_dur = synthesize_voiceover(spoken_script, audio_path)
 
-    # 4. Check for FFmpeg
-    if not shutil.which("ffmpeg"):
+    # 4. Check for FFmpeg (system PATH or imageio-ffmpeg)
+    ffmpeg_bin = shutil.which("ffmpeg")
+    if not ffmpeg_bin:
+        try:
+            import imageio_ffmpeg
+            ffmpeg_bin = imageio_ffmpeg.get_ffmpeg_exe()
+        except Exception:
+            ffmpeg_bin = None
+
+    if not ffmpeg_bin:
         print("  ℹ️ FFmpeg not installed on local host — reel frame and audio ready for GitHub runner compilation.")
         return None
+
+    if not voice_ok:
+        try:
+            aiff_tmp = audio_path.with_suffix(".aiff")
+            subprocess.run(["say", "-v", "Daniel", "-o", str(aiff_tmp), spoken_script], check=True)
+            subprocess.run([ffmpeg_bin, "-y", "-i", str(aiff_tmp), "-b:a", "192k", str(audio_path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if aiff_tmp.exists():
+                aiff_tmp.unlink()
+            voice_ok = True
+            audio_dur = get_audio_duration_seconds(audio_path)
+        except Exception:
+            pass
 
     try:
         # Determine total video duration: exact audio length + 1.8s trailing buffer (minimum 15s)
@@ -1880,63 +2180,82 @@ def generate_platform_copy(recipe: Dict[str, Any], slot: str) -> Dict[str, str]:
     trap_text = comparison.get("trap_text", "")
     fix_text = comparison.get("fix_text", "")
 
-    # Pick dynamic Lead Magnet keyword for Comment-to-DM conversion
+    # Pick dynamic Lead Magnet keyword for Comment-to-DM conversion and high-intent commercial tags
     if "turnitin" in topic_lower or "similarity" in topic_lower:
         lead_keyword = "TURNITIN"
-        subject_tags = "#turnitintips #plagiarismcheck #academicintegrity"
+        subject_tags = "#assignmenthelp #turnitintips #plagiarismcheck #turnitincheck #academicintegrity"
     elif "irac" in topic_lower or "law" in topic_lower:
         lead_keyword = "IRAC"
-        subject_tags = "#lawstudent #uklaw #lawessay"
+        subject_tags = "#lawassignmenthelp #lawstudent #uklaw #lawessay #assignmenthelp"
     elif "nursing" in topic_lower or "gibbs" in topic_lower:
         lead_keyword = "NURSING"
-        subject_tags = "#nursingstudent #nursingcoursework #evidencebasedpractice"
+        subject_tags = "#nursingassignmenthelp #nursingstudent #nursingcoursework #assignmenthelp"
     elif "mba" in topic_lower or "management" in topic_lower or "swot" in topic_lower:
         lead_keyword = "MBA"
-        subject_tags = "#mbastudent #businessmanagement #casestudy"
+        subject_tags = "#mbaassignmenthelp #mbastudent #businessmanagement #assignmenthelp"
     elif "literature" in topic_lower or "matrix" in topic_lower or "synthesis" in topic_lower:
         lead_keyword = "MATRIX"
-        subject_tags = "#dissertationtips #literaturereview #phdlife"
+        subject_tags = "#dissertationhelp #dissertationtips #literaturereview #thesishelp"
     elif "citation" in topic_lower or "referencing" in topic_lower or "apa" in topic_lower or "oscola" in topic_lower:
         lead_keyword = "CITE"
-        subject_tags = "#referencing #apacitation #oscola"
+        subject_tags = "#assignmenthelp #referencing #apacitation #oscola #essayhelp"
     elif "panic" in topic_lower or "deadline" in topic_lower or "urgent" in topic_lower:
         lead_keyword = "RESCUE"
-        subject_tags = "#assignmentdeadline #studentstress #deadlineweek"
+        subject_tags = "#urgentassignmenthelp #assignmentdeadline #studentstress #deadlineweek #assignmenthelp"
     else:
         lead_keyword = "RUBRIC"
-        subject_tags = "#essaywriting #firstclassdegree #academicwriting"
+        subject_tags = "#assignmenthelp #essaywriting #firstclassdegree #academicwriting #courseworkhelp"
+
+    cta_text = recipe.get("cta_text", "").strip()
+    cta_block = f"💼 Need Expert Help? {cta_text}\n\n" if cta_text else ""
+
+    # Dynamic content overview matching format
+    if slot == "afternoon":
+        overview_text = (
+            f"👉 WHAT THIS REEL COVERS:\n"
+            f"• Why descriptive summaries get capped at 54%\n"
+            f"• The 78%+ First-Class critical analysis fix\n"
+            f"• 3-Step actionable framework for {topic}\n"
+            f"• Pre-submission rubric checklist"
+        )
+    else:
+        overview_text = (
+            f"👉 WHAT THIS 1-PAGE CHEAT-SHEET COVERS:\n"
+            f"❌ The 54% Student Mistake (Why essays get marked as descriptive)\n"
+            f"✓ The 78% First-Class Fix (Critique methodology & theoretical synthesis)\n"
+            f"📋 The Step-by-Step {topic} Blueprint\n"
+            f"✅ 3-Point Pre-Submission Rubric Checklist"
+        )
 
     # Pre-crafted dynamic, high-converting fallback (never uses static canned boilerplate)
     fallback_copy = {
         "instagram": (
             f"📌 {headline}\n\n"
             f"{sub}\n\n"
-            f"👉 SWIPE THROUGH THE BLUEPRINT:\n"
-            f"• Slide 1: The supervisor feedback that keeps you capped at 54%\n"
-            f"• Slide 2: The exact student draft vs what examiners actually mark\n"
-            f"• Slide 3: The 3-sentence First-Class rewrite formula\n"
-            f"• Slide 4: Screenshot-ready pre-submission rubric checklist\n\n"
-            f"📥 Want this exact 1-page template & pre-submission checklist?\n"
+            f"{overview_text}\n\n"
+            f"📥 Want this exact 1-page high-res PDF cheatsheet?\n"
             f"Comment \"{lead_keyword}\" below and we'll DM you the direct download link!\n\n"
-            f"📲 Under a tight deadline? Tap the link in our bio for instant 24/7 WhatsApp consultation with our postgraduate mentors.\n\n"
+            f"{cta_block}"
+            f"📲 Under a tight deadline? Tap the link in our bio for instant 24/7 WhatsApp consultation with our postgraduate mentors: {WHATSAPP_DISPLAY}\n\n"
             f"📌 Save this post for your next deadline session!\n\n"
             f"#ukstudents #universitylife #studygram {subject_tags}"
         ),
         "twitter": (
-            f"Your marker circled your paragraph and wrote 'Needs deeper critical evaluation.'\n\n"
-            f"Here's why: Describing 3 studies without contrasting methodology caps you at 54%.\n\n"
-            f"The First-Class fix: Compare authors, critique data limits, state your verdict.\n\n"
-            f"What's your most stressful deadline this week? Drop your subject below 👇"
+            f"📌 {headline}\n\n"
+            f"{sub[:120]}\n\n"
+            f"The First-Class fix: {fix_text[:100] if fix_text else 'Deconstruct your grading rubric and cite recent peer-reviewed sources.'}\n\n"
+            + (f"💡 {cta_text[:100]}\n\n" if cta_text else "")
+            + f"Working on an upcoming deadline for {topic}? Drop your questions below 👇"
         ),
         "facebook": (
             f"🎓 {headline}\n\n"
-            f"If you've ever stared at a draft wondering why your tutor marked it as 'too descriptive', you're not alone. "
-            f"Most university marks are lost not on effort, but on failing to show critical synthesis.\n\n"
+            f"{sub}\n\n"
             f"❌ The Common 54% Trap:\n{trap_text}\n\n"
             f"✅ The First-Class Blueprint (78%+):\n{fix_text}\n\n"
             f"📋 Pre-Submission Rubric Checklist:\n"
             + "\n".join(f"✔ {chk}" for chk in recipe.get("checklist", []))
-            + f"\n\n🛠 Free tools & citation makers: academicwizard.online\n"
+            + f"\n\n{cta_block}"
+            + f"🛠 Free tools & citation makers: academicwizard.online\n"
             f"💬 Working on a tight deadline? Our postgraduate team is online 24/7 on WhatsApp for 1-on-1 guidance: {WHATSAPP_DISPLAY}\n\n"
             f"Save this post and share it with a classmate who is currently working on an assignment!"
         ),
@@ -2391,15 +2710,23 @@ def run(
                 # Also generate frame fallback
                 image_urls = [f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_reel_frame.png"]
             else:
-                print(f"\n🎨 Slot is {slot.upper()}: Generating 4-Slide Modern Minimal Carousel...")
-                slides = generate_carousel_slides(recipe, slot)
-                image_urls = [
-                    f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png"
-                    for i in range(1, 5)
-                ]
-                print(f"🌐 Generated {len(image_urls)} Carousel Slide URLs:")
-                for u in image_urls:
-                    print(f"   • {u}")
+                print(f"\n🎨 Slot is {slot.upper()}: Generating 1-Page Master Infographic Post (1080x1350)...")
+                try:
+                    try:
+                        from automation.single_image_engine import render_single_image_master_post
+                    except ImportError:
+                        from single_image_engine import render_single_image_master_post
+                    post_path = PUBLIC_SOCIAL_DIR / f"daily_{slot}_post.png"
+                    render_single_image_master_post(recipe, post_path)
+                    image_urls = [f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_post.png"]
+                    print(f"🌐 Generated 1-Page Master Infographic Post URL: {image_urls[0]}")
+                except Exception as e:
+                    print(f"  ⚠️ Single image engine fallback ({e}), generating classic slides...")
+                    slides = generate_carousel_slides(recipe, slot)
+                    image_urls = [
+                        f"{RAW_GITHUB_BASE}/public/social/daily_{slot}_slide_{i}.png"
+                        for i in range(1, 5)
+                    ]
 
         print("\n✍️ Generating Platform Copy (Instagram, Twitter, Facebook)...")
         copy_dict = generate_platform_copy(recipe, slot)
