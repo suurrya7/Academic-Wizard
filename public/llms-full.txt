@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-09
+        **Last updated**: 2026-10-10
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -762,6 +762,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Editing and Proofreading
 
+- **[Turnitin AI False Positives: A 2026 Audit Guide for Complex Papers](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-audit-guide-for-complex-papers-2/)**
+  - Excerpt: Turnitin flagged your work as AI? Learn how to audit your writing, gather evidence, and present a compelling case to your professor with our 2026 guide.
+  - Keywords: how to challenge false positives in Turnitin AI reports, Turnitin AI detection errors, academic integrity audit, disputing Turnitin scores, human authorship verification
+  - Target Region: USA
+  - Published: 2026-10-10
+
 - **[Turnitin AI Score Spikes: How to Audit Your Draft for Human Tone](https://academicwizard.online/blog/turnitin-ai-score-spikes-how-to-audit-your-draft-for-human-tone-2/)**
   - Excerpt: Got a high AI score in Turnitin? Learn how to audit your writing for human tone and properly document your original research process to clear your work.
   - Keywords: Turnitin AI detection false positives, academic integrity check, Turnitin similarity report, human-written AI flagged, writing authenticity audit
@@ -1318,6 +1324,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Structuring Your Literature Review: Ethical AI Scaffolding](https://academicwizard.online/blog/structuring-your-literature-review-ethical-ai-scaffolding-2/)**
+  - Excerpt: Struggling to organize your lit review? Learn how to use AI scaffolding ethically to build a strong, cohesive argument without compromising your voice.
+  - Keywords: how to structure a literature review using AI scaffolding, ethical AI for literature review, organizing academic sources with AI, literature review synthesis techniques, AI-assisted research outline
+  - Target Region: Australia
+  - Published: 2026-10-10
+
 - **[Zotero Workflow: Managing 100+ Sources for Literature Reviews](https://academicwizard.online/blog/zotero-workflow-managing-100-sources-for-literature-reviews-2/)**
   - Excerpt: Taming a massive literature review? Learn advanced Zotero workflows to manage 100+ sources, fix metadata conflicts, and organize your dissertation data.
   - Keywords: managing 100+ sources in Zotero, Zotero for massive dissertations, organizing literature review sources, fixing Zotero metadata errors, advanced Zotero library management
@@ -1589,6 +1601,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Mastering NVivo 26: Eliminating Coding Bias in Qualitative Theses](https://academicwizard.online/blog/mastering-nvivo-26-eliminating-coding-bias-in-qualitative-theses/)**
+  - Excerpt: Struggling with qualitative data consistency? Discover how to use NVivo 26 features to maintain coding reliability and minimize bias in your PhD thesis.
+  - Keywords: how to minimize researcher bias in NVivo thematic analysis, NVivo qualitative coding best practices, reducing subjectivity in thesis data, thematic coding methodology, qualitative research rigor
+  - Target Region: Canada
+  - Published: 2026-10-10
 
 - **[NVivo 26: Practical Workflow to Minimize Coding Bias in Theses](https://academicwizard.online/blog/nvivo-26-practical-workflow-to-minimize-coding-bias-in-theses-2/)**
   - Excerpt: Ensure your qualitative analysis remains objective. Discover a practical NVivo 26 workflow to minimize research bias and strengthen your thesis findings.
@@ -2119,6 +2137,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Study Guidance
+
+- **[APA 7th Edition: New Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-new-citation-rules-for-complex-digital-media-2/)**
+  - Excerpt: Citing TikTok, podcasts, or webinars? Don't lose marks for messy references. Master APA 7 citation rules for complex digital media with our 2026 guide.
+  - Keywords: APA 7 citation rules for social media and digital content, APA 7 digital media references, citing podcasts in APA 7, APA 7 online video citations, complex digital source formatting
+  - Target Region: UK
+  - Published: 2026-10-10
 
 - **[APA 7th Edition: Fixing In-Text Citations for Multi-Author Sources](https://academicwizard.online/blog/apa-7th-edition-fixing-in-text-citations-for-multi-author-sources/)**
   - Excerpt: Struggling with APA 7 multi-author citations? Avoid common grading penalties with our step-by-step guide to formatting complex source references today.
