@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-09T15:37:51.868053+00:00",
+  "generated_at": "2026-10-11T23:21:33.380217+00:00",
   "week_start": "2026-10-12",
   "insights_summary": {
     "core_finding": "Maintained priority on citation tools and dissertation emergency triage.",
     "top_performing_topics": [
-      "Academic Writing Myths",
-      "Turnitin Deconstructed: What The Colors Mean"
+      "Dissertation Literature Review: The Synthesis Matrix",
+      "5 Free Academic Search Engines & Boolean Strings"
     ],
     "underperforming_topics": [
-      "Live Delivery Proof",
-      "The Original Ideas Myth"
+      "Computer Science & Quantitative Stats (Python, R, SPSS)",
+      "Live Delivery Proof"
     ],
     "strategic_shift": "Prioritizing high-CTR topics for mid-week student deadlines."
   },
   "audit_totals": {
-    "reach": 1109,
-    "clicks": 1,
-    "engagements": 15
+    "reach": 769,
+    "clicks": 0,
+    "engagements": 8
   },
   "schedule": {
     "Monday": {

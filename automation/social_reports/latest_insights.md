@@ -1,5 +1,5 @@
 # 📊 Weekly Social Media Intelligence & Reach Report
-**Audited Period:** Past 7 Days | **Report Generated:** 2026-10-09 15:37 UTC
+**Audited Period:** Past 7 Days | **Report Generated:** 2026-10-11 23:22 UTC
 **Next Strategic Cycle Begins:** 2026-10-12
 
 ---
@@ -8,10 +8,10 @@
 
 | Metric | Last 7 Days Total | Performance Direction |
 |---|---|---|
-| **Total Reach / Impressions** | **1,109** | 📈 Expanding student impressions across X, IG, and FB |
-| **Outbound Clicks (Site & WhatsApp)** | **1** | 🔗 Direct clicks driving tool usage & consultation inquiries |
-| **Total Engagements (Likes/Shares)** | **15** | 💬 High carousel save & retweet velocity |
-| **Total Posts Audited** | **100** | 2x Daily Carousel Publishing (09:00 & 18:00 UTC) |
+| **Total Reach / Impressions** | **769** | 📈 Expanding student impressions across X, IG, and FB |
+| **Outbound Clicks (Site & WhatsApp)** | **0** | 🔗 Direct clicks driving tool usage & consultation inquiries |
+| **Total Engagements (Likes/Shares)** | **8** | 💬 High carousel save & retweet velocity |
+| **Total Posts Audited** | **66** | 2x Daily Carousel Publishing (09:00 & 18:00 UTC) |
 
 ---
 
@@ -21,21 +21,21 @@ Topics ranked by weighted student engagement ($Reach + 10 \times Clicks + 5 \tim
 
 | Rank | Curriculum Topic | Slot | Reach | Clicks | Engagements | Score | Status |
 |---|---|---|---|---|---|---|---|
-| #1 | **Academic Writing Myths** | `AFTERNOON` | 289 | 0 | 6 | **319** | 🔥 **Winner (Doubled)** |
-| #2 | **Turnitin Deconstructed: What The Colors Mean** | `MORNING` | 226 | 0 | 0 | **226** | 🔥 **Winner (Doubled)** |
-| #3 | **5 Free Academic Search Engines & Boolean Strings** | `MORNING` | 185 | 0 | 2 | **195** | 🔥 **Winner (Doubled)** |
-| #4 | **Dissertation Literature Review: The Synthesis Matrix** | `EVENING` | 113 | 0 | 2 | **123** | ⚡ Steady Performer |
-| #5 | **Nursing Care Plans & Gibbs Reflective Cycle** | `EVENING` | 77 | 0 | 2 | **87** | ⚡ Steady Performer |
-| #6 | **Turning Broad Topics into First-Class Hypotheses** | `MORNING` | 60 | 1 | 2 | **80** | ⚡ Steady Performer |
-| #7 | **The 10-80-10 Rule & P-E-E-L+E Essay Blueprint** | `MORNING` | 53 | 0 | 0 | **53** | ⚡ Steady Performer |
-| #8 | **Midnight Panic? The 12-Hour Urgent Rescue Protocol** | `EVENING` | 28 | 0 | 1 | **33** | ⚡ Steady Performer |
+| #1 | **Dissertation Literature Review: The Synthesis Matrix** | `EVENING` | 234 | 0 | 1 | **239** | 🔥 **Winner (Doubled)** |
+| #2 | **5 Free Academic Search Engines & Boolean Strings** | `MORNING` | 155 | 0 | 2 | **165** | 🔥 **Winner (Doubled)** |
+| #3 | **The 10-80-10 Rule & P-E-E-L+E Essay Blueprint** | `MORNING` | 106 | 0 | 2 | **116** | 🔥 **Winner (Doubled)** |
+| #4 | **Academic Writing Myths** | `AFTERNOON` | 88 | 0 | 1 | **93** | ⚡ Steady Performer |
+| #5 | **Turning Broad Topics into First-Class Hypotheses** | `MORNING` | 84 | 0 | 1 | **89** | ⚡ Steady Performer |
+| #6 | **Midnight Panic? The 12-Hour Urgent Rescue Protocol** | `EVENING` | 30 | 0 | 1 | **35** | ⚡ Steady Performer |
+| #7 | **In-Text Citations: APA 7th vs Harvard vs OSCOLA** | `MORNING` | 20 | 0 | 0 | **20** | ⚡ Steady Performer |
+| #8 | **Substantive Academic Editing vs. Surface Proofreading** | `EVENING` | 18 | 0 | 0 | **18** | ⚡ Steady Performer |
 
 ---
 
 ## 3. AI Strategic Optimization & Insights
 
 * **Core Finding:** Maintained priority on citation tools and dissertation emergency triage.
-* **Top Performing Topics:** Academic Writing Myths, Turnitin Deconstructed: What The Colors Mean
+* **Top Performing Topics:** Dissertation Literature Review: The Synthesis Matrix, 5 Free Academic Search Engines & Boolean Strings
 * **Strategic Shift for Next Week:** Prioritizing high-CTR topics for mid-week student deadlines.
 
 ---
