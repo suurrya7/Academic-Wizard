@@ -69,9 +69,12 @@ function generateBlogPages() {
         if (!slug) continue;
 
         const overrideCanonical = CANONICAL_OVERRIDES[slug];
-        const canonicalUrl = overrideCanonical
+        let canonicalUrl = overrideCanonical
             ? `${SITE_URL}${overrideCanonical}`
             : `${SITE_URL}/blog/${slug}/`;
+        if (!canonicalUrl.endsWith('/')) {
+            canonicalUrl += '/';
+        }
         const title = escapeHtml(post.title || slug.replace(/-/g, ' '));
         const description = escapeHtml(post.excerpt || post.title || '');
         const publishDate = post.date || new Date().toISOString();
@@ -261,10 +264,31 @@ function generateBlogPages() {
             }
         }
 
-        // Write to dist/blog/[slug]/index.html
+        // Write canonical page to dist/blog/[slug]/index.html
         const outputDir = join(distDir, 'blog', slug);
         mkdirSync(outputDir, { recursive: true });
         writeFileSync(join(outputDir, 'index.html'), pageHtml, 'utf-8');
+
+        // For backwards compatibility, ensure dist/blog/posts/[slug].html redirects to canonical URL
+        const postsOutputDir = join(distDir, 'blog', 'posts');
+        mkdirSync(postsOutputDir, { recursive: true });
+        const postRedirectHtmlPath = join(postsOutputDir, `${slug}.html`);
+
+        const redirectHeader = `<script>window.location.replace("${canonicalUrl}");</script>\n<meta http-equiv="refresh" content="0;url=${canonicalUrl}">\n<link rel="canonical" href="${canonicalUrl}">\n<meta name="robots" content="noindex, follow">\n\n`;
+
+        if (existsSync(postRedirectHtmlPath)) {
+            let postHtmlContent = readFileSync(postRedirectHtmlPath, 'utf-8');
+            // Remove any existing redirect scripts, meta refresh, canonical, or robots tags
+            postHtmlContent = postHtmlContent
+                .replace(/<script>window\.location\.replace\(.*?<\/script>\s*/gi, '')
+                .replace(/<meta\s+http-equiv="refresh"\s+content=".*?"\s*\/?>\s*/gi, '')
+                .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>\s*/gi, '')
+                .replace(/<meta\s+name="robots"\s+content=".*?"\s*\/?>\s*/gi, '');
+            writeFileSync(postRedirectHtmlPath, redirectHeader + postHtmlContent.trimStart(), 'utf-8');
+        } else {
+            writeFileSync(postRedirectHtmlPath, `${redirectHeader}<!DOCTYPE html><html><head><meta charset="utf-8"><title>Redirecting...</title><meta http-equiv="refresh" content="0;url=${canonicalUrl}"><link rel="canonical" href="${canonicalUrl}"><meta name="robots" content="noindex, follow"></head><body><p>Redirecting to <a href="${canonicalUrl}">${canonicalUrl}</a>...</p></body></html>`, 'utf-8');
+        }
+
         generated++;
     }
 

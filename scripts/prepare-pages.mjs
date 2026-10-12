@@ -8,7 +8,9 @@ const dist = path.join(root, 'dist');
 await mkdir(dist, { recursive: true });
 
 // Fallback for 404 (GitHub Pages uses this for unknown routes)
-if (existsSync(path.join(dist, 'index.html'))) {
+if (existsSync(path.join(root, 'public', '404.html'))) {
+  await copyFile(path.join(root, 'public', '404.html'), path.join(dist, '404.html'));
+} else if (existsSync(path.join(dist, 'index.html'))) {
   await copyFile(path.join(dist, 'index.html'), path.join(dist, '404.html'));
 }
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Academic Wizard</title>
+  <script>
+    // If the URL doesn't end with / and doesn't have a file extension, redirect with trailing slash
+    var path = window.location.pathname;
+    if (path !== '/' && !path.endsWith('/') && !path.match(/\.[a-zA-Z0-9]+$/)) {
+      window.location.replace(path + '/' + window.location.search + window.location.hash);
+    } else {
+      // SPA fallback: store the path and redirect to index
+      sessionStorage.setItem('redirectPath', path + window.location.search + window.location.hash);
+      window.location.replace('/');
+    }
+  </script>
+</head>
+<body></body>
+</html>

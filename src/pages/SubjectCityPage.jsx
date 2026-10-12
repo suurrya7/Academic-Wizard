@@ -454,10 +454,16 @@ const SubjectCityPage = () => {
         );
     }
 
+    // Study guidance subject pages attract irrelevant educational queries and
+    // cannibalize commercial assignment-help pages. Noindex them but keep follow
+    // to preserve internal link equity.
+    const shouldNoindex = serviceSlug === 'study-guidance';
+
     return (
         <div className="page-specialized">
             <Helmet>
                 <title>{pageMetaTitle}</title>
+                {shouldNoindex && <meta name="robots" content="noindex, follow" />}
                 <meta name="description" content={pageDescription} />
                 <link rel="canonical" href={url} />
                 <meta property="og:title" content={pageMetaTitle} />

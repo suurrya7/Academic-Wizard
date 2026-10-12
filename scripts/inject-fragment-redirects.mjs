@@ -20,30 +20,25 @@ console.log(`Processing ${files.length} blog post HTML fragments...`);
 
 let updatedCount = 0;
 
+const SITE_URL = 'https://academicwizard.online';
+
 for (const file of files) {
     const slug = file.replace(/\.html$/, '');
     const filePath = join(postsDir, file);
     let content = readFileSync(filePath, 'utf-8');
 
-    const canonicalTarget = `/blog/${slug}/`;
+    const canonicalUrl = `${SITE_URL}/blog/${slug}/`;
     const noindexTag = '<meta name="robots" content="noindex, follow">';
+    const redirectHeader = `<script>window.location.replace("${canonicalUrl}");</script>\n<meta http-equiv="refresh" content="0;url=${canonicalUrl}">\n<link rel="canonical" href="${canonicalUrl}">\n${noindexTag}\n\n`;
 
-    // If redirect header exists but lacks noindex, inject noindex
-    if (content.includes('window.location.replace') && content.includes('/blog/')) {
-        if (!content.includes('name="robots" content="noindex')) {
-            content = content.replace(
-                /<link rel="canonical"[^>]*>/i,
-                `$&\n${noindexTag}`
-            );
-            writeFileSync(filePath, content, 'utf-8');
-            updatedCount++;
-        }
-        continue;
-    }
+    // Remove any previous redirect scripts, meta, and link tags
+    content = content
+        .replace(/<script>window\.location\.replace\(.*?<\/script>\s*/gi, '')
+        .replace(/<meta\s+http-equiv="refresh"\s+content=".*?"\s*\/?>\s*/gi, '')
+        .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>\s*/gi, '')
+        .replace(/<meta\s+name="robots"\s+content=".*?"\s*\/?>\s*/gi, '');
 
-    const redirectHeader = `<script>window.location.replace("${canonicalTarget}");</script>\n<meta http-equiv="refresh" content="0; url=${canonicalTarget}">\n<link rel="canonical" href="https://academicwizard.online${canonicalTarget}">\n${noindexTag}\n\n`;
-
-    content = redirectHeader + content;
+    content = redirectHeader + content.trimStart();
     writeFileSync(filePath, content, 'utf-8');
     updatedCount++;
 }

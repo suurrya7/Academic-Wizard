@@ -14,6 +14,17 @@
   <link rel="preload" as="image" type="image/webp" href="/academic-wizard-favicon.webp" />
   <!-- Trailing slash enforcement handled by server-side 301 redirect in .htaccess (better for SEO crawl budget) -->
   <!-- All SEO tags (title, meta description, canonical, OG, Twitter, JSON-LD) are injected per-page by react-helmet-async -->
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    (function() {
+      var rp = sessionStorage.getItem('redirectPath');
+      if (rp) {
+        sessionStorage.removeItem('redirectPath');
+        // Use history.replaceState so React Router picks up the correct URL
+        history.replaceState(null, '', rp);
+      }
+    })();
+  </script>
 </head>
 
 <body>
