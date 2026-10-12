@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Flags: Decoding False Positives in Your Original Writing",
+    "slug": "turnitin-ai-flags-decoding-false-positives-in-your-original-writing",
+    "excerpt": "Struggling with Turnitin AI flags? Learn how to audit your writing, verify your academic integrity, and contextually explain your original student voice.",
+    "keywords": [
+      "how to fix Turnitin AI false positives in original student writing",
+      "Turnitin AI detection audit",
+      "preventing AI similarity flags",
+      "academic integrity check",
+      "human-written vs AI essay"
+    ],
+    "primaryKeyword": "how to fix Turnitin AI false positives in original student writing",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-12T08:23:09.531762+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-flags-decoding-false-positives-in-your-original-writing.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-chloe-desjardins",
+      "name": "Dr. Chloe Desjardins",
+      "credentials": "PhD in Nursing, McGill University",
+      "bio": "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US students format complex medical literature reviews and case reports."
+    }
+  },
+  {
+    "title": "Zotero for Massive Projects: Managing 100+ Sources Without Data Errors",
+    "slug": "zotero-for-massive-projects-managing-100-sources-without-data-errors",
+    "excerpt": "Overwhelmed by your bibliography? Master Zotero for large-scale dissertation projects with our guide to managing metadata and syncing 100+ research sources.",
+    "keywords": [
+      "Zotero for large scale dissertation research project",
+      "Zotero library metadata management",
+      "organizing research sources",
+      "automated bibliography sync",
+      "thesis citation management"
+    ],
+    "primaryKeyword": "Zotero for large scale dissertation research project",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-12T08:23:45.644405+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-for-massive-projects-managing-100-sources-without-data-errors.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-robert-oconnor",
+      "name": "Dr. Robert O'Connor",
+      "credentials": "PhD in History, University of Cambridge",
+      "bio": "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK universities."
+    }
+  },
+  {
+    "title": "NVivo 26 Thematic Coding: Reducing Researcher Bias in PhD Theses",
+    "slug": "nvivo-26-thematic-coding-reducing-researcher-bias-in-phd-theses",
+    "excerpt": "Ensure rigorous qualitative research. Learn how to minimize bias in your thematic analysis using NVivo 26 with this step-by-step researcher workflow guide.",
+    "keywords": [
+      "how to minimize researcher bias in NVivo thematic analysis",
+      "NVivo 26 coding workflow",
+      "qualitative analysis for thesis",
+      "coding drift troubleshooting",
+      "validating qualitative research"
+    ],
+    "primaryKeyword": "how to minimize researcher bias in NVivo thematic analysis",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-12T08:24:22.685163+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-thematic-coding-reducing-researcher-bias-in-phd-theses.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "APA 7th Edition: Mastering Complex Multi-Author Citation Rules",
+    "slug": "apa-7th-edition-mastering-complex-multi-author-citation-rules",
+    "excerpt": "Avoid citation penalties with our guide to APA 7th edition. Master complex multi-author in-text citation rules for your 2026 academic research papers.",
+    "keywords": [
+      "APA 7th edition formatting multi-author citations",
+      "APA in-text citation rules",
+      "citing academic articles",
+      "formatting student research papers",
+      "APA citation guide 2026"
+    ],
+    "primaryKeyword": "APA 7th edition formatting multi-author citations",
+    "category": "study-guidance",
+    "categoryLabel": "Study Guidance",
+    "date": "2026-10-12T08:25:03.737593+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-mastering-complex-multi-author-citation-rules.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
     "title": "Turnitin 'AI Flag' Anxiety: Auditing Your Own Academic Voice in 2026",
     "slug": "turnitin-ai-flag-anxiety-auditing-your-own-academic-voice-in-2026",
     "excerpt": "Worried about false AI flags on your paper? Learn how to audit your writing for integrity and confidently dispute Turnitin AI false positives in 2026.",
