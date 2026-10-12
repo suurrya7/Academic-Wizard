@@ -4,8 +4,11 @@ import os
 import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
-key = "AIzaSyD2BYnmU2i-D0_-YWbvevwbiCpaK4ITheY"
-models = ["gemini-1.5-flash", "gemini-3.5-flash-lite", "gemini-2.5-flash"]
+key = os.environ.get("GEMINI_API_KEY", "")
+if not key:
+    print("Error: GEMINI_API_KEY environment variable not set.")
+    exit(1)
+models = ["gemini-1.5-flash", "gemini-2.5-flash"]
 
 for m in models:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={key}"
