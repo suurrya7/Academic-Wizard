@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-11T15:53:51.294746+00:00",
+  "last_run": "2026-10-12T04:42:29.671223+00:00",
   "daily_count": {
-    "date": "2026-10-11",
-    "count": 3
+    "date": "2026-10-12",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -99,7 +99,8 @@
     "1x2gnxy",
     "1x2ue4i",
     "1x31wue",
-    "1x3ak3c"
+    "1x3ak3c",
+    "1x3r822"
   ],
   "history": [
     {
@@ -861,7 +862,15 @@
       "title": "What should I do ?",
       "posted_at": "2026-10-11T15:53:51.294741+00:00",
       "url": "https://reddit.com/r/Advice/comments/1x3ak3c/what_should_i_do/"
+    },
+    {
+      "post_id": "1x3r822",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Why do people demand strong evidence for things they disagree with, but accept weak evidence for things they already believe?",
+      "posted_at": "2026-10-12T04:42:29.671218+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1x3r822/why_do_people_demand_strong_evidence_for_things/"
     }
   ],
-  "last_comment_posted_at": "2026-10-11T15:53:51.294726+00:00"
+  "last_comment_posted_at": "2026-10-12T04:42:29.671203+00:00"
 }
