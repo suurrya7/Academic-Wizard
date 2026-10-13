@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin 'AI Score' Reality: How to Auditing Your Draft for False Flags",
+    "slug": "turnitin-ai-score-reality-how-to-auditing-your-draft-for-false-flags",
+    "excerpt": "Worried about your Turnitin AI score? Learn how to perform an academic integrity audit to ensure your original voice is correctly recognized by software.",
+    "keywords": [
+      "how to audit turnitin for ai false positives",
+      "Turnitin AI detection accuracy",
+      "interpreting turnitin similarity reports",
+      "academic writing integrity check",
+      "avoiding ai writing flags"
+    ],
+    "primaryKeyword": "how to audit turnitin for ai false positives",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-13T08:48:00.157973+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-reality-how-to-auditing-your-draft-for-false-flags.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "dr-arthur-pendleton",
+      "name": "Dr. Arthur Pendleton",
+      "credentials": "PhD in Physics, Massachusetts Institute of Technology (MIT)",
+      "bio": "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian students with engineering lab reports and math research papers."
+    }
+  },
+  {
+    "title": "Zotero Library Clean-up: Solving Metadata Conflicts in Large Theses",
+    "slug": "zotero-library-clean-up-solving-metadata-conflicts-in-large-theses",
+    "excerpt": "Is your Zotero library spiraling? Master the art of managing 100+ sources and fixing metadata errors to keep your dissertation bibliography error-free.",
+    "keywords": [
+      "fixing zotero metadata errors in large bibliographies",
+      "Zotero sync conflict resolution",
+      "managing 100+ sources in zotero",
+      "zotero bibliography automation",
+      "academic research organization"
+    ],
+    "primaryKeyword": "fixing zotero metadata errors in large bibliographies",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-13T08:48:27.284699+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/zotero-library-clean-up-solving-metadata-conflicts-in-large-theses.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "NVivo 26 Data Analysis: A Strategic Workflow to Minimize Coding Bias",
+    "slug": "nvivo-26-data-analysis-a-strategic-workflow-to-minimize-coding-bias",
+    "excerpt": "Minimize subjectivity in your PhD thesis. Discover an NVivo 26 workflow designed to keep your thematic coding rigorous, transparent, and bias-free.",
+    "keywords": [
+      "how to reduce researcher bias in nvivo thematic analysis",
+      "NVivo 26 qualitative data coding",
+      "thematic analysis workflow",
+      "maintaining research objectivity",
+      "qualitative research methodology"
+    ],
+    "primaryKeyword": "how to reduce researcher bias in nvivo thematic analysis",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-13T08:48:56.708584+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/nvivo-26-data-analysis-a-strategic-workflow-to-minimize-coding-bias.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-david-johnston",
+      "name": "Dr. David Johnston",
+      "credentials": "PhD in Environmental Science, University of British Columbia",
+      "bio": "Dr. David Johnston is a science writer and editor guiding Canadian and Australian students through scientific papers, case studies, and research planning."
+    }
+  },
+  {
+    "title": "APA 7th Edition: 5 Tricky Citation Rules for Complex Digital Media",
+    "slug": "apa-7th-edition-5-tricky-citation-rules-for-complex-digital-media",
+    "excerpt": "Master the latest APA 7 rules for digital sources. Avoid common citation penalties with our guide to formatting complex media in your academic papers.",
+    "keywords": [
+      "apa 7 citation rules for complex digital media",
+      "citing digital sources apa 7",
+      "apa 7 reference list formatting",
+      "complex multi-author citations",
+      "academic citation best practices"
+    ],
+    "primaryKeyword": "apa 7 citation rules for complex digital media",
+    "category": "essay-writing",
+    "categoryLabel": "Essay Writing",
+    "date": "2026-10-13T08:49:25.442292+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/apa-7th-edition-5-tricky-citation-rules-for-complex-digital-media.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-emily-chen",
+      "name": "Dr. Emily Chen",
+      "credentials": "PhD in Psychology, University of Toronto",
+      "bio": "Dr. Emily Chen is a clinical psychologist and research methodologist who guides Canadian and US students through qualitative research design and thesis development."
+    }
+  },
+  {
     "title": "Turnitin AI Flags: Decoding False Positives in Your Original Writing",
     "slug": "turnitin-ai-flags-decoding-false-positives-in-your-original-writing",
     "excerpt": "Struggling with Turnitin AI flags? Learn how to audit your writing, verify your academic integrity, and contextually explain your original student voice.",

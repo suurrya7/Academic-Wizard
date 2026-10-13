@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-12
+        **Last updated**: 2026-10-13
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Zotero Library Clean-up: Solving Metadata Conflicts in Large Theses](https://academicwizard.online/blog/zotero-library-clean-up-solving-metadata-conflicts-in-large-theses/)**
+  - Excerpt: Is your Zotero library spiraling? Master the art of managing 100+ sources and fixing metadata errors to keep your dissertation bibliography error-free.
+  - Keywords: fixing zotero metadata errors in large bibliographies, Zotero sync conflict resolution, managing 100+ sources in zotero, zotero bibliography automation, academic research organization
+  - Target Region: UK
+  - Published: 2026-10-13
 
 - **[NVivo 26 Thematic Coding: Reducing Researcher Bias in PhD Theses](https://academicwizard.online/blog/nvivo-26-thematic-coding-reducing-researcher-bias-in-phd-theses/)**
   - Excerpt: Ensure rigorous qualitative research. Learn how to minimize bias in your thematic analysis using NVivo 26 with this step-by-step researcher workflow guide.
@@ -1232,6 +1238,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Essay Writing
 
+- **[APA 7th Edition: 5 Tricky Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-5-tricky-citation-rules-for-complex-digital-media/)**
+  - Excerpt: Master the latest APA 7 rules for digital sources. Avoid common citation penalties with our guide to formatting complex media in your academic papers.
+  - Keywords: apa 7 citation rules for complex digital media, citing digital sources apa 7, apa 7 reference list formatting, complex multi-author citations, academic citation best practices
+  - Target Region: Canada
+  - Published: 2026-10-13
+
 - **[Turnitin AI Flags: Why Your Own Academic Tone Gets Triggered in 2026](https://academicwizard.online/blog/turnitin-ai-flags-why-your-own-academic-tone-gets-triggered-in-2026/)**
   - Excerpt: Is Turnitin flagging your original work as AI-generated? Learn why your writing style may trigger false positives and how to audit your draft for integrity.
   - Keywords: why turnitin flags student writing as ai, turnitin false positive guide, avoiding ai detection in essays, academic integrity audit, humanizing academic drafts
@@ -1625,6 +1637,18 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin 'AI Score' Reality: How to Auditing Your Draft for False Flags](https://academicwizard.online/blog/turnitin-ai-score-reality-how-to-auditing-your-draft-for-false-flags/)**
+  - Excerpt: Worried about your Turnitin AI score? Learn how to perform an academic integrity audit to ensure your original voice is correctly recognized by software.
+  - Keywords: how to audit turnitin for ai false positives, Turnitin AI detection accuracy, interpreting turnitin similarity reports, academic writing integrity check, avoiding ai writing flags
+  - Target Region: USA
+  - Published: 2026-10-13
+
+- **[NVivo 26 Data Analysis: A Strategic Workflow to Minimize Coding Bias](https://academicwizard.online/blog/nvivo-26-data-analysis-a-strategic-workflow-to-minimize-coding-bias/)**
+  - Excerpt: Minimize subjectivity in your PhD thesis. Discover an NVivo 26 workflow designed to keep your thematic coding rigorous, transparent, and bias-free.
+  - Keywords: how to reduce researcher bias in nvivo thematic analysis, NVivo 26 qualitative data coding, thematic analysis workflow, maintaining research objectivity, qualitative research methodology
+  - Target Region: Australia
+  - Published: 2026-10-13
 
 - **[Zotero for Massive Projects: Managing 100+ Sources Without Data Errors](https://academicwizard.online/blog/zotero-for-massive-projects-managing-100-sources-without-data-errors/)**
   - Excerpt: Overwhelmed by your bibliography? Master Zotero for large-scale dissertation projects with our guide to managing metadata and syncing 100+ research sources.
