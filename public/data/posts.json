@@ -1,5 +1,105 @@
 [
   {
+    "title": "Turnitin AI Score Spikes: How to Audit and Protect Your Academic Voice",
+    "slug": "turnitin-ai-score-spikes-how-to-audit-and-protect-your-academic-voice",
+    "excerpt": "Received a high Turnitin AI score for your original work? Learn our systematic audit process to verify your academic integrity and protect your voice.",
+    "keywords": [
+      "Turnitin AI detection false positives",
+      "academic integrity audit",
+      "human-authored content validation",
+      "avoiding AI writing flags",
+      "Turnitin similarity report analysis"
+    ],
+    "primaryKeyword": "Turnitin AI detection false positives",
+    "category": "editing",
+    "categoryLabel": "Editing and Proofreading",
+    "date": "2026-10-14T06:56:57.750498+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/turnitin-ai-score-spikes-how-to-audit-and-protect-your-academic-voice.html",
+    "targetCountry": "USA",
+    "author": {
+      "id": "prof-james-henderson",
+      "name": "Prof. James Henderson",
+      "credentials": "PhD in English Literature, Harvard University",
+      "bio": "Prof. James Henderson has taught rhetorical composition and academic writing at the Ivy League level for two decades, helping US college students refine their argumentation."
+    }
+  },
+  {
+    "title": "Beyond APA 7: Managing Complex Citation Rules for Digital Research",
+    "slug": "beyond-apa-7-managing-complex-citation-rules-for-digital-research",
+    "excerpt": "Struggling with APA 7 for your digital bibliography? Master the latest rules for complex online sources and avoid common citation penalties this semester.",
+    "keywords": [
+      "APA 7th Edition complex digital media citations",
+      "APA 7 reference formatting",
+      "citing non-traditional digital sources",
+      "APA 7 manual citation fixes",
+      "academic citation guidelines 2026"
+    ],
+    "primaryKeyword": "APA 7th Edition complex digital media citations",
+    "category": "research",
+    "categoryLabel": "Research Support",
+    "date": "2026-10-14T06:57:23.506324+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/beyond-apa-7-managing-complex-citation-rules-for-digital-research.html",
+    "targetCountry": "UK",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Dissertation Burnout: Reclaiming Your Research Flow and Mental Health",
+    "slug": "dissertation-burnout-reclaiming-your-research-flow-and-mental-health",
+    "excerpt": "Feeling the weight of your PhD? Break the cycle of dissertation fatigue with our sustainable, student-centered research and mental wellness strategies.",
+    "keywords": [
+      "overcoming dissertation burnout",
+      "PhD mental health tips",
+      "sustainable research workflow",
+      "dissertation project management",
+      "thesis writing stamina"
+    ],
+    "primaryKeyword": "overcoming dissertation burnout",
+    "category": "dissertation",
+    "categoryLabel": "Dissertation",
+    "date": "2026-10-14T06:57:48.576657+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/dissertation-burnout-reclaiming-your-research-flow-and-mental-health.html",
+    "targetCountry": "Canada",
+    "author": {
+      "id": "dr-alistair-macleod",
+      "name": "Dr. Alistair Macleod",
+      "credentials": "PhD in Philosophy, University of Edinburgh",
+      "bio": "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews and resolve theoretical arguments in their essays."
+    }
+  },
+  {
+    "title": "Ethical AI Prompting for Scaffolding Your Literature Review Outline",
+    "slug": "ethical-ai-prompting-for-scaffolding-your-literature-review-outline",
+    "excerpt": "Want to use AI to outline your literature review? Learn how to scaffold your research ethically while maintaining your unique critical perspective.",
+    "keywords": [
+      "using AI ethically for literature review outline",
+      "AI-assisted academic outlining",
+      "structuring a literature review",
+      "ethical AI use in research",
+      "academic synthesis methods"
+    ],
+    "primaryKeyword": "using AI ethically for literature review outline",
+    "category": "literature-review",
+    "categoryLabel": "Literature Review",
+    "date": "2026-10-14T06:58:13.250478+00:00",
+    "readingTime": 7,
+    "url": "blog/posts/ethical-ai-prompting-for-scaffolding-your-literature-review-outline.html",
+    "targetCountry": "Australia",
+    "author": {
+      "id": "dr-cheryl-tan",
+      "name": "Dr. Cheryl Tan",
+      "credentials": "PhD in Linguistics, National University of Singapore (NUS)",
+      "bio": "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students in Singapore and Australia polish their prose and meet strict academic standards."
+    }
+  },
+  {
     "title": "Turnitin 'AI Score' Reality: How to Auditing Your Draft for False Flags",
     "slug": "turnitin-ai-score-reality-how-to-auditing-your-draft-for-false-flags",
     "excerpt": "Worried about your Turnitin AI score? Learn how to perform an academic integrity audit to ensure your original voice is correctly recognized by software.",

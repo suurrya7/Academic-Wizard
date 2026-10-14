@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-13
+        **Last updated**: 2026-10-14
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -267,6 +267,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Dissertation Burnout: Reclaiming Your Research Flow and Mental Health](https://academicwizard.online/blog/dissertation-burnout-reclaiming-your-research-flow-and-mental-health/)**
+  - Excerpt: Feeling the weight of your PhD? Break the cycle of dissertation fatigue with our sustainable, student-centered research and mental wellness strategies.
+  - Keywords: overcoming dissertation burnout, PhD mental health tips, sustainable research workflow, dissertation project management, thesis writing stamina
+  - Target Region: Canada
+  - Published: 2026-10-14
 
 - **[Zotero Library Clean-up: Solving Metadata Conflicts in Large Theses](https://academicwizard.online/blog/zotero-library-clean-up-solving-metadata-conflicts-in-large-theses/)**
   - Excerpt: Is your Zotero library spiraling? Master the art of managing 100+ sources and fixing metadata errors to keep your dissertation bibliography error-free.
@@ -779,6 +785,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[Turnitin AI Score Spikes: How to Audit and Protect Your Academic Voice](https://academicwizard.online/blog/turnitin-ai-score-spikes-how-to-audit-and-protect-your-academic-voice/)**
+  - Excerpt: Received a high Turnitin AI score for your original work? Learn our systematic audit process to verify your academic integrity and protect your voice.
+  - Keywords: Turnitin AI detection false positives, academic integrity audit, human-authored content validation, avoiding AI writing flags, Turnitin similarity report analysis
+  - Target Region: USA
+  - Published: 2026-10-14
 
 - **[Turnitin AI Flags: Decoding False Positives in Your Original Writing](https://academicwizard.online/blog/turnitin-ai-flags-decoding-false-positives-in-your-original-writing/)**
   - Excerpt: Struggling with Turnitin AI flags? Learn how to audit your writing, verify your academic integrity, and contextually explain your original student voice.
@@ -1354,6 +1366,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Ethical AI Prompting for Scaffolding Your Literature Review Outline](https://academicwizard.online/blog/ethical-ai-prompting-for-scaffolding-your-literature-review-outline/)**
+  - Excerpt: Want to use AI to outline your literature review? Learn how to scaffold your research ethically while maintaining your unique critical perspective.
+  - Keywords: using AI ethically for literature review outline, AI-assisted academic outlining, structuring a literature review, ethical AI use in research, academic synthesis methods
+  - Target Region: Australia
+  - Published: 2026-10-14
+
 - **[Beyond the Template: Ethical AI Scaffolding for Literature Reviews](https://academicwizard.online/blog/beyond-the-template-ethical-ai-scaffolding-for-literature-reviews/)**
   - Excerpt: Need a better literature review structure? Learn how to ethically use AI as a scaffolding tool to organize themes while keeping your voice authentic.
   - Keywords: ethical AI use for structuring literature reviews, AI literature synthesis tools, academic writing scaffolding, literature review organizational framework, AI for research productivity
@@ -1637,6 +1655,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Beyond APA 7: Managing Complex Citation Rules for Digital Research](https://academicwizard.online/blog/beyond-apa-7-managing-complex-citation-rules-for-digital-research/)**
+  - Excerpt: Struggling with APA 7 for your digital bibliography? Master the latest rules for complex online sources and avoid common citation penalties this semester.
+  - Keywords: APA 7th Edition complex digital media citations, APA 7 reference formatting, citing non-traditional digital sources, APA 7 manual citation fixes, academic citation guidelines 2026
+  - Target Region: UK
+  - Published: 2026-10-14
 
 - **[Turnitin 'AI Score' Reality: How to Auditing Your Draft for False Flags](https://academicwizard.online/blog/turnitin-ai-score-reality-how-to-auditing-your-draft-for-false-flags/)**
   - Excerpt: Worried about your Turnitin AI score? Learn how to perform an academic integrity audit to ensure your original voice is correctly recognized by software.
