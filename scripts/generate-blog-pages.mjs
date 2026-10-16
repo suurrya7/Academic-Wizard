@@ -239,6 +239,22 @@ function generateBlogPages() {
           <p style="font-size:1.125rem;color:#94a3b8;font-style:italic;margin-bottom:1rem;">${description}</p>
           ${post.author ? `<div style="display:flex;gap:0.75rem;align-items:center;padding:0.75rem 0;border-top:1px solid #334155;border-bottom:1px solid #334155;color:#cbd5e1;font-size:0.875rem;"><strong>By ${escapeHtml(post.author.name)}</strong> · ${escapeHtml(post.author.credentials)} · Published: ${new Date(publishDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</div>` : ''}
         </header>
+
+        <!-- High-Converting Top Lead Magnet Callout -->
+        <div style="margin:1.5rem 0 2.5rem 0;padding:1.25rem 1.5rem;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);border:1px solid rgba(212,175,55,0.4);border-radius:12px;display:flex;flex-direction:column;gap:0.75rem;box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+          <div style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#34d399;"></span>
+            <span style="color:#d4af37;font-weight:700;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">Verified Academic Faculty Support</span>
+          </div>
+          <div style="color:#f8fafc;font-size:1rem;font-weight:600;">Struggling with research, thesis chapters, or university assignments?</div>
+          <p style="color:#cbd5e1;font-size:0.875rem;line-height:1.5;margin:0;">Connect 1-on-1 with verified UK &amp; US PhD specialists for 100% Turnitin-safe research, thesis guidance, and 12-hour express delivery.</p>
+          <div style="margin-top:0.25rem;">
+            <a href="https://wa.me/919509893638?text=${encodeURIComponent(`Hello Academic Wizard! I am reading "${post.title || 'your blog article'}" and need urgent academic help.`)}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;background:#22c55e;color:#000000;font-weight:700;padding:0.6rem 1.25rem;border-radius:8px;text-decoration:none;font-size:0.875rem;box-shadow:0 4px 12px rgba(34,197,94,0.3);">
+              💬 Chat with Expert on WhatsApp (Instant Reply 24/7)
+            </a>
+          </div>
+        </div>
+
         <div class="article-body">
           ${cleanContent}
         </div>
@@ -248,10 +264,23 @@ function generateBlogPages() {
           <p style="font-weight:600;color:#60a5fa;margin-bottom:0.25rem;">${escapeHtml(post.author.name)} <span style="font-size:0.875rem;color:#94a3b8;">(${escapeHtml(post.author.credentials)})</span></p>
           <p style="font-size:0.875rem;color:#94a3b8;line-height:1.6;">${escapeHtml(post.author.bio)}</p>
         </div>` : ''}
-        <footer style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid #334155;font-size:0.875rem;color:#94a3b8;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-          <a href="/blog/" style="color:#60a5fa;text-decoration:none;">← Return to All Articles</a>
-          <a href="/services/assignment-help/" style="color:#60a5fa;text-decoration:none;">University Assignment Help →</a>
-          <a href="https://wa.me/919509893638" style="color:#34d399;text-decoration:none;font-weight:600;">Chat on WhatsApp 24/7</a>
+
+        <!-- Internal Links to Core Money Hubs for Googlebot and Student Navigation -->
+        <footer style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid #334155;font-size:0.875rem;color:#94a3b8;display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;line-height:1.8;">
+            <strong style="color:#f8fafc;font-size:0.875rem;">Explore Academic Services:</strong>
+            <a href="/services/assignment-help/" style="color:#60a5fa;text-decoration:none;">Assignment Help</a> ·
+            <a href="/services/dissertation-help/" style="color:#60a5fa;text-decoration:none;font-weight:600;">Dissertation &amp; Thesis Support</a> ·
+            <a href="/services/research-paper-help/" style="color:#60a5fa;text-decoration:none;font-weight:600;">Research Paper Assistance</a> ·
+            <a href="/services/essay-help/" style="color:#60a5fa;text-decoration:none;">Essay Writing</a> ·
+            <a href="/services/literature-review/" style="color:#60a5fa;text-decoration:none;">Literature Review</a> ·
+            <a href="/services/editing-proofreading/" style="color:#60a5fa;text-decoration:none;">Editing &amp; Proofreading</a>
+          </div>
+          <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:0.75rem;border-top:1px dashed #334155;">
+            <a href="/blog/" style="color:#94a3b8;text-decoration:none;">← Return to All Articles</a>
+            <a href="/services/directory/" style="color:#94a3b8;text-decoration:none;">Browse All Services Directory →</a>
+            <a href="https://wa.me/919509893638?text=Hello%20Academic%20Wizard!%20I%20need%20academic%20assistance." target="_blank" rel="noopener noreferrer" style="color:#34d399;text-decoration:none;font-weight:600;">Chat on WhatsApp (+91 95098 93638)</a>
+          </div>
         </footer>
       </article>`;
         }

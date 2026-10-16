@@ -454,10 +454,10 @@ const SubjectCityPage = () => {
         );
     }
 
-    // Study guidance subject pages attract irrelevant educational queries and
-    // cannibalize commercial assignment-help pages. Noindex them but keep follow
-    // to preserve internal link equity.
-    const shouldNoindex = serviceSlug === 'study-guidance';
+    // 1. Study guidance subject pages attract irrelevant educational queries and cannibalize commercial pages.
+    // 2. Programmatic city pages (63 cities x 7 services = 441 pages) create doorway duplicate bloat without unique search demand.
+    // Setting noindex, follow keeps their internal links active (passing link equity) while removing them from Google's index.
+    const shouldNoindex = serviceSlug === 'study-guidance' || pageType === 'city';
 
     return (
         <div className="page-specialized">

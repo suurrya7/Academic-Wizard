@@ -89,21 +89,17 @@ for service in [
             "priority": "0.85"
         })
         
-        # Add Subjects
-        for subject in specialized_data.get("countrySubjects", {}).get(slug, []):
-            STATIC_PAGES_FIXED.append({
-                "path": f"services/{service}/{slug}/{subject['slug']}",
-                "changefreq": "monthly",
-                "priority": "0.8"
-            })
-            
-        # Add Cities
-        for city in specialized_data.get("countryCities", {}).get(slug, []):
-            STATIC_PAGES_FIXED.append({
-                "path": f"services/{service}/{slug}/{city['slug']}",
-                "changefreq": "monthly",
-                "priority": "0.8"
-            })
+        # Add Subjects (skip study-guidance since its subject pages are set to noindex, follow)
+        if service != "study-guidance":
+            for subject in specialized_data.get("countrySubjects", {}).get(slug, []):
+                STATIC_PAGES_FIXED.append({
+                    "path": f"services/{service}/{slug}/{subject['slug']}",
+                    "changefreq": "monthly",
+                    "priority": "0.8"
+                })
+        
+        # Note: Programmatic city pages (441 URLs) are noindexed to prevent doorway penalties
+        # and preserve crawl budget for money subject hubs. They are intentionally excluded from sitemap.xml.
 
 SERVICE_DETAILS = {
     "Assignment Help": {

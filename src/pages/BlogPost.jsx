@@ -426,8 +426,10 @@ const BlogPost = () => {
                     <p>Published: {formattedDate}</p>
                     <p>
                         <Link to="/blog/">← Back to Blog</Link> | 
-                        {regionalServiceUrl && <Link to={regionalServiceUrl}> {matchedService.name} {postData.targetCountry} |</Link>}
-                        <Link to={mainServiceUrl}> {matchedService ? matchedService.name : "Our Services"} |</Link> 
+                        <Link to="/services/assignment-help/">Assignment Help</Link> | 
+                        <Link to="/services/dissertation-help/">Dissertation Help</Link> | 
+                        <Link to="/services/research-paper-help/">Research Paper Help</Link> | 
+                        <Link to="/services/essay-help/">Essay Writing</Link> | 
                         <Link to="/contact/"> Contact Us</Link>
                     </p>
                 </div>
