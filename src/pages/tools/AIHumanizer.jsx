@@ -141,6 +141,7 @@ const AIHumanizer = () => {
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "4.8",
+                            "ratingCount": "950",
                             "reviewCount": "950",
                             "bestRating": "5",
                             "worstRating": "1"

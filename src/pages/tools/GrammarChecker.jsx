@@ -130,6 +130,7 @@ const GrammarChecker = () => {
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "4.9",
+                            "ratingCount": "1420",
                             "reviewCount": "1420",
                             "bestRating": "5",
                             "worstRating": "1"

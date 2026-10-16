@@ -136,7 +136,8 @@ const ServicePage = () => {
             "ratingValue": reviewsData.summary.overallRating.toFixed(1),
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": reviewsData.summary.totalReviews
+            "ratingCount": reviewsData.summary.totalReviews,
+            "reviewCount": reviewsData.summary.totalReviews
         },
         "review": (reviewsData.testimonials || []).map(rev => ({
             "@type": "Review",

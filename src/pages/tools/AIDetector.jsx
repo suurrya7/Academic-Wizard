@@ -182,6 +182,7 @@ const AIDetector = () => {
                         "aggregateRating": {
                             "@type": "AggregateRating",
                             "ratingValue": "4.7",
+                            "ratingCount": "1180",
                             "reviewCount": "1180",
                             "bestRating": "5",
                             "worstRating": "1"
