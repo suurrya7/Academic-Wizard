@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CalendarDays, Clock, ArrowLeft, Tags, Share2, Link2, Check } from 'lucide-react';
+import { CalendarDays, Clock, ArrowLeft, Tags, Share2, Link2, Check, GraduationCap } from 'lucide-react';
 import { assetPath } from '../config/site';
 import Breadcrumbs from '../components/Breadcrumbs';
 import UrgentTriageBanner from '../components/UrgentTriageBanner';
@@ -168,7 +168,9 @@ const BlogPost = () => {
     const postDescription = postData?.excerpt || postData?.title || '';
 
     // Article JSON-LD Schema for Google
-    const authorSchema = postData?.author ? {
+    // When author is a placeholder, attribute to Organization to prevent search engines indexing placeholder text as real people
+    const isPlaceholderAuthor = !postData?.author?.name || postData.author.name.startsWith('[');
+    const authorSchema = !isPlaceholderAuthor ? {
         "@type": "Person",
         "name": postData.author.name,
         "jobTitle": "Academic Coach & Editor",
@@ -178,7 +180,7 @@ const BlogPost = () => {
         }
     } : {
         "@type": "Organization",
-        "name": "Academic Wizard",
+        "name": "Academic Wizard Editorial Board",
         "url": "https://academicwizard.online/"
     };
 
@@ -358,7 +360,7 @@ const BlogPost = () => {
                 {postData?.author && (
                     <div className="mt-12 p-8 glass-card flex flex-col sm:flex-row gap-6 items-center sm:items-start text-left border-white/10">
                         <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-accent-gold to-accent-gold-light flex items-center justify-center text-black font-heading text-xl font-bold shrink-0 shadow-lg" style={{ background: 'linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light))' }}>
-                            {postData.author.name.split(' ').filter(n => !n.includes('.')).map(n => n[0]).join('')}
+                            <GraduationCap size={28} className="text-black" />
                         </div>
                         <div className="flex-1">
                             <span className="text-[10px] uppercase tracking-[3px] font-heading text-accent-gold block mb-1" style={{ color: 'var(--accent-gold)' }}>Expert Contributor</span>

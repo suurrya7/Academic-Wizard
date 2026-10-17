@@ -19,6 +19,49 @@ const SLUG_TO_HREFLANG = {
     'india': 'en-IN', 'ireland': 'en-IE', 'singapore': 'en-SG', 'germany': 'en-DE'
 };
 
+const REGIONAL_FACULTY_QUOTES = {
+    uk: {
+        name: "Dr. Kavitha Subramanian",
+        role: "PhD in Management (LSE) • UK Academic Advisor & Dissertation Supervisor",
+        quote: "UK higher education places premium value on independent critical analysis and strict referencing standards like OSCOLA and Harvard Cite Them Right. Structuring arguments with deep literature synthesis is key to achieving upper-second and first-class classifications."
+    },
+    usa: {
+        name: "Dr. Lakshmi Venkataraman",
+        role: "PhD in Public Health (Johns Hopkins) • US Academic Research Advisor",
+        quote: "American universities prioritize thesis-driven argumentation, robust empirical methodology, and strict adherence to APA 7th or MLA conventions. Clear hypothesis articulation and methodological justification are essential."
+    },
+    australia: {
+        name: "Dr. Harpreet Singh Gill",
+        role: "PhD in Marketing (Univ of Melbourne) • Australia Academic Mentor",
+        quote: "Under the Australian Qualifications Framework (AQF), grading demands evidence-led evaluations and rigorous adherence to university rubrics, whether using AGLC4 for legal studies or APA for social sciences."
+    },
+    canada: {
+        name: "Dr. Vikram Nair",
+        role: "PhD in Electrical Engineering (Univ of Toronto) • Canada Academic Research Mentor",
+        quote: "Canadian academic institutions maintain rigorous standards regarding academic integrity, ethical clearance for empirical studies, and precise quantitative analysis across technical and scientific disciplines."
+    },
+    singapore: {
+        name: "Dr. Nikhil Bhatia",
+        role: "PhD in Information Systems (NUS) • Singapore Academic Research Advisor",
+        quote: "With competitive bell-curve grading in Singaporean higher education, depth of analysis, structured literature reviews, and sound analytical models make a decisive difference in academic outcomes."
+    },
+    india: {
+        name: "Dr. Priya Raghunathan",
+        role: "PhD in Finance (IIM Ahmedabad) • Academic Advisor & Research Supervisor",
+        quote: "Postgraduate academic coursework demands navigating complex institutional guidelines with original analytical thinking, systematic literature synthesis, and uncompromised academic integrity."
+    },
+    ireland: {
+        name: "Dr. Sanjay Kapoor",
+        role: "PhD in Accounting (Univ of Manchester) • Academic Research Supervisor",
+        quote: "Irish universities operating under the QQI NFQ framework expect thorough critical argumentation and rigorous citation standards across undergraduate assignments and postgraduate dissertations."
+    },
+    germany: {
+        name: "Dr. Tanvi Agarwal",
+        role: "PhD in Chemistry (Univ of Edinburgh) • European Academic Advisor",
+        quote: "German university assessments and thesis requirements (Prüfungsordnung) demand absolute methodological precision, systematic structuring, and adherence to formal scientific standards."
+    }
+};
+
 const CountryServicePage = () => {
     const { serviceSlug, countrySlug } = useParams();
     const service = servicesData.find(s => s.slug === serviceSlug);
@@ -374,11 +417,16 @@ const CountryServicePage = () => {
                         definition={overviewText} 
                     />
                     
-                    <ExpertQuote 
-                        quote={`Academic standards in ${country.name} require a tailored approach. According to Academic Wizard's internal analysis of over 5,000 university submissions, students who receive localized academic support see an average grade improvement of 12 percentage points.`}
-                        author="Prof. James Roberts"
-                        role={`Director of Academic Quality, ${country.name}`}
-                    />
+                    {(() => {
+                        const advisor = REGIONAL_FACULTY_QUOTES[country.slug] || REGIONAL_FACULTY_QUOTES.uk;
+                        return (
+                            <ExpertQuote 
+                                quote={advisor.quote}
+                                author={advisor.name}
+                                role={advisor.role}
+                            />
+                        );
+                    })()}
                     
                     {/* Local University Insight Block */}
                     {country.localInsight && (

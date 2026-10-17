@@ -161,6 +161,7 @@ const About = () => {
                         <Link to="/services/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">All Services</Link>
                         <Link to="/services/assignment-help/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Assignment Help</Link>
                         <Link to="/services/dissertation-help/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Dissertation Help</Link>
+                        <Link to="/experts/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Faculty & Experts</Link>
                         <Link to="/tools/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Free Tools</Link>
                         <Link to="/blog/" className="glass-card px-6 py-3 rounded-full text-white/80 hover:text-accent-gold hover:border-accent-gold/50 transition-colors">Academic Blog</Link>
                     </div>

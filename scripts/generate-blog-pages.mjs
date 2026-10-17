@@ -79,7 +79,8 @@ function generateBlogPages() {
         const publishDate = post.date || new Date().toISOString();
         const keywords = (post.keywords || []).join(', ');
 
-        const authorSchema = post.author ? {
+        const isPlaceholderAuthor = !post.author?.name || post.author.name.startsWith('[');
+        const authorSchema = !isPlaceholderAuthor ? {
             "@type": "Person",
             "name": post.author.name,
             "jobTitle": "Academic Coach & Editor",
@@ -89,7 +90,7 @@ function generateBlogPages() {
             }
         } : {
             "@type": "Organization",
-            "name": "Academic Wizard",
+            "name": "Academic Wizard Editorial Board",
             "url": `${SITE_URL}/`
         };
 

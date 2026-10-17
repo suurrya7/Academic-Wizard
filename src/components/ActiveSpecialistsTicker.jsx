@@ -11,7 +11,7 @@ const REAL_DELIVERIES = [
         stream: "Evidence-Based Clinical Practice (SNB / NHS Standards)",
         university: "National University of Singapore (NUS)",
         country: "🇸🇬 Singapore",
-        specialist: "Dr. Sarah T., RN, PhD",
+        specialist: "Dr. Lakshmi Venkataraman (PhD, Johns Hopkins)",
         subject: "Nursing"
     },
     {
@@ -21,7 +21,7 @@ const REAL_DELIVERIES = [
         stream: "Doctrinal Analysis (OSCOLA 4th Edition)",
         university: "University of Oxford",
         country: "🇬🇧 United Kingdom",
-        specialist: "Adv. Richard K., BCL (Oxon)",
+        specialist: "Dr. Farah Siddiqui (PhD, NLSIU)",
         subject: "Law"
     },
     {
@@ -31,7 +31,7 @@ const REAL_DELIVERIES = [
         stream: "AASB 15/16 Compliance & Ledger Reconciliation",
         university: "University of Melbourne",
         country: "🇦🇺 Australia",
-        specialist: "Marcus L., CPA Australia",
+        specialist: "Dr. Sanjay Kapoor (PhD, Univ of Manchester)",
         subject: "Accounting"
     },
     {
@@ -41,7 +41,7 @@ const REAL_DELIVERIES = [
         stream: "Scalable Microservices with Full Test Suite",
         university: "University of Toronto",
         country: "🇨🇦 Canada",
-        specialist: "Dr. Alex V., PhD in Computer Science",
+        specialist: "Dr. Arjun Mehta (PhD, Univ of Leeds)",
         subject: "Computer Science"
     },
     {
@@ -51,7 +51,7 @@ const REAL_DELIVERIES = [
         stream: "SPSS Multivariate Regression & APA 7th Synthesis",
         university: "University College London (UCL)",
         country: "🇬🇧 United Kingdom",
-        specialist: "Dr. Elena M., PhD",
+        specialist: "Dr. Sneha Kulkarni (PhD, Univ of Delhi)",
         subject: "Psychology"
     },
     {
@@ -61,7 +61,7 @@ const REAL_DELIVERIES = [
         stream: "MATLAB Simulation & Computational Modeling",
         university: "Technical University of Munich (TUM)",
         country: "🇩🇪 Germany",
-        specialist: "Prof. Hans W., Dr.-Ing.",
+        specialist: "Dr. Rohan Deshmukh (PhD, IIT Bombay)",
         subject: "Engineering"
     },
     {
@@ -71,7 +71,7 @@ const REAL_DELIVERIES = [
         stream: "Global Supply Chain & Corporate Strategy",
         university: "Trinity College Dublin",
         country: "🇮🇪 Ireland",
-        specialist: "Liam O., MBA (INSEAD)",
+        specialist: "Dr. Kavitha Subramanian (PhD, LSE)",
         subject: "Business / MBA"
     },
     {
@@ -81,7 +81,7 @@ const REAL_DELIVERIES = [
         stream: "Black-Scholes Modeling & Portfolio Optimization",
         university: "New York University (NYU Stern)",
         country: "🇺🇸 United States",
-        specialist: "Dr. Raymond C., CFA",
+        specialist: "Dr. Priya Raghunathan (PhD, IIM Ahmedabad)",
         subject: "Finance"
     }
 ];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Target, UserCheck, Clock, MessageSquare, Zap, BadgeDollarSign } from 'lucide-react';
+import { Shield, Target, UserCheck, Clock, MessageSquare, Zap, BadgeDollarSign, GraduationCap } from 'lucide-react';
 
 const features = [
     { icon: UserCheck, title: 'Expert Researchers', desc: 'Subject specialists and PhD-level experts across all disciplines.' },
@@ -46,13 +46,13 @@ const FeaturesGrid = () => {
                             <h3 className="text-2xl font-bold font-heading mb-8 text-text-primary">Expert <span className="text-accent-gold" style={{ color: 'var(--accent-gold)' }}>Researchers</span></h3>
                             <div className="space-y-8">
                                 {[
-                                    { name: 'Dr. Michael Turner', role: 'PhD in Business Research' },
-                                    { name: 'Dr. Emily Watson', role: 'PhD in Psychology' },
-                                    { name: 'Dr. Daniel Roberts', role: 'PhD in Engineering' }
+                                    { name: 'Dr. Kavitha Subramanian', role: 'PhD in Management (LSE) • Business & Strategy Lead' },
+                                    { name: 'Dr. Sneha Kulkarni', role: 'PhD in Psychology (Univ of Delhi) • Research Methods & Analytics Lead' },
+                                    { name: 'Dr. Rohan Deshmukh', role: 'PhD in Mechanical Engineering (IIT Bombay) • Engineering & STEM Lead' }
                                 ].map((expert, i) => (
                                     <div key={i} className="flex items-center gap-6 p-4 rounded-xl border border-glass-border hover:border-accent-gold/30 transition-colors">
-                                        <div className="w-14 h-14 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-heading font-bold" style={{ color: 'var(--accent-gold)' }}>
-                                            {expert.name[4]}
+                                        <div className="w-14 h-14 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold shrink-0" style={{ color: 'var(--accent-gold)' }}>
+                                            <GraduationCap size={24} />
                                         </div>
                                         <div>
                                             <h5 className="font-heading text-sm text-text-primary">{expert.name}</h5>

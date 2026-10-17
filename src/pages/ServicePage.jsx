@@ -20,13 +20,13 @@ import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, G
 import { assetPath } from '../config/site';
 
 const EXPERT_QUOTES = [
-    { author: "Dr. Sarah Jenkins", role: "Head of Academic Excellence" },
-    { author: "Prof. Michael Roberts", role: "Senior Curriculum Advisor" },
-    { author: "Dr. Elena Rodriguez", role: "Director of Student Success" },
-    { author: "James Chen, Ph.D.", role: "Lead Academic Strategist" },
-    { author: "Dr. Aisha Patel", role: "Global Education Consultant" },
-    { author: "Prof. David Thorne", role: "Chief Research Officer" },
-    { author: "Dr. Laura Kim", role: "Educational Psychology Expert" }
+    { author: "Dr. Kavitha Subramanian", role: "PhD in Management (LSE) • Business & Research Mentor" },
+    { author: "Dr. Arjun Mehta", role: "PhD in Computer Science (Univ of Leeds) • AI & Tech Academic Lead" },
+    { author: "Dr. Priya Raghunathan", role: "PhD in Finance (IIM Ahmedabad) • Financial Research Mentor" },
+    { author: "Dr. Farah Siddiqui", role: "PhD in Law (NLSIU) • Legal Research & Methodology Specialist" },
+    { author: "Dr. Sneha Kulkarni", role: "PhD in Psychology (Univ of Delhi) • Research Methods & Analytics Advisor" },
+    { author: "Dr. Pooja Menon", role: "PhD in Education (Univ of Oxford) • Qualitative Research Lead" },
+    { author: "Dr. Lakshmi Venkataraman", role: "PhD in Public Health (Johns Hopkins) • Health Research & Biostatistics Lead" }
 ];
 
 const ServicePage = () => {

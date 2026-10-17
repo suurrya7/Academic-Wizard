@@ -5,132 +5,164 @@ import { GraduationCap, Award, CheckCircle2, MessageCircle, BookOpen, Globe } fr
 
 const EXPERTS = [
     {
-        id: "dr-arthur-pendleton",
-        name: "Dr. Arthur Pendleton",
-        credentials: "PhD in Physics, Massachusetts Institute of Technology (MIT)",
-        subjects: ["Physics", "Mathematics", "Engineering", "Data Science"],
+        id: "dr-priya-raghunathan",
+        name: "Dr. Priya Raghunathan",
+        credentials: "PhD in Finance, Indian Institute of Management Ahmedabad",
+        subjects: ["Banking", "Corporate Finance", "Financial Markets"],
+        countries: ["India", "UK", "Singapore"],
+        bio: "Finance researcher with 10+ years supervising master’s dissertations on banking performance and fintech disruption."
+    },
+    {
+        id: "dr-arjun-mehta",
+        name: "Dr. Arjun Mehta",
+        credentials: "PhD in Computer Science, University of Leeds",
+        subjects: ["Machine Learning", "Data Analytics", "Software Engineering"],
+        countries: ["UK", "India", "Canada"],
+        bio: "Senior academic with 8+ years guiding undergraduate and postgraduate projects in AI and data science."
+    },
+    {
+        id: "dr-kavitha-subramanian",
+        name: "Dr. Kavitha Subramanian",
+        credentials: "PhD in Management, London School of Economics",
+        subjects: ["Business Strategy", "Organisational Behaviour", "HRM"],
+        countries: ["UK", "Ireland", "Australia"],
+        bio: "UK-based NRI lecturer with 9 years of experience supervising MBA and MSc research projects."
+    },
+    {
+        id: "dr-rohan-deshmukh",
+        name: "Dr. Rohan Deshmukh",
+        credentials: "PhD in Mechanical Engineering, IIT Bombay",
+        subjects: ["Thermodynamics", "Manufacturing", "Robotics"],
+        countries: ["India", "Germany", "USA"],
+        bio: "Engineering academic with 12 years of teaching and thesis mentoring experience."
+    },
+    {
+        id: "dr-ananya-chatterjee",
+        name: "Dr. Ananya Chatterjee",
+        credentials: "PhD in Economics, University of Cambridge",
+        subjects: ["Econometrics", "Development Economics", "Macroeconomics"],
+        countries: ["UK", "USA", "India"],
+        bio: "Economist with 7+ years of experience supporting quantitative dissertations and statistical modelling."
+    },
+    {
+        id: "dr-vikram-nair",
+        name: "Dr. Vikram Nair",
+        credentials: "PhD in Electrical Engineering, University of Toronto",
+        subjects: ["Power Systems", "Signal Processing", "IoT"],
+        countries: ["Canada", "USA"],
+        bio: "Canada-based NRI researcher who has supervised 40+ undergraduate and master’s theses."
+    },
+    {
+        id: "dr-sneha-kulkarni",
+        name: "Dr. Sneha Kulkarni",
+        credentials: "PhD in Psychology, University of Delhi",
+        subjects: ["Clinical Psychology", "Research Methods", "SPSS Analysis"],
+        countries: ["India", "UK", "Australia"],
+        bio: "Psychologist with 8 years of experience in survey design, qualitative coding, and thesis guidance."
+    },
+    {
+        id: "dr-harpreet-singh-gill",
+        name: "Dr. Harpreet Singh Gill",
+        credentials: "PhD in Marketing, University of Melbourne",
+        subjects: ["Consumer Behaviour", "Digital Marketing", "Branding"],
+        countries: ["Australia", "Singapore"],
+        bio: "Australia-based NRI academic with 11 years of experience mentoring marketing dissertations."
+    },
+    {
+        id: "dr-meera-iyer",
+        name: "Dr. Meera Iyer",
+        credentials: "PhD in Biotechnology, Indian Institute of Science, Bengaluru",
+        subjects: ["Molecular Biology", "Bioinformatics", "Genetics"],
+        countries: ["India", "UK", "USA"],
+        bio: "Life sciences researcher with 9+ years of lab and thesis supervision experience."
+    },
+    {
+        id: "dr-sanjay-kapoor",
+        name: "Dr. Sanjay Kapoor",
+        credentials: "PhD in Accounting, University of Manchester",
+        subjects: ["Financial Reporting", "Auditing", "Corporate Governance"],
+        countries: ["UK", "India", "Ireland"],
+        bio: "Accounting scholar with 13 years of lecturing and dissertation supervision across UK and Indian institutions."
+    },
+    {
+        id: "dr-lakshmi-venkataraman",
+        name: "Dr. Lakshmi Venkataraman",
+        credentials: "PhD in Public Health, Johns Hopkins University",
+        subjects: ["Epidemiology", "Biostatistics", "Health Policy"],
         countries: ["USA", "Canada"],
-        bio: "Dr. Arthur Pendleton is a STEM editor and technical writing consultant helping US and Canadian university students with complex engineering reports, quantitative modeling, and methodology defense."
+        bio: "US-based NRI researcher with 10 years of experience guiding health research projects and statistical analysis."
     },
     {
-        id: "dr-jessica-carter",
-        name: "Dr. Jessica Carter",
-        credentials: "PhD in Chemistry, Columbia University",
-        subjects: ["Chemistry", "Biochemistry", "STEM Literature Reviews"],
-        countries: ["USA", "UK"],
-        bio: "Dr. Jessica Carter is a chemical researcher and scientific proofreader supporting postgraduate students in the USA and UK with complex thesis structuring, peer-reviewed citations, and lab dissertations."
+        id: "dr-aditya-joshi",
+        name: "Dr. Aditya Joshi",
+        credentials: "PhD in Civil Engineering, IIT Madras",
+        subjects: ["Structural Engineering", "Construction Management", "Sustainability"],
+        countries: ["India", "Singapore", "Germany"],
+        bio: "Civil engineering academic with 9 years of experience supervising final-year projects and master’s theses."
     },
     {
-        id: "prof-james-henderson",
-        name: "Prof. James Henderson",
-        credentials: "PhD in English Literature, Harvard University",
-        subjects: ["English Literature", "Critical Theory", "Comparative Literature", "MLA/Chicago"],
-        countries: ["USA", "Canada"],
-        bio: "Prof. James Henderson is a published academic with over 15 years of experience mentoring students in literary analysis, argumentative essay construction, and dissertation proposals at leading North American institutions."
+        id: "dr-farah-siddiqui",
+        name: "Dr. Farah Siddiqui",
+        credentials: "PhD in Law, National Law School of India University",
+        subjects: ["Corporate Law", "International Trade Law", "Legal Research"],
+        countries: ["India", "UK", "Singapore"],
+        bio: "Legal scholar with 8+ years of experience in research writing and dissertation mentoring."
     },
     {
-        id: "dr-robert-oconnor",
-        name: "Dr. Robert O'Connor",
-        credentials: "PhD in History, University of Cambridge",
-        subjects: ["History", "Historiography", "Law", "OSCOLA & Harvard"],
-        countries: ["UK", "Ireland"],
-        bio: "Dr. Robert O'Connor is a humanities editor and dissertation advisor, expert in OSCOLA, Harvard, and Chicago formatting rules across UK and Irish universities with focus on archival analysis."
+        id: "dr-nikhil-bhatia",
+        name: "Dr. Nikhil Bhatia",
+        credentials: "PhD in Information Systems, National University of Singapore",
+        subjects: ["Cybersecurity", "Business Analytics", "Cloud Computing"],
+        countries: ["Singapore", "Australia"],
+        bio: "Singapore-based NRI academic with 7 years of experience supervising IS and analytics dissertations."
     },
     {
-        id: "dr-sarah-evans",
-        name: "Dr. Sarah Evans",
+        id: "dr-pooja-menon",
+        name: "Dr. Pooja Menon",
         credentials: "PhD in Education, University of Oxford",
-        subjects: ["Education", "Pedagogy", "Reflective Practice", "PGCE Assessments"],
-        countries: ["UK", "Ireland"],
-        bio: "Dr. Sarah Evans is an education specialist focusing on pedagogical frameworks, Bloom's Taxonomy, Kolb's reflective cycles, and academic integrity training for undergraduate and master's students."
+        subjects: ["Curriculum Studies", "Educational Research", "Qualitative Methods"],
+        countries: ["UK", "Ireland", "Australia"],
+        bio: "Education researcher with 10+ years of experience mentoring postgraduate research."
     },
     {
-        id: "dr-chloe-desjardins",
-        name: "Dr. Chloe Desjardins",
-        credentials: "PhD in Nursing, McGill University",
-        subjects: ["Nursing", "Healthcare Management", "Evidence-Based Practice", "PRISMA"],
-        countries: ["Canada", "USA"],
-        bio: "Dr. Chloe Desjardins specializes in health sciences and nursing curricula, helping Canadian and US nursing students format complex clinical case studies, Gibbs reflective logs, and systematic literature reviews."
-    },
-    {
-        id: "dr-david-johnston",
-        name: "Dr. David Johnston",
-        credentials: "PhD in Environmental Science, University of British Columbia",
-        subjects: ["Environmental Science", "Geography", "Quantitative Research", "SPSS/R"],
-        countries: ["Canada", "Australia"],
-        bio: "Dr. David Johnston specialises in environmental research design, geospatial analysis, and empirical methodology, supervising postgraduate students across Australian and Canadian universities."
-    },
-    {
-        id: "dr-emily-chen",
-        name: "Dr. Emily Chen",
-        credentials: "PhD in Psychology, University of Toronto",
-        subjects: ["Psychology", "Cognitive Science", "APA 7th", "Statistical Analysis"],
-        countries: ["Canada", "USA"],
-        bio: "Dr. Emily Chen is a clinical psychologist and research methodologist who guides students through APA 7th style conventions, quantitative data analysis, and qualitative thematic coding."
-    },
-    {
-        id: "dr-marcus-vance",
-        name: "Dr. Marcus Vance",
-        credentials: "PhD in Political Science, Yale University",
-        subjects: ["Political Science", "International Relations", "Public Policy", "Law"],
-        countries: ["USA", "UK"],
-        bio: "Dr. Marcus Vance provides expert guidance on thesis statement construction, policy memos, IRAC legal arguments, and political theory for university scholars worldwide."
-    },
-    {
-        id: "dr-sarah-lim",
-        name: "Dr. Sarah Lim",
-        credentials: "PhD in Business Administration, Nanyang Technological University (NTU)",
-        subjects: ["MBA", "Strategic Management", "Marketing", "Corporate Finance"],
-        countries: ["Singapore", "Australia"],
-        bio: "Dr. Sarah Lim is a business strategist helping university students in Singapore, Australia, and the UK with Harvard case studies, Porter's Five Forces analysis, and executive MBA dissertations."
-    },
-    {
-        id: "dr-cheryl-tan",
-        name: "Dr. Cheryl Tan",
-        credentials: "PhD in Linguistics, National University of Singapore (NUS)",
-        subjects: ["Linguistics", "ESL Academic Writing", "Proofreading & Editing"],
-        countries: ["Singapore", "Australia"],
-        bio: "Dr. Cheryl Tan is an ESL specialist and academic editor, helping international students polish sentence mechanics, eliminate robotic tone, and meet strict university grading rubrics."
-    },
-    {
-        id: "dr-amit-sharma",
-        name: "Dr. Amit Sharma",
-        credentials: "PhD in Computer Science, IIT Delhi",
-        subjects: ["Computer Science", "Algorithms", "Software Engineering", "AI & ML"],
+        id: "dr-rajesh-pillai",
+        name: "Dr. Rajesh Pillai",
+        credentials: "PhD in Operations Management, Indian School of Business",
+        subjects: ["Supply Chain", "Operations Research", "Lean Six Sigma"],
         countries: ["India", "Singapore", "UK"],
-        bio: "Dr. Amit Sharma is a computer science methodologist guiding students through algorithms, software architecture documentation, IEEE conference styling, and empirical code evaluations."
+        bio: "Operations academic with 12 years of consulting and thesis supervision experience."
     },
     {
-        id: "dr-fiona-gallagher",
-        name: "Dr. Fiona Gallagher",
-        credentials: "PhD in Sociology, Trinity College Dublin",
-        subjects: ["Sociology", "Social Policy", "Qualitative Methods", "NVivo Coding"],
-        countries: ["Ireland", "UK"],
-        bio: "Dr. Fiona Gallagher is a social scientist providing thesis coaching and essay structuring with deep expertise in Irish NFQ and British QAA university grading frameworks."
+        id: "dr-tanvi-agarwal",
+        name: "Dr. Tanvi Agarwal",
+        credentials: "PhD in Chemistry, University of Edinburgh",
+        subjects: ["Organic Chemistry", "Pharmaceutical Sciences", "Spectroscopy"],
+        countries: ["UK", "Germany", "Canada"],
+        bio: "Chemistry researcher with 6+ years of supervising lab-based dissertations."
     },
     {
-        id: "dr-hans-mueller",
-        name: "Dr. Hans Müller",
-        credentials: "PhD in Economics, LMU Munich",
-        subjects: ["Economics", "Econometrics", "Finance", "ECTS Standards"],
-        countries: ["Germany", "Ireland"],
-        bio: "Dr. Hans Müller brings deep expertise in European academic standards, quantitative econometrics, and cross-cultural scholarly communication across German and European universities."
+        id: "dr-imran-qureshi",
+        name: "Dr. Imran Qureshi",
+        credentials: "PhD in Data Science, University of British Columbia",
+        subjects: ["Statistics", "Python", "Predictive Modelling"],
+        countries: ["Canada", "USA"],
+        bio: "Canada-based NRI data scientist with 8 years of experience guiding quantitative research projects."
     },
     {
-        id: "dr-alistair-macleod",
-        name: "Dr. Alistair Macleod",
-        credentials: "PhD in Philosophy, University of Edinburgh",
-        subjects: ["Philosophy", "Ethics", "Logic & Epistemology", "Critical Argumentation"],
-        countries: ["UK", "Australia"],
-        bio: "Dr. Alistair Macleod is a logical analysis coach who helps students structure critical literature reviews, philosophical debate papers, and ethical frameworks in postgraduate dissertations."
+        id: "dr-divya-bhargava",
+        name: "Dr. Divya Bhargava",
+        credentials: "PhD in Sociology, Jawaharlal Nehru University",
+        subjects: ["Social Research", "Gender Studies", "Qualitative Analysis"],
+        countries: ["India", "UK", "Canada"],
+        bio: "Sociologist with 11 years of experience in fieldwork design, thematic analysis, and thesis support."
     },
     {
-        id: "dr-eleanor-wright",
-        name: "Dr. Eleanor Wright",
-        credentials: "PhD in English, King's College London",
-        subjects: ["English", "Academic Register", "Manuscript Editing", "Harvard Style"],
-        countries: ["UK", "Canada"],
-        bio: "Dr. Eleanor Wright is a professional academic editor with extensive expertise in structural proofreading, tone harmonization, and citation auditing across Russell Group universities."
+        id: "dr-karthik-ramaswamy",
+        name: "Dr. Karthik Ramaswamy",
+        credentials: "PhD in Fintech and Banking, Imperial College London",
+        subjects: ["Digital Banking", "Risk Management", "Financial Modelling"],
+        countries: ["UK", "Singapore", "USA"],
+        bio: "UK-based NRI academic with 9+ years of experience supervising dissertations on banking and financial technology."
     }
 ];
 
@@ -146,10 +178,15 @@ const Experts = () => {
             "item": {
                 "@type": "Person",
                 "name": exp.name,
-                "jobTitle": "Academic Advisor & Editor",
+                "jobTitle": "Academic Advisor & Dissertation Supervisor",
                 "honorificPrefix": "Dr.",
                 "description": exp.bio,
                 "knowsAbout": exp.subjects,
+                "hasCredential": {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "degree",
+                    "name": exp.credentials
+                },
                 "worksFor": {
                     "@type": "Organization",
                     "name": "Academic Wizard",
@@ -163,10 +200,10 @@ const Experts = () => {
         <div className="page-experts min-h-screen bg-bg-primary text-text-primary">
             <Helmet>
                 <title>Our Academic Faculty & Experts | Academic Wizard</title>
-                <meta name="description" content="Meet Academic Wizard's verified PhD specialists, editors, and dissertation supervisors from Oxford, Cambridge, MIT, Harvard, Columbia, and NUS." />
+                <meta name="description" content="Meet Academic Wizard's verified academic subject specialists, editors, and dissertation supervisors across sciences, law, humanities, and business." />
                 <link rel="canonical" href="https://academicwizard.online/experts/" />
                 <meta property="og:title" content="Our Academic Faculty & Experts | Academic Wizard" />
-                <meta property="og:description" content="Verified PhD subject specialists and dissertation supervisors providing 100% Turnitin-safe academic mentorship across UK, USA, Australia, and worldwide." />
+                <meta property="og:description" content="Academic subject specialists and dissertation supervisors providing research mentorship across UK, USA, Australia, and worldwide." />
                 <meta property="og:url" content="https://academicwizard.online/experts/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />
@@ -244,7 +281,7 @@ const Experts = () => {
                                             className="w-14 h-14 rounded-2xl flex items-center justify-center font-heading font-black text-black text-lg shrink-0 shadow-lg"
                                             style={{ background: 'linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light, #f3e5ab))' }}
                                         >
-                                            {exp.name.split(' ').filter(n => !n.includes('.')).map(n => n[0]).join('')}
+                                            <GraduationCap size={24} className="text-black" />
                                         </div>
                                         <div className="min-w-0">
                                             <h3 className="text-xl font-bold font-heading text-white group-hover:text-accent-gold transition-colors truncate">
@@ -283,7 +320,7 @@ const Experts = () => {
                                         className="btn-primary w-full inline-flex items-center justify-center gap-2 py-3 text-xs font-bold uppercase tracking-wider"
                                     >
                                         <MessageCircle size={15} />
-                                        <span>Consult {exp.name.split(' ')[1]}</span>
+                                        <span>Consult {exp.name}</span>
                                     </a>
                                 </div>
                             </div>

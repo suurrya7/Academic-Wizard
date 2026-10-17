@@ -31,13 +31,13 @@ const SLUG_TO_HREFLANG = {
 };
 
 const EXPERT_QUOTES = [
-    { author: "Dr. Sarah Jenkins", role: "Head of Academic Quality & Senior Clinical Reviewer" },
-    { author: "Prof. Michael Roberts", role: "Senior Curriculum Advisor (Oxon)" },
-    { author: "Dr. Elena Rodriguez", role: "Director of Student Research & Quantitative Analytics" },
-    { author: "James Chen, Ph.D.", role: "Lead Academic Strategist & Peer-Review Lead" },
-    { author: "Dr. Aisha Patel", role: "Senior Education Consultant & Healthcare Specialist" },
-    { author: "Prof. David Thorne", role: "Chief Research Officer & Legal Jurisprudence Fellow" },
-    { author: "Dr. Laura Kim", role: "Psychology & Behavioral Analytics Expert" }
+    { author: "Dr. Lakshmi Venkataraman", role: "PhD in Public Health (Johns Hopkins) • Health Science & Clinical Research Advisor" },
+    { author: "Dr. Pooja Menon", role: "PhD in Education (Univ of Oxford) • Educational Research & Pedagogy Specialist" },
+    { author: "Dr. Imran Qureshi", role: "PhD in Data Science (UBC) • Quantitative Methods & Statistical Modeling Lead" },
+    { author: "Dr. Kavitha Subramanian", role: "PhD in Management (LSE) • Strategic Management & Research Advisor" },
+    { author: "Dr. Harpreet Singh Gill", role: "PhD in Marketing (Univ of Melbourne) • Marketing & Consumer Research Lead" },
+    { author: "Dr. Farah Siddiqui", role: "PhD in Law (NLSIU) • Legal Research & Jurisprudence Specialist" },
+    { author: "Dr. Sneha Kulkarni", role: "PhD in Psychology (Univ of Delhi) • Behavioral Research & SPSS Specialist" }
 ];
 
 const SERVICE_VERBS = {
