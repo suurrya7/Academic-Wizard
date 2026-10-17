@@ -2,7 +2,7 @@
 
         > This document provides detailed, structured information about Academic Wizard to help AI assistants, search engines, and generative AI systems accurately represent our services.
 
-        **Last updated**: 2026-10-16
+        **Last updated**: 2026-10-17
         **Website**: https://academicwizard.online
         **Type**: Ethical Academic Support Platform
         **Founded**: 2025
@@ -279,6 +279,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-08-08
 
 ### Dissertation
+
+- **[Dissertation Workflow: Managing NVivo 26 Data Without Bias](https://academicwizard.online/blog/dissertation-workflow-managing-nvivo-26-data-without-bias/)**
+  - Excerpt: Ensure your qualitative findings remain robust. Discover how to minimize researcher bias and streamline your thematic coding workflow in NVivo 26.
+  - Keywords: minimizing researcher bias in qualitative thematic analysis, nvivo 26 qualitative coding workflow, coding drift in doctoral research, thematic analysis validity check, qualitative data organization for phds
+  - Target Region: UK
+  - Published: 2026-10-17
 
 - **[Zotero Workflow: Managing 150+ Sources for Your Dissertation](https://academicwizard.online/blog/zotero-workflow-managing-150-sources-for-your-dissertation/)**
   - Excerpt: Overwhelmed by your dissertation library? Discover expert Zotero workflows to organize 150+ sources, fix metadata conflicts, and ensure perfect citations.
@@ -803,6 +809,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-08
 
 ### Editing and Proofreading
+
+- **[APA 7th Edition: New Citation Rules for Complex Digital Media](https://academicwizard.online/blog/apa-7th-edition-new-citation-rules-for-complex-digital-media-3/)**
+  - Excerpt: Stop losing marks on digital sources. Master the updated APA 7th edition rules for citing podcasts, interactive media, and social content with our guide.
+  - Keywords: apa 7 citation rules for social media and digital content, citing podcasts in apa 7, apa 7 referencing interactive media, citation guidelines for online video, apa 7 digital source formatting
+  - Target Region: Australia
+  - Published: 2026-10-17
 
 - **[APA 7th Edition: New Citation Rules for Complex Digital Sources](https://academicwizard.online/blog/apa-7th-edition-new-citation-rules-for-complex-digital-sources/)**
   - Excerpt: Stop guessing your citations. Learn the latest APA 7th edition rules for complex digital media, podcasts, and online content for your 2026 research papers.
@@ -1390,6 +1402,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
 
 ### Literature Review
 
+- **[Structuring Your Lit Review: Ethical AI Scaffolding Methods](https://academicwizard.online/blog/structuring-your-lit-review-ethical-ai-scaffolding-methods/)**
+  - Excerpt: Struggling with your lit review structure? Learn how to ethically use AI for scaffolding while ensuring your own critical analysis remains at the center.
+  - Keywords: how to ethically use ai for literature review outlines, academic writing ai guardrails, structuring literature review chapters, ai-assisted academic synthesis, maintaining voice in ai-aided research
+  - Target Region: Canada
+  - Published: 2026-10-17
+
 - **[Beyond Generative AI: Scaffolding Your Literature Review Ethically](https://academicwizard.online/blog/beyond-generative-ai-scaffolding-your-literature-review-ethically/)**
   - Excerpt: Build a cohesive literature review faster without losing your voice. Discover ethical ways to use AI for scaffolding and synthesis in your dissertation.
   - Keywords: ethical ai use for literature review outline, AI-assisted academic outlining, synthesizing literature review themes, ethical research scaffolding, academic voice preservation
@@ -1691,6 +1709,12 @@ We cover all major academic disciplines including Arts & Humanities, Business & 
   - Published: 2026-07-05
 
 ### Research Support
+
+- **[Turnitin AI False Positives: A 2026 Audit Protocol for Students](https://academicwizard.online/blog/turnitin-ai-false-positives-a-2026-audit-protocol-for-students/)**
+  - Excerpt: Flagged for AI? Learn how to audit your writing, compile evidence, and professionally challenge Turnitin false positives to protect your academic record.
+  - Keywords: how to challenge turnitin ai detection false positives, turnitin integrity report analysis, ai writing detection errors, academic misconduct appeal guide, verifying originality in academic writing
+  - Target Region: USA
+  - Published: 2026-10-17
 
 - **[Mastering NVivo 26: Eliminating Researcher Bias in Thematic Analysis](https://academicwizard.online/blog/mastering-nvivo-26-eliminating-researcher-bias-in-thematic-analysis-2/)**
   - Excerpt: Struggling with coding bias in your thesis? Master NVivo 26 with our proven workflows to ensure your qualitative analysis remains objective and defensible.
