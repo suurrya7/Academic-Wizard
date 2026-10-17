@@ -178,29 +178,7 @@ const AIDetector = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "4.7",
-                            "ratingCount": "1180",
-                            "reviewCount": "1180",
-                            "bestRating": "5",
-                            "worstRating": "1"
-                        },
-                        "review": [
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Jessica M." },
-                                "reviewBody": "Identified sentence patterns that triggered false positives in Turnitin. Allowed me to rephrase before final thesis submission."
-                            },
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Marcus L." },
-                                "reviewBody": "Excellent perplexity and burstiness detection. High accuracy across essays and dissertation chapters."
-                            }
-                        ]
+                        }
                     })}
                 </script>
             </Helmet>

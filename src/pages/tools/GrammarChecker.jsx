@@ -126,29 +126,7 @@ const GrammarChecker = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "4.9",
-                            "ratingCount": "1420",
-                            "reviewCount": "1420",
-                            "bestRating": "5",
-                            "worstRating": "1"
-                        },
-                        "review": [
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Emily H." },
-                                "reviewBody": "Caught punctuation errors and comma splices in my literature review that standard Microsoft Word missed completely."
-                            },
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Daniel T." },
-                                "reviewBody": "Fast, accurate, and completely free with no registration. Essential proofreader before submitting assignments."
-                            }
-                        ]
+                        }
                     })}
                 </script>
             </Helmet>

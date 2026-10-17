@@ -394,29 +394,7 @@ const CitationGenerator = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "4.8",
-                            "ratingCount": "2150",
-                            "reviewCount": "2150",
-                            "bestRating": "5",
-                            "worstRating": "1"
-                        },
-                        "review": [
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Chloe B." },
-                                "reviewBody": "Generated pinpoint OSCOLA citations for UK law cases and statutes. Saved me hours of manual footnote formatting."
-                            },
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Ryan W." },
-                                "reviewBody": "Flawless APA 7th edition bibliographies with correct italicization, DOI formatting, and hanging indents."
-                            }
-                        ]
+                        }
                     })}
                 </script>
             </Helmet>

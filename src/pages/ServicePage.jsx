@@ -18,7 +18,6 @@ import PricingCalculator from '../components/PricingCalculator';
 import ContactForm from '../components/ContactForm';
 import { CheckCircle, ChevronDown, ChevronUp, MessageSquare, BookOpen, Shield, GraduationCap, FileText, Star, StarHalf } from 'lucide-react';
 import { assetPath } from '../config/site';
-import reviewsData from '../data/reviews.json';
 
 const EXPERT_QUOTES = [
     { author: "Dr. Sarah Jenkins", role: "Head of Academic Excellence" },
@@ -121,37 +120,8 @@ const ServicePage = () => {
             "priceCurrency": service.defaultCurrency || "USD",
             "availability": "https://schema.org/InStock",
             "url": `https://academicwizard.online/services/${service.slug}/`,
-            "priceValidUntil": "2027-12-31",
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "US",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 30,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": reviewsData.summary.overallRating.toFixed(1),
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": reviewsData.summary.totalReviews,
-            "reviewCount": reviewsData.summary.totalReviews
-        },
-        "review": (reviewsData.testimonials || []).map(rev => ({
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": rev.rating.toString(),
-                "bestRating": "5"
-            },
-            "author": {
-                "@type": "Person",
-                "name": rev.name
-            },
-            "reviewBody": rev.text
-        }))
+            "priceValidUntil": "2027-12-31"
+        }
     };
 
     return (

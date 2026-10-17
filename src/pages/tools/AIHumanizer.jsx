@@ -137,29 +137,7 @@ const AIHumanizer = () => {
                             "@type": "Offer",
                             "price": "0.00",
                             "priceCurrency": "USD"
-                        },
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "4.8",
-                            "ratingCount": "950",
-                            "reviewCount": "950",
-                            "bestRating": "5",
-                            "worstRating": "1"
-                        },
-                        "review": [
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Liam K." },
-                                "reviewBody": "Transformed mechanical AI phrasing into natural academic prose while preserving all original references."
-                            },
-                            {
-                                "@type": "Review",
-                                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                "author": { "@type": "Person", "name": "Sarah P." },
-                                "reviewBody": "Reduced AI detection probability from 84% down to under 5% on our university scanner. Truly impressive tool."
-                            }
-                        ]
+                        }
                     })}
                 </script>
             </Helmet>

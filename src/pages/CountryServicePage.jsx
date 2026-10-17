@@ -268,37 +268,8 @@ const CountryServicePage = () => {
             "priceCurrency": regionalPricing.currency,
             "availability": "https://schema.org/InStock",
             "url": `https://academicwizard.online/services/${service.slug}/${country.slug}/`,
-            "priceValidUntil": "2027-12-31",
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": country.slug.toUpperCase(),
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 30,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-            }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": reviewsData.summary.overallRating.toFixed(1),
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": reviewsData.summary.totalReviews,
-            "reviewCount": reviewsData.summary.totalReviews
-        },
-        "review": (reviewsData.testimonials || []).map(rev => ({
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": rev.rating.toString(),
-                "bestRating": "5"
-            },
-            "author": {
-                "@type": "Person",
-                "name": rev.name
-            },
-            "reviewBody": rev.text
-        }))
+            "priceValidUntil": "2027-12-31"
+        }
     };
 
     return (
