@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-16T19:39:04.562615+00:00",
+  "last_run": "2026-10-17T01:07:48.096149+00:00",
   "daily_count": {
-    "date": "2026-10-16",
-    "count": 3
+    "date": "2026-10-17",
+    "count": 1
   },
   "replied_post_ids": [
     "1wbv0ft",
@@ -114,7 +114,8 @@
     "1x6h71r",
     "1x71bsx",
     "1x7bs60",
-    "1x7oawj"
+    "1x7oawj",
+    "1x7wevg"
   ],
   "history": [
     {
@@ -996,7 +997,15 @@
       "title": "Should I out my wife for cheating on me with her boss?",
       "posted_at": "2026-10-16T19:39:04.562611+00:00",
       "url": "https://reddit.com/r/Advice/comments/1x7oawj/should_i_out_my_wife_for_cheating_on_me_with_her/"
+    },
+    {
+      "post_id": "1x7wevg",
+      "subreddit": "NoStupidQuestions",
+      "mode": "karma",
+      "title": "Is it me or recently gender wars topics are everywhere?",
+      "posted_at": "2026-10-17T01:07:48.096145+00:00",
+      "url": "https://reddit.com/r/NoStupidQuestions/comments/1x7wevg/is_it_me_or_recently_gender_wars_topics_are/"
     }
   ],
-  "last_comment_posted_at": "2026-10-16T19:39:04.562595+00:00"
+  "last_comment_posted_at": "2026-10-17T01:07:48.096126+00:00"
 }
