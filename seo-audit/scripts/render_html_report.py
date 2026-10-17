@@ -101,5 +101,65 @@ a:hover {{ text-decoration: underline; }}
     HTML_FILE.write_text(html_full, encoding="utf-8")
     print(f"Successfully generated {HTML_FILE}")
 
+    # Also render v2 if it exists
+    v2_md = PROJECT_ROOT / "seo-audit" / "FINAL_SEO_AUDIT_REPORT_v2.md"
+    v2_html = PROJECT_ROOT / "seo-audit" / "FINAL_SEO_AUDIT_REPORT_v2.html"
+    if v2_md.exists():
+        # Re-parse for v2
+        lines2 = v2_md.read_text(encoding="utf-8").split("\n")
+        html_lines2 = []
+        in_code = False
+        in_table = False
+        for line in lines2:
+            if line.startswith("```"):
+                if in_code:
+                    html_lines2.append("</code></pre>")
+                    in_code = False
+                else:
+                    lang = line[3:].strip()
+                    html_lines2.append(f'<pre><code class="language-{lang}">')
+                    in_code = True
+                continue
+            if in_code:
+                escaped = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                html_lines2.append(escaped)
+                continue
+            if line.strip().startswith("|") and line.strip().endswith("|"):
+                parts = [p.strip() for p in line.strip().split("|")[1:-1]]
+                if all(set(p).issubset({"-", ":", " "}) for p in parts if p):
+                    continue
+                if not in_table:
+                    html_lines2.append("<table><thead><tr>" + "".join(f"<th>{p}</th>" for p in parts) + "</tr></thead><tbody>")
+                    in_table = True
+                else:
+                    html_lines2.append("<tr>" + "".join(f"<td>{p}</td>" for p in parts) + "</tr>")
+                continue
+            else:
+                if in_table:
+                    html_lines2.append("</tbody></table>")
+                    in_table = False
+            if line.startswith("# "):
+                html_lines2.append(f"<h1>{line[2:]}</h1>")
+            elif line.startswith("## "):
+                html_lines2.append(f"<h2>{line[3:]}</h2>")
+            elif line.startswith("### "):
+                html_lines2.append(f"<h3>{line[4:]}</h3>")
+            elif line.startswith("---"):
+                html_lines2.append("<hr>")
+            elif line.strip():
+                p = line
+                p = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", p)
+                p = re.sub(r"`(.+?)`", r"<code>\1</code>", p)
+                p = re.sub(r"\[(.+?)\]\((.+?)\)", r'<a href="\2">\1</a>', p)
+                html_lines2.append(f"<p>{p}</p>")
+        if in_table:
+            html_lines2.append("</tbody></table>")
+        if in_code:
+            html_lines2.append("</code></pre>")
+        body2 = "\n".join(html_lines2)
+        full2 = html_full.replace(body_content, body2).replace("Report", "Report v2")
+        v2_html.write_text(full2, encoding="utf-8")
+        print(f"Successfully generated {v2_html}")
+
 if __name__ == "__main__":
     main()
