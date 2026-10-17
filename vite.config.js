@@ -29,8 +29,11 @@ serviceRoutes.forEach(serviceWithSlash => {
     countries.forEach(country => {
         countryServiceRoutes.push(`${service}/${country}/`);
         
-        // Add subject routes for this country (skip study-guidance as they are noindexed)
-        if (service !== '/services/study-guidance' && countrySubjects[country]) {
+        // Only prerender indexable subject routes (assignment-help, essay-help, dissertation-help).
+        // Low-intent subject permutations (literature-review, research-paper-help, editing-proofreading,
+        // and study-guidance) are quarantined with noindex, follow to eliminate near-duplicate doorway bloat.
+        const indexableSubjectServices = ['/services/assignment-help', '/services/essay-help', '/services/dissertation-help'];
+        if (indexableSubjectServices.includes(service) && countrySubjects[country]) {
             countrySubjects[country].forEach(subject => {
                 specializedRoutes.push(`${service}/${country}/${subject.slug}/`);
             });

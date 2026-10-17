@@ -518,10 +518,18 @@ const SubjectCityPage = () => {
         );
     }
 
-    // 1. Study guidance subject pages attract irrelevant educational queries and cannibalize commercial pages.
-    // 2. Programmatic city pages (63 cities x 7 services = 441 pages) create doorway duplicate bloat without unique search demand.
+    // Programmatic Doorway & Near-Duplicate Cannibalization Quarantine:
+    // 1. Study guidance subject pages attract non-transactional educational queries.
+    // 2. Low-intent cross-service subject combinations (literature-review, research-paper-help, editing-proofreading)
+    //    create 98% near-duplicate doorway pages without standalone organic search demand.
+    // 3. Programmatic city pages (441 pages) act as thin doorway permutations.
     // Setting noindex, follow keeps their internal links active (passing link equity) while removing them from Google's index.
-    const shouldNoindex = serviceSlug === 'study-guidance' || pageType === 'city';
+    const shouldNoindex = 
+        serviceSlug === 'study-guidance' || 
+        serviceSlug === 'literature-review' || 
+        serviceSlug === 'research-paper-help' || 
+        serviceSlug === 'editing-proofreading' || 
+        pageType === 'city';
 
     return (
         <div className="page-specialized">

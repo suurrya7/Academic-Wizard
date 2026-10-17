@@ -89,17 +89,16 @@ for service in [
             "priority": "0.85"
         })
         
-        # Add Subjects (skip study-guidance since its subject pages are set to noindex, follow)
-        if service != "study-guidance":
+        # Add Subjects only for core transactional services (assignment-help, essay-help, dissertation-help).
+        # Low-intent subject permutations (literature-review, research-paper-help, editing-proofreading,
+        # and study-guidance) are quarantined with noindex, follow to eliminate near-duplicate doorway bloat.
+        if service in ["assignment-help", "essay-help", "dissertation-help"]:
             for subject in specialized_data.get("countrySubjects", {}).get(slug, []):
                 STATIC_PAGES_FIXED.append({
                     "path": f"services/{service}/{slug}/{subject['slug']}",
                     "changefreq": "monthly",
                     "priority": "0.8"
                 })
-        
-        # Note: Programmatic city pages (441 URLs) are noindexed to prevent doorway penalties
-        # and preserve crawl budget for money subject hubs. They are intentionally excluded from sitemap.xml.
 
 SERVICE_DETAILS = {
     "Assignment Help": {
