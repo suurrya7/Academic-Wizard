@@ -138,12 +138,15 @@ function generateBlogPages() {
             }))
         };
 
+        const metaTitleCandidate = `${title} | Academic Wizard`;
+        const finalTitle = metaTitleCandidate.length <= 60 ? metaTitleCandidate : title;
+
         // Build SEO meta tags to inject
         const seoTags = `
-    <title>${title} | Academic Wizard Blog</title>
+    <title>${finalTitle}</title>
     <meta name="description" content="${description}" />
     <link rel="canonical" href="${canonicalUrl}" />
-    <meta property="og:title" content="${title} | Academic Wizard Blog" />
+    <meta property="og:title" content="${finalTitle}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:type" content="article" />
@@ -151,7 +154,7 @@ function generateBlogPages() {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@academic_wizz" />
     <meta name="twitter:creator" content="@academic_wizz" />
-    <meta name="twitter:title" content="${title} | Academic Wizard Blog" />
+    <meta name="twitter:title" content="${finalTitle}" />
     <meta name="twitter:description" content="${description}" />
     ${keywords ? `<meta name="keywords" content="${escapeHtml(keywords)}" />` : ''}
     <script type="application/ld+json">

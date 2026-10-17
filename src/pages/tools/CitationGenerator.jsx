@@ -343,10 +343,10 @@ const CitationGenerator = () => {
         <div className="page-citation-generator">
             <Helmet>
                 <title>Free Citation Generator (APA 7, Harvard, OSCOLA, MLA 9)</title>
-                <meta name="description" content="Generate accurate bibliography listings and in-text citations instantly. Online referencing generator supporting APA 7th, MLA 9th, Harvard, Chicago, and Vancouver." />
+                <meta name="description" content="Generate accurate bibliography references and in-text citations instantly. Online referencing tool supporting APA 7th, MLA 9th, Harvard, and OSCOLA styles." />
                 <link rel="canonical" href="https://academicwizard.online/tools/citation-generator/" />
                 <meta property="og:title" content="Free Citation Generator (APA 7, Harvard, OSCOLA, MLA 9)" />
-                <meta property="og:description" content="Instantly format website, book, and journal references with our free bibliography builder." />
+                <meta property="og:description" content="Generate accurate bibliography references and in-text citations instantly. Online referencing tool supporting APA 7th, MLA 9th, Harvard, and OSCOLA styles." />
                 <meta property="og:url" content="https://academicwizard.online/tools/citation-generator/" />
                 <script type="application/ld+json">
                     {JSON.stringify({

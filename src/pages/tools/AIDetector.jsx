@@ -126,11 +126,11 @@ const AIDetector = () => {
     return (
         <div className="page-ai-detector">
             <Helmet>
-                <title>Free AI Content Detector for Essays & Dissertations [2026]</title>
-                <meta name="description" content="Check your essays and academic papers for AI content. Scan sentence-level perplexity, predictability, and AI buzzwords to detect ChatGPT, Claude, and Gemini." />
+                <title>Free AI Content Detector for Essays & Dissertations</title>
+                <meta name="description" content="Check your essays and academic papers for AI content. Scan sentence-level perplexity and predictability across ChatGPT, Claude, and Gemini text samples." />
                 <link rel="canonical" href="https://academicwizard.online/tools/ai-detector/" />
-                <meta property="og:title" content="Free AI Content Detector for Essays & Dissertations [2026]" />
-                <meta property="og:description" content="Audit essay authenticity. Scan texts for AI-generated patterns and robotic vocabulary." />
+                <meta property="og:title" content="Free AI Content Detector for Essays & Dissertations" />
+                <meta property="og:description" content="Check your essays and academic papers for AI content. Scan sentence-level perplexity and predictability across ChatGPT, Claude, and Gemini text samples." />
                 <meta property="og:url" content="https://academicwizard.online/tools/ai-detector/" />
                 <script type="application/ld+json">
                     {JSON.stringify({

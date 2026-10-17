@@ -93,11 +93,11 @@ const Home = () => {
     return (
         <div className="page-home overflow-hidden">
             <Helmet>
-                <title>Academic Wizard | #1 Assignment Help & Essay Writing Service</title>
-                <meta name="description" content="Get expert assignment help, essay writing, and dissertation support from PhD specialists. 100% Turnitin-safe, 1st Class quality. Serving university students in UK, USA, Australia & worldwide." />
+                <title>Academic Wizard | Assignment Help & Essay Writing</title>
+                <meta name="description" content="Get expert assignment help, essay writing, and dissertation support from verified academic tutors. Serving students in UK, USA, Australia & worldwide." />
                 <link rel="canonical" href="https://academicwizard.online/" />
-                <meta property="og:title" content="Academic Wizard | #1 Assignment Help & Essay Writing Service" />
-                <meta property="og:description" content="Expert assignment help, essay writing & dissertation support from PhD specialists. 100% Turnitin-safe, 1st Class guaranteed." />
+                <meta property="og:title" content="Academic Wizard | Assignment Help & Essay Writing" />
+                <meta property="og:description" content="Get expert assignment help, essay writing, and dissertation support from verified academic tutors. Serving students in UK, USA, Australia & worldwide." />
                 <meta property="og:url" content="https://academicwizard.online/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />

@@ -84,11 +84,11 @@ const Samples = () => {
     return (
         <div className="page-samples min-h-screen bg-bg-primary text-text-primary">
             <Helmet>
-                <title>Academic Writing Samples (1st Class Examples) | Academic Wizard</title>
-                <meta name="description" content="Explore redacted 1st-class academic writing samples across Law (OSCOLA), Nursing (Gibbs), MBA (APA 7th), and Computer Science (IEEE). Verify our PhD standard." />
+                <title>Academic Writing Samples (1st Class) | Academic Wizard</title>
+                <meta name="description" content="Explore authentic academic writing samples across Law (OSCOLA), Nursing (Gibbs), MBA (APA 7th), and Computer Science (IEEE). Verified postgraduate quality." />
                 <link rel="canonical" href="https://academicwizard.online/samples/" />
-                <meta property="og:title" content="Academic Writing Samples (1st Class Examples) | Academic Wizard" />
-                <meta property="og:description" content="Read redacted 1st-class university coursework samples across Law, Nursing, Business, and STEM formatted to APA, Harvard, OSCOLA, and IEEE standards." />
+                <meta property="og:title" content="Academic Writing Samples (1st Class) | Academic Wizard" />
+                <meta property="og:description" content="Explore authentic academic writing samples across Law (OSCOLA), Nursing (Gibbs), MBA (APA 7th), and Computer Science (IEEE). Verified postgraduate quality." />
                 <meta property="og:url" content="https://academicwizard.online/samples/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />

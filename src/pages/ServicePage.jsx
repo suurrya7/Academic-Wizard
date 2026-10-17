@@ -102,7 +102,7 @@ const ServicePage = () => {
 
     const serviceMetaTitle = (service.metaTitle && service.metaTitle.length <= 60)
         ? service.metaTitle
-        : `${service.title} | 100% Turnitin-Safe · 1st Class`;
+        : `${service.title} | 1st Class Academic Support`;
 
     const productSchema = {
         "@context": "https://schema.org",

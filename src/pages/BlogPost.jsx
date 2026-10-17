@@ -162,10 +162,9 @@ const BlogPost = () => {
     const canonicalUrl = overrideCanonical
         ? `https://academicwizard.online${overrideCanonical}`
         : `https://academicwizard.online/blog/${postData?.slug}/`;
-    let postTitle = `${postData?.title} | Academic Wizard Blog`;
-    if (postTitle.length > 60) {
-        postTitle = postTitle.substring(0, 57) + '...';
-    }
+    const basePostTitle = postData?.title || 'Academic Wizard Blog';
+    const brandedPostTitle = `${basePostTitle} | Academic Wizard`;
+    const postTitle = brandedPostTitle.length <= 60 ? brandedPostTitle : basePostTitle;
     const postDescription = postData?.excerpt || postData?.title || '';
 
     // Article JSON-LD Schema for Google

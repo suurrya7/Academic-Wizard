@@ -164,23 +164,55 @@ const CountryServicePage = () => {
         universities: 'Top Universities'
     };
 
-    // Strict <= 60 characters title generator with primary keyword first
-    let pageTitle = country.metaTitle && country.metaTitle.length <= 60 ? country.metaTitle : null;
+    // Strict <= 60 characters title generator with primary keyword first (No substring, no "...", whole words only)
+    let pageTitle = country.metaTitle && country.metaTitle.length <= 60 && !country.metaTitle.includes('...') ? country.metaTitle : null;
     if (!pageTitle) {
         const candidateWithPrice = `${service.title} ${displayCountry} | ${cData.grade} · From ${cData.symbol}${cData.price}`;
+        const candidateWithHook = `${service.title} ${displayCountry} | ${cData.grade}`;
+        const candidateShort = `${service.title} ${displayCountry} | 1st Class`;
+        const candidateMinimal = `${service.title} ${displayCountry}`;
+        
         if (candidateWithPrice.length <= 60) {
             pageTitle = candidateWithPrice;
+        } else if (candidateWithHook.length <= 60) {
+            pageTitle = candidateWithHook;
+        } else if (candidateShort.length <= 60) {
+            pageTitle = candidateShort;
         } else {
-            const candidateWithHook = `${service.title} ${displayCountry} | ${cData.grade}`;
-            if (candidateWithHook.length <= 60) {
-                pageTitle = candidateWithHook;
-            } else {
-                pageTitle = `${service.title} ${displayCountry}`.substring(0, 57) + '...';
-            }
+            pageTitle = candidateMinimal;
         }
     }
 
-    const pageDescription = country.metaDescription || `Leading ${service.title.toLowerCase()} in ${country.name} tailored for ${cData.universities} students. 100% Turnitin-safe from ${cData.symbol}${cData.price}/page. WhatsApp 24/7!`;
+    // Dynamic Meta Description: 120-155 characters, 0 unverifiable claims
+    const getCountryDescription = () => {
+        if (country.metaDescription && country.metaDescription.length >= 120 && country.metaDescription.length <= 155 && !country.metaDescription.includes('100%') && !country.metaDescription.toLowerCase().includes('guaranteed')) {
+            return country.metaDescription;
+        }
+        const ctas = [
+            " Chat with subject specialists 24/7 on WhatsApp.",
+            " Contact our academic team on WhatsApp 24/7.",
+            " Chat with verified tutors 24/7 on WhatsApp.",
+            " Chat with tutors 24/7 on WhatsApp.",
+            " WhatsApp us 24/7 for a quote.",
+            " WhatsApp 24/7 for support."
+        ];
+        const base = `Expert ${service.title.toLowerCase()} in ${country.name} for ${cData.universities} students. Academic guidance from ${cData.symbol}${cData.price}/page.`;
+        for (const cta of ctas) {
+            const cand = base + cta;
+            if (cand.length >= 120 && cand.length <= 155) {
+                return cand;
+            }
+        }
+        const shortBase = `Expert ${service.title.toLowerCase()} in ${country.name}. University coursework guidance from ${cData.symbol}${cData.price}/page.`;
+        for (const cta of ctas) {
+            const cand = shortBase + cta;
+            if (cand.length >= 120 && cand.length <= 155) {
+                return cand;
+            }
+        }
+        return `Expert ${service.title.toLowerCase()} in ${country.name} from ${cData.symbol}${cData.price}/page. Contact our academic team on WhatsApp 24/7.`;
+    };
+    const pageDescription = getCountryDescription();
 
     // Generate JSON-LD Schema
     const serviceSchema = {

@@ -8,17 +8,17 @@ const TermsOfService = () => {
         "@type": "WebPage",
         "name": "Terms of Service | Academic Wizard",
         "url": "https://academicwizard.online/terms-of-service/",
-        "description": "Read the terms of service and usage conditions for Academic Wizard's consulting and research services."
+        "description": "Review the terms of service and usage conditions for Academic Wizard academic consulting, tutoring, and coursework proofreading guidance services."
     };
 
     return (
         <div className="page-legal">
             <Helmet>
                 <title>Terms of Service | Academic Wizard</title>
-                <meta name="description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
+                <meta name="description" content="Review the terms of service and usage conditions for Academic Wizard academic consulting, tutoring, and coursework proofreading guidance services." />
                 <link rel="canonical" href="https://academicwizard.online/terms-of-service/" />
                 <meta property="og:title" content="Terms of Service | Academic Wizard" />
-                <meta property="og:description" content="Read the terms of service and usage conditions for Academic Wizard's consulting and research services." />
+                <meta property="og:description" content="Review the terms of service and usage conditions for Academic Wizard academic consulting, tutoring, and coursework proofreading guidance services." />
                 <meta property="og:url" content="https://academicwizard.online/terms-of-service/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />

@@ -8,17 +8,17 @@ const PrivacyPolicy = () => {
         "@type": "WebPage",
         "name": "Privacy Policy | Academic Wizard",
         "url": "https://academicwizard.online/privacy-policy/",
-        "description": "Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data."
+        "description": "Read our comprehensive privacy policy to understand how Academic Wizard collects, uses, and safeguards your personal and academic documents."
     };
 
     return (
         <div className="page-legal">
             <Helmet>
                 <title>Privacy Policy | Academic Wizard</title>
-                <meta name="description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
+                <meta name="description" content="Read our comprehensive privacy policy to understand how Academic Wizard collects, uses, and safeguards your personal and academic documents." />
                 <link rel="canonical" href="https://academicwizard.online/privacy-policy/" />
                 <meta property="og:title" content="Privacy Policy | Academic Wizard" />
-                <meta property="og:description" content="Read our privacy policy to understand how Academic Wizard collects, uses, and protects your personal and academic data." />
+                <meta property="og:description" content="Read our comprehensive privacy policy to understand how Academic Wizard collects, uses, and safeguards your personal and academic documents." />
                 <meta property="og:url" content="https://academicwizard.online/privacy-policy/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://academicwizard.online/academic-wizard-favicon.webp" />

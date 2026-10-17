@@ -74,10 +74,10 @@ const GrammarChecker = () => {
     return (
         <div className="page-grammar-checker">
             <Helmet>
-                <title>Free AI Grammar Checker & Essay Proofreader [No Sign-Up]</title>
-                <meta name="description" content="Check your essays, thesis papers, and university assignments for spelling, punctuation, and syntax errors. Real-time proofreading with one-click suggestions." />
+                <title>Free AI Grammar Checker & Essay Proofreader Online</title>
+                <meta name="description" content="Check your essays, thesis papers, and coursework for spelling, punctuation, and syntax errors. Real-time proofreading with one-click suggestions." />
                 <link rel="canonical" href="https://academicwizard.online/tools/grammar-checker/" />
-                <meta property="og:title" content="Free AI Grammar Checker & Essay Proofreader [No Sign-Up]" />
+                <meta property="og:title" content="Free AI Grammar Checker & Essay Proofreader Online" />
                 <meta property="og:description" content="Polish your academic papers with our free spelling, syntax, and punctuation editor." />
                 <meta property="og:url" content="https://academicwizard.online/tools/grammar-checker/" />
                 <script type="application/ld+json">

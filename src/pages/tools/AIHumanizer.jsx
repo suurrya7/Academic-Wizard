@@ -85,11 +85,11 @@ const AIHumanizer = () => {
     return (
         <div className="page-ai-humanizer">
             <Helmet>
-                <title>Free AI Text Humanizer: Bypass AI Detection [Turnitin Safe]</title>
-                <meta name="description" content="Free AI Humanizer tool — paste AI-generated text and get a human-sounding rewrite that passes Turnitin, Winston AI, and other AI detection tools. No sign-up required." />
+                <title>Free Academic Text Humanizer | Improve Writing Flow</title>
+                <meta name="description" content="Free academic text humanizer tool. Refine AI-assisted drafts into natural, academic prose with improved sentence variety and disciplinary terminology." />
                 <link rel="canonical" href="https://academicwizard.online/tools/ai-humanizer/" />
-                <meta property="og:title" content="Free AI Text Humanizer: Bypass AI Detection [Turnitin Safe]" />
-                <meta property="og:description" content="Convert robotic ChatGPT text into natural academic writing. Bypass AI detectors seamlessly." />
+                <meta property="og:title" content="Free Academic Text Humanizer | Improve Writing Flow" />
+                <meta property="og:description" content="Free academic text humanizer tool. Refine AI-assisted drafts into natural, academic prose with improved sentence variety and disciplinary terminology." />
                 <meta property="og:url" content="https://academicwizard.online/tools/ai-humanizer/" />
                 <script type="application/ld+json">
                     {JSON.stringify({

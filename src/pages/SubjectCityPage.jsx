@@ -238,64 +238,64 @@ const SubjectCityPage = () => {
         if (subLower.includes('accounting') || subLower.includes('finance') || subLower.includes('economics')) {
             return 'CPA · Accurate Solutions';
         }
-        return '1st Class Guaranteed';
+        return '1st Class Support';
     };
 
     // Priority High-CTR Title & Description Overrides for Top GSC Opportunities
     const META_OVERRIDES = {
         // Accounting & Finance (Capture Page 1 Position 8.4)
         "australia-accounting": {
-            title: "Accounting Assignment Help Australia | CPA Experts · From A$18",
-            desc: "Need urgent accounting assignment help? Certified CPAs solve IFRS, DCF valuation, tax & balance sheet coursework with 100% accuracy. Turnitin safe. WhatsApp now!"
+            title: "Accounting Assignment Help Australia | CPA Tutors",
+            desc: "Expert accounting assignment help across Australia. Certified CPAs assist with IFRS, DCF valuation, tax and balance sheet coursework. WhatsApp 24/7."
         },
         "uk-accounting": {
-            title: "Accounting Assignment Help UK | CPA & ACCA Experts · From £8",
-            desc: "1st-class accounting coursework help for UK students. Management accounting, IFRS, tax & Excel modeling solved by ACCA/CPA tutors. 100% Turnitin safe. WhatsApp 24/7!"
+            title: "Accounting Assignment Help UK | CPA & ACCA Tutors",
+            desc: "1st-class accounting coursework guidance for UK students. Management accounting, IFRS, tax and financial modeling solved by ACCA tutors. WhatsApp 24/7."
         },
         // Nursing & Healthcare (Push Page 2 Pos 16.0 to Top 5)
         "australia-nursing": {
-            title: "Nursing Assignment Help Australia | High Distinction · Care Plans",
-            desc: "Expert nursing assignment help across Australia (AHPRA & ANMAC aligned). Reflective cycles, clinical case studies & care plans from A$18/page. WhatsApp quote in 2 mins!"
+            title: "Nursing Assignment Help Australia | Care Plans & OSCE",
+            desc: "Nursing assignment guidance across Australia aligned with ANMAC. Reflective cycles, clinical case studies and care plans from A$20.00/page. WhatsApp 24/7."
         },
         "uk-nursing": {
-            title: "Nursing Assignment Help UK | Care Plans & Gibbs Reflective",
-            desc: "Struggling with nursing coursework? Qualified NHS & PhD nurses craft NMC-compliant care plans, Gibbs reflections & OSCE papers from £8/page. Turnitin-safe!"
+            title: "Nursing Assignment Help UK | Care Plans & Gibbs Cycle",
+            desc: "Nursing coursework guidance for UK students. Qualified NHS and PhD nurses assist with NMC care plans, Gibbs reflections and case studies from £12.00/page."
         },
         // Law (Push Page 2 Pos 15.7 to Top 5)
         "uk-law": {
-            title: "Law Assignment Help UK | OSCOLA & IRAC Problem Writers · 1st",
-            desc: "Stuck on contract, tort or criminal law problem questions? UK LLM & Bar graduates draft rigorous IRAC analysis with pinpoint OSCOLA citations. 12h urgent delivery!"
+            title: "Law Assignment Help UK | OSCOLA & IRAC Legal Writers",
+            desc: "Contract, tort and criminal law problem questions solved for UK students. LLM tutors draft structured IRAC analysis with accurate OSCOLA citations."
         },
         "australia-law": {
-            title: "Law Assignment Help Australia | AGLC4 & Legal Problem Solvers",
-            desc: "High Distinction law assignment help in Australia. Commercial, contract & constitutional law problem questions formatted to AGLC4 standards. Confidential 24/7 support."
+            title: "Law Assignment Help Australia | AGLC4 Legal Solvers",
+            desc: "High Distinction law assignment guidance in Australia. Commercial, contract and public law problem questions formatted to AGLC4 standards. 24/7 support."
         },
         // Computer Science & Engineering
         "usa-computer-science": {
-            title: "Computer Science Assignment Help | Clean Code · IEEE Format",
-            desc: "Stuck on coding assignments? CS graduates deliver clean, commented code (Python, Java, C++, SQL) + algorithmic Big-O reports. 100% bug-free. Get a quote on WhatsApp!"
+            title: "Computer Science Assignment Help USA | Clean Code",
+            desc: "Computer science assignment guidance for US students. Clean, commented code in Python, Java, C++ and SQL with algorithmic Big-O reports. Order today."
         },
         "uk-computer-science": {
-            title: "Computer Science Assignment Help UK | Python, Java & Big-O",
-            desc: "Expert programming & software engineering assignment help. Verified working code, unit tests & IEEE technical reports. 100% plagiarism-free. Chat on WhatsApp!"
+            title: "Computer Science Assignment Help UK | Python & Java",
+            desc: "Programming and software engineering assignment help for UK students. Working code, algorithmic analysis, unit tests and IEEE reports. WhatsApp 24/7."
         },
         "uk-engineering": {
-            title: "Engineering Assignment Help UK | FEA, CAD & MATLAB · 1st",
-            desc: "UK engineering coursework guidance across mechanical, civil & electrical degrees. FEA structural analysis, CAD models & MATLAB reports. WhatsApp 24/7!"
+            title: "Engineering Assignment Help UK | FEA, CAD & MATLAB",
+            desc: "UK engineering coursework guidance across mechanical, civil and electrical modules. FEA structural analysis, CAD models and MATLAB reports from £12/page."
         },
         // MBA & Business
         "uk-mba": {
-            title: "MBA Assignment Help UK | Harvard Case Studies · Distinction",
-            desc: "Executive MBA assignment help for UK & global students. Strategic frameworks (Porter's, PESTEL, SWOT), finance models & Harvard case studies. WhatsApp 24/7!"
+            title: "MBA Assignment Help UK | Harvard Case Study Solvers",
+            desc: "Executive MBA assignment help for UK students. Strategic frameworks including Porter's, PESTEL and SWOT, financial models and Harvard business cases."
         },
         "singapore-mba": {
-            title: "MBA Assignment Help Singapore | NUS · NTU · SMU Modules",
-            desc: "Singapore MBA case studies, strategic management & finance reports tailored for NUS, NTU, SMU & SIM-UOL modules. 100% confidential. WhatsApp 24/7!"
+            title: "MBA Assignment Help Singapore | NUS, NTU & SMU",
+            desc: "Singapore MBA case studies, strategic management and finance reports tailored for NUS, NTU and SMU degree modules. Professional academic coaching 24/7."
         },
         // Psychology
         "usa-psychology": {
-            title: "Psychology Assignment Help USA | APA 7th & SPSS Analysis",
-            desc: "PhD psychology tutors assist with empirical research papers, SPSS/R statistics & APA 7th literature reviews. 100% original & Turnitin-safe. Order now!"
+            title: "Psychology Assignment Help USA | APA 7th & SPSS",
+            desc: "PhD psychology tutors assist with empirical research papers, SPSS and R data analysis, and APA 7th literature reviews for US colleges. WhatsApp 24/7."
         }
     };
     const overrideKey = `${countrySlug}-${specializedData.slug}`;
@@ -305,44 +305,108 @@ const SubjectCityPage = () => {
         ? `${cleanSubjectName} ${serviceVerb.action} ${displayCountry}`
         : `${serviceVerb.action} in ${cleanSubjectName} ${displayCountry}`;
 
-    // Dynamic Title Generation
+    // Dynamic Title Generation (Template rule: no slice, no "...", whole-word fallbacks)
     let dynamicTitle = metaOverride?.title;
     if (!dynamicTitle) {
         if (pageType === "city") {
             const cityObj = cityModules[specializedSlug] || {};
             const topUni = (cityObj.universities && cityObj.universities[0]) ? cityObj.universities[0].split(' ')[0] : cleanSubjectName;
-            const cityTitleCandidate = `${serviceVerb.action} ${cleanSubjectName} | ${topUni} Tutors · 1st`;
-            dynamicTitle = cityTitleCandidate.length <= 60 ? cityTitleCandidate : `${serviceVerb.action} in ${cleanSubjectName} | 1st Class`;
+            const cityCandidateA = `${serviceVerb.action} ${cleanSubjectName} | ${topUni} Tutors`;
+            const cityCandidateB = `${serviceVerb.action} in ${cleanSubjectName} | 1st Class`;
+            const cityCandidateC = `${serviceVerb.action} in ${cleanSubjectName}`;
+            if (cityCandidateA.length <= 60) {
+                dynamicTitle = cityCandidateA;
+            } else if (cityCandidateB.length <= 60) {
+                dynamicTitle = cityCandidateB;
+            } else {
+                dynamicTitle = cityCandidateC;
+            }
         } else {
             const disciplineHook = getDisciplineHook(cleanSubjectName.toLowerCase(), countrySlug);
             const candidateWithHook = `${primaryKeyword} | ${disciplineHook}`;
+            const candidateShortHook = `${primaryKeyword} | 1st Class`;
+            const candidateCore = primaryKeyword;
+            const candidateMinimal = `${cleanSubjectName} ${serviceVerb.action}`;
+            
             if (candidateWithHook.length <= 60) {
                 dynamicTitle = candidateWithHook;
+            } else if (candidateShortHook.length <= 60) {
+                dynamicTitle = candidateShortHook;
+            } else if (candidateCore.length <= 60) {
+                dynamicTitle = candidateCore;
             } else {
-                const candidateShorter = `${primaryKeyword} | 1st Class`;
-                if (candidateShorter.length <= 60) {
-                    dynamicTitle = candidateShorter;
-                } else {
-                    dynamicTitle = primaryKeyword.length <= 60 ? primaryKeyword : primaryKeyword.substring(0, 57) + '...';
-                }
+                dynamicTitle = candidateMinimal;
             }
         }
     }
     const pageMetaTitle = dynamicTitle;
 
-    // Dynamic Meta Description Generation (Zero Generic Doorway Boilerplate)
+    // Dynamic Meta Description Generation (120-155 chars, 0 unverifiable claims)
     let pageDescription = metaOverride?.desc;
     if (!pageDescription) {
+        const ctas = [
+            " Chat with subject specialists 24/7 on WhatsApp.",
+            " Contact our academic team on WhatsApp 24/7.",
+            " Chat with verified tutors 24/7 on WhatsApp.",
+            " Chat with tutors 24/7 on WhatsApp.",
+            " WhatsApp us 24/7 for a quote.",
+            " WhatsApp 24/7 for support."
+        ];
         if (pageType === "city") {
             const cityObj = cityModules[specializedSlug] || {};
-            const campusList = (cityObj.universities || []).slice(0, 3).join(', ');
-            pageDescription = campusList
-                ? `Trusted ${serviceVerb.action.toLowerCase()} for ${cleanSubjectName} students at ${campusList}. Turnitin-safe coursework from ${regionalPricing.symbol}${regionalPricing.price}/page. WhatsApp 24/7!`
-                : `Trusted ${serviceVerb.action.toLowerCase()} for students in ${cleanSubjectName}, ${country.name}. Turnitin-safe coursework from ${regionalPricing.symbol}${regionalPricing.price}/page. WhatsApp 24/7!`;
+            const campusList = (cityObj.universities || []).slice(0, 2).join(', ');
+            const baseCity = campusList
+                ? `Professional ${serviceVerb.action.toLowerCase()} for students in ${cleanSubjectName} attending ${campusList}. Tuition from ${regionalPricing.symbol}${regionalPricing.price}/page.`
+                : `Professional ${serviceVerb.action.toLowerCase()} for students in ${cleanSubjectName}, ${country.name}. Tuition from ${regionalPricing.symbol}${regionalPricing.price}/page.`;
+            for (const cta of ctas) {
+                const cand = baseCity + cta;
+                if (cand.length >= 120 && cand.length <= 155) {
+                    pageDescription = cand;
+                    break;
+                }
+            }
+            if (!pageDescription) {
+                const shortCity = `Professional ${serviceVerb.action.toLowerCase()} in ${cleanSubjectName}, ${country.name}. Academic guidance from ${regionalPricing.symbol}${regionalPricing.price}/page.`;
+                for (const cta of ctas) {
+                    const cand = shortCity + cta;
+                    if (cand.length >= 120 && cand.length <= 155) {
+                        pageDescription = cand;
+                        break;
+                    }
+                }
+            }
         } else {
             const subObj = subjectModules[specializedSlug] || {};
-            const keyFramework = (subObj.frameworks && subObj.frameworks[0]) || (subObj.keyTheories && subObj.keyTheories[0]) || 'academic rubrics';
-            pageDescription = `Get 1st-class ${cleanSubjectName.toLowerCase()} ${serviceVerb.action.toLowerCase()} in ${country.name}. PhD experts assist with ${keyFramework} from ${regionalPricing.symbol}${regionalPricing.price}/page. 100% Turnitin-safe!`;
+            const rawFramework = (subObj.frameworks && subObj.frameworks[0]) || (subObj.keyTheories && subObj.keyTheories[0]) || 'academic rubrics';
+            const keyFramework = rawFramework.split('(')[0].trim().replace(/for Health Promotion/i, '').trim();
+            const baseSub = `Expert ${cleanSubjectName.toLowerCase()} ${serviceVerb.action.toLowerCase()} in ${country.name}. Guidance on ${keyFramework} from ${regionalPricing.symbol}${regionalPricing.price}/page.`;
+            for (const cta of ctas) {
+                const cand = baseSub + cta;
+                if (cand.length >= 120 && cand.length <= 155) {
+                    pageDescription = cand;
+                    break;
+                }
+            }
+            if (!pageDescription) {
+                const conciseSub = `Expert ${cleanSubjectName.toLowerCase()} ${serviceVerb.action.toLowerCase()} for ${country.name} university students from ${regionalPricing.symbol}${regionalPricing.price}/page.`;
+                for (const cta of ctas) {
+                    const cand = conciseSub + cta;
+                    if (cand.length >= 120 && cand.length <= 155) {
+                        pageDescription = cand;
+                        break;
+                    }
+                }
+            }
+            if (!pageDescription) {
+                const minimalSub = `Expert ${cleanSubjectName.toLowerCase()} ${serviceVerb.action.toLowerCase()} for ${country.name} students from ${regionalPricing.symbol}${regionalPricing.price}/page.`;
+                for (const cta of ctas) {
+                    const cand = minimalSub + cta;
+                    if (cand.length >= 120 && cand.length <= 155) {
+                        pageDescription = cand;
+                        break;
+                    }
+                }
+            }
         }
     }
     

@@ -29,17 +29,10 @@ serviceRoutes.forEach(serviceWithSlash => {
     countries.forEach(country => {
         countryServiceRoutes.push(`${service}/${country}/`);
         
-        // Add subject routes for this country
-        if (countrySubjects[country]) {
+        // Add subject routes for this country (skip study-guidance as they are noindexed)
+        if (service !== '/services/study-guidance' && countrySubjects[country]) {
             countrySubjects[country].forEach(subject => {
                 specializedRoutes.push(`${service}/${country}/${subject.slug}/`);
-            });
-        }
-        
-        // Add city routes for this country
-        if (countryCities[country]) {
-            countryCities[country].forEach(city => {
-                specializedRoutes.push(`${service}/${country}/${city.slug}/`);
             });
         }
     });
