@@ -149,7 +149,6 @@ const BlogPost = () => {
 
     // Canonical overrides: blog posts that cannibalize service pages point to the service page
     const CANONICAL_OVERRIDES = {
-        'mastering-assignment-help-a-guide-for-usa-university-students': '/services/assignment-help/usa/',
         'assignment-help-in-the-uk-what-every-student-should-know': '/services/assignment-help/uk/',
         'the-complete-guide-to-essay-help-for-university-students': '/services/essay-help/',
         'how-to-get-reliable-assignment-help-in-australia': '/services/assignment-help/australia/',

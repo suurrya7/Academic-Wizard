@@ -54,7 +54,6 @@ function generateBlogPages() {
     // Canonical overrides: blog posts that cannibalize service pages
     // MUST match the exact same map in src/pages/BlogPost.jsx (lines 151-160)
     const CANONICAL_OVERRIDES = {
-        'mastering-assignment-help-a-guide-for-usa-university-students': '/services/assignment-help/usa/',
         'assignment-help-in-the-uk-what-every-student-should-know': '/services/assignment-help/uk/',
         'the-complete-guide-to-essay-help-for-university-students': '/services/essay-help/',
         'how-to-get-reliable-assignment-help-in-australia': '/services/assignment-help/australia/',

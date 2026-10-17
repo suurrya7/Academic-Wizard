@@ -229,7 +229,6 @@ def generate_robots_txt() -> None:
         Allow: /
         Disallow: /automation/
         Disallow: /.github/
-        Disallow: /blog/posts/
         Disallow: /activation-generator-secret
 
         # Explicitly allow AI crawlers for AEO / GEO visibility
